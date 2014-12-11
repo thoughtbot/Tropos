@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		130C4C29D1C62D52D0767A6B /* Main.storyboard in Sources */ = {isa = PBXBuildFile; fileRef = E59B090E67C8BD269D3CD9DB /* Main.storyboard */; };
 		46660A27B04F4C7B78A7920F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 436D9431497525313B32E225 /* Foundation.framework */; };
+		4D0A5C381A3A27510084C41E /* CWForecastClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D0A5C371A3A27510084C41E /* CWForecastClient.m */; };
 		8EAE701DFB2DC16543CE1B3C /* libPods-unit_tests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A548375C4E5D454F542CFA0D /* libPods-unit_tests.a */; };
 		C9318C8461EB5FE3914F9AC0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2853082980109C89B8F07D3C /* main.m */; };
 		CE5D7F3B45F980082E1BCA30 /* LaunchScreen.xib in Sources */ = {isa = PBXBuildFile; fileRef = B6D58F8AA6976EA1B35682B7 /* LaunchScreen.xib */; };
@@ -35,6 +36,8 @@
 		2853082980109C89B8F07D3C /* main.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		3431B0CE6A3E1D06EBAB27BF /* Pods-unit_tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-unit_tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-unit_tests/Pods-unit_tests.debug.xcconfig"; sourceTree = "<group>"; };
 		436D9431497525313B32E225 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		4D0A5C361A3A27510084C41E /* CWForecastClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWForecastClient.h; sourceTree = "<group>"; };
+		4D0A5C371A3A27510084C41E /* CWForecastClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWForecastClient.m; sourceTree = "<group>"; };
 		57761BB4DFB42997964F13EE /* CarlWeathers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CarlWeathers.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		986C425E5A2268D27FAE2FAA /* CarlWeathers-Prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CarlWeathers-Prefix.pch"; sourceTree = "<group>"; };
 		A548375C4E5D454F542CFA0D /* libPods-unit_tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-unit_tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -70,6 +73,8 @@
 			children = (
 				0CC72A6E0EE525537F241EB7 /* CWAppDelegate.h */,
 				A6B1ADBC73A8A2EF7FB4E257 /* CWAppDelegate.m */,
+				4D0A5C361A3A27510084C41E /* CWForecastClient.h */,
+				4D0A5C371A3A27510084C41E /* CWForecastClient.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -389,6 +394,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D0A5C381A3A27510084C41E /* CWForecastClient.m in Sources */,
 				D7DD1B8AD495AFA4EC1CEFF9 /* CWAppDelegate.m in Sources */,
 				130C4C29D1C62D52D0767A6B /* Main.storyboard in Sources */,
 				CE5D7F3B45F980082E1BCA30 /* LaunchScreen.xib in Sources */,
