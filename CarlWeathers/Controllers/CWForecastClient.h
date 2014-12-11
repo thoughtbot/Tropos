@@ -8,7 +8,9 @@
 
 @import Foundation;
 
-typedef void (^CWCurrentConditionsResult)(id currentConditions);
+@class CWCurrentConditions;
+
+typedef void (^CWCurrentConditionsResult)(CWCurrentConditions *currentConditions);
 
 @interface CWForecastClient : NSObject
 

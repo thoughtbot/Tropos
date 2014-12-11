@@ -14,7 +14,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     CWForecastClient *client = [CWForecastClient new];
-    [client fetchCurrentConditionsAtLatitude:37 longitude:-114 completion:^(id currentConditions) {
+    [client fetchCurrentConditionsAtLatitude:37 longitude:-114 completion:^(CWCurrentConditions *currentConditions) {
         NSLog(@"%@", currentConditions);
     }];
     
