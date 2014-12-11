@@ -4,10 +4,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Weather View Controller-->
         <scene sceneID="0yb-3A-yau">
             <objects>
-                <viewController id="zCV-BE-JFf" sceneMemberID="viewController">
+                <viewController id="zCV-BE-JFf" customClass="CWWeatherViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="02N-3j-bOk"/>
                         <viewControllerLayoutGuide type="bottom" id="kaZ-rO-kvS"/>

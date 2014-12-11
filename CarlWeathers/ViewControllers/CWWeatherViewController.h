@@ -1,0 +1,3 @@
+@interface CWWeatherViewController : UIViewController
+
+@end
