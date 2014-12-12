@@ -8,4 +8,7 @@ typedef void (^CWLocationErrorBlock)(NSError *error);
 - (void)updateLocationWithCompletion:(CWLocationCompletionBlock)completionBlock
                           errorBlock:(CWLocationErrorBlock)errorBlock;
 
+- (NSString *)coordinateStringFromLatitude:(double)latitude
+                                 longitude:(double)longitude;
+
 @end
