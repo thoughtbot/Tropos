@@ -1,0 +1,6 @@
+"relative temperature" = "It's %@ today than yesterday at this time.";
+"hotter" = "hotter";
+"warmer" = "warmer";
+"cooler" = "cooler";
+"colder" = "colder";
+"same" = "It's the same today as yesterday at this time.";
