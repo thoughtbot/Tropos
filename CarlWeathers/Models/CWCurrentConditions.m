@@ -3,7 +3,7 @@
 @interface CWCurrentConditions ()
 
 @property (nonatomic, copy, readwrite) NSString *conditionsDescription;
-@property (nonatomic, readwrite) CGFloat temperature;
+@property (nonatomic, readwrite) NSString *temperature;
 @property (nonatomic, readwrite) CGFloat lowTemperature;
 @property (nonatomic, readwrite) CGFloat highTemperature;
 
@@ -15,7 +15,10 @@
 {
     CWCurrentConditions *conditions = [self new];
     conditions.conditionsDescription = JSON[@"icon"];
-    conditions.temperature = [JSON[@"temperature"] floatValue];
+    NSNumberFormatter *numberFormatter = [NSNumberFormatter new];
+    numberFormatter.roundingMode = NSNumberFormatterRoundHalfUp;
+    NSString *temperature = [numberFormatter stringFromNumber:JSON[@"currently"][@"temperature"]];
+    conditions.temperature = [NSString stringWithFormat:@"%@°", temperature];
 
     NSDictionary *todayForecast = [JSON[@"daily"][@"data"] firstObject];
     conditions.lowTemperature = [todayForecast[@"temperatureMin"] floatValue];
