@@ -32,13 +32,15 @@ static NSString *const CWForecastAPIBaseURL = @"https://api.forecast.io/forecast
     NSURLRequest *request = [NSURLRequest requestWithURL:URL];
     NSURLSessionDataTask *dataTask = [self.session dataTaskWithRequest:request completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
         id JSON = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:nil];
-
-        if (!JSON) {
-            completion(nil);
-            return;
-        }
         
-        completion([CWCurrentConditions currentConditionsFromJSON:JSON]);
+        dispatch_async(dispatch_get_main_queue(), ^{
+            if (!JSON) {
+                completion(nil);
+                return;
+            }
+            
+            completion([CWCurrentConditions currentConditionsFromJSON:JSON]);
+        });
     }];
     [dataTask resume];
 }
