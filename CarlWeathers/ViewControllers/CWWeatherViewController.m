@@ -40,6 +40,8 @@
     self.highLowTemperatureLabel.text = nil;
     self.cityLabel.text = nil;
     self.coordinateLabel.text = nil;
+    self.precipitationMeterViewWidthConstraint.constant = 0;
+    [self.view layoutIfNeeded];
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -109,6 +111,8 @@
                     break;
             }
 
+            self.highLowTemperatureLabel.text = [NSString stringWithFormat:@"%@ / %@", currentConditions.highTemperature.stringValue, currentConditions.lowTemperature.stringValue];
+            self.windSpeedLabel.text = currentConditions.windConditions;
             self.conditionsDescriptionLabel.attributedText = description;
             CGFloat newWidth = CGRectGetWidth(self.view.bounds) * currentConditions.precipitationProbability;
             self.precipitationMeterViewWidthConstraint.constant = newWidth;
