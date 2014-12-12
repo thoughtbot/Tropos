@@ -39,8 +39,15 @@
 - (void)locationManager:(CLLocationManager *)manager
      didUpdateLocations:(NSArray *)locations
 {
-    [self.locationManager stopUpdatingLocation];
     CLLocation *location = locations.lastObject;
+    NSDate *lastLocationDate = location.timestamp;
+    NSDate *fiveSecondsAgo = [NSDate dateWithTimeIntervalSinceNow:-5];
+    NSComparisonResult result = [lastLocationDate compare:fiveSecondsAgo];
+    if (result == NSOrderedAscending) {
+        return;
+    }
+
+    [self.locationManager stopUpdatingLocation];
     CLLocationCoordinate2D coordinate = location.coordinate;
     double latitude = coordinate.latitude;
     double longitude = coordinate.longitude;
