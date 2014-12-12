@@ -13,6 +13,11 @@
 @property (weak, nonatomic) IBOutlet UIImageView *conditionsImageView;
 @property (weak, nonatomic) IBOutlet UILabel *temperatureLabel;
 @property (weak, nonatomic) IBOutlet UILabel *conditionsDescriptionLabel;
+@property (weak, nonatomic) IBOutlet UILabel *windSpeedLabel;
+@property (weak, nonatomic) IBOutlet UILabel *highLowTemperatureLabel;
+@property (weak, nonatomic) IBOutlet UIImageView *windSpeedImageView;
+@property (weak, nonatomic) IBOutlet UIImageView *temperatureImageView;
+
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *precipitationMeterViewTopConstraint;
 
 @end
