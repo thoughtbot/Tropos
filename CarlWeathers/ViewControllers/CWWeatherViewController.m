@@ -72,6 +72,11 @@
     [self.locationController updateLocationWithCompletion:^(double latitude,
                                                             double longitude)
     {
+
+        NSString *coordinateString = [CWLocationController coordinateStringFromLatitude:latitude
+                                                                              longitude:longitude];
+        self.coordinateLabel.text = coordinateString;
+
         CLLocation *location = [[CLLocation alloc] initWithCoordinate:CLLocationCoordinate2DMake(latitude, longitude) altitude:0 horizontalAccuracy:0 verticalAccuracy:0 course:0 speed:0 timestamp:[NSDate date]];
         CLGeocoder *geocoder = [CLGeocoder new];
         [geocoder reverseGeocodeLocation:location completionHandler:^(NSArray *placemarks, NSError *error) {

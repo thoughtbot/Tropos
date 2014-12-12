@@ -5,6 +5,9 @@ typedef void (^CWLocationErrorBlock)(NSError *error);
 
 @interface CWLocationController : NSObject
 
++ (NSString *)coordinateStringFromLatitude:(double)latitude
+                                 longitude:(double)longitude;
+
 - (void)updateLocationWithCompletion:(CWLocationCompletionBlock)completionBlock
                           errorBlock:(CWLocationErrorBlock)errorBlock;
 
