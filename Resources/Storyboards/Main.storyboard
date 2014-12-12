@@ -2,7 +2,17 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="zCV-BE-JFf">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="DINNextLTPro-UltraLight.otf">
+            <string>DINNextLTPro-UltraLight</string>
+            <string>DINNextLTPro-UltraLight</string>
+            <string>DINNextLTPro-UltraLight</string>
+            <string>DINNextLTPro-UltraLight</string>
+        </mutableArray>
+    </customFonts>
     <scenes>
         <!--Weather View Controller-->
         <scene sceneID="0yb-3A-yau">
@@ -16,19 +26,99 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Forecast" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gJ9-e0-E2E">
-                                <rect key="frame" x="279" y="289" width="67" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BOSTON, MA" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wl8-8h-ogo" userLabel="City Label">
+                                <rect key="frame" x="16" y="36" width="568" height="16"/>
+                                <fontDescription key="fontDescription" name="DINNextLTPro-UltraLight" family="DIN Next LT Pro" pointSize="16"/>
+                                <color key="textColor" red="0.6705882352941176" green="0.65490196078431373" blue="0.69411764705882351" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bahstahn" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hox-Oh-26Y" userLabel="Coordinate Label">
+                                <rect key="frame" x="16" y="52" width="568" height="12"/>
+                                <fontDescription key="fontDescription" name="DINNextLTPro-UltraLight" family="DIN Next LT Pro" pointSize="12"/>
+                                <color key="textColor" red="0.23137254901960785" green="0.23137254901960785" blue="0.27058823529411763" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UuN-Av-FMW" userLabel="Precipitation Chance Meter View">
+                                <rect key="frame" x="0.0" y="20" width="8" height="580"/>
+                                <color key="backgroundColor" red="0.0" green="0.71372549019607845" blue="0.92549019607843142" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="8" id="gP9-hr-MXM"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="r7S-cF-Z7O" userLabel="Forecast Container View">
+                                <rect key="frame" x="16" y="205" width="568" height="255"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="43°" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cWg-RB-oaG" userLabel="Temperature Label">
+                                        <rect key="frame" x="114" y="0.0" width="454" height="114"/>
+                                        <fontDescription key="fontDescription" name="DINNextLTPro-UltraLight" family="DIN Next LT Pro" pointSize="114"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="It's warmer today than yesterday at this time." lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4aa-2F-UFk" userLabel="Conditions Description">
+                                        <rect key="frame" x="0.0" y="181" width="558" height="74"/>
+                                        <fontDescription key="fontDescription" name="DINNextLTPro-UltraLight" family="DIN Next LT Pro" pointSize="37"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ef5-IL-xEe" userLabel="Conditions Icon">
+                                        <rect key="frame" x="0.0" y="0.0" width="106" height="106"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="Ef5-IL-xEe" secondAttribute="height" multiplier="1:1" id="9xc-B7-XrD"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="Ef5-IL-xEe" firstAttribute="leading" secondItem="r7S-cF-Z7O" secondAttribute="leading" id="AX8-gy-vSZ"/>
+                                    <constraint firstAttribute="bottom" secondItem="4aa-2F-UFk" secondAttribute="bottom" id="Awu-mc-QvV"/>
+                                    <constraint firstAttribute="trailing" secondItem="cWg-RB-oaG" secondAttribute="trailing" id="BqJ-GR-sly"/>
+                                    <constraint firstItem="4aa-2F-UFk" firstAttribute="top" secondItem="cWg-RB-oaG" secondAttribute="bottom" constant="67" id="IkW-5o-Dwq"/>
+                                    <constraint firstItem="cWg-RB-oaG" firstAttribute="top" secondItem="r7S-cF-Z7O" secondAttribute="top" id="Mr2-Oj-OlR"/>
+                                    <constraint firstAttribute="trailing" secondItem="4aa-2F-UFk" secondAttribute="trailing" constant="10" id="S6r-qe-7ee"/>
+                                    <constraint firstItem="cWg-RB-oaG" firstAttribute="bottom" secondItem="Ef5-IL-xEe" secondAttribute="bottom" constant="8" id="byT-ch-lWp"/>
+                                    <constraint firstItem="cWg-RB-oaG" firstAttribute="leading" secondItem="Ef5-IL-xEe" secondAttribute="trailing" constant="8" id="h6D-6z-myf"/>
+                                    <constraint firstItem="4aa-2F-UFk" firstAttribute="leading" secondItem="r7S-cF-Z7O" secondAttribute="leading" id="vJO-EP-tk1"/>
+                                    <constraint firstItem="Ef5-IL-xEe" firstAttribute="top" secondItem="r7S-cF-Z7O" secondAttribute="top" id="x6Z-UZ-005"/>
+                                </constraints>
+                            </view>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.098039215686274508" green="0.098039215686274508" blue="0.12941176470588234" alpha="1" colorSpace="calibratedRGB"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="Wl8-8h-ogo" firstAttribute="leading" secondItem="YfA-Yi-tI2" secondAttribute="leadingMargin" id="6Ag-HG-pBI"/>
+                            <constraint firstItem="hox-Oh-26Y" firstAttribute="trailing" secondItem="YfA-Yi-tI2" secondAttribute="trailingMargin" id="85u-dv-F8d"/>
+                            <constraint firstItem="hox-Oh-26Y" firstAttribute="leading" secondItem="YfA-Yi-tI2" secondAttribute="leadingMargin" id="9DV-j5-9CM"/>
+                            <constraint firstItem="Wl8-8h-ogo" firstAttribute="trailing" secondItem="YfA-Yi-tI2" secondAttribute="trailingMargin" id="LAP-CO-Hzo"/>
+                            <constraint firstItem="r7S-cF-Z7O" firstAttribute="trailing" secondItem="YfA-Yi-tI2" secondAttribute="trailingMargin" id="PeD-au-xgn"/>
+                            <constraint firstItem="UuN-Av-FMW" firstAttribute="leading" secondItem="YfA-Yi-tI2" secondAttribute="leading" id="TDK-MF-li4"/>
+                            <constraint firstItem="kaZ-rO-kvS" firstAttribute="top" secondItem="UuN-Av-FMW" secondAttribute="bottom" id="ZQF-Ic-2U6"/>
+                            <constraint firstItem="hox-Oh-26Y" firstAttribute="top" secondItem="Wl8-8h-ogo" secondAttribute="bottom" id="ck6-7C-W04"/>
+                            <constraint firstAttribute="centerY" secondItem="r7S-cF-Z7O" secondAttribute="centerY" constant="-32.5" id="jKo-ob-Afq"/>
+                            <constraint firstItem="Wl8-8h-ogo" firstAttribute="top" secondItem="02N-3j-bOk" secondAttribute="bottom" constant="16" id="jmI-ne-gTd"/>
+                            <constraint firstItem="UuN-Av-FMW" firstAttribute="top" secondItem="YfA-Yi-tI2" secondAttribute="top" constant="20" id="mfa-5e-GI6"/>
+                            <constraint firstItem="r7S-cF-Z7O" firstAttribute="leading" secondItem="YfA-Yi-tI2" secondAttribute="leadingMargin" id="t41-uQ-g2L"/>
+                        </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="6cH-M9-VDZ" appends="YES" id="YKN-fy-HPf"/>
+                        </connections>
                     </view>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
+                    <connections>
+                        <outlet property="cityLabel" destination="Wl8-8h-ogo" id="Oea-1a-bou"/>
+                        <outlet property="conditionsDescriptionLabel" destination="4aa-2F-UFk" id="MEw-Cw-h9c"/>
+                        <outlet property="conditionsImageView" destination="Ef5-IL-xEe" id="mhx-To-Xjj"/>
+                        <outlet property="coordinateLabel" destination="hox-Oh-26Y" id="f4r-wu-YdZ"/>
+                        <outlet property="precipitationMeterViewTopConstraint" destination="mfa-5e-GI6" id="JBf-jC-hFC"/>
+                        <outlet property="temperatureLabel" destination="cWg-RB-oaG" id="OqF-9k-cJI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aUn-30-HRW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="6cH-M9-VDZ">
+                    <connections>
+                        <action selector="refresh" destination="zCV-BE-JFf" id="jwx-Ie-A0d"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="852" y="606"/>
+            <point key="canvasLocation" x="421" y="106"/>
         </scene>
     </scenes>
 </document>
