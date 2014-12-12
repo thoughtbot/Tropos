@@ -12,7 +12,6 @@
             <string>DINNextLTPro-UltraLight</string>
             <string>DINNextLTPro-UltraLight</string>
             <string>DINNextLTPro-UltraLight</string>
-            <string>DINNextLTPro-UltraLight</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -48,14 +47,8 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="r7S-cF-Z7O" userLabel="Forecast Container View">
-                                <rect key="frame" x="16" y="206.5" width="568" height="187"/>
+                                <rect key="frame" x="16" y="207" width="568" height="187"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="43°" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cWg-RB-oaG" userLabel="Temperature Label">
-                                        <rect key="frame" x="154" y="0.0" width="414" height="114"/>
-                                        <fontDescription key="fontDescription" name="DINNextLTPro-UltraLight" family="DIN Next LT Pro" pointSize="114"/>
-                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="It's warmer today than yesterday at this time." lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4aa-2F-UFk" userLabel="Conditions Description">
                                         <rect key="frame" x="40" y="144" width="518" height="74"/>
                                         <fontDescription key="fontDescription" name="DINNextLTPro-UltraLight" family="DIN Next LT Pro" pointSize="37"/>
@@ -67,19 +60,16 @@
                                         <color key="backgroundColor" red="1" green="0.071816854309999997" blue="0.18964164759999999" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="Ef5-IL-xEe" secondAttribute="height" multiplier="1:1" id="9xc-B7-XrD"/>
+                                            <constraint firstAttribute="height" constant="80" id="dFL-Y7-oHE"/>
                                         </constraints>
                                     </imageView>
                                 </subviews>
                                 <constraints>
+                                    <constraint firstItem="4aa-2F-UFk" firstAttribute="top" secondItem="Ef5-IL-xEe" secondAttribute="bottom" constant="50" id="3Ia-Nt-3lO"/>
                                     <constraint firstItem="Ef5-IL-xEe" firstAttribute="leading" secondItem="r7S-cF-Z7O" secondAttribute="leading" id="AX8-gy-vSZ"/>
                                     <constraint firstAttribute="bottom" secondItem="4aa-2F-UFk" secondAttribute="bottom" constant="-31.5" id="Awu-mc-QvV"/>
-                                    <constraint firstAttribute="trailing" secondItem="cWg-RB-oaG" secondAttribute="trailing" id="BqJ-GR-sly"/>
-                                    <constraint firstItem="4aa-2F-UFk" firstAttribute="top" secondItem="cWg-RB-oaG" secondAttribute="bottom" constant="30" id="IkW-5o-Dwq"/>
-                                    <constraint firstItem="cWg-RB-oaG" firstAttribute="top" secondItem="r7S-cF-Z7O" secondAttribute="top" id="Mr2-Oj-OlR"/>
                                     <constraint firstItem="4aa-2F-UFk" firstAttribute="leading" secondItem="r7S-cF-Z7O" secondAttribute="leading" constant="40" id="PHF-zF-mjr"/>
                                     <constraint firstAttribute="trailing" secondItem="4aa-2F-UFk" secondAttribute="trailing" constant="10" id="S6r-qe-7ee"/>
-                                    <constraint firstItem="cWg-RB-oaG" firstAttribute="bottom" secondItem="Ef5-IL-xEe" secondAttribute="bottom" constant="20" id="byT-ch-lWp"/>
-                                    <constraint firstItem="cWg-RB-oaG" firstAttribute="leading" secondItem="Ef5-IL-xEe" secondAttribute="trailing" constant="34" id="h6D-6z-myf"/>
                                     <constraint firstItem="Ef5-IL-xEe" firstAttribute="leading" secondItem="r7S-cF-Z7O" secondAttribute="leading" constant="40" id="rtY-4W-YwT"/>
                                     <constraint firstItem="4aa-2F-UFk" firstAttribute="leading" secondItem="r7S-cF-Z7O" secondAttribute="leading" id="vJO-EP-tk1"/>
                                     <constraint firstItem="Ef5-IL-xEe" firstAttribute="top" secondItem="r7S-cF-Z7O" secondAttribute="top" constant="14" id="x6Z-UZ-005"/>
@@ -92,13 +82,13 @@
                                 </variation>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="51° / 38°" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jm9-4j-cuq" userLabel="High and Low Temp Label">
-                                <rect key="frame" x="56" y="560" width="77.5" height="20"/>
+                                <rect key="frame" x="56" y="560" width="78" height="20"/>
                                 <fontDescription key="fontDescription" name="DINNextLTPro-UltraLight" family="DIN Next LT Pro" pointSize="20"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="8.0 mph SWE" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fIp-2s-RDl" userLabel="Wind Label">
-                                <rect key="frame" x="56" y="520" width="112.5" height="20"/>
+                                <rect key="frame" x="56" y="520" width="113" height="20"/>
                                 <fontDescription key="fontDescription" name="DINNextLTPro-UltraLight" family="DIN Next LT Pro" pointSize="20"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -165,7 +155,6 @@
                         <outlet property="highLowTemperatureLabel" destination="jm9-4j-cuq" id="2Dc-yH-4sR"/>
                         <outlet property="precipitationMeterViewTopConstraint" destination="mfa-5e-GI6" id="JBf-jC-hFC"/>
                         <outlet property="temperatureImageView" destination="wxI-GT-UQg" id="OvJ-DJ-oNa"/>
-                        <outlet property="temperatureLabel" destination="cWg-RB-oaG" id="OqF-9k-cJI"/>
                         <outlet property="windSpeedImageView" destination="Qna-Fn-Mlz" id="LM6-40-9KT"/>
                         <outlet property="windSpeedLabel" destination="fIp-2s-RDl" id="S5w-AE-oj3"/>
                     </connections>

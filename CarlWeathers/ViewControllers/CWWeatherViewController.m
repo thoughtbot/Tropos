@@ -11,7 +11,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *cityLabel;
 @property (weak, nonatomic) IBOutlet UILabel *coordinateLabel;
 @property (weak, nonatomic) IBOutlet UIImageView *conditionsImageView;
-@property (weak, nonatomic) IBOutlet UILabel *temperatureLabel;
 @property (weak, nonatomic) IBOutlet UILabel *conditionsDescriptionLabel;
 @property (weak, nonatomic) IBOutlet UILabel *windSpeedLabel;
 @property (weak, nonatomic) IBOutlet UILabel *highLowTemperatureLabel;
@@ -54,7 +53,7 @@
             self.cityLabel.text = [[NSString stringWithFormat:@"%@, %@", lastPlacemark.locality, lastPlacemark.administrativeArea] uppercaseString];
         }];
         [self.forecastClient fetchCurrentConditionsAtLatitude:latitude longitude:longitude completion:^(CWCurrentConditions *currentConditions) {
-            self.temperatureLabel.text = [NSString stringWithFormat:@"%@", currentConditions.temperature];
+            // Set condition labels
         }];
     } errorBlock:^(NSError *error) {
         NSLog(@"error: %@", error);

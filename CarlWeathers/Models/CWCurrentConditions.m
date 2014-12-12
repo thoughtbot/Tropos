@@ -15,10 +15,6 @@
 {
     CWCurrentConditions *conditions = [self new];
     conditions.conditionsDescription = JSON[@"icon"];
-    NSNumberFormatter *numberFormatter = [NSNumberFormatter new];
-    numberFormatter.roundingMode = NSNumberFormatterRoundHalfUp;
-    NSString *temperature = [numberFormatter stringFromNumber:JSON[@"currently"][@"temperature"]];
-    conditions.temperature = [NSString stringWithFormat:@"%@°", temperature];
 
     NSDictionary *todayForecast = [JSON[@"daily"][@"data"] firstObject];
     conditions.lowTemperature = [todayForecast[@"temperatureMin"] floatValue];
