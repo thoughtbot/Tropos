@@ -18,6 +18,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *highLowTemperatureLabel;
 @property (weak, nonatomic) IBOutlet UIImageView *windSpeedImageView;
 @property (weak, nonatomic) IBOutlet UIImageView *temperatureImageView;
+@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activityView;
 
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *precipitationMeterViewWidthConstraint;
 
@@ -86,24 +87,26 @@
             self.cityLabel.text = [[NSString stringWithFormat:@"%@, %@", lastPlacemark.locality, lastPlacemark.administrativeArea] uppercaseString];
         }];
         [self.forecastClient fetchConditionsAtLatitude:latitude longitude:longitude completion:^(CWCurrentConditions *currentConditions, CWHistoricalConditions *yesterdaysConditions) {
+            [self.activityView stopAnimating];
 //            self.temperatureLabel.text = [NSString stringWithFormat:@"%@", currentConditions.temperature];
-            self.conditionsImageView.image = [UIImage imageNamed:currentConditions.conditionsDescription];
+            self.conditionsImageView.image = [UIImage imageNamed:@"a.pdf"];
+//            self.conditionsImageView.image = [UIImage imageNamed:currentConditions.conditionsDescription];
             CWTemperature *currentTemperature = currentConditions.temperature;
             CWTemperature *yesterdaysTemperature = yesterdaysConditions.temperature;
             CWTemperatureComparison comparison = [currentTemperature compare:yesterdaysTemperature];
             NSAttributedString *description;
             switch (comparison) {
                 case CWTemperatureComparisonHotter:
-                    description = [self descriptionStringWithKey:@"hotter" color:[UIColor redColor]];
+                    description = [self descriptionStringWithKey:@"hotter" color:[UIColor colorWithRed:247/255.0 green:164/255.0 blue:0 alpha:1]];
                     break;
                 case CWTemperatureComparisonWarmer:
-                    description = [self descriptionStringWithKey:@"warmer" color:[UIColor orangeColor]];
+                    description = [self descriptionStringWithKey:@"warmer" color:[UIColor colorWithRed:247/255.0 green:164/255.0 blue:0 alpha:1]];
                     break;
                 case CWTemperatureComparisonCooler:
-                    description = [self descriptionStringWithKey:@"cooler" color:[UIColor blueColor]];
+                    description = [self descriptionStringWithKey:@"cooler" color:[UIColor colorWithRed:0 green:182/255.0 blue:236/255.0 alpha:1]];
                     break;
                 case CWTemperatureComparisonColder:
-                    description = [self descriptionStringWithKey:@"colder" color:[UIColor purpleColor]];
+                    description = [self descriptionStringWithKey:@"colder" color:[UIColor colorWithRed:0 green:182/255.0 blue:236/255.0 alpha:1]];
                     break;
                 case CWTemperatureComparisonSame:
                 default:
@@ -116,6 +119,8 @@
             self.conditionsDescriptionLabel.attributedText = description;
             CGFloat newWidth = CGRectGetWidth(self.view.bounds) * currentConditions.precipitationProbability;
             self.precipitationMeterViewWidthConstraint.constant = newWidth;
+            self.windSpeedImageView.image = [UIImage imageNamed:@"wind"];
+            self.temperatureImageView.image = [UIImage imageNamed:@"temp"];
             [self.view layoutIfNeeded];
         }];
     } errorBlock:^(NSError *error) {

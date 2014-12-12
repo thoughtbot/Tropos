@@ -19,7 +19,7 @@
 + (instancetype)currentConditionsFromJSON:(NSDictionary *)JSON
 {
     CWCurrentConditions *conditions = [self new];
-    conditions.conditionsDescription = JSON[@"icon"];
+    conditions.conditionsDescription = JSON[@"currently"][@"icon"];
     conditions.temperature = [CWTemperature temperatureFromNumber:JSON[@"currently"][@"temperature"]];
 
     NSDictionary *todayForecast = [JSON[@"daily"][@"data"] firstObject];
