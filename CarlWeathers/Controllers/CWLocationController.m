@@ -90,6 +90,7 @@
     [self.locationManager stopUpdatingLocation];
     if (self.errorBlock) {
         self.errorBlock(error);
+        self.errorBlock = nil;
     }
 }
 
@@ -111,6 +112,8 @@ didChangeAuthorizationStatus:(CLAuthorizationStatus)status
                                          userInfo:nil];
         self.errorBlock(error);
     }
+
+    self.errorBlock = nil;
 }
 
 @end
