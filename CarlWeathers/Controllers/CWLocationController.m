@@ -95,6 +95,10 @@
 - (void)locationManager:(CLLocationManager *)manager
 didChangeAuthorizationStatus:(CLAuthorizationStatus)status
 {
+    if (!self.errorBlock) {
+        return;
+    }
+
     if (status == kCLAuthorizationStatusDenied) {
         NSError *error = [NSError errorWithDomain:CWErrorDomain
                                              code:CWErrorLocationDenied
