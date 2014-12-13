@@ -95,9 +95,14 @@
 - (void)locationManager:(CLLocationManager *)manager
 didChangeAuthorizationStatus:(CLAuthorizationStatus)status
 {
-    if (status == kCLAuthorizationStatusDenied || status == kCLAuthorizationStatusRestricted) {
+    if (status == kCLAuthorizationStatusDenied) {
         NSError *error = [NSError errorWithDomain:CWErrorDomain
-                                             code:CWErrorLocationUnaccessible
+                                             code:CWErrorLocationDenied
+                                         userInfo:nil];
+        self.errorBlock(error);
+    } else if (status == kCLAuthorizationStatusDenied) {
+        NSError *error = [NSError errorWithDomain:CWErrorDomain
+                                             code:CWErrorLocationRestricted
                                          userInfo:nil];
         self.errorBlock(error);
     }
