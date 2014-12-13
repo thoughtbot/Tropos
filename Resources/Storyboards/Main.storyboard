@@ -12,6 +12,8 @@
             <string>DINNextLTPro-UltraLight</string>
             <string>DINNextLTPro-UltraLight</string>
             <string>DINNextLTPro-UltraLight</string>
+            <string>DINNextLTPro-UltraLight</string>
+            <string>DINNextLTPro-UltraLight</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -164,6 +166,7 @@
                         <outlet property="temperatureImageView" destination="wxI-GT-UQg" id="OvJ-DJ-oNa"/>
                         <outlet property="windSpeedImageView" destination="Qna-Fn-Mlz" id="LM6-40-9KT"/>
                         <outlet property="windSpeedLabel" destination="fIp-2s-RDl" id="S5w-AE-oj3"/>
+                        <segue destination="JEF-iF-kIx" kind="presentation" identifier="CWLocationDeniedViewController" animates="NO" id="FRN-Vh-hG5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aUn-30-HRW" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -174,6 +177,45 @@
                 </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="541" y="216"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="rEm-oT-Car">
+            <objects>
+                <viewController id="JEF-iF-kIx" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="i3G-sr-Hcy"/>
+                        <viewControllerLayoutGuide type="bottom" id="6NF-Ey-9ev"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="be2-vJ-9hy">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I woke up, why don't you? You're an asset, an expendable asset and I used it to get the job done. Got that?" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zDU-p7-6ix">
+                                <rect key="frame" x="16" y="194" width="568" height="111"/>
+                                <fontDescription key="fontDescription" name="DINNextLTPro-UltraLight" family="DIN Next LT Pro" pointSize="37"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="—Carl Weathers" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z66-HH-hbA">
+                                <rect key="frame" x="395" y="361" width="189" height="28"/>
+                                <fontDescription key="fontDescription" name="DINNextLTPro-UltraLight" family="DIN Next LT Pro" pointSize="28"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.098039215686274508" green="0.098039215686274508" blue="0.12941176470588234" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="zDU-p7-6ix" firstAttribute="trailing" secondItem="be2-vJ-9hy" secondAttribute="trailingMargin" id="1e5-Eg-MUh"/>
+                            <constraint firstAttribute="centerY" secondItem="zDU-p7-6ix" secondAttribute="centerY" constant="50.5" id="JX9-Ao-WFD"/>
+                            <constraint firstItem="zDU-p7-6ix" firstAttribute="leading" secondItem="be2-vJ-9hy" secondAttribute="leadingMargin" id="L9t-fp-utG"/>
+                            <constraint firstItem="z66-HH-hbA" firstAttribute="top" secondItem="zDU-p7-6ix" secondAttribute="bottom" constant="56" id="hTV-db-ySW"/>
+                            <constraint firstItem="z66-HH-hbA" firstAttribute="trailing" secondItem="be2-vJ-9hy" secondAttribute="trailingMargin" id="vmc-Sy-6mk"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Fo5-oE-XjI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1251" y="216"/>
         </scene>
     </scenes>
 </document>
