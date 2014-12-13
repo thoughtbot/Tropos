@@ -30,6 +30,7 @@
     NSParameterAssert(completionBlock);
     NSParameterAssert(errorBlock);
     [self.locationManager requestWhenInUseAuthorization];
+    [self.locationManager startUpdatingLocation];
     self.completionBlock = completionBlock;
     self.errorBlock = errorBlock;
 }
@@ -94,9 +95,7 @@
 - (void)locationManager:(CLLocationManager *)manager
 didChangeAuthorizationStatus:(CLAuthorizationStatus)status
 {
-    if (status == kCLAuthorizationStatusAuthorizedWhenInUse) {
-        [self.locationManager startUpdatingLocation];
-    } else if (status != kCLAuthorizationStatusNotDetermined) {
+    if (status == kCLAuthorizationStatusDenied || status == kCLAuthorizationStatusRestricted) {
         NSError *error = [NSError errorWithDomain:CWErrorDomain
                                              code:CWErrorLocationUnaccessible
                                          userInfo:nil];
