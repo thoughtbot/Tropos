@@ -28,7 +28,6 @@
                           errorBlock:(CWLocationErrorBlock)errorBlock
 {
     NSParameterAssert(completionBlock);
-    NSParameterAssert(errorBlock);
     [self.locationManager requestWhenInUseAuthorization];
     [self.locationManager startUpdatingLocation];
     self.completionBlock = completionBlock;
@@ -89,7 +88,9 @@
        didFailWithError:(NSError *)error
 {
     [self.locationManager stopUpdatingLocation];
-    self.errorBlock(error);
+    if (self.errorBlock) {
+        self.errorBlock(error);
+    }
 }
 
 - (void)locationManager:(CLLocationManager *)manager
