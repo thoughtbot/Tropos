@@ -178,10 +178,10 @@
             </objects>
             <point key="canvasLocation" x="541" y="216"/>
         </scene>
-        <!--View Controller-->
+        <!--Location Denied View Controller-->
         <scene sceneID="rEm-oT-Car">
             <objects>
-                <viewController id="JEF-iF-kIx" sceneMemberID="viewController">
+                <viewController id="JEF-iF-kIx" customClass="CWLocationDeniedViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="i3G-sr-Hcy"/>
                         <viewControllerLayoutGuide type="bottom" id="6NF-Ey-9ev"/>
