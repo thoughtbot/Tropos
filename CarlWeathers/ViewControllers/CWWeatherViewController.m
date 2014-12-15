@@ -88,9 +88,7 @@
         }];
         [self.forecastClient fetchConditionsAtLatitude:latitude longitude:longitude completion:^(CWCurrentConditions *currentConditions, CWHistoricalConditions *yesterdaysConditions) {
             [self.activityView stopAnimating];
-//            self.temperatureLabel.text = [NSString stringWithFormat:@"%@", currentConditions.temperature];
-            self.conditionsImageView.image = [UIImage imageNamed:@"a.pdf"];
-//            self.conditionsImageView.image = [UIImage imageNamed:currentConditions.conditionsDescription];
+            self.conditionsImageView.image = [UIImage imageNamed:currentConditions.conditionsDescription];
             CWTemperature *currentTemperature = currentConditions.temperature;
             CWTemperature *yesterdaysTemperature = yesterdaysConditions.temperature;
             CWTemperatureComparison comparison = [currentTemperature compare:yesterdaysTemperature];
@@ -119,7 +117,7 @@
             self.conditionsDescriptionLabel.attributedText = description;
             CGFloat newWidth = CGRectGetWidth(self.view.bounds) * currentConditions.precipitationProbability;
             self.precipitationMeterViewWidthConstraint.constant = newWidth;
-            self.windSpeedImageView.image = [UIImage imageNamed:@"wind"];
+            self.windSpeedImageView.image = [UIImage imageNamed:@"wind-icon-small"];
             self.temperatureImageView.image = [UIImage imageNamed:@"temp"];
             [self.view layoutIfNeeded];
         }];
