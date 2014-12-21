@@ -1,14 +1,22 @@
-typedef void (^CWLocationCompletionBlock)(double latitude,
-                                          double longitude);
+@class CWWeatherLocation;
 
-typedef void (^CWLocationErrorBlock)(NSError *error);
+typedef void (^CWLocationUpdateBlock)(CWWeatherLocation *weatherLocation, NSError *error);
+typedef void (^CWLocationAuthorizationChangedBlock)(BOOL authorized);
+
+typedef NS_ENUM(NSUInteger, CWLocationAuthorizationType) {
+    CWLocationAuthorizationAlways,
+    CWLocationAuthorizationWhenInUse
+};
 
 @interface CWLocationController : NSObject
 
-+ (NSString *)coordinateStringFromLatitude:(double)latitude
-                                 longitude:(double)longitude;
+@property (nonatomic, readonly) CWLocationAuthorizationType authorizationType;
+@property (nonatomic) BOOL needsAuthorization;
 
-- (void)updateLocationWithCompletion:(CWLocationCompletionBlock)completionBlock
-                          errorBlock:(CWLocationErrorBlock)errorBlock;
++ (instancetype)controllerWithAuthorizationType:(CWLocationAuthorizationType)type authorizationChanged:(CWLocationAuthorizationChangedBlock)authorizationChanged;
+
+- (void)requestAuthorization;
+- (void)updateLocationWithBlock:(CWLocationUpdateBlock)completionBlock;
+- (void)cancel;
 
 @end

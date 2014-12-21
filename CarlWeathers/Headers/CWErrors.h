@@ -4,7 +4,7 @@
 static NSString * const CWErrorDomain = @"CarlWeathersErrorDomain";
 
 typedef NS_ENUM(NSUInteger, CWError) {
-    CWErrorLocationUnaccessible,
+    CWErrorLocationUnauthorized,
 };
 
 #endif

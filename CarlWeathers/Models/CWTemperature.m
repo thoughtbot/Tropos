@@ -3,11 +3,13 @@
 
 @interface CWTemperature ()
 
-@property (nonatomic) NSNumber *temperature;
+@property (nonatomic) NSNumber *temperatureNumber;
 
 @end
 
 @implementation CWTemperature
+
+#pragma mark - Initialization
 
 + (instancetype)temperatureFromNumber:(NSNumber *)number
 {
@@ -19,32 +21,40 @@
     self = [super init];
     if (!self) return nil;
 
-    self.temperature = [number roundedNumber];
+    self.temperatureNumber = [number roundedNumber];
 
     return self;
 }
 
-- (NSString *)stringValue
+#pragma mark - NSObject
+
+- (NSString *)description
 {
-    return [self.temperature.stringValue stringByAppendingString:@"°"];
+    return [self.temperatureNumber description];
 }
 
-- (CWTemperatureComparison)compare:(CWTemperature *)comparedTemperature
+#pragma mark - Public Methods
+
+- (CWTemperatureComparison)comparedTo:(CWTemperature *)comparedTemperature
 {
-    NSInteger temperature = self.temperature.integerValue;
-    NSInteger otherTemperature = comparedTemperature.temperature.integerValue;
-    NSInteger temperatureChange = temperature - otherTemperature;
-    if (temperatureChange >= 10) {
+    NSInteger temperatureDifference = [self differenceFromTemperature:comparedTemperature];
+
+    if (temperatureDifference >= 10) {
         return CWTemperatureComparisonHotter;
-    } else if (temperatureChange > 0) {
+    } else if (temperatureDifference > 0) {
         return CWTemperatureComparisonWarmer;
-    } else if (temperatureChange <= -10) {
-        return CWTemperatureComparisonColder;
-    } else if (temperatureChange < 0) {
+    } else if (temperatureDifference == 0) {
+        return CWTemperatureComparisonSame;
+    } else if (temperatureDifference > -10) {
         return CWTemperatureComparisonCooler;
     } else {
-        return CWTemperatureComparisonSame;
+        return CWTemperatureComparisonColder;
     }
+}
+
+- (NSInteger)differenceFromTemperature:(CWTemperature *)comparedTemperature
+{
+    return self.temperatureNumber.integerValue - comparedTemperature.temperatureNumber.integerValue;
 }
 
 @end

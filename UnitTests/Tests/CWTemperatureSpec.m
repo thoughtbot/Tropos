@@ -9,7 +9,7 @@ describe(@"CWTemperature", ^{
                 CWTemperature *first = [CWTemperature temperatureFromNumber:@(10)];
                 CWTemperature *second = [CWTemperature temperatureFromNumber:@(0)];
                 
-                expect([first compare:second]).to.equal(CWTemperatureComparisonHotter);
+                expect([first comparedTo:second]).to.equal(CWTemperatureComparisonHotter);
             });
         });
 
@@ -18,7 +18,7 @@ describe(@"CWTemperature", ^{
                 CWTemperature *first = [CWTemperature temperatureFromNumber:@(9)];
                 CWTemperature *second = [CWTemperature temperatureFromNumber:@(0)];
                 
-                expect([first compare:second]).to.equal(CWTemperatureComparisonWarmer);
+                expect([first comparedTo:second]).to.equal(CWTemperatureComparisonWarmer);
             });
         });
 
@@ -27,7 +27,7 @@ describe(@"CWTemperature", ^{
                 CWTemperature *first = [CWTemperature temperatureFromNumber:@(0)];
                 CWTemperature *second = [CWTemperature temperatureFromNumber:@(9)];
                 
-                expect([first compare:second]).to.equal(CWTemperatureComparisonCooler);
+                expect([first comparedTo:second]).to.equal(CWTemperatureComparisonCooler);
             });
         });
 
@@ -36,7 +36,7 @@ describe(@"CWTemperature", ^{
                 CWTemperature *first = [CWTemperature temperatureFromNumber:@(0)];
                 CWTemperature *second = [CWTemperature temperatureFromNumber:@(10)];
                 
-                expect([first compare:second]).to.equal(CWTemperatureComparisonColder);
+                expect([first comparedTo:second]).to.equal(CWTemperatureComparisonColder);
             });
         });
 
@@ -45,7 +45,7 @@ describe(@"CWTemperature", ^{
                 CWTemperature *first = [CWTemperature temperatureFromNumber:@(0)];
                 CWTemperature *second = [CWTemperature temperatureFromNumber:@(0)];
                 
-                expect([first compare:second]).to.equal(CWTemperatureComparisonSame);
+                expect([first comparedTo:second]).to.equal(CWTemperatureComparisonSame);
             });
         });
     });
