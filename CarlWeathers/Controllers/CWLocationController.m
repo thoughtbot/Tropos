@@ -1,15 +1,42 @@
 @import CoreLocation;
 #import "CWLocationController.h"
+#import "CWWeatherLocation.h"
+#import "CLLocation+CWRecentLocation.h"
 
 @interface CWLocationController () <CLLocationManagerDelegate>
 
+@property (nonatomic, readwrite) CWLocationAuthorizationType authorizationType;
+@property (nonatomic, copy) CWLocationAuthorizationChangedBlock authorizationChangedBlock;
+
+@property (nonatomic) BOOL authorized;
+@property (nonatomic, copy) CWLocationUpdateBlock completionBlock;
+
 @property (nonatomic) CLLocationManager *locationManager;
-@property (nonatomic, copy) CWLocationCompletionBlock completionBlock;
-@property (nonatomic, copy) CWLocationErrorBlock errorBlock;
+@property (nonatomic) CLGeocoder *geocoder;
 
 @end
 
 @implementation CWLocationController
+
+#pragma mark - Class Methods
+
++ (instancetype)controllerWithAuthorizationType:(CWLocationAuthorizationType)type authorizationChanged:(void (^)(BOOL))authChanged
+{
+    return [[CWLocationController alloc] initWithAuthorizationType:type authorizationChangedBlock:authChanged];
+}
+
+#pragma mark - Initializers
+
+- (instancetype)initWithAuthorizationType:(CWLocationAuthorizationType)type authorizationChangedBlock:(CWLocationAuthorizationChangedBlock)block
+{
+    self = [self init];
+    if (!self) return nil;
+
+    self.authorizationType = type;
+    self.authorizationChangedBlock = block;
+
+    return self;
+}
 
 - (instancetype)init
 {
@@ -21,85 +48,104 @@
     self.locationManager.distanceFilter = kCLDistanceFilterNone;
     self.locationManager.desiredAccuracy = kCLLocationAccuracyBest;
 
+    self.geocoder = [CLGeocoder new];
+
     return self;
 }
 
-- (void)updateLocationWithCompletion:(CWLocationCompletionBlock)completionBlock
-                          errorBlock:(CWLocationErrorBlock)errorBlock
+#pragma mark - NSObject
+
+- (void)dealloc
 {
-    NSParameterAssert(completionBlock);
-    NSParameterAssert(errorBlock);
-    [self.locationManager requestWhenInUseAuthorization];
-    [self.locationManager startUpdatingLocation];
-    self.completionBlock = completionBlock;
-    self.errorBlock = errorBlock;
+    [self cancel];
 }
 
-+ (NSString *)coordinateStringFromLatitude:(double)latitude
-                                 longitude:(double)longitude
+#pragma mark - Properties
+
+- (BOOL)needsAuthorization
 {
-    NSInteger latitudeSeconds = (NSInteger)(latitude * 3600);
-    NSInteger latitudeDegrees = latitudeSeconds / 3600;
-    latitudeSeconds = ABS(latitudeSeconds % 3600);
-    NSInteger latitudeMinutes = latitudeSeconds / 60;
-    latitudeSeconds %= 60;
+    return [CLLocationManager authorizationStatus] == kCLAuthorizationStatusNotDetermined;
+}
 
-    NSInteger longitudeSeconds = (NSInteger)(longitude * 3600);
-    NSInteger longitudeDegrees = longitudeSeconds / 3600;
-    longitudeSeconds = ABS(longitudeSeconds % 3600);
-    NSInteger longitudeMinutes = longitudeSeconds / 60;
-    longitudeSeconds %= 60;
+#pragma mark - Methods
 
-    NSString *latitudeDirection = latitudeDegrees >= 0 ? @"N": @"S";
-    NSString *longitudeDirection = longitudeDegrees >= 0 ? @"E": @"W";
+- (void)requestAuthorization
+{
+    switch (self.authorizationType) {
+        case CWLocationAuthorizationAlways:
+            [self.locationManager requestAlwaysAuthorization];
+            break;
+        case CWLocationAuthorizationWhenInUse:
+            [self.locationManager requestWhenInUseAuthorization];
+            break;
+    }
+}
 
-    return [NSString stringWithFormat:@"%ld° %ld' %ld\" %@ %ld° %ld' %ld\" %@",
-            (long)(ABS(latitudeDegrees)),
-            (long)latitudeMinutes,
-            (long)latitudeSeconds,
-            latitudeDirection,
-            (long)ABS(longitudeDegrees),
-            (long)longitudeMinutes,
-            (long)longitudeSeconds,
-            longitudeDirection];
+- (void)updateLocationWithBlock:(CWLocationUpdateBlock)completionBlock
+{
+    NSParameterAssert(completionBlock);
 
+    self.completionBlock = completionBlock;
+
+    if (!self.authorized) {
+        self.completionBlock(nil, [NSError locationUnauthorizedError]);
+        return;
+    }
+
+    [self.locationManager startUpdatingLocation];
+}
+
+- (void)cancel
+{
+    [self.locationManager stopUpdatingLocation];
+    [self.geocoder cancelGeocode];
+}
+
+#pragma mark - Private
+
+- (BOOL)authorized
+{
+    switch (self.authorizationType) {
+        case CWLocationAuthorizationAlways:
+            return [CLLocationManager authorizationStatus] == kCLAuthorizationStatusAuthorizedAlways;
+        case CWLocationAuthorizationWhenInUse:
+            return [CLLocationManager authorizationStatus] == kCLAuthorizationStatusAuthorizedWhenInUse;
+    }
 }
 
 #pragma mark - CLLocationManagerDelegate
 
-- (void)locationManager:(CLLocationManager *)manager
-     didUpdateLocations:(NSArray *)locations
+- (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations
 {
     CLLocation *location = locations.lastObject;
-    NSDate *lastLocationDate = location.timestamp;
-    NSDate *fiveSecondsAgo = [NSDate dateWithTimeIntervalSinceNow:-5];
-    NSComparisonResult result = [lastLocationDate compare:fiveSecondsAgo];
-    if (result == NSOrderedAscending) {
+
+    if (location.isStale) {
         return;
     }
 
     [self.locationManager stopUpdatingLocation];
-    CLLocationCoordinate2D coordinate = location.coordinate;
-    double latitude = coordinate.latitude;
-    double longitude = coordinate.longitude;
-    self.completionBlock(latitude, longitude);
+
+    [self.geocoder reverseGeocodeLocation:location completionHandler:^(NSArray *placemarks, NSError *error) {
+        if (!placemarks) {
+            self.completionBlock(nil, error);
+            return;
+        }
+
+        CWWeatherLocation *weatherLocation = [[CWWeatherLocation alloc] initWithPlacemark:placemarks.lastObject];
+        self.completionBlock(weatherLocation, nil);
+    }];
 }
 
-- (void)locationManager:(CLLocationManager *)manager
-       didFailWithError:(NSError *)error
+- (void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error
 {
     [self.locationManager stopUpdatingLocation];
-    self.errorBlock(error);
+    self.completionBlock(nil, error);
 }
 
-- (void)locationManager:(CLLocationManager *)manager
-didChangeAuthorizationStatus:(CLAuthorizationStatus)status
+- (void)locationManager:(CLLocationManager *)manager didChangeAuthorizationStatus:(CLAuthorizationStatus)status
 {
-    if (status == kCLAuthorizationStatusDenied || status == kCLAuthorizationStatusRestricted) {
-        NSError *error = [NSError errorWithDomain:CWErrorDomain
-                                             code:CWErrorLocationUnaccessible
-                                         userInfo:nil];
-        self.errorBlock(error);
+    if (self.authorizationChangedBlock) {
+        self.authorizationChangedBlock(self.authorized);
     }
 }
 

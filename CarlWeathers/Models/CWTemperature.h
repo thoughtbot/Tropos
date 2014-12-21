@@ -8,11 +8,10 @@ typedef NS_ENUM(NSUInteger, CWTemperatureComparison) {
     CWTemperatureComparisonColder,
 };
 
-@property (nonatomic, readonly) NSNumber *temperature;
+@property (nonatomic, readonly) NSNumber *temperatureNumber;
 
 + (instancetype)temperatureFromNumber:(NSNumber *)number;
-
-- (NSString *)stringValue;
-- (CWTemperatureComparison)compare:(CWTemperature *)comparedTemperature;
+- (CWTemperatureComparison)comparedTo:(CWTemperature *)comparedTemperature;
+- (NSInteger)differenceFromTemperature:(CWTemperature *)comparedTemperature;
 
 @end

@@ -32,12 +32,4 @@
     return conditions;
 }
 
-- (NSString *)windConditions
-{
-    TTTLocationFormatter *formatter = [TTTLocationFormatter new];
-    formatter.bearingStyle = TTTBearingAbbreviationWordStyle;
-    NSString *bearing = [formatter stringFromBearing:self.windBearing];
-    return [NSString stringWithFormat:@"%.1f mph %@", self.windSpeed, bearing];
-}
-
 @end

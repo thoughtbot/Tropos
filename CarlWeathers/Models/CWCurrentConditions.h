@@ -12,6 +12,4 @@
 
 + (instancetype)currentConditionsFromJSON:(NSDictionary *)JSON;
 
-- (NSString *)windConditions;
-
 @end
