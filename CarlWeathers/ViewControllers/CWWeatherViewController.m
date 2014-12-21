@@ -24,6 +24,8 @@
 
 @end
 
+static const int kPrecipBarHeight = 6;
+
 @implementation CWWeatherViewController
 
 - (void)viewDidLoad
@@ -121,11 +123,27 @@
             self.precipitationMeterViewWidthConstraint.constant = newWidth;
             self.windSpeedImageView.image = [UIImage imageNamed:@"wind"];
             self.temperatureImageView.image = [UIImage imageNamed:@"temp"];
+            [self buildPrecipitationBarWithFloat:currentConditions.precipitationProbability];
+
             [self.view layoutIfNeeded];
         }];
     } errorBlock:^(NSError *error) {
         NSLog(@"error: %@", error);
     }];
+}
+
+- (void)buildPrecipitationBarWithFloat:(CGFloat)precipitation
+{
+    if (precipitation == 0) {
+        return;
+    }
+
+    CGFloat precipitationWidth = self.view.bounds.size.width * precipitation;
+    CALayer *precipitationBar = [CALayer layer];
+    precipitationBar.backgroundColor = [UIColor colorWithRed:0/255.0 green:182/255.0 blue:236/255.0 alpha:1.0].CGColor;
+    precipitationBar.frame = CGRectMake(0, self.view.bounds.size.height - kPrecipBarHeight, precipitationWidth, kPrecipBarHeight);
+
+    [self.view.layer addSublayer:precipitationBar];
 }
 
 @end
