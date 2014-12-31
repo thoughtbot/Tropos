@@ -1,6 +1,7 @@
 PODS:
   - Expecta (0.3.1)
   - FormatterKit/LocationFormatter (1.7.5)
+  - HockeySDK (3.6.2)
   - OCMock (3.1.1)
   - OHHTTPStubs (3.1.8):
     - OHHTTPStubs/Core (= 3.1.8)
@@ -10,6 +11,7 @@ PODS:
 DEPENDENCIES:
   - Expecta
   - FormatterKit/LocationFormatter
+  - HockeySDK (~> 3.6.2)
   - OCMock
   - OHHTTPStubs
   - Specta (from `https://github.com/specta/specta.git`, tag `v0.3.0.beta1`)
@@ -27,6 +29,7 @@ CHECKOUT OPTIONS:
 SPEC CHECKSUMS:
   Expecta: 03aabd0a89d8dea843baecb19a7fd7466a69a31d
   FormatterKit: 758bef4552d11454f0eb7e73669f81c225247904
+  HockeySDK: bfd1f5ac75938b07499c4ac12932244b72a2e70b
   OCMock: f6cb8c162ab9d5620dddf411282c7b2c0ee78854
   OHHTTPStubs: 2e25ea33e4163e5c458fe600d9ed412a85b2aeaf
   Specta: 63e8ac8e07db6675c7096d37f77a266a1be4c02d
