@@ -2,6 +2,7 @@
 #import "CWWeatherController.h"
 #import "CWWeatherViewModel.h"
 #import "CWLocationController.h"
+#import "CWPrecipitationMeterView.h"
 
 @interface CWWeatherViewController ()
 
@@ -15,8 +16,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *highLowTemperatureLabel;
 @property (weak, nonatomic) IBOutlet UIImageView *windSpeedImageView;
 @property (weak, nonatomic) IBOutlet UIImageView *temperatureImageView;
-
-@property (weak, nonatomic) IBOutlet NSLayoutConstraint *precipitationMeterViewWidthConstraint;
+@property (weak, nonatomic) IBOutlet CWPrecipitationMeterView *precipitationMeterView;
 
 @end
 
@@ -59,6 +59,7 @@
     self.highLowTemperatureLabel.text = controller.viewModel.formattedTemperatureRange;
     self.windSpeedLabel.text = controller.viewModel.formattedWindSpeed;
     self.conditionsDescriptionLabel.attributedText = controller.viewModel.attributedTemperatureComparison;
+    self.precipitationMeterView.precipitationProbability = controller.viewModel.precipitationProbability;
 }
 
 @end

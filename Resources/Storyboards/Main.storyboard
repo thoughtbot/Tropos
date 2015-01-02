@@ -27,30 +27,28 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="BOSTON, MA" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wl8-8h-ogo" userLabel="City Label">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BOSTON, MA" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wl8-8h-ogo" userLabel="City Label">
                                 <rect key="frame" x="16" y="36" width="568" height="18"/>
                                 <fontDescription key="fontDescription" name="DINNextLTPro-UltraLight" family="DIN Next LT Pro" pointSize="18"/>
                                 <color key="textColor" red="0.6705882352941176" green="0.65490196078431373" blue="0.69411764705882351" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Bahstahn" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hox-Oh-26Y" userLabel="Coordinate Label">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bahstahn" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hox-Oh-26Y" userLabel="Coordinate Label">
                                 <rect key="frame" x="16" y="54" width="568" height="15"/>
                                 <fontDescription key="fontDescription" name="DINNextLTPro-UltraLight" family="DIN Next LT Pro" pointSize="15"/>
                                 <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.43529411764705883" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UuN-Av-FMW" userLabel="Precipitation Chance Meter View">
-                                <rect key="frame" x="0.0" y="592" width="600" height="8"/>
-                                <color key="backgroundColor" red="0.0" green="0.71372549019607845" blue="0.92549019607843142" alpha="1" colorSpace="calibratedRGB"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UuN-Av-FMW" userLabel="Precipitation Chance Meter View" customClass="CWPrecipitationMeterView">
+                                <rect key="frame" x="0.0" y="594" width="600" height="6"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="600" id="1Sm-BW-KI3"/>
-                                    <constraint firstAttribute="height" constant="8" id="7Lw-Uh-L46"/>
+                                    <constraint firstAttribute="height" constant="6" id="jon-6R-XQZ"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="r7S-cF-Z7O" userLabel="Forecast Container View">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="r7S-cF-Z7O" userLabel="Forecast Container View">
                                 <rect key="frame" x="16" y="207" width="568" height="187"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="It's warmer today than yesterday at this time." lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4aa-2F-UFk" userLabel="Conditions Description">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="It's warmer today than yesterday at this time." lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4aa-2F-UFk" userLabel="Conditions Description">
                                         <rect key="frame" x="40" y="144" width="518" height="74"/>
                                         <fontDescription key="fontDescription" name="DINNextLTPro-UltraLight" family="DIN Next LT Pro" pointSize="37"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
@@ -81,13 +79,13 @@
                                     </mask>
                                 </variation>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="51° / 38°" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jm9-4j-cuq" userLabel="High and Low Temp Label">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="51° / 38°" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jm9-4j-cuq" userLabel="High and Low Temp Label">
                                 <rect key="frame" x="56" y="560" width="78" height="20"/>
                                 <fontDescription key="fontDescription" name="DINNextLTPro-UltraLight" family="DIN Next LT Pro" pointSize="20"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="8.0 mph SWE" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fIp-2s-RDl" userLabel="Wind Label">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="8.0 mph SWE" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fIp-2s-RDl" userLabel="Wind Label">
                                 <rect key="frame" x="56" y="520" width="113" height="20"/>
                                 <fontDescription key="fontDescription" name="DINNextLTPro-UltraLight" family="DIN Next LT Pro" pointSize="20"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
@@ -111,38 +109,29 @@
                         <color key="backgroundColor" red="0.098039215686274508" green="0.098039215686274508" blue="0.12941176470588234" alpha="1" colorSpace="calibratedRGB"/>
                         <gestureRecognizers/>
                         <constraints>
-                            <constraint firstAttribute="bottom" secondItem="UuN-Av-FMW" secondAttribute="bottom" id="2us-yJ-MAI"/>
                             <constraint firstItem="kaZ-rO-kvS" firstAttribute="top" secondItem="jm9-4j-cuq" secondAttribute="bottom" constant="20" id="5sD-ep-B8d"/>
-                            <constraint firstItem="fIp-2s-RDl" firstAttribute="leading" secondItem="Qna-Fn-Mlz" secondAttribute="trailing" constant="12" id="5zf-lj-CBT"/>
                             <constraint firstItem="Wl8-8h-ogo" firstAttribute="leading" secondItem="YfA-Yi-tI2" secondAttribute="leadingMargin" id="6Ag-HG-pBI"/>
                             <constraint firstItem="hox-Oh-26Y" firstAttribute="trailing" secondItem="YfA-Yi-tI2" secondAttribute="trailingMargin" id="85u-dv-F8d"/>
                             <constraint firstItem="hox-Oh-26Y" firstAttribute="leading" secondItem="YfA-Yi-tI2" secondAttribute="leadingMargin" id="9DV-j5-9CM"/>
                             <constraint firstItem="wxI-GT-UQg" firstAttribute="bottom" secondItem="jm9-4j-cuq" secondAttribute="bottom" id="9I0-w2-e0N"/>
-                            <constraint firstItem="wxI-GT-UQg" firstAttribute="width" secondItem="wxI-GT-UQg" secondAttribute="height" multiplier="1:1" id="Ede-sV-koe"/>
                             <constraint firstItem="wxI-GT-UQg" firstAttribute="trailing" secondItem="Qna-Fn-Mlz" secondAttribute="trailing" id="Fhw-Aq-lbL"/>
                             <constraint firstItem="wxI-GT-UQg" firstAttribute="top" secondItem="Qna-Fn-Mlz" secondAttribute="bottom" constant="20" id="IQn-v8-9lk"/>
                             <constraint firstItem="Wl8-8h-ogo" firstAttribute="trailing" secondItem="YfA-Yi-tI2" secondAttribute="trailingMargin" id="LAP-CO-Hzo"/>
                             <constraint firstItem="jm9-4j-cuq" firstAttribute="top" secondItem="fIp-2s-RDl" secondAttribute="bottom" constant="20" id="Max-Q6-13S"/>
-                            <constraint firstItem="UuN-Av-FMW" firstAttribute="leading" secondItem="YfA-Yi-tI2" secondAttribute="leadingMargin" constant="-16" id="NiO-bA-vPo"/>
+                            <constraint firstItem="kaZ-rO-kvS" firstAttribute="top" secondItem="UuN-Av-FMW" secondAttribute="bottom" id="N7f-QV-EeM"/>
                             <constraint firstItem="r7S-cF-Z7O" firstAttribute="trailing" secondItem="YfA-Yi-tI2" secondAttribute="trailingMargin" id="PeD-au-xgn"/>
                             <constraint firstItem="hox-Oh-26Y" firstAttribute="top" secondItem="Wl8-8h-ogo" secondAttribute="bottom" id="ck6-7C-W04"/>
+                            <constraint firstItem="UuN-Av-FMW" firstAttribute="leading" secondItem="YfA-Yi-tI2" secondAttribute="leading" id="dUZ-Cl-tbV"/>
                             <constraint firstAttribute="centerY" secondItem="r7S-cF-Z7O" secondAttribute="centerY" id="jKo-ob-Afq"/>
                             <constraint firstItem="jm9-4j-cuq" firstAttribute="leading" secondItem="wxI-GT-UQg" secondAttribute="trailing" constant="12" id="jku-Cm-gBS"/>
                             <constraint firstItem="fIp-2s-RDl" firstAttribute="leading" secondItem="YfA-Yi-tI2" secondAttribute="leadingMargin" constant="40" id="jlz-Ml-ex4"/>
                             <constraint firstItem="Wl8-8h-ogo" firstAttribute="top" secondItem="02N-3j-bOk" secondAttribute="bottom" constant="16" id="jmI-ne-gTd"/>
                             <constraint firstItem="wxI-GT-UQg" firstAttribute="top" secondItem="jm9-4j-cuq" secondAttribute="top" id="kRj-6w-lD3"/>
-                            <constraint firstItem="UuN-Av-FMW" firstAttribute="leading" secondItem="YfA-Yi-tI2" secondAttribute="leading" id="ksm-xQ-QI1"/>
                             <constraint firstItem="jm9-4j-cuq" firstAttribute="leading" secondItem="YfA-Yi-tI2" secondAttribute="leadingMargin" constant="40" id="mlh-mi-WiP"/>
+                            <constraint firstAttribute="trailing" secondItem="UuN-Av-FMW" secondAttribute="trailing" id="r7M-fL-KSJ"/>
                             <constraint firstItem="r7S-cF-Z7O" firstAttribute="leading" secondItem="YfA-Yi-tI2" secondAttribute="leadingMargin" id="t41-uQ-g2L"/>
                             <constraint firstItem="wxI-GT-UQg" firstAttribute="leading" secondItem="Qna-Fn-Mlz" secondAttribute="leading" id="zcp-v7-Ibd"/>
                         </constraints>
-                        <variation key="default">
-                            <mask key="constraints">
-                                <exclude reference="5zf-lj-CBT"/>
-                                <exclude reference="Ede-sV-koe"/>
-                                <exclude reference="NiO-bA-vPo"/>
-                            </mask>
-                        </variation>
                     </view>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                     <connections>
@@ -151,7 +140,7 @@
                         <outlet property="conditionsImageView" destination="Ef5-IL-xEe" id="mhx-To-Xjj"/>
                         <outlet property="coordinateLabel" destination="hox-Oh-26Y" id="f4r-wu-YdZ"/>
                         <outlet property="highLowTemperatureLabel" destination="jm9-4j-cuq" id="2Dc-yH-4sR"/>
-                        <outlet property="precipitationMeterViewWidthConstraint" destination="1Sm-BW-KI3" id="MoD-kn-58n"/>
+                        <outlet property="precipitationMeterView" destination="UuN-Av-FMW" id="XMO-RM-PXu"/>
                         <outlet property="temperatureImageView" destination="wxI-GT-UQg" id="OvJ-DJ-oNa"/>
                         <outlet property="windSpeedImageView" destination="Qna-Fn-Mlz" id="LM6-40-9KT"/>
                         <outlet property="windSpeedLabel" destination="fIp-2s-RDl" id="S5w-AE-oj3"/>

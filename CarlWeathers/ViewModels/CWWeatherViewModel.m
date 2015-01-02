@@ -77,6 +77,11 @@
     return attributedString;
 }
 
+- (CGFloat)precipitationProbability
+{
+    return self.currentConditions.precipitationProbability;
+}
+
 #pragma mark - Private Methods
 
 - (UIColor *)colorForTemperatureComparison:(CWTemperatureComparison)comparison

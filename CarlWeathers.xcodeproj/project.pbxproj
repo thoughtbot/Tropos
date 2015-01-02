@@ -13,6 +13,7 @@
 		4D0A5C3B1A3A32410084C41E /* CWCurrentConditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D0A5C3A1A3A32410084C41E /* CWCurrentConditions.m */; };
 		4D0A5C3D1A3A53DD0084C41E /* CWForecastDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D0A5C3C1A3A53DD0084C41E /* CWForecastDetailView.xib */; };
 		4D0A5C401A3A578E0084C41E /* DINNextLTPro-UltraLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4D0A5C3F1A3A578E0084C41E /* DINNextLTPro-UltraLight.otf */; };
+		4D3039E71A5749120042FFF8 /* CWPrecipitationMeterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D3039E61A5749120042FFF8 /* CWPrecipitationMeterView.m */; };
 		4D7CDEB61A46CC420038DD33 /* CWWeatherViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D7CDEB51A46CC420038DD33 /* CWWeatherViewModel.m */; };
 		4D7CDEB91A46D1C20038DD33 /* CWWeatherLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D7CDEB81A46D1C20038DD33 /* CWWeatherLocation.m */; };
 		4D7CDEBC1A46D3610038DD33 /* CLLocation+CWRecentLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D7CDEBB1A46D3610038DD33 /* CLLocation+CWRecentLocation.m */; };
@@ -65,6 +66,8 @@
 		4D0A5C3A1A3A32410084C41E /* CWCurrentConditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWCurrentConditions.m; sourceTree = "<group>"; };
 		4D0A5C3C1A3A53DD0084C41E /* CWForecastDetailView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CWForecastDetailView.xib; sourceTree = "<group>"; };
 		4D0A5C3F1A3A578E0084C41E /* DINNextLTPro-UltraLight.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DINNextLTPro-UltraLight.otf"; sourceTree = "<group>"; };
+		4D3039E51A5749120042FFF8 /* CWPrecipitationMeterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWPrecipitationMeterView.h; sourceTree = "<group>"; };
+		4D3039E61A5749120042FFF8 /* CWPrecipitationMeterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWPrecipitationMeterView.m; sourceTree = "<group>"; };
 		4D7CDEB41A46CC420038DD33 /* CWWeatherViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWWeatherViewModel.h; sourceTree = "<group>"; };
 		4D7CDEB51A46CC420038DD33 /* CWWeatherViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWWeatherViewModel.m; sourceTree = "<group>"; };
 		4D7CDEB71A46D1C20038DD33 /* CWWeatherLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWWeatherLocation.h; sourceTree = "<group>"; };
@@ -224,6 +227,8 @@
 		639AAB142C96B59FC995CA1D /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				4D3039E51A5749120042FFF8 /* CWPrecipitationMeterView.h */,
+				4D3039E61A5749120042FFF8 /* CWPrecipitationMeterView.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -566,6 +571,7 @@
 			files = (
 				4D0A5C381A3A27510084C41E /* CWForecastClient.m in Sources */,
 				C2E44CEF1A3B6E89009CC844 /* NSDate+CWRelativeDate.m in Sources */,
+				4D3039E71A5749120042FFF8 /* CWPrecipitationMeterView.m in Sources */,
 				4D7F0EEF1A3E8439008A6E1C /* CWWeatherController.m in Sources */,
 				C2E44CDD1A3A38A2009CC844 /* CWLocationController.m in Sources */,
 				D7DD1B8AD495AFA4EC1CEFF9 /* CWAppDelegate.m in Sources */,
