@@ -1,6 +1,9 @@
 {
   "images" : [
-
+    {
+      "idiom" : "universal",
+      "filename" : "snow.pdf"
+    }
   ],
   "info" : {
     "version" : 1,
