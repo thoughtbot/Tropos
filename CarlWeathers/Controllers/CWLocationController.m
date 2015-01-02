@@ -28,7 +28,6 @@
                           errorBlock:(CWLocationErrorBlock)errorBlock
 {
     NSParameterAssert(completionBlock);
-    NSParameterAssert(errorBlock);
     [self.locationManager requestWhenInUseAuthorization];
     [self.locationManager startUpdatingLocation];
     self.completionBlock = completionBlock;
@@ -89,18 +88,32 @@
        didFailWithError:(NSError *)error
 {
     [self.locationManager stopUpdatingLocation];
-    self.errorBlock(error);
+    if (self.errorBlock) {
+        self.errorBlock(error);
+        self.errorBlock = nil;
+    }
 }
 
 - (void)locationManager:(CLLocationManager *)manager
 didChangeAuthorizationStatus:(CLAuthorizationStatus)status
 {
-    if (status == kCLAuthorizationStatusDenied || status == kCLAuthorizationStatusRestricted) {
+    if (!self.errorBlock) {
+        return;
+    }
+
+    if (status == kCLAuthorizationStatusDenied) {
         NSError *error = [NSError errorWithDomain:CWErrorDomain
-                                             code:CWErrorLocationUnaccessible
+                                             code:CWErrorLocationDenied
+                                         userInfo:nil];
+        self.errorBlock(error);
+    } else if (status == kCLAuthorizationStatusDenied) {
+        NSError *error = [NSError errorWithDomain:CWErrorDomain
+                                             code:CWErrorLocationRestricted
                                          userInfo:nil];
         self.errorBlock(error);
     }
+
+    self.errorBlock = nil;
 }
 
 @end

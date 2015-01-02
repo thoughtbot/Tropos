@@ -15,6 +15,7 @@
 		4D0A5C401A3A578E0084C41E /* DINNextLTPro-UltraLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4D0A5C3F1A3A578E0084C41E /* DINNextLTPro-UltraLight.otf */; };
 		7D54C46B9E7FA5B0724FC775 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B3068282D6E4B66BB58E93BC /* libPods.a */; };
 		8EAE701DFB2DC16543CE1B3C /* libPods-unit_tests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A548375C4E5D454F542CFA0D /* libPods-unit_tests.a */; };
+		C2515BC21A3BBF5B00E1E1F5 /* CWLocationDeniedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2515BC11A3BBF5B00E1E1F5 /* CWLocationDeniedViewController.m */; };
 		C2E44CDD1A3A38A2009CC844 /* CWLocationController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2E44CDC1A3A38A2009CC844 /* CWLocationController.m */; };
 		C2E44CE11A3A3C09009CC844 /* CWWeatherViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2E44CE01A3A3C09009CC844 /* CWWeatherViewController.m */; };
 		C2E44CE41A3A4273009CC844 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = C2E44CE61A3A4273009CC844 /* Localizable.strings */; };
@@ -63,6 +64,8 @@
 		B3068282D6E4B66BB58E93BC /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6D58F8AA6976EA1B35682B7 /* LaunchScreen.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
 		BE299336DA1BFBE36CB7763B /* UnitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UnitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C2515BC01A3BBF5B00E1E1F5 /* CWLocationDeniedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWLocationDeniedViewController.h; sourceTree = "<group>"; };
+		C2515BC11A3BBF5B00E1E1F5 /* CWLocationDeniedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWLocationDeniedViewController.m; sourceTree = "<group>"; };
 		C2E44CDB1A3A38A2009CC844 /* CWLocationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWLocationController.h; sourceTree = "<group>"; };
 		C2E44CDC1A3A38A2009CC844 /* CWLocationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWLocationController.m; sourceTree = "<group>"; };
 		C2E44CDF1A3A3C09009CC844 /* CWWeatherViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWWeatherViewController.h; sourceTree = "<group>"; };
@@ -261,6 +264,8 @@
 		C2E44CDE1A3A3BFB009CC844 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				C2515BC01A3BBF5B00E1E1F5 /* CWLocationDeniedViewController.h */,
+				C2515BC11A3BBF5B00E1E1F5 /* CWLocationDeniedViewController.m */,
 				C2E44CDF1A3A3C09009CC844 /* CWWeatherViewController.h */,
 				C2E44CE01A3A3C09009CC844 /* CWWeatherViewController.m */,
 			);
@@ -522,6 +527,7 @@
 				C2E44CE11A3A3C09009CC844 /* CWWeatherViewController.m in Sources */,
 				C2E44CF21A3B7358009CC844 /* CWHistoricalConditions.m in Sources */,
 				CE5D7F3B45F980082E1BCA30 /* LaunchScreen.xib in Sources */,
+				C2515BC21A3BBF5B00E1E1F5 /* CWLocationDeniedViewController.m in Sources */,
 				C9318C8461EB5FE3914F9AC0 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

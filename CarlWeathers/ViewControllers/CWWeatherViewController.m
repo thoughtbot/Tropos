@@ -122,7 +122,9 @@
             [self.view layoutIfNeeded];
         }];
     } errorBlock:^(NSError *error) {
-        NSLog(@"error: %@", error);
+        if (error.code == CWErrorLocationDenied) {
+            [self performSegueWithIdentifier:@"CWLocationDeniedViewController" sender:self];
+        }
     }];
 }
 
