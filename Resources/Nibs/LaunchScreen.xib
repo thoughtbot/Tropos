@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6254"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
@@ -9,7 +9,51 @@
         <view contentMode="scaleToFill" id="iN0-l3-epB">
             <rect key="frame" x="0.0" y="0.0" width="480" height="480"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ol9-go-lsD">
+                    <rect key="frame" x="0.0" y="414" width="480" height="66"/>
+                    <color key="backgroundColor" red="0.3843137254901961" green="0.79607843137254897" blue="0.93333333333333335" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="66" id="Z0y-5d-GB9"/>
+                        <constraint firstAttribute="width" constant="480" id="ZgP-Vb-6Kb"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cZj-nX-MGt">
+                    <rect key="frame" x="0.0" y="348" width="480" height="66"/>
+                    <color key="backgroundColor" red="0.082352941176470587" green="0.65490196078431373" blue="0.90980392156862744" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="480" id="nqA-zB-pSv"/>
+                        <constraint firstAttribute="height" constant="66" id="ozW-8z-NFx"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fZq-CJ-e5w">
+                    <rect key="frame" x="0.0" y="282" width="480" height="66"/>
+                    <color key="backgroundColor" red="0.95294117647058818" green="0.57647058823529407" blue="0.027450980392156862" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="66" id="PuR-5z-H0t"/>
+                        <constraint firstAttribute="width" constant="480" id="q2J-Xp-WWW"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eLY-wF-TM6">
+                    <rect key="frame" x="0.0" y="216" width="480" height="66"/>
+                    <color key="backgroundColor" red="0.89411764705882357" green="0.23137254901960785" blue="0.14117647058823529" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="66" id="6dG-P2-QHo"/>
+                        <constraint firstAttribute="width" constant="480" id="Syv-Wx-Sfx"/>
+                    </constraints>
+                </view>
+            </subviews>
             <color key="backgroundColor" red="0.094117647058823528" green="0.094117647058823528" blue="0.12549019607843137" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="fZq-CJ-e5w" firstAttribute="leading" secondItem="cZj-nX-MGt" secondAttribute="leading" id="0x1-9V-cNG"/>
+                <constraint firstItem="cZj-nX-MGt" firstAttribute="leading" secondItem="ol9-go-lsD" secondAttribute="leading" id="5ZL-9f-cQw"/>
+                <constraint firstItem="ol9-go-lsD" firstAttribute="top" secondItem="cZj-nX-MGt" secondAttribute="bottom" id="7Oj-06-UwY"/>
+                <constraint firstItem="fZq-CJ-e5w" firstAttribute="top" secondItem="eLY-wF-TM6" secondAttribute="bottom" id="8lT-p9-nYm"/>
+                <constraint firstAttribute="bottom" secondItem="ol9-go-lsD" secondAttribute="bottom" id="QBH-69-Boz"/>
+                <constraint firstItem="cZj-nX-MGt" firstAttribute="top" secondItem="fZq-CJ-e5w" secondAttribute="bottom" id="ZZK-1c-PS3"/>
+                <constraint firstItem="fZq-CJ-e5w" firstAttribute="leading" secondItem="eLY-wF-TM6" secondAttribute="leading" id="miQ-WK-2Rr"/>
+                <constraint firstItem="ol9-go-lsD" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="vRs-83-l9a"/>
+            </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <point key="canvasLocation" x="548" y="455"/>
