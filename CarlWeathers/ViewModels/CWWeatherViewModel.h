@@ -5,7 +5,7 @@
 @interface CWWeatherViewModel : NSObject
 
 @property (nonatomic, copy, readonly) NSString *locationName;
-@property (nonatomic, copy, readonly) NSString *formattedCoordinate;
+@property (nonatomic, copy, readonly) NSString *formattedDate;
 @property (nonatomic, readonly) UIImage *conditionsImage;
 @property (nonatomic, copy, readonly) NSString *formattedTemperatureRange;
 @property (nonatomic, copy, readonly) NSString *formattedWindSpeed;

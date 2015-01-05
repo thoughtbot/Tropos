@@ -28,7 +28,6 @@
     self.yesterdaysConditions = yesterdaysConditions;
 
     self.locationFormatter = [TTTLocationFormatter new];
-    self.locationFormatter.coordinateStyle = TTTDegreesMinutesSecondsFormat;
     self.locationFormatter.bearingStyle = TTTBearingAbbreviationWordStyle;
 
     return self;
@@ -41,9 +40,13 @@
     return [NSString stringWithFormat:@"%@, %@", self.weatherLocation.city, self.weatherLocation.state];
 }
 
-- (NSString *)formattedCoordinate
+- (NSString *)formattedDate
 {
-    return [self.locationFormatter stringFromCoordinate:self.weatherLocation.coordinate];
+    NSDateFormatter *dateFormatter = [NSDateFormatter new];
+    dateFormatter.dateStyle = NSDateFormatterShortStyle;
+    dateFormatter.timeStyle = NSDateFormatterShortStyle;
+    NSString *formattedDate = [dateFormatter stringFromDate:self.currentConditions.date];
+    return [NSString stringWithFormat:@"Last updated: %@", formattedDate];
 }
 
 - (UIImage *)conditionsImage

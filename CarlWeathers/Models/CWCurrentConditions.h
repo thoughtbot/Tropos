@@ -9,6 +9,7 @@
 @property (nonatomic, readonly) CGFloat windSpeed;
 @property (nonatomic, readonly) CGFloat windBearing;
 @property (nonatomic, readonly) CGFloat precipitationProbability;
+@property (nonatomic, readonly) NSDate *date;
 
 + (instancetype)currentConditionsFromJSON:(NSDictionary *)JSON;
 
