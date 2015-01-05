@@ -9,7 +9,7 @@
 @property (nonatomic) CWWeatherController *controller;
 
 @property (weak, nonatomic) IBOutlet UILabel *cityLabel;
-@property (weak, nonatomic) IBOutlet UILabel *coordinateLabel;
+@property (weak, nonatomic) IBOutlet UILabel *lastUpdatedLabel;
 @property (weak, nonatomic) IBOutlet UIImageView *conditionsImageView;
 @property (weak, nonatomic) IBOutlet UILabel *conditionsDescriptionLabel;
 @property (weak, nonatomic) IBOutlet UILabel *windSpeedLabel;
@@ -54,7 +54,7 @@
 - (void)controllerDidChange:(NSDictionary *)changes object:(CWWeatherController *)controller
 {
     self.cityLabel.text = controller.viewModel.locationName;
-    self.coordinateLabel.text = controller.viewModel.formattedCoordinate;
+    self.lastUpdatedLabel.text = controller.viewModel.formattedDate;
     self.conditionsImageView.image = controller.viewModel.conditionsImage;
     self.highLowTemperatureLabel.text = controller.viewModel.formattedTemperatureRange;
     self.windSpeedLabel.text = controller.viewModel.formattedWindSpeed;

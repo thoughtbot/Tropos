@@ -33,7 +33,7 @@
                                 <color key="textColor" red="0.6705882352941176" green="0.65490196078431373" blue="0.69411764705882351" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bahstahn" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hox-Oh-26Y" userLabel="Coordinate Label">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bahstahn" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hox-Oh-26Y" userLabel="Last Updated Label">
                                 <rect key="frame" x="16" y="54" width="568" height="15"/>
                                 <fontDescription key="fontDescription" name="DINNextLTPro-UltraLight" family="DIN Next LT Pro" pointSize="15"/>
                                 <color key="textColor" red="0.56496596336364746" green="0.56460165977478027" blue="0.5951998233795166" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -138,8 +138,8 @@
                         <outlet property="cityLabel" destination="Wl8-8h-ogo" id="Oea-1a-bou"/>
                         <outlet property="conditionsDescriptionLabel" destination="4aa-2F-UFk" id="MEw-Cw-h9c"/>
                         <outlet property="conditionsImageView" destination="Ef5-IL-xEe" id="mhx-To-Xjj"/>
-                        <outlet property="coordinateLabel" destination="hox-Oh-26Y" id="f4r-wu-YdZ"/>
                         <outlet property="highLowTemperatureLabel" destination="jm9-4j-cuq" id="2Dc-yH-4sR"/>
+                        <outlet property="lastUpdatedLabel" destination="hox-Oh-26Y" id="LOY-rP-Hs3"/>
                         <outlet property="precipitationMeterView" destination="UuN-Av-FMW" id="XMO-RM-PXu"/>
                         <outlet property="temperatureImageView" destination="wxI-GT-UQg" id="OvJ-DJ-oNa"/>
                         <outlet property="windSpeedImageView" destination="Qna-Fn-Mlz" id="LM6-40-9KT"/>

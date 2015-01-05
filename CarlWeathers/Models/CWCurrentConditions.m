@@ -11,6 +11,7 @@
 @property (nonatomic, readwrite) CGFloat windSpeed;
 @property (nonatomic, readwrite) CGFloat windBearing;
 @property (nonatomic, readwrite) CGFloat precipitationProbability;
+@property (nonatomic, readwrite) NSDate *date;
 
 @end
 
@@ -28,6 +29,7 @@
     conditions.precipitationProbability = [JSON[@"currently"][@"precipitationProbability"] floatValue];
     conditions.windSpeed = [JSON[@"currently"][@"windSpeed"] floatValue];
     conditions.windBearing = [JSON[@"currently"][@"windBearing"] floatValue];
+    conditions.date = [NSDate date];
 
     return conditions;
 }
