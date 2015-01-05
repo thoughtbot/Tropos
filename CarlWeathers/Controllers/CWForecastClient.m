@@ -4,6 +4,7 @@
 #import "NSDate+CWRelativeDate.h"
 
 static NSString *const CWForecastAPIBaseURL = @"https://api.forecast.io/forecast/3df031c1b15c324d69d9f4ea8931e740/";
+static NSString *const CWForecastAPIExclusions = @"minutely,hourly,alerts,flags";
 
 @interface CWForecastClient ()
 
@@ -75,8 +76,12 @@ static NSString *const CWForecastAPIBaseURL = @"https://api.forecast.io/forecast
         NSTimeInterval timestamp = [[NSDate yesterday] timeIntervalSince1970];
         URLString = [URLString stringByAppendingString:[NSString stringWithFormat:@",%.0f", timestamp]];
     }
-    
-    return [NSURL URLWithString:URLString];
+
+    NSURLComponents *components = [NSURLComponents componentsWithString:URLString];
+    NSURLQueryItem *item = [NSURLQueryItem queryItemWithName:@"exclude" value:CWForecastAPIExclusions];
+    components.queryItems = @[item];
+
+    return components.URL;
 }
 
 @end
