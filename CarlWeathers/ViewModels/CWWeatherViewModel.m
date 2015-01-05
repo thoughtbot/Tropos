@@ -90,11 +90,13 @@
         case CWTemperatureComparisonSame:
             return [UIColor defaultTextColor];
         case CWTemperatureComparisonColder:
-        case CWTemperatureComparisonCooler:
             return [UIColor coldColor];
+        case CWTemperatureComparisonCooler:
+            return [UIColor coolerColor];
         case CWTemperatureComparisonHotter:
-        case CWTemperatureComparisonWarmer:
             return [UIColor hotColor];
+        case CWTemperatureComparisonWarmer:
+            return [UIColor warmerColor];
     }
 }
 
