@@ -23,6 +23,7 @@
 		4D7CDEC81A47E0500038DD33 /* UIFont+CWAppFonts.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D7CDEC71A47E0500038DD33 /* UIFont+CWAppFonts.m */; };
 		4D7CDECC1A47E13F0038DD33 /* CWTemperatureComparisonFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D7CDECB1A47E13F0038DD33 /* CWTemperatureComparisonFormatter.m */; };
 		4D7F0EEF1A3E8439008A6E1C /* CWWeatherController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D7F0EEE1A3E8439008A6E1C /* CWWeatherController.m */; };
+		4D9CA35D1A5C7672009E24DD /* CWBearingFormatterSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D9CA35C1A5C7672009E24DD /* CWBearingFormatterSpec.m */; };
 		4DF5BA391A5B64630088F35F /* CWBearingFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DF5BA381A5B64630088F35F /* CWBearingFormatter.m */; };
 		7D54C46B9E7FA5B0724FC775 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B3068282D6E4B66BB58E93BC /* libPods.a */; };
 		8EAE701DFB2DC16543CE1B3C /* libPods-unit_tests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A548375C4E5D454F542CFA0D /* libPods-unit_tests.a */; };
@@ -87,6 +88,7 @@
 		4D7CDECB1A47E13F0038DD33 /* CWTemperatureComparisonFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWTemperatureComparisonFormatter.m; sourceTree = "<group>"; };
 		4D7F0EED1A3E8439008A6E1C /* CWWeatherController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWWeatherController.h; sourceTree = "<group>"; };
 		4D7F0EEE1A3E8439008A6E1C /* CWWeatherController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWWeatherController.m; sourceTree = "<group>"; };
+		4D9CA35C1A5C7672009E24DD /* CWBearingFormatterSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWBearingFormatterSpec.m; sourceTree = "<group>"; };
 		4DF5BA371A5B64630088F35F /* CWBearingFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWBearingFormatter.h; sourceTree = "<group>"; };
 		4DF5BA381A5B64630088F35F /* CWBearingFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWBearingFormatter.m; sourceTree = "<group>"; };
 		57761BB4DFB42997964F13EE /* CarlWeathers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CarlWeathers.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -345,6 +347,7 @@
 			isa = PBXGroup;
 			children = (
 				C2E44CFD1A3B7C14009CC844 /* CWTemperatureSpec.m */,
+				4D9CA35C1A5C7672009E24DD /* CWBearingFormatterSpec.m */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -604,6 +607,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D9CA35D1A5C7672009E24DD /* CWBearingFormatterSpec.m in Sources */,
 				C2E44CFE1A3B7C14009CC844 /* CWTemperatureSpec.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
