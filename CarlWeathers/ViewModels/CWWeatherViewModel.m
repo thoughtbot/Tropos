@@ -6,6 +6,7 @@
 #import "CWTemperature.h"
 #import "CWTemperatureComparisonFormatter.h"
 #import "NSMutableAttributedString+CWAttributeHelpers.h"
+#import "CWBearingFormatter.h"
 
 @interface CWWeatherViewModel ()
 
@@ -61,7 +62,7 @@
 
 - (NSString *)formattedWindSpeed
 {
-    NSString *bearing = [self.locationFormatter stringFromBearing:self.currentConditions.windBearing];
+    NSString *bearing = [CWBearingFormatter abbreviatedCardinalDirectionStringFromBearing:self.currentConditions.windBearing];
     return [NSString stringWithFormat:@"%.1f mph %@", self.currentConditions.windSpeed, bearing];
 }
 

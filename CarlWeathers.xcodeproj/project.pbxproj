@@ -23,6 +23,7 @@
 		4D7CDEC81A47E0500038DD33 /* UIFont+CWAppFonts.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D7CDEC71A47E0500038DD33 /* UIFont+CWAppFonts.m */; };
 		4D7CDECC1A47E13F0038DD33 /* CWTemperatureComparisonFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D7CDECB1A47E13F0038DD33 /* CWTemperatureComparisonFormatter.m */; };
 		4D7F0EEF1A3E8439008A6E1C /* CWWeatherController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D7F0EEE1A3E8439008A6E1C /* CWWeatherController.m */; };
+		4DF5BA391A5B64630088F35F /* CWBearingFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DF5BA381A5B64630088F35F /* CWBearingFormatter.m */; };
 		7D54C46B9E7FA5B0724FC775 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B3068282D6E4B66BB58E93BC /* libPods.a */; };
 		8EAE701DFB2DC16543CE1B3C /* libPods-unit_tests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A548375C4E5D454F542CFA0D /* libPods-unit_tests.a */; };
 		C2E44CDD1A3A38A2009CC844 /* CWLocationController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2E44CDC1A3A38A2009CC844 /* CWLocationController.m */; };
@@ -86,6 +87,8 @@
 		4D7CDECB1A47E13F0038DD33 /* CWTemperatureComparisonFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWTemperatureComparisonFormatter.m; sourceTree = "<group>"; };
 		4D7F0EED1A3E8439008A6E1C /* CWWeatherController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWWeatherController.h; sourceTree = "<group>"; };
 		4D7F0EEE1A3E8439008A6E1C /* CWWeatherController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWWeatherController.m; sourceTree = "<group>"; };
+		4DF5BA371A5B64630088F35F /* CWBearingFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWBearingFormatter.h; sourceTree = "<group>"; };
+		4DF5BA381A5B64630088F35F /* CWBearingFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWBearingFormatter.m; sourceTree = "<group>"; };
 		57761BB4DFB42997964F13EE /* CarlWeathers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CarlWeathers.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		986C425E5A2268D27FAE2FAA /* CarlWeathers-Prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CarlWeathers-Prefix.pch"; sourceTree = "<group>"; };
 		A548375C4E5D454F542CFA0D /* libPods-unit_tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-unit_tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -205,6 +208,8 @@
 			children = (
 				4D7CDECA1A47E13F0038DD33 /* CWTemperatureComparisonFormatter.h */,
 				4D7CDECB1A47E13F0038DD33 /* CWTemperatureComparisonFormatter.m */,
+				4DF5BA371A5B64630088F35F /* CWBearingFormatter.h */,
+				4DF5BA381A5B64630088F35F /* CWBearingFormatter.m */,
 			);
 			path = Formatters;
 			sourceTree = "<group>";
@@ -577,6 +582,7 @@
 				D7DD1B8AD495AFA4EC1CEFF9 /* CWAppDelegate.m in Sources */,
 				130C4C29D1C62D52D0767A6B /* Main.storyboard in Sources */,
 				4D0A5C3B1A3A32410084C41E /* CWCurrentConditions.m in Sources */,
+				4DF5BA391A5B64630088F35F /* CWBearingFormatter.m in Sources */,
 				4D7CDEC21A4705400038DD33 /* UIColor+CWTemperatureColors.m in Sources */,
 				C2E44CFB1A3B76B3009CC844 /* NSNumber+CWRoundedNumber.m in Sources */,
 				4D7CDEBF1A46DD030038DD33 /* NSError+CWErrors.m in Sources */,
