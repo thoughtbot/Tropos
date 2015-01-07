@@ -12,7 +12,7 @@
 + (instancetype)historicalConditionsFromJSON:(NSDictionary *)JSON
 {
     CWHistoricalConditions *conditions = [self new];
-    conditions.temperature = [CWTemperature temperatureFromNumber:JSON[@"currently"][@"temperature"]];
+    conditions.temperature = [CWTemperature temperatureFromFahrenheit:JSON[@"currently"][@"temperature"]];
     return conditions;
 }
 

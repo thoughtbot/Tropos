@@ -21,11 +21,11 @@
 {
     CWCurrentConditions *conditions = [self new];
     conditions.conditionsDescription = JSON[@"currently"][@"icon"];
-    conditions.temperature = [CWTemperature temperatureFromNumber:JSON[@"currently"][@"temperature"]];
+    conditions.temperature = [CWTemperature temperatureFromFahrenheit:JSON[@"currently"][@"temperature"]];
 
     NSDictionary *todayForecast = [JSON[@"daily"][@"data"] firstObject];
-    conditions.lowTemperature = [CWTemperature temperatureFromNumber:todayForecast[@"temperatureMin"]];
-    conditions.highTemperature = [CWTemperature temperatureFromNumber:todayForecast[@"temperatureMax"]];
+    conditions.lowTemperature = [CWTemperature temperatureFromFahrenheit:todayForecast[@"temperatureMin"]];
+    conditions.highTemperature = [CWTemperature temperatureFromFahrenheit:todayForecast[@"temperatureMax"]];
     conditions.precipitationProbability = [JSON[@"currently"][@"precipitationProbability"] floatValue];
     conditions.windSpeed = [JSON[@"currently"][@"windSpeed"] floatValue];
     conditions.windBearing = [JSON[@"currently"][@"windBearing"] floatValue];
