@@ -1,43 +1,47 @@
 #import "CWTemperature.h"
 #import "NSNumber+CWRoundedNumber.h"
 
+NSInteger CWConvertFahrenheitToCelsius(NSInteger fahrenheit) {
+    return (NSInteger)round((fahrenheit - 32) * 5 / 9);
+}
+
 @interface CWTemperature ()
 
-@property (nonatomic) NSNumber *temperatureNumber;
+@property (nonatomic, readwrite) NSInteger fahrenheitValue;
 
 @end
 
 @implementation CWTemperature
 
-#pragma mark - Initialization
+#pragma mark - Class Methods
 
-+ (instancetype)temperatureFromNumber:(NSNumber *)number
++ (instancetype)temperatureFromFahrenheit:(NSNumber *)number
 {
-    return [[self alloc] initWithNumber:number];
+    return [[self alloc] initWithFahrenheit:number];
 }
 
-- (instancetype)initWithNumber:(NSNumber *)number
+#pragma mark - Initialization
+
+- (instancetype)initWithFahrenheit:(NSNumber *)number
 {
     self = [super init];
     if (!self) return nil;
 
-    self.temperatureNumber = [number roundedNumber];
+    self.fahrenheitValue = [number integerValue];
 
     return self;
 }
 
-#pragma mark - NSObject
-
-- (NSString *)description
-{
-    return [self.temperatureNumber description];
-}
-
 #pragma mark - Public Methods
+
+- (NSInteger)celsiusValue
+{
+    return CWConvertFahrenheitToCelsius(self.fahrenheitValue);
+}
 
 - (CWTemperatureComparison)comparedTo:(CWTemperature *)comparedTemperature
 {
-    NSInteger temperatureDifference = [self differenceFromTemperature:comparedTemperature];
+    CGFloat temperatureDifference = [self differenceFromTemperature:comparedTemperature];
 
     if (temperatureDifference >= 10) {
         return CWTemperatureComparisonHotter;
@@ -52,9 +56,16 @@
     }
 }
 
-- (NSInteger)differenceFromTemperature:(CWTemperature *)comparedTemperature
+- (CGFloat)differenceFromTemperature:(CWTemperature *)comparedTemperature
 {
-    return self.temperatureNumber.integerValue - comparedTemperature.temperatureNumber.integerValue;
+    return self.fahrenheitValue - comparedTemperature.fahrenheitValue;
+}
+
+#pragma mark - NSObject
+
+- (NSString *)description
+{
+    return [NSString stringWithFormat:@"Fahrenheit: %ld°\nCelsius: %ld°", (long)self.fahrenheitValue, (long)self.celsiusValue];
 }
 
 @end

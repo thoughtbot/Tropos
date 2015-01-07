@@ -7,6 +7,8 @@
 #import "CWTemperatureComparisonFormatter.h"
 #import "NSMutableAttributedString+CWAttributeHelpers.h"
 #import "CWBearingFormatter.h"
+#import "CWSettingsController.h"
+#import "CWTemperatureFormatter.h"
 
 @interface CWWeatherViewModel ()
 
@@ -57,7 +59,11 @@
 
 - (NSString *)formattedTemperatureRange
 {
-    return [NSString stringWithFormat:@"%@° / %@°", self.currentConditions.highTemperature, self.currentConditions.lowTemperature];
+    CWTemperatureFormatter *formatter = [CWTemperatureFormatter new];
+    formatter.usesMetricSystem = [[CWSettingsController new] unitSystem] == CWUnitSystemMetric;
+    NSString *high = [formatter stringFromTemperature:self.currentConditions.highTemperature];
+    NSString *low = [formatter stringFromTemperature:self.currentConditions.lowTemperature];
+    return [NSString stringWithFormat:@"%@ / %@", high, low];
 }
 
 - (NSString *)formattedWindSpeed
