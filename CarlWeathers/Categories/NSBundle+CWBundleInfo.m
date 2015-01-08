@@ -4,7 +4,7 @@
 
 - (NSString *)versionNumber
 {
-    return [self objectForInfoDictionaryKey:kCFBundleVersionKey];
+    return [self objectForInfoDictionaryKey:(id)kCFBundleVersionKey];
 }
 
 @end
