@@ -42,7 +42,7 @@ static NSString *const CWSettingsLastVersionKey = @"CWLastVersion";
 
 - (void)setUnitSystem:(CWUnitSystem)unitSystem
 {
-    NSString *systemString = [NSString stringWithFormat:@"%ld", unitSystem];
+    NSString *systemString = [NSString stringWithFormat:@"%zd", unitSystem];
     [[NSUserDefaults standardUserDefaults] setObject:systemString forKey:CWSettingsUnitSystemKey];
 }
 
