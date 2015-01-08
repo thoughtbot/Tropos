@@ -433,6 +433,7 @@
 				442A628001B45C7CDD01A96E /* Resources */,
 				CD82E5F062CDF04B4CEEC2B5 /* Warn for TODO and FIXME comments */,
 				B426E4C5542F07A66A70065A /* Copy Pods Resources */,
+				C247D7F61A5F07A00032F747 /* Update Build Number */,
 			);
 			buildRules = (
 			);
@@ -474,7 +475,7 @@
 				ORGANIZATIONNAME = thoughtbot;
 				TargetAttributes = {
 					45ADD324EABFD89F9E640007 = {
-						DevelopmentTeam = 967Y67253P;
+						DevelopmentTeam = 8E7TQ638ZD;
 					};
 				};
 			};
@@ -579,6 +580,20 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		C247D7F61A5F07A00032F747 /* Update Build Number */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Update Build Number";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/bash;
+			shellScript = "branch=\"master\"\nbuildNumber=$(expr $(git rev-list $branch --count) - $(git rev-list HEAD..$branch --count))\necho \"Updating build number to $buildNumber using branch '$branch'\"\n/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $buildNumber\" \"${TARGET_BUILD_DIR}/${INFOPLIST_PATH}\"\n";
 		};
 		CD82E5F062CDF04B4CEEC2B5 /* Warn for TODO and FIXME comments */ = {
 			isa = PBXShellScriptBuildPhase;
