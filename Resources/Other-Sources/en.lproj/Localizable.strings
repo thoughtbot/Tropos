@@ -1,8 +1,17 @@
-"DifferentTemperatureFormat" = "It's %@ today than yesterday at this time.";
-"SameTemperatureFormat" = "It's the %@ today as yesterday at this time.";
+"DifferentTemperatureFormat" = "It's %@ %@ than %@ at this time.";
+"SameTemperatureFormat" = "It's the %@ %@ as %@ at this time.";
 
 "Hotter" = "hotter";
 "Warmer" = "warmer";
 "Cooler" = "cooler";
 "Colder" = "colder";
 "Same" = "same";
+
+"Today" = "today";
+"Yesterday" = "yesterday";
+"Tonight" = "tonight";
+"LastNight" = "last night";
+"ThisMorning" = "this morning";
+"YesterdayMorning" = "yesterday morning";
+"ThisAfternoon" = "this afternoon";
+"YesterdayAfternoon" = "yesterday afternoon";
