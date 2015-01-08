@@ -1,5 +1,4 @@
 #import "CWWeatherViewModel.h"
-#import "CWWeatherLocation.h"
 #import "CWCurrentConditions.h"
 #import "CWHistoricalConditions.h"
 #import "CWTemperature.h"
@@ -11,7 +10,6 @@
 
 @interface CWWeatherViewModel ()
 
-@property (nonatomic) CWWeatherLocation *weatherLocation;
 @property (nonatomic) CWCurrentConditions *currentConditions;
 @property (nonatomic) CWHistoricalConditions *yesterdaysConditions;
 
@@ -19,12 +17,11 @@
 
 @implementation CWWeatherViewModel
 
-- (instancetype)initWithWeatherLocation:(CWWeatherLocation *)weatherLocation currentConditions:(CWCurrentConditions *)currentConditions yesterdaysConditions:(CWHistoricalConditions *)yesterdaysConditions
+- (instancetype)initWithCurrentConditions:(CWCurrentConditions *)currentConditions yesterdaysConditions:(CWHistoricalConditions *)yesterdaysConditions
 {
     self = [super init];
     if (!self) return nil;
 
-    self.weatherLocation = weatherLocation;
     self.currentConditions = currentConditions;
     self.yesterdaysConditions = yesterdaysConditions;
 
@@ -32,20 +29,6 @@
 }
 
 #pragma mark - Properties
-
-- (NSString *)locationName
-{
-    return [NSString stringWithFormat:@"%@, %@", self.weatherLocation.city, self.weatherLocation.state];
-}
-
-- (NSString *)formattedDate
-{
-    NSDateFormatter *dateFormatter = [NSDateFormatter new];
-    dateFormatter.dateStyle = NSDateFormatterShortStyle;
-    dateFormatter.timeStyle = NSDateFormatterShortStyle;
-    NSString *formattedDate = [dateFormatter stringFromDate:self.currentConditions.date];
-    return [NSString stringWithFormat:@"Last updated: %@", formattedDate];
-}
 
 - (UIImage *)conditionsImage
 {

@@ -5,10 +5,12 @@
 #import "CWWeatherViewModel.h"
 #import "CWWeatherLocation.h"
 #import "CWSettingsController.h"
+#import "CWWeatherStatusViewModel.h"
 
 @interface CWWeatherController ()
 
-@property (nonatomic, readwrite) CWWeatherViewModel *viewModel;
+@property (nonatomic, readwrite) CWWeatherStatusViewModel *statusViewModel;
+@property (nonatomic, readwrite) CWWeatherViewModel *weatherViewModel;
 @property (nonatomic) CWLocationController *locationController;
 @property (nonatomic) CWForecastClient *forecastClient;
 
@@ -55,13 +57,26 @@
         return;
     }
 
+    [self locationUpdateWillStart];
+
     __weak typeof(self) weakSelf = self;
     [self.locationController updateLocationWithBlock:^(CWWeatherLocation *weatherLocation, NSError *error) {
-        [weakSelf.forecastClient fetchConditionsAtLatitude:weatherLocation.coordinate.latitude longitude:weatherLocation.coordinate.longitude completion:^(CWCurrentConditions *currentConditions, CWHistoricalConditions *yesterdaysConditions) {
-            weakSelf.weatherLocation = weatherLocation;
-            weakSelf.currentConditions = currentConditions;
-            weakSelf.yesterdaysConditions = yesterdaysConditions;
-            [weakSelf updateViewModel];
+        if (error) {
+            [self updateDidFail];
+            return;
+        }
+
+        weakSelf.weatherLocation = weatherLocation;
+        [self conditionsUpdateWillStart];
+
+        [self.forecastClient fetchConditionsAtLatitude:weatherLocation.coordinate.latitude longitude:weatherLocation.coordinate.longitude completion:^(CWCurrentConditions *currentConditions, CWHistoricalConditions *yesterdaysConditions) {
+            typeof(self) strongSelf = weakSelf;
+
+            strongSelf.currentConditions = currentConditions;
+            strongSelf.yesterdaysConditions = yesterdaysConditions;
+            strongSelf.weatherViewModel = [[CWWeatherViewModel alloc] initWithCurrentConditions:self.currentConditions yesterdaysConditions:self.yesterdaysConditions];
+
+            [strongSelf updateDidFinish];
         }];
     }];
 }
@@ -70,12 +85,27 @@
 
 - (void)unitSettingsDidChange:(NSNotification *)notification
 {
-    [self updateViewModel];
+    self.weatherViewModel = [[CWWeatherViewModel alloc] initWithCurrentConditions:self.currentConditions yesterdaysConditions:self.yesterdaysConditions];
 }
 
-- (void)updateViewModel
+- (void)locationUpdateWillStart
 {
-    self.viewModel = [[CWWeatherViewModel alloc] initWithWeatherLocation:self.weatherLocation currentConditions:self.currentConditions yesterdaysConditions:self.yesterdaysConditions];
+    self.statusViewModel = [CWWeatherStatusViewModel viewModelForStatus:CWWeatherStatusLocating weatherLocation:self.weatherLocation];
+}
+
+- (void)conditionsUpdateWillStart
+{
+    self.statusViewModel = [CWWeatherStatusViewModel viewModelForStatus:CWWeatherStatusUpdating weatherLocation:self.weatherLocation];
+}
+
+- (void)updateDidFinish
+{
+    self.statusViewModel = [CWWeatherStatusViewModel viewModelForStatus:CWWeatherStatusUpdated weatherLocation:self.weatherLocation];
+}
+
+- (void)updateDidFail
+{
+    self.statusViewModel = [CWWeatherStatusViewModel viewModelForStatus:CWWeatherStatusFailed weatherLocation:self.weatherLocation];
 }
 
 @end

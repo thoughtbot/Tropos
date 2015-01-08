@@ -1,7 +1,7 @@
 #import "CWWeatherViewController.h"
 #import "CWWeatherController.h"
 #import "CWWeatherViewModel.h"
-#import "CWLocationController.h"
+#import "CWWeatherStatusViewModel.h"
 #import "CWPrecipitationMeterView.h"
 
 @interface CWWeatherViewController ()
@@ -22,13 +22,22 @@
 
 @implementation CWWeatherViewController
 
+#pragma mark - NSObject
+
+- (void)dealloc
+{
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:UIApplicationWillEnterForegroundNotification object:nil];
+}
+
 #pragma mark - UIViewController
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     self.controller = [CWWeatherController new];
-    [self.KVOController observe:self.controller keyPath:@"viewModel" options:(NSKeyValueObservingOptionInitial | NSKeyValueObservingOptionNew) action:@selector(controllerDidChange:object:)];
+    [self.KVOController observe:self.controller keyPath:@"weatherViewModel" options:(NSKeyValueObservingOptionInitial | NSKeyValueObservingOptionNew) action:@selector(viewModelDidChange:object:)];
+    [self.KVOController observe:self.controller keyPath:@"statusViewModel" options:(NSKeyValueObservingOptionInitial | NSKeyValueObservingOptionNew) action:@selector(statusViewModelDidChange:object:)];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(refresh) name:UIApplicationWillEnterForegroundNotification object:nil];
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -51,15 +60,19 @@
 
 #pragma mark - Private
 
-- (void)controllerDidChange:(NSDictionary *)changes object:(CWWeatherController *)controller
+- (void)viewModelDidChange:(NSDictionary *)changes object:(CWWeatherController *)controller
 {
-    self.cityLabel.text = controller.viewModel.locationName;
-    self.lastUpdatedLabel.text = controller.viewModel.formattedDate;
-    self.conditionsImageView.image = controller.viewModel.conditionsImage;
-    self.highLowTemperatureLabel.text = controller.viewModel.formattedTemperatureRange;
-    self.windSpeedLabel.text = controller.viewModel.formattedWindSpeed;
-    self.conditionsDescriptionLabel.attributedText = controller.viewModel.attributedTemperatureComparison;
-    self.precipitationMeterView.precipitationProbability = controller.viewModel.precipitationProbability;
+    self.conditionsImageView.image = controller.weatherViewModel.conditionsImage;
+    self.highLowTemperatureLabel.text = controller.weatherViewModel.formattedTemperatureRange;
+    self.windSpeedLabel.text = controller.weatherViewModel.formattedWindSpeed;
+    self.conditionsDescriptionLabel.attributedText = controller.weatherViewModel.attributedTemperatureComparison;
+    self.precipitationMeterView.precipitationProbability = controller.weatherViewModel.precipitationProbability;
+}
+
+- (void)statusViewModelDidChange:(NSDictionary *)changes object:(CWWeatherController *)controller
+{
+    self.cityLabel.text = controller.statusViewModel.location;
+    self.lastUpdatedLabel.text = controller.statusViewModel.status;
 }
 
 @end
