@@ -1,4 +1,3 @@
-#import <FormatterKit/TTTLocationFormatter.h>
 #import "CWWeatherViewModel.h"
 #import "CWWeatherLocation.h"
 #import "CWCurrentConditions.h"
@@ -15,7 +14,6 @@
 @property (nonatomic) CWWeatherLocation *weatherLocation;
 @property (nonatomic) CWCurrentConditions *currentConditions;
 @property (nonatomic) CWHistoricalConditions *yesterdaysConditions;
-@property (nonatomic) TTTLocationFormatter *locationFormatter;
 
 @end
 
@@ -29,9 +27,6 @@
     self.weatherLocation = weatherLocation;
     self.currentConditions = currentConditions;
     self.yesterdaysConditions = yesterdaysConditions;
-
-    self.locationFormatter = [TTTLocationFormatter new];
-    self.locationFormatter.bearingStyle = TTTBearingAbbreviationWordStyle;
 
     return self;
 }

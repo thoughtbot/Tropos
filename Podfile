@@ -1,6 +1,5 @@
 platform :ios, '8.0'
 
-pod 'FormatterKit/LocationFormatter'
 pod 'KVOController'
 
 target :unit_tests, :exclusive => true do

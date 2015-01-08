@@ -1,4 +1,3 @@
-#import <FormatterKit/TTTLocationFormatter.h>
 #import "CWCurrentConditions.h"
 #import "CWTemperature.h"
 
