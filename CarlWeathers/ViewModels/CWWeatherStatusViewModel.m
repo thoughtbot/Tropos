@@ -1,10 +1,12 @@
 #import "CWWeatherStatusViewModel.h"
 #import "CWWeatherLocation.h"
+#import "CWDateFormatter.h"
 
 @interface CWWeatherStatusViewModel ()
 
 @property (nonatomic) CWWeatherStatus weatherStatus;
 @property (nonatomic) CWWeatherLocation *weatherLocation;
+@property (nonatomic) NSDate *updatedDate;
 
 @end
 
@@ -22,6 +24,7 @@
 
     self.weatherStatus = weatherStatus;
     self.weatherLocation = weatherLocation;
+    self.updatedDate = [NSDate date];
 
     return self;
 }
@@ -47,7 +50,7 @@
             statusString = NSLocalizedString(@"Getting conditions...", nil);
             break;
         case CWWeatherStatusUpdated:
-            statusString = [NSString localizedStringWithFormat:@"Updated: %@", [self lastUpdatedString]];
+            statusString = [NSString localizedStringWithFormat:@"Updated %@", [self lastUpdatedString]];
             break;
         case CWWeatherStatusFailed:
             statusString = NSLocalizedString(@"Error updating conditions", nil);
@@ -59,9 +62,7 @@
 
 - (NSString *)lastUpdatedString
 {
-    NSDateFormatter *dateFormatter = [NSDateFormatter new];
-    dateFormatter.dateStyle = NSDateFormatterShortStyle;
-    dateFormatter.timeStyle = NSDateFormatterShortStyle;
+    CWDateFormatter *dateFormatter = [CWDateFormatter new];
     return [dateFormatter stringFromDate:[NSDate date]];
 }
 

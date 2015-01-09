@@ -9,6 +9,9 @@
 
 @interface CWWeatherController ()
 
+@property (nonatomic) CWWeatherStatus weatherStatus;
+@property (nonatomic) NSTimer *statusUpdateTimer;
+
 @property (nonatomic, readwrite) CWWeatherStatusViewModel *statusViewModel;
 @property (nonatomic, readwrite) CWWeatherViewModel *weatherViewModel;
 @property (nonatomic) CWLocationController *locationController;
@@ -48,6 +51,24 @@
     [[NSNotificationCenter defaultCenter] removeObserver:self name:NSUserDefaultsDidChangeNotification object:nil];
 }
 
+
+- (void)setWeatherStatus:(CWWeatherStatus)weatherStatus
+{
+    _weatherStatus = weatherStatus;
+    [self updateStatusViewModel];
+
+    switch (_weatherStatus) {
+        case CWWeatherStatusUpdated:
+            self.statusUpdateTimer = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(updateStatusViewModel) userInfo:nil repeats:YES];
+            break;
+        default:
+            [self.statusUpdateTimer invalidate];
+            self.statusUpdateTimer = nil;
+            break;
+    }
+
+}
+
 #pragma mark - Public Methods
 
 - (void)updateWeather
@@ -57,17 +78,17 @@
         return;
     }
 
-    [self locationUpdateWillStart];
+    self.weatherStatus = CWWeatherStatusLocating;
 
     __weak typeof(self) weakSelf = self;
     [self.locationController updateLocationWithBlock:^(CWWeatherLocation *weatherLocation, NSError *error) {
         if (error) {
-            [self updateDidFail];
+            self.weatherStatus = CWWeatherStatusFailed;
             return;
         }
 
         weakSelf.weatherLocation = weatherLocation;
-        [self conditionsUpdateWillStart];
+        self.weatherStatus = CWWeatherStatusUpdating;
 
         [self.forecastClient fetchConditionsAtLatitude:weatherLocation.coordinate.latitude longitude:weatherLocation.coordinate.longitude completion:^(CWCurrentConditions *currentConditions, CWHistoricalConditions *yesterdaysConditions) {
             typeof(self) strongSelf = weakSelf;
@@ -76,7 +97,7 @@
             strongSelf.yesterdaysConditions = yesterdaysConditions;
             strongSelf.weatherViewModel = [[CWWeatherViewModel alloc] initWithCurrentConditions:self.currentConditions yesterdaysConditions:self.yesterdaysConditions];
 
-            [strongSelf updateDidFinish];
+            strongSelf.weatherStatus = CWWeatherStatusUpdated;
         }];
     }];
 }
@@ -88,24 +109,9 @@
     self.weatherViewModel = [[CWWeatherViewModel alloc] initWithCurrentConditions:self.currentConditions yesterdaysConditions:self.yesterdaysConditions];
 }
 
-- (void)locationUpdateWillStart
+- (void)updateStatusViewModel
 {
-    self.statusViewModel = [CWWeatherStatusViewModel viewModelForStatus:CWWeatherStatusLocating weatherLocation:self.weatherLocation];
-}
-
-- (void)conditionsUpdateWillStart
-{
-    self.statusViewModel = [CWWeatherStatusViewModel viewModelForStatus:CWWeatherStatusUpdating weatherLocation:self.weatherLocation];
-}
-
-- (void)updateDidFinish
-{
-    self.statusViewModel = [CWWeatherStatusViewModel viewModelForStatus:CWWeatherStatusUpdated weatherLocation:self.weatherLocation];
-}
-
-- (void)updateDidFail
-{
-    self.statusViewModel = [CWWeatherStatusViewModel viewModelForStatus:CWWeatherStatusFailed weatherLocation:self.weatherLocation];
+    self.statusViewModel = [CWWeatherStatusViewModel viewModelForStatus:_weatherStatus weatherLocation:self.weatherLocation];
 }
 
 @end
