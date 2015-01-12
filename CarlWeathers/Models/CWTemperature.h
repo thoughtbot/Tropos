@@ -12,6 +12,8 @@ typedef NS_ENUM(NSUInteger, CWTemperatureComparison) {
 @property (nonatomic, readonly) NSInteger celsiusValue;
 
 + (instancetype)temperatureFromFahrenheit:(NSNumber *)number;
+
 - (CWTemperatureComparison)comparedTo:(CWTemperature *)comparedTemperature;
+- (NSInteger)differenceFromTemperature:(CWTemperature *)comparedTemperature;
 
 @end

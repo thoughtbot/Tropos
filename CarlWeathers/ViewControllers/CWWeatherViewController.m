@@ -35,9 +35,15 @@
 {
     [super viewDidLoad];
     self.controller = [CWWeatherController new];
-    [self.KVOController observe:self.controller keyPath:@"weatherViewModel" options:(NSKeyValueObservingOptionInitial | NSKeyValueObservingOptionNew) action:@selector(viewModelDidChange:object:)];
+    [self.KVOController observe:self.controller keyPath:@"weatherViewModel" options:NSKeyValueObservingOptionNew action:@selector(viewModelDidChange:object:)];
     [self.KVOController observe:self.controller keyPath:@"statusViewModel" options:(NSKeyValueObservingOptionInitial | NSKeyValueObservingOptionNew) action:@selector(statusViewModelDidChange:object:)];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(refresh) name:UIApplicationWillEnterForegroundNotification object:nil];
+
+    UITapGestureRecognizer *tapRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(displayDetails)];
+    [self.conditionsDescriptionLabel addGestureRecognizer:tapRecognizer];
+    self.conditionsDescriptionLabel.text = nil;
+    self.windSpeedLabel.text = nil;
+    self.highLowTemperatureLabel.text = nil;
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -58,10 +64,20 @@
     [self.controller updateWeather];
 }
 
+- (void)displayDetails
+{
+    self.conditionsDescriptionLabel.attributedText = self.controller.weatherViewModel.attributedDetailTemperatureComparison;
+}
+
 #pragma mark - Private
 
 - (void)viewModelDidChange:(NSDictionary *)changes object:(CWWeatherController *)controller
 {
+//    if (controller.weatherViewModel) {
+        self.windSpeedImageView.hidden = NO;
+        self.temperatureImageView.hidden = NO;
+//    }
+
     self.conditionsImageView.image = controller.weatherViewModel.conditionsImage;
     self.highLowTemperatureLabel.text = controller.weatherViewModel.formattedTemperatureRange;
     self.windSpeedLabel.text = controller.weatherViewModel.formattedWindSpeed;

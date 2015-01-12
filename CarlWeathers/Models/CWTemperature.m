@@ -41,7 +41,7 @@ NSInteger CWConvertFahrenheitToCelsius(NSInteger fahrenheit) {
 
 - (CWTemperatureComparison)comparedTo:(CWTemperature *)comparedTemperature
 {
-    CGFloat temperatureDifference = [self differenceFromTemperature:comparedTemperature];
+    NSInteger temperatureDifference = [self differenceFromTemperature:comparedTemperature];
 
     if (temperatureDifference >= 10) {
         return CWTemperatureComparisonHotter;
@@ -56,7 +56,7 @@ NSInteger CWConvertFahrenheitToCelsius(NSInteger fahrenheit) {
     }
 }
 
-- (CGFloat)differenceFromTemperature:(CWTemperature *)comparedTemperature
+- (NSInteger)differenceFromTemperature:(CWTemperature *)comparedTemperature
 {
     return self.fahrenheitValue - comparedTemperature.fahrenheitValue;
 }

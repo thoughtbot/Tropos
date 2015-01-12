@@ -7,6 +7,7 @@
 @property (nonatomic, copy, readonly) NSString *formattedTemperatureRange;
 @property (nonatomic, copy, readonly) NSString *formattedWindSpeed;
 @property (nonatomic, copy, readonly) NSAttributedString *attributedTemperatureComparison;
+@property (nonatomic, copy, readonly) NSAttributedString *attributedDetailTemperatureComparison;
 @property (nonatomic, readonly) CGFloat precipitationProbability;
 
 - (instancetype)initWithCurrentConditions:(CWCurrentConditions *)currentConditions yesterdaysConditions:(CWHistoricalConditions *)conditions;

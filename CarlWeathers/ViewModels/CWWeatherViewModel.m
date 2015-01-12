@@ -65,6 +65,27 @@
     return attributedString;
 }
 
+- (NSAttributedString *)attributedDetailTemperatureComparison
+{
+    CWTemperatureComparison comparison = [self.currentConditions.temperature comparedTo:self.yesterdaysConditions.temperature];
+    NSInteger difference = ABS([self.currentConditions.temperature
+                                differenceFromTemperature:self.yesterdaysConditions.temperature]);
+    CWTemperature *differenceTemperature = [CWTemperature temperatureFromFahrenheit:@(difference)];
+    CWTemperatureFormatter *formatter = [CWTemperatureFormatter new];
+    formatter.usesMetricSystem = [[CWSettingsController new] unitSystem] == CWUnitSystemMetric;
+    NSString *differenceString = [formatter stringFromTemperature:differenceTemperature];
+
+    NSString *adjective;
+    NSString *comparisonString = [CWTemperatureComparisonFormatter localizedStringFromComparison:comparison adjective:&adjective difference:differenceString];
+
+    NSMutableAttributedString *attributedString = [[NSMutableAttributedString alloc] initWithString:comparisonString];
+    [attributedString setFont:[UIFont defaultUltraLightFontOfSize:37]];
+    [attributedString setTextColor:[UIColor defaultTextColor]];
+    [attributedString setTextColor:[self colorForTemperatureComparison:comparison] forSubstring:adjective];
+
+    return attributedString;
+}
+
 - (CGFloat)precipitationProbability
 {
     return self.currentConditions.precipitationProbability;

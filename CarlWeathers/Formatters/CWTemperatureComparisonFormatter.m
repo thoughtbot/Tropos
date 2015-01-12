@@ -17,6 +17,16 @@ typedef NS_ENUM(NSUInteger, CWTimeOfDay) {
     return [NSString stringWithFormat:formatString, *adjective, [self localizedCurrentTimeOfDay], [self localizedPreviousTimeOfDay]];
 }
 
++ (NSString *)localizedStringFromComparison:(CWTemperatureComparison)comparison
+                                  adjective:(NSString *__autoreleasing *)adjective
+                                 difference:(NSString *)difference
+{
+    NSString *formatString = (comparison == CWTemperatureComparisonSame)? NSLocalizedString(@"SameTemperatureFormat", nil) : NSLocalizedString(@"DifferentTemperatureFormat", nil);
+    *adjective = [NSString stringWithFormat:@"%@ %@", difference, [self localizedAdjectiveForTemperatureComparison:comparison]];
+
+    return [NSString stringWithFormat:formatString, *adjective, [self localizedCurrentTimeOfDay], [self localizedPreviousTimeOfDay]];
+}
+
 #pragma mark - Private Methods
 
 + (NSString *)localizedAdjectiveForTemperatureComparison:(CWTemperatureComparison)comparison

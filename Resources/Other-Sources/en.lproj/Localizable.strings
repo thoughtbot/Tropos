@@ -1,5 +1,5 @@
-"DifferentTemperatureFormat" = "It's %@ %@ than %@ at this time.";
-"SameTemperatureFormat" = "It's the %@ %@ as %@ at this time.";
+"DifferentTemperatureFormat" = "It's %@ %@ than %@";
+"SameTemperatureFormat" = "It's the %@ %@ as %@";
 
 "Hotter" = "hotter";
 "Warmer" = "warmer";
