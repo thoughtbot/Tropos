@@ -12,6 +12,6 @@ typedef NS_ENUM(NSUInteger, CWWeatherStatus) {
 @property (nonatomic, copy, readonly) NSString *location;
 @property (nonatomic, copy, readonly) NSString *status;
 
-+ (instancetype)viewModelForStatus:(CWWeatherStatus)status weatherLocation:(CWWeatherLocation *)weatherLocation;
++ (instancetype)viewModelForStatus:(CWWeatherStatus)status weatherLocation:(CWWeatherLocation *)weatherLocation date:(NSDate *)date;
 
 @end

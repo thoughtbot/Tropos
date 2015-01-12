@@ -16,6 +16,7 @@ typedef NS_ENUM(NSUInteger, CWLocationAuthorizationType) {
 + (instancetype)controllerWithAuthorizationType:(CWLocationAuthorizationType)type authorizationChanged:(CWLocationAuthorizationChangedBlock)authorizationChanged;
 
 - (void)requestAuthorization;
+- (RACSignal *)currentLocation;
 - (void)updateLocationWithBlock:(CWLocationUpdateBlock)completionBlock;
 - (void)cancel;
 

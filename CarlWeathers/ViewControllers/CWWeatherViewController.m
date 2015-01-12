@@ -34,7 +34,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+
     self.controller = [CWWeatherController new];
+
     [self.KVOController observe:self.controller keyPath:@"weatherViewModel" options:(NSKeyValueObservingOptionInitial | NSKeyValueObservingOptionNew) action:@selector(viewModelDidChange:object:)];
     [self.KVOController observe:self.controller keyPath:@"statusViewModel" options:(NSKeyValueObservingOptionInitial | NSKeyValueObservingOptionNew) action:@selector(statusViewModelDidChange:object:)];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(refresh) name:UIApplicationWillEnterForegroundNotification object:nil];
@@ -44,6 +46,13 @@
 {
     [super viewDidAppear:animated];
     [self refresh];
+}
+
+
+- (void)weatherControllerDidUpdateStatus:(CWWeatherStatusViewModel *)viewModel
+{
+    self.cityLabel.text = viewModel.location;
+    self.lastUpdatedLabel.text = viewModel.status;
 }
 
 - (UIStatusBarStyle)preferredStatusBarStyle

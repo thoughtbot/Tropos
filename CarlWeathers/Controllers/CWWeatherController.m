@@ -14,6 +14,9 @@
 
 @property (nonatomic, readwrite) CWWeatherStatusViewModel *statusViewModel;
 @property (nonatomic, readwrite) CWWeatherViewModel *weatherViewModel;
+
+@property (nonatomic) NSDate *weatherUpdateDate;
+
 @property (nonatomic) CWLocationController *locationController;
 @property (nonatomic) CWForecastClient *forecastClient;
 
@@ -80,7 +83,17 @@
 
     self.weatherStatus = CWWeatherStatusLocating;
 
+    [[self.locationController currentLocation] subscribeNext:^(id x) {
+        NSLog(@"%@", x);
+    } error:^(NSError *error) {
+        //
+    } completed:^{
+        
+        NSLog(@"Completed");
+    }];
+
     __weak typeof(self) weakSelf = self;
+    return;
     [self.locationController updateLocationWithBlock:^(CWWeatherLocation *weatherLocation, NSError *error) {
         if (error) {
             self.weatherStatus = CWWeatherStatusFailed;
@@ -90,14 +103,19 @@
         weakSelf.weatherLocation = weatherLocation;
         self.weatherStatus = CWWeatherStatusUpdating;
 
-        [self.forecastClient fetchConditionsAtLatitude:weatherLocation.coordinate.latitude longitude:weatherLocation.coordinate.longitude completion:^(CWCurrentConditions *currentConditions, CWHistoricalConditions *yesterdaysConditions) {
-            typeof(self) strongSelf = weakSelf;
+        RACSignal *conditionsSignal = [[self.forecastClient fetchConditionsAtLatitude:weatherLocation.coordinate.latitude longitude:weatherLocation.coordinate.longitude] deliverOn:[RACScheduler mainThreadScheduler]];
+        RACSignal *historicalConditionsSignal = [[self.forecastClient fetchHistoricalConditionsAtLatitude:weatherLocation.coordinate.latitude longitude:weatherLocation.coordinate.longitude] deliverOn:[RACScheduler mainThreadScheduler]];
 
-            strongSelf.currentConditions = currentConditions;
-            strongSelf.yesterdaysConditions = yesterdaysConditions;
-            strongSelf.weatherViewModel = [[CWWeatherViewModel alloc] initWithCurrentConditions:self.currentConditions yesterdaysConditions:self.yesterdaysConditions];
-
-            strongSelf.weatherStatus = CWWeatherStatusUpdated;
+        @weakify(self)
+        RAC(self, weatherViewModel) = [[[RACSignal combineLatest:@[conditionsSignal, historicalConditionsSignal] reduce:^id(id first, id second) {
+            return [[CWWeatherViewModel alloc] initWithCurrentConditions:first yesterdaysConditions:second];
+        }] doError:^(NSError *rror) {
+            @strongify(self)
+            self.weatherStatus = CWWeatherStatusFailed;
+        }] doCompleted:^{
+            @strongify(self)
+            self.weatherUpdateDate = [NSDate date];
+            self.weatherStatus = CWWeatherStatusUpdated;
         }];
     }];
 }
@@ -111,7 +129,7 @@
 
 - (void)updateStatusViewModel
 {
-    self.statusViewModel = [CWWeatherStatusViewModel viewModelForStatus:_weatherStatus weatherLocation:self.weatherLocation];
+    self.statusViewModel = [CWWeatherStatusViewModel viewModelForStatus:_weatherStatus weatherLocation:self.weatherLocation date:self.weatherUpdateDate];
 }
 
 @end

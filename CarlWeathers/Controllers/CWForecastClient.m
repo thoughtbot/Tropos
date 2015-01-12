@@ -26,44 +26,62 @@ static NSString *const CWForecastAPIBaseURL = @"https://api.forecast.io/forecast
     return self;
 }
 
-- (void)fetchConditionsAtLatitude:(double)latitude
-                        longitude:(double)longitude
-                       completion:(CWCurrentConditionsResult)completion
+- (RACSignal *)fetchConditionsAtLatitude:(double)latitude
+                               longitude:(double)longitude
 {
-    NSParameterAssert(completion);
+    return [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
+        NSURL *URL = [self URLForCurrentConditionsAtLatitude:latitude longitude:longitude yesterday:NO];
+        NSURLSessionDataTask *task = [self.session dataTaskWithURL:URL completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
+            if (error) {
+                [subscriber sendError:error];
+            } else {
+                id JSON = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
 
-    NSURL *URL = [self URLForCurrentConditionsAtLatitude:latitude longitude:longitude yesterday:NO];
-    [[self.session dataTaskWithURL:URL completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
-        id JSON = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:nil];
-
-        [self fetchHistoricalConditionsAtLatitude:latitude longitude:longitude completionBlock:^(id JSONObject) {
-            dispatch_async(dispatch_get_main_queue(), ^{
                 if (!JSON) {
-                    completion(nil, nil);
-                    return;
+                    [subscriber sendError:error];
+                } else {
+                    CWCurrentConditions *conditions = [CWCurrentConditions currentConditionsFromJSON:JSON];
+                    [subscriber sendNext:conditions];
+                    [subscriber sendCompleted];
                 }
-
-                CWHistoricalConditions *historicalConditions;
-                if (JSONObject) {
-                    historicalConditions = [CWHistoricalConditions historicalConditionsFromJSON:JSONObject];
-                }
-
-                completion([CWCurrentConditions currentConditionsFromJSON:JSON], historicalConditions);
-            });
+            }
         }];
-    }] resume];
+
+        [task resume];
+        
+        return [RACDisposable disposableWithBlock:^{
+            [task cancel];
+        }];
+    }];
 }
 
-- (void)fetchHistoricalConditionsAtLatitude:(double)latitude
-                                  longitude:(double)longitude
-                            completionBlock:(void (^)(id JSONObject))completionBlock
+- (RACSignal *)fetchHistoricalConditionsAtLatitude:(double)latitude
+                                         longitude:(double)longitude
 {
-    NSParameterAssert(completionBlock);
-    NSURL *yesterdayURL = [self URLForCurrentConditionsAtLatitude:latitude longitude:longitude yesterday:YES];
-    [[self.session dataTaskWithURL:yesterdayURL completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
-        id JSON = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:nil];
-        completionBlock(JSON);
-    }] resume];
+    return [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
+        NSURL *yesterdayURL = [self URLForCurrentConditionsAtLatitude:latitude longitude:longitude yesterday:YES];
+        NSURLSessionDataTask *task = [self.session dataTaskWithURL:yesterdayURL completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
+            if (error) {
+                [subscriber sendError:error];
+            } else {
+                id JSON = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
+
+                if (!JSON) {
+                    [subscriber sendError:error];
+                } else {
+                    CWHistoricalConditions *conditions = [CWHistoricalConditions historicalConditionsFromJSON:JSON];
+                    [subscriber sendNext:conditions];
+                    [subscriber sendCompleted];
+                }
+            }
+        }];
+
+        [task resume];
+
+        return [RACDisposable disposableWithBlock:^{
+            [task cancel];
+        }];
+    }];
 }
 
 #pragma mark - Private Helpers

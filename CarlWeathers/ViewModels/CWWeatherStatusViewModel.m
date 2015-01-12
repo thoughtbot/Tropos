@@ -12,19 +12,19 @@
 
 @implementation CWWeatherStatusViewModel
 
-+ (instancetype)viewModelForStatus:(CWWeatherStatus)status weatherLocation:(CWWeatherLocation *)weatherLocation
++ (instancetype)viewModelForStatus:(CWWeatherStatus)status weatherLocation:(CWWeatherLocation *)weatherLocation date:(NSDate *)date
 {
-    return [[self alloc] initWithStatus:status weatherLocation:weatherLocation];
+    return [[self alloc] initWithStatus:status weatherLocation:weatherLocation date:date];
 }
 
-- (instancetype)initWithStatus:(CWWeatherStatus)weatherStatus weatherLocation:(CWWeatherLocation *)weatherLocation
+- (instancetype)initWithStatus:(CWWeatherStatus)weatherStatus weatherLocation:(CWWeatherLocation *)weatherLocation date:(NSDate *)date
 {
     self = [super init];
     if (!self) return nil;
 
     self.weatherStatus = weatherStatus;
     self.weatherLocation = weatherLocation;
-    self.updatedDate = [NSDate date];
+    self.updatedDate = date;
 
     return self;
 }
@@ -63,7 +63,7 @@
 - (NSString *)lastUpdatedString
 {
     CWDateFormatter *dateFormatter = [CWDateFormatter new];
-    return [dateFormatter stringFromDate:[NSDate date]];
+    return [dateFormatter stringFromDate:self.updatedDate];
 }
 
 @end

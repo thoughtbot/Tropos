@@ -5,6 +5,13 @@ PODS:
   - OHHTTPStubs (3.1.8):
     - OHHTTPStubs/Core (= 3.1.8)
   - OHHTTPStubs/Core (3.1.8)
+  - ReactiveCocoa (2.4.2):
+    - ReactiveCocoa/UI (= 2.4.2)
+  - ReactiveCocoa/Core (2.4.2):
+    - ReactiveCocoa/no-arc
+  - ReactiveCocoa/no-arc (2.4.2)
+  - ReactiveCocoa/UI (2.4.2):
+    - ReactiveCocoa/Core
   - Specta (0.3.0.beta1)
 
 DEPENDENCIES:
@@ -12,6 +19,7 @@ DEPENDENCIES:
   - KVOController
   - OCMock
   - OHHTTPStubs
+  - ReactiveCocoa
   - Specta (from `https://github.com/specta/specta.git`, tag `v0.3.0.beta1`)
 
 EXTERNAL SOURCES:
@@ -29,6 +37,7 @@ SPEC CHECKSUMS:
   KVOController: b1139ef1fc373b6757e4b69493fedd7b56eb1272
   OCMock: f6cb8c162ab9d5620dddf411282c7b2c0ee78854
   OHHTTPStubs: 2e25ea33e4163e5c458fe600d9ed412a85b2aeaf
+  ReactiveCocoa: 8418a82b67af2f1b7587baf29c329040a23c2063
   Specta: 63e8ac8e07db6675c7096d37f77a266a1be4c02d
 
 COCOAPODS: 0.35.0

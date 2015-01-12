@@ -81,6 +81,39 @@
     }
 }
 
+- (RACSignal *)currentLocation
+{
+    [self.locationManager startUpdatingLocation];
+    return [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
+        NSLog(@"Starting update");
+        return [[[RACSignal merge:@[[self locationUpdate], [self locationUpdateError]]] take:1] subscribe:subscriber];
+    }];
+}
+
+- (RACSignal *)locationUpdate
+{
+    return [[[[self rac_signalForSelector:@selector(locationManager:didUpdateLocations:) fromProtocol:@protocol(CLLocationManagerDelegate)]
+                                   reduceEach:^id(id _, NSArray *locations) {
+                                       return locations.lastObject;
+                                   }]
+                                  filter:^BOOL(CLLocation *location) {
+                                      return location.isStale == NO;
+                                  }]
+                                 doNext:^(id _) {
+                                     [self.locationManager stopUpdatingLocation];
+                                 }];
+}
+
+- (RACSignal *)locationUpdateError
+{
+    return [[[self rac_signalForSelector:@selector(locationManager:didFailWithError:) fromProtocol:@protocol(CLLocationManagerDelegate)] reduceEach:^id(id _, NSError *error) {
+        return error;
+    }] flattenMap:^RACStream *(NSError *error) {
+        return [RACSignal error:error];
+    }];
+}
+
+
 - (void)updateLocationWithBlock:(CWLocationUpdateBlock)completionBlock
 {
     NSParameterAssert(completionBlock);
@@ -115,32 +148,32 @@
 
 #pragma mark - CLLocationManagerDelegate
 
-- (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations
-{
-    CLLocation *location = locations.lastObject;
+//- (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations
+//{
+//    CLLocation *location = locations.lastObject;
+//
+//    if (location.isStale) {
+//        return;
+//    }
+//
+//    [self.locationManager stopUpdatingLocation];
+//
+//    [self.geocoder reverseGeocodeLocation:location completionHandler:^(NSArray *placemarks, NSError *error) {
+//        if (!placemarks) {
+//            self.completionBlock(nil, error);
+//            return;
+//        }
+//
+//        CWWeatherLocation *weatherLocation = [[CWWeatherLocation alloc] initWithPlacemark:placemarks.lastObject];
+//        self.completionBlock(weatherLocation, nil);
+//    }];
+//}
 
-    if (location.isStale) {
-        return;
-    }
-
-    [self.locationManager stopUpdatingLocation];
-
-    [self.geocoder reverseGeocodeLocation:location completionHandler:^(NSArray *placemarks, NSError *error) {
-        if (!placemarks) {
-            self.completionBlock(nil, error);
-            return;
-        }
-
-        CWWeatherLocation *weatherLocation = [[CWWeatherLocation alloc] initWithPlacemark:placemarks.lastObject];
-        self.completionBlock(weatherLocation, nil);
-    }];
-}
-
-- (void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error
-{
-    [self.locationManager stopUpdatingLocation];
-    self.completionBlock(nil, error);
-}
+//- (void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error
+//{
+//    [self.locationManager stopUpdatingLocation];
+//    self.completionBlock(nil, error);
+//}
 
 - (void)locationManager:(CLLocationManager *)manager didChangeAuthorizationStatus:(CLAuthorizationStatus)status
 {

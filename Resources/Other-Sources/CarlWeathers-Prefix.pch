@@ -15,4 +15,5 @@
     #import "UIFont+CWAppFonts.h"
 
     #import <KVOController/FBKVOController.h>
+    #import <ReactiveCocoa/ReactiveCocoa.h>
 #endif

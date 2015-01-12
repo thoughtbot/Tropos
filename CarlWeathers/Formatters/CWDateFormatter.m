@@ -23,11 +23,12 @@
 - (NSString *)stringFromDate:(NSDate *)date
 {
     NSTimeInterval timeInterval = [[NSDate date] timeIntervalSinceDate:date];
+    NSLog(@"time interval: %f", timeInterval);
 
     if (timeInterval < 60) {
-        return [NSString stringWithFormat:@"%f seconds ago", timeInterval];
+        return [NSString stringWithFormat:@"%.f seconds ago", timeInterval];
     } else if (timeInterval < 3600) {
-        return [NSString stringWithFormat:@"%f minutes ago", timeInterval];
+        return [NSString stringWithFormat:@"%.f minutes ago", timeInterval / 60];
     } else if (timeInterval < 86400) {
         self.dateFormatter.dateStyle = NSDateFormatterNoStyle;
         self.dateFormatter.timeStyle = NSDateFormatterShortStyle;
