@@ -1,10 +1,10 @@
 PODS:
   - Expecta (0.3.1)
   - KVOController (1.0.3)
-  - OCMock (3.1.1)
-  - OHHTTPStubs (3.1.8):
-    - OHHTTPStubs/Core (= 3.1.8)
-  - OHHTTPStubs/Core (3.1.8)
+  - OCMock (3.1.2)
+  - OHHTTPStubs (3.1.10):
+    - OHHTTPStubs/Core (= 3.1.10)
+  - OHHTTPStubs/Core (3.1.10)
   - Specta (0.3.0.beta1)
 
 DEPENDENCIES:
@@ -27,8 +27,8 @@ CHECKOUT OPTIONS:
 SPEC CHECKSUMS:
   Expecta: 03aabd0a89d8dea843baecb19a7fd7466a69a31d
   KVOController: b1139ef1fc373b6757e4b69493fedd7b56eb1272
-  OCMock: f6cb8c162ab9d5620dddf411282c7b2c0ee78854
-  OHHTTPStubs: 2e25ea33e4163e5c458fe600d9ed412a85b2aeaf
+  OCMock: ecdd510b73ef397f2f97274785c1e87fd147c49f
+  OHHTTPStubs: 2038e929b6abb94881000524c1cb4aba0a1bb4a2
   Specta: 63e8ac8e07db6675c7096d37f77a266a1be4c02d
 
 COCOAPODS: 0.35.0
