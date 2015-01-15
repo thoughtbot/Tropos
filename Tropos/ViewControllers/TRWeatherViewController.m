@@ -65,8 +65,8 @@
     self.conditionsImageView.image = controller.weatherViewModel.conditionsImage;
     self.highLowTemperatureLabel.text = controller.weatherViewModel.formattedTemperatureRange;
     self.windSpeedLabel.text = controller.weatherViewModel.formattedWindSpeed;
-    self.conditionsDescriptionLabel.attributedText = controller.weatherViewModel.attributedTemperatureComparison;
     self.precipitationMeterView.precipitationProbability = controller.weatherViewModel.precipitationProbability;
+    self.conditionsDescriptionLabel.attributedText = controller.weatherViewModel.attributedTemperatureComparison;
 }
 
 - (void)statusViewModelDidChange:(NSDictionary *)changes object:(TRWeatherController *)controller

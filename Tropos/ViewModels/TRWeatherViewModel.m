@@ -60,6 +60,7 @@
     NSMutableAttributedString *attributedString = [[NSMutableAttributedString alloc] initWithString:comparisonString];
     [attributedString setFont:[UIFont defaultUltraLightFontOfSize:37]];
     [attributedString setTextColor:[UIColor defaultTextColor]];
+    [attributedString setLineHeightMultiple:1.15f spacing:2.0f];
     [attributedString setTextColor:[self colorForTemperatureComparison:comparison] forSubstring:adjective];
 
     return attributedString;
