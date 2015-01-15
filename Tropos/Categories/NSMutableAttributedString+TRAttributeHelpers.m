@@ -22,6 +22,15 @@
     [self setAttributes:@{NSFontAttributeName: font} range:[self entireRange]];
 }
 
+- (void)setLineHeightMultiple:(CGFloat)multiple spacing:(CGFloat)spacing
+{
+    NSMutableParagraphStyle *paragraphStyle = [[NSMutableParagraphStyle alloc] init];
+    paragraphStyle.lineHeightMultiple = multiple;
+    paragraphStyle.lineSpacing = spacing;
+
+    [self setAttributes:@{NSParagraphStyleAttributeName: paragraphStyle} range:[self entireRange]];
+}
+
 - (NSRange)entireRange
 {
     return NSMakeRange(0, self.string.length);
