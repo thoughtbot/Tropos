@@ -6,4 +6,6 @@
 + (instancetype)coolerColor;
 + (instancetype)coldColor;
 
+- (instancetype)lighterColorByAmount:(CGFloat)amount;
+
 @end

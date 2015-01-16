@@ -41,7 +41,7 @@ NSInteger TRConvertFahrenheitToCelsius(NSInteger fahrenheit) {
 
 - (TRTemperatureComparison)comparedTo:(TRTemperature *)comparedTemperature
 {
-    CGFloat temperatureDifference = [self differenceFromTemperature:comparedTemperature];
+    CGFloat temperatureDifference = [self fahrenheitDifferenceFromTemperature:comparedTemperature];
 
     if (temperatureDifference >= 10) {
         return TRTemperatureComparisonHotter;
@@ -56,7 +56,13 @@ NSInteger TRConvertFahrenheitToCelsius(NSInteger fahrenheit) {
     }
 }
 
-- (CGFloat)differenceFromTemperature:(TRTemperature *)comparedTemperature
+- (instancetype)temperatureDifferenceFromTemperature:(TRTemperature *)temperature
+{
+    NSInteger difference = [self fahrenheitDifferenceFromTemperature:temperature];
+    return [TRTemperature temperatureFromFahrenheit:@(difference)];
+}
+
+- (NSInteger)fahrenheitDifferenceFromTemperature:(TRTemperature *)comparedTemperature
 {
     return self.fahrenheitValue - comparedTemperature.fahrenheitValue;
 }

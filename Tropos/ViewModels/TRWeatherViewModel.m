@@ -61,7 +61,10 @@
     [attributedString setFont:[UIFont defaultUltraLightFontOfSize:37]];
     [attributedString setTextColor:[UIColor defaultTextColor]];
     [attributedString setLineHeightMultiple:1.15f spacing:2.0f];
-    [attributedString setTextColor:[self colorForTemperatureComparison:comparison] forSubstring:adjective];
+
+    TRTemperature *difference = [self.currentConditions.temperature temperatureDifferenceFromTemperature:self.yesterdaysConditions.temperature];
+    UIColor *color = [self colorForTemperatureComparison:comparison difference:difference.fahrenheitValue];
+    [attributedString setTextColor:color forSubstring:adjective];
 
     return attributedString;
 }
@@ -73,20 +76,34 @@
 
 #pragma mark - Private Methods
 
-- (UIColor *)colorForTemperatureComparison:(TRTemperatureComparison)comparison
+- (UIColor *)colorForTemperatureComparison:(TRTemperatureComparison)comparison difference:(NSInteger)difference
 {
+    UIColor *color;
+
     switch (comparison) {
         case TRTemperatureComparisonSame:
-            return [UIColor defaultTextColor];
+            color = [UIColor defaultTextColor];
+            break;
         case TRTemperatureComparisonColder:
-            return [UIColor coldColor];
+            color = [UIColor coldColor];
+            break;
         case TRTemperatureComparisonCooler:
-            return [UIColor coolerColor];
+            color = [UIColor coolerColor];
+            break;
         case TRTemperatureComparisonHotter:
-            return [UIColor hotColor];
+            color = [UIColor hotColor];
+            break;
         case TRTemperatureComparisonWarmer:
-            return [UIColor warmerColor];
+            color = [UIColor warmerColor];
+            break;
     }
+
+    if (comparison == TRTemperatureComparisonCooler || comparison == TRTemperatureComparisonWarmer) {
+        CGFloat amount = MIN(ABS(difference), 10) / 10.0f;
+        color = [color lighterColorByAmount:1 - amount];
+    }
+
+    return color;
 }
 
 @end
