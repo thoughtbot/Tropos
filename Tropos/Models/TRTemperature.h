@@ -13,5 +13,6 @@ typedef NS_ENUM(NSUInteger, TRTemperatureComparison) {
 
 + (instancetype)temperatureFromFahrenheit:(NSNumber *)number;
 - (TRTemperatureComparison)comparedTo:(TRTemperature *)comparedTemperature;
+- (instancetype)temperatureDifferenceFromTemperature:(TRTemperature *)temperature;
 
 @end

@@ -29,6 +29,7 @@
 		4D9CA35D1A5C7672009E24DD /* TRBearingFormatterSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D9CA35C1A5C7672009E24DD /* TRBearingFormatterSpec.m */; };
 		4D9CA35F1A5CABDD009E24DD /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 4D9CA35E1A5CABDD009E24DD /* Settings.bundle */; };
 		4D9CA3621A5CB544009E24DD /* TRSettingsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D9CA3611A5CB544009E24DD /* TRSettingsController.m */; };
+		4DA79AC11A68806600C3539D /* UIColor_TRTemperatureColorsSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DA79AC01A68806600C3539D /* UIColor_TRTemperatureColorsSpec.m */; };
 		4DF5BA391A5B64630088F35F /* TRBearingFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DF5BA381A5B64630088F35F /* TRBearingFormatter.m */; };
 		7D54C46B9E7FA5B0724FC775 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B3068282D6E4B66BB58E93BC /* libPods.a */; };
 		8EAE701DFB2DC16543CE1B3C /* libPods-unit_tests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A548375C4E5D454F542CFA0D /* libPods-unit_tests.a */; };
@@ -103,6 +104,7 @@
 		4D9CA35E1A5CABDD009E24DD /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		4D9CA3601A5CB544009E24DD /* TRSettingsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRSettingsController.h; sourceTree = "<group>"; };
 		4D9CA3611A5CB544009E24DD /* TRSettingsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRSettingsController.m; sourceTree = "<group>"; };
+		4DA79AC01A68806600C3539D /* UIColor_TRTemperatureColorsSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIColor_TRTemperatureColorsSpec.m; sourceTree = "<group>"; };
 		4DF5BA371A5B64630088F35F /* TRBearingFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRBearingFormatter.h; sourceTree = "<group>"; };
 		4DF5BA381A5B64630088F35F /* TRBearingFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRBearingFormatter.m; sourceTree = "<group>"; };
 		57761BB4DFB42997964F13EE /* Tropos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tropos.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -369,6 +371,7 @@
 			children = (
 				C2E44CFD1A3B7C14009CC844 /* TRTemperatureSpec.m */,
 				4D9CA35C1A5C7672009E24DD /* TRBearingFormatterSpec.m */,
+				4DA79AC01A68806600C3539D /* UIColor_TRTemperatureColorsSpec.m */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -652,6 +655,7 @@
 			files = (
 				4D9CA35D1A5C7672009E24DD /* TRBearingFormatterSpec.m in Sources */,
 				C2E44CFE1A3B7C14009CC844 /* TRTemperatureSpec.m in Sources */,
+				4DA79AC11A68806600C3539D /* UIColor_TRTemperatureColorsSpec.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
