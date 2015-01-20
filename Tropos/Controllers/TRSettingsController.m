@@ -5,6 +5,12 @@ NSString *const TRSettingsDidChangeNotification = @"TRSettingsDidChangeNotificat
 static NSString *const TRSettingsUnitSystemKey = @"TRUnitSystem";
 static NSString *const TRSettingsLastVersionKey = @"TRLastVersion";
 
+@interface TRSettingsController ()
+
+@property (nonatomic) RACSignal *userDefaultsChanged;
+
+@end
+
 @implementation TRSettingsController
 
 #pragma mark - Initializers
@@ -14,16 +20,20 @@ static NSString *const TRSettingsLastVersionKey = @"TRLastVersion";
     self = [super init];
     if (!self) return nil;
 
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(userDefaultsDidChange:) name:NSUserDefaultsDidChangeNotification object:nil];
+    self.userDefaultsChanged = [[NSNotificationCenter defaultCenter] rac_addObserverForName:NSUserDefaultsDidChangeNotification object:nil];
 
     return self;
 }
 
-#pragma mark - NSObject
+#pragma mark - Properties
 
-- (void)dealloc
+- (RACSignal *)unitSystemChanged
 {
-    [[NSNotificationCenter defaultCenter] removeObserver:self name:NSUserDefaultsDidChangeNotification object:nil];
+    return [[[self.userDefaultsChanged filter:^BOOL(NSNotification *notification) {
+        return [notification.name isEqualToString:NSUserDefaultsDidChangeNotification];
+    }] map:^id(id value) {
+        return @([self unitSystem]);
+    }] startWith:@([self unitSystem])];
 }
 
 #pragma mark - Public Methods
@@ -60,11 +70,6 @@ static NSString *const TRSettingsLastVersionKey = @"TRLastVersion";
     NSString *version = [[NSBundle mainBundle] versionNumber];
     [[NSUserDefaults standardUserDefaults] registerDefaults:@{TRSettingsLastVersionKey: version}];
     [[NSUserDefaults standardUserDefaults] setObject:version forKey:TRSettingsLastVersionKey];
-}
-
-- (void)userDefaultsDidChange:(NSNotification *)notification
-{
-    [[NSNotificationCenter defaultCenter] postNotificationName:TRSettingsDidChangeNotification object:nil];
 }
 
 @end

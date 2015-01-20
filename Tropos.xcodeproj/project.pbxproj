@@ -9,15 +9,13 @@
 /* Begin PBXBuildFile section */
 		130C4C29D1C62D52D0767A6B /* Main.storyboard in Sources */ = {isa = PBXBuildFile; fileRef = E59B090E67C8BD269D3CD9DB /* Main.storyboard */; };
 		46660A27B04F4C7B78A7920F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 436D9431497525313B32E225 /* Foundation.framework */; };
-		4D0A5C381A3A27510084C41E /* TRForecastClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D0A5C371A3A27510084C41E /* TRForecastClient.m */; };
-		4D0A5C3B1A3A32410084C41E /* TRCurrentConditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D0A5C3A1A3A32410084C41E /* TRCurrentConditions.m */; };
+		4D0A5C381A3A27510084C41E /* TRForecastController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D0A5C371A3A27510084C41E /* TRForecastController.m */; };
 		4D0A5C3D1A3A53DD0084C41E /* CWForecastDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D0A5C3C1A3A53DD0084C41E /* CWForecastDetailView.xib */; };
 		4D0A5C401A3A578E0084C41E /* DINNextLTPro-UltraLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4D0A5C3F1A3A578E0084C41E /* DINNextLTPro-UltraLight.otf */; };
 		4D3039E71A5749120042FFF8 /* TRPrecipitationMeterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D3039E61A5749120042FFF8 /* TRPrecipitationMeterView.m */; };
 		4D3386FF1A5D27260087B88F /* TRTemperatureFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D3386FE1A5D27260087B88F /* TRTemperatureFormatter.m */; };
 		4D3387021A5D4C300087B88F /* NSBundle+TRBundleInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D3387011A5D4C300087B88F /* NSBundle+TRBundleInfo.m */; };
-		4D3387051A5E24F00087B88F /* TRWeatherStatusViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D3387041A5E24F00087B88F /* TRWeatherStatusViewModel.m */; };
-		4D7CDEB61A46CC420038DD33 /* TRWeatherViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D7CDEB51A46CC420038DD33 /* TRWeatherViewModel.m */; };
+		4D72D12A1A7330E700FAB67B /* TRGeocodeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D72D1291A7330E700FAB67B /* TRGeocodeController.m */; };
 		4D7CDEB91A46D1C20038DD33 /* TRWeatherLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D7CDEB81A46D1C20038DD33 /* TRWeatherLocation.m */; };
 		4D7CDEBC1A46D3610038DD33 /* CLLocation+TRRecentLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D7CDEBB1A46D3610038DD33 /* CLLocation+TRRecentLocation.m */; };
 		4D7CDEBF1A46DD030038DD33 /* NSError+TRErrors.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D7CDEBE1A46DD030038DD33 /* NSError+TRErrors.m */; };
@@ -25,11 +23,13 @@
 		4D7CDEC51A47DCD60038DD33 /* NSMutableAttributedString+TRAttributeHelpers.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D7CDEC41A47DCD60038DD33 /* NSMutableAttributedString+TRAttributeHelpers.m */; };
 		4D7CDEC81A47E0500038DD33 /* UIFont+TRAppFonts.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D7CDEC71A47E0500038DD33 /* UIFont+TRAppFonts.m */; };
 		4D7CDECC1A47E13F0038DD33 /* TRTemperatureComparisonFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D7CDECB1A47E13F0038DD33 /* TRTemperatureComparisonFormatter.m */; };
-		4D7F0EEF1A3E8439008A6E1C /* TRWeatherController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D7F0EEE1A3E8439008A6E1C /* TRWeatherController.m */; };
+		4D9315201A6F44EB00CE95B3 /* TRDateFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D93151F1A6F44EB00CE95B3 /* TRDateFormatter.m */; };
 		4D9CA35D1A5C7672009E24DD /* TRBearingFormatterSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D9CA35C1A5C7672009E24DD /* TRBearingFormatterSpec.m */; };
 		4D9CA35F1A5CABDD009E24DD /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 4D9CA35E1A5CABDD009E24DD /* Settings.bundle */; };
 		4D9CA3621A5CB544009E24DD /* TRSettingsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D9CA3611A5CB544009E24DD /* TRSettingsController.m */; };
 		4DA79AC11A68806600C3539D /* UIColor_TRTemperatureColorsSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DA79AC01A68806600C3539D /* UIColor_TRTemperatureColorsSpec.m */; };
+		4DEDF4F61A6FA682006F3F11 /* TRWeatherUpdate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DEDF4F51A6FA682006F3F11 /* TRWeatherUpdate.m */; };
+		4DEDF4F91A6FAE7D006F3F11 /* TRWeatherViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DEDF4F81A6FAE7D006F3F11 /* TRWeatherViewModel.m */; };
 		4DF5BA391A5B64630088F35F /* TRBearingFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DF5BA381A5B64630088F35F /* TRBearingFormatter.m */; };
 		7D54C46B9E7FA5B0724FC775 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B3068282D6E4B66BB58E93BC /* libPods.a */; };
 		8EAE701DFB2DC16543CE1B3C /* libPods-unit_tests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A548375C4E5D454F542CFA0D /* libPods-unit_tests.a */; };
@@ -38,7 +38,6 @@
 		C2E44CE41A3A4273009CC844 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = C2E44CE61A3A4273009CC844 /* Localizable.strings */; };
 		C2E44CE91A3A42C6009CC844 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C2E44CEB1A3A42C6009CC844 /* InfoPlist.strings */; };
 		C2E44CEF1A3B6E89009CC844 /* NSDate+TRRelativeDate.m in Sources */ = {isa = PBXBuildFile; fileRef = C2E44CEE1A3B6E89009CC844 /* NSDate+TRRelativeDate.m */; };
-		C2E44CF21A3B7358009CC844 /* TRHistoricalConditions.m in Sources */ = {isa = PBXBuildFile; fileRef = C2E44CF11A3B7358009CC844 /* TRHistoricalConditions.m */; };
 		C2E44CF81A3B7538009CC844 /* TRTemperature.m in Sources */ = {isa = PBXBuildFile; fileRef = C2E44CF71A3B7538009CC844 /* TRTemperature.m */; };
 		C2E44CFB1A3B76B3009CC844 /* NSNumber+TRRoundedNumber.m in Sources */ = {isa = PBXBuildFile; fileRef = C2E44CFA1A3B76B3009CC844 /* NSNumber+TRRoundedNumber.m */; };
 		C2E44CFE1A3B7C14009CC844 /* TRTemperatureSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = C2E44CFD1A3B7C14009CC844 /* TRTemperatureSpec.m */; };
@@ -68,10 +67,8 @@
 		2CA708068A67D7E761D29251 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		3431B0CE6A3E1D06EBAB27BF /* Pods-unit_tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-unit_tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-unit_tests/Pods-unit_tests.debug.xcconfig"; sourceTree = "<group>"; };
 		436D9431497525313B32E225 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		4D0A5C361A3A27510084C41E /* TRForecastClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRForecastClient.h; sourceTree = "<group>"; };
-		4D0A5C371A3A27510084C41E /* TRForecastClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRForecastClient.m; sourceTree = "<group>"; };
-		4D0A5C391A3A32410084C41E /* TRCurrentConditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRCurrentConditions.h; sourceTree = "<group>"; };
-		4D0A5C3A1A3A32410084C41E /* TRCurrentConditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRCurrentConditions.m; sourceTree = "<group>"; };
+		4D0A5C361A3A27510084C41E /* TRForecastController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRForecastController.h; sourceTree = "<group>"; };
+		4D0A5C371A3A27510084C41E /* TRForecastController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRForecastController.m; sourceTree = "<group>"; };
 		4D0A5C3C1A3A53DD0084C41E /* CWForecastDetailView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CWForecastDetailView.xib; sourceTree = "<group>"; };
 		4D0A5C3F1A3A578E0084C41E /* DINNextLTPro-UltraLight.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DINNextLTPro-UltraLight.otf"; sourceTree = "<group>"; };
 		4D3039E51A5749120042FFF8 /* TRPrecipitationMeterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRPrecipitationMeterView.h; sourceTree = "<group>"; };
@@ -80,10 +77,8 @@
 		4D3386FE1A5D27260087B88F /* TRTemperatureFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRTemperatureFormatter.m; sourceTree = "<group>"; };
 		4D3387001A5D4C300087B88F /* NSBundle+TRBundleInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSBundle+TRBundleInfo.h"; sourceTree = "<group>"; };
 		4D3387011A5D4C300087B88F /* NSBundle+TRBundleInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSBundle+TRBundleInfo.m"; sourceTree = "<group>"; };
-		4D3387031A5E24F00087B88F /* TRWeatherStatusViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRWeatherStatusViewModel.h; sourceTree = "<group>"; };
-		4D3387041A5E24F00087B88F /* TRWeatherStatusViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRWeatherStatusViewModel.m; sourceTree = "<group>"; };
-		4D7CDEB41A46CC420038DD33 /* TRWeatherViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRWeatherViewModel.h; sourceTree = "<group>"; };
-		4D7CDEB51A46CC420038DD33 /* TRWeatherViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRWeatherViewModel.m; sourceTree = "<group>"; };
+		4D72D1281A7330E700FAB67B /* TRGeocodeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRGeocodeController.h; sourceTree = "<group>"; };
+		4D72D1291A7330E700FAB67B /* TRGeocodeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRGeocodeController.m; sourceTree = "<group>"; };
 		4D7CDEB71A46D1C20038DD33 /* TRWeatherLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRWeatherLocation.h; sourceTree = "<group>"; };
 		4D7CDEB81A46D1C20038DD33 /* TRWeatherLocation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRWeatherLocation.m; sourceTree = "<group>"; };
 		4D7CDEBA1A46D3610038DD33 /* CLLocation+TRRecentLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CLLocation+TRRecentLocation.h"; sourceTree = "<group>"; };
@@ -98,13 +93,17 @@
 		4D7CDEC71A47E0500038DD33 /* UIFont+TRAppFonts.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIFont+TRAppFonts.m"; sourceTree = "<group>"; };
 		4D7CDECA1A47E13F0038DD33 /* TRTemperatureComparisonFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRTemperatureComparisonFormatter.h; sourceTree = "<group>"; };
 		4D7CDECB1A47E13F0038DD33 /* TRTemperatureComparisonFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRTemperatureComparisonFormatter.m; sourceTree = "<group>"; };
-		4D7F0EED1A3E8439008A6E1C /* TRWeatherController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRWeatherController.h; sourceTree = "<group>"; };
-		4D7F0EEE1A3E8439008A6E1C /* TRWeatherController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRWeatherController.m; sourceTree = "<group>"; };
+		4D93151E1A6F44EB00CE95B3 /* TRDateFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRDateFormatter.h; sourceTree = "<group>"; };
+		4D93151F1A6F44EB00CE95B3 /* TRDateFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRDateFormatter.m; sourceTree = "<group>"; };
 		4D9CA35C1A5C7672009E24DD /* TRBearingFormatterSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRBearingFormatterSpec.m; sourceTree = "<group>"; };
 		4D9CA35E1A5CABDD009E24DD /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		4D9CA3601A5CB544009E24DD /* TRSettingsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRSettingsController.h; sourceTree = "<group>"; };
 		4D9CA3611A5CB544009E24DD /* TRSettingsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRSettingsController.m; sourceTree = "<group>"; };
 		4DA79AC01A68806600C3539D /* UIColor_TRTemperatureColorsSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIColor_TRTemperatureColorsSpec.m; sourceTree = "<group>"; };
+		4DEDF4F41A6FA682006F3F11 /* TRWeatherUpdate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRWeatherUpdate.h; sourceTree = "<group>"; };
+		4DEDF4F51A6FA682006F3F11 /* TRWeatherUpdate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRWeatherUpdate.m; sourceTree = "<group>"; };
+		4DEDF4F71A6FAE7D006F3F11 /* TRWeatherViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRWeatherViewModel.h; sourceTree = "<group>"; };
+		4DEDF4F81A6FAE7D006F3F11 /* TRWeatherViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRWeatherViewModel.m; sourceTree = "<group>"; };
 		4DF5BA371A5B64630088F35F /* TRBearingFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRBearingFormatter.h; sourceTree = "<group>"; };
 		4DF5BA381A5B64630088F35F /* TRBearingFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRBearingFormatter.m; sourceTree = "<group>"; };
 		57761BB4DFB42997964F13EE /* Tropos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tropos.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -123,8 +122,6 @@
 		C2E44CEC1A3A4F56009CC844 /* TRErrors.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TRErrors.h; sourceTree = "<group>"; };
 		C2E44CED1A3B6E89009CC844 /* NSDate+TRRelativeDate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+TRRelativeDate.h"; sourceTree = "<group>"; };
 		C2E44CEE1A3B6E89009CC844 /* NSDate+TRRelativeDate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+TRRelativeDate.m"; sourceTree = "<group>"; };
-		C2E44CF01A3B7358009CC844 /* TRHistoricalConditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRHistoricalConditions.h; sourceTree = "<group>"; };
-		C2E44CF11A3B7358009CC844 /* TRHistoricalConditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRHistoricalConditions.m; sourceTree = "<group>"; };
 		C2E44CF61A3B7538009CC844 /* TRTemperature.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRTemperature.h; sourceTree = "<group>"; };
 		C2E44CF71A3B7538009CC844 /* TRTemperature.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRTemperature.m; sourceTree = "<group>"; };
 		C2E44CF91A3B76B3009CC844 /* NSNumber+TRRoundedNumber.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSNumber+TRRoundedNumber.h"; sourceTree = "<group>"; };
@@ -161,14 +158,14 @@
 			children = (
 				0CC72A6E0EE525537F241EB7 /* TRAppDelegate.h */,
 				A6B1ADBC73A8A2EF7FB4E257 /* TRAppDelegate.m */,
-				4D0A5C361A3A27510084C41E /* TRForecastClient.h */,
-				4D0A5C371A3A27510084C41E /* TRForecastClient.m */,
+				4D0A5C361A3A27510084C41E /* TRForecastController.h */,
+				4D0A5C371A3A27510084C41E /* TRForecastController.m */,
 				C2E44CDB1A3A38A2009CC844 /* TRLocationController.h */,
 				C2E44CDC1A3A38A2009CC844 /* TRLocationController.m */,
-				4D7F0EED1A3E8439008A6E1C /* TRWeatherController.h */,
-				4D7F0EEE1A3E8439008A6E1C /* TRWeatherController.m */,
 				4D9CA3601A5CB544009E24DD /* TRSettingsController.h */,
 				4D9CA3611A5CB544009E24DD /* TRSettingsController.m */,
+				4D72D1281A7330E700FAB67B /* TRGeocodeController.h */,
+				4D72D1291A7330E700FAB67B /* TRGeocodeController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -232,6 +229,8 @@
 				4DF5BA381A5B64630088F35F /* TRBearingFormatter.m */,
 				4D3386FD1A5D27260087B88F /* TRTemperatureFormatter.h */,
 				4D3386FE1A5D27260087B88F /* TRTemperatureFormatter.m */,
+				4D93151E1A6F44EB00CE95B3 /* TRDateFormatter.h */,
+				4D93151F1A6F44EB00CE95B3 /* TRDateFormatter.m */,
 			);
 			path = Formatters;
 			sourceTree = "<group>";
@@ -239,14 +238,12 @@
 		63336253261B7FE00D76B754 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				4D0A5C391A3A32410084C41E /* TRCurrentConditions.h */,
-				4D0A5C3A1A3A32410084C41E /* TRCurrentConditions.m */,
-				C2E44CF01A3B7358009CC844 /* TRHistoricalConditions.h */,
-				C2E44CF11A3B7358009CC844 /* TRHistoricalConditions.m */,
 				C2E44CF61A3B7538009CC844 /* TRTemperature.h */,
 				C2E44CF71A3B7538009CC844 /* TRTemperature.m */,
 				4D7CDEB71A46D1C20038DD33 /* TRWeatherLocation.h */,
 				4D7CDEB81A46D1C20038DD33 /* TRWeatherLocation.m */,
+				4DEDF4F41A6FA682006F3F11 /* TRWeatherUpdate.h */,
+				4DEDF4F51A6FA682006F3F11 /* TRWeatherUpdate.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -306,10 +303,8 @@
 		7D9BB5368E9215FC0EBBCE0A /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
-				4D7CDEB41A46CC420038DD33 /* TRWeatherViewModel.h */,
-				4D7CDEB51A46CC420038DD33 /* TRWeatherViewModel.m */,
-				4D3387031A5E24F00087B88F /* TRWeatherStatusViewModel.h */,
-				4D3387041A5E24F00087B88F /* TRWeatherStatusViewModel.m */,
+				4DEDF4F71A6FAE7D006F3F11 /* TRWeatherViewModel.h */,
+				4DEDF4F81A6FAE7D006F3F11 /* TRWeatherViewModel.m */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -619,31 +614,30 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D9315201A6F44EB00CE95B3 /* TRDateFormatter.m in Sources */,
 				4D9CA3621A5CB544009E24DD /* TRSettingsController.m in Sources */,
-				4D0A5C381A3A27510084C41E /* TRForecastClient.m in Sources */,
+				4D0A5C381A3A27510084C41E /* TRForecastController.m in Sources */,
 				C2E44CEF1A3B6E89009CC844 /* NSDate+TRRelativeDate.m in Sources */,
 				4D3387021A5D4C300087B88F /* NSBundle+TRBundleInfo.m in Sources */,
 				4D3039E71A5749120042FFF8 /* TRPrecipitationMeterView.m in Sources */,
-				4D7F0EEF1A3E8439008A6E1C /* TRWeatherController.m in Sources */,
 				C2E44CDD1A3A38A2009CC844 /* TRLocationController.m in Sources */,
 				D7DD1B8AD495AFA4EC1CEFF9 /* TRAppDelegate.m in Sources */,
 				130C4C29D1C62D52D0767A6B /* Main.storyboard in Sources */,
-				4D3387051A5E24F00087B88F /* TRWeatherStatusViewModel.m in Sources */,
-				4D0A5C3B1A3A32410084C41E /* TRCurrentConditions.m in Sources */,
+				4DEDF4F61A6FA682006F3F11 /* TRWeatherUpdate.m in Sources */,
 				4DF5BA391A5B64630088F35F /* TRBearingFormatter.m in Sources */,
 				4D7CDEC21A4705400038DD33 /* UIColor+TRTemperatureColors.m in Sources */,
 				C2E44CFB1A3B76B3009CC844 /* NSNumber+TRRoundedNumber.m in Sources */,
 				4D7CDEBF1A46DD030038DD33 /* NSError+TRErrors.m in Sources */,
 				C2E44CF81A3B7538009CC844 /* TRTemperature.m in Sources */,
 				4D7CDECC1A47E13F0038DD33 /* TRTemperatureComparisonFormatter.m in Sources */,
+				4DEDF4F91A6FAE7D006F3F11 /* TRWeatherViewModel.m in Sources */,
 				4D7CDEC51A47DCD60038DD33 /* NSMutableAttributedString+TRAttributeHelpers.m in Sources */,
 				C2E44CE11A3A3C09009CC844 /* TRWeatherViewController.m in Sources */,
 				4D7CDEB91A46D1C20038DD33 /* TRWeatherLocation.m in Sources */,
-				C2E44CF21A3B7358009CC844 /* TRHistoricalConditions.m in Sources */,
 				CE5D7F3B45F980082E1BCA30 /* LaunchScreen.xib in Sources */,
 				C9318C8461EB5FE3914F9AC0 /* main.m in Sources */,
+				4D72D12A1A7330E700FAB67B /* TRGeocodeController.m in Sources */,
 				4D3386FF1A5D27260087B88F /* TRTemperatureFormatter.m in Sources */,
-				4D7CDEB61A46CC420038DD33 /* TRWeatherViewModel.m in Sources */,
 				4D7CDEBC1A46D3610038DD33 /* CLLocation+TRRecentLocation.m in Sources */,
 				4D7CDEC81A47E0500038DD33 /* UIFont+TRAppFonts.m in Sources */,
 			);
