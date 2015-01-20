@@ -35,8 +35,9 @@
 {
     [super viewDidLoad];
     self.controller = [TRWeatherController new];
+    RAC(self.cityLabel, text) = [self.controller locationName];
+    RAC(self.lastUpdatedLabel, text) = [self.controller status];
     [self.KVOController observe:self.controller keyPath:@"weatherViewModel" options:(NSKeyValueObservingOptionInitial | NSKeyValueObservingOptionNew) action:@selector(viewModelDidChange:object:)];
-    [self.KVOController observe:self.controller keyPath:@"statusViewModel" options:(NSKeyValueObservingOptionInitial | NSKeyValueObservingOptionNew) action:@selector(statusViewModelDidChange:object:)];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(refresh) name:UIApplicationWillEnterForegroundNotification object:nil];
 }
 
@@ -67,12 +68,6 @@
     self.windSpeedLabel.text = controller.weatherViewModel.formattedWindSpeed;
     self.precipitationMeterView.precipitationProbability = controller.weatherViewModel.precipitationProbability;
     self.conditionsDescriptionLabel.attributedText = controller.weatherViewModel.attributedTemperatureComparison;
-}
-
-- (void)statusViewModelDidChange:(NSDictionary *)changes object:(TRWeatherController *)controller
-{
-    self.cityLabel.text = controller.statusViewModel.location;
-    self.lastUpdatedLabel.text = controller.statusViewModel.status;
 }
 
 @end

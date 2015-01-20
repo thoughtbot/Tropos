@@ -1,6 +1,7 @@
 platform :ios, '8.0'
 
 pod 'KVOController'
+pod 'ReactiveCocoa'
 
 target :unit_tests, :exclusive => true do
   link_with 'UnitTests'
