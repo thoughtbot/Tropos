@@ -5,38 +5,13 @@
 
 @interface TRLocationController () <CLLocationManagerDelegate>
 
-@property (nonatomic, readwrite) TRLocationAuthorizationType authorizationType;
-@property (nonatomic, copy) TRLocationAuthorizationChangedBlock authorizationChangedBlock;
-
-@property (nonatomic) BOOL authorized;
-@property (nonatomic, copy) TRLocationUpdateBlock completionBlock;
-
 @property (nonatomic) CLLocationManager *locationManager;
-@property (nonatomic) CLGeocoder *geocoder;
 
 @end
 
 @implementation TRLocationController
 
-#pragma mark - Class Methods
-
-+ (instancetype)controllerWithAuthorizationType:(TRLocationAuthorizationType)type authorizationChanged:(void (^)(BOOL))authChanged
-{
-    return [[TRLocationController alloc] initWithAuthorizationType:type authorizationChangedBlock:authChanged];
-}
-
 #pragma mark - Initializers
-
-- (instancetype)initWithAuthorizationType:(TRLocationAuthorizationType)type authorizationChangedBlock:(TRLocationAuthorizationChangedBlock)block
-{
-    self = [self init];
-    if (!self) return nil;
-
-    self.authorizationType = type;
-    self.authorizationChangedBlock = block;
-
-    return self;
-}
 
 - (instancetype)init
 {
@@ -48,105 +23,81 @@
     self.locationManager.distanceFilter = kCLDistanceFilterNone;
     self.locationManager.desiredAccuracy = kCLLocationAccuracyBest;
 
-    self.geocoder = [CLGeocoder new];
-
     return self;
-}
-
-#pragma mark - NSObject
-
-- (void)dealloc
-{
-    [self cancel];
 }
 
 #pragma mark - Properties
 
-- (BOOL)needsAuthorization
+- (RACSignal *)requestWhenInUseAuthorization
 {
-    return [CLLocationManager authorizationStatus] == kCLAuthorizationStatusNotDetermined;
-}
-
-#pragma mark - Methods
-
-- (void)requestAuthorization
-{
-    switch (self.authorizationType) {
-        case TRLocationAuthorizationAlways:
-            [self.locationManager requestAlwaysAuthorization];
-            break;
-        case TRLocationAuthorizationWhenInUse:
-            [self.locationManager requestWhenInUseAuthorization];
-            break;
+    if ([self needsAuthorization]) {
+        [self.locationManager requestWhenInUseAuthorization];
+        return [self didAuthorize];
+    } else {
+        return [self authorized];
     }
 }
 
-- (void)updateLocationWithBlock:(TRLocationUpdateBlock)completionBlock
+- (RACSignal *)updateCurrentLocation
 {
-    NSParameterAssert(completionBlock);
+    RACSignal *currentLocationUpdated = [[[self didUpdateLocations] map:^id(NSArray *locations) {
+        return locations.lastObject;
+    }] filter:^BOOL(CLLocation *location) {
+        return !location.isStale;
+    }];
 
-    self.completionBlock = completionBlock;
+    RACSignal *locationUpdateFailed = [[[self didFailWithError] map:^id(NSError *error) {
+        return [RACSignal error:error];
+    }] switchToLatest];
 
-    if (!self.authorized) {
-        self.completionBlock(nil, [NSError locationUnauthorizedError]);
-        return;
-    }
-
-    [self.locationManager startUpdatingLocation];
-}
-
-- (void)cancel
-{
-    [self.locationManager stopUpdatingLocation];
-    [self.geocoder cancelGeocode];
+    return [[[[RACSignal merge:@[currentLocationUpdated, locationUpdateFailed]] take:1] initially:^{
+        [self.locationManager startUpdatingLocation];
+    }] finally:^{
+        [self.locationManager stopUpdatingLocation];
+    }];
 }
 
 #pragma mark - Private
 
-- (BOOL)authorized
+- (BOOL)needsAuthorization
 {
-    switch (self.authorizationType) {
-        case TRLocationAuthorizationAlways:
-            return [CLLocationManager authorizationStatus] == kCLAuthorizationStatusAuthorizedAlways;
-        case TRLocationAuthorizationWhenInUse:
-            return [CLLocationManager authorizationStatus] == kCLAuthorizationStatusAuthorizedWhenInUse;
-    }
+    return ([CLLocationManager authorizationStatus] == kCLAuthorizationStatusNotDetermined);
 }
 
-#pragma mark - CLLocationManagerDelegate
-
-- (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations
+- (RACSignal *)didAuthorize
 {
-    CLLocation *location = locations.lastObject;
+    return [[[[self didChangeAuthorizationStatus] ignore:@(kCLAuthorizationStatusNotDetermined)] map:^id(NSNumber *status) {
+        return @(status.integerValue == kCLAuthorizationStatusAuthorizedWhenInUse);
+    }] take:1];
+}
 
-    if (location.isStale) {
-        return;
-    }
+- (RACSignal *)authorized
+{
+    BOOL authorized = ([CLLocationManager authorizationStatus] == kCLAuthorizationStatusAuthorizedWhenInUse);
+    return [RACSignal return:@(authorized)];
+}
 
-    [self.locationManager stopUpdatingLocation];
+#pragma mark - CLLocationManagerDelegate Signals
 
-    [self.geocoder reverseGeocodeLocation:location completionHandler:^(NSArray *placemarks, NSError *error) {
-        if (!placemarks) {
-            self.completionBlock(nil, error);
-            return;
-        }
-
-        TRWeatherLocation *weatherLocation = [[TRWeatherLocation alloc] initWithPlacemark:placemarks.lastObject];
-        self.completionBlock(weatherLocation, nil);
+- (RACSignal *)didUpdateLocations
+{
+    return [[self rac_signalForSelector:@selector(locationManager:didUpdateLocations:) fromProtocol:@protocol(CLLocationManagerDelegate)] reduceEach:^id(CLLocationManager *manager, NSArray *locations) {
+        return locations;
     }];
 }
 
-- (void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error
+- (RACSignal *)didFailWithError
 {
-    [self.locationManager stopUpdatingLocation];
-    self.completionBlock(nil, error);
+    return [[self rac_signalForSelector:@selector(locationManager:didFailWithError:) fromProtocol:@protocol(CLLocationManagerDelegate)] reduceEach:^id(CLLocationManager *manager, NSError *error) {
+        return error;
+    }];
 }
 
-- (void)locationManager:(CLLocationManager *)manager didChangeAuthorizationStatus:(CLAuthorizationStatus)status
+- (RACSignal *)didChangeAuthorizationStatus
 {
-    if (self.authorizationChangedBlock) {
-        self.authorizationChangedBlock(self.authorized);
-    }
+    return [[self rac_signalForSelector:@selector(locationManager:didChangeAuthorizationStatus:) fromProtocol:@protocol(CLLocationManagerDelegate)] reduceEach:^id(CLLocationManager *manager, NSNumber *status) {
+        return status;
+    }];
 }
 
 @end

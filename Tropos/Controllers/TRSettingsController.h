@@ -7,6 +7,8 @@ typedef NS_ENUM(NSInteger, TRUnitSystem) {
 
 @interface TRSettingsController : NSObject
 
+@property (nonatomic, readonly) RACSignal *unitSystemChanged;
+
 - (void)registerSettings;
 
 - (TRUnitSystem)unitSystem;
