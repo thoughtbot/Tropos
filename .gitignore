@@ -30,3 +30,5 @@ Pods
 # AppCode specific files
 .idea/
 *.iml
+
+Secrets.h

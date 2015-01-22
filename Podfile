@@ -1,5 +1,6 @@
 platform :ios, '8.0'
 
+pod 'HockeySDK', '~> 3.6.2'
 pod 'ReactiveCocoa', '~> 2.4.4'
 
 target :unit_tests, :exclusive => true do

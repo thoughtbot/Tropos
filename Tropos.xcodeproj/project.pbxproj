@@ -113,6 +113,7 @@
 		B3068282D6E4B66BB58E93BC /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6D58F8AA6976EA1B35682B7 /* LaunchScreen.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
 		BE299336DA1BFBE36CB7763B /* UnitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UnitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C2422E4C1A718D1100F72769 /* Secrets.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Secrets.h; sourceTree = SOURCE_ROOT; };
 		C2E44CDB1A3A38A2009CC844 /* TRLocationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRLocationController.h; sourceTree = "<group>"; };
 		C2E44CDC1A3A38A2009CC844 /* TRLocationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRLocationController.m; sourceTree = "<group>"; };
 		C2E44CDF1A3A3C09009CC844 /* TRWeatherViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRWeatherViewController.h; sourceTree = "<group>"; };
@@ -374,6 +375,7 @@
 		E4F796A1BFA14961F3C5EE5E /* Tropos */ = {
 			isa = PBXGroup;
 			children = (
+				C2422E4C1A718D1100F72769 /* Secrets.h */,
 				4D7CDEC91A47E1180038DD33 /* Formatters */,
 				F7756A61DA7A0F0958F6D728 /* Categories */,
 				771282ADE8938D4011617AD5 /* Protocols */,
@@ -432,6 +434,7 @@
 				CD82E5F062CDF04B4CEEC2B5 /* Warn for TODO and FIXME comments */,
 				B426E4C5542F07A66A70065A /* Copy Pods Resources */,
 				C247D7F61A5F07A00032F747 /* Update Build Number */,
+				C2422E4B1A718BC800F72769 /* Hockey Run Script */,
 			);
 			buildRules = (
 			);
@@ -578,6 +581,20 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		C2422E4B1A718BC800F72769 /* Hockey Run Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Hockey Run Script";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "FILE=\"${SRCROOT}/HockeySDK-iOS/BuildAgent\"\nif [ -f \"$FILE\" ]; then\n    \"$FILE\"\nfi";
 		};
 		C247D7F61A5F07A00032F747 /* Update Build Number */ = {
 			isa = PBXShellScriptBuildPhase;
