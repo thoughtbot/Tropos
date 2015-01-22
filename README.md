@@ -2,6 +2,12 @@
 
 ## Setup ##
 
+Create `Secrets.h` and include the necessary contents
+
+```
+#define TROPOS_HOCKEY_IDENTIFIER @""
+```
+
 Run `bin/setup`
 
 This will:
