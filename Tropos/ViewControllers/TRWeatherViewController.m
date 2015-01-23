@@ -64,7 +64,9 @@
 {
     self.conditionsImageView.image = controller.weatherViewModel.conditionsImage;
     self.highLowTemperatureLabel.text = controller.weatherViewModel.formattedTemperatureRange;
+    self.temperatureImageView.hidden = !self.highLowTemperatureLabel.text;
     self.windSpeedLabel.text = controller.weatherViewModel.formattedWindSpeed;
+    self.windSpeedImageView.hidden = !self.windSpeedLabel.text;
     self.precipitationMeterView.precipitationProbability = controller.weatherViewModel.precipitationProbability;
     self.conditionsDescriptionLabel.attributedText = controller.weatherViewModel.attributedTemperatureComparison;
 }
