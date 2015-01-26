@@ -57,6 +57,7 @@
         return;
     }
 
+    self.weatherViewModel = nil;
     [self locationUpdateWillStart];
 
     __weak typeof(self) weakSelf = self;
