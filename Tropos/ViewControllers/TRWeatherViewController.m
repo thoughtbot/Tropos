@@ -32,7 +32,13 @@
     RAC(self.conditionsImageView, image) = self.viewModel.conditionsImage;
     RAC(self.conditionsDescriptionLabel, attributedText) = self.viewModel.conditionsDescription;
     RAC(self.windSpeedLabel, text) = self.viewModel.windDescription;
+    RAC(self.windSpeedImageView, hidden) = [self.viewModel.windDescription map:^id(id value) {
+        return @(value == nil);
+    }];
     RAC(self.highLowTemperatureLabel, text) = self.viewModel.highLowTemperatureDescription;
+    RAC(self.temperatureImageView, hidden) = [self.viewModel.highLowTemperatureDescription map:^id(id value) {
+        return @(value == nil);
+    }];
 
     [[[NSNotificationCenter defaultCenter] rac_addObserverForName:UIApplicationWillEnterForegroundNotification object:nil] subscribeNext:^(id x) {
         [self.viewModel updateWeather];
