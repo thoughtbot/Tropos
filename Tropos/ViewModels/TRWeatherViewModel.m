@@ -100,7 +100,8 @@
         [attributedString setFont:[UIFont defaultUltraLightFontOfSize:37]];
         [attributedString setTextColor:[UIColor defaultTextColor]];
         [attributedString setLineHeightMultiple:1.15f spacing:2.0f];
-        [attributedString setTextColor:[self colorForTemperatureComparison:comparison] forSubstring:adjective];
+        TRTemperature *difference = [self.weatherUpdate.currentTemperature temperatureDifferenceFromTemperature:self.weatherUpdate.yesterdaysTemperature];
+        [attributedString setTextColor:[self colorForTemperatureComparison:comparison difference:difference.fahrenheitValue] forSubstring:adjective];
         
         return attributedString;
     }] startWith:nil];
@@ -151,7 +152,7 @@
 
 #pragma mark - Private Methods
 
-- (UIColor *)colorForTemperatureComparison:(TRTemperatureComparison)comparison
+- (UIColor *)colorForTemperatureComparison:(TRTemperatureComparison)comparison difference:(NSInteger)difference
 {
     UIColor *color;
 
