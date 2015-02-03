@@ -2,6 +2,7 @@
 #import "TRWeatherViewModel.h"
 #import "TRWeatherViewModel.h"
 #import "TRPrecipitationMeterView.h"
+#import "TRDailyForecastView.h"
 
 @interface TRWeatherViewController ()
 
@@ -15,6 +16,10 @@
 @property (weak, nonatomic) IBOutlet UILabel *highLowTemperatureLabel;
 @property (weak, nonatomic) IBOutlet UIImageView *windSpeedImageView;
 @property (weak, nonatomic) IBOutlet UIImageView *temperatureImageView;
+
+@property (weak, nonatomic) IBOutlet TRDailyForecastView *oneDayForecastView;
+@property (weak, nonatomic) IBOutlet TRDailyForecastView *twoDayForecastView;
+@property (weak, nonatomic) IBOutlet TRDailyForecastView *threeDayForecastView;
 
 @end
 
@@ -38,6 +43,13 @@
     RAC(self.highLowTemperatureLabel, text) = self.viewModel.highLowTemperatureDescription;
     RAC(self.temperatureImageView, hidden) = [self.viewModel.highLowTemperatureDescription map:^id(id value) {
         return @(value == nil);
+    }];
+
+    NSArray *forecastViews = @[self.oneDayForecastView, self.twoDayForecastView, self.threeDayForecastView];
+    [self.viewModel.dailyForecastViewModels subscribeNext:^(NSArray *viewModels) {
+        [forecastViews enumerateObjectsUsingBlock:^(TRDailyForecastView *view, NSUInteger index, BOOL *stop) {
+            view.viewModel = viewModels[index];
+        }];
     }];
 
     [[[NSNotificationCenter defaultCenter] rac_addObserverForName:UIApplicationWillEnterForegroundNotification object:nil] subscribeNext:^(id x) {

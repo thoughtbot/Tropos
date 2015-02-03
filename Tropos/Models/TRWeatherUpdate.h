@@ -12,6 +12,7 @@
 @property (nonatomic, readonly) CGFloat windSpeed;
 @property (nonatomic, readonly) CGFloat windBearing;
 @property (nonatomic, readonly) NSDate *date;
+@property (nonatomic, copy, readonly) NSArray *dailyForecasts;
 
 - (instancetype)initWithPlacemark:(CLPlacemark *)placemark currentConditionsJSON:(id)currentConditionsJSON yesterdaysConditionsJSON:(id)yesterdaysConditionsJSON;
 
