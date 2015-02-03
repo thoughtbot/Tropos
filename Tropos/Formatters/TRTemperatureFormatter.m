@@ -1,21 +1,13 @@
 #import "TRTemperatureFormatter.h"
 #import "TRTemperature.h"
+#import "TRSettingsController.h"
 
 @implementation TRTemperatureFormatter
 
-- (instancetype)init
-{
-    self = [super init];
-    if (!self) return nil;
-
-    self.usesMetricSystem = YES;
-
-    return self;
-}
-
 - (NSString *)stringFromTemperature:(TRTemperature *)temperature
 {
-    CGFloat temperatureValue = self.usesMetricSystem? temperature.celsiusValue : temperature.fahrenheitValue;
+    BOOL usesMetricSystem = [[TRSettingsController new] unitSystem] == TRUnitSystemMetric;
+    CGFloat temperatureValue = usesMetricSystem? temperature.celsiusValue : temperature.fahrenheitValue;
     return [NSString stringWithFormat:@"%.f°", temperatureValue];
 }
 

@@ -1,7 +1,10 @@
 #import <HockeySDK/HockeySDK.h>
-#import "Secrets.h"
 #import "TRAppDelegate.h"
 #import "TRSettingsController.h"
+
+#ifndef DEBUG
+#import "Secrets.h"
+#endif
 
 @implementation TRAppDelegate
 

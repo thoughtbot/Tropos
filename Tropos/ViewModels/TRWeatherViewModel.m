@@ -11,6 +11,8 @@
 #import "TRTemperatureComparisonFormatter.h"
 #import "NSMutableAttributedString+TRAttributeHelpers.h"
 #import "TRGeocodeController.h"
+#import "TRDailyForecast.h"
+#import "TRDailyForecastViewModel.h"
 
 @interface TRWeatherViewModel ()
 
@@ -99,7 +101,6 @@
         NSMutableAttributedString *attributedString = [[NSMutableAttributedString alloc] initWithString:comparisonString];
         [attributedString setFont:[UIFont defaultUltraLightFontOfSize:37]];
         [attributedString setTextColor:[UIColor defaultTextColor]];
-        [attributedString setLineHeightMultiple:1.15f spacing:2.0f];
         TRTemperature *difference = [self.weatherUpdate.currentTemperature temperatureDifferenceFromTemperature:self.weatherUpdate.yesterdaysTemperature];
         [attributedString setTextColor:[self colorForTemperatureComparison:comparison difference:difference.fahrenheitValue] forSubstring:adjective];
         
@@ -119,15 +120,26 @@
 - (RACSignal *)highLowTemperatureDescription
 {
     return [[[RACSignal combineLatest:@[RACObserve(self, weatherUpdate), self.settingsController.unitSystemChanged]] map:^id(RACTuple *tuple) {
-        RACTupleUnpack(TRWeatherUpdate *weatherUpdate, NSNumber *unitSystem) = tuple;
+        RACTupleUnpack(TRWeatherUpdate *weatherUpdate, __unused NSNumber *unitSystem) = tuple;
 
         if (!weatherUpdate) return nil;
         TRTemperatureFormatter *formatter = [TRTemperatureFormatter new];
-        formatter.usesMetricSystem = (unitSystem.integerValue) == TRUnitSystemMetric;
         NSString *high = [formatter stringFromTemperature:weatherUpdate.currentHigh];
         NSString *low = [formatter stringFromTemperature:weatherUpdate.currentLow];
         return [NSString stringWithFormat:@"%@ / %@", high, low];
     }] startWith:nil];
+}
+
+- (RACSignal *)dailyForecastViewModels
+{
+    return [[RACObserve(self, weatherUpdate) ignore:nil] map:^id(TRWeatherUpdate *weatherUpdate) {
+        NSMutableArray *viewModels = [NSMutableArray array];
+        for (TRDailyForecast *forecast in weatherUpdate.dailyForecasts) {
+            TRDailyForecastViewModel *viewModel = [[TRDailyForecastViewModel alloc] initWithDailyForecast:forecast];
+            [viewModels addObject:viewModel];
+        }
+        return [viewModels copy];
+    }];
 }
 
 #pragma mark - Public Methods

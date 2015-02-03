@@ -1,6 +1,7 @@
 @import CoreLocation;
 #import "TRWeatherUpdate.h"
 #import "TRTemperature.h"
+#import "TRDailyForecast.h"
 
 @interface TRWeatherUpdate ()
 
@@ -14,6 +15,7 @@
 @property (nonatomic, readwrite) CGFloat windSpeed;
 @property (nonatomic, readwrite) CGFloat windBearing;
 @property (nonatomic, readwrite) NSDate *date;
+@property (nonatomic, copy, readwrite) NSArray *dailyForecasts;
 
 @end
 
@@ -39,6 +41,15 @@
     self.windBearing = [todaysConditions[@"windBearing"] floatValue];
     self.windSpeed = [todaysConditions[@"windSpeed"] floatValue];
     self.date = [NSDate date];
+
+    NSMutableArray *dailyForecasts = [NSMutableArray array];
+
+    for (NSUInteger index = 1; index < 4; index++) {
+        TRDailyForecast *dailyForecast = [[TRDailyForecast alloc] initWithJSON:currentConditionsJSON[@"daily"][@"data"][index]];
+        [dailyForecasts addObject:dailyForecast];
+    }
+
+    self.dailyForecasts = [dailyForecasts copy];
     
     return self;
 }
