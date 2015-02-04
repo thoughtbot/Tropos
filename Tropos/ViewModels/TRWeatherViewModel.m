@@ -101,6 +101,7 @@
         NSMutableAttributedString *attributedString = [[NSMutableAttributedString alloc] initWithString:comparisonString];
         [attributedString setFont:[UIFont defaultUltraLightFontOfSize:37]];
         [attributedString setTextColor:[UIColor defaultTextColor]];
+        [attributedString setLineHeightMultiple:1.18 spacing:1.0];
         TRTemperature *difference = [self.weatherUpdate.currentTemperature temperatureDifferenceFromTemperature:self.weatherUpdate.yesterdaysTemperature];
         [attributedString setTextColor:[self colorForTemperatureComparison:comparison difference:difference.fahrenheitValue] forSubstring:adjective];
         
