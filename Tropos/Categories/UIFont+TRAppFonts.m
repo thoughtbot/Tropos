@@ -4,7 +4,7 @@
 
 + (UIFont *)defaultUltraLightFontOfSize:(CGFloat)fontSize
 {
-    return [UIFont fontWithName:@"DINNextLTPro-UltraLight" size:fontSize];
+    return [UIFont fontWithName:@"DINNextLTPro-Light" size:fontSize];
 }
 
 @end
