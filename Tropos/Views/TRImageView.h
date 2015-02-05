@@ -1,0 +1,3 @@
+@interface TRImageView : UIImageView
+
+@end

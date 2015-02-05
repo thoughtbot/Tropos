@@ -8,6 +8,8 @@
 
 @property (nonatomic) TRWeatherViewModel *viewModel;
 
+@property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
+
 @property (weak, nonatomic) IBOutlet UILabel *cityLabel;
 @property (weak, nonatomic) IBOutlet UILabel *lastUpdatedLabel;
 @property (weak, nonatomic) IBOutlet UIImageView *conditionsImageView;
@@ -30,7 +32,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
+
     self.viewModel = [TRWeatherViewModel new];
     RAC(self.cityLabel, text) = self.viewModel.locationName;
     RAC(self.lastUpdatedLabel, text) = self.viewModel.status;
