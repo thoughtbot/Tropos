@@ -132,14 +132,14 @@
 
 - (RACSignal *)dailyForecastViewModels
 {
-    return [[RACObserve(self, weatherUpdate) ignore:nil] map:^id(TRWeatherUpdate *weatherUpdate) {
+    return [[[RACObserve(self, weatherUpdate) ignore:nil] map:^id(TRWeatherUpdate *weatherUpdate) {
         NSMutableArray *viewModels = [NSMutableArray array];
         for (TRDailyForecast *forecast in weatherUpdate.dailyForecasts) {
             TRDailyForecastViewModel *viewModel = [[TRDailyForecastViewModel alloc] initWithDailyForecast:forecast];
             [viewModels addObject:viewModel];
         }
         return [viewModels copy];
-    }];
+    }] startWith:nil];
 }
 
 #pragma mark - Public Methods
