@@ -1,0 +1,3 @@
+@interface TRColorBackdropLayer : CALayer
+
+@end
