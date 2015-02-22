@@ -19,6 +19,7 @@
 		4D4937781A82F30D007A1FA9 /* TRLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D4937771A82F30D007A1FA9 /* TRLabel.m */; };
 		4D49377B1A82F33B007A1FA9 /* CATransition+TRFadeTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D49377A1A82F33B007A1FA9 /* CATransition+TRFadeTransition.m */; };
 		4D49377E1A82F82A007A1FA9 /* TRImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D49377D1A82F82A007A1FA9 /* TRImageView.m */; };
+		4D49554F1A8C29C30066F278 /* TRCircularProgressLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D49554E1A8C29C30066F278 /* TRCircularProgressLayer.m */; };
 		4D4955521A8C2B5D0066F278 /* UIImage+TRColorBackdrop.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D4955511A8C2B5D0066F278 /* UIImage+TRColorBackdrop.m */; };
 		4D72D12A1A7330E700FAB67B /* TRGeocodeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D72D1291A7330E700FAB67B /* TRGeocodeController.m */; };
 		4D7CDEB91A46D1C20038DD33 /* TRWeatherLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D7CDEB81A46D1C20038DD33 /* TRWeatherLocation.m */; };
@@ -95,6 +96,8 @@
 		4D49377A1A82F33B007A1FA9 /* CATransition+TRFadeTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CATransition+TRFadeTransition.m"; sourceTree = "<group>"; };
 		4D49377C1A82F82A007A1FA9 /* TRImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRImageView.h; sourceTree = "<group>"; };
 		4D49377D1A82F82A007A1FA9 /* TRImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRImageView.m; sourceTree = "<group>"; };
+		4D49554D1A8C29C30066F278 /* TRCircularProgressLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRCircularProgressLayer.h; sourceTree = "<group>"; };
+		4D49554E1A8C29C30066F278 /* TRCircularProgressLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRCircularProgressLayer.m; sourceTree = "<group>"; };
 		4D4955501A8C2B5D0066F278 /* UIImage+TRColorBackdrop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+TRColorBackdrop.h"; sourceTree = "<group>"; };
 		4D4955511A8C2B5D0066F278 /* UIImage+TRColorBackdrop.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+TRColorBackdrop.m"; sourceTree = "<group>"; };
 		4D72D1281A7330E700FAB67B /* TRGeocodeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRGeocodeController.h; sourceTree = "<group>"; };
@@ -284,6 +287,8 @@
 		639AAB142C96B59FC995CA1D /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				4D49554D1A8C29C30066F278 /* TRCircularProgressLayer.h */,
+				4D49554E1A8C29C30066F278 /* TRCircularProgressLayer.m */,
 				4D3039E51A5749120042FFF8 /* TRPrecipitationMeterView.h */,
 				4D3039E61A5749120042FFF8 /* TRPrecipitationMeterView.m */,
 				4D98E9831A80C43F00856412 /* TRDailyForecastView.h */,
