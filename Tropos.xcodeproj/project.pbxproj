@@ -19,6 +19,7 @@
 		4D4937781A82F30D007A1FA9 /* TRLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D4937771A82F30D007A1FA9 /* TRLabel.m */; };
 		4D49377B1A82F33B007A1FA9 /* CATransition+TRFadeTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D49377A1A82F33B007A1FA9 /* CATransition+TRFadeTransition.m */; };
 		4D49377E1A82F82A007A1FA9 /* TRImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D49377D1A82F82A007A1FA9 /* TRImageView.m */; };
+		4D49554C1A8C298A0066F278 /* TRRefreshView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D49554B1A8C298A0066F278 /* TRRefreshView.m */; };
 		4D49554F1A8C29C30066F278 /* TRCircularProgressLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D49554E1A8C29C30066F278 /* TRCircularProgressLayer.m */; };
 		4D4955521A8C2B5D0066F278 /* UIImage+TRColorBackdrop.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D4955511A8C2B5D0066F278 /* UIImage+TRColorBackdrop.m */; };
 		4D72D12A1A7330E700FAB67B /* TRGeocodeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D72D1291A7330E700FAB67B /* TRGeocodeController.m */; };
@@ -97,6 +98,8 @@
 		4D49377A1A82F33B007A1FA9 /* CATransition+TRFadeTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CATransition+TRFadeTransition.m"; sourceTree = "<group>"; };
 		4D49377C1A82F82A007A1FA9 /* TRImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRImageView.h; sourceTree = "<group>"; };
 		4D49377D1A82F82A007A1FA9 /* TRImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRImageView.m; sourceTree = "<group>"; };
+		4D49554A1A8C298A0066F278 /* TRRefreshView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRRefreshView.h; sourceTree = "<group>"; };
+		4D49554B1A8C298A0066F278 /* TRRefreshView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRRefreshView.m; sourceTree = "<group>"; };
 		4D49554D1A8C29C30066F278 /* TRCircularProgressLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRCircularProgressLayer.h; sourceTree = "<group>"; };
 		4D49554E1A8C29C30066F278 /* TRCircularProgressLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRCircularProgressLayer.m; sourceTree = "<group>"; };
 		4D4955501A8C2B5D0066F278 /* UIImage+TRColorBackdrop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+TRColorBackdrop.h"; sourceTree = "<group>"; };
@@ -304,6 +307,8 @@
 				4D49377D1A82F82A007A1FA9 /* TRImageView.m */,
 				4D1ABA091A89686200B7F8FB /* TRNavigationBar.h */,
 				4D1ABA0A1A89686200B7F8FB /* TRNavigationBar.m */,
+				4D49554A1A8C298A0066F278 /* TRRefreshView.h */,
+				4D49554B1A8C298A0066F278 /* TRRefreshView.m */,
 				4DC069CB1A95B8F800F3BCEB /* TRColorBackdropLayer.h */,
 				4DC069CC1A95B8F800F3BCEB /* TRColorBackdropLayer.m */,
 			);
@@ -695,6 +700,7 @@
 				4DC069CD1A95B8F800F3BCEB /* TRColorBackdropLayer.m in Sources */,
 				4D9CA3621A5CB544009E24DD /* TRSettingsController.m in Sources */,
 				4D0A5C381A3A27510084C41E /* TRForecastController.m in Sources */,
+				4D49554C1A8C298A0066F278 /* TRRefreshView.m in Sources */,
 				C2E44CEF1A3B6E89009CC844 /* NSDate+TRRelativeDate.m in Sources */,
 				4D4937781A82F30D007A1FA9 /* TRLabel.m in Sources */,
 				4D3387021A5D4C300087B88F /* NSBundle+TRBundleInfo.m in Sources */,
