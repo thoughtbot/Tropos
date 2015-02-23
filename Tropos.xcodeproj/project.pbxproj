@@ -41,6 +41,7 @@
 		4D9CA3621A5CB544009E24DD /* TRSettingsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D9CA3611A5CB544009E24DD /* TRSettingsController.m */; };
 		4DA79AC11A68806600C3539D /* UIColor_TRTemperatureColorsSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DA79AC01A68806600C3539D /* UIColor_TRTemperatureColorsSpec.m */; };
 		4DC069CD1A95B8F800F3BCEB /* TRColorBackdropLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DC069CC1A95B8F800F3BCEB /* TRColorBackdropLayer.m */; };
+		4DC716601A9B1D5B00BC4BD4 /* TRRefreshControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DC7165F1A9B1D5B00BC4BD4 /* TRRefreshControl.m */; };
 		4DEDF4F61A6FA682006F3F11 /* TRWeatherUpdate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DEDF4F51A6FA682006F3F11 /* TRWeatherUpdate.m */; };
 		4DEDF4F91A6FAE7D006F3F11 /* TRWeatherViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DEDF4F81A6FAE7D006F3F11 /* TRWeatherViewModel.m */; };
 		4DF5BA391A5B64630088F35F /* TRBearingFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DF5BA381A5B64630088F35F /* TRBearingFormatter.m */; };
@@ -140,6 +141,8 @@
 		4DA79AC01A68806600C3539D /* UIColor_TRTemperatureColorsSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIColor_TRTemperatureColorsSpec.m; sourceTree = "<group>"; };
 		4DC069CB1A95B8F800F3BCEB /* TRColorBackdropLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRColorBackdropLayer.h; sourceTree = "<group>"; };
 		4DC069CC1A95B8F800F3BCEB /* TRColorBackdropLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRColorBackdropLayer.m; sourceTree = "<group>"; };
+		4DC7165E1A9B1D5B00BC4BD4 /* TRRefreshControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRRefreshControl.h; sourceTree = "<group>"; };
+		4DC7165F1A9B1D5B00BC4BD4 /* TRRefreshControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRRefreshControl.m; sourceTree = "<group>"; };
 		4DEDF4F41A6FA682006F3F11 /* TRWeatherUpdate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRWeatherUpdate.h; sourceTree = "<group>"; };
 		4DEDF4F51A6FA682006F3F11 /* TRWeatherUpdate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRWeatherUpdate.m; sourceTree = "<group>"; };
 		4DEDF4F71A6FAE7D006F3F11 /* TRWeatherViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRWeatherViewModel.h; sourceTree = "<group>"; };
@@ -296,6 +299,8 @@
 		639AAB142C96B59FC995CA1D /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				4DC7165E1A9B1D5B00BC4BD4 /* TRRefreshControl.h */,
+				4DC7165F1A9B1D5B00BC4BD4 /* TRRefreshControl.m */,
 				4D76CCD21A99C3FA00DDE5EB /* TRRefreshLayer.h */,
 				4D76CCD31A99C3FA00DDE5EB /* TRRefreshLayer.m */,
 				4D49554D1A8C29C30066F278 /* TRCircularProgressLayer.h */,
@@ -714,6 +719,7 @@
 				C2E44CDD1A3A38A2009CC844 /* TRLocationController.m in Sources */,
 				4D76CCD41A99C3FA00DDE5EB /* TRRefreshLayer.m in Sources */,
 				D7DD1B8AD495AFA4EC1CEFF9 /* TRAppDelegate.m in Sources */,
+				4DC716601A9B1D5B00BC4BD4 /* TRRefreshControl.m in Sources */,
 				130C4C29D1C62D52D0767A6B /* Main.storyboard in Sources */,
 				4DEDF4F61A6FA682006F3F11 /* TRWeatherUpdate.m in Sources */,
 				4DF5BA391A5B64630088F35F /* TRBearingFormatter.m in Sources */,
