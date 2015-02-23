@@ -3,12 +3,12 @@
 #import "TRWeatherViewModel.h"
 #import "TRPrecipitationMeterView.h"
 #import "TRDailyForecastView.h"
+#import "TRRefreshControl.h"
 
 @interface TRWeatherViewController ()
 
 @property (nonatomic) TRWeatherViewModel *viewModel;
-
-@property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
+@property (strong, nonatomic) IBOutlet TRRefreshControl *refreshControl;
 
 @property (weak, nonatomic) IBOutlet UILabel *cityLabel;
 @property (weak, nonatomic) IBOutlet UILabel *lastUpdatedLabel;
@@ -47,6 +47,8 @@
         return @(value == nil);
     }];
 
+    self.refreshControl.refreshCommand = self.viewModel.updateWeatherCommand;
+
     NSArray *forecastViews = @[self.oneDayForecastView, self.twoDayForecastView, self.threeDayForecastView];
     [self.viewModel.dailyForecastViewModels subscribeNext:^(NSArray *viewModels) {
         [forecastViews enumerateObjectsUsingBlock:^(TRDailyForecastView *view, NSUInteger index, BOOL *stop) {
@@ -55,14 +57,14 @@
     }];
 
     [[[NSNotificationCenter defaultCenter] rac_addObserverForName:UIApplicationWillEnterForegroundNotification object:nil] subscribeNext:^(id x) {
-        [self.viewModel updateWeather];
+        [self.viewModel.updateWeatherCommand execute:self];
     }];
 }
 
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
-    [self.viewModel updateWeather];
+    [self.viewModel.updateWeatherCommand execute:self];
 }
 
 - (UIStatusBarStyle)preferredStatusBarStyle
