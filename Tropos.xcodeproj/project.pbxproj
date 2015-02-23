@@ -23,6 +23,7 @@
 		4D49554F1A8C29C30066F278 /* TRCircularProgressLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D49554E1A8C29C30066F278 /* TRCircularProgressLayer.m */; };
 		4D4955521A8C2B5D0066F278 /* UIImage+TRColorBackdrop.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D4955511A8C2B5D0066F278 /* UIImage+TRColorBackdrop.m */; };
 		4D72D12A1A7330E700FAB67B /* TRGeocodeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D72D1291A7330E700FAB67B /* TRGeocodeController.m */; };
+		4D7389DF1A9890CD0039F13B /* UIScrollView+TRReactiveCocoa.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D7389DE1A9890CD0039F13B /* UIScrollView+TRReactiveCocoa.m */; };
 		4D76CCD41A99C3FA00DDE5EB /* TRRefreshLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D76CCD31A99C3FA00DDE5EB /* TRRefreshLayer.m */; };
 		4D7CDEB91A46D1C20038DD33 /* TRWeatherLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D7CDEB81A46D1C20038DD33 /* TRWeatherLocation.m */; };
 		4D7CDEBC1A46D3610038DD33 /* CLLocation+TRRecentLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D7CDEBB1A46D3610038DD33 /* CLLocation+TRRecentLocation.m */; };
@@ -106,6 +107,8 @@
 		4D4955511A8C2B5D0066F278 /* UIImage+TRColorBackdrop.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+TRColorBackdrop.m"; sourceTree = "<group>"; };
 		4D72D1281A7330E700FAB67B /* TRGeocodeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRGeocodeController.h; sourceTree = "<group>"; };
 		4D72D1291A7330E700FAB67B /* TRGeocodeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRGeocodeController.m; sourceTree = "<group>"; };
+		4D7389DD1A9890CD0039F13B /* UIScrollView+TRReactiveCocoa.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+TRReactiveCocoa.h"; sourceTree = "<group>"; };
+		4D7389DE1A9890CD0039F13B /* UIScrollView+TRReactiveCocoa.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+TRReactiveCocoa.m"; sourceTree = "<group>"; };
 		4D76CCD21A99C3FA00DDE5EB /* TRRefreshLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRRefreshLayer.h; sourceTree = "<group>"; };
 		4D76CCD31A99C3FA00DDE5EB /* TRRefreshLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRRefreshLayer.m; sourceTree = "<group>"; };
 		4D7CDEB71A46D1C20038DD33 /* TRWeatherLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRWeatherLocation.h; sourceTree = "<group>"; };
@@ -471,6 +474,8 @@
 				4D49377A1A82F33B007A1FA9 /* CATransition+TRFadeTransition.m */,
 				4D4955501A8C2B5D0066F278 /* UIImage+TRColorBackdrop.h */,
 				4D4955511A8C2B5D0066F278 /* UIImage+TRColorBackdrop.m */,
+				4D7389DD1A9890CD0039F13B /* UIScrollView+TRReactiveCocoa.h */,
+				4D7389DE1A9890CD0039F13B /* UIScrollView+TRReactiveCocoa.m */,
 			);
 			path = Categories;
 			sourceTree = "<group>";
@@ -697,6 +702,7 @@
 			files = (
 				4D9315201A6F44EB00CE95B3 /* TRDateFormatter.m in Sources */,
 				4D49554F1A8C29C30066F278 /* TRCircularProgressLayer.m in Sources */,
+				4D7389DF1A9890CD0039F13B /* UIScrollView+TRReactiveCocoa.m in Sources */,
 				4DC069CD1A95B8F800F3BCEB /* TRColorBackdropLayer.m in Sources */,
 				4D9CA3621A5CB544009E24DD /* TRSettingsController.m in Sources */,
 				4D0A5C381A3A27510084C41E /* TRForecastController.m in Sources */,
