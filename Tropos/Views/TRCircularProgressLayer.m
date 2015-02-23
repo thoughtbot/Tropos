@@ -15,7 +15,7 @@ static CGPoint TRCGPointMakeIntegral(CGFloat x, CGFloat y) {
     self = [super init];
     if (!self) return nil;
 
-    self.actions = @{@"bounds": [NSNull null], @"contents": [NSNull null]};
+    self.actions = @{@"bounds": [NSNull null], @"contents": [NSNull null], @"position": [NSNull null]};
     self.contentsScale = [UIScreen mainScreen].scale;
     self.needsDisplayOnBoundsChange = YES;
     self.outerRingWidth = 3.0f;
