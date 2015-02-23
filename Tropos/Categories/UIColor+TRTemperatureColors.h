@@ -1,6 +1,9 @@
 @interface UIColor (TRTemperatureColors)
 
 + (instancetype)defaultTextColor;
++ (instancetype)primaryBackgroundColor;
++ (instancetype)secondaryBackgroundColor;
+
 + (instancetype)hotColor;
 + (instancetype)warmerColor;
 + (instancetype)coolerColor;
