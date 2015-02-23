@@ -13,7 +13,7 @@
 {
     self = [super init];
 
-    self.actions = @{@"bounds": [NSNull null]};
+    self.actions = @{@"bounds": [NSNull null], @"position": [NSNull null]};
     self.backgroundColor = [[UIColor secondaryBackgroundColor] CGColor];
 
     return self;

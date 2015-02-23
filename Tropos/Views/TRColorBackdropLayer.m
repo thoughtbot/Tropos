@@ -12,7 +12,7 @@ static NSString *const TRColorBackdropLayerAnimationKey = @"TRColorBackdropLayer
     self = [super init];
     if (!self) return nil;
 
-    self.actions = @{@"bounds": [NSNull null]};
+    self.actions = @{@"bounds": [NSNull null], @"position": [NSNull null]};
     self.backgroundColor = [[UIColor colorWithPatternImage:[UIImage colorBackdropImage]] CGColor];
 
     return self;
