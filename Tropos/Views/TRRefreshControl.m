@@ -62,8 +62,7 @@
 
 - (void)endRefreshing
 {
-    [self setContentInsets:UIEdgeInsetsZero];
-    [self.scrollView setContentOffset:CGPointZero animated:NO];
+    [self.scrollView setContentOffset:CGPointZero animated:YES];
 }
 
 - (void)setContentInsets:(UIEdgeInsets)insets
