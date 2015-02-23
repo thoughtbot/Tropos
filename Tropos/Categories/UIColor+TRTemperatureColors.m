@@ -7,6 +7,16 @@
     return [UIColor whiteColor];
 }
 
++ (instancetype)primaryBackgroundColor
+{
+    return [UIColor colorWithHue:240.0f / 360.0f saturation:0.24f brightness:0.13f alpha:1.0f];
+}
+
++ (instancetype)secondaryBackgroundColor
+{
+    return [UIColor colorWithHue:240.0f / 360.0f saturation:0.22f brightness:0.16f alpha:1.0f];
+}
+
 + (instancetype)hotColor
 {
     return [UIColor colorWithHue:11.0f / 360.0f saturation:0.80f brightness:0.92f alpha:1.0f];
