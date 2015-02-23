@@ -2,7 +2,6 @@
 #import "TRWeatherViewModel.h"
 #import "TRLocationController.h"
 #import "TRForecastController.h"
-#import "TRWeatherViewModel.h"
 #import "TRSettingsController.h"
 #import "TRDateFormatter.h"
 #import "TRWeatherUpdate.h"
@@ -16,7 +15,7 @@
 
 @interface TRWeatherViewModel ()
 
-@property (nonatomic, readwrite) TRWeatherViewModel *weatherViewModel;
+@property (nonatomic, readwrite) RACCommand *updateWeatherCommand;
 
 @property (nonatomic) TRLocationController *locationController;
 @property (nonatomic) TRGeocodeController *geocodeController;
@@ -144,9 +143,20 @@
 
 #pragma mark - Public Methods
 
-- (void)updateWeather
+- (RACCommand *)updateWeatherCommand
 {
-    [[[[[[self.locationController requestWhenInUseAuthorization] then:^RACSignal *{
+    if (!_updateWeatherCommand) {
+        _updateWeatherCommand = [[RACCommand alloc] initWithSignalBlock:^RACSignal *(id input) {
+            return [self updateWeatherSignal];
+        }];
+    }
+
+    return _updateWeatherCommand;
+}
+
+- (RACSignal *)updateWeatherSignal
+{
+    RACSignal *signal = [[[[[[[self.locationController requestWhenInUseAuthorization] then:^RACSignal *{
         return [self.locationController updateCurrentLocation];
     }] flattenMap:^RACStream *(CLLocation *location) {
         return [self.geocodeController reverseGeocodeLocation:location];
@@ -155,11 +165,13 @@
     }] initially:^{
         self.weatherUpdate = nil;
         self.weatherUpdateError = nil;
-    }] subscribeNext:^(TRWeatherUpdate *weatherUpdate) {
+    }] doNext:^(TRWeatherUpdate *weatherUpdate) {
         self.weatherUpdate = weatherUpdate;
-    } error:^(NSError *error) {
+    }] doError:^(NSError *error) {
         self.weatherUpdateError = error;
     }];
+
+    return signal;
 }
 
 #pragma mark - Private Methods

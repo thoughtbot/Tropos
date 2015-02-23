@@ -7,7 +7,6 @@
 @property (nonatomic, readonly) RACSignal *windDescription;
 @property (nonatomic, readonly) RACSignal *highLowTemperatureDescription;
 @property (nonatomic, readonly) RACSignal *dailyForecastViewModels;
-
-- (void)updateWeather;
+@property (nonatomic, readonly) RACCommand *updateWeatherCommand;
 
 @end
