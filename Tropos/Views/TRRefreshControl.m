@@ -28,7 +28,9 @@
 
     [self rac_liftSelector:@selector(setContentInsets:) withSignals:[self contentInsets], nil];
 
+    @weakify(self)
     [[[self refreshTriggered] ignore:@NO] subscribeNext:^(id x) {
+        @strongify(self)
         [self sendActionsForControlEvents:UIControlEventValueChanged];
     }];
 }
@@ -87,8 +89,10 @@
 
 - (RACSignal *)refreshThresholdProgress
 {
+    @weakify(self)
     return [[self.scrollView verticalAmountScrolledSignal]
     map:^id(NSNumber *amountScrolled) {
+        @strongify(self)
         CGFloat scrollOffset = amountScrolled.floatValue - self.refreshProgressOffset;
         CGFloat targetOffset = self.refreshTriggerOffset - self.refreshProgressOffset;
         return @(scrollOffset / targetOffset);
@@ -98,8 +102,10 @@
 
 - (RACSignal *)refreshThresholdReached
 {
+    @weakify(self)
     return [[[self.scrollView verticalAmountScrolledSignal]
     map:^id(NSNumber *amountScrolled) {
+        @strongify(self)
         return @(amountScrolled.floatValue >= self.refreshTriggerOffset);
     }]
     distinctUntilChanged]
