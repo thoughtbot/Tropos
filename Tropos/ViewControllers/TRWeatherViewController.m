@@ -56,7 +56,9 @@
         }];
     }];
 
+    @weakify(self)
     [[[NSNotificationCenter defaultCenter] rac_addObserverForName:UIApplicationWillEnterForegroundNotification object:nil] subscribeNext:^(id x) {
+        @strongify(self)
         [self.viewModel.updateWeatherCommand execute:self];
     }];
 }
