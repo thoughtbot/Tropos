@@ -15,7 +15,7 @@
 {
     return [[RACObserve(self, contentOffset) map:^id(NSValue *contentOffset) {
         CGFloat yOffset = (CGFloat)floor(contentOffset.CGPointValue.y);
-        return @(fabs(yOffset));
+        return @(-1 * yOffset);
     }]
     distinctUntilChanged]
     ;
