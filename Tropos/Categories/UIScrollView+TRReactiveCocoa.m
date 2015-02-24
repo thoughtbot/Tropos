@@ -14,7 +14,7 @@
 - (RACSignal *)verticalAmountScrolledSignal
 {
     return [[RACObserve(self, contentOffset) map:^id(NSValue *contentOffset) {
-        CGFloat yOffset = floor(contentOffset.CGPointValue.y);
+        CGFloat yOffset = (CGFloat)floor(contentOffset.CGPointValue.y);
         return @(fabs(yOffset));
     }]
     distinctUntilChanged]
