@@ -49,7 +49,7 @@
 {
     maskExpansionProgress = MAX(0.0f, MIN(maskExpansionProgress, 1.0f));
     CGFloat radiusDelta = (CGRectGetWidth(self.bounds) / 2.0f + self.progressLayer.outerRingWidth) - 15.0f;
-    self.progressLayer.radius = ceil(radiusDelta * maskExpansionProgress) + 15.0f;
+    self.progressLayer.radius = (CGFloat)ceil(radiusDelta * maskExpansionProgress) + 15.0f;
 }
 
 - (void)setAnimating:(BOOL)animating

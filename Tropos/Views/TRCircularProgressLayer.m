@@ -1,7 +1,8 @@
 #import "TRCircularProgressLayer.h"
 
 static CGPoint TRCGPointMakeIntegral(CGFloat x, CGFloat y) {
-    return CGPointMake(round(x), round(y));
+    return CGPointMake((CGFloat)round(x), (CGFloat)round(y));
+    
 }
 
 @implementation TRCircularProgressLayer
@@ -43,7 +44,7 @@ static CGPoint TRCGPointMakeIntegral(CGFloat x, CGFloat y) {
     CGPoint center = TRCGPointMakeIntegral(CGRectGetWidth(self.bounds) / 2.0f, CGRectGetHeight(self.bounds) / 2.0f);
 
     CGFloat progress = MIN(self.progress, 1.0f - FLT_EPSILON);
-    CGFloat radians = (progress * M_PI * 2.0f) - M_PI_2;
+    CGFloat radians = (progress * (CGFloat)M_PI * 2.0f) - (CGFloat)M_PI_2;
 
     CGContextSetFillColorWithColor(context, self.backgroundColor);
     CGContextFillRect(context, self.bounds);
@@ -52,14 +53,14 @@ static CGPoint TRCGPointMakeIntegral(CGFloat x, CGFloat y) {
 
     CGContextSetLineWidth(context, self.outerRingWidth);
     CGContextSetStrokeColorWithColor(context, [[UIColor clearColor] CGColor]);
-    CGContextAddArc(context, center.x, center.y, self.radius, 0.0f, M_PI * 2, YES);
+    CGContextAddArc(context, center.x, center.y, self.radius, 0.0f, (CGFloat)M_PI * 2, YES);
     CGContextStrokePath(context);
 
     if (progress > 0.0f) {
         CGContextSetFillColorWithColor(context, [[UIColor clearColor] CGColor]);
         CGMutablePathRef progressPath = CGPathCreateMutable();
         CGPathMoveToPoint(progressPath, NULL, center.x, center.y);
-        CGPathAddArc(progressPath, NULL, center.x, center.y, self.radius, 3.0f * M_PI_2, radians, false);
+        CGPathAddArc(progressPath, NULL, center.x, center.y, self.radius, 3.0f * (CGFloat)M_PI_2, radians, false);
         CGPathCloseSubpath(progressPath);
         CGContextAddPath(context, progressPath);
         CGContextFillPath(context);
