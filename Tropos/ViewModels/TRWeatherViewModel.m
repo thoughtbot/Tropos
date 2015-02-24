@@ -156,7 +156,7 @@
 
 - (RACSignal *)updateWeatherSignal
 {
-    RACSignal *signal = [[[[[[[self.locationController requestWhenInUseAuthorization] then:^RACSignal *{
+    return [[[[[[[self.locationController requestWhenInUseAuthorization] then:^RACSignal *{
         return [self.locationController updateCurrentLocation];
     }] flattenMap:^RACStream *(CLLocation *location) {
         return [self.geocodeController reverseGeocodeLocation:location];
@@ -170,8 +170,6 @@
     }] doError:^(NSError *error) {
         self.weatherUpdateError = error;
     }];
-
-    return signal;
 }
 
 #pragma mark - Private Methods
