@@ -1,2 +1,2 @@
 "CFBundleDisplayName" = "Tropos";
-"NSLocationWhenInUseUsageDescription" = "Gimme a little location data, mix it with some Internet... baby, you got a weather app goin'.";
+"NSLocationWhenInUseUsageDescription" = "Tropos will only use your location to discover current weather conditions and forecasts for your area.";
