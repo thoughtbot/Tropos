@@ -1,5 +1,6 @@
 #import <HockeySDK/HockeySDK.h>
 #import "TRAppDelegate.h"
+#import "TRAnalyticsController.h"
 #import "TRSettingsController.h"
 
 #ifndef DEBUG
@@ -14,6 +15,8 @@
     [[BITHockeyManager sharedHockeyManager] configureWithIdentifier:TROPOS_HOCKEY_IDENTIFIER];
     [[BITHockeyManager sharedHockeyManager] startManager];
     [[BITHockeyManager sharedHockeyManager].authenticator authenticateInstallation];
+
+    [[TRAnalyticsController sharedController] install];
 #endif
 
     [[TRSettingsController new] registerSettings];
