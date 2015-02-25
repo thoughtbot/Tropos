@@ -43,7 +43,9 @@
     self.settingsController = [TRSettingsController new];
     self.dateFormatter = [TRDateFormatter new];
 
+    @weakify(self)
     self.updateWeatherCommand = [[RACCommand alloc] initWithSignalBlock:^RACSignal *(id input) {
+        @strongify(self)
         return [self updateWeatherSignal];
     }];
     
