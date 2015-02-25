@@ -1,6 +1,9 @@
 #import <Mixpanel/Mixpanel.h>
 #import "TRAnalyticsController.h"
+
+#ifndef DEBUG
 #import "Secrets.h"
+#endif
 
 #define DISABLE_MIXPANEL_AB_DESIGNER
 
@@ -22,7 +25,9 @@
 
 - (void)install
 {
+#ifndef DEBUG
     [Mixpanel sharedInstanceWithToken:MIXPANEL_TOKEN];
+#endif
 }
 
 - (void)trackEvent:(id<TRAnalyticsEvent>)event
