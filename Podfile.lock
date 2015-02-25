@@ -1,6 +1,9 @@
 PODS:
   - Expecta (0.3.1)
   - HockeySDK (3.6.2)
+  - Mixpanel (2.7.2):
+    - Mixpanel/MPCategoryHelpers (= 2.7.2)
+  - Mixpanel/MPCategoryHelpers (2.7.2)
   - OCMock (3.1.2)
   - OHHTTPStubs (3.1.10):
     - OHHTTPStubs/Core (= 3.1.10)
@@ -17,6 +20,7 @@ PODS:
 DEPENDENCIES:
   - Expecta
   - HockeySDK (~> 3.6.2)
+  - Mixpanel (~> 2.7.2)
   - OCMock
   - OHHTTPStubs
   - ReactiveCocoa (~> 2.4.7)
@@ -35,6 +39,7 @@ CHECKOUT OPTIONS:
 SPEC CHECKSUMS:
   Expecta: 03aabd0a89d8dea843baecb19a7fd7466a69a31d
   HockeySDK: bfd1f5ac75938b07499c4ac12932244b72a2e70b
+  Mixpanel: def38b9e600f101686b8d647e05660a72c089c65
   OCMock: ecdd510b73ef397f2f97274785c1e87fd147c49f
   OHHTTPStubs: 2038e929b6abb94881000524c1cb4aba0a1bb4a2
   ReactiveCocoa: 313fc53cc9aeb2bbbc3f5f13c7eac16478d9af8f
