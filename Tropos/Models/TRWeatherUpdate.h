@@ -17,3 +17,9 @@
 - (instancetype)initWithPlacemark:(CLPlacemark *)placemark currentConditionsJSON:(id)currentConditionsJSON yesterdaysConditionsJSON:(id)yesterdaysConditionsJSON;
 
 @end
+
+#import "TRAnalyticsEvent.h"
+
+@interface TRWeatherUpdate (TRAnalytics) <TRAnalyticsEvent>
+
+@end
