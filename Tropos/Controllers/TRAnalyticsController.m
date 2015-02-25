@@ -2,6 +2,8 @@
 #import "TRAnalyticsController.h"
 #import "Secrets.h"
 
+#define DISABLE_MIXPANEL_AB_DESIGNER
+
 @implementation TRAnalyticsController
 
 #pragma mark - Initialization
