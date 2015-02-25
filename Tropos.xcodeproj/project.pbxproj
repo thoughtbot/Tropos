@@ -134,6 +134,7 @@
 		4D98E9871A80C6DF00856412 /* TRDailyForecastViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRDailyForecastViewModel.m; sourceTree = "<group>"; };
 		4D98E9891A80C89600856412 /* TRDailyForecast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRDailyForecast.h; sourceTree = "<group>"; };
 		4D98E98A1A80C89600856412 /* TRDailyForecast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRDailyForecast.m; sourceTree = "<group>"; };
+		4D9A000D1A9D7868000835A9 /* TRAnalyticsEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRAnalyticsEvent.h; sourceTree = "<group>"; };
 		4D9CA35C1A5C7672009E24DD /* TRBearingFormatterSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRBearingFormatterSpec.m; sourceTree = "<group>"; };
 		4D9CA35E1A5CABDD009E24DD /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		4D9CA3601A5CB544009E24DD /* TRSettingsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRSettingsController.h; sourceTree = "<group>"; };
@@ -335,6 +336,7 @@
 		771282ADE8938D4011617AD5 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
+				4D9A000D1A9D7868000835A9 /* TRAnalyticsEvent.h */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
