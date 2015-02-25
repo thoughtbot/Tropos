@@ -12,6 +12,7 @@
 #import "TRGeocodeController.h"
 #import "TRDailyForecast.h"
 #import "TRDailyForecastViewModel.h"
+#import "TRAnalyticsController.h"
 
 @interface TRWeatherViewModel ()
 
@@ -49,6 +50,14 @@
         return [self updateWeatherSignal];
     }];
     
+    RAC(self, weatherUpdate) = [[self.updateWeatherCommand.executionSignals switchToLatest] doNext:^(TRWeatherUpdate *weatherUpdate) {
+        [[TRAnalyticsController sharedController] trackEvent:weatherUpdate];
+    }];
+    
+    RAC(self, weatherUpdateError) = [self.updateWeatherCommand.errors doNext:^(NSError *error) {
+        [[TRAnalyticsController sharedController] trackError:error eventName:@"Error: Weather Update"];
+    }];
+
     return self;
 }
 
@@ -151,19 +160,12 @@
 
 - (RACSignal *)updateWeatherSignal
 {
-    return [[[[[[[self.locationController requestWhenInUseAuthorization] then:^RACSignal *{
+    return [[[[self.locationController requestWhenInUseAuthorization] then:^RACSignal *{
         return [self.locationController updateCurrentLocation];
     }] flattenMap:^RACStream *(CLLocation *location) {
         return [self.geocodeController reverseGeocodeLocation:location];
     }] flattenMap:^RACStream *(CLPlacemark *placemark) {
         return [self.forecastController fetchWeatherUpdateForPlacemark:placemark];
-    }] initially:^{
-        self.weatherUpdate = nil;
-        self.weatherUpdateError = nil;
-    }] doNext:^(TRWeatherUpdate *weatherUpdate) {
-        self.weatherUpdate = weatherUpdate;
-    }] doError:^(NSError *error) {
-        self.weatherUpdateError = error;
     }];
 }
 
