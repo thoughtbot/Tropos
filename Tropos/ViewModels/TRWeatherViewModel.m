@@ -43,6 +43,10 @@
     self.settingsController = [TRSettingsController new];
     self.dateFormatter = [TRDateFormatter new];
 
+    self.updateWeatherCommand = [[RACCommand alloc] initWithSignalBlock:^RACSignal *(id input) {
+        return [self updateWeatherSignal];
+    }];
+    
     return self;
 }
 
@@ -142,17 +146,6 @@
 }
 
 #pragma mark - Public Methods
-
-- (RACCommand *)updateWeatherCommand
-{
-    if (!_updateWeatherCommand) {
-        _updateWeatherCommand = [[RACCommand alloc] initWithSignalBlock:^RACSignal *(id input) {
-            return [self updateWeatherSignal];
-        }];
-    }
-
-    return _updateWeatherCommand;
-}
 
 - (RACSignal *)updateWeatherSignal
 {
