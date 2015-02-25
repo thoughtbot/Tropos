@@ -36,6 +36,7 @@
 		4D98E9851A80C43F00856412 /* TRDailyForecastView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D98E9841A80C43F00856412 /* TRDailyForecastView.m */; };
 		4D98E9881A80C6DF00856412 /* TRDailyForecastViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D98E9871A80C6DF00856412 /* TRDailyForecastViewModel.m */; };
 		4D98E98B1A80C89600856412 /* TRDailyForecast.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D98E98A1A80C89600856412 /* TRDailyForecast.m */; };
+		4D9A00061A9D61CD000835A9 /* TRAnalyticsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D9A00051A9D61CD000835A9 /* TRAnalyticsController.m */; };
 		4D9CA35D1A5C7672009E24DD /* TRBearingFormatterSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D9CA35C1A5C7672009E24DD /* TRBearingFormatterSpec.m */; };
 		4D9CA35F1A5CABDD009E24DD /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 4D9CA35E1A5CABDD009E24DD /* Settings.bundle */; };
 		4D9CA3621A5CB544009E24DD /* TRSettingsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D9CA3611A5CB544009E24DD /* TRSettingsController.m */; };
@@ -134,6 +135,8 @@
 		4D98E9871A80C6DF00856412 /* TRDailyForecastViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRDailyForecastViewModel.m; sourceTree = "<group>"; };
 		4D98E9891A80C89600856412 /* TRDailyForecast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRDailyForecast.h; sourceTree = "<group>"; };
 		4D98E98A1A80C89600856412 /* TRDailyForecast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRDailyForecast.m; sourceTree = "<group>"; };
+		4D9A00041A9D61CD000835A9 /* TRAnalyticsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRAnalyticsController.h; sourceTree = "<group>"; };
+		4D9A00051A9D61CD000835A9 /* TRAnalyticsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRAnalyticsController.m; sourceTree = "<group>"; };
 		4D9A000D1A9D7868000835A9 /* TRAnalyticsEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRAnalyticsEvent.h; sourceTree = "<group>"; };
 		4D9CA35C1A5C7672009E24DD /* TRBearingFormatterSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRBearingFormatterSpec.m; sourceTree = "<group>"; };
 		4D9CA35E1A5CABDD009E24DD /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
@@ -202,6 +205,8 @@
 		02DE38BC587E0F44ACAB470A /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				4D9A00041A9D61CD000835A9 /* TRAnalyticsController.h */,
+				4D9A00051A9D61CD000835A9 /* TRAnalyticsController.m */,
 				0CC72A6E0EE525537F241EB7 /* TRAppDelegate.h */,
 				A6B1ADBC73A8A2EF7FB4E257 /* TRAppDelegate.m */,
 				4D0A5C361A3A27510084C41E /* TRForecastController.h */,
@@ -732,6 +737,7 @@
 				4D98E98B1A80C89600856412 /* TRDailyForecast.m in Sources */,
 				C2E44CF81A3B7538009CC844 /* TRTemperature.m in Sources */,
 				4D98E9851A80C43F00856412 /* TRDailyForecastView.m in Sources */,
+				4D9A00061A9D61CD000835A9 /* TRAnalyticsController.m in Sources */,
 				4D7CDECC1A47E13F0038DD33 /* TRTemperatureComparisonFormatter.m in Sources */,
 				4DEDF4F91A6FAE7D006F3F11 /* TRWeatherViewModel.m in Sources */,
 				4D7CDEC51A47DCD60038DD33 /* NSMutableAttributedString+TRAttributeHelpers.m in Sources */,
