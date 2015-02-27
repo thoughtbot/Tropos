@@ -21,4 +21,9 @@
     ;
 }
 
+- (BOOL)isScrolledToBottom
+{
+    return (self.contentOffset.y == self.contentSize.height - CGRectGetHeight(self.bounds));
+}
+
 @end

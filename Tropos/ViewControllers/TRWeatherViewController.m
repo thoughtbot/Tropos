@@ -4,6 +4,8 @@
 #import "TRPrecipitationMeterView.h"
 #import "TRDailyForecastView.h"
 #import "TRRefreshControl.h"
+#import "TRAnalyticsController.h"
+#import "UIScrollView+TRReactiveCocoa.h"
 
 @interface TRWeatherViewController ()
 
@@ -61,6 +63,8 @@
         @strongify(self)
         [self.viewModel.updateWeatherCommand execute:self];
     }];
+
+    [self configureAnalytics];
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -74,4 +78,39 @@
     return UIStatusBarStyleLightContent;
 }
 
+#pragma mark - Analytics
+
+- (void)configureAnalytics
+{
+    RACSignal *viewedForecast = [[[RACSignal merge:@[[self scrollViewDidEndDecelerating], [self scrollViewDidEndDragging]]]
+    filter:^BOOL(UIScrollView *scrollView) {
+        return scrollView.isScrolledToBottom;
+    }]
+    mapReplace:@"Viewed Forecast"];
+
+    [[TRAnalyticsController sharedController] rac_liftSelector:@selector(trackEventNamed:) withSignals:viewedForecast, nil];
+}
+
+#pragma mark - UIScrollViewDelegate Signals
+
+- (RACSignal *)scrollViewDidEndDecelerating
+{
+    return [[self rac_signalForSelector:@selector(scrollViewDidEndDecelerating:) fromProtocol:@protocol(UIScrollViewDelegate)]
+    reduceEach:^id(UIScrollView *scrollView) {
+        return scrollView;
+    }];
+}
+
+- (RACSignal *)scrollViewDidEndDragging
+{
+    return [[[self rac_signalForSelector:@selector(scrollViewDidEndDragging:willDecelerate:) fromProtocol:@protocol(UIScrollViewDelegate)]
+    filter:^BOOL(RACTuple *arguments) {
+        return ([arguments.second boolValue] == NO);
+    }]
+    reduceEach:^id(RACTuple *arguments) {
+        return arguments.first;
+    }];
+}
+
 @end
+
