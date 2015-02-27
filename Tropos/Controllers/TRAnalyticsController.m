@@ -30,6 +30,11 @@
 #endif
 }
 
+- (void)trackEventNamed:(NSString *)eventName
+{
+    [[Mixpanel sharedInstance] track:eventName];
+}
+
 - (void)trackEvent:(id<TRAnalyticsEvent>)event
 {
     [[Mixpanel sharedInstance] track:event.eventName properties:event.eventProperties];
