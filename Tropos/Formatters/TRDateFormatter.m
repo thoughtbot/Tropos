@@ -16,31 +16,46 @@
 
     self.calendar = [NSCalendar currentCalendar];
     self.dateFormatter = [NSDateFormatter new];
+    self.dateFormatter.doesRelativeDateFormatting = YES;
 
     return self;
 }
 
 - (NSString *)stringFromDate:(NSDate *)date
 {
+    NSString *dateString = [self dateStringFromDate:date];
+    NSString *timeString = [self timeStringFromDate:date];
+
+    NSString *formattedString;
+
+    if (!dateString) {
+        formattedString = [NSString localizedStringWithFormat:@"Updated at %@", timeString];
+    } else {
+        formattedString = [NSString localizedStringWithFormat:@"Updated %@ at %@", dateString, timeString];
+    }
+
+    return formattedString;
+}
+
+- (NSString *)dateStringFromDate:(NSDate *)date
+{
     NSDateComponents *components = [self.calendar components:(NSCalendarUnitDay | NSCalendarUnitHour | NSCalendarUnitMinute | NSCalendarUnitSecond) fromDate:date toDate:[NSDate date] options:kNilOptions];
 
-    if (components.day > 0) {
-        self.dateFormatter.dateStyle = NSDateFormatterShortStyle;
-        self.dateFormatter.timeStyle = NSDateFormatterNoStyle;
-        return [self.dateFormatter stringFromDate:date];
-    } else if (components.hour > 0) {
-        self.dateFormatter.dateStyle = NSDateFormatterNoStyle;
-        self.dateFormatter.timeStyle = NSDateFormatterShortStyle;
-        return [self.dateFormatter stringFromDate:date];
-    } else if (components.minute > 0) {
-        NSString *unit = (components.minute == 1)? @"minute" : @"minutes";
-        return [NSString stringWithFormat:@"%zd %@ ago", components.minute, unit];
-    } else if (components.second > 5) {
-        NSString *unit = (components.second == 1)? @"second" : @"seconds";
-        return [NSString stringWithFormat:@"%zd %@ ago", components.second, unit];
-    } else {
-        return NSLocalizedString(@"just now", nil);
+    if (components.day == 0) {
+        return nil;
     }
+
+    self.dateFormatter.dateStyle = NSDateFormatterShortStyle;
+    self.dateFormatter.timeStyle = NSDateFormatterNoStyle;
+
+    return [self.dateFormatter stringFromDate:date];
+}
+
+- (NSString *)timeStringFromDate:(NSDate *)date
+{
+    self.dateFormatter.dateStyle = NSDateFormatterNoStyle;
+    self.dateFormatter.timeStyle = NSDateFormatterShortStyle;
+    return [self.dateFormatter stringFromDate:date];
 }
 
 @end
