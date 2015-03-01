@@ -49,11 +49,11 @@
         @strongify(self)
         return [self updateWeatherSignal];
     }];
-    
+
     RAC(self, weatherUpdate) = [[self.updateWeatherCommand.executionSignals switchToLatest] doNext:^(TRWeatherUpdate *weatherUpdate) {
         [[TRAnalyticsController sharedController] trackEvent:weatherUpdate];
     }];
-    
+
     RAC(self, weatherUpdateError) = [self.updateWeatherCommand.errors doNext:^(NSError *error) {
         [[TRAnalyticsController sharedController] trackError:error eventName:@"Error: Weather Update"];
     }];
