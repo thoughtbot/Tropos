@@ -89,10 +89,15 @@
 
 - (RACSignal *)locationName
 {
-    return [[RACObserve(self, weatherUpdate) map:^id(TRWeatherUpdate *weatherUpdate) {
-        if (!weatherUpdate) return nil;
-        return [NSString stringWithFormat:@"%@, %@", weatherUpdate.city, weatherUpdate.state];
-    }] startWith:nil];
+    RACSignal *startedLocating = [[self.updateWeatherCommand.executing ignore:@NO] mapReplace:NSLocalizedString(@"Checking Weather...", nil)];
+    RACSignal *updatedLocation = [RACObserve(self, weatherUpdate) map:^id(TRWeatherUpdate *update) {
+        return [NSString stringWithFormat:@"%@, %@", update.city, update.state];
+    }];
+    RACSignal *error = [[RACObserve(self, weatherUpdateError) ignore:nil] map:^id(id value) {
+        return NSLocalizedString(@"Update Failed", nil);
+    }];
+
+    return [[RACSignal merge:@[startedLocating, updatedLocation, error]] startWith:nil];
 }
 
 - (RACSignal *)conditionsImage
