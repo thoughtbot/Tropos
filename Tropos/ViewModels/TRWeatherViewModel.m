@@ -72,19 +72,13 @@
 
 - (RACSignal *)status
 {
-    RACSignal *interval = [RACSignal interval:1 onScheduler:[RACScheduler mainThreadScheduler]];
+    RACSignal *updating = [[self.updateWeatherCommand.executing ignore:@NO] mapReplace:nil];
+    RACSignal *success = [[RACObserve(self, weatherUpdate) ignore:nil] map:^id(TRWeatherUpdate *update) {
+        return [self.dateFormatter stringFromDate:update.date];
+    }];
+    RACSignal *error = [[RACObserve(self, weatherUpdateError) ignore:nil] mapReplace:nil];
 
-    return [[[RACSignal combineLatest:@[interval, RACObserve(self, weatherUpdate), RACObserve(self, weatherUpdateError)] reduce:^id(id _, TRWeatherUpdate *weatherUpdate, NSError *weatherUpdateError) {
-        if (!weatherUpdate && !weatherUpdateError) {
-            return NSLocalizedString(@"Updating", nil);
-        } else if (weatherUpdateError) {
-            return NSLocalizedString(@"Update Failed", nil);
-        } else if (weatherUpdate) {
-            return [NSString localizedStringWithFormat:@"Updated %@", [self.dateFormatter stringFromDate:weatherUpdate.date]];
-        } else {
-            return nil;
-        }
-    }] startWith:nil] distinctUntilChanged];
+    return [RACSignal merge:@[updating, success, error]];
 }
 
 - (RACSignal *)locationName
