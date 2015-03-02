@@ -23,6 +23,7 @@ static NSString *const TRForecastAPIExclusions = @"minutely,hourly,alerts,flags"
 
     NSURLSessionConfiguration *configuration = [NSURLSessionConfiguration defaultSessionConfiguration];
     configuration.HTTPAdditionalHeaders = @{@"Accept": @"application/json"};
+    configuration.requestCachePolicy = NSURLRequestReloadIgnoringCacheData;
     self.session = [NSURLSession sessionWithConfiguration:configuration];
 
     return self;
