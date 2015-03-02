@@ -24,7 +24,6 @@
     RAC(self, refreshView.animating) = [self animating];
     RAC(self, refreshView.progress) = [self progress];
     RAC(self, refreshView.maskExpansionProgress) = [self maskExpansionProgress];
-    RAC(self, scrollView.pagingEnabled) = [[self refreshTriggered] not];
 
     [self rac_liftSelector:@selector(setContentInsets:) withSignals:[self contentInsets], nil];
 
