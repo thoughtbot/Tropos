@@ -27,7 +27,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aA7-UE-koO">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aA7-UE-koO">
                                 <rect key="frame" x="0.0" y="64" width="600" height="536"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cpD-iZ-axV" userLabel="Forecast View">
@@ -286,6 +286,7 @@
                         <outlet property="lastUpdatedLabel" destination="9cT-VN-8BL" id="YbR-cO-eNl"/>
                         <outlet property="oneDayForecastView" destination="FOt-Fu-PRv" id="vik-pO-Gqs"/>
                         <outlet property="refreshControl" destination="BVN-q4-01Z" id="pN9-BN-XxM"/>
+                        <outlet property="scrollView" destination="aA7-UE-koO" id="x88-l5-gTL"/>
                         <outlet property="temperatureImageView" destination="wxI-GT-UQg" id="OvJ-DJ-oNa"/>
                         <outlet property="threeDayForecastView" destination="6Je-I5-OpO" id="LRc-59-efh"/>
                         <outlet property="twoDayForecastView" destination="ZBX-w0-5fE" id="OHW-7c-Pyu"/>

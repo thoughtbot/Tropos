@@ -7,11 +7,12 @@
 #import "TRAnalyticsController.h"
 #import "UIScrollView+TRReactiveCocoa.h"
 
-@interface TRWeatherViewController ()
+@interface TRWeatherViewController () <UIScrollViewDelegate>
 
 @property (nonatomic) TRWeatherViewModel *viewModel;
 @property (strong, nonatomic) IBOutlet TRRefreshControl *refreshControl;
 
+@property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 @property (weak, nonatomic) IBOutlet UILabel *cityLabel;
 @property (weak, nonatomic) IBOutlet UILabel *lastUpdatedLabel;
 @property (weak, nonatomic) IBOutlet UIImageView *conditionsImageView;
@@ -50,6 +51,7 @@
     }];
 
     self.refreshControl.refreshCommand = self.viewModel.updateWeatherCommand;
+    self.scrollView.decelerationRate = UIScrollViewDecelerationRateFast;
 
     NSArray *forecastViews = @[self.oneDayForecastView, self.twoDayForecastView, self.threeDayForecastView];
     [self.viewModel.dailyForecastViewModels subscribeNext:^(NSArray *viewModels) {
@@ -110,6 +112,27 @@
     reduceEach:^id(RACTuple *arguments) {
         return arguments.first;
     }];
+}
+
+- (void)scrollViewWillEndDragging:(UIScrollView *)scrollView withVelocity:(CGPoint)velocity targetContentOffset:(inout CGPoint *)targetContentOffset
+{
+    static CGFloat lastVelocity = 0.0f;
+
+    CGFloat min = 0.0f;
+    CGFloat max = scrollView.contentSize.height - CGRectGetHeight(scrollView.bounds);
+
+    CGPoint offset = CGPointZero;
+
+    if (velocity.y > lastVelocity) {
+        offset.y = max;
+    } else if (velocity.y < lastVelocity) {
+        offset.y = min;
+    } else {
+        offset.y = (velocity.y > 0.0f)? min : max;
+    }
+
+    *targetContentOffset = offset;
+    lastVelocity = velocity.y;
 }
 
 @end
