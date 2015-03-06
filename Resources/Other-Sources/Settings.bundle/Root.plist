@@ -24,6 +24,20 @@
 				<string>1</string>
 			</array>
 		</dict>
+		<dict>
+			<key>Type</key>
+			<string>PSGroupSpecifier</string>
+			<key>Title</key>
+			<string>About Tropos</string>
+		</dict>
+		<dict>
+			<key>Type</key>
+			<string>PSChildPaneSpecifier</string>
+			<key>Title</key>
+			<string>Privacy Policy</string>
+			<key>File</key>
+			<string>PrivacyPolicy</string>
+		</dict>
 	</array>
 	<key>StringsTable</key>
 	<string>Root</string>
