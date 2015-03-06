@@ -2,6 +2,6 @@
 
 set -o pipefail
 
-touch "Secrets.h"
+mv Tropos/Secrets-Example.h Tropos/Secrets.h
 
 xcodebuild test -workspace Tropos.xcworkspace -scheme Tropos -sdk iphonesimulator BUILD_ACTIVE_ARCH=NO | xcpretty -t -c
