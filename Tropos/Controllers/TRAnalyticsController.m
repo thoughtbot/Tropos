@@ -26,7 +26,7 @@
 - (void)install
 {
 #ifndef DEBUG
-    [Mixpanel sharedInstanceWithToken:MIXPANEL_TOKEN];
+    [Mixpanel sharedInstanceWithToken:TRMixpanelToken];
 #endif
 }
 

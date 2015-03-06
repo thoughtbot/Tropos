@@ -12,7 +12,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
 #ifndef DEBUG
-    [[BITHockeyManager sharedHockeyManager] configureWithIdentifier:TROPOS_HOCKEY_IDENTIFIER];
+    [[BITHockeyManager sharedHockeyManager] configureWithIdentifier:TRHockeyIdentifier];
     [[BITHockeyManager sharedHockeyManager] startManager];
     [[BITHockeyManager sharedHockeyManager].authenticator authenticateInstallation];
 
