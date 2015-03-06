@@ -2,8 +2,9 @@
 #import "TRForecastController.h"
 #import "TRWeatherUpdate.h"
 #import "NSDate+TRRelativeDate.h"
+#import "Secrets.h"
 
-static NSString *const TRForecastAPIBaseURL = @"https://api.forecast.io/forecast/3df031c1b15c324d69d9f4ea8931e740/";
+static NSString *const TRForecastAPIBaseURL = @"https://api.forecast.io/";
 static NSString *const TRForecastAPIExclusions = @"minutely,hourly,alerts,flags";
 
 @interface TRForecastController ()
@@ -95,13 +96,16 @@ static NSString *const TRForecastAPIExclusions = @"minutely,hourly,alerts,flags"
 
 - (NSURL *)URLForCurrentConditionsAtLatitude:(double)latitude longitude:(double)longitude yesterday:(BOOL)yesterday
 {
-    NSString *URLString = [TRForecastAPIBaseURL stringByAppendingFormat:@"%f,%f", latitude, longitude];
+    NSString *path = [NSString stringWithFormat:@"/forecast/%@", TRForecastAPIKey];
+    path = [path stringByAppendingFormat:@"/%f,%f", latitude, longitude];
+
     if (yesterday) {
         NSTimeInterval timestamp = [[NSDate yesterday] timeIntervalSince1970];
-        URLString = [URLString stringByAppendingString:[NSString stringWithFormat:@",%.0f", timestamp]];
+        path = [path stringByAppendingFormat:@",%.0f", timestamp];
     }
 
-    NSURLComponents *components = [NSURLComponents componentsWithString:URLString];
+    NSURLComponents *components = [NSURLComponents componentsWithURL:[self.class baseURL] resolvingAgainstBaseURL:NO];
+    components.path = path;
     NSURLQueryItem *item = [NSURLQueryItem queryItemWithName:@"exclude" value:TRForecastAPIExclusions];
     components.queryItems = @[item];
 
@@ -113,6 +117,11 @@ static NSString *const TRForecastAPIExclusions = @"minutely,hourly,alerts,flags"
     NSIndexSet *indexSet = [NSIndexSet indexSetWithIndexesInRange:NSMakeRange(200, 99)];
     NSInteger statusCode = [(NSHTTPURLResponse *)response statusCode];
     return [indexSet containsIndex:(NSUInteger)statusCode];
+}
+
++ (NSURL *)baseURL
+{
+    return [NSURL URLWithString:TRForecastAPIBaseURL];
 }
 
 @end
