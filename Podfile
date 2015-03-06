@@ -11,3 +11,8 @@ target :unit_tests, :exclusive => true do
   pod 'OCMock'
   pod 'OHHTTPStubs'
 end
+
+post_install do |installer|
+  require 'fileutils'
+  FileUtils.cp_r('Pods/Target Support Files/Pods/Pods-Acknowledgements.plist', 'Resources/Other-Sources/Settings.bundle/Acknowledgements.plist', :remove_destination => true)
+end
