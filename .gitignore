@@ -26,6 +26,7 @@ build/
 
 # Cocoapods
 Pods
+Acknowledgements.plist
 
 # AppCode specific files
 .idea/
