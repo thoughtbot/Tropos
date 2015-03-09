@@ -43,6 +43,7 @@
 		4DA79AC11A68806600C3539D /* UIColor_TRTemperatureColorsSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DA79AC01A68806600C3539D /* UIColor_TRTemperatureColorsSpec.m */; };
 		4DC069CD1A95B8F800F3BCEB /* TRColorBackdropLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DC069CC1A95B8F800F3BCEB /* TRColorBackdropLayer.m */; };
 		4DC716601A9B1D5B00BC4BD4 /* TRRefreshControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DC7165F1A9B1D5B00BC4BD4 /* TRRefreshControl.m */; };
+		4DD90B9A1AAE5D880069ECA7 /* TRWindSpeedFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DD90B991AAE5D880069ECA7 /* TRWindSpeedFormatter.m */; };
 		4DEDF4F61A6FA682006F3F11 /* TRWeatherUpdate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DEDF4F51A6FA682006F3F11 /* TRWeatherUpdate.m */; };
 		4DEDF4F91A6FAE7D006F3F11 /* TRWeatherViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DEDF4F81A6FAE7D006F3F11 /* TRWeatherViewModel.m */; };
 		4DF5BA391A5B64630088F35F /* TRBearingFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DF5BA381A5B64630088F35F /* TRBearingFormatter.m */; };
@@ -147,6 +148,8 @@
 		4DC069CC1A95B8F800F3BCEB /* TRColorBackdropLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRColorBackdropLayer.m; sourceTree = "<group>"; };
 		4DC7165E1A9B1D5B00BC4BD4 /* TRRefreshControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRRefreshControl.h; sourceTree = "<group>"; };
 		4DC7165F1A9B1D5B00BC4BD4 /* TRRefreshControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRRefreshControl.m; sourceTree = "<group>"; };
+		4DD90B981AAE5D880069ECA7 /* TRWindSpeedFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRWindSpeedFormatter.h; sourceTree = "<group>"; };
+		4DD90B991AAE5D880069ECA7 /* TRWindSpeedFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRWindSpeedFormatter.m; sourceTree = "<group>"; };
 		4DEDF4F41A6FA682006F3F11 /* TRWeatherUpdate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRWeatherUpdate.h; sourceTree = "<group>"; };
 		4DEDF4F51A6FA682006F3F11 /* TRWeatherUpdate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRWeatherUpdate.m; sourceTree = "<group>"; };
 		4DEDF4F71A6FAE7D006F3F11 /* TRWeatherViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRWeatherViewModel.h; sourceTree = "<group>"; };
@@ -283,6 +286,8 @@
 				4D3386FE1A5D27260087B88F /* TRTemperatureFormatter.m */,
 				4D93151E1A6F44EB00CE95B3 /* TRDateFormatter.h */,
 				4D93151F1A6F44EB00CE95B3 /* TRDateFormatter.m */,
+				4DD90B981AAE5D880069ECA7 /* TRWindSpeedFormatter.h */,
+				4DD90B991AAE5D880069ECA7 /* TRWindSpeedFormatter.m */,
 			);
 			path = Formatters;
 			sourceTree = "<group>";
@@ -732,6 +737,7 @@
 				4DF5BA391A5B64630088F35F /* TRBearingFormatter.m in Sources */,
 				4D49377E1A82F82A007A1FA9 /* TRImageView.m in Sources */,
 				4D7CDEC21A4705400038DD33 /* UIColor+TRTemperatureColors.m in Sources */,
+				4DD90B9A1AAE5D880069ECA7 /* TRWindSpeedFormatter.m in Sources */,
 				C2E44CFB1A3B76B3009CC844 /* NSNumber+TRRoundedNumber.m in Sources */,
 				4D7CDEBF1A46DD030038DD33 /* NSError+TRErrors.m in Sources */,
 				4D98E98B1A80C89600856412 /* TRDailyForecast.m in Sources */,

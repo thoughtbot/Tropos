@@ -6,7 +6,7 @@
 #import "TRDateFormatter.h"
 #import "TRWeatherUpdate.h"
 #import "TRTemperatureFormatter.h"
-#import "TRBearingFormatter.h"
+#import "TRWindSpeedFormatter.h"
 #import "TRTemperatureComparisonFormatter.h"
 #import "NSMutableAttributedString+TRAttributeHelpers.h"
 #import "TRGeocodeController.h"
@@ -123,10 +123,11 @@
 
 - (RACSignal *)windDescription
 {
-    return [[RACObserve(self, weatherUpdate) map:^id(TRWeatherUpdate *weatherUpdate) {
+    return [[[RACSignal combineLatest:@[RACObserve(self, weatherUpdate), self.settingsController.unitSystemChanged]] map:^id(RACTuple *tuple) {
+        RACTupleUnpack(TRWeatherUpdate *weatherUpdate, __unused NSNumber *unitSystem) = tuple;
+
         if (!weatherUpdate) return nil;
-        NSString *bearing = [TRBearingFormatter abbreviatedCardinalDirectionStringFromBearing:weatherUpdate.windBearing];
-        return [NSString stringWithFormat:@"%.1f mph %@", weatherUpdate.windSpeed, bearing];
+        return [TRWindSpeedFormatter localizedStringForWindSpeed:weatherUpdate.windSpeed bearing:weatherUpdate.windBearing];
     }] startWith:nil];
 }
 
