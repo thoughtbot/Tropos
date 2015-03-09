@@ -51,7 +51,9 @@
     }];
 
     self.refreshControl.refreshCommand = self.viewModel.updateWeatherCommand;
+
     self.scrollView.decelerationRate = UIScrollViewDecelerationRateFast;
+    RAC(self, scrollView.scrollEnabled) = [self.viewModel.updateWeatherCommand.executing not];
 
     NSArray *forecastViews = @[self.oneDayForecastView, self.twoDayForecastView, self.threeDayForecastView];
     [self.viewModel.dailyForecastViewModels subscribeNext:^(NSArray *viewModels) {
