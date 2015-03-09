@@ -138,8 +138,16 @@
         if (!weatherUpdate) return nil;
         TRTemperatureFormatter *formatter = [TRTemperatureFormatter new];
         NSString *high = [formatter stringFromTemperature:weatherUpdate.currentHigh];
+        NSString *current = [formatter stringFromTemperature:weatherUpdate.currentTemperature];
         NSString *low = [formatter stringFromTemperature:weatherUpdate.currentLow];
-        return [NSString stringWithFormat:@"%@ / %@", high, low];
+        NSString *temperatureString = [NSString stringWithFormat:@"%@ / %@ / %@", high, current, low];
+        
+        NSMutableAttributedString *attributedString = [[NSMutableAttributedString alloc] initWithString:temperatureString];
+        TRTemperatureComparison comparison = [self.weatherUpdate.currentTemperature comparedTo:self.weatherUpdate.yesterdaysTemperature];
+        TRTemperature *difference = [self.weatherUpdate.currentTemperature temperatureDifferenceFromTemperature:self.weatherUpdate.yesterdaysTemperature];
+        [attributedString setTextColor:[self colorForTemperatureComparison:comparison difference:difference.fahrenheitValue] forSubstring:current];
+
+        return attributedString;
     }] startWith:nil];
 }
 

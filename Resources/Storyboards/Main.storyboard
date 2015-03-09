@@ -69,7 +69,7 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5Yw-zl-yWp" userLabel="Current Conditions View">
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="536"/>
                                         <subviews>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="r7S-cF-Z7O" userLabel="Forecast Container View">
+                                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="r7S-cF-Z7O" userLabel="Forecast Container View">
                                                 <rect key="frame" x="48" y="167" width="532" height="203"/>
                                                 <subviews>
                                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ef5-IL-xEe" userLabel="Conditions Icon" customClass="TRImageView">
@@ -78,7 +78,7 @@
                                                             <constraint firstAttribute="width" secondItem="Ef5-IL-xEe" secondAttribute="height" multiplier="1:1" id="FD7-Zx-h5o"/>
                                                         </constraints>
                                                     </imageView>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="It's warmer today than yesterday at this time." lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4aa-2F-UFk" userLabel="Conditions Description" customClass="TRLabel">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="It's warmer today than yesterday at this time." lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4aa-2F-UFk" userLabel="Conditions Description" customClass="TRLabel">
                                                         <rect key="frame" x="0.0" y="139" width="522" height="64"/>
                                                         <fontDescription key="fontDescription" name="DINNextLTPro-Light" family="DIN Next LT Pro" pointSize="32"/>
                                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
@@ -161,9 +161,9 @@
                                             </mask>
                                         </variation>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BVN-q4-01Z" userLabel="Refresh Control" customClass="TRRefreshControl">
+                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BVN-q4-01Z" userLabel="Refresh Control" customClass="TRRefreshControl">
                                         <subviews>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xyb-8W-ran" customClass="TRRefreshView">
+                                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xyb-8W-ran" customClass="TRRefreshView">
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             </view>
                                         </subviews>

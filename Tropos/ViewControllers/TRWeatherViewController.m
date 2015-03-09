@@ -45,7 +45,7 @@
     RAC(self.windSpeedImageView, hidden) = [self.viewModel.windDescription map:^id(id value) {
         return @(value == nil);
     }];
-    RAC(self.highLowTemperatureLabel, text) = self.viewModel.highLowTemperatureDescription;
+    RAC(self.highLowTemperatureLabel, attributedText) = self.viewModel.highLowTemperatureDescription;
     RAC(self.temperatureImageView, hidden) = [self.viewModel.highLowTemperatureDescription map:^id(id value) {
         return @(value == nil);
     }];
