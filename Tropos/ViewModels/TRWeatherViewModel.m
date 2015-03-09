@@ -202,7 +202,11 @@
 
     if (comparison == TRTemperatureComparisonCooler || comparison == TRTemperatureComparisonWarmer) {
         CGFloat amount = MIN(ABS(difference), 10) / 10.0f;
-        color = [color lighterColorByAmount:1 - amount];
+        CGFloat lighterAmount = 1 - amount;
+
+        if (lighterAmount > 0.80) lighterAmount = 0.80;
+
+        color = [color lighterColorByAmount:lighterAmount];
     }
 
     return color;
