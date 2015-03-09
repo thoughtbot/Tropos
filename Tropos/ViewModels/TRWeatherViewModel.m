@@ -141,11 +141,18 @@
         NSString *current = [formatter stringFromTemperature:weatherUpdate.currentTemperature];
         NSString *low = [formatter stringFromTemperature:weatherUpdate.currentLow];
         NSString *temperatureString = [NSString stringWithFormat:@"%@ / %@ / %@", high, current, low];
-        
+
+
+
         NSMutableAttributedString *attributedString = [[NSMutableAttributedString alloc] initWithString:temperatureString];
         TRTemperatureComparison comparison = [self.weatherUpdate.currentTemperature comparedTo:self.weatherUpdate.yesterdaysTemperature];
         TRTemperature *difference = [self.weatherUpdate.currentTemperature temperatureDifferenceFromTemperature:self.weatherUpdate.yesterdaysTemperature];
-        [attributedString setTextColor:[self colorForTemperatureComparison:comparison difference:difference.fahrenheitValue] forSubstring:current];
+
+        NSRange rangeOfFirstSlash = [temperatureString rangeOfString:@"/"];
+        NSRange rangeOfLastSlash = [temperatureString rangeOfString:@"/" options:NSBackwardsSearch];
+        NSRange range = NSMakeRange(rangeOfFirstSlash.location + 1, rangeOfLastSlash.location - (rangeOfFirstSlash.location + 1));
+
+        [attributedString setTextColor:[self colorForTemperatureComparison:comparison difference:difference.fahrenheitValue] forRange:range];
 
         return attributedString;
     }] startWith:nil];
