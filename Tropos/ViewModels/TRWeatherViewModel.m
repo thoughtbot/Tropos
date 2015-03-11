@@ -212,7 +212,7 @@
         CGFloat amount = MIN(ABS(difference), 10) / 10.0f;
         CGFloat lighterAmount = 1 - amount;
 
-        if (lighterAmount > 0.80) lighterAmount = 0.80;
+        if (lighterAmount > 0.80) lighterAmount = 0.80f;
 
         color = [color lighterColorByAmount:lighterAmount];
     }

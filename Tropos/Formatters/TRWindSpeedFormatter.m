@@ -5,11 +5,11 @@
 @implementation TRWindSpeedFormatter
 
 static inline CGFloat TRKilometersPerHourFromMilesPerHour(CGFloat milesPerHour) {
-    return milesPerHour * 1.60934;
+    return milesPerHour * 1.60934f;
 }
 
 static inline CGFloat TRMetersPerSecondFromMilesPerHour(CGFloat milesPerHour) {
-    return milesPerHour * 0.44704;
+    return milesPerHour * 0.44704f;
 }
 
 + (NSString *)localizedStringForWindSpeed:(CGFloat)speed bearing:(CGFloat)bearing
