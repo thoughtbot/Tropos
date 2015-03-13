@@ -1,5 +1,5 @@
 @import CoreLocation;
-#import "TRWeatherViewModel.h"
+#import "TRWeatherController.h"
 #import "TRLocationController.h"
 #import "TRForecastController.h"
 #import "TRSettingsController.h"
@@ -14,7 +14,7 @@
 #import "TRDailyForecastViewModel.h"
 #import "TRAnalyticsController.h"
 
-@interface TRWeatherViewModel ()
+@interface TRWeatherController ()
 
 @property (nonatomic, readwrite) RACCommand *updateWeatherCommand;
 
@@ -29,7 +29,7 @@
 
 @end
 
-@implementation TRWeatherViewModel
+@implementation TRWeatherController
 
 #pragma mark - Initializers
 

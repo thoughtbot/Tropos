@@ -1,6 +1,6 @@
 #import "TRWeatherViewController.h"
-#import "TRWeatherViewModel.h"
-#import "TRWeatherViewModel.h"
+#import "TRWeatherController.h"
+#import "TRWeatherController.h"
 #import "TRPrecipitationMeterView.h"
 #import "TRDailyForecastView.h"
 #import "TRRefreshControl.h"
@@ -9,7 +9,7 @@
 
 @interface TRWeatherViewController () <UIScrollViewDelegate>
 
-@property (nonatomic) TRWeatherViewModel *viewModel;
+@property (nonatomic) TRWeatherController *controller;
 @property (strong, nonatomic) IBOutlet TRRefreshControl *refreshControl;
 
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
@@ -36,27 +36,27 @@
 {
     [super viewDidLoad];
 
-    self.viewModel = [TRWeatherViewModel new];
-    RAC(self.cityLabel, text) = self.viewModel.locationName;
-    RAC(self.lastUpdatedLabel, text) = self.viewModel.status;
-    RAC(self.conditionsImageView, image) = self.viewModel.conditionsImage;
-    RAC(self.conditionsDescriptionLabel, attributedText) = self.viewModel.conditionsDescription;
-    RAC(self.windSpeedLabel, text) = self.viewModel.windDescription;
-    RAC(self.windSpeedImageView, hidden) = [self.viewModel.windDescription map:^id(id value) {
+    self.controller = [TRWeatherController new];
+    RAC(self.cityLabel, text) = self.controller.locationName;
+    RAC(self.lastUpdatedLabel, text) = self.controller.status;
+    RAC(self.conditionsImageView, image) = self.controller.conditionsImage;
+    RAC(self.conditionsDescriptionLabel, attributedText) = self.controller.conditionsDescription;
+    RAC(self.windSpeedLabel, text) = self.controller.windDescription;
+    RAC(self.windSpeedImageView, hidden) = [self.controller.windDescription map:^id(id value) {
         return @(value == nil);
     }];
-    RAC(self.highLowTemperatureLabel, attributedText) = self.viewModel.highLowTemperatureDescription;
-    RAC(self.temperatureImageView, hidden) = [self.viewModel.highLowTemperatureDescription map:^id(id value) {
+    RAC(self.highLowTemperatureLabel, attributedText) = self.controller.highLowTemperatureDescription;
+    RAC(self.temperatureImageView, hidden) = [self.controller.highLowTemperatureDescription map:^id(id value) {
         return @(value == nil);
     }];
 
-    self.refreshControl.refreshCommand = self.viewModel.updateWeatherCommand;
+    self.refreshControl.refreshCommand = self.controller.updateWeatherCommand;
 
     self.scrollView.decelerationRate = UIScrollViewDecelerationRateFast;
-    RAC(self, scrollView.scrollEnabled) = [self.viewModel.updateWeatherCommand.executing not];
+    RAC(self, scrollView.scrollEnabled) = [self.controller.updateWeatherCommand.executing not];
 
     NSArray *forecastViews = @[self.oneDayForecastView, self.twoDayForecastView, self.threeDayForecastView];
-    [self.viewModel.dailyForecastViewModels subscribeNext:^(NSArray *viewModels) {
+    [self.controller.dailyForecastViewModels subscribeNext:^(NSArray *viewModels) {
         [forecastViews enumerateObjectsUsingBlock:^(TRDailyForecastView *view, NSUInteger index, BOOL *stop) {
             view.viewModel = viewModels[index];
         }];
@@ -65,7 +65,7 @@
     @weakify(self)
     [[[NSNotificationCenter defaultCenter] rac_addObserverForName:UIApplicationWillEnterForegroundNotification object:nil] subscribeNext:^(id x) {
         @strongify(self)
-        [self.viewModel.updateWeatherCommand execute:self];
+        [self.controller.updateWeatherCommand execute:self];
     }];
 
     [self configureAnalytics];
@@ -74,7 +74,7 @@
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
-    [self.viewModel.updateWeatherCommand execute:self];
+    [self.controller.updateWeatherCommand execute:self];
 }
 
 - (UIStatusBarStyle)preferredStatusBarStyle
