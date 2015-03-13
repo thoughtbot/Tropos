@@ -13,7 +13,6 @@
             <string>DINNextLTPro-Light</string>
             <string>DINNextLTPro-Light</string>
             <string>DINNextLTPro-Light</string>
-            <string>DINNextLTPro-Light</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -30,25 +29,18 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0is-eh-6sU" userLabel="Footer View">
-                                <rect key="frame" x="0.0" y="500" width="600" height="100"/>
+                                <rect key="frame" x="0.0" y="536" width="600" height="64"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ralph-icon" translatesAutoresizingMaskIntoConstraints="NO" id="wLb-HP-UyY">
-                                        <rect key="frame" x="283" y="10" width="34" height="42"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="thoughtbot-logo-full" translatesAutoresizingMaskIntoConstraints="NO" id="wLb-HP-UyY">
+                                        <rect key="frame" x="250" y="10" width="100" height="24"/>
                                         <color key="backgroundColor" red="0.098039215686274508" green="0.098039215686274508" blue="0.12941176470588234" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="42" id="1ZU-4u-jbx"/>
-                                            <constraint firstAttribute="width" constant="34" id="bGq-5h-NyF"/>
+                                            <constraint firstAttribute="height" constant="24" id="1ZU-4u-jbx"/>
+                                            <constraint firstAttribute="width" constant="100" id="bGq-5h-NyF"/>
                                         </constraints>
                                     </imageView>
-                                    <label userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Built by thoughtbot, inc." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="THG-ph-Et8">
-                                        <rect key="frame" x="8" y="59" width="584" height="16"/>
-                                        <color key="backgroundColor" red="0.098039215686274508" green="0.098039215686274508" blue="0.12941176470588234" alpha="1" colorSpace="calibratedRGB"/>
-                                        <fontDescription key="fontDescription" name="DINNextLTPro-Light" family="DIN Next LT Pro" pointSize="16"/>
-                                        <color key="textColor" red="0.45490196078431372" green="0.45490196078431372" blue="0.46666666666666667" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                     <label userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Powered by Forecast" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f1C-kG-GRZ">
-                                        <rect key="frame" x="8" y="78" width="584" height="12"/>
+                                        <rect key="frame" x="8" y="42" width="584" height="12"/>
                                         <color key="backgroundColor" red="0.098039215686274508" green="0.098039215686274508" blue="0.12941176470588234" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="DINNextLTPro-Light" family="DIN Next LT Pro" pointSize="12"/>
                                         <color key="textColor" red="0.45490196078431372" green="0.45490196078431372" blue="0.46666666666666667" alpha="1" colorSpace="calibratedRGB"/>
@@ -57,33 +49,14 @@
                                 </subviews>
                                 <color key="backgroundColor" red="0.098039215686274508" green="0.098039215686274508" blue="0.12941176470588234" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstItem="f1C-kG-GRZ" firstAttribute="top" secondItem="wLb-HP-UyY" secondAttribute="bottom" constant="28" id="4Jb-ua-soE"/>
                                     <constraint firstAttribute="trailing" secondItem="f1C-kG-GRZ" secondAttribute="trailing" constant="8" id="6z7-xr-xDP"/>
-                                    <constraint firstAttribute="height" constant="100" id="8rV-7X-JiT"/>
-                                    <constraint firstItem="f1C-kG-GRZ" firstAttribute="top" secondItem="wLb-HP-UyY" secondAttribute="bottom" constant="28" id="Bbg-al-sKk"/>
+                                    <constraint firstAttribute="height" constant="64" id="8rV-7X-JiT"/>
                                     <constraint firstAttribute="bottom" secondItem="f1C-kG-GRZ" secondAttribute="bottom" constant="10" id="Jhk-hD-aI7"/>
-                                    <constraint firstItem="wLb-HP-UyY" firstAttribute="top" secondItem="0is-eh-6sU" secondAttribute="top" constant="8" id="M8x-Dp-Gz5"/>
-                                    <constraint firstAttribute="bottom" secondItem="f1C-kG-GRZ" secondAttribute="bottom" id="MiC-Gw-wGd"/>
                                     <constraint firstAttribute="centerX" secondItem="wLb-HP-UyY" secondAttribute="centerX" id="PaH-SW-cLF"/>
                                     <constraint firstItem="f1C-kG-GRZ" firstAttribute="leading" secondItem="0is-eh-6sU" secondAttribute="leading" constant="8" id="Xj6-cg-jqc"/>
-                                    <constraint firstItem="THG-ph-Et8" firstAttribute="top" secondItem="wLb-HP-UyY" secondAttribute="bottom" constant="7" id="gJd-PS-Enp"/>
-                                    <constraint firstAttribute="trailing" secondItem="THG-ph-Et8" secondAttribute="trailing" constant="8" id="hVG-SB-mT9"/>
-                                    <constraint firstItem="f1C-kG-GRZ" firstAttribute="top" secondItem="THG-ph-Et8" secondAttribute="bottom" constant="3" id="nvS-7c-4hH"/>
-                                    <constraint firstItem="f1C-kG-GRZ" firstAttribute="top" secondItem="wLb-HP-UyY" secondAttribute="bottom" constant="8" id="to7-YN-AXz"/>
+                                    <constraint firstItem="f1C-kG-GRZ" firstAttribute="top" secondItem="wLb-HP-UyY" secondAttribute="bottom" constant="8" id="aVd-21-C5d"/>
                                     <constraint firstItem="wLb-HP-UyY" firstAttribute="top" secondItem="0is-eh-6sU" secondAttribute="top" constant="10" id="uIj-jC-4XF"/>
-                                    <constraint firstItem="THG-ph-Et8" firstAttribute="leading" secondItem="0is-eh-6sU" secondAttribute="leading" constant="8" id="xo2-5C-vlj"/>
-                                    <constraint firstItem="THG-ph-Et8" firstAttribute="top" secondItem="wLb-HP-UyY" secondAttribute="bottom" constant="8" id="zJZ-rK-bby"/>
                                 </constraints>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="zJZ-rK-bby"/>
-                                        <exclude reference="4Jb-ua-soE"/>
-                                        <exclude reference="Bbg-al-sKk"/>
-                                        <exclude reference="MiC-Gw-wGd"/>
-                                        <exclude reference="to7-YN-AXz"/>
-                                        <exclude reference="M8x-Dp-Gz5"/>
-                                    </mask>
-                                </variation>
                             </view>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aA7-UE-koO">
                                 <rect key="frame" x="0.0" y="64" width="600" height="536"/>
@@ -196,7 +169,6 @@
                                             <constraint firstItem="wxI-GT-UQg" firstAttribute="centerY" secondItem="jm9-4j-cuq" secondAttribute="centerY" constant="-1" id="Q8A-dw-C1n"/>
                                             <constraint firstAttribute="trailing" secondItem="fIp-2s-RDl" secondAttribute="trailing" constant="20" id="a3t-cY-RzM"/>
                                             <constraint firstItem="fIp-2s-RDl" firstAttribute="leading" secondItem="Qna-Fn-Mlz" secondAttribute="trailing" constant="12" id="c72-tY-05x"/>
-                                            <constraint firstItem="jm9-4j-cuq" firstAttribute="height" secondItem="fIp-2s-RDl" secondAttribute="height" constant="-7" id="ebi-FY-ad4"/>
                                             <constraint firstAttribute="bottom" secondItem="wxI-GT-UQg" secondAttribute="bottom" constant="41" id="hgj-aP-4aM"/>
                                             <constraint firstAttribute="trailing" secondItem="jm9-4j-cuq" secondAttribute="trailing" constant="20" id="kAp-LY-ovJ"/>
                                             <constraint firstItem="wxI-GT-UQg" firstAttribute="leading" secondItem="5Yw-zl-yWp" secondAttribute="leading" constant="20" id="mkC-90-J5u"/>
@@ -205,11 +177,6 @@
                                             <constraint firstAttribute="centerY" secondItem="r7S-cF-Z7O" secondAttribute="centerY" id="tfi-cR-m7O"/>
                                             <constraint firstAttribute="trailing" secondItem="r7S-cF-Z7O" secondAttribute="trailing" constant="20" symbolic="YES" id="v9i-DK-kf0"/>
                                         </constraints>
-                                        <variation key="default">
-                                            <mask key="constraints">
-                                                <exclude reference="ebi-FY-ad4"/>
-                                            </mask>
-                                        </variation>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cpD-iZ-axV" userLabel="Forecast View">
                                         <rect key="frame" x="0.0" y="536" width="600" height="200"/>
@@ -353,8 +320,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="ralph-icon" width="68" height="85"/>
         <image name="temp" width="14" height="33"/>
+        <image name="thoughtbot-logo-full" width="200" height="49"/>
         <image name="wind-icon-small" width="43" height="30"/>
     </resources>
 </document>
