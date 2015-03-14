@@ -1,3 +1,4 @@
+@class CLPlacemark;
 @class TRTemperature;
 
 @interface TRWeatherUpdate : NSObject
