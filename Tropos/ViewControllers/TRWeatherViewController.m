@@ -111,8 +111,8 @@
     filter:^BOOL(RACTuple *arguments) {
         return ([arguments.second boolValue] == NO);
     }]
-    reduceEach:^id(RACTuple *arguments) {
-        return arguments.first;
+    reduceEach:^id(UIScrollView *scrollView, NSNumber *willDecelerate) {
+        return scrollView;
     }];
 }
 
