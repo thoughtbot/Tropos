@@ -24,7 +24,8 @@
 	<true/>
 	<key>UIAppFonts</key>
 	<array>
-		<string>DINNextLTPro-UltraLight.otf</string>
+		<string>DINNextLTPro-Light.otf</string>
+		<string>DINNextLTPro-Regular.otf</string>
 	</array>
 	<key>UIBackgroundModes</key>
 	<array>
@@ -45,7 +46,18 @@
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
 	</array>
-	<key>ITSAppUsesNonExemptEncryption</key>
-	<false/>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSExceptionDomains</key>
+		<dict>
+			<key>troposweather.com</key>
+			<dict>
+				<key>NSExceptionAllowsInsecureHTTPLoads</key>
+				<true/>
+				<key>NSIncludesSubdomains</key>
+				<true/>
+			</dict>
+		</dict>
+	</dict>
 </dict>
 </plist>

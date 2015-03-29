@@ -14,9 +14,23 @@ import Foundation
         }
     }
 
+    public var unitSystemChanged: ((UnitSystem) -> Void)?
+
     public init(locale: NSLocale, userDefaults: NSUserDefaults) {
         self.locale = locale
         self.userDefaults = userDefaults
+
+        super.init()
+
+        NSNotificationCenter.defaultCenter().addObserver(
+            self,
+            selector: #selector(userDefaultsDidChange(_:)),
+            name: NSUserDefaultsDidChangeNotification,
+            object: userDefaults)
+    }
+
+    func userDefaultsDidChange(notification: NSNotification) {
+        unitSystemChanged?(unitSystem)
     }
 
     public convenience init(locale: NSLocale) {

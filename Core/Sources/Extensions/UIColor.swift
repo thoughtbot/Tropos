@@ -5,6 +5,10 @@ extension UIColor {
         return .whiteColor()
     }
 
+    public static var lighterTextColor: UIColor {
+        return UIColor(hue:240.0 / 360.0, saturation:0.02, brightness:0.8, alpha:1.0)
+    }
+
     public static var primaryBackgroundColor: UIColor {
         return UIColor(hue: 240.0 / 360.0, saturation: 0.24, brightness: 0.13, alpha: 1.0)
     }

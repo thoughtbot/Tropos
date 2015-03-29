@@ -28,6 +28,7 @@
     [application registerForRemoteNotifications];
 
     [[TRSettingsController new] registerSettings];
+    [TRAppearanceController configureAppearance];
 
     self.applicationController = [TRApplicationController new];
 

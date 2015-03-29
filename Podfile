@@ -1,5 +1,5 @@
 platform :ios, '8.0'
-plugin 'cocoapods-acknowledgements', :settings_bundle => true
+plugin 'cocoapods-acknowledgements'
 
 target 'Tropos' do
   pod 'HockeySDK', '~> 3.6', :inhibit_warnings => true

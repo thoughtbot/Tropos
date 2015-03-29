@@ -1,12 +1,17 @@
 #import "TRNavigationBar.h"
 
+@interface TRNavigationBar () <UINavigationBarDelegate>
+@end
+
 @implementation TRNavigationBar
 
-- (void)drawRect:(CGRect)rect
+#pragma mark - NSObject
+
+- (void)awakeFromNib
 {
-    CGContextRef context = UIGraphicsGetCurrentContext();
-    CGContextSetFillColorWithColor(context, self.barTintColor.CGColor);
-    CGContextFillRect(context, rect);
+    [super awakeFromNib];
+    self.shadowImage = [UIImage new];
+    [self setBackgroundImage:[UIImage new] forBarMetrics:UIBarMetricsDefault];
 }
 
 @end

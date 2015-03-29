@@ -39,7 +39,7 @@ public extension WeatherViewModel {
         )
 
         let attributedString = NSMutableAttributedString(string: description)
-        attributedString.font = .defaultUltraLightFont(size: 26)
+        attributedString.font = .defaultLightFont(size: 26)
         attributedString.textColor = .defaultTextColor
 
         let difference = weatherUpdate.currentTemperature.temperatureDifferenceFrom(weatherUpdate.yesterdaysTemperature!)
