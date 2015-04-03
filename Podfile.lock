@@ -37,12 +37,12 @@ CHECKOUT OPTIONS:
     :tag: v0.3.0.beta1
 
 SPEC CHECKSUMS:
-  Expecta: 03aabd0a89d8dea843baecb19a7fd7466a69a31d
-  HockeySDK: bfd1f5ac75938b07499c4ac12932244b72a2e70b
-  Mixpanel: def38b9e600f101686b8d647e05660a72c089c65
-  OCMock: ecdd510b73ef397f2f97274785c1e87fd147c49f
-  OHHTTPStubs: 2038e929b6abb94881000524c1cb4aba0a1bb4a2
-  ReactiveCocoa: 313fc53cc9aeb2bbbc3f5f13c7eac16478d9af8f
+  Expecta: a354d4633409dd9fe8c4f5ff5130426adbe31628
+  HockeySDK: 51ade1aff04463137e852797d2eb4dfb2511d6a9
+  Mixpanel: e9bcb16eb0e2a98fc330ceeb0d8b7f4aec4182ab
+  OCMock: a10ea9f0a6e921651f96f78b6faee95ebc813b92
+  OHHTTPStubs: 00152a63400246fcbc4b772a2a547ea34c97cbd6
+  ReactiveCocoa: eb38dee0a0e698f73a9b25e5c1faea2bb4c79240
   Specta: d2158a483ad179e5f8d3a29f75ff4fc0ff6fab16
 
-COCOAPODS: 0.36.0
+COCOAPODS: 0.36.3
