@@ -1,6 +1,6 @@
 platform :ios, '8.0'
 
-pod 'HockeySDK', '~> 3.6.2'
+pod 'HockeySDK', '~> 3.6.2', :inhibit_warnings => true
 pod 'ReactiveCocoa', '~> 2.4.7'
 pod 'Mixpanel', '~> 2.7.2'
 
