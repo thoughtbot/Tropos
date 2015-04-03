@@ -5,11 +5,22 @@ SpecBegin(TRTemperature)
 describe(@"TRTemperature", ^{
     describe(@"compare:", ^{
         context(@"temperature is 10 less than the receiver", ^{
-            it(@"returns hotter", ^{
-                TRTemperature *first = [TRTemperature temperatureFromFahrenheit:@(10)];
-                TRTemperature *second = [TRTemperature temperatureFromFahrenheit:@(0)];
-                
-                expect([first comparedTo:second]).to.equal(TRTemperatureComparisonHotter);
+            context(@"temperature is above freezing", ^{
+                it(@"returns hotter", ^{
+                    TRTemperature *first = [TRTemperature temperatureFromFahrenheit:@(80)];
+                    TRTemperature *second = [TRTemperature temperatureFromFahrenheit:@(70)];
+
+                    expect([first comparedTo:second]).to.equal(TRTemperatureComparisonHotter);
+                });
+            });
+
+            context(@"temperature is below freezing", ^{
+                it(@"returns warmer", ^{
+                    TRTemperature *first = [TRTemperature temperatureFromFahrenheit:@(21)];
+                    TRTemperature *second = [TRTemperature temperatureFromFahrenheit:@(10)];
+
+                    expect([first comparedTo:second]).to.equal(TRTemperatureComparisonWarmer);
+                });
             });
         });
 
@@ -32,11 +43,22 @@ describe(@"TRTemperature", ^{
         });
 
         context(@"temperature is 10 greater than the receiver", ^{
-            it(@"returns colder", ^{
-                TRTemperature *first = [TRTemperature temperatureFromFahrenheit:@(0)];
-                TRTemperature *second = [TRTemperature temperatureFromFahrenheit:@(10)];
-                
-                expect([first comparedTo:second]).to.equal(TRTemperatureComparisonColder);
+            context(@"temperature is above 75", ^{
+                it(@"returns cooler", ^{
+                    TRTemperature *first = [TRTemperature temperatureFromFahrenheit:@(85)];
+                    TRTemperature *second = [TRTemperature temperatureFromFahrenheit:@(95)];
+
+                    expect([first comparedTo:second]).to.equal(TRTemperatureComparisonCooler);
+                });
+            });
+
+            context(@"temperature is below 75", ^{
+                it(@"returns colder", ^{
+                    TRTemperature *first = [TRTemperature temperatureFromFahrenheit:@(0)];
+                    TRTemperature *second = [TRTemperature temperatureFromFahrenheit:@(10)];
+
+                    expect([first comparedTo:second]).to.equal(TRTemperatureComparisonColder);
+                });
             });
         });
 

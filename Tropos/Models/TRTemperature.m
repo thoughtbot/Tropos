@@ -5,6 +5,9 @@ NSInteger TRConvertFahrenheitToCelsius(NSInteger fahrenheit) {
     return (NSInteger)round((fahrenheit - 32) * 5 / 9);
 }
 
+static NSInteger const TRTemperatureHotterLimit = 32;
+static NSInteger const TRTemperatureColderLimit = 75;
+
 @interface TRTemperature ()
 
 @property (nonatomic, readwrite) NSInteger fahrenheitValue;
@@ -43,13 +46,13 @@ NSInteger TRConvertFahrenheitToCelsius(NSInteger fahrenheit) {
 {
     CGFloat temperatureDifference = [self fahrenheitDifferenceFromTemperature:comparedTemperature];
 
-    if (temperatureDifference >= 10) {
+    if (temperatureDifference >= 10 && self.fahrenheitValue > TRTemperatureHotterLimit) {
         return TRTemperatureComparisonHotter;
     } else if (temperatureDifference > 0) {
         return TRTemperatureComparisonWarmer;
     } else if (temperatureDifference == 0) {
         return TRTemperatureComparisonSame;
-    } else if (temperatureDifference > -10) {
+    } else if (temperatureDifference > -10 || self.fahrenheitValue > TRTemperatureColderLimit) {
         return TRTemperatureComparisonCooler;
     } else {
         return TRTemperatureComparisonColder;
