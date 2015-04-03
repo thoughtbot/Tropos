@@ -37,9 +37,7 @@
     NSDictionary *todaysForecast = [currentConditionsJSON[@"daily"][@"data"] firstObject];
 
     self.conditionsDescription = todaysConditions[@"icon"];
-    self.currentTemperature = [TRTemperature temperatureFromFahrenheit:todaysConditions[@"temperature"]];
-    self.currentLow = [TRTemperature temperatureFromFahrenheit:todaysForecast[@"temperatureMin"]];
-    self.currentHigh = [TRTemperature temperatureFromFahrenheit:todaysForecast[@"temperatureMax"]];
+    [self updateCurrentTemperaturesWithConditions:todaysConditions withForecast:todaysForecast];
     self.yesterdaysTemperature = [TRTemperature temperatureFromFahrenheit:yesterdaysConditions[@"temperature"]];
     self.windBearing = [todaysConditions[@"windBearing"] floatValue];
     self.windSpeed = [todaysConditions[@"windSpeed"] floatValue];
@@ -55,6 +53,19 @@
     self.dailyForecasts = [dailyForecasts copy];
     
     return self;
+}
+
+- (void)updateCurrentTemperaturesWithConditions:(NSDictionary *)conditions withForecast:(NSDictionary *)forecast
+{
+    self.currentTemperature = [TRTemperature temperatureFromFahrenheit:conditions[@"temperature"]];
+    self.currentLow = [TRTemperature temperatureFromFahrenheit:forecast[@"temperatureMin"]];
+    self.currentHigh = [TRTemperature temperatureFromFahrenheit:forecast[@"temperatureMax"]];
+    
+    if (self.currentTemperature.fahrenheitValue < self.currentLow.fahrenheitValue) {
+        self.currentLow = self.currentTemperature;
+    } else if (self.currentTemperature.fahrenheitValue > self.currentHigh.fahrenheitValue) {
+        self.currentHigh = self.currentTemperature;
+    }
 }
 
 @end

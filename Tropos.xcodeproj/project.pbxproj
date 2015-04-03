@@ -63,6 +63,7 @@
 		CE5D7F3B45F980082E1BCA30 /* LaunchScreen.xib in Sources */ = {isa = PBXBuildFile; fileRef = B6D58F8AA6976EA1B35682B7 /* LaunchScreen.xib */; };
 		CFC0721C2D9EFFD3C3AE11A7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 059D0BDDF8DCE56549A4C9C6 /* Images.xcassets */; };
 		D7DD1B8AD495AFA4EC1CEFF9 /* TRAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A6B1ADBC73A8A2EF7FB4E257 /* TRAppDelegate.m */; };
+		E7E8D6031ACF0B9700BD8364 /* TRWeatherUpdateSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = E7E8D6021ACF0B9700BD8364 /* TRWeatherUpdateSpec.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -167,7 +168,6 @@
 		B3068282D6E4B66BB58E93BC /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6D58F8AA6976EA1B35682B7 /* LaunchScreen.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
 		BE299336DA1BFBE36CB7763B /* UnitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UnitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		C2422E4C1A718D1100F72769 /* Secrets.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Secrets.h; path = Tropos/Secrets.h; sourceTree = SOURCE_ROOT; };
 		C2E44CDB1A3A38A2009CC844 /* TRLocationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRLocationController.h; sourceTree = "<group>"; };
 		C2E44CDC1A3A38A2009CC844 /* TRLocationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRLocationController.m; sourceTree = "<group>"; };
 		C2E44CDF1A3A3C09009CC844 /* TRWeatherViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRWeatherViewController.h; sourceTree = "<group>"; };
@@ -185,6 +185,8 @@
 		DED70296CC99B4AAD0DE42BD /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		E2B218FB5F097AAE3080F4DD /* UnitTests-Prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UnitTests-Prefix.pch"; sourceTree = "<group>"; };
 		E59B090E67C8BD269D3CD9DB /* Main.storyboard */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		E799194B1ACEE75C00A5600C /* Secrets.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Secrets.h; sourceTree = "<group>"; };
+		E7E8D6021ACF0B9700BD8364 /* TRWeatherUpdateSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRWeatherUpdateSpec.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -452,6 +454,7 @@
 				C2E44CFD1A3B7C14009CC844 /* TRTemperatureSpec.m */,
 				4D9CA35C1A5C7672009E24DD /* TRBearingFormatterSpec.m */,
 				4DA79AC01A68806600C3539D /* UIColor_TRTemperatureColorsSpec.m */,
+				E7E8D6021ACF0B9700BD8364 /* TRWeatherUpdateSpec.m */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -459,7 +462,7 @@
 		E4F796A1BFA14961F3C5EE5E /* Tropos */ = {
 			isa = PBXGroup;
 			children = (
-				C2422E4C1A718D1100F72769 /* Secrets.h */,
+				E799194B1ACEE75C00A5600C /* Secrets.h */,
 				4D7CDEC91A47E1180038DD33 /* Formatters */,
 				F7756A61DA7A0F0958F6D728 /* Categories */,
 				771282ADE8938D4011617AD5 /* Protocols */,
@@ -772,6 +775,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E7E8D6031ACF0B9700BD8364 /* TRWeatherUpdateSpec.m in Sources */,
 				4D9CA35D1A5C7672009E24DD /* TRBearingFormatterSpec.m in Sources */,
 				C2E44CFE1A3B7C14009CC844 /* TRTemperatureSpec.m in Sources */,
 				4DA79AC11A68806600C3539D /* UIColor_TRTemperatureColorsSpec.m in Sources */,
