@@ -7,6 +7,11 @@
     return [UIColor whiteColor];
 }
 
++ (instancetype)lightTextColor
+{
+    return [UIColor colorWithHue:217.0f / 360.0f saturation:0.09f brightness:0.69f alpha:1.0f];
+}
+
 + (instancetype)primaryBackgroundColor
 {
     return [UIColor colorWithHue:240.0f / 360.0f saturation:0.24f brightness:0.13f alpha:1.0f];
