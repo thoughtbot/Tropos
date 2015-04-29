@@ -81,6 +81,13 @@
     return UIStatusBarStyleLightContent;
 }
 
+#pragma mark - Actions
+
+- (IBAction)dismissSettings:(UIStoryboardSegue *)segue
+{
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
 #pragma mark - Analytics
 
 - (void)configureAnalytics
