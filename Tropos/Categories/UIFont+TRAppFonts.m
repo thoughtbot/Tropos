@@ -2,7 +2,7 @@
 
 @implementation UIFont (TRAppFonts)
 
-+ (UIFont *)defaultUltraLightFontOfSize:(CGFloat)fontSize
++ (UIFont *)defaultLightFontOfSize:(CGFloat)fontSize
 {
     return [UIFont fontWithName:@"DINNextLTPro-Light" size:fontSize];
 }

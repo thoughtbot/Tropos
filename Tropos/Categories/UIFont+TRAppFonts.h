@@ -1,5 +1,5 @@
 @interface UIFont (TRAppFonts)
 
-+ (UIFont *)defaultUltraLightFontOfSize:(CGFloat)fontSize;
++ (UIFont *)defaultLightFontOfSize:(CGFloat)fontSize;
 
 @end

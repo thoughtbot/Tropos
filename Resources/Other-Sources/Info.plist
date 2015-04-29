@@ -24,7 +24,7 @@
 	<true/>
 	<key>UIAppFonts</key>
 	<array>
-		<string>DINNextLTPro-UltraLight.otf</string>
+		<string>DINNextLTPro-Light.otf</string>
 	</array>
 	<key>UIBackgroundModes</key>
 	<array>
