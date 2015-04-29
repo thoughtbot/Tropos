@@ -9,8 +9,6 @@
     @import Foundation;
     #include <tgmath.h>
 
-    #import "Tropos-Swift.h"
-
     #import "TRErrors.h"
 
     #import "NSError+TRErrors.h"
