@@ -13,6 +13,7 @@
 		4D0A5C3D1A3A53DD0084C41E /* CWForecastDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D0A5C3C1A3A53DD0084C41E /* CWForecastDetailView.xib */; };
 		4D115AF21ADC8C0C0032AAA3 /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D115AF11ADC8C0C0032AAA3 /* SettingsTableViewController.swift */; };
 		4D1ABA0B1A89686200B7F8FB /* TRNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D1ABA0A1A89686200B7F8FB /* TRNavigationBar.m */; };
+		4D2A2ECE1AF2A6FD005D9C51 /* Acknowledgements.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4D2A2ECD1AF2A6FD005D9C51 /* Acknowledgements.plist */; };
 		4D2D538F1AF16C3900D08837 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D2D538E1AF16C3900D08837 /* WebViewController.swift */; };
 		4D3039E71A5749120042FFF8 /* TRPrecipitationMeterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D3039E61A5749120042FFF8 /* TRPrecipitationMeterView.m */; };
 		4D3336F61A80BE16001BA9A8 /* TRDailyForecastView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D3336F51A80BE16001BA9A8 /* TRDailyForecastView.xib */; };
@@ -111,6 +112,7 @@
 		4D115AF11ADC8C0C0032AAA3 /* SettingsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 2; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; tabWidth = 2; };
 		4D1ABA091A89686200B7F8FB /* TRNavigationBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRNavigationBar.h; sourceTree = "<group>"; };
 		4D1ABA0A1A89686200B7F8FB /* TRNavigationBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRNavigationBar.m; sourceTree = "<group>"; };
+		4D2A2ECD1AF2A6FD005D9C51 /* Acknowledgements.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Acknowledgements.plist; sourceTree = "<group>"; };
 		4D2D538E1AF16C3900D08837 /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		4D2D53901AF1854500D08837 /* DINNextLTPro-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DINNextLTPro-Regular.otf"; sourceTree = "<group>"; };
 		4D3039E51A5749120042FFF8 /* TRPrecipitationMeterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRPrecipitationMeterView.h; sourceTree = "<group>"; };
@@ -465,6 +467,7 @@
 		B3D20A2BCCAAAFFFEF7D4E67 /* Other-Sources */ = {
 			isa = PBXGroup;
 			children = (
+				4D2A2ECD1AF2A6FD005D9C51 /* Acknowledgements.plist */,
 				1CDD2312F1EF05277F045E15 /* Info.plist */,
 				986C425E5A2268D27FAE2FAA /* Tropos-Prefix.pch */,
 				2853082980109C89B8F07D3C /* main.m */,
@@ -689,6 +692,7 @@
 				4D0A5C3D1A3A53DD0084C41E /* CWForecastDetailView.xib in Resources */,
 				CFC0721C2D9EFFD3C3AE11A7 /* Images.xcassets in Resources */,
 				C2E44CE91A3A42C6009CC844 /* InfoPlist.strings in Resources */,
+				4D2A2ECE1AF2A6FD005D9C51 /* Acknowledgements.plist in Resources */,
 				4D3336F61A80BE16001BA9A8 /* TRDailyForecastView.xib in Resources */,
 				C2E44CE41A3A4273009CC844 /* Localizable.strings in Resources */,
 				5DA50AD91A82CAB300CAE666 /* DINNextLTPro-Light.otf in Resources */,
