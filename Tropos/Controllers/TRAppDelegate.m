@@ -23,7 +23,7 @@
 #endif
 
     [[TRSettingsController new] registerSettings];
-    [AppearanceManager configureAppearance];
+    [AppearanceController configureAppearance];
 
     self.applicationController = [TRApplicationController new];
 
