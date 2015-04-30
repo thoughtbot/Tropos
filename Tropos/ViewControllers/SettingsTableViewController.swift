@@ -3,7 +3,24 @@ enum SettingsTableViewControllerSegueIdentifier: String {
     case Acknowledgements = "ShowTextViewController"
 }
 
+enum Section: Int {
+    case UnitSystem
+    case Info
+    case About
+}
+
+enum UnitSystemSection: Int {
+    case Metric
+    case Imperial
+}
+
+enum AboutSection: Int {
+    case Thoughtbot
+    case Forecast
+}
+
 class SettingsTableViewController: UITableViewController {
+    @IBOutlet var thoughtbotImageView: UIImageView!
     private let settingsController = TRSettingsController()
     
     // MARK: UIViewController
@@ -16,6 +33,15 @@ class SettingsTableViewController: UITableViewController {
                 self.tableView.checkCellAtIndexPath(self.indexPathForUnitSystem(system))
             }
         }
+
+        NSNotificationCenter.defaultCenter().rac_addObserverForName(UIApplicationWillEnterForegroundNotification, object: nil).subscribeNext { _ in
+            if let indexPath = self.tableView.indexPathForSelectedRow() {
+                self.tableView.deselectRowAtIndexPath(indexPath, animated: true)
+            }
+        }
+
+        thoughtbotImageView.tintColor = .lightTextColor();
+        thoughtbotImageView.image = thoughtbotImageView.image!.imageWithRenderingMode(.AlwaysTemplate)
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -37,15 +63,19 @@ class SettingsTableViewController: UITableViewController {
             }
         }
     }
-    
+
     // MARK: UITableViewDelegate
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        switch indexPath.section {
-        case 0:
+        switch (indexPath.section, indexPath.row) {
+        case (Section.UnitSystem.rawValue, _):
             tableView.deselectRowAtIndexPath(indexPath, animated: true)
             tableView.uncheckCellsInSection(indexPath.section)
             selectUnitSystemAtIndexPath(indexPath)
+        case (Section.About.rawValue, AboutSection.Thoughtbot.rawValue):
+            UIApplication.sharedApplication().openURL(NSURL(string: "https://thoughtbot.com")!)
+        case (Section.About.rawValue, AboutSection.Forecast.rawValue):
+            UIApplication.sharedApplication().openURL(NSURL(string: "https://forecast.io")!)
         default: break
         }
     }
@@ -55,6 +85,25 @@ class SettingsTableViewController: UITableViewController {
             headerView.textLabel.font = .defaultLightFontOfSize(15)
             headerView.textLabel.textColor = .lightTextColor()
         }
+    }
+
+    override func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        switch section {
+        case Section.About.rawValue: return appVersionString()
+        default: return super.tableView(tableView, titleForHeaderInSection: section)
+        }
+    }
+
+    private func appVersionString() -> String {
+        var string = "Tropos"
+
+        let infoDictionary = NSBundle.mainBundle().infoDictionary as? [String: AnyObject]
+
+        if let version = infoDictionary?["CFBundleShortVersionString"] as? String, buildNumber = infoDictionary?["CFBundleVersion"] as? String {
+            string += " \(version) (\(buildNumber))"
+        }
+
+        return string.uppercaseString
     }
     
     // MARK: Private

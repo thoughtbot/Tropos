@@ -18,6 +18,10 @@
             <string>DINNextLTPro-Light</string>
             <string>DINNextLTPro-Light</string>
             <string>DINNextLTPro-Light</string>
+            <string>DINNextLTPro-Light</string>
+        </mutableArray>
+        <mutableArray key="DINNextLTPro-Regular.otf">
+            <string>DINNextLTPro-Regular</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -380,32 +384,14 @@
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
-                            <tableViewSection headerTitle="Info" id="GXv-dP-JVI">
+                            <tableViewSection headerTitle="Info" id="hXe-uH-m7c">
                                 <cells>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="02n-Xn-hVd" style="IBUITableViewCellStyleDefault" id="O7r-Cq-ZIn" customClass="TRTableViewCell" customModule="Tropos" customModuleProvider="target">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="BrF-O1-ARI" style="IBUITableViewCellStyleDefault" id="mDI-OK-urf" customClass="TRTableViewCell" customModule="Tropos" customModuleProvider="target">
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="O7r-Cq-ZIn" id="aIA-JD-1HS">
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="mDI-OK-urf" id="pp7-gJ-alA">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Privacy Policy" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="02n-Xn-hVd">
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" name="DINNextLTPro-Light" family="DIN Next LT Pro" pointSize="18"/>
-                                                    <color key="textColor" red="0.7803921568627451" green="0.7803921568627451" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                        <color key="backgroundColor" red="0.12549019607843137" green="0.12549019607843137" blue="0.16078431372549018" alpha="1" colorSpace="calibratedRGB"/>
-                                        <connections>
-                                            <segue destination="MA7-q5-xs7" kind="show" identifier="ShowWebViewController" id="JNq-bC-aJt"/>
-                                        </connections>
-                                    </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="Kyi-gF-n4C" style="IBUITableViewCellStyleDefault" id="xtL-JB-Fj2" customClass="TRTableViewCell" customModule="Tropos" customModuleProvider="target">
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="xtL-JB-Fj2" id="Gqs-gW-PES">
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Acknowledgements" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Kyi-gF-n4C">
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Privacy Policy" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="BrF-O1-ARI">
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="DINNextLTPro-Light" family="DIN Next LT Pro" pointSize="18"/>
                                                     <color key="textColor" red="0.78039215689999997" green="0.78039215689999997" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
@@ -415,8 +401,102 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.12549019610000001" green="0.12549019610000001" blue="0.16078431369999999" alpha="1" colorSpace="calibratedRGB"/>
                                         <connections>
-                                            <segue destination="Enm-0f-f8E" kind="show" identifier="ShowTextViewController" id="uvm-Ve-S2L"/>
+                                            <segue destination="MA7-q5-xs7" kind="show" identifier="ShowWebViewController" id="b9V-lu-gk1"/>
                                         </connections>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="bPq-Pp-YNA" style="IBUITableViewCellStyleDefault" id="coj-3Q-1ZV" customClass="TRTableViewCell" customModule="Tropos" customModuleProvider="target">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="coj-3Q-1ZV" id="zq4-Dp-sXj">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Acknowledgements" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="bPq-Pp-YNA">
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="DINNextLTPro-Light" family="DIN Next LT Pro" pointSize="18"/>
+                                                    <color key="textColor" red="0.78039215689999997" green="0.78039215689999997" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.12549019610000001" green="0.12549019610000001" blue="0.16078431369999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <segue destination="Enm-0f-f8E" kind="show" identifier="ShowTextViewController" id="abn-8w-Ca5"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="Tropos 1.0.1 (132)" id="GXv-dP-JVI">
+                                <cells>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" rowHeight="100" id="Bo5-Uc-GVG" customClass="TRTableViewCell" customModule="Tropos" customModuleProvider="target">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Bo5-Uc-GVG" id="wAy-NI-QDe">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hat-b3-Z3z">
+                                                    <rect key="frame" x="200" y="17" width="180" height="65"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Handcrafted with love by" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SLJ-Pj-eOI">
+                                                            <rect key="frame" x="0.0" y="0.0" width="180" height="17"/>
+                                                            <fontDescription key="fontDescription" name="DINNextLTPro-Light" family="DIN Next LT Pro" pointSize="17"/>
+                                                            <color key="textColor" red="0.78039216995239258" green="0.78039216995239258" blue="0.80000001192092896" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="thoughtbot-logo-full" translatesAutoresizingMaskIntoConstraints="NO" id="wl8-Vy-9eF">
+                                                            <rect key="frame" x="8" y="25" width="164" height="40"/>
+                                                            <color key="tintColor" red="0.78039216995239258" green="0.78039216995239258" blue="0.80000001192092896" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" secondItem="wl8-Vy-9eF" secondAttribute="height" multiplier="1:1" id="Cx9-mq-op9"/>
+                                                                <constraint firstAttribute="width" constant="88" id="FNh-Fy-y1Q"/>
+                                                                <constraint firstAttribute="height" constant="40" id="GWY-9x-ucM"/>
+                                                                <constraint firstAttribute="width" secondItem="wl8-Vy-9eF" secondAttribute="height" multiplier="200:49" id="WzN-ZH-haI"/>
+                                                                <constraint firstAttribute="width" constant="200" id="cXW-dy-V8X"/>
+                                                                <constraint firstAttribute="height" constant="49" id="pSy-tr-GOr"/>
+                                                                <constraint firstAttribute="height" constant="37" id="ywq-IM-jdu"/>
+                                                            </constraints>
+                                                            <variation key="default">
+                                                                <mask key="constraints">
+                                                                    <exclude reference="Cx9-mq-op9"/>
+                                                                    <exclude reference="FNh-Fy-y1Q"/>
+                                                                    <exclude reference="cXW-dy-V8X"/>
+                                                                    <exclude reference="pSy-tr-GOr"/>
+                                                                    <exclude reference="ywq-IM-jdu"/>
+                                                                </mask>
+                                                            </variation>
+                                                        </imageView>
+                                                    </subviews>
+                                                    <color key="backgroundColor" red="0.12549020349979401" green="0.12549020349979401" blue="0.16078431904315948" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="bottom" secondItem="wl8-Vy-9eF" secondAttribute="bottom" id="3tg-DA-Vns"/>
+                                                        <constraint firstItem="wl8-Vy-9eF" firstAttribute="top" secondItem="SLJ-Pj-eOI" secondAttribute="bottom" constant="8" id="QKJ-hH-4YV"/>
+                                                        <constraint firstItem="SLJ-Pj-eOI" firstAttribute="top" secondItem="Hat-b3-Z3z" secondAttribute="top" id="REa-pn-0Dp"/>
+                                                        <constraint firstItem="wl8-Vy-9eF" firstAttribute="centerX" secondItem="SLJ-Pj-eOI" secondAttribute="centerX" id="TO8-Ux-Bzv"/>
+                                                        <constraint firstAttribute="trailing" secondItem="SLJ-Pj-eOI" secondAttribute="trailing" id="VA7-AT-iIh"/>
+                                                        <constraint firstAttribute="centerX" secondItem="SLJ-Pj-eOI" secondAttribute="centerX" id="jAA-p6-Gko"/>
+                                                        <constraint firstItem="SLJ-Pj-eOI" firstAttribute="leading" secondItem="Hat-b3-Z3z" secondAttribute="leading" id="thr-55-RUW"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="centerY" secondItem="Hat-b3-Z3z" secondAttribute="centerY" id="0S4-Vw-DHI"/>
+                                                <constraint firstAttribute="centerX" secondItem="Hat-b3-Z3z" secondAttribute="centerX" constant="-6" id="6q0-wz-QPC"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.12549019610000001" green="0.12549019610000001" blue="0.16078431369999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="Kyi-gF-n4C" style="IBUITableViewCellStyleDefault" id="xtL-JB-Fj2" customClass="TRTableViewCell" customModule="Tropos" customModuleProvider="target">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="xtL-JB-Fj2" id="Gqs-gW-PES">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Powered by Forecast" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Kyi-gF-n4C">
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="DINNextLTPro-Regular" family="DIN Next LT Pro" pointSize="18"/>
+                                                    <color key="textColor" red="0.78039215689999997" green="0.78039215689999997" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.12549019610000001" green="0.12549019610000001" blue="0.16078431369999999" alpha="1" colorSpace="calibratedRGB"/>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
@@ -434,6 +514,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="thoughtbotImageView" destination="wl8-Vy-9eF" id="1lJ-as-C3Y"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ych-ep-rVP" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="ku0-64-nGW" userLabel="Exit" sceneMemberID="exit"/>
