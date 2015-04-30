@@ -41,10 +41,9 @@ class SettingsTableViewController: UITableViewController {
     // MARK: UITableViewDelegate
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        tableView.deselectRowAtIndexPath(indexPath, animated: true)
-        
         switch indexPath.section {
         case 0:
+            tableView.deselectRowAtIndexPath(indexPath, animated: true)
             tableView.uncheckCellsInSection(indexPath.section)
             selectUnitSystemAtIndexPath(indexPath)
         default: break
