@@ -41,7 +41,6 @@
 		4D98E98B1A80C89600856412 /* TRDailyForecast.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D98E98A1A80C89600856412 /* TRDailyForecast.m */; };
 		4D9A00061A9D61CD000835A9 /* TRAnalyticsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D9A00051A9D61CD000835A9 /* TRAnalyticsController.m */; };
 		4D9CA35D1A5C7672009E24DD /* TRBearingFormatterSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D9CA35C1A5C7672009E24DD /* TRBearingFormatterSpec.m */; };
-		4D9CA35F1A5CABDD009E24DD /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 4D9CA35E1A5CABDD009E24DD /* Settings.bundle */; };
 		4D9CA3621A5CB544009E24DD /* TRSettingsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D9CA3611A5CB544009E24DD /* TRSettingsController.m */; };
 		4DA79AC11A68806600C3539D /* UIColor_TRTemperatureColorsSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DA79AC01A68806600C3539D /* UIColor_TRTemperatureColorsSpec.m */; };
 		4DA8C1811AEF0B7500745937 /* AppearanceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA8C1801AEF0B7500745937 /* AppearanceController.swift */; };
@@ -165,7 +164,6 @@
 		4D9A00051A9D61CD000835A9 /* TRAnalyticsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRAnalyticsController.m; sourceTree = "<group>"; };
 		4D9A000D1A9D7868000835A9 /* TRAnalyticsEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRAnalyticsEvent.h; sourceTree = "<group>"; };
 		4D9CA35C1A5C7672009E24DD /* TRBearingFormatterSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRBearingFormatterSpec.m; sourceTree = "<group>"; };
-		4D9CA35E1A5CABDD009E24DD /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		4D9CA3601A5CB544009E24DD /* TRSettingsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRSettingsController.h; sourceTree = "<group>"; };
 		4D9CA3611A5CB544009E24DD /* TRSettingsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRSettingsController.m; sourceTree = "<group>"; };
 		4DA79AC01A68806600C3539D /* UIColor_TRTemperatureColorsSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIColor_TRTemperatureColorsSpec.m; sourceTree = "<group>"; };
@@ -473,7 +471,6 @@
 				2853082980109C89B8F07D3C /* main.m */,
 				C2E44CE61A3A4273009CC844 /* Localizable.strings */,
 				C2E44CEB1A3A42C6009CC844 /* InfoPlist.strings */,
-				4D9CA35E1A5CABDD009E24DD /* Settings.bundle */,
 			);
 			path = "Other-Sources";
 			sourceTree = "<group>";
@@ -696,7 +693,6 @@
 				4D3336F61A80BE16001BA9A8 /* TRDailyForecastView.xib in Resources */,
 				C2E44CE41A3A4273009CC844 /* Localizable.strings in Resources */,
 				5DA50AD91A82CAB300CAE666 /* DINNextLTPro-Light.otf in Resources */,
-				4D9CA35F1A5CABDD009E24DD /* Settings.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
