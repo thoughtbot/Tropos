@@ -16,6 +16,8 @@
             <string>DINNextLTPro-Light</string>
             <string>DINNextLTPro-Light</string>
             <string>DINNextLTPro-Light</string>
+            <string>DINNextLTPro-Light</string>
+            <string>DINNextLTPro-Light</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -322,7 +324,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" translucent="NO" id="RuT-sk-dJ7" customClass="TRNavigationBar">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" red="0.094117647058823528" green="0.094117647058823528" blue="0.11372549019607843" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="barTintColor" red="0.098039217293262482" green="0.098039217293262482" blue="0.12941177189350128" alpha="1" colorSpace="calibratedRGB"/>
                     </navigationBar>
                     <connections>
                         <segue destination="rfD-V3-5CX" kind="relationship" relationship="rootViewController" id="Po7-vR-AAu"/>
@@ -398,6 +400,24 @@
                                             <segue destination="MA7-q5-xs7" kind="show" identifier="ShowWebViewController" id="JNq-bC-aJt"/>
                                         </connections>
                                     </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="Kyi-gF-n4C" style="IBUITableViewCellStyleDefault" id="xtL-JB-Fj2" customClass="TRTableViewCell" customModule="Tropos" customModuleProvider="target">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="xtL-JB-Fj2" id="Gqs-gW-PES">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Acknowledgements" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Kyi-gF-n4C">
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="DINNextLTPro-Light" family="DIN Next LT Pro" pointSize="18"/>
+                                                    <color key="textColor" red="0.78039215689999997" green="0.78039215689999997" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.12549019610000001" green="0.12549019610000001" blue="0.16078431369999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <segue destination="Enm-0f-f8E" kind="show" identifier="ShowTextViewController" id="uvm-Ve-S2L"/>
+                                        </connections>
+                                    </tableViewCell>
                                 </cells>
                             </tableViewSection>
                         </sections>
@@ -419,6 +439,43 @@
                 <exit id="ku0-64-nGW" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1592" y="489"/>
+        </scene>
+        <!--Acknowledgements-->
+        <scene sceneID="4t6-Kg-YO5">
+            <objects>
+                <viewController title="Acknowledgements" id="Enm-0f-f8E" customClass="TextViewController" customModule="Tropos" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y43-bw-wdo"/>
+                        <viewControllerLayoutGuide type="bottom" id="8G0-NH-pi4"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="n7J-gt-0EJ">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="536"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" indicatorStyle="white" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lEK-Yh-JVz">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="536"/>
+                                <color key="backgroundColor" red="0.098039217293262482" green="0.098039217293262482" blue="0.12941177189350128" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.78039216995239258" green="0.78039216995239258" blue="0.80000001192092896" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="DINNextLTPro-Light" family="DIN Next LT Pro" pointSize="15"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <dataDetectorType key="dataDetectorTypes" link="YES"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="lEK-Yh-JVz" secondAttribute="trailing" id="Ho9-TQ-ypo"/>
+                            <constraint firstItem="8G0-NH-pi4" firstAttribute="top" secondItem="lEK-Yh-JVz" secondAttribute="bottom" id="IAT-HJ-BWc"/>
+                            <constraint firstItem="lEK-Yh-JVz" firstAttribute="leading" secondItem="n7J-gt-0EJ" secondAttribute="leading" id="SlB-1J-N8e"/>
+                            <constraint firstItem="lEK-Yh-JVz" firstAttribute="top" secondItem="y43-bw-wdo" secondAttribute="bottom" id="jKX-9S-mYY"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="textView" destination="lEK-Yh-JVz" id="5Gn-S9-cOu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wme-Ob-5Di" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2297" y="854"/>
         </scene>
         <!--Web View Controller-->
         <scene sceneID="DxE-L7-Zc8">
@@ -457,7 +514,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VrL-gb-FND" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2273" y="489"/>
+            <point key="canvasLocation" x="2297" y="157"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ki2-MI-VAs">
