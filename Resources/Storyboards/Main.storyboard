@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1510" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="zCV-BE-JFf">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14C1514" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="zCV-BE-JFf">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <customFonts key="customFonts">
         <mutableArray key="DINNextLTPro-Light.otf">
+            <string>DINNextLTPro-Light</string>
             <string>DINNextLTPro-Light</string>
             <string>DINNextLTPro-Light</string>
             <string>DINNextLTPro-Light</string>
@@ -62,8 +63,10 @@
                                 <rect key="frame" x="0.0" y="64" width="600" height="536"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BVN-q4-01Z" userLabel="Refresh Control" customClass="TRRefreshControl">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="0.0"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xyb-8W-ran" customClass="TRRefreshView">
+                                                <rect key="frame" x="0.0" y="0.0" width="600" height="0.0"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             </view>
                                         </subviews>
@@ -93,7 +96,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="536"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="r7S-cF-Z7O" userLabel="Forecast Container View">
-                                                <rect key="frame" x="48" y="167" width="532" height="203"/>
+                                                <rect key="frame" x="48" y="176" width="532" height="185"/>
                                                 <subviews>
                                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ef5-IL-xEe" userLabel="Conditions Icon" customClass="TRImageView">
                                                         <rect key="frame" x="0.0" y="0.0" width="97" height="97"/>
@@ -101,8 +104,8 @@
                                                             <constraint firstAttribute="width" secondItem="Ef5-IL-xEe" secondAttribute="height" multiplier="1:1" id="FD7-Zx-h5o"/>
                                                         </constraints>
                                                     </imageView>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="It's warmer today than yesterday at this time." lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4aa-2F-UFk" userLabel="Conditions Description" customClass="TRLabel">
-                                                        <rect key="frame" x="0.0" y="139" width="522" height="64"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="It's warmer today than yesterday at this time." lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4aa-2F-UFk" userLabel="Conditions Description" customClass="TRLabel">
+                                                        <rect key="frame" x="0.0" y="139" width="522" height="28"/>
                                                         <fontDescription key="fontDescription" name="DINNextLTPro-Light" family="DIN Next LT Pro" pointSize="32"/>
                                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
@@ -115,7 +118,7 @@
                                                     <constraint firstItem="Ef5-IL-xEe" firstAttribute="leading" secondItem="r7S-cF-Z7O" secondAttribute="leading" id="e92-r5-Z4a"/>
                                                     <constraint firstItem="4aa-2F-UFk" firstAttribute="leading" secondItem="r7S-cF-Z7O" secondAttribute="leading" id="irf-om-zPc"/>
                                                     <constraint firstItem="4aa-2F-UFk" firstAttribute="top" secondItem="Ef5-IL-xEe" secondAttribute="bottom" constant="42" id="upq-5m-AGQ"/>
-                                                    <constraint firstAttribute="bottom" secondItem="4aa-2F-UFk" secondAttribute="bottom" id="w4B-vu-EcE"/>
+                                                    <constraint firstAttribute="bottom" secondItem="4aa-2F-UFk" secondAttribute="bottom" constant="18" id="w4B-vu-EcE"/>
                                                 </constraints>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="51° / 38°" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jm9-4j-cuq" userLabel="High and Low Temp Label" customClass="TRLabel">
@@ -159,23 +162,40 @@
                                                     </mask>
                                                 </variation>
                                             </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="80% chance of rain today" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uCd-pt-n36" userLabel="Precipitation Label" customClass="TRLabel">
+                                                <rect key="frame" x="48" y="404" width="532" height="30"/>
+                                                <fontDescription key="fontDescription" name="DINNextLTPro-Light" family="DIN Next LT Pro" pointSize="20"/>
+                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wind-icon-small" translatesAutoresizingMaskIntoConstraints="NO" id="3pS-wp-yDf" userLabel="Precipitation Icon" customClass="TRImageView">
+                                                <rect key="frame" x="20" y="404" width="16" height="25"/>
+                                            </imageView>
                                         </subviews>
                                         <color key="backgroundColor" red="0.098039215686274508" green="0.098039215686274508" blue="0.12941176470588234" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstItem="r7S-cF-Z7O" firstAttribute="leading" secondItem="5Yw-zl-yWp" secondAttribute="leading" constant="48" id="0ed-En-N0n"/>
+                                            <constraint firstItem="uCd-pt-n36" firstAttribute="height" secondItem="fIp-2s-RDl" secondAttribute="height" id="17A-Z5-4ML"/>
                                             <constraint firstItem="Qna-Fn-Mlz" firstAttribute="centerY" secondItem="fIp-2s-RDl" secondAttribute="centerY" constant="-1" id="1gS-LV-6b1"/>
                                             <constraint firstItem="jm9-4j-cuq" firstAttribute="leading" secondItem="wxI-GT-UQg" secondAttribute="trailing" constant="12" id="8ds-1L-Vw9"/>
+                                            <constraint firstItem="uCd-pt-n36" firstAttribute="top" secondItem="3pS-wp-yDf" secondAttribute="top" id="G79-uu-o7K"/>
+                                            <constraint firstItem="3pS-wp-yDf" firstAttribute="leading" secondItem="5Yw-zl-yWp" secondAttribute="leading" constant="20" id="KJ8-ou-cHh"/>
                                             <constraint firstItem="Qna-Fn-Mlz" firstAttribute="leading" secondItem="5Yw-zl-yWp" secondAttribute="leading" constant="20" symbolic="YES" id="LGx-nA-Xuj"/>
                                             <constraint firstItem="wxI-GT-UQg" firstAttribute="centerY" secondItem="jm9-4j-cuq" secondAttribute="centerY" constant="-1" id="Q8A-dw-C1n"/>
+                                            <constraint firstItem="fIp-2s-RDl" firstAttribute="top" secondItem="uCd-pt-n36" secondAttribute="bottom" constant="7" id="Yva-FY-tbM"/>
                                             <constraint firstAttribute="trailing" secondItem="fIp-2s-RDl" secondAttribute="trailing" constant="20" id="a3t-cY-RzM"/>
+                                            <constraint firstItem="uCd-pt-n36" firstAttribute="top" secondItem="r7S-cF-Z7O" secondAttribute="bottom" constant="43" id="a4a-eK-DgS"/>
                                             <constraint firstItem="fIp-2s-RDl" firstAttribute="leading" secondItem="Qna-Fn-Mlz" secondAttribute="trailing" constant="12" id="c72-tY-05x"/>
                                             <constraint firstAttribute="bottom" secondItem="wxI-GT-UQg" secondAttribute="bottom" constant="41" id="hgj-aP-4aM"/>
                                             <constraint firstAttribute="trailing" secondItem="jm9-4j-cuq" secondAttribute="trailing" constant="20" id="kAp-LY-ovJ"/>
                                             <constraint firstItem="wxI-GT-UQg" firstAttribute="leading" secondItem="5Yw-zl-yWp" secondAttribute="leading" constant="20" id="mkC-90-J5u"/>
                                             <constraint firstItem="wxI-GT-UQg" firstAttribute="top" secondItem="Qna-Fn-Mlz" secondAttribute="bottom" constant="16" id="niv-Ji-Lbs"/>
                                             <constraint firstItem="fIp-2s-RDl" firstAttribute="height" secondItem="jm9-4j-cuq" secondAttribute="height" id="pgf-j4-qkq"/>
+                                            <constraint firstItem="uCd-pt-n36" firstAttribute="leading" secondItem="3pS-wp-yDf" secondAttribute="trailing" constant="12" id="sBu-nk-Y75"/>
+                                            <constraint firstItem="uCd-pt-n36" firstAttribute="leading" secondItem="fIp-2s-RDl" secondAttribute="leading" id="sQp-Pm-C70"/>
                                             <constraint firstAttribute="centerY" secondItem="r7S-cF-Z7O" secondAttribute="centerY" id="tfi-cR-m7O"/>
                                             <constraint firstAttribute="trailing" secondItem="r7S-cF-Z7O" secondAttribute="trailing" constant="20" symbolic="YES" id="v9i-DK-kf0"/>
+                                            <constraint firstItem="Qna-Fn-Mlz" firstAttribute="top" secondItem="3pS-wp-yDf" secondAttribute="bottom" constant="18" id="w8J-ME-NVf"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cpD-iZ-axV" userLabel="Forecast View">
@@ -305,6 +325,7 @@
                         <outlet property="highLowTemperatureLabel" destination="jm9-4j-cuq" id="2Dc-yH-4sR"/>
                         <outlet property="lastUpdatedLabel" destination="9cT-VN-8BL" id="YbR-cO-eNl"/>
                         <outlet property="oneDayForecastView" destination="FOt-Fu-PRv" id="vik-pO-Gqs"/>
+                        <outlet property="precipitationDescriptionLabel" destination="uCd-pt-n36" id="MIp-bo-nNN"/>
                         <outlet property="refreshControl" destination="BVN-q4-01Z" id="pN9-BN-XxM"/>
                         <outlet property="scrollView" destination="aA7-UE-koO" id="x88-l5-gTL"/>
                         <outlet property="temperatureImageView" destination="wxI-GT-UQg" id="OvJ-DJ-oNa"/>

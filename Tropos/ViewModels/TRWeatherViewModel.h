@@ -7,6 +7,7 @@
 @property (nonatomic, readonly) UIImage *conditionsImage;
 @property (nonatomic, readonly) NSAttributedString *conditionsDescription;
 @property (nonatomic, readonly) NSString *windDescription;
+@property (nonatomic, readonly) NSString *precipitationDescription;
 @property (nonatomic, readonly) NSAttributedString *temperatureDescription;
 @property (nonatomic, readonly) NSArray *dailyForecasts;
 
