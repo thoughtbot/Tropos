@@ -3,6 +3,8 @@
 #import "TRDailyForecast.h"
 #import "TRDailyForecastViewModel.h"
 #import "TRDateFormatter.h"
+#import "TRPrecipitation.h"
+#import "TRPrecipitationChanceFormatter.h"
 #import "TRTemperatureComparisonFormatter.h"
 #import "TRTemperatureFormatter.h"
 #import "TRWindSpeedFormatter.h"
@@ -48,10 +50,10 @@
     TRTemperatureComparison comparison = [self.weatherUpdate.currentTemperature comparedTo:self.weatherUpdate.yesterdaysTemperature];
 
     NSString *adjective;
-    NSString *comparisonString = [TRTemperatureComparisonFormatter localizedStringFromComparison:comparison adjective:&adjective];
+    NSString *comparisonString = [TRTemperatureComparisonFormatter localizedStringFromComparison:comparison adjective:&adjective  precipitation: self.precipitationDescription];
 
     NSMutableAttributedString *attributedString = [[NSMutableAttributedString alloc] initWithString:comparisonString];
-    [attributedString setFont:[UIFont defaultUltraLightFontOfSize:37]];
+    [attributedString setFont:[UIFont defaultUltraLightFontOfSize:26]];
     [attributedString setTextColor:[UIColor defaultTextColor]];
     TRTemperature *difference = [self.weatherUpdate.currentTemperature temperatureDifferenceFromTemperature:self.weatherUpdate.yesterdaysTemperature];
     [attributedString setTextColor:[self colorForTemperatureComparison:comparison difference:difference.fahrenheitValue] forSubstring:adjective];
@@ -62,6 +64,13 @@
 - (NSString *)windDescription
 {
     return [TRWindSpeedFormatter localizedStringForWindSpeed:self.weatherUpdate.windSpeed bearing:self.weatherUpdate.windBearing];
+}
+
+- (NSString *)precipitationDescription
+{
+    TRPrecipitation *precipitation = [TRPrecipitation precipitationFromProbability:self.weatherUpdate.precipitationPercentage precipitationType:self.weatherUpdate.precipitationType];
+
+    return [TRPrecipitationChanceFormatter precipitationChanceStringFromPrecipitation:precipitation];
 }
 
 - (NSAttributedString *)temperatureDescription

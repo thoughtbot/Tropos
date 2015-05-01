@@ -8,10 +8,12 @@
 @property (nonatomic, copy, readwrite) NSString *city;
 @property (nonatomic, copy, readwrite) NSString *state;
 @property (nonatomic, copy, readwrite) NSString *conditionsDescription;
+@property (nonatomic, copy, readwrite) NSString *precipitationType;
 @property (nonatomic, readwrite) TRTemperature *currentTemperature;
 @property (nonatomic, readwrite) TRTemperature *currentLow;
 @property (nonatomic, readwrite) TRTemperature *currentHigh;
 @property (nonatomic, readwrite) TRTemperature *yesterdaysTemperature;
+@property (nonatomic, readwrite) CGFloat precipitationPercentage;
 @property (nonatomic, readwrite) CGFloat windSpeed;
 @property (nonatomic, readwrite) CGFloat windBearing;
 @property (nonatomic, readwrite) NSDate *date;
@@ -40,6 +42,8 @@
     NSDictionary *yesterdaysConditions = yesterdaysConditionsJSON[@"currently"];
     NSDictionary *todaysForecast = [currentConditionsJSON[@"daily"][@"data"] firstObject];
 
+    self.precipitationPercentage = [todaysForecast[@"precipProbability"] floatValue];
+    self.precipitationType = todaysForecast[@"precipType"] ? todaysForecast[@"precipType"] : @"rain";
     self.conditionsDescription = todaysConditions[@"icon"];
     [self updateCurrentTemperaturesWithConditions:todaysConditions withForecast:todaysForecast];
     self.yesterdaysTemperature = [TRTemperature temperatureFromFahrenheit:yesterdaysConditions[@"temperature"]];

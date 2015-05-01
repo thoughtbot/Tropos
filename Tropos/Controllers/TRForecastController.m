@@ -64,7 +64,6 @@ static NSString *const TRForecastAPIExclusions = @"minutely,hourly,alerts,flags"
                 [subscriber sendError:[NSError errorWithDomain:TRErrorDomain code:200 userInfo:nil]];
                 return;
             }
-
             [subscriber sendNext:data];
             [subscriber sendCompleted];
         }];

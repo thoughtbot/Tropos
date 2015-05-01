@@ -1,7 +1,6 @@
 #import "TRWeatherViewController.h"
 #import "TRWeatherController.h"
 #import "TRWeatherController.h"
-#import "TRPrecipitationMeterView.h"
 #import "TRDailyForecastView.h"
 #import "TRRefreshControl.h"
 #import "TRAnalyticsController.h"
