@@ -10,6 +10,7 @@
 @property (nonatomic, readonly) TRTemperature *currentHigh;
 @property (nonatomic, readonly) TRTemperature *currentLow;
 @property (nonatomic, readonly) TRTemperature *yesterdaysTemperature;
+@property (nonatomic, readonly) CGFloat precipitationPercentage;
 @property (nonatomic, readonly) CGFloat windSpeed;
 @property (nonatomic, readonly) CGFloat windBearing;
 @property (nonatomic, readonly) NSDate *date;

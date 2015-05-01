@@ -64,6 +64,11 @@
     return [TRWindSpeedFormatter localizedStringForWindSpeed:self.weatherUpdate.windSpeed bearing:self.weatherUpdate.windBearing];
 }
 
+- (NSString *)precipitationDescription
+{
+    return [NSString stringWithFormat: @"%.0f%% chance of rain today", self.weatherUpdate.precipitationPercentage];
+}
+
 - (NSAttributedString *)temperatureDescription
 {
     TRTemperatureFormatter *formatter = [TRTemperatureFormatter new];

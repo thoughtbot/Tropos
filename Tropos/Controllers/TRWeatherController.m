@@ -113,4 +113,9 @@
     return RACObserve(self, viewModel.dailyForecasts);
 }
 
+- (RACSignal *)precipitationDescription
+{
+    return RACObserve(self, viewModel.precipitationDescription);
+}
+
 @end
