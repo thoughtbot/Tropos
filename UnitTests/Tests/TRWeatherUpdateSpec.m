@@ -20,6 +20,22 @@ NSDictionary* (^weatherConditionsWithTemperature) (NSNumber*) = ^NSDictionary* (
     return conditions;
 };
 
+NSDictionary* (^weatherConditionsWithPrecipitation) (NSString*) = ^NSDictionary* (NSString *precipitation) {
+    NSDictionary *dailyValue = @{@"temperatureMin": @50, @"temperatureMax": @60, @"precipProbability": precipitation, @"precipType": @"rain" };
+    NSArray *dailyData = @[dailyValue, dailyValue, dailyValue, dailyValue, dailyValue];
+    NSDictionary *conditions = (@{ @"currently": @{ @"temperature": @90 },
+                                   @"daily": @{ @"data": dailyData } });
+    return conditions;
+};
+
+NSDictionary* (^weatherConditionsWithoutPrecipitationType) (NSString*) = ^NSDictionary* (NSString *precipitation) {
+    NSDictionary *dailyValue = @{@"temperatureMin": @50, @"temperatureMax": @60, @"precipProbability": precipitation};
+    NSArray *dailyData = @[dailyValue, dailyValue, dailyValue, dailyValue, dailyValue];
+    NSDictionary *conditions = (@{ @"currently": @{ @"temperature": @90 },
+                                   @"daily": @{ @"data": dailyData } });
+    return conditions;
+};
+
 describe(@"TRWeatherUpdate", ^{
     context(@"currentTemp is higher than currentHigh", ^{
         it(@"updates currentHigh to match", ^{
@@ -42,6 +58,34 @@ describe(@"TRWeatherUpdate", ^{
                                                         yesterdaysConditionsJSON:@{}];
             
             expect(update.currentLow.fahrenheitValue).to.equal(currentTemp);
+        });
+    });
+
+    context(@"with a chance of precipitation", ^{
+        it(@"stores the precipitation probability and type", ^{
+            NSString *probability = @"0.43";
+            NSDictionary *conditions = weatherConditionsWithPrecipitation(probability);
+
+            TRWeatherUpdate *update = [[TRWeatherUpdate alloc] initWithPlacemark:stubbedPlacemark()
+                                                           currentConditionsJSON:conditions
+                                                        yesterdaysConditionsJSON:@{}];
+
+            expect(round(update.precipitationPercentage * 100)).to.equal(43.0f);
+            expect(update.precipitationType).to.equal(@"rain");
+        });
+    });
+
+    context(@"with a no chance of precipitation", ^{
+        it(@"stores the precipitation probability and defaults the type", ^{
+            NSString *probability = @"0";
+            NSDictionary *conditions = weatherConditionsWithoutPrecipitationType(probability);
+
+            TRWeatherUpdate *update = [[TRWeatherUpdate alloc] initWithPlacemark:stubbedPlacemark()
+                                                           currentConditionsJSON:conditions
+                                                        yesterdaysConditionsJSON:@{}];
+
+            expect(update.precipitationPercentage).to.equal(0.0f);
+            expect(update.precipitationType).to.equal(@"rain");
         });
     });
 });

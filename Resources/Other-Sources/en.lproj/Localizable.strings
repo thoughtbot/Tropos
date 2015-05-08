@@ -1,4 +1,5 @@
 "DifferentTemperatureFormat" = "It's %@ %@ than %@.";
+"PrecipitationChanceFormat" = "%@ chance of %@ %@.";
 "SameTemperatureFormat" = "It's the %@ %@ as %@.";
 
 "Hotter" = "hotter";
@@ -15,3 +16,10 @@
 "YesterdayMorning" = "yesterday morning";
 "ThisAfternoon" = "this afternoon";
 "YesterdayAfternoon" = "yesterday afternoon";
+
+"NoneRain" = "No chance of rain today.";
+"SlightRain" = "Slight chance of rain today.";
+"GoodRain" = "Good chance of rain today.";
+"NoneSnow" = "No chance of snow today.";
+"SlightSnow" = "Slight chance of snow today.";
+"GoodSnow" = "Good chance of snow today.";
