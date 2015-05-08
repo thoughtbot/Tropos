@@ -22,6 +22,7 @@
 @property (weak, nonatomic) IBOutlet UIImageView *windSpeedImageView;
 @property (weak, nonatomic) IBOutlet UIImageView *temperatureImageView;
 @property (weak, nonatomic) IBOutlet UILabel *precipitationDescriptionLabel;
+@property (weak, nonatomic) IBOutlet UIImageView *precipitationImageView;
 
 @property (weak, nonatomic) IBOutlet TRDailyForecastView *oneDayForecastView;
 @property (weak, nonatomic) IBOutlet TRDailyForecastView *twoDayForecastView;
@@ -42,8 +43,11 @@
     RAC(self.lastUpdatedLabel, text) = self.controller.status;
     RAC(self.conditionsImageView, image) = self.controller.conditionsImage;
     RAC(self.conditionsDescriptionLabel, attributedText) = self.controller.conditionsDescription;
-    RAC(self.windSpeedLabel, text) = self.controller.windDescription;
     RAC(self.precipitationDescriptionLabel, text) = self.controller.precipitationDescription;
+    RAC(self.precipitationImageView, hidden) = [self.controller.precipitationDescription map:^id(id value) {
+      return @(value == nil);
+    }];
+    RAC(self.windSpeedLabel, text) = self.controller.windDescription;
     RAC(self.windSpeedImageView, hidden) = [self.controller.windDescription map:^id(id value) {
         return @(value == nil);
     }];
