@@ -18,16 +18,20 @@
 @property (nonatomic, copy, readwrite) NSArray *dailyForecasts;
 
 @property (nonatomic) CLPlacemark *placemark;
+@property (nonatomic) NSDictionary *currentConditions;
+@property (nonatomic) NSDictionary *yesterdaysConditions;
 
 @end
 
 @implementation TRWeatherUpdate
 
-- (instancetype)initWithPlacemark:(CLPlacemark *)placemark currentConditionsJSON:(id)currentConditionsJSON yesterdaysConditionsJSON:(id)yesterdaysConditionsJSON
+- (instancetype)initWithPlacemark:(CLPlacemark *)placemark currentConditionsJSON:(NSDictionary *)currentConditionsJSON yesterdaysConditionsJSON:(NSDictionary *)yesterdaysConditionsJSON
 {
     self = [super init];
     if (!self) return nil;
 
+    self.currentConditions = currentConditionsJSON;
+    self.yesterdaysConditions = yesterdaysConditionsJSON;
     self.placemark = placemark;
     self.city = placemark.locality;
     self.state = placemark.administrativeArea;
@@ -66,6 +70,28 @@
     } else if (self.currentTemperature.fahrenheitValue > self.currentHigh.fahrenheitValue) {
         self.currentHigh = self.currentTemperature;
     }
+}
+
+#pragma mark - NSCoding
+
+static NSString *const TRCurrentConditionsKey = @"TRCurrentConditions";
+static NSString *const TRYesterdaysConditionsKey = @"TRYesterdaysConditionsConditions";
+static NSString *const TRPlacemarkKey = @"TRPlacemark";
+
+- (void)encodeWithCoder:(NSCoder *)coder
+{
+    [coder encodeObject:self.currentConditions forKey:TRCurrentConditionsKey];
+    [coder encodeObject:self.yesterdaysConditions forKey:TRYesterdaysConditionsKey];
+    [coder encodeObject:self.placemark forKey:TRPlacemarkKey];
+}
+
+- (instancetype)initWithCoder:(NSCoder *)coder
+{
+    CLPlacemark *placemark = [coder decodeObjectForKey:TRPlacemarkKey];
+    NSDictionary *currentConditions = [coder decodeObjectForKey:TRCurrentConditionsKey];
+    NSDictionary *yesterdaysConditions = [coder decodeObjectForKey:TRYesterdaysConditionsKey];
+
+    return [self initWithPlacemark:placemark currentConditionsJSON:currentConditions yesterdaysConditionsJSON:yesterdaysConditions];
 }
 
 @end

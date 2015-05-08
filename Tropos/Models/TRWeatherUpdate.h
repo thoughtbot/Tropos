@@ -1,7 +1,7 @@
 @class CLPlacemark;
 @class TRTemperature;
 
-@interface TRWeatherUpdate : NSObject
+@interface TRWeatherUpdate : NSObject <NSCoding>
 
 @property (nonatomic, copy, readonly) NSString *city;
 @property (nonatomic, copy, readonly) NSString *state;

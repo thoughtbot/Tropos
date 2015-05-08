@@ -8,6 +8,7 @@
 #import "TRDailyForecastViewModel.h"
 #import "TRAnalyticsController.h"
 #import "TRWeatherViewModel.h"
+#import "TRWeatherUpdateCache.h"
 
 @interface TRWeatherController ()
 
@@ -49,9 +50,7 @@
         }];
     }];
 
-    RAC(self, viewModel) = [[[self.updateWeatherCommand.executionSignals switchToLatest] doNext:^(TRWeatherUpdate *update) {
-        [[TRAnalyticsController sharedController] trackEvent:update];
-    }] map:^id(TRWeatherUpdate *update) {
+    RAC(self, viewModel) = [[self latestWeatherUpdates] map:^id(TRWeatherUpdate *update) {
         return [[TRWeatherViewModel alloc] initWithWeatherUpdate:update];
     }];
 
@@ -59,18 +58,33 @@
         [[TRAnalyticsController sharedController] trackError:error eventName:@"Error: Weather Update"];
     }];
 
+    [[self latestWeatherUpdates] subscribeNext:^(TRWeatherUpdate *update) {
+        [[TRAnalyticsController sharedController] trackEvent:update];
+        [[TRWeatherUpdateCache new] archiveWeatherUpdate:update];
+    }];
+
     return self;
+}
+
+- (RACSignal *)latestWeatherUpdates
+{
+    TRWeatherUpdate *cachedUpdate = [[TRWeatherUpdateCache new] latestWeatherUpdate];
+    RACSignal *weatherUpdates = [self.updateWeatherCommand.executionSignals startWith:[RACSignal return:cachedUpdate]];
+
+    return [[weatherUpdates switchToLatest] filter:^BOOL(TRWeatherUpdate *update) {
+        return update != nil;
+    }];
 }
 
 #pragma mark - Properties
 
 - (RACSignal *)status
 {
-    RACSignal *updating = [[self.updateWeatherCommand.executing ignore:@NO] mapReplace:nil];
+    RACSignal *initialValue = [RACSignal return:nil];
     RACSignal *success = [RACObserve(self, viewModel.updatedDateString) ignore:nil];
     RACSignal *error = [[RACObserve(self, weatherUpdateError) ignore:nil] mapReplace:nil];
 
-    return [RACSignal merge:@[updating, success, error]];
+    return [RACSignal merge:@[initialValue, success, error]];
 }
 
 - (RACSignal *)locationName
