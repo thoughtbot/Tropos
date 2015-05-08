@@ -59,6 +59,9 @@
 		C2E44CF81A3B7538009CC844 /* TRTemperature.m in Sources */ = {isa = PBXBuildFile; fileRef = C2E44CF71A3B7538009CC844 /* TRTemperature.m */; };
 		C2E44CFB1A3B76B3009CC844 /* NSNumber+TRRoundedNumber.m in Sources */ = {isa = PBXBuildFile; fileRef = C2E44CFA1A3B76B3009CC844 /* NSNumber+TRRoundedNumber.m */; };
 		C2E44CFE1A3B7C14009CC844 /* TRTemperatureSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = C2E44CFD1A3B7C14009CC844 /* TRTemperatureSpec.m */; };
+		C44ECB221AFD00E300B1195E /* TRPrecipitationSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = C44ECB211AFD00E300B1195E /* TRPrecipitationSpec.m */; };
+		C44ECB251AFD074600B1195E /* TRPrecipitation.m in Sources */ = {isa = PBXBuildFile; fileRef = C44ECB241AFD074600B1195E /* TRPrecipitation.m */; };
+		C4B3320C1AFD480E00401873 /* TRPrecipitationChanceFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = C4B3320B1AFD480E00401873 /* TRPrecipitationChanceFormatter.m */; };
 		C9318C8461EB5FE3914F9AC0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2853082980109C89B8F07D3C /* main.m */; };
 		CE5D7F3B45F980082E1BCA30 /* LaunchScreen.xib in Sources */ = {isa = PBXBuildFile; fileRef = B6D58F8AA6976EA1B35682B7 /* LaunchScreen.xib */; };
 		CFC0721C2D9EFFD3C3AE11A7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 059D0BDDF8DCE56549A4C9C6 /* Images.xcassets */; };
@@ -183,6 +186,11 @@
 		C2E44CF91A3B76B3009CC844 /* NSNumber+TRRoundedNumber.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSNumber+TRRoundedNumber.h"; sourceTree = "<group>"; };
 		C2E44CFA1A3B76B3009CC844 /* NSNumber+TRRoundedNumber.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSNumber+TRRoundedNumber.m"; sourceTree = "<group>"; };
 		C2E44CFD1A3B7C14009CC844 /* TRTemperatureSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRTemperatureSpec.m; sourceTree = "<group>"; };
+		C44ECB211AFD00E300B1195E /* TRPrecipitationSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRPrecipitationSpec.m; sourceTree = "<group>"; };
+		C44ECB231AFD049000B1195E /* TRPrecipitation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRPrecipitation.h; sourceTree = "<group>"; };
+		C44ECB241AFD074600B1195E /* TRPrecipitation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRPrecipitation.m; sourceTree = "<group>"; };
+		C4B3320A1AFD476500401873 /* TRPrecipitationChanceFormatter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TRPrecipitationChanceFormatter.h; sourceTree = "<group>"; };
+		C4B3320B1AFD480E00401873 /* TRPrecipitationChanceFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRPrecipitationChanceFormatter.m; sourceTree = "<group>"; };
 		DED70296CC99B4AAD0DE42BD /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		E2B218FB5F097AAE3080F4DD /* UnitTests-Prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UnitTests-Prefix.pch"; sourceTree = "<group>"; };
 		E59B090E67C8BD269D3CD9DB /* Main.storyboard */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
@@ -295,6 +303,8 @@
 				4D93151F1A6F44EB00CE95B3 /* TRDateFormatter.m */,
 				4DD90B981AAE5D880069ECA7 /* TRWindSpeedFormatter.h */,
 				4DD90B991AAE5D880069ECA7 /* TRWindSpeedFormatter.m */,
+				C4B3320A1AFD476500401873 /* TRPrecipitationChanceFormatter.h */,
+				C4B3320B1AFD480E00401873 /* TRPrecipitationChanceFormatter.m */,
 			);
 			path = Formatters;
 			sourceTree = "<group>";
@@ -310,6 +320,8 @@
 				4DEDF4F51A6FA682006F3F11 /* TRWeatherUpdate.m */,
 				4D98E9891A80C89600856412 /* TRDailyForecast.h */,
 				4D98E98A1A80C89600856412 /* TRDailyForecast.m */,
+				C44ECB231AFD049000B1195E /* TRPrecipitation.h */,
+				C44ECB241AFD074600B1195E /* TRPrecipitation.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -455,6 +467,7 @@
 				4D9CA35C1A5C7672009E24DD /* TRBearingFormatterSpec.m */,
 				4DA79AC01A68806600C3539D /* UIColor_TRTemperatureColorsSpec.m */,
 				E7E8D6021ACF0B9700BD8364 /* TRWeatherUpdateSpec.m */,
+				C44ECB211AFD00E300B1195E /* TRPrecipitationSpec.m */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -730,6 +743,7 @@
 				4D7389DF1A9890CD0039F13B /* UIScrollView+TRReactiveCocoa.m in Sources */,
 				4DC069CD1A95B8F800F3BCEB /* TRColorBackdropLayer.m in Sources */,
 				4DDF65061AB3AC0C00909D67 /* TRWeatherController.m in Sources */,
+				C44ECB251AFD074600B1195E /* TRPrecipitation.m in Sources */,
 				4D9CA3621A5CB544009E24DD /* TRSettingsController.m in Sources */,
 				4D0A5C381A3A27510084C41E /* TRForecastController.m in Sources */,
 				4D49554C1A8C298A0066F278 /* TRRefreshView.m in Sources */,
@@ -752,6 +766,7 @@
 				4D98E98B1A80C89600856412 /* TRDailyForecast.m in Sources */,
 				C2E44CF81A3B7538009CC844 /* TRTemperature.m in Sources */,
 				4D98E9851A80C43F00856412 /* TRDailyForecastView.m in Sources */,
+				C4B3320C1AFD480E00401873 /* TRPrecipitationChanceFormatter.m in Sources */,
 				4D9A00061A9D61CD000835A9 /* TRAnalyticsController.m in Sources */,
 				4D7CDECC1A47E13F0038DD33 /* TRTemperatureComparisonFormatter.m in Sources */,
 				4D7CDEC51A47DCD60038DD33 /* NSMutableAttributedString+TRAttributeHelpers.m in Sources */,
@@ -775,6 +790,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C44ECB221AFD00E300B1195E /* TRPrecipitationSpec.m in Sources */,
 				E7E8D6031ACF0B9700BD8364 /* TRWeatherUpdateSpec.m in Sources */,
 				4D9CA35D1A5C7672009E24DD /* TRBearingFormatterSpec.m in Sources */,
 				C2E44CFE1A3B7C14009CC844 /* TRTemperatureSpec.m in Sources */,
@@ -818,6 +834,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				DSTROOT = /tmp/xcodeproj.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -835,6 +852,7 @@
 					"$(inherited)",
 				);
 				PRODUCT_NAME = Tropos;
+				PROVISIONING_PROFILE = "";
 				PUBLIC_HEADERS_FOLDER_PATH = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -901,6 +919,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DSTROOT = /tmp/xcodeproj.dst;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -916,6 +935,7 @@
 				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = Tropos;
+				PROVISIONING_PROFILE = "";
 				PUBLIC_HEADERS_FOLDER_PATH = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 			};

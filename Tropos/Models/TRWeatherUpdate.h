@@ -6,6 +6,7 @@
 @property (nonatomic, copy, readonly) NSString *city;
 @property (nonatomic, copy, readonly) NSString *state;
 @property (nonatomic, copy, readonly) NSString *conditionsDescription;
+@property (nonatomic, copy, readonly) NSString *precipitationType;
 @property (nonatomic, readonly) TRTemperature *currentTemperature;
 @property (nonatomic, readonly) TRTemperature *currentHigh;
 @property (nonatomic, readonly) TRTemperature *currentLow;

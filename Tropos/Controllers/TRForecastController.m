@@ -64,7 +64,6 @@ static NSString *const TRForecastAPIExclusions = @"minutely,hourly,alerts,flags"
                 [subscriber sendError:[NSError errorWithDomain:TRErrorDomain code:200 userInfo:nil]];
                 return;
             }
-            
             [subscriber sendNext:data];
             [subscriber sendCompleted];
         }];
@@ -81,7 +80,6 @@ static NSString *const TRForecastAPIExclusions = @"minutely,hourly,alerts,flags"
     return [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
         NSError *error;
         id JSON = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
-        NSLog(@"%@", JSON);
 
         if (!JSON) {
             [subscriber sendError:error];
