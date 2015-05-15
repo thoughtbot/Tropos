@@ -204,7 +204,7 @@
                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wind-icon-small" translatesAutoresizingMaskIntoConstraints="NO" id="3pS-wp-yDf" userLabel="Precipitation Icon" customClass="TRImageView">
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rain-drop" translatesAutoresizingMaskIntoConstraints="NO" id="3pS-wp-yDf" userLabel="Precipitation Icon" customClass="TRImageView">
                                                 <rect key="frame" x="20" y="410" width="16" height="16"/>
                                             </imageView>
                                         </subviews>
@@ -342,6 +342,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="rain-drop" width="22" height="41"/>
         <image name="temp" width="14" height="33"/>
         <image name="thoughtbot-logo-full" width="200" height="49"/>
         <image name="wind-icon-small" width="43" height="30"/>
