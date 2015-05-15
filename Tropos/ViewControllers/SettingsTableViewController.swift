@@ -82,7 +82,7 @@ class SettingsTableViewController: UITableViewController {
     
     override func tableView(tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
         if let headerView = view as? UITableViewHeaderFooterView {
-            headerView.textLabel.font = .defaultLightFontOfSize(15)
+            headerView.textLabel.font = .defaultLightFontOfSize(13)
             headerView.textLabel.textColor = .lightTextColor()
         }
     }
