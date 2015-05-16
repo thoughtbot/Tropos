@@ -1,19 +1,14 @@
-# CarlWeathers #
+# Tropos #
 
 ## Setup ##
-
-Create `Secrets.h` and include the necessary contents
-
-```
-#define TROPOS_HOCKEY_IDENTIFIER @""
-```
 
 Run `bin/setup`
 
 This will:
 
- - Install the gem dependencies
- - Install the pod dependencies
+- Install the gem dependencies
+- Install the pod dependencies
+- Create `Secrets.h`. **You must include the necessary contents.**
 
 ## Testing ##
 

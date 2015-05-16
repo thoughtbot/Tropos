@@ -6,4 +6,6 @@ branches:
 
 env: export LANG=en_US.UTF-8
 
-script: bin/test
+script:
+  - cp Tropos/Secrets-Example.h Tropos/Secrets.h
+  - bin/test
