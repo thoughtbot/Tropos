@@ -26,6 +26,7 @@ build/
 
 # Cocoapods
 Pods
+.ruby-version
 
 # AppCode specific files
 .idea/
