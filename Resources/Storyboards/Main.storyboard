@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="zCV-BE-JFf">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="zCV-BE-JFf">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
@@ -59,7 +59,7 @@
                                     <constraint firstItem="wLb-HP-UyY" firstAttribute="top" secondItem="0is-eh-6sU" secondAttribute="top" constant="10" id="uIj-jC-4XF"/>
                                 </constraints>
                             </view>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aA7-UE-koO">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aA7-UE-koO">
                                 <rect key="frame" x="0.0" y="64" width="600" height="536"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BVN-q4-01Z" userLabel="Refresh Control" customClass="TRRefreshControl">
@@ -92,7 +92,7 @@
                                             <outlet property="scrollView" destination="aA7-UE-koO" id="IQi-6a-rys"/>
                                         </connections>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cpD-iZ-axV" userLabel="Forecast View">
+                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cpD-iZ-axV" userLabel="Forecast View">
                                         <rect key="frame" x="0.0" y="536" width="600" height="200"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FOt-Fu-PRv" userLabel="Left Day View" customClass="TRDailyForecastView">
@@ -128,10 +128,10 @@
                                             <constraint firstItem="FOt-Fu-PRv" firstAttribute="width" secondItem="cpD-iZ-axV" secondAttribute="width" multiplier="0.333333" id="inK-eA-Qhz"/>
                                         </constraints>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5Yw-zl-yWp" userLabel="Current Conditions View">
+                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5Yw-zl-yWp" userLabel="Current Conditions View">
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="536"/>
                                         <subviews>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="r7S-cF-Z7O" userLabel="Forecast Container View">
+                                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="r7S-cF-Z7O" userLabel="Forecast Container View">
                                                 <rect key="frame" x="48" y="176" width="532" height="185"/>
                                                 <subviews>
                                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ef5-IL-xEe" userLabel="Conditions Icon" customClass="TRImageView">
@@ -140,9 +140,9 @@
                                                             <constraint firstAttribute="width" secondItem="Ef5-IL-xEe" secondAttribute="height" multiplier="1:1" id="FD7-Zx-h5o"/>
                                                         </constraints>
                                                     </imageView>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="It's warmer today than yesterday at this time." lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4aa-2F-UFk" userLabel="Conditions Description" customClass="TRLabel">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" misplaced="YES" text="It's warmer today than yesterday at this time." lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4aa-2F-UFk" userLabel="Conditions Description" customClass="TRLabel">
                                                         <rect key="frame" x="0.0" y="139" width="522" height="28"/>
-                                                        <fontDescription key="fontDescription" name="DINNextLTPro-Light" family="DIN Next LT Pro" pointSize="32"/>
+                                                        <fontDescription key="fontDescription" name="DINNextLTPro-Light" family="DIN Next LT Pro" pointSize="24"/>
                                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
@@ -157,7 +157,7 @@
                                                     <constraint firstAttribute="bottom" secondItem="4aa-2F-UFk" secondAttribute="bottom" constant="18" id="w4B-vu-EcE"/>
                                                 </constraints>
                                             </view>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="51° / 38°" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jm9-4j-cuq" userLabel="High and Low Temp Label" customClass="TRLabel">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="51° / 38°" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jm9-4j-cuq" userLabel="High and Low Temp Label" customClass="TRLabel">
                                                 <rect key="frame" x="48" y="473" width="532" height="30"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="IHK-md-KTl"/>
@@ -166,7 +166,7 @@
                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wind-icon-small" translatesAutoresizingMaskIntoConstraints="NO" id="Qna-Fn-Mlz" userLabel="Wind Icon" customClass="TRImageView">
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="wind-icon-small" translatesAutoresizingMaskIntoConstraints="NO" id="Qna-Fn-Mlz" userLabel="Wind Icon" customClass="TRImageView">
                                                 <rect key="frame" x="20" y="447" width="16" height="16"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="Qna-Fn-Mlz" secondAttribute="height" multiplier="1:1" id="6ol-1s-Zzj"/>
@@ -179,13 +179,13 @@
                                                     </mask>
                                                 </variation>
                                             </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="8.0 mph SWE" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fIp-2s-RDl" userLabel="Wind Label" customClass="TRLabel">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="8.0 mph SWE" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fIp-2s-RDl" userLabel="Wind Label" customClass="TRLabel">
                                                 <rect key="frame" x="48" y="441" width="532" height="30"/>
                                                 <fontDescription key="fontDescription" name="DINNextLTPro-Light" family="DIN Next LT Pro" pointSize="20"/>
                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="temp" translatesAutoresizingMaskIntoConstraints="NO" id="wxI-GT-UQg" userLabel="Temperature Icon" customClass="TRImageView">
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="temp" translatesAutoresizingMaskIntoConstraints="NO" id="wxI-GT-UQg" userLabel="Temperature Icon" customClass="TRImageView">
                                                 <rect key="frame" x="20" y="479" width="16" height="16"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="16" id="cPB-2g-kPR"/>
@@ -198,13 +198,13 @@
                                                     </mask>
                                                 </variation>
                                             </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="80% chance of rain today" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uCd-pt-n36" userLabel="Precipitation Label" customClass="TRLabel">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="80% chance of rain today" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uCd-pt-n36" userLabel="Precipitation Label" customClass="TRLabel">
                                                 <rect key="frame" x="48" y="404" width="214" height="30"/>
                                                 <fontDescription key="fontDescription" name="DINNextLTPro-Light" family="DIN Next LT Pro" pointSize="20"/>
                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rain-drop" translatesAutoresizingMaskIntoConstraints="NO" id="3pS-wp-yDf" userLabel="Precipitation Icon" customClass="TRImageView">
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="rain-drop" translatesAutoresizingMaskIntoConstraints="NO" id="3pS-wp-yDf" userLabel="Precipitation Icon" customClass="TRImageView">
                                                 <rect key="frame" x="20" y="410" width="16" height="16"/>
                                             </imageView>
                                         </subviews>
@@ -253,7 +253,7 @@
                                     <outlet property="delegate" destination="zCV-BE-JFf" id="Bbq-k6-bPM"/>
                                 </connections>
                             </scrollView>
-                            <navigationBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8pq-jS-l9S" customClass="TRNavigationBar">
+                            <navigationBar contentMode="scaleToFill" misplaced="YES" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8pq-jS-l9S" customClass="TRNavigationBar">
                                 <rect key="frame" x="0.0" y="20" width="600" height="44"/>
                                 <color key="barTintColor" red="0.098039215686274508" green="0.098039215686274508" blue="0.12941176470588234" alpha="1" colorSpace="calibratedRGB"/>
                                 <textAttributes key="titleTextAttributes">

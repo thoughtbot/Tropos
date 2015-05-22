@@ -1,6 +1,6 @@
-"DifferentTemperatureFormat" = "It's %@ %@ than %@.";
+"DifferentTemperatureFormat" = "It's %@ %@ than %@%@.";
 "PrecipitationChanceFormat" = "%@ chance of %@ %@.";
-"SameTemperatureFormat" = "It's the %@ %@ as %@.";
+"SameTemperatureFormat" = "It's the %@ %@ as %@%@.";
 
 "Hotter" = "hotter";
 "Warmer" = "warmer";
@@ -17,9 +17,9 @@
 "ThisAfternoon" = "this afternoon";
 "YesterdayAfternoon" = "yesterday afternoon";
 
-"NoneRain" = "No chance of rain today.";
-"SlightRain" = "Slight chance of rain today.";
-"GoodRain" = "Good chance of rain today.";
-"NoneSnow" = "No chance of snow today.";
-"SlightSnow" = "Slight chance of snow today.";
-"GoodSnow" = "Good chance of snow today.";
+"NoneRain" = ", with no chance of rain";
+"SlightRain" = ", with a slight chance of rain";
+"GoodRain" = ", with a good chance of rain";
+"NoneSnow" = ", with no chance of snow";
+"SlightSnow" = ", with a slight chance of snow";
+"GoodSnow" = ", with a good chance of snow";

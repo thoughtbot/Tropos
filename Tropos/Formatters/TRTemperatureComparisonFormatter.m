@@ -9,12 +9,12 @@ typedef NS_ENUM(NSUInteger, TRTimeOfDay) {
 
 @implementation TRTemperatureComparisonFormatter
 
-+ (NSString *)localizedStringFromComparison:(TRTemperatureComparison)comparison adjective:(NSString *__autoreleasing *)adjective
++ (NSString *)localizedStringFromComparison:(TRTemperatureComparison)comparison adjective:(NSString *__autoreleasing *)adjective precipitation:(NSString *)precipitation
 {
     NSString *formatString = (comparison == TRTemperatureComparisonSame)? NSLocalizedString(@"SameTemperatureFormat", nil) : NSLocalizedString(@"DifferentTemperatureFormat", nil);
     *adjective = [self localizedAdjectiveForTemperatureComparison:comparison];
 
-    return [NSString stringWithFormat:formatString, *adjective, [self localizedCurrentTimeOfDay], [self localizedPreviousTimeOfDay]];
+    return [NSString stringWithFormat:formatString, *adjective, [self localizedCurrentTimeOfDay], [self localizedPreviousTimeOfDay], precipitation];
 }
 
 #pragma mark - Private Methods
