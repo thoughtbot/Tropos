@@ -17,7 +17,7 @@
 "ThisAfternoon" = "this afternoon";
 "YesterdayAfternoon" = "yesterday afternoon";
 
-"NoneRain" = ", with no chance of rain";
+"NoneRain" = "";
 "SlightRain" = ", with a slight chance of rain";
 "GoodRain" = ", with a good chance of rain";
 "NoneSnow" = ", with no chance of snow";
