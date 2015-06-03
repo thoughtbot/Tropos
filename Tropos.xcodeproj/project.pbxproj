@@ -12,7 +12,6 @@
 		4D0A5C381A3A27510084C41E /* TRForecastController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D0A5C371A3A27510084C41E /* TRForecastController.m */; };
 		4D0A5C3D1A3A53DD0084C41E /* CWForecastDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D0A5C3C1A3A53DD0084C41E /* CWForecastDetailView.xib */; };
 		4D1ABA0B1A89686200B7F8FB /* TRNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D1ABA0A1A89686200B7F8FB /* TRNavigationBar.m */; };
-		4D3039E71A5749120042FFF8 /* TRPrecipitationMeterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D3039E61A5749120042FFF8 /* TRPrecipitationMeterView.m */; };
 		4D3336F61A80BE16001BA9A8 /* TRDailyForecastView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D3336F51A80BE16001BA9A8 /* TRDailyForecastView.xib */; };
 		4D3386FF1A5D27260087B88F /* TRTemperatureFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D3386FE1A5D27260087B88F /* TRTemperatureFormatter.m */; };
 		4D3387021A5D4C300087B88F /* NSBundle+TRBundleInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D3387011A5D4C300087B88F /* NSBundle+TRBundleInfo.m */; };
@@ -95,8 +94,6 @@
 		4D0A5C3C1A3A53DD0084C41E /* CWForecastDetailView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CWForecastDetailView.xib; sourceTree = "<group>"; };
 		4D1ABA091A89686200B7F8FB /* TRNavigationBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRNavigationBar.h; sourceTree = "<group>"; };
 		4D1ABA0A1A89686200B7F8FB /* TRNavigationBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRNavigationBar.m; sourceTree = "<group>"; };
-		4D3039E51A5749120042FFF8 /* TRPrecipitationMeterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRPrecipitationMeterView.h; sourceTree = "<group>"; };
-		4D3039E61A5749120042FFF8 /* TRPrecipitationMeterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRPrecipitationMeterView.m; sourceTree = "<group>"; };
 		4D3336F51A80BE16001BA9A8 /* TRDailyForecastView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TRDailyForecastView.xib; sourceTree = "<group>"; };
 		4D3386FD1A5D27260087B88F /* TRTemperatureFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRTemperatureFormatter.h; sourceTree = "<group>"; };
 		4D3386FE1A5D27260087B88F /* TRTemperatureFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRTemperatureFormatter.m; sourceTree = "<group>"; };
@@ -335,8 +332,6 @@
 				4D76CCD31A99C3FA00DDE5EB /* TRRefreshLayer.m */,
 				4D49554D1A8C29C30066F278 /* TRCircularProgressLayer.h */,
 				4D49554E1A8C29C30066F278 /* TRCircularProgressLayer.m */,
-				4D3039E51A5749120042FFF8 /* TRPrecipitationMeterView.h */,
-				4D3039E61A5749120042FFF8 /* TRPrecipitationMeterView.m */,
 				4D98E9831A80C43F00856412 /* TRDailyForecastView.h */,
 				4D98E9841A80C43F00856412 /* TRDailyForecastView.m */,
 				4D4937761A82F30D007A1FA9 /* TRLabel.h */,
@@ -750,7 +745,6 @@
 				C2E44CEF1A3B6E89009CC844 /* NSDate+TRRelativeDate.m in Sources */,
 				4D4937781A82F30D007A1FA9 /* TRLabel.m in Sources */,
 				4D3387021A5D4C300087B88F /* NSBundle+TRBundleInfo.m in Sources */,
-				4D3039E71A5749120042FFF8 /* TRPrecipitationMeterView.m in Sources */,
 				C2E44CDD1A3A38A2009CC844 /* TRLocationController.m in Sources */,
 				4D76CCD41A99C3FA00DDE5EB /* TRRefreshLayer.m in Sources */,
 				D7DD1B8AD495AFA4EC1CEFF9 /* TRAppDelegate.m in Sources */,

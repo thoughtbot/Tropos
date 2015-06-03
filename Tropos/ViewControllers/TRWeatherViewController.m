@@ -1,7 +1,6 @@
 #import "TRWeatherViewController.h"
 #import "TRWeatherController.h"
 #import "TRWeatherController.h"
-#import "TRPrecipitationMeterView.h"
 #import "TRDailyForecastView.h"
 #import "TRRefreshControl.h"
 #import "TRAnalyticsController.h"
@@ -21,8 +20,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *highLowTemperatureLabel;
 @property (weak, nonatomic) IBOutlet UIImageView *windSpeedImageView;
 @property (weak, nonatomic) IBOutlet UIImageView *temperatureImageView;
-@property (weak, nonatomic) IBOutlet UILabel *precipitationDescriptionLabel;
-@property (weak, nonatomic) IBOutlet UIImageView *precipitationImageView;
 
 @property (weak, nonatomic) IBOutlet TRDailyForecastView *oneDayForecastView;
 @property (weak, nonatomic) IBOutlet TRDailyForecastView *twoDayForecastView;
@@ -43,10 +40,6 @@
     RAC(self.lastUpdatedLabel, text) = self.controller.status;
     RAC(self.conditionsImageView, image) = self.controller.conditionsImage;
     RAC(self.conditionsDescriptionLabel, attributedText) = self.controller.conditionsDescription;
-    RAC(self.precipitationDescriptionLabel, text) = self.controller.precipitationDescription;
-    RAC(self.precipitationImageView, hidden) = [self.controller.precipitationDescription map:^id(id value) {
-      return @(value == nil);
-    }];
     RAC(self.windSpeedLabel, text) = self.controller.windDescription;
     RAC(self.windSpeedImageView, hidden) = [self.controller.windDescription map:^id(id value) {
         return @(value == nil);
