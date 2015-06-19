@@ -41,7 +41,7 @@
     @weakify(self)
     self.updateWeatherCommand = [[RACCommand alloc] initWithSignalBlock:^RACSignal *(id input) {
         @strongify(self)
-        return [[[[self.locationController requestWhenInUseAuthorization] then:^RACSignal *{
+        return [[[[self.locationController requestAlwaysAuthorization] then:^RACSignal *{
             return [self.locationController updateCurrentLocation];
         }] flattenMap:^RACStream *(CLLocation *location) {
             return [self.geocodeController reverseGeocodeLocation:location];

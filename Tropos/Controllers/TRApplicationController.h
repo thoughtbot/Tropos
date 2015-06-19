@@ -4,4 +4,7 @@
 
 @property (nonatomic) TRWeatherViewController *rootViewController;
 
+- (RACSignal *)performBackgroundFetch;
+- (void)setMinimumBackgroundFetchIntervalForApplication:(UIApplication *)application;
+
 @end

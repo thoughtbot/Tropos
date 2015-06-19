@@ -28,10 +28,10 @@
 
 #pragma mark - Properties
 
-- (RACSignal *)requestWhenInUseAuthorization
+- (RACSignal *)requestAlwaysAuthorization
 {
     if ([self needsAuthorization]) {
-        [self.locationManager requestWhenInUseAuthorization];
+        [self.locationManager requestAlwaysAuthorization];
         return [self didAuthorize];
     } else {
         return [self authorized];
@@ -57,23 +57,28 @@
     }];
 }
 
+- (BOOL)authorizationStatusEqualTo:(CLAuthorizationStatus)status
+{
+    return [CLLocationManager authorizationStatus] == status;
+}
+
 #pragma mark - Private
 
 - (BOOL)needsAuthorization
 {
-    return ([CLLocationManager authorizationStatus] == kCLAuthorizationStatusNotDetermined);
+    return [self authorizationStatusEqualTo:kCLAuthorizationStatusNotDetermined];
 }
 
 - (RACSignal *)didAuthorize
 {
     return [[[[self didChangeAuthorizationStatus] ignore:@(kCLAuthorizationStatusNotDetermined)] map:^id(NSNumber *status) {
-        return @(status.integerValue == kCLAuthorizationStatusAuthorizedWhenInUse);
+        return @(status.integerValue == kCLAuthorizationStatusAuthorizedWhenInUse || status.integerValue == kCLAuthorizationStatusAuthorizedAlways);
     }] take:1];
 }
 
 - (RACSignal *)authorized
 {
-    BOOL authorized = ([CLLocationManager authorizationStatus] == kCLAuthorizationStatusAuthorizedWhenInUse);
+    BOOL authorized = [self authorizationStatusEqualTo:kCLAuthorizationStatusAuthorizedWhenInUse] || [self authorizationStatusEqualTo:kCLAuthorizationStatusAuthorizedAlways];
     return [RACSignal return:@(authorized)];
 }
 

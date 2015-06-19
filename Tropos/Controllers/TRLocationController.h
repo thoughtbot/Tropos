@@ -1,6 +1,7 @@
 @interface TRLocationController : NSObject
 
-- (RACSignal *)requestWhenInUseAuthorization;
+- (RACSignal *)requestAlwaysAuthorization;
 - (RACSignal *)updateCurrentLocation;
+- (BOOL)authorizationStatusEqualTo:(CLAuthorizationStatus)status;
 
 @end
