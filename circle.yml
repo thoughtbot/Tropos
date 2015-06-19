@@ -1,0 +1,6 @@
+machine:
+  xcode:
+    version: "6.3.1"
+test:
+  pre:
+    - cp Tropos/Secrets-Example.h Tropos/Secrets.h
