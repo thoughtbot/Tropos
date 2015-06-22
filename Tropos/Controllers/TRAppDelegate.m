@@ -14,6 +14,7 @@
 {
 #ifndef DEBUG
     [[BITHockeyManager sharedHockeyManager] configureWithIdentifier:TRHockeyIdentifier];
+    [[BITHockeyManager sharedHockeyManager].crashManager setCrashManagerStatus:BITCrashManagerStatusAutoSend];
     [[BITHockeyManager sharedHockeyManager] startManager];
     [[BITHockeyManager sharedHockeyManager].authenticator authenticateInstallation];
 
