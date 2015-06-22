@@ -1,6 +1,7 @@
 PODS:
   - Expecta (0.3.1)
   - HockeySDK (3.6.2)
+  - Keys (1.0.0)
   - Mixpanel (2.7.2):
     - Mixpanel/MPCategoryHelpers (= 2.7.2)
   - Mixpanel/MPCategoryHelpers (2.7.2)
@@ -20,6 +21,7 @@ PODS:
 DEPENDENCIES:
   - Expecta
   - HockeySDK (~> 3.6.2)
+  - Keys (from `Pods/CocoaPodsKeys`)
   - Mixpanel (~> 2.7.2)
   - OCMock
   - OHHTTPStubs
@@ -27,6 +29,8 @@ DEPENDENCIES:
   - Specta (from `https://github.com/specta/specta.git`, tag `v0.3.0.beta1`)
 
 EXTERNAL SOURCES:
+  Keys:
+    :path: Pods/CocoaPodsKeys
   Specta:
     :git: https://github.com/specta/specta.git
     :tag: v0.3.0.beta1
@@ -39,6 +43,7 @@ CHECKOUT OPTIONS:
 SPEC CHECKSUMS:
   Expecta: a354d4633409dd9fe8c4f5ff5130426adbe31628
   HockeySDK: 51ade1aff04463137e852797d2eb4dfb2511d6a9
+  Keys: 7d2ff6ff42f6903358267ce56e9392f83c31acfe
   Mixpanel: e9bcb16eb0e2a98fc330ceeb0d8b7f4aec4182ab
   OCMock: a10ea9f0a6e921651f96f78b6faee95ebc813b92
   OHHTTPStubs: 00152a63400246fcbc4b772a2a547ea34c97cbd6

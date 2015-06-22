@@ -1,6 +1,10 @@
 machine:
   xcode:
     version: "6.3.1"
-test:
-  pre:
-    - cp Tropos/Secrets-Example.h Tropos/Secrets.h
+dependencies:
+  override:
+    - bundle install
+    - bundle exec pod keys set ForecastAPIKey - Tropos
+    - bundle exec pod keys set MixpanelToken -
+    - bundle exec pod keys set HockeyIdentifier -
+    - bundle exec pod install
