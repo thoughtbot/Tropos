@@ -1,12 +1,7 @@
 #!/usr/bin/env bash
 
 bundle install
-pod install
+bundle exec pod keys set MixpanelToken - Tropos
+bundle exec pod keys set HockeyIdentifier -
+bundle exec pod install
 
-if [ ! -d Tropos/Secrets.h ]; then
-  cp Tropos/Secrets-Example.h Tropos/Secrets.h
-  echo ""
-  echo "-------------------------------------------------"
-  echo "Created Tropos/Secrets.h. Please add your keys to it."
-  echo "-------------------------------------------------"
-fi

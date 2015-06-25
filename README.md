@@ -21,9 +21,10 @@ This will:
 
 - Install the gem dependencies
 - Install the pod dependencies
-- Create `Secrets.h`. `TRForecastAPIKey` is the only one required for the
-  application to run. You can get a key from https://developer.forecast.io. You
-  should include all keys for production builds.
+- Stub Mixpanel and Hockey API keys
+- Prompt you for your Forecast API Key. You can get a key from 
+  https://developer.forecast.io. You should replace stubbed keys for production 
+  builds.
 
 Testing
 -----

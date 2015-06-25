@@ -2,7 +2,7 @@
 #import "TRForecastController.h"
 #import "TRWeatherUpdate.h"
 #import "NSDate+TRRelativeDate.h"
-#import "Secrets.h"
+#import <Keys/TroposKeys.h>
 
 static NSString *const TRForecastAPIExclusions = @"minutely,hourly,alerts,flags";
 
@@ -126,7 +126,7 @@ static NSString *const TRForecastAPIExclusions = @"minutely,hourly,alerts,flags"
     NSURLComponents *components = [NSURLComponents new];
     components.scheme = @"https";
     components.host = @"api.forecast.io";
-    components.path = [NSString stringWithFormat:@"/forecast/%@", TRForecastAPIKey];
+    components.path = [NSString stringWithFormat:@"/forecast/%@", [[TroposKeys new] forecastAPIKey]];
     return components;
 }
 
