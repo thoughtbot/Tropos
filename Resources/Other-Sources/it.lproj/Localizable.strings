@@ -1,12 +1,12 @@
 "DifferentTemperatureFormat" = "È %@ %@ rispetto %@%@.";
 "PrecipitationChanceFormat" = "%@ possibilità di %@ %@.";
-"SameTemperatureFormat" = "È %@ %@ rispetto a %@%@.";
+"SameTemperatureFormat" = "La temperatura %@ %@ rispetto a %@%@.";
 
 "Hotter" = "molto più caldo";
 "Warmer" = "più caldo";
 "Cooler" = "più freddo";
 "Colder" = "molto più freddo";
-"Same" = "lo stesso";
+"Same" = "è stabile";
 
 "Today" = "oggi";
 "Yesterday" = "ieri";
