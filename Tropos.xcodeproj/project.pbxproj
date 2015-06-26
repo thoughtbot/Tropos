@@ -167,6 +167,7 @@
 		4DF5BA381A5B64630088F35F /* TRBearingFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRBearingFormatter.m; sourceTree = "<group>"; };
 		57761BB4DFB42997964F13EE /* Tropos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tropos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5DA50AD81A82CAB300CAE666 /* DINNextLTPro-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DINNextLTPro-Light.otf"; sourceTree = "<group>"; };
+		650F157E1B3DD256004B01B2 /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		65685FF21B3D299C0054BA1A /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/Localizable.strings; sourceTree = "<group>"; };
 		986C425E5A2268D27FAE2FAA /* Tropos-Prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Tropos-Prefix.pch"; sourceTree = "<group>"; };
 		A548375C4E5D454F542CFA0D /* libPods-unit_tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-unit_tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -836,6 +837,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				C2E44CEA1A3A42C6009CC844 /* en */,
+				650F157E1B3DD256004B01B2 /* it */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
