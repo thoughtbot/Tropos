@@ -29,9 +29,9 @@
     NSString *formattedString;
 
     if (!dateString) {
-        formattedString = [NSString localizedStringWithFormat:@"Updated at %@", timeString];
+        formattedString = [NSString localizedStringWithFormat:NSLocalizedString(@"UpdatedAtTime", nil), timeString];
     } else {
-        formattedString = [NSString localizedStringWithFormat:@"Updated %@ at %@", dateString, timeString];
+        formattedString = [NSString localizedStringWithFormat:NSLocalizedString(@"UpdatedAtDateAndTime", nil), dateString, timeString];
     }
 
     return formattedString;

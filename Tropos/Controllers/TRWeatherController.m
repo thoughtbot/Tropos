@@ -89,10 +89,10 @@
 
 - (RACSignal *)locationName
 {
-    RACSignal *startedLocating = [[self.updateWeatherCommand.executing ignore:@NO] mapReplace:NSLocalizedString(@"Checking Weather...", nil)];
+    RACSignal *startedLocating = [[self.updateWeatherCommand.executing ignore:@NO] mapReplace:NSLocalizedString(@"CheckingWeather", nil)];
     RACSignal *updatedLocation = RACObserve(self, viewModel.locationName);
     RACSignal *error = [[RACObserve(self, weatherUpdateError) ignore:nil] map:^id(id value) {
-        return NSLocalizedString(@"Update Failed", nil);
+        return NSLocalizedString(@"UpdateFailed", nil);
     }];
 
     return [[RACSignal merge:@[startedLocating, updatedLocation, error]] startWith:nil];
