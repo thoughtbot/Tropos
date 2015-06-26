@@ -48,6 +48,7 @@
 		4DEDF4F61A6FA682006F3F11 /* TRWeatherUpdate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DEDF4F51A6FA682006F3F11 /* TRWeatherUpdate.m */; };
 		4DF5BA391A5B64630088F35F /* TRBearingFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DF5BA381A5B64630088F35F /* TRBearingFormatter.m */; };
 		5DA50AD91A82CAB300CAE666 /* DINNextLTPro-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5DA50AD81A82CAB300CAE666 /* DINNextLTPro-Light.otf */; };
+		65685FF31B3D299C0054BA1A /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1CDD2312F1EF05277F045E15 /* Info.plist */; };
 		7D54C46B9E7FA5B0724FC775 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B3068282D6E4B66BB58E93BC /* libPods.a */; };
 		8EAE701DFB2DC16543CE1B3C /* libPods-unit_tests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A548375C4E5D454F542CFA0D /* libPods-unit_tests.a */; };
 		C2E44CDD1A3A38A2009CC844 /* TRLocationController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2E44CDC1A3A38A2009CC844 /* TRLocationController.m */; };
@@ -85,7 +86,7 @@
 		059D0BDDF8DCE56549A4C9C6 /* Images.xcassets */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		0B30A1610CAE1C2E302C28B0 /* UnitTests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "UnitTests-Info.plist"; sourceTree = "<group>"; };
 		0CC72A6E0EE525537F241EB7 /* TRAppDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = TRAppDelegate.h; sourceTree = "<group>"; };
-		1CDD2312F1EF05277F045E15 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1CDD2312F1EF05277F045E15 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		22FE01C01AF3F5550085B494 /* Secrets.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Secrets.h; sourceTree = "<group>"; };
 		2763A13D16F7B234E309A37C /* Pods-unit_tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-unit_tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-unit_tests/Pods-unit_tests.release.xcconfig"; sourceTree = "<group>"; };
 		2853082980109C89B8F07D3C /* main.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -166,6 +167,7 @@
 		4DF5BA381A5B64630088F35F /* TRBearingFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRBearingFormatter.m; sourceTree = "<group>"; };
 		57761BB4DFB42997964F13EE /* Tropos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tropos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5DA50AD81A82CAB300CAE666 /* DINNextLTPro-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DINNextLTPro-Light.otf"; sourceTree = "<group>"; };
+		65685FF21B3D299C0054BA1A /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/Localizable.strings; sourceTree = "<group>"; };
 		986C425E5A2268D27FAE2FAA /* Tropos-Prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Tropos-Prefix.pch"; sourceTree = "<group>"; };
 		A548375C4E5D454F542CFA0D /* libPods-unit_tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-unit_tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A6B1ADBC73A8A2EF7FB4E257 /* TRAppDelegate.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = TRAppDelegate.m; sourceTree = "<group>"; };
@@ -194,7 +196,6 @@
 		DED70296CC99B4AAD0DE42BD /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		E2B218FB5F097AAE3080F4DD /* UnitTests-Prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UnitTests-Prefix.pch"; sourceTree = "<group>"; };
 		E59B090E67C8BD269D3CD9DB /* Main.storyboard */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
-		E799194B1ACEE75C00A5600C /* Secrets.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Secrets.h; sourceTree = "<group>"; };
 		E7A895521AFD11AA0023205B /* TRApplicationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRApplicationController.h; sourceTree = "<group>"; };
 		E7A895531AFD11AA0023205B /* TRApplicationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRApplicationController.m; sourceTree = "<group>"; };
 		E7A8955B1AFD1CAA0023205B /* TRWeatherUpdateCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRWeatherUpdateCache.h; sourceTree = "<group>"; };
@@ -601,6 +602,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				it,
 			);
 			mainGroup = D02B1FEF37316A9F6B8E4B34;
 			productRefGroup = 702F42EA5C215DCFAE2AAC5C /* Products */;
@@ -625,6 +627,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				65685FF31B3D299C0054BA1A /* Info.plist in Resources */,
 				4D0A5C3D1A3A53DD0084C41E /* CWForecastDetailView.xib in Resources */,
 				CFC0721C2D9EFFD3C3AE11A7 /* Images.xcassets in Resources */,
 				C2E44CE91A3A42C6009CC844 /* InfoPlist.strings in Resources */,
@@ -824,6 +827,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				C2E44CE51A3A4273009CC844 /* en */,
+				65685FF21B3D299C0054BA1A /* it */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";
