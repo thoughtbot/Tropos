@@ -1,4 +1,4 @@
-"DifferentTemperatureFormat" = "È %@ %@ rispetto %@%@.";
+"DifferentTemperatureFormat" = "Fa %@ %@ rispetto %@%@.";
 "PrecipitationChanceFormat" = "%@ possibilità di %@ %@.";
 "SameTemperatureFormat" = "La temperatura %@ %@ rispetto a %@%@.";
 
@@ -24,12 +24,6 @@
 "SlightSnow" = ", con bassa probabilità di nevicate";
 "GoodSnow" = ", con alta probabilità di nevicate";
 
-"Updated %@ at %@" = "Aggiornato il %@ alle %@";
-"Updated at %@" = "Aggiornato il %@";
-
-"Checking Weather..." = "Controllo il Meteo...";
-"Update Failed" = "Update non riuscito";
-
 "North" = "Nord";
 "Northeast" = "Nord-Est";
 "East" = "Est";
@@ -42,3 +36,9 @@
 "Good" = "Buona";
 "Slight" = "Lieve";
 "None" = "Nessuna";
+
+"UpdatedAtDateAndTime" = "Aggiornato il %@ alle %@";
+"UpdatedAtTime" = "Aggiornato il %@";
+
+"CheckingWeather" = "Controllo il Meteo...";
+"UpdateFailed" = "Update non riuscito";
