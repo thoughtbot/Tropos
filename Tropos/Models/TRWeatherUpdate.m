@@ -63,6 +63,16 @@
     return self;
 }
 
+- (instancetype)initWithPlacemark:(CLPlacemark *)placemark currentConditionsJSON:(NSDictionary *)currentConditionsJSON yesterdaysConditionsJSON:(NSDictionary *)yesterdaysConditionsJSON date:(NSDate *)date
+{
+    self = [self initWithPlacemark:placemark currentConditionsJSON:currentConditionsJSON yesterdaysConditionsJSON:yesterdaysConditionsJSON];
+    if (!self) return nil;
+
+    self.date = date;
+
+    return self;
+}
+
 - (void)updateCurrentTemperaturesWithConditions:(NSDictionary *)conditions withForecast:(NSDictionary *)forecast
 {
     self.currentTemperature = [TRTemperature temperatureFromFahrenheit:conditions[@"temperature"]];
@@ -81,12 +91,14 @@
 static NSString *const TRCurrentConditionsKey = @"TRCurrentConditions";
 static NSString *const TRYesterdaysConditionsKey = @"TRYesterdaysConditionsConditions";
 static NSString *const TRPlacemarkKey = @"TRPlacemark";
+static NSString *const TRDateKey = @"TRDateAt";
 
 - (void)encodeWithCoder:(NSCoder *)coder
 {
     [coder encodeObject:self.currentConditions forKey:TRCurrentConditionsKey];
     [coder encodeObject:self.yesterdaysConditions forKey:TRYesterdaysConditionsKey];
     [coder encodeObject:self.placemark forKey:TRPlacemarkKey];
+    [coder encodeObject:self.date forKey:TRDateKey];
 }
 
 - (instancetype)initWithCoder:(NSCoder *)coder
@@ -94,8 +106,9 @@ static NSString *const TRPlacemarkKey = @"TRPlacemark";
     CLPlacemark *placemark = [coder decodeObjectForKey:TRPlacemarkKey];
     NSDictionary *currentConditions = [coder decodeObjectForKey:TRCurrentConditionsKey];
     NSDictionary *yesterdaysConditions = [coder decodeObjectForKey:TRYesterdaysConditionsKey];
+    NSDate *date = [coder decodeObjectForKey:TRDateKey];
 
-    return [self initWithPlacemark:placemark currentConditionsJSON:currentConditions yesterdaysConditionsJSON:yesterdaysConditions];
+    return [self initWithPlacemark:placemark currentConditionsJSON:currentConditions yesterdaysConditionsJSON:yesterdaysConditions date:date];
 }
 
 @end

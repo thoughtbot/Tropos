@@ -77,6 +77,19 @@ describe(@"TRWeatherUpdateCache", ^{
 
             expect(unarchivedWeatherUpdate).to.beInstanceOf([TRWeatherUpdate class]);
         });
+
+        it(@"caches the date", ^{
+            NSURL *weatherUpdateURL = weatherUpdateURLForTesting();
+            TRWeatherUpdateCache *cache = OCMPartialMock([[TRWeatherUpdateCache alloc] init]);
+            OCMStub([cache latestWeatherUpdateFilePath]).andReturn([weatherUpdateURL path]);
+            NSDate *date = [NSDate date];
+            TRWeatherUpdate *update = [[TRWeatherUpdate alloc] initWithPlacemark:stubbedPlacemark() currentConditionsJSON:@{} yesterdaysConditionsJSON:@{} date:date];
+            [cache archiveWeatherUpdate:update];
+
+            TRWeatherUpdate* unarchivedWeatherUpdate = [cache latestWeatherUpdate];
+
+            expect(unarchivedWeatherUpdate.date).to.equal(date);
+        });
     });
 });
 
