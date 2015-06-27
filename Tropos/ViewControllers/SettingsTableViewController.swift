@@ -14,9 +14,14 @@ enum UnitSystemSection: Int {
     case Imperial
 }
 
+enum InfoSection: Int {
+    case PrivacyPolicy
+    case Acknowledgements
+    case Forecast
+}
+
 enum AboutSection: Int {
     case Thoughtbot
-    case Forecast
 }
 
 class SettingsTableViewController: UITableViewController {
@@ -72,10 +77,10 @@ class SettingsTableViewController: UITableViewController {
             tableView.deselectRowAtIndexPath(indexPath, animated: true)
             tableView.uncheckCellsInSection(indexPath.section)
             selectUnitSystemAtIndexPath(indexPath)
+        case (Section.Info.rawValue, InfoSection.Forecast.rawValue):
+            UIApplication.sharedApplication().openURL(NSURL(string: "https://forecast.io")!)
         case (Section.About.rawValue, AboutSection.Thoughtbot.rawValue):
             UIApplication.sharedApplication().openURL(NSURL(string: "https://thoughtbot.com")!)
-        case (Section.About.rawValue, AboutSection.Forecast.rawValue):
-            UIApplication.sharedApplication().openURL(NSURL(string: "https://forecast.io")!)
         default: break
         }
     }
