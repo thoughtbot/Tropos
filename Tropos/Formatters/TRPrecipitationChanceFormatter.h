@@ -1,7 +1,7 @@
-#import "TRPrecipitation.h"
+#import "Tropos-Swift.h"
 
 @interface TRPrecipitationChanceFormatter : NSObject
 
-+ (NSString *)precipitationChanceStringFromPrecipitation:(TRPrecipitation *)precipitation;
++ (NSString *)precipitationChanceStringFromPrecipitation:(Precipitation *)precipitation;
 
 @end
