@@ -1,10 +1,11 @@
+#import "Tropos-Swift.h"
 #import "TRPrecipitationChanceFormatter.h"
 
 @implementation TRPrecipitationChanceFormatter
 
 #pragma mark - Class Methods
 
-+ (NSString *)precipitationChanceStringFromPrecipitation:(TRPrecipitation *)precipitation
++ (NSString *)precipitationChanceStringFromPrecipitation:(Precipitation *)precipitation
 {
     NSString *adjective = [self localizedAdjectiveForPrecipitationChance:[precipitation chance]];
     NSString *precipitationName = [self localizedNameForPrecipitationType:[precipitation type]];
@@ -14,15 +15,12 @@
 
 #pragma mark - Private Methods
 
-+ (NSString *)localizedAdjectiveForPrecipitationChance:(TRPrecipitationChance)chance
++ (NSString *)localizedAdjectiveForPrecipitationChance:(PrecipitationChance)chance
 {
     switch (chance) {
-        case TRPrecipitationChanceGood:
-            return @"Good";
-        case TRPrecipitationChanceSlight:
-            return @"Slight";
-        case TRPrecipitationChanceNone:
-            return @"None";
+        case PrecipitationChanceGood: return @"Good";
+        case PrecipitationChanceSlight: return @"Slight";
+        case PrecipitationChanceNone: return @"None";
     }
 }
 

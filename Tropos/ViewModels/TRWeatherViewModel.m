@@ -3,7 +3,7 @@
 #import "TRDailyForecast.h"
 #import "TRDailyForecastViewModel.h"
 #import "TRDateFormatter.h"
-#import "TRPrecipitation.h"
+#import "Tropos-Swift.h"
 #import "TRPrecipitationChanceFormatter.h"
 #import "TRTemperatureComparisonFormatter.h"
 #import "TRTemperatureFormatter.h"
@@ -68,8 +68,7 @@
 
 - (NSString *)precipitationDescription
 {
-    TRPrecipitation *precipitation = [TRPrecipitation precipitationFromProbability:self.weatherUpdate.precipitationPercentage precipitationType:self.weatherUpdate.precipitationType];
-
+    Precipitation *precipitation = [[Precipitation alloc] initWithProbability:(float)self.weatherUpdate.precipitationPercentage type:self.weatherUpdate.precipitationType];
     return [TRPrecipitationChanceFormatter precipitationChanceStringFromPrecipitation:precipitation];
 }
 
