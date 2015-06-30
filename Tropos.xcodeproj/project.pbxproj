@@ -24,7 +24,6 @@
 		4D72D12A1A7330E700FAB67B /* TRGeocodeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D72D1291A7330E700FAB67B /* TRGeocodeController.m */; };
 		4D7389DF1A9890CD0039F13B /* UIScrollView+TRReactiveCocoa.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D7389DE1A9890CD0039F13B /* UIScrollView+TRReactiveCocoa.m */; };
 		4D76CCD41A99C3FA00DDE5EB /* TRRefreshLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D76CCD31A99C3FA00DDE5EB /* TRRefreshLayer.m */; };
-		4D7CDEB91A46D1C20038DD33 /* TRWeatherLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D7CDEB81A46D1C20038DD33 /* TRWeatherLocation.m */; };
 		4D7CDEBC1A46D3610038DD33 /* CLLocation+TRRecentLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D7CDEBB1A46D3610038DD33 /* CLLocation+TRRecentLocation.m */; };
 		4D7CDEBF1A46DD030038DD33 /* NSError+TRErrors.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D7CDEBE1A46DD030038DD33 /* NSError+TRErrors.m */; };
 		4D7CDEC21A4705400038DD33 /* UIColor+TRTemperatureColors.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D7CDEC11A4705400038DD33 /* UIColor+TRTemperatureColors.m */; };
@@ -127,8 +126,6 @@
 		4D7389DE1A9890CD0039F13B /* UIScrollView+TRReactiveCocoa.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+TRReactiveCocoa.m"; sourceTree = "<group>"; };
 		4D76CCD21A99C3FA00DDE5EB /* TRRefreshLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRRefreshLayer.h; sourceTree = "<group>"; };
 		4D76CCD31A99C3FA00DDE5EB /* TRRefreshLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRRefreshLayer.m; sourceTree = "<group>"; };
-		4D7CDEB71A46D1C20038DD33 /* TRWeatherLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRWeatherLocation.h; sourceTree = "<group>"; };
-		4D7CDEB81A46D1C20038DD33 /* TRWeatherLocation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRWeatherLocation.m; sourceTree = "<group>"; };
 		4D7CDEBA1A46D3610038DD33 /* CLLocation+TRRecentLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CLLocation+TRRecentLocation.h"; sourceTree = "<group>"; };
 		4D7CDEBB1A46D3610038DD33 /* CLLocation+TRRecentLocation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CLLocation+TRRecentLocation.m"; sourceTree = "<group>"; };
 		4D7CDEBD1A46DD030038DD33 /* NSError+TRErrors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSError+TRErrors.h"; sourceTree = "<group>"; };
@@ -336,8 +333,6 @@
 			children = (
 				C2E44CF61A3B7538009CC844 /* TRTemperature.h */,
 				C2E44CF71A3B7538009CC844 /* TRTemperature.m */,
-				4D7CDEB71A46D1C20038DD33 /* TRWeatherLocation.h */,
-				4D7CDEB81A46D1C20038DD33 /* TRWeatherLocation.m */,
 				4DEDF4F41A6FA682006F3F11 /* TRWeatherUpdate.h */,
 				4DEDF4F51A6FA682006F3F11 /* TRWeatherUpdate.m */,
 				4D98E9891A80C89600856412 /* TRDailyForecast.h */,
@@ -839,7 +834,6 @@
 				4D7CDEC51A47DCD60038DD33 /* NSMutableAttributedString+TRAttributeHelpers.m in Sources */,
 				C2E44CE11A3A3C09009CC844 /* TRWeatherViewController.m in Sources */,
 				4D1ABA0B1A89686200B7F8FB /* TRNavigationBar.m in Sources */,
-				4D7CDEB91A46D1C20038DD33 /* TRWeatherLocation.m in Sources */,
 				CE5D7F3B45F980082E1BCA30 /* LaunchScreen.xib in Sources */,
 				C9318C8461EB5FE3914F9AC0 /* main.m in Sources */,
 				6D0F13651B4333CE001685BA /* Precipitation.swift in Sources */,
