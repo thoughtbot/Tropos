@@ -2,6 +2,7 @@
 
 bundle install
 pod install
+brew install carthage 2> /dev/null
 carthage bootstrap
 
 if [ ! -d Tropos/Secrets.h ]; then
