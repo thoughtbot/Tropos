@@ -1,6 +1,5 @@
 @import CoreLocation;
 #import "TRLocationController.h"
-#import "TRWeatherLocation.h"
 #import "CLLocation+TRRecentLocation.h"
 
 @interface TRLocationController () <CLLocationManagerDelegate>

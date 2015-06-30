@@ -1,4 +1,3 @@
-@class TRTemperature;
 @class Temperature;
 
 @interface TRDailyForecast : NSObject
