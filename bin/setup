@@ -2,6 +2,7 @@
 
 bundle install
 pod install
+carthage bootstrap
 
 if [ ! -d Tropos/Secrets.h ]; then
   cp Tropos/Secrets-Example.h Tropos/Secrets.h
