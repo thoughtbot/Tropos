@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		130C4C29D1C62D52D0767A6B /* Main.storyboard in Sources */ = {isa = PBXBuildFile; fileRef = E59B090E67C8BD269D3CD9DB /* Main.storyboard */; };
+		23AB769C1B4222830083EC14 /* TRTemperatureComparisonFormatterSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 23AB769B1B4222830083EC14 /* TRTemperatureComparisonFormatterSpec.m */; };
 		46660A27B04F4C7B78A7920F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 436D9431497525313B32E225 /* Foundation.framework */; };
 		4D0A5C381A3A27510084C41E /* TRForecastController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D0A5C371A3A27510084C41E /* TRForecastController.m */; };
 		4D0A5C3D1A3A53DD0084C41E /* CWForecastDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D0A5C3C1A3A53DD0084C41E /* CWForecastDetailView.xib */; };
@@ -93,6 +94,7 @@
 		0CC72A6E0EE525537F241EB7 /* TRAppDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = TRAppDelegate.h; sourceTree = "<group>"; };
 		1CDD2312F1EF05277F045E15 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		22FE01C01AF3F5550085B494 /* Secrets.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Secrets.h; sourceTree = "<group>"; };
+		23AB769B1B4222830083EC14 /* TRTemperatureComparisonFormatterSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TRTemperatureComparisonFormatterSpec.m; path = Formatters/TRTemperatureComparisonFormatterSpec.m; sourceTree = "<group>"; };
 		2763A13D16F7B234E309A37C /* Pods-unit_tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-unit_tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-unit_tests/Pods-unit_tests.release.xcconfig"; sourceTree = "<group>"; };
 		2853082980109C89B8F07D3C /* main.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		2CA708068A67D7E761D29251 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
@@ -270,6 +272,14 @@
 				2CA708068A67D7E761D29251 /* Pods.debug.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		23AB769A1B4222640083EC14 /* Formatters */ = {
+			isa = PBXGroup;
+			children = (
+				23AB769B1B4222830083EC14 /* TRTemperatureComparisonFormatterSpec.m */,
+			);
+			name = Formatters;
 			sourceTree = "<group>";
 		};
 		301CF0A99B4C5FAECDB23D75 /* Resources */ = {
@@ -487,6 +497,7 @@
 		D487E2F8148F4F831FE4B216 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
+				23AB769A1B4222640083EC14 /* Formatters */,
 				C2E44CFD1A3B7C14009CC844 /* TRTemperatureSpec.m */,
 				4D9CA35C1A5C7672009E24DD /* TRBearingFormatterSpec.m */,
 				4DA79AC01A68806600C3539D /* UIColor_TRTemperatureColorsSpec.m */,
@@ -859,6 +870,7 @@
 				E7E4A3A21B069BB500F489E3 /* TRWeatherUpdateCacheSpec.m in Sources */,
 				C2E44CFE1A3B7C14009CC844 /* TRTemperatureSpec.m in Sources */,
 				4DA79AC11A68806600C3539D /* UIColor_TRTemperatureColorsSpec.m in Sources */,
+				23AB769C1B4222830083EC14 /* TRTemperatureComparisonFormatterSpec.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
