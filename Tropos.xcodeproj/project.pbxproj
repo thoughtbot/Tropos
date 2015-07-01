@@ -297,7 +297,6 @@
 			isa = PBXGroup;
 			children = (
 				7B05273CCDF63C9DA71C049A /* Resources */,
-				CC2E8FB0D6953D8A2B6BF65A /* Helpers */,
 				D487E2F8148F4F831FE4B216 /* Tests */,
 			);
 			path = UnitTests;
@@ -464,13 +463,6 @@
 				C2E44CE01A3A3C09009CC844 /* TRWeatherViewController.m */,
 			);
 			path = ViewControllers;
-			sourceTree = "<group>";
-		};
-		CC2E8FB0D6953D8A2B6BF65A /* Helpers */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Helpers;
 			sourceTree = "<group>";
 		};
 		D02B1FEF37316A9F6B8E4B34 = {
