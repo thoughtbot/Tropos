@@ -1,6 +1,6 @@
 @import CoreLocation;
 #import "TRWeatherUpdate.h"
-#import "TRTemperature.h"
+#import "UnitTests-Swift.h"
 #import <OCMock/OCMock.h>
 
 SpecBegin(TRWeatherUpdate)
