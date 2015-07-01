@@ -57,6 +57,8 @@
 		6D79AA7F1B444B58001F4289 /* WeatherUpdateCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D79AA7E1B444B58001F4289 /* WeatherUpdateCache.swift */; };
 		6D79AA811B444C93001F4289 /* WeatherUpdateCacheSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D79AA801B444C93001F4289 /* WeatherUpdateCacheSpec.swift */; };
 		6D79AA821B4450E1001F4289 /* WeatherUpdateCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D79AA7E1B444B58001F4289 /* WeatherUpdateCache.swift */; };
+		6D79AA8E1B4486BA001F4289 /* WeatherUpdate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D79AA8D1B4486BA001F4289 /* WeatherUpdate.swift */; };
+		6D79AA8F1B449500001F4289 /* WeatherUpdate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D79AA8D1B4486BA001F4289 /* WeatherUpdate.swift */; };
 		6D8ACB371B44270A003087A7 /* Temperature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D8ACB361B44270A003087A7 /* Temperature.swift */; };
 		6D8ACB381B443037003087A7 /* Temperature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D8ACB361B44270A003087A7 /* Temperature.swift */; };
 		6D8ACB3A1B4432A8003087A7 /* TemperatureSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D8ACB391B4432A8003087A7 /* TemperatureSpec.swift */; };
@@ -181,6 +183,7 @@
 		6D5F2A1C1B42F39E00425B19 /* UnitTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UnitTests-Bridging-Header.h"; sourceTree = "<group>"; };
 		6D79AA7E1B444B58001F4289 /* WeatherUpdateCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherUpdateCache.swift; sourceTree = "<group>"; };
 		6D79AA801B444C93001F4289 /* WeatherUpdateCacheSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherUpdateCacheSpec.swift; sourceTree = "<group>"; };
+		6D79AA8D1B4486BA001F4289 /* WeatherUpdate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherUpdate.swift; sourceTree = "<group>"; };
 		6D8ACB361B44270A003087A7 /* Temperature.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Temperature.swift; sourceTree = "<group>"; };
 		6D8ACB391B4432A8003087A7 /* TemperatureSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TemperatureSpec.swift; sourceTree = "<group>"; };
 		6D8ACB3B1B443A5E003087A7 /* DailyForecast.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DailyForecast.swift; sourceTree = "<group>"; };
@@ -337,6 +340,7 @@
 				6D8ACB3B1B443A5E003087A7 /* DailyForecast.swift */,
 				6D0F13641B4333CE001685BA /* Precipitation.swift */,
 				6D8ACB361B44270A003087A7 /* Temperature.swift */,
+				6D79AA8D1B4486BA001F4289 /* WeatherUpdate.swift */,
 				6D79AA7E1B444B58001F4289 /* WeatherUpdateCache.swift */,
 			);
 			path = Models;
@@ -812,6 +816,7 @@
 				4DC716601A9B1D5B00BC4BD4 /* TRRefreshControl.m in Sources */,
 				130C4C29D1C62D52D0767A6B /* Main.storyboard in Sources */,
 				4DEDF4F61A6FA682006F3F11 /* TRWeatherUpdate.m in Sources */,
+				6D79AA8E1B4486BA001F4289 /* WeatherUpdate.swift in Sources */,
 				4DF5BA391A5B64630088F35F /* TRBearingFormatter.m in Sources */,
 				4D49377E1A82F82A007A1FA9 /* TRImageView.m in Sources */,
 				4D7CDEC21A4705400038DD33 /* UIColor+TRTemperatureColors.m in Sources */,
@@ -856,6 +861,7 @@
 				E7B3B9271B34EDFE00BDD5A4 /* TRApplicationControllerSpec.m in Sources */,
 				4D9CA35D1A5C7672009E24DD /* TRBearingFormatterSpec.m in Sources */,
 				4DA79AC11A68806600C3539D /* UIColor_TRTemperatureColorsSpec.m in Sources */,
+				6D79AA8F1B449500001F4289 /* WeatherUpdate.swift in Sources */,
 				6D8ACB3A1B4432A8003087A7 /* TemperatureSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
