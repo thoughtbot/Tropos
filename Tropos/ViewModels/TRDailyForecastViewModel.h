@@ -1,4 +1,4 @@
-@class TRDailyForecast;
+@class DailyForecast;
 
 @interface TRDailyForecastViewModel : NSObject
 
@@ -7,6 +7,6 @@
 @property (nonatomic, readonly) NSString *highTemperature;
 @property (nonatomic, readonly) NSString *lowTemperature;
 
-- (instancetype)initWithDailyForecast:(TRDailyForecast *)dailyForecast;
+- (instancetype)initWithDailyForecast:(DailyForecast *)dailyForecast;
 
 @end
