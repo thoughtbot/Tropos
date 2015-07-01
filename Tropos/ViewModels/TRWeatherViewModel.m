@@ -47,7 +47,7 @@
 
 - (NSAttributedString *)conditionsDescription
 {
-    TRTemperatureComparison comparison = [self.weatherUpdate.currentTemperature comparedTo:self.weatherUpdate.yesterdaysTemperature];
+    TemperatureComparison comparison = [self.weatherUpdate.currentTemperature comparedTo:self.weatherUpdate.yesterdaysTemperature];
 
     NSString *adjective;
     NSString *comparisonString = [TRTemperatureComparisonFormatter localizedStringFromComparison:comparison adjective:&adjective  precipitation: self.precipitationDescription];
@@ -55,7 +55,8 @@
     NSMutableAttributedString *attributedString = [[NSMutableAttributedString alloc] initWithString:comparisonString];
     [attributedString setFont:[UIFont defaultUltraLightFontOfSize:26]];
     [attributedString setTextColor:[UIColor defaultTextColor]];
-    TRTemperature *difference = [self.weatherUpdate.currentTemperature temperatureDifferenceFromTemperature:self.weatherUpdate.yesterdaysTemperature];
+    
+    Temperature *difference = [self.weatherUpdate.currentTemperature temperatureDifferenceFrom:self.weatherUpdate.yesterdaysTemperature];
     [attributedString setTextColor:[self colorForTemperatureComparison:comparison difference:difference.fahrenheitValue] forSubstring:adjective];
 
     return attributedString;
@@ -81,8 +82,8 @@
     NSString *temperatureString = [NSString stringWithFormat:@"%@ / %@ / %@", high, current, low];
     
     NSMutableAttributedString *attributedString = [[NSMutableAttributedString alloc] initWithString:temperatureString];
-    TRTemperatureComparison comparison = [self.weatherUpdate.currentTemperature comparedTo:self.weatherUpdate.yesterdaysTemperature];
-    TRTemperature *difference = [self.weatherUpdate.currentTemperature temperatureDifferenceFromTemperature:self.weatherUpdate.yesterdaysTemperature];
+    TemperatureComparison comparison = [self.weatherUpdate.currentTemperature comparedTo:self.weatherUpdate.yesterdaysTemperature];
+    Temperature *difference = [self.weatherUpdate.currentTemperature temperatureDifferenceFrom:self.weatherUpdate.yesterdaysTemperature];
     
     NSRange rangeOfFirstSlash = [temperatureString rangeOfString:@"/"];
     NSRange rangeOfLastSlash = [temperatureString rangeOfString:@"/" options:NSBackwardsSearch];
@@ -107,29 +108,29 @@
 
 #pragma mark - Private Methods
 
-- (UIColor *)colorForTemperatureComparison:(TRTemperatureComparison)comparison difference:(NSInteger)difference
+- (UIColor *)colorForTemperatureComparison:(TemperatureComparison)comparison difference:(NSInteger)difference
 {
     UIColor *color;
 
     switch (comparison) {
-        case TRTemperatureComparisonSame:
+        case TemperatureComparisonSame:
             color = [UIColor defaultTextColor];
             break;
-        case TRTemperatureComparisonColder:
+        case TemperatureComparisonColder:
             color = [UIColor coldColor];
             break;
-        case TRTemperatureComparisonCooler:
+        case TemperatureComparisonCooler:
             color = [UIColor coolerColor];
             break;
-        case TRTemperatureComparisonHotter:
+        case TemperatureComparisonHotter:
             color = [UIColor hotColor];
             break;
-        case TRTemperatureComparisonWarmer:
+        case TemperatureComparisonWarmer:
             color = [UIColor warmerColor];
             break;
     }
 
-    if (comparison == TRTemperatureComparisonCooler || comparison == TRTemperatureComparisonWarmer) {
+    if (comparison == TemperatureComparisonCooler || comparison == TemperatureComparisonWarmer) {
         CGFloat amount = MIN(ABS(difference), 10) / 10.0f;
         CGFloat lighterAmount = 1 - amount;
 
