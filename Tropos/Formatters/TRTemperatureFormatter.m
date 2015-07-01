@@ -1,10 +1,10 @@
+#import "Tropos-Swift.h"
 #import "TRTemperatureFormatter.h"
-#import "TRTemperature.h"
 #import "TRSettingsController.h"
 
 @implementation TRTemperatureFormatter
 
-- (NSString *)stringFromTemperature:(TRTemperature *)temperature
+- (NSString *)stringFromTemperature:(Temperature *)temperature
 {
     BOOL usesMetricSystem = [[TRSettingsController new] unitSystem] == TRUnitSystemMetric;
     CGFloat temperatureValue = usesMetricSystem? temperature.celsiusValue : temperature.fahrenheitValue;
