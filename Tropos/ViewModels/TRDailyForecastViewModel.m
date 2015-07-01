@@ -1,17 +1,17 @@
 #import "TRDailyForecastViewModel.h"
+#import "Tropos-Swift.h"
 #import "TRTemperatureFormatter.h"
-#import "TRDailyForecast.h"
 
 @interface TRDailyForecastViewModel ()
 
-@property (nonatomic) TRDailyForecast *dailyForecast;
+@property (nonatomic) DailyForecast *dailyForecast;
 @property (nonatomic) TRTemperatureFormatter *temperatureFormatter;
 
 @end
 
 @implementation TRDailyForecastViewModel
 
-- (instancetype)initWithDailyForecast:(TRDailyForecast *)dailyForecast
+- (instancetype)initWithDailyForecast:(DailyForecast *)dailyForecast
 {
     self = [super init];
     if (!self) return nil;
