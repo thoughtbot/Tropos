@@ -1,12 +1,12 @@
 #import "TRDailyForecast.h"
-#import "TRTemperature.h"
+#import "Tropos-Swift.h"
 
 @interface TRDailyForecast ()
 
 @property (nonatomic, readwrite) NSDate *date;
 @property (nonatomic, copy, readwrite) NSString *conditionsDescription;
-@property (nonatomic, readwrite) TRTemperature *highTemperature;
-@property (nonatomic, readwrite) TRTemperature *lowTemperature;
+@property (nonatomic, readwrite) Temperature *highTemperature;
+@property (nonatomic, readwrite) Temperature *lowTemperature;
 
 @end
 
@@ -19,9 +19,9 @@
 
     self.date = [NSDate dateWithTimeIntervalSince1970:[JSON[@"time"] doubleValue]];
     self.conditionsDescription = JSON[@"icon"];
-    self.highTemperature = [TRTemperature temperatureFromFahrenheit:JSON[@"temperatureMax"]];
-    self.lowTemperature = [TRTemperature temperatureFromFahrenheit:JSON[@"temperatureMin"]];
-
+    self.highTemperature = [[Temperature alloc] initWithFahrenheitValue:[JSON[@"temperatureMax"] integerValue]];
+    self.lowTemperature = [[Temperature alloc] initWithFahrenheitValue:[JSON[@"temperatureMin"] integerValue]];
+    
     return self;
 }
 
