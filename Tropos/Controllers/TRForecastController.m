@@ -1,8 +1,9 @@
 @import CoreLocation;
-#import "TRForecastController.h"
-#import "TRWeatherUpdate.h"
 #import "NSDate+TRRelativeDate.h"
 #import "Secrets.h"
+#import "TRForecastController.h"
+#import "Tropos-Swift.h"
+#import "TRWeatherUpdate.h"
 
 static NSString *const TRForecastAPIExclusions = @"minutely,hourly,alerts,flags";
 

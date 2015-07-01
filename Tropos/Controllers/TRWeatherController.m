@@ -3,12 +3,12 @@
 #import "TRWeatherUpdate.h"
 #import "TRLocationController.h"
 #import "TRForecastController.h"
+#import "Tropos-Swift.h"
 #import "TRSettingsController.h"
 #import "TRGeocodeController.h"
 #import "TRDailyForecastViewModel.h"
 #import "TRAnalyticsController.h"
 #import "TRWeatherViewModel.h"
-#import "TRWeatherUpdateCache.h"
 
 @interface TRWeatherController ()
 
@@ -60,7 +60,7 @@
 
     [[self latestWeatherUpdates] subscribeNext:^(TRWeatherUpdate *update) {
         [[TRAnalyticsController sharedController] trackEvent:update];
-        [[TRWeatherUpdateCache new] archiveWeatherUpdate:update];
+        [WeatherUpdateCache archive:update];
     }];
 
     return self;
@@ -68,7 +68,7 @@
 
 - (RACSignal *)latestWeatherUpdates
 {
-    TRWeatherUpdate *cachedUpdate = [[TRWeatherUpdateCache new] latestWeatherUpdate];
+    TRWeatherUpdate *cachedUpdate = [WeatherUpdateCache latestWeatherUpdate];
     RACSignal *weatherUpdates = [self.updateWeatherCommand.executionSignals startWith:[RACSignal return:cachedUpdate]];
 
     return [[weatherUpdates switchToLatest] filter:^BOOL(TRWeatherUpdate *update) {

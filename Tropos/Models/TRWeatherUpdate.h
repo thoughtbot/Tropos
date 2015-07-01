@@ -1,6 +1,8 @@
 @class CLPlacemark;
 @class Temperature;
 
+@import Foundation;
+
 @interface TRWeatherUpdate : NSObject <NSCoding>
 
 @property (nonatomic, copy, readonly) NSString *city;

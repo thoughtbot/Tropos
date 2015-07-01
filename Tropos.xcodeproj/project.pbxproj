@@ -54,6 +54,9 @@
 		6D0F13651B4333CE001685BA /* Precipitation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D0F13641B4333CE001685BA /* Precipitation.swift */; };
 		6D0F13681B43353D001685BA /* PrecipitationSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D0F13671B43353D001685BA /* PrecipitationSpec.swift */; };
 		6D0F13691B4335FE001685BA /* Precipitation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D0F13641B4333CE001685BA /* Precipitation.swift */; };
+		6D79AA7F1B444B58001F4289 /* WeatherUpdateCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D79AA7E1B444B58001F4289 /* WeatherUpdateCache.swift */; };
+		6D79AA811B444C93001F4289 /* WeatherUpdateCacheSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D79AA801B444C93001F4289 /* WeatherUpdateCacheSpec.swift */; };
+		6D79AA821B4450E1001F4289 /* WeatherUpdateCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D79AA7E1B444B58001F4289 /* WeatherUpdateCache.swift */; };
 		6D8ACB371B44270A003087A7 /* Temperature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D8ACB361B44270A003087A7 /* Temperature.swift */; };
 		6D8ACB381B443037003087A7 /* Temperature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D8ACB361B44270A003087A7 /* Temperature.swift */; };
 		6D8ACB3A1B4432A8003087A7 /* TemperatureSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D8ACB391B4432A8003087A7 /* TemperatureSpec.swift */; };
@@ -74,9 +77,7 @@
 		CFC0721C2D9EFFD3C3AE11A7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 059D0BDDF8DCE56549A4C9C6 /* Images.xcassets */; };
 		D7DD1B8AD495AFA4EC1CEFF9 /* TRAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A6B1ADBC73A8A2EF7FB4E257 /* TRAppDelegate.m */; };
 		E7A895541AFD11AA0023205B /* TRApplicationController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7A895531AFD11AA0023205B /* TRApplicationController.m */; };
-		E7A8955D1AFD1CAA0023205B /* TRWeatherUpdateCache.m in Sources */ = {isa = PBXBuildFile; fileRef = E7A8955C1AFD1CAA0023205B /* TRWeatherUpdateCache.m */; };
 		E7B3B9271B34EDFE00BDD5A4 /* TRApplicationControllerSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = E7B3B9261B34EDFE00BDD5A4 /* TRApplicationControllerSpec.m */; };
-		E7E4A3A21B069BB500F489E3 /* TRWeatherUpdateCacheSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = E7E4A3A11B069BB500F489E3 /* TRWeatherUpdateCacheSpec.m */; };
 		E7E8D6031ACF0B9700BD8364 /* TRWeatherUpdateSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = E7E8D6021ACF0B9700BD8364 /* TRWeatherUpdateSpec.m */; };
 /* End PBXBuildFile section */
 
@@ -178,6 +179,8 @@
 		6D0F13641B4333CE001685BA /* Precipitation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Precipitation.swift; sourceTree = "<group>"; };
 		6D0F13671B43353D001685BA /* PrecipitationSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrecipitationSpec.swift; sourceTree = "<group>"; };
 		6D5F2A1C1B42F39E00425B19 /* UnitTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UnitTests-Bridging-Header.h"; sourceTree = "<group>"; };
+		6D79AA7E1B444B58001F4289 /* WeatherUpdateCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherUpdateCache.swift; sourceTree = "<group>"; };
+		6D79AA801B444C93001F4289 /* WeatherUpdateCacheSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherUpdateCacheSpec.swift; sourceTree = "<group>"; };
 		6D8ACB361B44270A003087A7 /* Temperature.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Temperature.swift; sourceTree = "<group>"; };
 		6D8ACB391B4432A8003087A7 /* TemperatureSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TemperatureSpec.swift; sourceTree = "<group>"; };
 		6D8ACB3B1B443A5E003087A7 /* DailyForecast.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DailyForecast.swift; sourceTree = "<group>"; };
@@ -207,10 +210,7 @@
 		E59B090E67C8BD269D3CD9DB /* Main.storyboard */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		E7A895521AFD11AA0023205B /* TRApplicationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRApplicationController.h; sourceTree = "<group>"; };
 		E7A895531AFD11AA0023205B /* TRApplicationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRApplicationController.m; sourceTree = "<group>"; };
-		E7A8955B1AFD1CAA0023205B /* TRWeatherUpdateCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRWeatherUpdateCache.h; sourceTree = "<group>"; };
-		E7A8955C1AFD1CAA0023205B /* TRWeatherUpdateCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRWeatherUpdateCache.m; sourceTree = "<group>"; };
 		E7B3B9261B34EDFE00BDD5A4 /* TRApplicationControllerSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TRApplicationControllerSpec.m; path = Controllers/TRApplicationControllerSpec.m; sourceTree = "<group>"; };
-		E7E4A3A11B069BB500F489E3 /* TRWeatherUpdateCacheSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRWeatherUpdateCacheSpec.m; sourceTree = "<group>"; };
 		E7E8D6021ACF0B9700BD8364 /* TRWeatherUpdateSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRWeatherUpdateSpec.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -334,11 +334,10 @@
 			children = (
 				4DEDF4F41A6FA682006F3F11 /* TRWeatherUpdate.h */,
 				4DEDF4F51A6FA682006F3F11 /* TRWeatherUpdate.m */,
-				E7A8955B1AFD1CAA0023205B /* TRWeatherUpdateCache.h */,
-				E7A8955C1AFD1CAA0023205B /* TRWeatherUpdateCache.m */,
 				6D8ACB3B1B443A5E003087A7 /* DailyForecast.swift */,
 				6D0F13641B4333CE001685BA /* Precipitation.swift */,
 				6D8ACB361B44270A003087A7 /* Temperature.swift */,
+				6D79AA7E1B444B58001F4289 /* WeatherUpdateCache.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -374,6 +373,7 @@
 				6D8ACB3D1B443C98003087A7 /* DailyForecastSpec.swift */,
 				6D0F13671B43353D001685BA /* PrecipitationSpec.swift */,
 				6D8ACB391B4432A8003087A7 /* TemperatureSpec.swift */,
+				6D79AA801B444C93001F4289 /* WeatherUpdateCacheSpec.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -487,7 +487,6 @@
 				4D9CA35C1A5C7672009E24DD /* TRBearingFormatterSpec.m */,
 				4DA79AC01A68806600C3539D /* UIColor_TRTemperatureColorsSpec.m */,
 				E7E8D6021ACF0B9700BD8364 /* TRWeatherUpdateSpec.m */,
-				E7E4A3A11B069BB500F489E3 /* TRWeatherUpdateCacheSpec.m */,
 				E7B3B9281B34EE0500BDD5A4 /* Controllers */,
 				6D5F2A1C1B42F39E00425B19 /* UnitTests-Bridging-Header.h */,
 			);
@@ -802,6 +801,7 @@
 				4D9CA3621A5CB544009E24DD /* TRSettingsController.m in Sources */,
 				4D0A5C381A3A27510084C41E /* TRForecastController.m in Sources */,
 				4D49554C1A8C298A0066F278 /* TRRefreshView.m in Sources */,
+				6D79AA7F1B444B58001F4289 /* WeatherUpdateCache.swift in Sources */,
 				C2E44CEF1A3B6E89009CC844 /* NSDate+TRRelativeDate.m in Sources */,
 				4D4937781A82F30D007A1FA9 /* TRLabel.m in Sources */,
 				4D3387021A5D4C300087B88F /* NSBundle+TRBundleInfo.m in Sources */,
@@ -830,7 +830,6 @@
 				C9318C8461EB5FE3914F9AC0 /* main.m in Sources */,
 				6D0F13651B4333CE001685BA /* Precipitation.swift in Sources */,
 				4D72D12A1A7330E700FAB67B /* TRGeocodeController.m in Sources */,
-				E7A8955D1AFD1CAA0023205B /* TRWeatherUpdateCache.m in Sources */,
 				6D8ACB371B44270A003087A7 /* Temperature.swift in Sources */,
 				4D3386FF1A5D27260087B88F /* TRTemperatureFormatter.m in Sources */,
 				4D7CDEBC1A46D3610038DD33 /* CLLocation+TRRecentLocation.m in Sources */,
@@ -847,14 +846,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				6D0F13681B43353D001685BA /* PrecipitationSpec.swift in Sources */,
+				6D79AA811B444C93001F4289 /* WeatherUpdateCacheSpec.swift in Sources */,
 				6D0F13691B4335FE001685BA /* Precipitation.swift in Sources */,
 				6D8ACB381B443037003087A7 /* Temperature.swift in Sources */,
 				6D8ACB3E1B443C98003087A7 /* DailyForecastSpec.swift in Sources */,
+				6D79AA821B4450E1001F4289 /* WeatherUpdateCache.swift in Sources */,
 				6D8ACB3F1B443D0F003087A7 /* DailyForecast.swift in Sources */,
 				E7E8D6031ACF0B9700BD8364 /* TRWeatherUpdateSpec.m in Sources */,
 				E7B3B9271B34EDFE00BDD5A4 /* TRApplicationControllerSpec.m in Sources */,
 				4D9CA35D1A5C7672009E24DD /* TRBearingFormatterSpec.m in Sources */,
-				E7E4A3A21B069BB500F489E3 /* TRWeatherUpdateCacheSpec.m in Sources */,
 				4DA79AC11A68806600C3539D /* UIColor_TRTemperatureColorsSpec.m in Sources */,
 				6D8ACB3A1B4432A8003087A7 /* TemperatureSpec.swift in Sources */,
 			);
