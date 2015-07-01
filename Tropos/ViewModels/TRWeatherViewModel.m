@@ -1,6 +1,5 @@
 #import "TRWeatherViewModel.h"
 #import "TRWeatherUpdate.h"
-#import "TRDailyForecast.h"
 #import "TRDailyForecastViewModel.h"
 #import "TRDateFormatter.h"
 #import "TRPrecipitation.h"
@@ -99,7 +98,7 @@
 {
     NSMutableArray *forecasts = [[NSMutableArray alloc] initWithCapacity:self.weatherUpdate.dailyForecasts.count];
 
-    for (TRDailyForecast *forecast in self.weatherUpdate.dailyForecasts) {
+    for (DailyForecast *forecast in self.weatherUpdate.dailyForecasts) {
         TRDailyForecastViewModel *viewModel = [[TRDailyForecastViewModel alloc] initWithDailyForecast:forecast];
         [forecasts addObject:viewModel];
     }
