@@ -1,7 +1,6 @@
 @import CoreLocation;
+#import "Tropos-Swift.h"
 #import "TRWeatherUpdate.h"
-#import "TRTemperature.h"
-#import "TRDailyForecast.h"
 
 @interface TRWeatherUpdate ()
 
@@ -9,10 +8,10 @@
 @property (nonatomic, copy, readwrite) NSString *state;
 @property (nonatomic, copy, readwrite) NSString *conditionsDescription;
 @property (nonatomic, copy, readwrite) NSString *precipitationType;
-@property (nonatomic, readwrite) TRTemperature *currentTemperature;
-@property (nonatomic, readwrite) TRTemperature *currentLow;
-@property (nonatomic, readwrite) TRTemperature *currentHigh;
-@property (nonatomic, readwrite) TRTemperature *yesterdaysTemperature;
+@property (nonatomic, readwrite) Temperature *currentTemperature;
+@property (nonatomic, readwrite) Temperature *currentLow;
+@property (nonatomic, readwrite) Temperature *currentHigh;
+@property (nonatomic, readwrite) Temperature *yesterdaysTemperature;
 @property (nonatomic, readwrite) CGFloat precipitationPercentage;
 @property (nonatomic, readwrite) CGFloat windSpeed;
 @property (nonatomic, readwrite) CGFloat windBearing;
@@ -46,7 +45,7 @@
     self.precipitationType = todaysForecast[@"precipType"] ? todaysForecast[@"precipType"] : @"rain";
     self.conditionsDescription = todaysConditions[@"icon"];
     [self updateCurrentTemperaturesWithConditions:todaysConditions withForecast:todaysForecast];
-    self.yesterdaysTemperature = [TRTemperature temperatureFromFahrenheit:yesterdaysConditions[@"temperature"]];
+    self.yesterdaysTemperature = [[Temperature alloc] initWithFahrenheitValue:[yesterdaysConditions[@"temperature"] integerValue]];
     self.windBearing = [todaysConditions[@"windBearing"] floatValue];
     self.windSpeed = [todaysConditions[@"windSpeed"] floatValue];
     self.date = [NSDate date];
@@ -54,7 +53,7 @@
     NSMutableArray *dailyForecasts = [NSMutableArray array];
 
     for (NSUInteger index = 1; index < 4; index++) {
-        TRDailyForecast *dailyForecast = [[TRDailyForecast alloc] initWithJSON:currentConditionsJSON[@"daily"][@"data"][index]];
+        DailyForecast *dailyForecast = [[DailyForecast alloc] initWithJson:currentConditionsJSON[@"daily"][@"data"][index]];
         [dailyForecasts addObject:dailyForecast];
     }
 
@@ -75,10 +74,9 @@
 
 - (void)updateCurrentTemperaturesWithConditions:(NSDictionary *)conditions withForecast:(NSDictionary *)forecast
 {
-    self.currentTemperature = [TRTemperature temperatureFromFahrenheit:conditions[@"temperature"]];
-    self.currentLow = [TRTemperature temperatureFromFahrenheit:forecast[@"temperatureMin"]];
-    self.currentHigh = [TRTemperature temperatureFromFahrenheit:forecast[@"temperatureMax"]];
-    
+    self.currentTemperature = [[Temperature alloc] initWithFahrenheitValue:[conditions[@"temperature"] integerValue]];
+    self.currentLow = [[Temperature alloc] initWithFahrenheitValue:[forecast[@"temperatureMin"] integerValue]];
+    self.currentHigh = [[Temperature alloc] initWithFahrenheitValue:[forecast[@"temperatureMax"] integerValue]];
     if (self.currentTemperature.fahrenheitValue < self.currentLow.fahrenheitValue) {
         self.currentLow = self.currentTemperature;
     } else if (self.currentTemperature.fahrenheitValue > self.currentHigh.fahrenheitValue) {

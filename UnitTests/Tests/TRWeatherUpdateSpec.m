@@ -1,6 +1,6 @@
 @import CoreLocation;
 #import "TRWeatherUpdate.h"
-#import "TRTemperature.h"
+#import "UnitTests-Swift.h"
 #import <OCMock/OCMock.h>
 
 SpecBegin(TRWeatherUpdate)
@@ -13,7 +13,7 @@ CLPlacemark* (^stubbedPlacemark) () = ^CLPlacemark* {
 };
 
 NSDictionary* (^weatherConditionsWithTemperature) (NSNumber*) = ^NSDictionary* (NSNumber *temp) {
-    NSDictionary *dailyValue = @{@"temperatureMin": @50, @"temperatureMax": @60};
+    NSDictionary *dailyValue = @{@"time": @50, @"icon": @"some-icon", @"temperatureMin": @50, @"temperatureMax": @60};
     NSArray *dailyData = @[dailyValue, dailyValue, dailyValue, dailyValue, dailyValue];
     NSDictionary *conditions = (@{ @"currently": @{ @"temperature": temp },
                                    @"daily": @{ @"data": dailyData } });
@@ -21,7 +21,7 @@ NSDictionary* (^weatherConditionsWithTemperature) (NSNumber*) = ^NSDictionary* (
 };
 
 NSDictionary* (^weatherConditionsWithPrecipitation) (NSString*) = ^NSDictionary* (NSString *precipitation) {
-    NSDictionary *dailyValue = @{@"temperatureMin": @50, @"temperatureMax": @60, @"precipProbability": precipitation, @"precipType": @"rain" };
+    NSDictionary *dailyValue = @{@"time": @50, @"icon": @"some-icon",@"temperatureMin": @50, @"temperatureMax": @60, @"precipProbability": precipitation, @"precipType": @"rain" };
     NSArray *dailyData = @[dailyValue, dailyValue, dailyValue, dailyValue, dailyValue];
     NSDictionary *conditions = (@{ @"currently": @{ @"temperature": @90 },
                                    @"daily": @{ @"data": dailyData } });
@@ -29,7 +29,7 @@ NSDictionary* (^weatherConditionsWithPrecipitation) (NSString*) = ^NSDictionary*
 };
 
 NSDictionary* (^weatherConditionsWithoutPrecipitationType) (NSString*) = ^NSDictionary* (NSString *precipitation) {
-    NSDictionary *dailyValue = @{@"temperatureMin": @50, @"temperatureMax": @60, @"precipProbability": precipitation};
+    NSDictionary *dailyValue = @{@"time": @50, @"icon": @"some-icon",@"temperatureMin": @50, @"temperatureMax": @60, @"precipProbability": precipitation};
     NSArray *dailyData = @[dailyValue, dailyValue, dailyValue, dailyValue, dailyValue];
     NSDictionary *conditions = (@{ @"currently": @{ @"temperature": @90 },
                                    @"daily": @{ @"data": dailyData } });

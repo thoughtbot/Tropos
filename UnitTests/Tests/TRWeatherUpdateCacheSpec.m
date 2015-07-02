@@ -29,6 +29,14 @@ void (^resetFilesystem) () = ^{
     [[NSFileManager defaultManager] removeItemAtURL:weatherUpdateURLForTesting() error:nil];
 };
 
+NSDictionary* (^weatherConditionsWithTemperature) (NSNumber*) = ^NSDictionary* (NSNumber *temp) {
+    NSDictionary *dailyValue = @{@"time": @50, @"icon": @"some-icon", @"temperatureMin": @50, @"temperatureMax": @60};
+    NSArray *dailyData = @[dailyValue, dailyValue, dailyValue, dailyValue, dailyValue];
+    NSDictionary *conditions = (@{ @"currently": @{ @"temperature": temp },
+                                   @"daily": @{ @"data": dailyData } });
+    return conditions;
+};
+
 describe(@"TRWeatherUpdateCache", ^{
     beforeEach(^{
         resetFilesystem();
@@ -47,7 +55,7 @@ describe(@"TRWeatherUpdateCache", ^{
             NSURL *weatherUpdateURL = weatherUpdateURLForTesting();
             TRWeatherUpdateCache *cache = OCMPartialMock([[TRWeatherUpdateCache alloc] init]);
             OCMStub([cache latestWeatherUpdateFilePath]).andReturn([weatherUpdateURL path]);
-            TRWeatherUpdate *update = [[TRWeatherUpdate alloc] initWithPlacemark:stubbedPlacemark() currentConditionsJSON:@{} yesterdaysConditionsJSON:@{}];
+            TRWeatherUpdate *update = [[TRWeatherUpdate alloc] initWithPlacemark:stubbedPlacemark() currentConditionsJSON:weatherConditionsWithTemperature(@30) yesterdaysConditionsJSON:@{}];
 
             [cache archiveWeatherUpdate:update];
             
@@ -70,7 +78,7 @@ describe(@"TRWeatherUpdateCache", ^{
             NSURL *weatherUpdateURL = weatherUpdateURLForTesting();
             TRWeatherUpdateCache *cache = OCMPartialMock([[TRWeatherUpdateCache alloc] init]);
             OCMStub([cache latestWeatherUpdateFilePath]).andReturn([weatherUpdateURL path]);
-            TRWeatherUpdate *update = [[TRWeatherUpdate alloc] initWithPlacemark:stubbedPlacemark() currentConditionsJSON:@{} yesterdaysConditionsJSON:@{}];
+            TRWeatherUpdate *update = [[TRWeatherUpdate alloc] initWithPlacemark:stubbedPlacemark() currentConditionsJSON:weatherConditionsWithTemperature(@30) yesterdaysConditionsJSON:@{}];
             [cache archiveWeatherUpdate:update];
 
             TRWeatherUpdate* unarchivedWeatherUpdate = [cache latestWeatherUpdate];
@@ -83,7 +91,7 @@ describe(@"TRWeatherUpdateCache", ^{
             TRWeatherUpdateCache *cache = OCMPartialMock([[TRWeatherUpdateCache alloc] init]);
             OCMStub([cache latestWeatherUpdateFilePath]).andReturn([weatherUpdateURL path]);
             NSDate *date = [NSDate date];
-            TRWeatherUpdate *update = [[TRWeatherUpdate alloc] initWithPlacemark:stubbedPlacemark() currentConditionsJSON:@{} yesterdaysConditionsJSON:@{} date:date];
+            TRWeatherUpdate *update = [[TRWeatherUpdate alloc] initWithPlacemark:stubbedPlacemark() currentConditionsJSON:weatherConditionsWithTemperature(@30) yesterdaysConditionsJSON:@{} date:date];
             [cache archiveWeatherUpdate:update];
 
             TRWeatherUpdate* unarchivedWeatherUpdate = [cache latestWeatherUpdate];
