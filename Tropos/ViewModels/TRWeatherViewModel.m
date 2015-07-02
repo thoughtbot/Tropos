@@ -1,5 +1,4 @@
 #import "TRWeatherViewModel.h"
-#import "TRWeatherUpdate.h"
 #import "TRDailyForecastViewModel.h"
 #import "TRDateFormatter.h"
 #import "Tropos-Swift.h"
@@ -11,14 +10,14 @@
 
 @interface TRWeatherViewModel ()
 
-@property (nonatomic) TRWeatherUpdate *weatherUpdate;
+@property (nonatomic) WeatherUpdate *weatherUpdate;
 @property (nonatomic) TRDateFormatter *dateFormatter;
 
 @end
 
 @implementation TRWeatherViewModel
 
-- (instancetype)initWithWeatherUpdate:(TRWeatherUpdate *)weatherUpdate
+- (instancetype)initWithWeatherUpdate:(WeatherUpdate *)weatherUpdate
 {
     self = [super init];
     if (!self) return nil;
@@ -41,12 +40,12 @@
 
 - (UIImage *)conditionsImage
 {
-    return [UIImage imageNamed:self.weatherUpdate.conditionsDescription];
+    return [UIImage imageNamed:self.weatherUpdate.weatherConditions.current.conditionsDescription];
 }
 
 - (NSAttributedString *)conditionsDescription
 {
-    TemperatureComparison comparison = [self.weatherUpdate.currentTemperature comparedTo:self.weatherUpdate.yesterdaysTemperature];
+    TemperatureComparison comparison = [self.weatherUpdate.weatherConditions.current.currentTemperature comparedTo:self.weatherUpdate.weatherConditions.yesterday.temperature];
 
     NSString *adjective;
     NSString *comparisonString = [TRTemperatureComparisonFormatter localizedStringFromComparison:comparison adjective:&adjective  precipitation: self.precipitationDescription];
@@ -55,7 +54,7 @@
     [attributedString setFont:[UIFont defaultUltraLightFontOfSize:26]];
     [attributedString setTextColor:[UIColor defaultTextColor]];
     
-    Temperature *difference = [self.weatherUpdate.currentTemperature temperatureDifferenceFrom:self.weatherUpdate.yesterdaysTemperature];
+    Temperature *difference = [self.weatherUpdate.weatherConditions.current.currentTemperature temperatureDifferenceFrom:self.weatherUpdate.weatherConditions.yesterday.temperature];
     [attributedString setTextColor:[self colorForTemperatureComparison:comparison difference:difference.fahrenheitValue] forSubstring:adjective];
 
     return attributedString;
@@ -63,26 +62,26 @@
 
 - (NSString *)windDescription
 {
-    return [TRWindSpeedFormatter localizedStringForWindSpeed:self.weatherUpdate.windSpeed bearing:self.weatherUpdate.windBearing];
+    return [TRWindSpeedFormatter localizedStringForWindSpeed:self.weatherUpdate.weatherConditions.current.windSpeed bearing:self.weatherUpdate.weatherConditions.current.windBearing];
 }
 
 - (NSString *)precipitationDescription
 {
-    Precipitation *precipitation = [[Precipitation alloc] initWithProbability:(float)self.weatherUpdate.precipitationPercentage type:self.weatherUpdate.precipitationType];
+    Precipitation *precipitation = [[Precipitation alloc] initWithProbability:self.weatherUpdate.weatherConditions.current.precipitationProbability type:self.weatherUpdate.weatherConditions.current.precipitationType];
     return [TRPrecipitationChanceFormatter precipitationChanceStringFromPrecipitation:precipitation];
 }
 
 - (NSAttributedString *)temperatureDescription
 {
     TRTemperatureFormatter *formatter = [TRTemperatureFormatter new];
-    NSString *high = [formatter stringFromTemperature:self.weatherUpdate.currentHigh];
-    NSString *current = [formatter stringFromTemperature:self.weatherUpdate.currentTemperature];
-    NSString *low = [formatter stringFromTemperature:self.weatherUpdate.currentLow];
+    NSString *high = [formatter stringFromTemperature:self.weatherUpdate.weatherConditions.current.currentHighTemp];
+    NSString *current = [formatter stringFromTemperature:self.weatherUpdate.weatherConditions.current.currentTemperature];
+    NSString *low = [formatter stringFromTemperature:self.weatherUpdate.weatherConditions.current.currentLowTemp];
     NSString *temperatureString = [NSString stringWithFormat:@"%@ / %@ / %@", high, current, low];
     
     NSMutableAttributedString *attributedString = [[NSMutableAttributedString alloc] initWithString:temperatureString];
-    TemperatureComparison comparison = [self.weatherUpdate.currentTemperature comparedTo:self.weatherUpdate.yesterdaysTemperature];
-    Temperature *difference = [self.weatherUpdate.currentTemperature temperatureDifferenceFrom:self.weatherUpdate.yesterdaysTemperature];
+    TemperatureComparison comparison = [self.weatherUpdate.weatherConditions.current.currentTemperature comparedTo:self.weatherUpdate.weatherConditions.yesterday.temperature];
+    Temperature *difference = [self.weatherUpdate.weatherConditions.current.currentTemperature temperatureDifferenceFrom:self.weatherUpdate.weatherConditions.yesterday.temperature];
     
     NSRange rangeOfFirstSlash = [temperatureString rangeOfString:@"/"];
     NSRange rangeOfLastSlash = [temperatureString rangeOfString:@"/" options:NSBackwardsSearch];
@@ -95,9 +94,10 @@
 
 - (NSArray *)dailyForecasts
 {
-    NSMutableArray *forecasts = [[NSMutableArray alloc] initWithCapacity:self.weatherUpdate.dailyForecasts.count];
+    NSArray *dailyForecasts = self.weatherUpdate.weatherConditions.current.dailyForecasts;
+    NSMutableArray *forecasts = [[NSMutableArray alloc] initWithCapacity:dailyForecasts.count];
 
-    for (DailyForecast *forecast in self.weatherUpdate.dailyForecasts) {
+    for (DailyForecast *forecast in dailyForecasts) {
         TRDailyForecastViewModel *viewModel = [[TRDailyForecastViewModel alloc] initWithDailyForecast:forecast];
         [forecasts addObject:viewModel];
     }

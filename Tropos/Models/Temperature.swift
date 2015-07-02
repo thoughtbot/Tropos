@@ -9,7 +9,7 @@ private enum TemperatureLimit: Int {
     case Colder = 75
 }
 
-@objc class Temperature: NSObject {
+@objc class Temperature: NSObject, NSCoding {
     let fahrenheitValue: Int
     
     lazy var celsiusValue: Int = {
@@ -37,6 +37,20 @@ private enum TemperatureLimit: Int {
     
     private func fahrenheitDifference(temperature: Temperature) -> Int {
         return fahrenheitValue - temperature.fahrenheitValue
+    }
+    
+    // MARK: NSCoding
+    enum NSCodingKey: String {
+        case Value = "Value"
+    }
+    
+    func encodeWithCoder(aCoder: NSCoder) {
+        aCoder.encodeInteger(fahrenheitValue, forKey: NSCodingKey.Value.rawValue)
+    }
+    
+    required convenience init(coder aDecoder: NSCoder) {
+        let value = aDecoder.decodeIntegerForKey(NSCodingKey.Value.rawValue)
+        self.init(fahrenheitValue: value)
     }
     
     // MARK: NSObjectProtocol

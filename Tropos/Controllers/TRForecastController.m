@@ -3,7 +3,6 @@
 #import "Secrets.h"
 #import "TRForecastController.h"
 #import "Tropos-Swift.h"
-#import "TRWeatherUpdate.h"
 
 static NSString *const TRForecastAPIExclusions = @"minutely,hourly,alerts,flags";
 
@@ -39,7 +38,9 @@ static NSString *const TRForecastAPIExclusions = @"minutely,hourly,alerts,flags"
     RACSignal *yesterdaysConditions = [self fetchConditionsFromURL:[self URLForCurrentConditionsAtLatitude:coordinate.latitude longitude:coordinate.longitude yesterday:YES]];
 
     return [[RACSignal combineLatest:@[currentConditions, yesterdaysConditions] reduce:^id(id currentConditionsJSON, id yesterdaysConditionsJSON) {
-        return [[TRWeatherUpdate alloc] initWithPlacemark:placemark currentConditionsJSON:currentConditionsJSON yesterdaysConditionsJSON:yesterdaysConditionsJSON];
+        
+        WeatherConditions *weatherConditions = [[WeatherConditions alloc] initWithCurrentConditionsJSON:currentConditionsJSON yesterdaysConditionsJSON:yesterdaysConditionsJSON];
+        return [[WeatherUpdate alloc] initWithPlacemark:placemark weatherConditions:weatherConditions date:nil];
     }] deliverOnMainThread];
 }
 

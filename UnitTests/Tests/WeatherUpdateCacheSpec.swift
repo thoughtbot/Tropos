@@ -18,12 +18,6 @@ class WeatherUpdateCacheSpec: QuickSpec {
         return url.URLByAppendingPathComponent("TestWeatherUpdate")
     }
     
-    func weatherConditions(temperature: Int) -> Dictionary<String, AnyObject> {
-        let dailyValue = ["time": 50, "icon": "some-icon", "temperatureMin": 50, "temperatureMax": 60]
-        let dailyData = [dailyValue, dailyValue, dailyValue, dailyValue]
-        return ["currently": ["temperature": temperature], "daily": ["data": dailyData]]
-    }
-    
     func placemark() -> CLPlacemark {
         return MKPlacemark(coordinate: CLLocationCoordinate2D(latitude: 10, longitude: 20), addressDictionary: ["City": "Palo Alto", kABPersonAddressStateKey: "CA"])
     }
@@ -40,10 +34,10 @@ class WeatherUpdateCacheSpec: QuickSpec {
         describe("WeatherUpdateCache") {
             context("archiving") {
                 it("archives the object to disk") {
-                    let conditions = self.weatherConditions(30)
-                    let update = TRWeatherUpdate(placemark: self.placemark(), currentConditionsJSON: conditions, yesterdaysConditionsJSON: NSDictionary())
+                    let conditions = WeatherConditions(currentConditionsJSON: CurrentConditionsSpec.currentConditionsJSON(currentTemp: 30), yesterdaysConditionsJSON: WeatherConditionsSpec.yesterdaysConditionsJSON())
+                    let weatherUpdate = WeatherUpdate(placemark: self.placemark(), weatherConditions: conditions)
                     
-                    expect(WeatherUpdateCacheMock.archive(update)).to(equal(true))
+                    expect(WeatherUpdateCacheMock.archive(weatherUpdate)).to(equal(true))
                     expect(NSFileManager.defaultManager().isReadableFileAtPath(WeatherUpdateCacheSpec.weatherUpdateURLForTesting().path!)).to(equal(true))
                 }
             }
@@ -54,19 +48,19 @@ class WeatherUpdateCacheSpec: QuickSpec {
                 }
                 
                 it("returns weather update when archive exists") {
-                    let conditions = self.weatherConditions(30)
-                    let update = TRWeatherUpdate(placemark: self.placemark(), currentConditionsJSON: conditions, yesterdaysConditionsJSON: NSDictionary())
-                    WeatherUpdateCacheMock.archive(update)
+                    let conditions = WeatherConditions(currentConditionsJSON: CurrentConditionsSpec.currentConditionsJSON(currentTemp: 30), yesterdaysConditionsJSON: WeatherConditionsSpec.yesterdaysConditionsJSON())
+                    let weatherUpdate = WeatherUpdate(placemark: self.placemark(), weatherConditions: conditions)
+                    WeatherUpdateCacheMock.archive(weatherUpdate)
                     
-                    expect(WeatherUpdateCacheMock.latestWeatherUpdate()).to(beAnInstanceOf(TRWeatherUpdate))
+                    expect(WeatherUpdateCacheMock.latestWeatherUpdate()).to(beAnInstanceOf(WeatherUpdate))
                 }
                 
                 it("caches the date") {
-                    let conditions = self.weatherConditions(30)
                     let date = NSDate()
-                    let update = TRWeatherUpdate(placemark: self.placemark(), currentConditionsJSON: conditions, yesterdaysConditionsJSON: Dictionary<NSObject, AnyObject>(), date: date)
-                    WeatherUpdateCacheMock.archive(update)
-                    
+                    let conditions = WeatherConditions(currentConditionsJSON: CurrentConditionsSpec.currentConditionsJSON(currentTemp: 30), yesterdaysConditionsJSON: WeatherConditionsSpec.yesterdaysConditionsJSON())
+                    let weatherUpdate = WeatherUpdate(placemark: self.placemark(), weatherConditions: conditions, date: date)
+
+                    WeatherUpdateCacheMock.archive(weatherUpdate)
                     expect(WeatherUpdateCacheMock.latestWeatherUpdate()?.date).to(equal(date))
                 }
             }

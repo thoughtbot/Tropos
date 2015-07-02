@@ -1,4 +1,4 @@
-@class TRWeatherUpdate;
+@class WeatherUpdate;
 
 @interface TRWeatherViewModel : NSObject
 
@@ -11,6 +11,6 @@
 @property (nonatomic, readonly) NSAttributedString *temperatureDescription;
 @property (nonatomic, readonly) NSArray *dailyForecasts;
 
-- (instancetype)initWithWeatherUpdate:(TRWeatherUpdate *)weatherUpdate;
+- (instancetype)initWithWeatherUpdate:(WeatherUpdate *)weatherUpdate;
 
 @end

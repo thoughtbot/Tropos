@@ -1,6 +1,5 @@
 @import CoreLocation;
 #import "TRWeatherController.h"
-#import "TRWeatherUpdate.h"
 #import "TRLocationController.h"
 #import "TRForecastController.h"
 #import "Tropos-Swift.h"
@@ -50,7 +49,7 @@
         }];
     }];
 
-    RAC(self, viewModel) = [[self latestWeatherUpdates] map:^id(TRWeatherUpdate *update) {
+    RAC(self, viewModel) = [[self latestWeatherUpdates] map:^id(WeatherUpdate *update) {
         return [[TRWeatherViewModel alloc] initWithWeatherUpdate:update];
     }];
 
@@ -58,7 +57,7 @@
         [[TRAnalyticsController sharedController] trackError:error eventName:@"Error: Weather Update"];
     }];
 
-    [[self latestWeatherUpdates] subscribeNext:^(TRWeatherUpdate *update) {
+    [[self latestWeatherUpdates] subscribeNext:^(WeatherUpdate *update) {
         [[TRAnalyticsController sharedController] trackEvent:update];
         [WeatherUpdateCache archive:update];
     }];
@@ -68,10 +67,10 @@
 
 - (RACSignal *)latestWeatherUpdates
 {
-    TRWeatherUpdate *cachedUpdate = [WeatherUpdateCache latestWeatherUpdate];
+    WeatherUpdate *cachedUpdate = [WeatherUpdateCache latestWeatherUpdate];
     RACSignal *weatherUpdates = [self.updateWeatherCommand.executionSignals startWith:[RACSignal return:cachedUpdate]];
 
-    return [[weatherUpdates switchToLatest] filter:^BOOL(TRWeatherUpdate *update) {
+    return [[weatherUpdates switchToLatest] filter:^BOOL(WeatherUpdate *update) {
         return update != nil;
     }];
 }

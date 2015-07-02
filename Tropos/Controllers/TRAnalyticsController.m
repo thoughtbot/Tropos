@@ -1,5 +1,6 @@
 #import <Mixpanel/Mixpanel.h>
 #import "TRAnalyticsController.h"
+#import "Tropos-Swift.h"
 
 #ifndef DEBUG
 #import "Secrets.h"
@@ -35,7 +36,7 @@
     [[Mixpanel sharedInstance] track:eventName];
 }
 
-- (void)trackEvent:(id<TRAnalyticsEvent>)event
+- (void)trackEvent:(id<AnalyticsEvent>)event
 {
     [[Mixpanel sharedInstance] track:event.eventName properties:event.eventProperties];
 }
