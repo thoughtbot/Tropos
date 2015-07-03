@@ -1,5 +1,5 @@
 PODS:
-  - Expecta (0.3.1)
+  - Expecta (1.0.0)
   - HockeySDK (3.6.2)
   - Mixpanel (2.7.2):
     - Mixpanel/MPCategoryHelpers (= 2.7.2)
@@ -15,7 +15,7 @@ PODS:
   - ReactiveCocoa/no-arc (2.4.7)
   - ReactiveCocoa/UI (2.4.7):
     - ReactiveCocoa/Core
-  - Specta (0.3.0.beta1)
+  - Specta (1.0.2)
 
 DEPENDENCIES:
   - Expecta
@@ -24,25 +24,15 @@ DEPENDENCIES:
   - OCMock
   - OHHTTPStubs
   - ReactiveCocoa (~> 2.4.7)
-  - Specta (from `https://github.com/specta/specta.git`, tag `v0.3.0.beta1`)
-
-EXTERNAL SOURCES:
-  Specta:
-    :git: https://github.com/specta/specta.git
-    :tag: v0.3.0.beta1
-
-CHECKOUT OPTIONS:
-  Specta:
-    :git: https://github.com/specta/specta.git
-    :tag: v0.3.0.beta1
+  - Specta
 
 SPEC CHECKSUMS:
-  Expecta: a354d4633409dd9fe8c4f5ff5130426adbe31628
+  Expecta: 32604574add2c46a36f8d2f716b6c5736eb75024
   HockeySDK: 51ade1aff04463137e852797d2eb4dfb2511d6a9
   Mixpanel: e9bcb16eb0e2a98fc330ceeb0d8b7f4aec4182ab
   OCMock: a10ea9f0a6e921651f96f78b6faee95ebc813b92
   OHHTTPStubs: 00152a63400246fcbc4b772a2a547ea34c97cbd6
   ReactiveCocoa: eb38dee0a0e698f73a9b25e5c1faea2bb4c79240
-  Specta: d2158a483ad179e5f8d3a29f75ff4fc0ff6fab16
+  Specta: 9cec98310dca411f7c7ffd6943552b501622abfe
 
 COCOAPODS: 0.37.2

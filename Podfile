@@ -6,7 +6,7 @@ pod 'Mixpanel', '~> 2.7.2', :inhibit_warnings => true
 
 target :unit_tests, :exclusive => true do
   link_with 'UnitTests'
-  pod 'Specta', :git => 'https://github.com/specta/specta.git', :tag => 'v0.3.0.beta1'
+  pod 'Specta'
   pod 'Expecta'
   pod 'OCMock'
   pod 'OHHTTPStubs'
