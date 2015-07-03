@@ -6,10 +6,10 @@ import Foundation
     let highTemperature: Temperature
     let lowTemperature: Temperature
     
-    init(json: NSDictionary) {
-        self.date = NSDate(timeIntervalSince1970: json["time"] as! NSTimeInterval)
-        self.conditionsDescription = json["icon"] as! String
-        self.highTemperature = Temperature(fahrenheitValue: json["temperatureMax"] as! Int)
-        self.lowTemperature = Temperature(fahrenheitValue: json["temperatureMin"] as! Int)
+    init(JSON: Dictionary<String, AnyObject>) {
+        self.date = NSDate(timeIntervalSince1970: JSON["time"] as! NSTimeInterval)
+        self.conditionsDescription = JSON["icon"] as! String
+        self.highTemperature = Temperature(fahrenheitValue: JSON["temperatureMax"] as! Int)
+        self.lowTemperature = Temperature(fahrenheitValue: JSON["temperatureMin"] as! Int)
     }
 }

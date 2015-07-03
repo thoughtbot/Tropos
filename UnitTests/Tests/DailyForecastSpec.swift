@@ -6,8 +6,8 @@ class DailyForecastSpec: QuickSpec {
     override func spec() {
         describe("DailyForecast") {
             context("should correctly initialize set properties") {
-                let json = ["time": Double(20.0), "icon": "text", "temperatureMax": 50, "temperatureMin": 10]
-                let dailyForecast = DailyForecast(json: json)
+                let json: Dictionary<String, AnyObject> = ["time": Double(20.0), "icon": "text", "temperatureMax": 50, "temperatureMin": 10]
+                let dailyForecast = DailyForecast(JSON: json)
                 
                 expect(dailyForecast.date).to(equal(NSDate(timeIntervalSince1970: 20)))
                 expect(dailyForecast.conditionsDescription).to(equal("text"))
