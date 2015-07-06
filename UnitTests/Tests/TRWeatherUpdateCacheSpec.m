@@ -29,7 +29,7 @@ void (^resetFilesystem) () = ^{
     [[NSFileManager defaultManager] removeItemAtURL:weatherUpdateURLForTesting() error:nil];
 };
 
-NSDictionary* (^weatherConditionsWithTemperature) (NSNumber*) = ^NSDictionary* (NSNumber *temp) {
+NSDictionary* (^weatherConditionsWithTemperature) (NSNumber *) = ^NSDictionary* (NSNumber *temp) {
     NSDictionary *dailyValue = @{@"time": @50, @"icon": @"some-icon", @"temperatureMin": @50, @"temperatureMax": @60};
     NSArray *dailyData = @[dailyValue, dailyValue, dailyValue, dailyValue, dailyValue];
     NSDictionary *conditions = (@{ @"currently": @{ @"temperature": temp },
