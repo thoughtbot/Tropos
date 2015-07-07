@@ -5,14 +5,14 @@
 
 SpecBegin(TRWeatherUpdate)
 
-CLPlacemark* (^stubbedPlacemark) () = ^CLPlacemark* {
+CLPlacemark *(^stubbedPlacemark) () = ^CLPlacemark *{
     id placemark = OCMClassMock([CLPlacemark class]);
     OCMStub([placemark locality]).andReturn(@"");
     OCMStub([placemark administrativeArea]).andReturn(@"");
     return placemark;
 };
 
-NSDictionary* (^weatherConditionsWithTemperature) (NSNumber*) = ^NSDictionary* (NSNumber *temp) {
+NSDictionary *(^weatherConditionsWithTemperature) (NSNumber *) = ^NSDictionary *(NSNumber *temp) {
     NSDictionary *dailyValue = @{@"time": @50, @"icon": @"some-icon", @"temperatureMin": @50, @"temperatureMax": @60};
     NSArray *dailyData = @[dailyValue, dailyValue, dailyValue, dailyValue, dailyValue];
     NSDictionary *conditions = (@{ @"currently": @{ @"temperature": temp },
@@ -20,7 +20,7 @@ NSDictionary* (^weatherConditionsWithTemperature) (NSNumber*) = ^NSDictionary* (
     return conditions;
 };
 
-NSDictionary* (^weatherConditionsWithPrecipitation) (NSString*) = ^NSDictionary* (NSString *precipitation) {
+NSDictionary *(^weatherConditionsWithPrecipitation) (NSString *) = ^NSDictionary *(NSString *precipitation) {
     NSDictionary *dailyValue = @{@"time": @50, @"icon": @"some-icon",@"temperatureMin": @50, @"temperatureMax": @60, @"precipProbability": precipitation, @"precipType": @"rain" };
     NSArray *dailyData = @[dailyValue, dailyValue, dailyValue, dailyValue, dailyValue];
     NSDictionary *conditions = (@{ @"currently": @{ @"temperature": @90 },
@@ -28,7 +28,7 @@ NSDictionary* (^weatherConditionsWithPrecipitation) (NSString*) = ^NSDictionary*
     return conditions;
 };
 
-NSDictionary* (^weatherConditionsWithoutPrecipitationType) (NSString*) = ^NSDictionary* (NSString *precipitation) {
+NSDictionary *(^weatherConditionsWithoutPrecipitationType) (NSString *) = ^NSDictionary *(NSString *precipitation) {
     NSDictionary *dailyValue = @{@"time": @50, @"icon": @"some-icon",@"temperatureMin": @50, @"temperatureMax": @60, @"precipProbability": precipitation};
     NSArray *dailyData = @[dailyValue, dailyValue, dailyValue, dailyValue, dailyValue];
     NSDictionary *conditions = (@{ @"currently": @{ @"temperature": @90 },

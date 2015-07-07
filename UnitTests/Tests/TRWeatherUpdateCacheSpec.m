@@ -12,14 +12,14 @@
 
 SpecBegin(TRWeatherUpdateCache)
 
-CLPlacemark* (^stubbedPlacemark) () = ^CLPlacemark* {
+CLPlacemark *(^stubbedPlacemark) () = ^CLPlacemark *{
     CLPlacemark *placemark = OCMClassMock([CLPlacemark class]);
     OCMStub([placemark locality]).andReturn(@"");
     OCMStub([placemark administrativeArea]).andReturn(@"");
     return placemark;
 };
 
-NSURL* (^weatherUpdateURLForTesting) () = ^NSURL* {
+NSURL *(^weatherUpdateURLForTesting) () = ^NSURL *{
     NSURL *documentsPath = [[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory
                                                                   inDomains:NSUserDomainMask] firstObject];
     return [documentsPath URLByAppendingPathComponent:@"TestWeatherUpdate"];
@@ -29,7 +29,7 @@ void (^resetFilesystem) () = ^{
     [[NSFileManager defaultManager] removeItemAtURL:weatherUpdateURLForTesting() error:nil];
 };
 
-NSDictionary* (^weatherConditionsWithTemperature) (NSNumber *) = ^NSDictionary* (NSNumber *temp) {
+NSDictionary *(^weatherConditionsWithTemperature) (NSNumber *) = ^NSDictionary *(NSNumber *temp) {
     NSDictionary *dailyValue = @{@"time": @50, @"icon": @"some-icon", @"temperatureMin": @50, @"temperatureMax": @60};
     NSArray *dailyData = @[dailyValue, dailyValue, dailyValue, dailyValue, dailyValue];
     NSDictionary *conditions = (@{ @"currently": @{ @"temperature": temp },
