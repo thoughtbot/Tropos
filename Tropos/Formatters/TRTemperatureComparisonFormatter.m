@@ -1,3 +1,4 @@
+#import "Tropos-Swift.h"
 #import "TRTemperatureComparisonFormatter.h"
 
 typedef NS_ENUM(NSUInteger, TRTimeOfDay) {
@@ -9,12 +10,12 @@ typedef NS_ENUM(NSUInteger, TRTimeOfDay) {
 
 @implementation TRTemperatureComparisonFormatter
 
-+ (NSString *)localizedStringFromComparison:(TemperatureComparison)comparison adjective:(NSString *__autoreleasing *)adjective precipitation:(NSString *)precipitation
++ (NSString *)localizedStringFromComparison:(TemperatureComparison)comparison adjective:(NSString *__autoreleasing *)adjective precipitation:(NSString *)precipitation date:(NSDate *)date
 {
     NSString *formatString = (comparison == TemperatureComparisonSame)? NSLocalizedString(@"SameTemperatureFormat", nil) : NSLocalizedString(@"DifferentTemperatureFormat", nil);
     *adjective = [self localizedAdjectiveForTemperatureComparison:comparison];
 
-    return [NSString stringWithFormat:formatString, *adjective, [self localizedCurrentTimeOfDay], [self localizedPreviousTimeOfDay], precipitation];
+    return [NSString stringWithFormat:formatString, *adjective, [self localizedCurrentTimeOfDayForDate:date], [self localizedPreviousTimeOfDayForDate:date], precipitation];
 }
 
 #pragma mark - Private Methods
@@ -35,9 +36,9 @@ typedef NS_ENUM(NSUInteger, TRTimeOfDay) {
     }
 }
 
-+ (NSString *)localizedCurrentTimeOfDay
++ (NSString *)localizedCurrentTimeOfDayForDate:(NSDate *)date
 {
-    switch ([self timeOfDay]) {
+    switch ([self timeOfDayForDate:date]) {
         case TRTimeOfDayNight:
             return NSLocalizedString(@"Tonight", nil);
         case TRTimeOfDayMorning:
@@ -51,9 +52,9 @@ typedef NS_ENUM(NSUInteger, TRTimeOfDay) {
     }
 }
 
-+ (NSString *)localizedPreviousTimeOfDay
++ (NSString *)localizedPreviousTimeOfDayForDate:(NSDate *)date
 {
-    switch ([self timeOfDay]) {
+    switch ([self timeOfDayForDate:date]) {
         case TRTimeOfDayNight:
             return NSLocalizedString(@"LastNight", nil);
         case TRTimeOfDayMorning:
@@ -67,9 +68,9 @@ typedef NS_ENUM(NSUInteger, TRTimeOfDay) {
     }
 }
 
-+ (TRTimeOfDay)timeOfDay;
++ (TRTimeOfDay)timeOfDayForDate:(NSDate *)date;
 {
-    NSDateComponents *dateComponents = [[self calendar] components:NSCalendarUnitHour fromDate:[NSDate date]];
+    NSDateComponents *dateComponents = [[self calendar] components:NSCalendarUnitHour fromDate:date];
 
     if (dateComponents.hour < 4) {
         return TRTimeOfDayNight;
