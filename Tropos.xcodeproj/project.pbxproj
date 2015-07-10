@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		130C4C29D1C62D52D0767A6B /* Main.storyboard in Sources */ = {isa = PBXBuildFile; fileRef = E59B090E67C8BD269D3CD9DB /* Main.storyboard */; };
+		39CC8A5A1B50315E00D596E6 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39CC8A591B50315E00D596E6 /* Color.swift */; };
 		46660A27B04F4C7B78A7920F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 436D9431497525313B32E225 /* Foundation.framework */; };
 		4D0A5C381A3A27510084C41E /* TRForecastController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D0A5C371A3A27510084C41E /* TRForecastController.m */; };
 		4D0A5C3D1A3A53DD0084C41E /* CWForecastDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D0A5C3C1A3A53DD0084C41E /* CWForecastDetailView.xib */; };
@@ -103,6 +104,7 @@
 		2853082980109C89B8F07D3C /* main.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		2CA708068A67D7E761D29251 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		3431B0CE6A3E1D06EBAB27BF /* Pods-unit_tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-unit_tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-unit_tests/Pods-unit_tests.debug.xcconfig"; sourceTree = "<group>"; };
+		39CC8A591B50315E00D596E6 /* Color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		436D9431497525313B32E225 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		4D0A5C361A3A27510084C41E /* TRForecastController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRForecastController.h; sourceTree = "<group>"; };
 		4D0A5C371A3A27510084C41E /* TRForecastController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRForecastController.m; sourceTree = "<group>"; };
@@ -211,8 +213,6 @@
 		C2E44CEE1A3B6E89009CC844 /* NSDate+TRRelativeDate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+TRRelativeDate.m"; sourceTree = "<group>"; };
 		C2E44CF91A3B76B3009CC844 /* NSNumber+TRRoundedNumber.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSNumber+TRRoundedNumber.h"; sourceTree = "<group>"; };
 		C2E44CFA1A3B76B3009CC844 /* NSNumber+TRRoundedNumber.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSNumber+TRRoundedNumber.m"; sourceTree = "<group>"; };
-		C44ECB231AFD049000B1195E /* TRPrecipitation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRPrecipitation.h; sourceTree = "<group>"; };
-		C44ECB241AFD074600B1195E /* TRPrecipitation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRPrecipitation.m; sourceTree = "<group>"; };
 		C4B3320A1AFD476500401873 /* TRPrecipitationChanceFormatter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TRPrecipitationChanceFormatter.h; sourceTree = "<group>"; };
 		C4B3320B1AFD480E00401873 /* TRPrecipitationChanceFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRPrecipitationChanceFormatter.m; sourceTree = "<group>"; };
 		DED70296CC99B4AAD0DE42BD /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
@@ -355,10 +355,9 @@
 				4D98E98A1A80C89600856412 /* TRDailyForecast.m */,
 				E7A8955B1AFD1CAA0023205B /* TRWeatherUpdateCache.h */,
 				E7A8955C1AFD1CAA0023205B /* TRWeatherUpdateCache.m */,
-				C44ECB231AFD049000B1195E /* TRPrecipitation.h */,
-				C44ECB241AFD074600B1195E /* TRPrecipitation.m */,
 				6D8ACB361B44270A003087A7 /* Temperature.swift */,
 				6D0F13641B4333CE001685BA /* Precipitation.swift */,
+				39CC8A591B50315E00D596E6 /* Color.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -841,6 +840,7 @@
 				C2E44CDD1A3A38A2009CC844 /* TRLocationController.m in Sources */,
 				4D76CCD41A99C3FA00DDE5EB /* TRRefreshLayer.m in Sources */,
 				D7DD1B8AD495AFA4EC1CEFF9 /* TRAppDelegate.m in Sources */,
+				39CC8A5A1B50315E00D596E6 /* Color.swift in Sources */,
 				4DC716601A9B1D5B00BC4BD4 /* TRRefreshControl.m in Sources */,
 				130C4C29D1C62D52D0767A6B /* Main.storyboard in Sources */,
 				4DEDF4F61A6FA682006F3F11 /* TRWeatherUpdate.m in Sources */,
