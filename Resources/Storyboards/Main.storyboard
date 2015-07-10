@@ -314,8 +314,7 @@
                                 </mask>
                             </variation>
                         </view>
-                        <barButtonItem key="rightBarButtonItem" image="settings" id="JoB-za-L07" customClass="SettingsBarButtonItem" customModule="Tropos" customModuleProvider="target">
-                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <barButtonItem key="rightBarButtonItem" image="settings" id="JoB-za-L07">
                             <connections>
                                 <segue destination="hTG-aj-CsX" kind="presentation" modalPresentationStyle="overFullScreen" id="Q2D-9n-RLR"/>
                             </connections>
