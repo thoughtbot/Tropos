@@ -18,7 +18,7 @@
 
 SpecBegin(TRApplicationController)
 
-TRLocationController* (^locationControllerWithAuthorizationStatusAuthorizedAlwaysEqualTo) (BOOL) = ^TRLocationController* (BOOL enabled){
+TRLocationController *(^locationControllerWithAuthorizationStatusAuthorizedAlwaysEqualTo) (BOOL) = ^TRLocationController *(BOOL enabled){
     TRLocationController *locationController = OCMPartialMock([[TRLocationController alloc] init]);
     OCMStub([locationController authorizationStatusEqualTo:kCLAuthorizationStatusAuthorizedAlways]).andReturn(enabled);
     return locationController;

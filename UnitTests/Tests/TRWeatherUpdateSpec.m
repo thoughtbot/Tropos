@@ -5,31 +5,31 @@
 
 SpecBegin(TRWeatherUpdate)
 
-CLPlacemark* (^stubbedPlacemark) () = ^CLPlacemark* {
+CLPlacemark *(^stubbedPlacemark) () = ^CLPlacemark *{
     id placemark = OCMClassMock([CLPlacemark class]);
     OCMStub([placemark locality]).andReturn(@"");
     OCMStub([placemark administrativeArea]).andReturn(@"");
     return placemark;
 };
 
-NSDictionary* (^weatherConditionsWithTemperature) (NSNumber*) = ^NSDictionary* (NSNumber *temp) {
-    NSDictionary *dailyValue = @{@"temperatureMin": @50, @"temperatureMax": @60};
+NSDictionary *(^weatherConditionsWithTemperature) (NSNumber *) = ^NSDictionary *(NSNumber *temp) {
+    NSDictionary *dailyValue = @{@"time": @50, @"icon": @"some-icon", @"temperatureMin": @50, @"temperatureMax": @60};
     NSArray *dailyData = @[dailyValue, dailyValue, dailyValue, dailyValue, dailyValue];
     NSDictionary *conditions = (@{ @"currently": @{ @"temperature": temp },
                                    @"daily": @{ @"data": dailyData } });
     return conditions;
 };
 
-NSDictionary* (^weatherConditionsWithPrecipitation) (NSString*) = ^NSDictionary* (NSString *precipitation) {
-    NSDictionary *dailyValue = @{@"temperatureMin": @50, @"temperatureMax": @60, @"precipProbability": precipitation, @"precipType": @"rain" };
+NSDictionary *(^weatherConditionsWithPrecipitation) (NSString *) = ^NSDictionary *(NSString *precipitation) {
+    NSDictionary *dailyValue = @{@"time": @50, @"icon": @"some-icon",@"temperatureMin": @50, @"temperatureMax": @60, @"precipProbability": precipitation, @"precipType": @"rain" };
     NSArray *dailyData = @[dailyValue, dailyValue, dailyValue, dailyValue, dailyValue];
     NSDictionary *conditions = (@{ @"currently": @{ @"temperature": @90 },
                                    @"daily": @{ @"data": dailyData } });
     return conditions;
 };
 
-NSDictionary* (^weatherConditionsWithoutPrecipitationType) (NSString*) = ^NSDictionary* (NSString *precipitation) {
-    NSDictionary *dailyValue = @{@"temperatureMin": @50, @"temperatureMax": @60, @"precipProbability": precipitation};
+NSDictionary *(^weatherConditionsWithoutPrecipitationType) (NSString *) = ^NSDictionary *(NSString *precipitation) {
+    NSDictionary *dailyValue = @{@"time": @50, @"icon": @"some-icon",@"temperatureMin": @50, @"temperatureMax": @60, @"precipProbability": precipitation};
     NSArray *dailyData = @[dailyValue, dailyValue, dailyValue, dailyValue, dailyValue];
     NSDictionary *conditions = (@{ @"currently": @{ @"temperature": @90 },
                                    @"daily": @{ @"data": dailyData } });
