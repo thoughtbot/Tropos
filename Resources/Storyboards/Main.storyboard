@@ -605,10 +605,10 @@
             </objects>
             <point key="canvasLocation" x="2297" y="854"/>
         </scene>
-        <!--Web View Controller-->
+        <!--Privacy Policy-->
         <scene sceneID="DxE-L7-Zc8">
             <objects>
-                <viewController id="MA7-q5-xs7" customClass="WebViewController" customModule="Tropos" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Privacy Policy" id="MA7-q5-xs7" customClass="WebViewController" customModule="Tropos" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="XzB-Wm-7MO"/>
                         <viewControllerLayoutGuide type="bottom" id="PIF-Ix-a9M"/>
