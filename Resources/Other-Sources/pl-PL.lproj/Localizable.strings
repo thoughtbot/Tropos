@@ -1,0 +1,44 @@
+"DifferentTemperatureFormat" = "Jest %@ %@ niż %@%@.";
+"PrecipitationChanceFormat" = "%@ szansy na %@ %@.";
+"SameTemperatureFormat" = "Jest %@ %@ jak %@%@.";
+
+"Hotter" = "goręcej";
+"Warmer" = "cieplej";
+"Cooler" = "chłodniej";
+"Colder" = "zimniej";
+"Same" = "tak samo";
+
+"Today" = "dzisiaj";
+"Yesterday" = "wczoraj";
+"Tonight" = "dzisiaj wieczorem";
+"LastNight" = "zeszłej nocy";
+"ThisMorning" = "dzisiaj rano";
+"YesterdayMorning" = "wczoraj rano";
+"ThisAfternoon" = "dzisiaj po południu";
+"YesterdayAfternoon" = "wczoraj po południu";
+
+"NoneRain" = "";
+"SlightRain" = " z małą szansą na deszcz";
+"GoodRain" = " z dużą szansą na deszcz";
+"NoneSnow" = " bez śniegu";
+"SlightSnow" = " z małą szansą na śnieg";
+"GoodSnow" = " z dużą szansą na śnieg";
+
+"North" = "Północ";
+"Northeast" = "Północny wschód";
+"East" = "Wschód";
+"Southeast" = "Południowy wschód";
+"South" = "Południe";
+"Southwest" = "Południowy zachód";
+"West" = "Zachód";
+"Northwest" = "Północny zachód";
+
+"Good" = "Duża";
+"Slight" = "Niewielka";
+"None" = "Brak";
+
+"UpdatedAtDateAndTime" = "Zaktualizowano %@ at %@";
+"UpdatedAtTime" = "Zaktualizowano o %@";
+
+"CheckingWeather" = "Sprawdzam pogodę...";
+"UpdateFailed" = "Brak połączenia z serwerem";
