@@ -5,11 +5,21 @@ class TextViewController: UIViewController {
 
     // MARK: UIViewController
 
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        textView.contentInset = UIEdgeInsetsZero
+        textView.textContainerInset = UIEdgeInsetsZero
+        textView.font = .defaultRegularFontOfSize(14)
+        textView.textColor = .lightTextColor()
+    }
+
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         textView.text = text
-        textView.contentOffset = CGPointZero
-        textView.font = .defaultRegularFontOfSize(14)
-        textView.textColor = .lightTextColor()
+    }
+
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        textView.contentOffset = .zeroPoint
     }
 }
