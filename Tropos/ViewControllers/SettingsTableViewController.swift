@@ -46,7 +46,7 @@ class SettingsTableViewController: UITableViewController {
         }
 
         thoughtbotImageView.tintColor = .lightTextColor();
-        thoughtbotImageView.image = thoughtbotImageView.image!.imageWithRenderingMode(.AlwaysTemplate)
+        thoughtbotImageView.image = thoughtbotImageView.image?.imageWithRenderingMode(.AlwaysTemplate)
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -104,7 +104,8 @@ class SettingsTableViewController: UITableViewController {
 
         let infoDictionary = NSBundle.mainBundle().infoDictionary as? [String: AnyObject]
 
-        if let version = infoDictionary?["CFBundleShortVersionString"] as? String, buildNumber = infoDictionary?["CFBundleVersion"] as? String {
+        if let version = infoDictionary?["CFBundleShortVersionString"] as? String,
+            buildNumber = infoDictionary?["CFBundleVersion"] as? String {
             string += " \(version) (\(buildNumber))"
         }
 
