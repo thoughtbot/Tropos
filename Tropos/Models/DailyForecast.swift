@@ -1,6 +1,6 @@
 import Foundation
 
-@objc class DailyForecast: NSObject {
+@objc final class DailyForecast: NSObject {
     let date: NSDate
     let conditionsDescription: String
     let highTemperature: Temperature
