@@ -53,7 +53,7 @@
     NSString *comparisonString = [TRTemperatureComparisonFormatter localizedStringFromComparison:comparison adjective:&adjective  precipitation: self.precipitationDescription];
 
     NSMutableAttributedString *attributedString = [[NSMutableAttributedString alloc] initWithString:comparisonString];
-    [attributedString setFont:[UIFont defaultUltraLightFontOfSize:26]];
+    [attributedString setFont:[UIFont defaultLightFontOfSize:26]];
     [attributedString setTextColor:[UIColor defaultTextColor]];
     Temperature *difference = [self.weatherUpdate.currentTemperature temperatureDifferenceFrom:self.weatherUpdate.yesterdaysTemperature];
     [attributedString setTextColor:[self colorForTemperatureComparison:comparison difference:difference.fahrenheitValue] forSubstring:adjective];
