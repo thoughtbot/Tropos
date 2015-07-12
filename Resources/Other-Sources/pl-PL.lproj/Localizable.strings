@@ -1,6 +1,6 @@
-"DifferentTemperatureFormat" = "Jest %@ %@ niż %@%@.";
+"DifferentTemperatureFormat" = "%2$@ jest %1$@ niż %3$@%4$@.";
 "PrecipitationChanceFormat" = "%@ szansy na %@ %@.";
-"SameTemperatureFormat" = "Jest %@ %@ jak %@%@.";
+"SameTemperatureFormat" = "%2$@ jest %1$@ jak %3$@%4$@.";
 
 "Hotter" = "goręcej";
 "Warmer" = "cieplej";
@@ -8,21 +8,21 @@
 "Colder" = "zimniej";
 "Same" = "tak samo";
 
-"Today" = "dzisiaj";
+"Today" = "dziś";
 "Yesterday" = "wczoraj";
-"Tonight" = "dzisiaj wieczorem";
+"Tonight" = "dziś wieczorem";
 "LastNight" = "zeszłej nocy";
-"ThisMorning" = "dzisiaj rano";
+"ThisMorning" = "dziś rano";
 "YesterdayMorning" = "wczoraj rano";
-"ThisAfternoon" = "dzisiaj po południu";
+"ThisAfternoon" = "dziś po południu";
 "YesterdayAfternoon" = "wczoraj po południu";
 
 "NoneRain" = "";
-"SlightRain" = " z małą szansą na deszcz";
-"GoodRain" = " z dużą szansą na deszcz";
+"SlightRain" = ", z małą szansą na deszcz";
+"GoodRain" = ", z dużą szansą na deszcz";
 "NoneSnow" = " bez śniegu";
-"SlightSnow" = " z małą szansą na śnieg";
-"GoodSnow" = " z dużą szansą na śnieg";
+"SlightSnow" = ", z małą szansą na śnieg";
+"GoodSnow" = ", z dużą szansą na śnieg";
 
 "North" = "Północ";
 "Northeast" = "Północny wschód";
@@ -37,7 +37,7 @@
 "Slight" = "Niewielka";
 "None" = "Brak";
 
-"UpdatedAtDateAndTime" = "Zaktualizowano %@ at %@";
+"UpdatedAtDateAndTime" = "Zaktualizowano %@ o %@";
 "UpdatedAtTime" = "Zaktualizowano o %@";
 
 "CheckingWeather" = "Sprawdzam pogodę...";
