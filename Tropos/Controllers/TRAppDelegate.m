@@ -5,7 +5,7 @@
 #import "TRApplicationController.h"
 
 #ifndef DEBUG
-#import "Secrets.h"
+#import <TroposKeys.h>
 #endif
 
 @implementation TRAppDelegate
@@ -13,7 +13,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
 #ifndef DEBUG
-    [[BITHockeyManager sharedHockeyManager] configureWithIdentifier:TRHockeyIdentifier];
+    [[BITHockeyManager sharedHockeyManager] configureWithIdentifier:[[[TroposKeys alloc] init] hockeyIdentifier]];
     [[BITHockeyManager sharedHockeyManager].crashManager setCrashManagerStatus:BITCrashManagerStatusAutoSend];
     [[BITHockeyManager sharedHockeyManager] startManager];
     [[BITHockeyManager sharedHockeyManager].authenticator authenticateInstallation];

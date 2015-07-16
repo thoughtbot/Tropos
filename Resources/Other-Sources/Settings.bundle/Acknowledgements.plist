@@ -146,6 +146,14 @@ SFHFKeychainUtils is licensed as follows:
 		</dict>
 		<dict>
 			<key>FooterText</key>
+			<string>MIT LICENSE Found in the repo</string>
+			<key>Title</key>
+			<string>Keys</string>
+			<key>Type</key>
+			<string>PSGroupSpecifier</string>
+		</dict>
+		<dict>
+			<key>FooterText</key>
 			<string>Copyright 2013 Mixpanel, Inc.
 
 Licensed under the Apache License, Version 2.0 (the "License");

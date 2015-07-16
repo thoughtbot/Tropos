@@ -2,7 +2,7 @@
 #import "TRAnalyticsController.h"
 
 #ifndef DEBUG
-#import "Secrets.h"
+#import <TroposKeys.h>
 #endif
 
 #define DISABLE_MIXPANEL_AB_DESIGNER
@@ -26,7 +26,7 @@
 - (void)install
 {
 #ifndef DEBUG
-    [Mixpanel sharedInstanceWithToken:TRMixpanelToken];
+    [Mixpanel sharedInstanceWithToken:[[[TroposKeys alloc] init] mixpanelToken]];
 #endif
 }
 

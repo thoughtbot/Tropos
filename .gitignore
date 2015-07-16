@@ -33,3 +33,8 @@ Pods
 *.iml
 
 Secrets.h
+
+# Always ignore CocoaPods-Keys
+# extra safety in case someone will decide to not ignore Pods
+Pods/CocoaPodsKeys
+

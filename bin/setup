@@ -5,10 +5,3 @@ pod install
 brew install carthage 2> /dev/null
 carthage bootstrap
 
-if [ ! -d Tropos/Secrets.h ]; then
-  cp Tropos/Secrets-Example.h Tropos/Secrets.h
-  echo ""
-  echo "-------------------------------------------------"
-  echo "Created Tropos/Secrets.h. Please add your keys to it."
-  echo "-------------------------------------------------"
-fi
