@@ -1,44 +1,46 @@
-"DifferentTemperatureFormat" = "It's %@ %@ than %@%@.";
-"PrecipitationChanceFormat" = "%@ chance of %@ %@.";
-"SameTemperatureFormat" = "It's the %@ %@ as %@%@.";
+"DifferentTemperatureFormat" = "Det är %@ %@ än %@%@.";
+"PrecipitationChanceFormat" = "%@ chans för %@ %@.";
+"SameTemperatureFormat" = "Det är %@ %@ som %@%@.";
 
-"Hotter" = "hotter";
-"Warmer" = "warmer";
-"Cooler" = "cooler";
-"Colder" = "colder";
-"Same" = "same";
+"Hotter" = "hetare";
+"Warmer" = "varmare";
+"Cooler" = "svalare";
+"Colder" = "kallare";
+/* The word temperature is added at the end since the word is needed to make the sentence understandable in this context */
+"Same" = "samma temperatur";
 
-"Today" = "today";
-"Yesterday" = "yesterday";
-"Tonight" = "tonight";
-"LastNight" = "last night";
-"ThisMorning" = "this morning";
-"YesterdayMorning" = "yesterday morning";
-"ThisAfternoon" = "this afternoon";
-"YesterdayAfternoon" = "yesterday afternoon";
+"Today" = "idag";
+"Yesterday" = "igår";
+"Tonight" = "ikväll";
+"LastNight" = "igår kväll";
+"ThisMorning" = "denna morgon";
+"YesterdayMorning" = "igår morgon";
+"ThisAfternoon" = "denna eftermiddag";
+"YesterdayAfternoon" = "igår eftermiddag";
 
 "NoneRain" = "";
-"SlightRain" = ", with a slight chance of rain";
-"GoodRain" = ", with a good chance of rain";
-"NoneSnow" = ", with no chance of snow";
-"SlightSnow" = ", with a slight chance of snow";
-"GoodSnow" = ", with a good chance of snow";
+"SlightRain" = ", med liten chans för regn";
+"GoodRain" = ", med stor chans för regn";
+"NoneSnow" = ", utan chans för snö";
+"SlightSnow" = ", med liten chans för snö";
+"GoodSnow" = ", med stor chans för snö";
 
-"North" = "North";
-"Northeast" = "Northeast";
-"East" = "East";
-"Southeast" = "Southeast";
-"South" = "South";
-"Southwest" = "Southwest";
-"West" = "West";
-"Northwest" = "Northwest";
+"North" = "Norr";
+"Northeast" = "Nordöst";
+"East" = "Öst";
+"Southeast" = "Sydöst";
+"South" = "Syd";
+"Southwest" = "Sydväst";
+"West" = "Väst";
+"Northwest" = "Nordväst";
 
-"Good" = "Good";
-"Slight" = "Slight";
-"None" = "None";
+/* These keys are translated so that they can be used in the context of weather prognosis followed by the word for "chance" - "chans" (SWE). */ 
+"Good" = "Stor";
+"Slight" = "Liten";
+"None" = "Ingen";
 
-"UpdatedAtDateAndTime" = "Updated %@ at %@";
-"UpdatedAtTime" = "Updated at %@";
+"UpdatedAtDateAndTime" = "Uppdaterat %@ vid %@";
+"UpdatedAtTime" = "Uppdaterat vid %@";
 
-"CheckingWeather" = "Checking Weather...";
-"UpdateFailed" = "Update Failed";
+"CheckingWeather" = "Kontrollerar väder...";
+"UpdateFailed" = "Uppdatering misslyckades";
