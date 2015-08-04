@@ -42,5 +42,5 @@
 "UpdatedAtDateAndTime" = "Uppdaterat %@ vid %@";
 "UpdatedAtTime" = "Uppdaterat vid %@";
 
-"CheckingWeather" = "Kontrollerar väder...";
+"CheckingWeather" = "Uppdaterar prognos...";
 "UpdateFailed" = "Uppdatering misslyckades";
