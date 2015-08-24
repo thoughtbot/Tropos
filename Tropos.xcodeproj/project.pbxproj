@@ -928,7 +928,6 @@
 				GCC_PREFIX_HEADER = "Resources/Other-Sources/Tropos-Prefix.pch";
 				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
 				INFOPLIST_FILE = "Resources/Other-Sources/Info.plist";
-				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_CFLAGS = (
 					"-DNS_BLOCK_ASSERTIONS=1",
@@ -1023,7 +1022,6 @@
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				INFOPLIST_FILE = "Resources/Other-Sources/Info.plist";
-				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = Tropos;
 				PROVISIONING_PROFILE = "";
