@@ -38,17 +38,17 @@
     self.city = placemark.locality;
     self.state = placemark.administrativeArea;
 
-    NSDictionary *todaysConditions = currentConditionsJSON[@"currently"];
+    NSDictionary *currentConditions = currentConditionsJSON[@"currently"];
     NSDictionary *yesterdaysConditions = yesterdaysConditionsJSON[@"currently"];
     NSDictionary *todaysForecast = [currentConditionsJSON[@"daily"][@"data"] firstObject];
 
     self.precipitationPercentage = [todaysForecast[@"precipProbability"] floatValue];
     self.precipitationType = todaysForecast[@"precipType"] ? todaysForecast[@"precipType"] : @"rain";
-    self.conditionsDescription = todaysConditions[@"icon"];
-    [self updateCurrentTemperaturesWithConditions:todaysConditions withForecast:todaysForecast];
+    self.conditionsDescription = currentConditions[@"icon"];
+    [self updateCurrentTemperaturesWithConditions:currentConditions withForecast:todaysForecast];
     self.yesterdaysTemperature = [[Temperature alloc] initWithFahrenheitValue:[yesterdaysConditions[@"temperature"] integerValue]];
-    self.windBearing = [todaysConditions[@"windBearing"] floatValue];
-    self.windSpeed = [todaysConditions[@"windSpeed"] floatValue];
+    self.windBearing = [currentConditions[@"windBearing"] floatValue];
+    self.windSpeed = [currentConditions[@"windSpeed"] floatValue];
     self.date = [NSDate date];
 
     NSMutableArray *dailyForecasts = [NSMutableArray array];
