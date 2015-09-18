@@ -12,12 +12,12 @@ class PrecipitationSpec: QuickSpec {
                 }
 
                 it("returns slight for 1 - 30% chance of precipitation") {
-                    let precipitation = Precipitation(probability: 20.0, type: "")
+                    let precipitation = Precipitation(probability: 0.2, type: "")
                     expect(precipitation.chance).to(equal(PrecipitationChance.Slight))
                 }
 
                 it("returns good for chance greater than 30% of precipitation") {
-                    let precipitation = Precipitation(probability: 70.0, type: "")
+                    let precipitation = Precipitation(probability: 0.7, type: "")
                     expect(precipitation.chance).to(equal(PrecipitationChance.Good))
                 }
             }
