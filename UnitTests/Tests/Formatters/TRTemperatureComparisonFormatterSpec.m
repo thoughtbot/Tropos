@@ -7,7 +7,7 @@
 
 @end
 
-SpecBegin(TRTemperatureComparisonFormatter)
+QuickSpecBegin(TRTemperatureComparisonFormatterSpec)
 
 NSDate* (^dateFromString) (NSString*) = ^NSDate *(NSString *dateString) {
     NSDateFormatter *dateFormatter = [NSDateFormatter new];
@@ -31,4 +31,4 @@ describe(@"TRTemperatureComparisonFormatter", ^{
     });
 });
 
-SpecEnd
+QuickSpecEnd

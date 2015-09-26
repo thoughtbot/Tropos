@@ -13,7 +13,7 @@ func -(lhs: Temperature, rhs: Temperature) -> Temperature {
     return Temperature(fahrenheitValue: lhs.fahrenheitValue - rhs.fahrenheitValue)
 }
 
-@objc class Temperature: NSObject, Printable {
+@objc class Temperature: NSObject {
     let fahrenheitValue: Int
     
     lazy var celsiusValue: Int = {

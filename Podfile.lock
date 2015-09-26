@@ -1,13 +1,23 @@
 PODS:
-  - Expecta (1.0.0)
-  - HockeySDK (3.6.2)
-  - Mixpanel (2.7.2):
-    - Mixpanel/MPCategoryHelpers (= 2.7.2)
-  - Mixpanel/MPCategoryHelpers (2.7.2)
-  - OCMock (3.1.2)
-  - OHHTTPStubs (3.1.10):
-    - OHHTTPStubs/Core (= 3.1.10)
-  - OHHTTPStubs/Core (3.1.10)
+  - Expecta (1.0.3)
+  - HockeySDK (3.6.4)
+  - Mixpanel (2.7.4):
+    - Mixpanel/MPCategoryHelpers (= 2.7.4)
+  - Mixpanel/MPCategoryHelpers (2.7.4)
+  - OCMock (3.1.5)
+  - OHHTTPStubs (4.3.0):
+    - OHHTTPStubs/Default (= 4.3.0)
+  - OHHTTPStubs/Core (4.3.0)
+  - OHHTTPStubs/Default (4.3.0):
+    - OHHTTPStubs/Core
+    - OHHTTPStubs/JSON
+    - OHHTTPStubs/NSURLSession
+    - OHHTTPStubs/OHPathHelpers
+  - OHHTTPStubs/JSON (4.3.0):
+    - OHHTTPStubs/Core
+  - OHHTTPStubs/NSURLSession (4.3.0):
+    - OHHTTPStubs/Core
+  - OHHTTPStubs/OHPathHelpers (4.3.0)
   - ReactiveCocoa (2.4.7):
     - ReactiveCocoa/UI (= 2.4.7)
   - ReactiveCocoa/Core (2.4.7):
@@ -15,7 +25,7 @@ PODS:
   - ReactiveCocoa/no-arc (2.4.7)
   - ReactiveCocoa/UI (2.4.7):
     - ReactiveCocoa/Core
-  - Specta (1.0.2)
+  - Specta (1.0.4)
 
 DEPENDENCIES:
   - Expecta
@@ -27,12 +37,12 @@ DEPENDENCIES:
   - Specta
 
 SPEC CHECKSUMS:
-  Expecta: 32604574add2c46a36f8d2f716b6c5736eb75024
-  HockeySDK: 51ade1aff04463137e852797d2eb4dfb2511d6a9
-  Mixpanel: e9bcb16eb0e2a98fc330ceeb0d8b7f4aec4182ab
-  OCMock: a10ea9f0a6e921651f96f78b6faee95ebc813b92
-  OHHTTPStubs: 00152a63400246fcbc4b772a2a547ea34c97cbd6
+  Expecta: 9d1bff6c8b0eeee73a166a2ee898892478927a15
+  HockeySDK: c07cdd580296737edcd0963e292c19885a53f563
+  Mixpanel: 33353c8fb319bb37b613eb7dbf02a2b2ac04f92c
+  OCMock: 4c2925291f80407c3738dd1db14d21d0cc278864
+  OHHTTPStubs: 0aec5755528693a165bd616cb79f69387de306a8
   ReactiveCocoa: eb38dee0a0e698f73a9b25e5c1faea2bb4c79240
-  Specta: 9cec98310dca411f7c7ffd6943552b501622abfe
+  Specta: 69bb134672aae190a1379ff91df07dad8dd1f869
 
-COCOAPODS: 0.37.2
+COCOAPODS: 0.38.2

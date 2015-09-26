@@ -5,7 +5,7 @@ import Nimble
 class TemperatureSpec: QuickSpec {
     override func spec() {
         describe("Temperature") {
-            func compare(temp1: Int, temp2: Int) -> TemperatureComparison {
+            func compare(temp1: Int, _ temp2: Int) -> TemperatureComparison {
                 let t1 = Temperature(fahrenheitValue: temp1)
                 let t2 = Temperature(fahrenheitValue: temp2)
                 return t1.comparedTo(t2)

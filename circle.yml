@@ -1,8 +1,12 @@
 machine:
   xcode:
-    version: "6.3.1"
+    version: "7.0"
 
 dependencies:
   override:
     - brew update
     - bin/setup
+
+test:
+  override:
+    - bin/test
