@@ -14,5 +14,5 @@ end
 
 post_install do |installer|
   require 'fileutils'
-  FileUtils.cp_r('Pods/Target Support Files/Pods/Pods-Acknowledgements.plist', 'Resources/Other-Sources/Settings.bundle/Acknowledgements.plist', :remove_destination => true)
+  FileUtils.cp_r('Pods/Target Support Files/Pods/Pods-Acknowledgements.plist', 'Resources/Other-Sources/Acknowledgements.plist', :remove_destination => true)
 end

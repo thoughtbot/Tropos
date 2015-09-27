@@ -3,6 +3,7 @@
 #import "TRAnalyticsController.h"
 #import "TRSettingsController.h"
 #import "TRApplicationController.h"
+#import "Tropos-Swift.h"
 
 #ifndef DEBUG
 #import "Secrets.h"
@@ -22,6 +23,7 @@
 #endif
 
     [[TRSettingsController new] registerSettings];
+    [AppearanceController configureAppearance];
 
     self.applicationController = [TRApplicationController new];
 

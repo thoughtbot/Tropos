@@ -1,12 +1,19 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1510" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="zCV-BE-JFf">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="MHa-bH-x48">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <customFonts key="customFonts">
         <mutableArray key="DINNextLTPro-Light.otf">
+            <string>DINNextLTPro-Light</string>
+            <string>DINNextLTPro-Light</string>
+            <string>DINNextLTPro-Light</string>
+            <string>DINNextLTPro-Light</string>
+            <string>DINNextLTPro-Light</string>
+            <string>DINNextLTPro-Light</string>
+            <string>DINNextLTPro-Light</string>
             <string>DINNextLTPro-Light</string>
             <string>DINNextLTPro-Light</string>
             <string>DINNextLTPro-Light</string>
@@ -19,20 +26,21 @@
         <!--Weather View Controller-->
         <scene sceneID="0yb-3A-yau">
             <objects>
-                <viewController automaticallyAdjustsScrollViewInsets="NO" id="zCV-BE-JFf" customClass="TRWeatherViewController" sceneMemberID="viewController">
+                <viewController id="zCV-BE-JFf" customClass="TRWeatherViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="02N-3j-bOk"/>
                         <viewControllerLayoutGuide type="bottom" id="kaZ-rO-kvS"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="YfA-Yi-tI2">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="536"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0is-eh-6sU" userLabel="Footer View">
-                                <rect key="frame" x="0.0" y="536" width="600" height="64"/>
+                                <rect key="frame" x="0.0" y="472" width="600" height="64"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="thoughtbot-logo-full" translatesAutoresizingMaskIntoConstraints="NO" id="wLb-HP-UyY">
                                         <rect key="frame" x="250" y="10" width="100" height="24"/>
+                                        <animations/>
                                         <color key="backgroundColor" red="0.098039215686274508" green="0.098039215686274508" blue="0.12941176470588234" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="24" id="1ZU-4u-jbx"/>
@@ -41,12 +49,14 @@
                                     </imageView>
                                     <label userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Powered by Forecast" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f1C-kG-GRZ">
                                         <rect key="frame" x="8" y="42" width="584" height="12"/>
+                                        <animations/>
                                         <color key="backgroundColor" red="0.098039215686274508" green="0.098039215686274508" blue="0.12941176470588234" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="DINNextLTPro-Light" family="DIN Next LT Pro" pointSize="12"/>
                                         <color key="textColor" red="0.45490196078431372" green="0.45490196078431372" blue="0.46666666666666667" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
+                                <animations/>
                                 <color key="backgroundColor" red="0.098039215686274508" green="0.098039215686274508" blue="0.12941176470588234" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="f1C-kG-GRZ" secondAttribute="trailing" constant="8" id="6z7-xr-xDP"/>
@@ -59,14 +69,18 @@
                                 </constraints>
                             </view>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aA7-UE-koO">
-                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="536"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BVN-q4-01Z" userLabel="Refresh Control" customClass="TRRefreshControl">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="0.0"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xyb-8W-ran" customClass="TRRefreshView">
+                                                <rect key="frame" x="0.0" y="0.0" width="600" height="0.0"/>
+                                                <animations/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             </view>
                                         </subviews>
+                                        <animations/>
                                         <color key="backgroundColor" red="0.12549019607843137" green="0.12549019607843137" blue="0.16078431372549018" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstItem="xyb-8W-ran" firstAttribute="leading" secondItem="BVN-q4-01Z" secondAttribute="leading" id="6eN-ng-w1d"/>
@@ -93,21 +107,24 @@
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="536"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="r7S-cF-Z7O" userLabel="Forecast Container View">
-                                                <rect key="frame" x="48" y="167" width="532" height="203"/>
+                                                <rect key="frame" x="48" y="166" width="532" height="203"/>
                                                 <subviews>
                                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ef5-IL-xEe" userLabel="Conditions Icon" customClass="TRImageView">
                                                         <rect key="frame" x="0.0" y="0.0" width="97" height="97"/>
+                                                        <animations/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" secondItem="Ef5-IL-xEe" secondAttribute="height" multiplier="1:1" id="FD7-Zx-h5o"/>
                                                         </constraints>
                                                     </imageView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="It's warmer today than yesterday at this time." lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4aa-2F-UFk" userLabel="Conditions Description" customClass="TRLabel">
                                                         <rect key="frame" x="0.0" y="139" width="522" height="64"/>
+                                                        <animations/>
                                                         <fontDescription key="fontDescription" name="DINNextLTPro-Light" family="DIN Next LT Pro" pointSize="32"/>
                                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                 </subviews>
+                                                <animations/>
                                                 <constraints>
                                                     <constraint firstItem="Ef5-IL-xEe" firstAttribute="top" secondItem="r7S-cF-Z7O" secondAttribute="top" id="0sd-aT-bMO"/>
                                                     <constraint firstItem="Ef5-IL-xEe" firstAttribute="width" secondItem="r7S-cF-Z7O" secondAttribute="width" multiplier="0.1816" id="Hua-tl-TwH"/>
@@ -120,6 +137,7 @@
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="51° / 38°" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jm9-4j-cuq" userLabel="High and Low Temp Label" customClass="TRLabel">
                                                 <rect key="frame" x="48" y="473" width="532" height="30"/>
+                                                <animations/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="IHK-md-KTl"/>
                                                 </constraints>
@@ -129,6 +147,7 @@
                                             </label>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wind-icon-small" translatesAutoresizingMaskIntoConstraints="NO" id="Qna-Fn-Mlz" userLabel="Wind Icon" customClass="TRImageView">
                                                 <rect key="frame" x="20" y="447" width="16" height="16"/>
+                                                <animations/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="Qna-Fn-Mlz" secondAttribute="height" multiplier="1:1" id="6ol-1s-Zzj"/>
                                                     <constraint firstAttribute="width" constant="16" id="NDZ-UO-yhQ"/>
@@ -142,12 +161,14 @@
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="8.0 mph SWE" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fIp-2s-RDl" userLabel="Wind Label" customClass="TRLabel">
                                                 <rect key="frame" x="48" y="441" width="532" height="30"/>
+                                                <animations/>
                                                 <fontDescription key="fontDescription" name="DINNextLTPro-Light" family="DIN Next LT Pro" pointSize="20"/>
                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="temp" translatesAutoresizingMaskIntoConstraints="NO" id="wxI-GT-UQg" userLabel="Temperature Icon" customClass="TRImageView">
                                                 <rect key="frame" x="20" y="479" width="16" height="16"/>
+                                                <animations/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="16" id="cPB-2g-kPR"/>
                                                     <constraint firstAttribute="width" secondItem="wxI-GT-UQg" secondAttribute="height" multiplier="1:1" id="g89-ke-GBw"/>
@@ -160,6 +181,7 @@
                                                 </variation>
                                             </imageView>
                                         </subviews>
+                                        <animations/>
                                         <color key="backgroundColor" red="0.098039215686274508" green="0.098039215686274508" blue="0.12941176470588234" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstItem="r7S-cF-Z7O" firstAttribute="leading" secondItem="5Yw-zl-yWp" secondAttribute="leading" constant="48" id="0ed-En-N0n"/>
@@ -183,17 +205,21 @@
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FOt-Fu-PRv" userLabel="Left Day View" customClass="TRDailyForecastView">
                                                 <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
+                                                <animations/>
                                                 <color key="backgroundColor" red="0.12549019607843137" green="0.12549019607843137" blue="0.16078431372549018" alpha="1" colorSpace="calibratedRGB"/>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Je-I5-OpO" userLabel="Right Day View" customClass="TRDailyForecastView">
                                                 <rect key="frame" x="400" y="0.0" width="200" height="200"/>
+                                                <animations/>
                                                 <color key="backgroundColor" red="0.12549019607843137" green="0.12549019607843137" blue="0.16078431372549018" alpha="1" colorSpace="calibratedRGB"/>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZBX-w0-5fE" userLabel="Center Day View" customClass="TRDailyForecastView">
                                                 <rect key="frame" x="200" y="0.0" width="200" height="200"/>
+                                                <animations/>
                                                 <color key="backgroundColor" red="0.12549019607843137" green="0.12549019607843137" blue="0.16078431372549018" alpha="1" colorSpace="calibratedRGB"/>
                                             </view>
                                         </subviews>
+                                        <animations/>
                                         <color key="backgroundColor" red="0.098039215686274508" green="0.098039215686274508" blue="0.12941176470588234" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstItem="6Je-I5-OpO" firstAttribute="height" secondItem="cpD-iZ-axV" secondAttribute="height" id="3QZ-U3-vYD"/>
@@ -215,6 +241,7 @@
                                         </constraints>
                                     </view>
                                 </subviews>
+                                <animations/>
                                 <constraints>
                                     <constraint firstItem="cpD-iZ-axV" firstAttribute="leading" secondItem="aA7-UE-koO" secondAttribute="leading" id="1gC-cM-WFj"/>
                                     <constraint firstAttribute="trailing" secondItem="5Yw-zl-yWp" secondAttribute="trailing" id="4TI-7g-ksG"/>
@@ -233,70 +260,66 @@
                                     <outlet property="delegate" destination="zCV-BE-JFf" id="Bbq-k6-bPM"/>
                                 </connections>
                             </scrollView>
-                            <navigationBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8pq-jS-l9S" customClass="TRNavigationBar">
-                                <rect key="frame" x="0.0" y="20" width="600" height="44"/>
-                                <color key="barTintColor" red="0.098039215686274508" green="0.098039215686274508" blue="0.12941176470588234" alpha="1" colorSpace="calibratedRGB"/>
-                                <textAttributes key="titleTextAttributes">
-                                    <fontDescription key="fontDescription" name="DINNextLTPro-Light" family="DIN Next LT Pro" pointSize="18"/>
-                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                </textAttributes>
-                                <items>
-                                    <navigationItem id="PBf-Jt-sGO">
-                                        <nil key="title"/>
-                                        <view key="titleView" contentMode="scaleToFill" id="I2V-ym-11z">
-                                            <rect key="frame" x="180" y="6" width="240" height="33"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Updated 19 seconds ago" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9cT-VN-8BL" customClass="TRLabel">
-                                                    <rect key="frame" x="0.0" y="20" width="240" height="13"/>
-                                                    <fontDescription key="fontDescription" name="DINNextLTPro-Light" family="DIN Next LT Pro" pointSize="13"/>
-                                                    <color key="textColor" red="0.63137254901960782" green="0.65490196078431373" blue="0.69411764705882351" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalCompressionResistancePriority="749" text="SAN FRANCISCO, CA" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lu5-Qh-6jG" customClass="TRLabel">
-                                                    <rect key="frame" x="0.0" y="0.0" width="240" height="20"/>
-                                                    <fontDescription key="fontDescription" name="DINNextLTPro-Light" family="DIN Next LT Pro" pointSize="17"/>
-                                                    <color key="textColor" red="0.63137254901960782" green="0.65490196078431373" blue="0.69411764705882351" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                            <color key="backgroundColor" red="0.098039215686274508" green="0.098039215686274508" blue="0.12941176470588234" alpha="1" colorSpace="calibratedRGB"/>
-                                            <constraints>
-                                                <constraint firstItem="9cT-VN-8BL" firstAttribute="top" secondItem="Lu5-Qh-6jG" secondAttribute="bottom" id="3Hu-s5-Vh7"/>
-                                                <constraint firstItem="9cT-VN-8BL" firstAttribute="top" secondItem="I2V-ym-11z" secondAttribute="top" id="CKj-jb-JoH"/>
-                                                <constraint firstAttribute="bottom" secondItem="9cT-VN-8BL" secondAttribute="bottom" id="Ero-PM-d8T"/>
-                                                <constraint firstItem="Lu5-Qh-6jG" firstAttribute="top" secondItem="I2V-ym-11z" secondAttribute="top" id="H0k-8l-uzP"/>
-                                                <constraint firstItem="9cT-VN-8BL" firstAttribute="leading" secondItem="I2V-ym-11z" secondAttribute="leading" id="UZX-VL-xlX"/>
-                                                <constraint firstItem="Lu5-Qh-6jG" firstAttribute="leading" secondItem="I2V-ym-11z" secondAttribute="leading" id="c10-21-8z9"/>
-                                                <constraint firstAttribute="trailing" secondItem="Lu5-Qh-6jG" secondAttribute="trailing" id="m67-2z-AZ5"/>
-                                                <constraint firstAttribute="trailing" secondItem="9cT-VN-8BL" secondAttribute="trailing" id="ys6-Wf-gUu"/>
-                                            </constraints>
-                                            <variation key="default">
-                                                <mask key="constraints">
-                                                    <exclude reference="CKj-jb-JoH"/>
-                                                </mask>
-                                            </variation>
-                                        </view>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
                         </subviews>
+                        <animations/>
                         <color key="backgroundColor" red="0.098039215686274508" green="0.098039215686274508" blue="0.12941176470588234" alpha="1" colorSpace="calibratedRGB"/>
                         <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="0is-eh-6sU" firstAttribute="leading" secondItem="YfA-Yi-tI2" secondAttribute="leading" id="9d5-db-iC0"/>
-                            <constraint firstAttribute="trailing" secondItem="8pq-jS-l9S" secondAttribute="trailing" id="HTZ-4M-3g3"/>
-                            <constraint firstItem="8pq-jS-l9S" firstAttribute="top" secondItem="02N-3j-bOk" secondAttribute="bottom" id="Kgg-5a-ceN"/>
                             <constraint firstAttribute="trailing" secondItem="aA7-UE-koO" secondAttribute="trailing" id="L1e-Js-gb5"/>
-                            <constraint firstItem="8pq-jS-l9S" firstAttribute="leading" secondItem="YfA-Yi-tI2" secondAttribute="leading" id="QHY-T6-Dt2"/>
                             <constraint firstItem="aA7-UE-koO" firstAttribute="leading" secondItem="YfA-Yi-tI2" secondAttribute="leading" id="ZGX-5N-4Eb"/>
                             <constraint firstAttribute="trailing" secondItem="0is-eh-6sU" secondAttribute="trailing" id="aS0-IN-M9k"/>
+                            <constraint firstItem="aA7-UE-koO" firstAttribute="top" secondItem="02N-3j-bOk" secondAttribute="bottom" id="dCs-56-TJU"/>
                             <constraint firstItem="kaZ-rO-kvS" firstAttribute="top" secondItem="aA7-UE-koO" secondAttribute="bottom" id="i4P-i1-Jlb"/>
-                            <constraint firstItem="aA7-UE-koO" firstAttribute="top" secondItem="8pq-jS-l9S" secondAttribute="bottom" id="oPo-mv-Qjz"/>
                             <constraint firstItem="kaZ-rO-kvS" firstAttribute="top" secondItem="0is-eh-6sU" secondAttribute="bottom" id="yzc-aI-fgt"/>
                         </constraints>
                     </view>
-                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <extendedEdge key="edgesForExtendedLayout" top="YES"/>
+                    <navigationItem key="navigationItem" id="V5y-tK-KW0">
+                        <nil key="title"/>
+                        <view key="titleView" contentMode="scaleToFill" id="I2V-ym-11z">
+                            <rect key="frame" x="180" y="6" width="240" height="33"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Updated 19 seconds ago" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9cT-VN-8BL" customClass="TRLabel">
+                                    <rect key="frame" x="0.0" y="20" width="240" height="13"/>
+                                    <animations/>
+                                    <fontDescription key="fontDescription" name="DINNextLTPro-Light" family="DIN Next LT Pro" pointSize="13"/>
+                                    <color key="textColor" red="0.78039216995239258" green="0.78039216995239258" blue="0.80000001192092896" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalCompressionResistancePriority="749" text="SAN FRANCISCO, CA" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lu5-Qh-6jG" customClass="TRLabel">
+                                    <rect key="frame" x="0.0" y="0.0" width="240" height="20"/>
+                                    <animations/>
+                                    <fontDescription key="fontDescription" name="DINNextLTPro-Light" family="DIN Next LT Pro" pointSize="17"/>
+                                    <color key="textColor" red="0.78039216995239258" green="0.78039216995239258" blue="0.80000001192092896" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <animations/>
+                            <color key="backgroundColor" red="0.098039215686274508" green="0.098039215686274508" blue="0.12941176470588234" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstItem="9cT-VN-8BL" firstAttribute="top" secondItem="Lu5-Qh-6jG" secondAttribute="bottom" id="3Hu-s5-Vh7"/>
+                                <constraint firstItem="9cT-VN-8BL" firstAttribute="top" secondItem="I2V-ym-11z" secondAttribute="top" id="CKj-jb-JoH"/>
+                                <constraint firstAttribute="bottom" secondItem="9cT-VN-8BL" secondAttribute="bottom" id="Ero-PM-d8T"/>
+                                <constraint firstItem="Lu5-Qh-6jG" firstAttribute="top" secondItem="I2V-ym-11z" secondAttribute="top" id="H0k-8l-uzP"/>
+                                <constraint firstItem="9cT-VN-8BL" firstAttribute="leading" secondItem="I2V-ym-11z" secondAttribute="leading" id="UZX-VL-xlX"/>
+                                <constraint firstItem="Lu5-Qh-6jG" firstAttribute="leading" secondItem="I2V-ym-11z" secondAttribute="leading" id="c10-21-8z9"/>
+                                <constraint firstAttribute="trailing" secondItem="Lu5-Qh-6jG" secondAttribute="trailing" id="m67-2z-AZ5"/>
+                                <constraint firstAttribute="trailing" secondItem="9cT-VN-8BL" secondAttribute="trailing" id="ys6-Wf-gUu"/>
+                            </constraints>
+                            <variation key="default">
+                                <mask key="constraints">
+                                    <exclude reference="CKj-jb-JoH"/>
+                                </mask>
+                            </variation>
+                        </view>
+                        <barButtonItem key="rightBarButtonItem" image="settings" id="JoB-za-L07">
+                            <connections>
+                                <segue destination="hTG-aj-CsX" kind="presentation" modalPresentationStyle="overFullScreen" id="Q2D-9n-RLR"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                     <connections>
                         <outlet property="cityLabel" destination="Lu5-Qh-6jG" id="rru-VR-uLG"/>
@@ -316,10 +339,335 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aUn-30-HRW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="96" y="-218"/>
+            <point key="canvasLocation" x="908" y="-218"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="5v1-pS-VtX">
+            <objects>
+                <navigationController id="hTG-aj-CsX" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" translucent="NO" id="RuT-sk-dJ7" customClass="TRNavigationBar">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                        <color key="barTintColor" red="0.098039217293262482" green="0.098039217293262482" blue="0.12941177189350128" alpha="1" colorSpace="calibratedRGB"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="rfD-V3-5CX" kind="relationship" relationship="rootViewController" id="Po7-vR-AAu"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vhT-f5-c8C" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="908" y="489"/>
+        </scene>
+        <!--Settings-->
+        <scene sceneID="RUp-zw-jKC">
+            <objects>
+                <tableViewController automaticallyAdjustsScrollViewInsets="NO" id="rfD-V3-5CX" customClass="SettingsTableViewController" customModule="Tropos" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="zb9-4H-vRp">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="536"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
+                        <color key="backgroundColor" red="0.098039215686274508" green="0.098039215686274508" blue="0.12941176470588234" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="separatorColor" red="0.31764705882352939" green="0.31764705882352939" blue="0.3411764705882353" alpha="0.5" colorSpace="calibratedRGB"/>
+                        <sections>
+                            <tableViewSection headerTitle="Unit System" id="kVx-dF-Vjg">
+                                <cells>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="z4x-in-xqM" style="IBUITableViewCellStyleDefault" id="vhg-1S-7Vq" customClass="TRTableViewCell" customModule="Tropos" customModuleProvider="target">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="vhg-1S-7Vq" id="wPK-ox-JNH">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Metric" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="z4x-in-xqM">
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <animations/>
+                                                    <fontDescription key="fontDescription" name="DINNextLTPro-Light" family="DIN Next LT Pro" pointSize="18"/>
+                                                    <color key="textColor" red="0.7803921568627451" green="0.7803921568627451" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <animations/>
+                                        </tableViewCellContentView>
+                                        <animations/>
+                                        <color key="backgroundColor" red="0.12549019607843137" green="0.12549019607843137" blue="0.16078431372549018" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="tintColor" red="0.7803921568627451" green="0.7803921568627451" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="bTJ-k3-9hm" style="IBUITableViewCellStyleDefault" id="Xr7-Gc-HV6" customClass="TRTableViewCell" customModule="Tropos" customModuleProvider="target">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Xr7-Gc-HV6" id="AQO-sb-Ncv">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Imperial" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="bTJ-k3-9hm">
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <animations/>
+                                                    <fontDescription key="fontDescription" name="DINNextLTPro-Light" family="DIN Next LT Pro" pointSize="18"/>
+                                                    <color key="textColor" red="0.7803921568627451" green="0.7803921568627451" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <animations/>
+                                        </tableViewCellContentView>
+                                        <animations/>
+                                        <color key="backgroundColor" red="0.12549019607843137" green="0.12549019607843137" blue="0.16078431372549018" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="tintColor" red="0.7803921568627451" green="0.7803921568627451" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="Info" id="hXe-uH-m7c">
+                                <cells>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="BrF-O1-ARI" style="IBUITableViewCellStyleDefault" id="mDI-OK-urf" customClass="TRTableViewCell" customModule="Tropos" customModuleProvider="target">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="mDI-OK-urf" id="pp7-gJ-alA">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Privacy Policy" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="BrF-O1-ARI">
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <animations/>
+                                                    <fontDescription key="fontDescription" name="DINNextLTPro-Light" family="DIN Next LT Pro" pointSize="18"/>
+                                                    <color key="textColor" red="0.78039215689999997" green="0.78039215689999997" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <animations/>
+                                        </tableViewCellContentView>
+                                        <animations/>
+                                        <color key="backgroundColor" red="0.12549019610000001" green="0.12549019610000001" blue="0.16078431369999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <segue destination="MA7-q5-xs7" kind="show" identifier="ShowWebViewController" id="b9V-lu-gk1"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="bPq-Pp-YNA" style="IBUITableViewCellStyleDefault" id="coj-3Q-1ZV" customClass="TRTableViewCell" customModule="Tropos" customModuleProvider="target">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="coj-3Q-1ZV" id="zq4-Dp-sXj">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Acknowledgements" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="bPq-Pp-YNA">
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <animations/>
+                                                    <fontDescription key="fontDescription" name="DINNextLTPro-Light" family="DIN Next LT Pro" pointSize="18"/>
+                                                    <color key="textColor" red="0.78039215689999997" green="0.78039215689999997" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <animations/>
+                                        </tableViewCellContentView>
+                                        <animations/>
+                                        <color key="backgroundColor" red="0.12549019610000001" green="0.12549019610000001" blue="0.16078431369999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <segue destination="Enm-0f-f8E" kind="show" identifier="ShowTextViewController" id="abn-8w-Ca5"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="Kyi-gF-n4C" style="IBUITableViewCellStyleDefault" id="xtL-JB-Fj2" customClass="TRTableViewCell" customModule="Tropos" customModuleProvider="target">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="xtL-JB-Fj2" id="Gqs-gW-PES">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Powered by Forecast" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Kyi-gF-n4C">
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <animations/>
+                                                    <fontDescription key="fontDescription" name="DINNextLTPro-Light" family="DIN Next LT Pro" pointSize="18"/>
+                                                    <color key="textColor" red="0.78039215689999997" green="0.78039215689999997" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <animations/>
+                                        </tableViewCellContentView>
+                                        <animations/>
+                                        <color key="backgroundColor" red="0.12549019610000001" green="0.12549019610000001" blue="0.16078431369999999" alpha="1" colorSpace="calibratedRGB"/>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="Tropos 1.0.1 (132)" id="GXv-dP-JVI">
+                                <cells>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" rowHeight="100" id="Bo5-Uc-GVG" customClass="TRTableViewCell" customModule="Tropos" customModuleProvider="target">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Bo5-Uc-GVG" id="wAy-NI-QDe">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hat-b3-Z3z">
+                                                    <rect key="frame" x="200" y="17" width="180" height="65"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Handcrafted with love by" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SLJ-Pj-eOI">
+                                                            <rect key="frame" x="0.0" y="0.0" width="180" height="17"/>
+                                                            <animations/>
+                                                            <fontDescription key="fontDescription" name="DINNextLTPro-Light" family="DIN Next LT Pro" pointSize="17"/>
+                                                            <color key="textColor" red="0.78039216995239258" green="0.78039216995239258" blue="0.80000001192092896" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="thoughtbot-logo-full" translatesAutoresizingMaskIntoConstraints="NO" id="wl8-Vy-9eF">
+                                                            <rect key="frame" x="8" y="25" width="164" height="40"/>
+                                                            <animations/>
+                                                            <color key="tintColor" red="0.78039216995239258" green="0.78039216995239258" blue="0.80000001192092896" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" secondItem="wl8-Vy-9eF" secondAttribute="height" multiplier="1:1" id="Cx9-mq-op9"/>
+                                                                <constraint firstAttribute="width" constant="88" id="FNh-Fy-y1Q"/>
+                                                                <constraint firstAttribute="height" constant="40" id="GWY-9x-ucM"/>
+                                                                <constraint firstAttribute="width" secondItem="wl8-Vy-9eF" secondAttribute="height" multiplier="200:49" id="WzN-ZH-haI"/>
+                                                                <constraint firstAttribute="width" constant="200" id="cXW-dy-V8X"/>
+                                                                <constraint firstAttribute="height" constant="49" id="pSy-tr-GOr"/>
+                                                                <constraint firstAttribute="height" constant="37" id="ywq-IM-jdu"/>
+                                                            </constraints>
+                                                            <variation key="default">
+                                                                <mask key="constraints">
+                                                                    <exclude reference="Cx9-mq-op9"/>
+                                                                    <exclude reference="FNh-Fy-y1Q"/>
+                                                                    <exclude reference="cXW-dy-V8X"/>
+                                                                    <exclude reference="pSy-tr-GOr"/>
+                                                                    <exclude reference="ywq-IM-jdu"/>
+                                                                </mask>
+                                                            </variation>
+                                                        </imageView>
+                                                    </subviews>
+                                                    <animations/>
+                                                    <color key="backgroundColor" red="0.12549020349979401" green="0.12549020349979401" blue="0.16078431904315948" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="bottom" secondItem="wl8-Vy-9eF" secondAttribute="bottom" id="3tg-DA-Vns"/>
+                                                        <constraint firstItem="wl8-Vy-9eF" firstAttribute="top" secondItem="SLJ-Pj-eOI" secondAttribute="bottom" constant="8" id="QKJ-hH-4YV"/>
+                                                        <constraint firstItem="SLJ-Pj-eOI" firstAttribute="top" secondItem="Hat-b3-Z3z" secondAttribute="top" id="REa-pn-0Dp"/>
+                                                        <constraint firstItem="wl8-Vy-9eF" firstAttribute="centerX" secondItem="SLJ-Pj-eOI" secondAttribute="centerX" id="TO8-Ux-Bzv"/>
+                                                        <constraint firstAttribute="trailing" secondItem="SLJ-Pj-eOI" secondAttribute="trailing" id="VA7-AT-iIh"/>
+                                                        <constraint firstAttribute="centerX" secondItem="SLJ-Pj-eOI" secondAttribute="centerX" id="jAA-p6-Gko"/>
+                                                        <constraint firstItem="SLJ-Pj-eOI" firstAttribute="leading" secondItem="Hat-b3-Z3z" secondAttribute="leading" id="thr-55-RUW"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                            <animations/>
+                                            <constraints>
+                                                <constraint firstAttribute="centerY" secondItem="Hat-b3-Z3z" secondAttribute="centerY" id="0S4-Vw-DHI"/>
+                                                <constraint firstAttribute="centerX" secondItem="Hat-b3-Z3z" secondAttribute="centerX" constant="-6" id="6q0-wz-QPC"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <animations/>
+                                        <color key="backgroundColor" red="0.12549019610000001" green="0.12549019610000001" blue="0.16078431369999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="rfD-V3-5CX" id="m2k-4a-JRK"/>
+                            <outlet property="delegate" destination="rfD-V3-5CX" id="5xF-QD-nDS"/>
+                        </connections>
+                    </tableView>
+                    <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
+                    <navigationItem key="navigationItem" title="Settings" id="kXW-7J-eFo">
+                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="done" id="iDf-N0-g9D">
+                            <connections>
+                                <segue destination="ku0-64-nGW" kind="unwind" unwindAction="dismissSettings:" id="9gn-uj-CEc"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="thoughtbotImageView" destination="wl8-Vy-9eF" id="1lJ-as-C3Y"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ych-ep-rVP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="ku0-64-nGW" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="1592" y="489"/>
+        </scene>
+        <!--Acknowledgements-->
+        <scene sceneID="4t6-Kg-YO5">
+            <objects>
+                <viewController title="Acknowledgements" id="Enm-0f-f8E" customClass="TextViewController" customModule="Tropos" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y43-bw-wdo"/>
+                        <viewControllerLayoutGuide type="bottom" id="8G0-NH-pi4"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="n7J-gt-0EJ">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="536"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" indicatorStyle="white" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lEK-Yh-JVz">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="536"/>
+                                <animations/>
+                                <color key="backgroundColor" red="0.098039217293262482" green="0.098039217293262482" blue="0.12941177189350128" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.78039216995239258" green="0.78039216995239258" blue="0.80000001192092896" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="DINNextLTPro-Light" family="DIN Next LT Pro" pointSize="15"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <dataDetectorType key="dataDetectorTypes" link="YES"/>
+                            </textView>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="lEK-Yh-JVz" secondAttribute="trailing" id="Ho9-TQ-ypo"/>
+                            <constraint firstItem="8G0-NH-pi4" firstAttribute="top" secondItem="lEK-Yh-JVz" secondAttribute="bottom" id="IAT-HJ-BWc"/>
+                            <constraint firstItem="lEK-Yh-JVz" firstAttribute="leading" secondItem="n7J-gt-0EJ" secondAttribute="leading" id="SlB-1J-N8e"/>
+                            <constraint firstItem="lEK-Yh-JVz" firstAttribute="top" secondItem="y43-bw-wdo" secondAttribute="bottom" id="jKX-9S-mYY"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="textView" destination="lEK-Yh-JVz" id="5Gn-S9-cOu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wme-Ob-5Di" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2297" y="854"/>
+        </scene>
+        <!--Privacy Policy-->
+        <scene sceneID="DxE-L7-Zc8">
+            <objects>
+                <viewController title="Privacy Policy" id="MA7-q5-xs7" customClass="WebViewController" customModule="Tropos" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="XzB-Wm-7MO"/>
+                        <viewControllerLayoutGuide type="bottom" id="PIF-Ix-a9M"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ElW-9x-NUt">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="536"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ByB-QS-uqX">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="492"/>
+                                <animations/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES" address="YES"/>
+                                <connections>
+                                    <outlet property="delegate" destination="MA7-q5-xs7" id="IO9-W2-WwB"/>
+                                </connections>
+                            </webView>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" red="0.098039217293262482" green="0.098039217293262482" blue="0.12941177189350128" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="ByB-QS-uqX" secondAttribute="trailing" id="5H9-ny-AGw"/>
+                            <constraint firstItem="ByB-QS-uqX" firstAttribute="top" secondItem="XzB-Wm-7MO" secondAttribute="bottom" id="D36-9Q-97O"/>
+                            <constraint firstItem="PIF-Ix-a9M" firstAttribute="top" secondItem="ByB-QS-uqX" secondAttribute="bottom" id="heQ-CZ-mPc"/>
+                            <constraint firstItem="ByB-QS-uqX" firstAttribute="leading" secondItem="ElW-9x-NUt" secondAttribute="leading" id="iuu-S9-n08"/>
+                        </constraints>
+                    </view>
+                    <toolbarItems/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="webView" destination="ByB-QS-uqX" id="G5y-Ei-c1x"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VrL-gb-FND" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2297" y="157"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="ki2-MI-VAs">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="MHa-bH-x48" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" translucent="NO" id="kK0-0q-kYo" customClass="TRNavigationBar">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                        <color key="barTintColor" red="0.098039215686274508" green="0.098039215686274508" blue="0.12941176470588234" alpha="1" colorSpace="calibratedRGB"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="zCV-BE-JFf" kind="relationship" relationship="rootViewController" id="O0n-aH-z7l"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mtQ-5y-RX0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="212" y="-218"/>
         </scene>
     </scenes>
     <resources>
+        <image name="settings" width="30" height="30"/>
         <image name="temp" width="14" height="33"/>
         <image name="thoughtbot-logo-full" width="200" height="49"/>
         <image name="wind-icon-small" width="43" height="30"/>
