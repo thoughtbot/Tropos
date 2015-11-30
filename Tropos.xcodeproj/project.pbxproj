@@ -596,6 +596,7 @@
 				C247D7F61A5F07A00032F747 /* Update Build Number */,
 				C2422E4B1A718BC800F72769 /* Hockey Run Script */,
 				6D0F13551B4328C2001685BA /* Copy Carthage Frameworks */,
+				E9D11CFCA967ADDF3B704D82 /* Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -616,6 +617,7 @@
 				00C863EF3E2818AC40D913B2 /* Resources */,
 				8F9F0DB6E8093C9DBBB49EE4 /* Copy Pods Resources */,
 				E74D18CF1B8B9B710002F9D8 /* Copy Carthage Frameworks */,
+				F3BBACD8FBEEC6C8B841A0EC /* Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -829,6 +831,36 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+		E9D11CFCA967ADDF3B704D82 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F3BBACD8FBEEC6C8B841A0EC /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-unit_tests/Pods-unit_tests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 
