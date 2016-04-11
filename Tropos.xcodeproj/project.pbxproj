@@ -48,7 +48,6 @@
 		4DEDF4F61A6FA682006F3F11 /* TRWeatherUpdate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DEDF4F51A6FA682006F3F11 /* TRWeatherUpdate.m */; };
 		4DF5BA391A5B64630088F35F /* TRBearingFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DF5BA381A5B64630088F35F /* TRBearingFormatter.m */; };
 		5DA50AD91A82CAB300CAE666 /* DINNextLTPro-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5DA50AD81A82CAB300CAE666 /* DINNextLTPro-Light.otf */; };
-		65685FF31B3D299C0054BA1A /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1CDD2312F1EF05277F045E15 /* Info.plist */; };
 		6D0F135C1B432976001685BA /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D0F135A1B432976001685BA /* Nimble.framework */; };
 		6D0F135D1B432976001685BA /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D0F135B1B432976001685BA /* Quick.framework */; };
 		6D0F135E1B43298C001685BA /* Nimble.framework in Resources */ = {isa = PBXBuildFile; fileRef = 6D0F135A1B432976001685BA /* Nimble.framework */; };
@@ -705,7 +704,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				65685FF31B3D299C0054BA1A /* Info.plist in Resources */,
 				E74CDAD61BB614D700F57C1D /* Main.storyboard in Resources */,
 				4D0A5C3D1A3A53DD0084C41E /* CWForecastDetailView.xib in Resources */,
 				CFC0721C2D9EFFD3C3AE11A7 /* Images.xcassets in Resources */,
