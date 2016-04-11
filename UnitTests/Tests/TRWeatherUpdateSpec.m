@@ -3,7 +3,7 @@
 #import "UnitTests-Swift.h"
 #import <OCMock/OCMock.h>
 
-SpecBegin(TRWeatherUpdate)
+QuickSpecBegin(TRWeatherUpdateSpec)
 
 CLPlacemark* (^stubbedPlacemark) () = ^CLPlacemark* {
     id placemark = OCMClassMock([CLPlacemark class]);
