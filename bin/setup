@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 bundle install
-pod install
+bundle exec pod install
 brew install carthage 2> /dev/null
 carthage bootstrap
 
