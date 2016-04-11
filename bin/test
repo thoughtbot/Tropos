@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
 
-set -o pipefail
+set -eo pipefail
 
-xcodebuild test -workspace Tropos.xcworkspace -scheme Tropos -sdk iphonesimulator BUILD_ACTIVE_ARCH=NO | xcpretty -t -c
+xcodebuild test -workspace Tropos.xcworkspace -scheme Tropos -sdk iphonesimulator BUILD_ACTIVE_ARCH=NO | xcpretty -c
