@@ -19,7 +19,7 @@
 The Hockey SDK is provided under the following license:
 
     The MIT License
-    Copyright (c) 2012-2015 HockeyApp, Bit Stadium GmbH.
+    Copyright (c) Microsoft Corporation.
     All rights reserved.
 	
     Permission is hereby granted, free of charge, to any person
@@ -405,25 +405,6 @@ ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 
 (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
 SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-
-================================================================================
-
-libMPCategoryHelpers.a (c) Mixpanel, Inc. 2014.
-
-Mixpanel grants you a limited, non-exclusive, non-transferable,
-non-sublicenseable, revocable license to use the Software solely for your
-internal use.  You may not commercialize this Software for the benefit of any
-third party.  You may not decompile, disassemble, reverse engineer or otherwise
-attempt to obtain or perceive the source code from which any software component
-of the Software are compiled or interpreted, and you acknowledge that nothing
-herein will be construed to grant you any right to obtain or use such code nor
-create any derivative product from any of the foregoing, except with the prior
-written consent of Mixpanel.  Any dispute arising hereunder shall be submitted
-to confidential binding arbitration in the County and City of San Francisco,
-California for the maximum judgment enforceable, except that to the extent you
-have in any manner violated or threatened to violate Mixplanel&#8217;s intellectual
-property rights, Mixpanel may seek injunctive or other appropriate relief in
-any state or federal court in the State of California.
 </string>
 			<key>Title</key>
 			<string>Mixpanel</string>
