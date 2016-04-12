@@ -1,0 +1,10 @@
+#!/bin/sh
+
+set -eo pipefail
+
+xcodebuild archive \
+  -workspace Tropos.xcworkspace \
+  -scheme Tropos \
+  -archivePath $PWD/build/Tropos.xcarchive \
+  SYMROOT=$PWD/build \
+| xcpretty -c

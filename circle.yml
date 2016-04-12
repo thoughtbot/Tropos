@@ -10,3 +10,4 @@ dependencies:
 test:
   override:
     - bin/test
+    - bin/archive
