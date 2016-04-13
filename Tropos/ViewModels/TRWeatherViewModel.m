@@ -1,5 +1,4 @@
 #import "TRWeatherViewModel.h"
-#import "TRWeatherUpdate.h"
 #import "TRDailyForecastViewModel.h"
 #import "TRDateFormatter.h"
 #import "Tropos-Swift.h"

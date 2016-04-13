@@ -1,7 +1,8 @@
 @import CoreLocation;
 #import "RACSignal+TROperators.h"
+#import "Tropos-Swift.h"
 #import "TRWeatherController.h"
-#import "TRWeatherUpdate.h"
+#import "TRWeatherUpdate+Analytics.h"
 #import "TRLocationController.h"
 #import "TRForecastController.h"
 #import "TRSettingsController+TRObservation.h"
@@ -9,7 +10,6 @@
 #import "TRDailyForecastViewModel.h"
 #import "TRAnalyticsController.h"
 #import "TRWeatherViewModel.h"
-#import "TRWeatherUpdateCache.h"
 
 @interface TRWeatherController ()
 
