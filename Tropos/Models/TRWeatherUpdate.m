@@ -1,7 +1,7 @@
 @import CoreLocation;
 #import "Tropos-Swift.h"
 #import "TRWeatherUpdate.h"
-#import "TRDailyForecast.h"
+#import "Tropos-Swift.h"
 
 @interface TRWeatherUpdate ()
 
@@ -55,7 +55,9 @@
 
     for (NSUInteger index = 1; index < 4; index++) {
         TRDailyForecast *dailyForecast = [[TRDailyForecast alloc] initWithJSON:currentConditionsJSON[@"daily"][@"data"][index]];
-        [dailyForecasts addObject:dailyForecast];
+        if (dailyForecast) {
+            [dailyForecasts addObject:dailyForecast];
+        }
     }
 
     self.dailyForecasts = [dailyForecasts copy];
