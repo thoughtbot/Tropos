@@ -44,3 +44,20 @@ func -(lhs: Temperature, rhs: Temperature) -> Temperature {
         return "Fahrenheit: \(fahrenheitValue)°\nCelsius: \(celsiusValue)°"
     }
 }
+
+extension TemperatureComparison {
+    var localizedAdjective: String {
+        switch self {
+        case .Hotter:
+            return NSLocalizedString("Hotter", comment: "")
+        case .Warmer:
+            return NSLocalizedString("Warmer", comment: "")
+        case .Cooler:
+            return NSLocalizedString("Cooler", comment: "")
+        case .Colder:
+            return NSLocalizedString("Colder", comment: "")
+        case .Same:
+            return NSLocalizedString("Same", comment: "")
+        }
+    }
+}
