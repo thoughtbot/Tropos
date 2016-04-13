@@ -15,10 +15,8 @@
 SpecBegin(TRWeatherUpdateCache)
 
 CLPlacemark* (^stubbedPlacemark) () = ^CLPlacemark* {
-    CLPlacemark *placemark = OCMClassMock([CLPlacemark class]);
-    OCMStub([placemark locality]).andReturn(@"");
-    OCMStub([placemark administrativeArea]).andReturn(@"");
-    return placemark;
+    NSString *path = [[NSBundle bundleForClass:[self class]] pathForResource:@"New York" ofType:@"placemark"];
+    return [NSKeyedUnarchiver unarchiveObjectWithFile:path];
 };
 
 NSURL* (^weatherUpdateURLForTesting) () = ^NSURL* {

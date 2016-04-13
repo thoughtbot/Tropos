@@ -11,6 +11,7 @@
 		4A2F34C81CBE808A00417986 /* DailyForecast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A2F34C71CBE808A00417986 /* DailyForecast.swift */; };
 		4A2F34C91CBE8BA500417986 /* Temperature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D8ACB361B44270A003087A7 /* Temperature.swift */; };
 		4A2F34CA1CBE8CBF00417986 /* DailyForecast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A2F34C71CBE808A00417986 /* DailyForecast.swift */; };
+		4A2F35111CBEC53800417986 /* New York.placemark in Resources */ = {isa = PBXBuildFile; fileRef = 4A2F35101CBEC53800417986 /* New York.placemark */; };
 		4AC287A41CBC3D800064F48A /* Nimble.framework in Embed Carthage Frameworks */ = {isa = PBXBuildFile; fileRef = 6D0F135A1B432976001685BA /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		4AC287A51CBC3D820064F48A /* Quick.framework in Embed Carthage Frameworks */ = {isa = PBXBuildFile; fileRef = 6D0F135B1B432976001685BA /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		4ACA58451CC191DE00DD0CDC /* TRSettingsControllerSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 4ACA58441CC191DE00DD0CDC /* TRSettingsControllerSpec.m */; };
@@ -135,6 +136,7 @@
 		4ACA58491CC526D600DD0CDC /* RACSignal+TROperators.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "RACSignal+TROperators.h"; sourceTree = "<group>"; };
 		4ACA584A1CC526D600DD0CDC /* RACSignal+TROperators.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "RACSignal+TROperators.m"; sourceTree = "<group>"; };
 		4A2F34C71CBE808A00417986 /* DailyForecast.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DailyForecast.swift; sourceTree = "<group>"; };
+		4A2F35101CBEC53800417986 /* New York.placemark */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = "New York.placemark"; sourceTree = "<group>"; };
 		4D0A5C361A3A27510084C41E /* TRForecastController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRForecastController.h; sourceTree = "<group>"; };
 		4D0A5C371A3A27510084C41E /* TRForecastController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRForecastController.m; sourceTree = "<group>"; };
 		4D0A5C3C1A3A53DD0084C41E /* CWForecastDetailView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CWForecastDetailView.xib; sourceTree = "<group>"; };
@@ -458,6 +460,7 @@
 		7B05273CCDF63C9DA71C049A /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				4A2F35101CBEC53800417986 /* New York.placemark */,
 				0B30A1610CAE1C2E302C28B0 /* UnitTests-Info.plist */,
 			);
 			path = Resources;
@@ -705,6 +708,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6D0F135E1B43298C001685BA /* Nimble.framework in Resources */,
+				4A2F35111CBEC53800417986 /* New York.placemark in Resources */,
 				6D0F135F1B43298E001685BA /* Quick.framework in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -8,10 +8,8 @@
 QuickSpecBegin(TRWeatherUpdateSpec)
 
 CLPlacemark* (^stubbedPlacemark) () = ^CLPlacemark* {
-    id placemark = OCMClassMock([CLPlacemark class]);
-    OCMStub([placemark locality]).andReturn(@"");
-    OCMStub([placemark administrativeArea]).andReturn(@"");
-    return placemark;
+    NSString *path = [[NSBundle bundleForClass:[self class]] pathForResource:@"New York" ofType:@"placemark"];
+    return [NSKeyedUnarchiver unarchiveObjectWithFile:path];
 };
 
 NSDictionary* (^weatherConditionsWithTemperature) (NSNumber*) = ^NSDictionary* (NSNumber *temp) {
