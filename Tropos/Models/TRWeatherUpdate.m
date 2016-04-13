@@ -9,10 +9,10 @@
 @property (nonatomic, copy, readwrite) NSString *state;
 @property (nonatomic, copy, readwrite) NSString *conditionsDescription;
 @property (nonatomic, copy, readwrite) NSString *precipitationType;
-@property (nonatomic, readwrite) Temperature *currentTemperature;
-@property (nonatomic, readwrite) Temperature *currentLow;
-@property (nonatomic, readwrite) Temperature *currentHigh;
-@property (nonatomic, readwrite) Temperature *yesterdaysTemperature;
+@property (nonatomic, readwrite) TRTemperature *currentTemperature;
+@property (nonatomic, readwrite) TRTemperature *currentLow;
+@property (nonatomic, readwrite) TRTemperature *currentHigh;
+@property (nonatomic, readwrite) TRTemperature *yesterdaysTemperature;
 @property (nonatomic, readwrite) CGFloat precipitationPercentage;
 @property (nonatomic, readwrite) CGFloat windSpeed;
 @property (nonatomic, readwrite) CGFloat windBearing;
@@ -46,7 +46,7 @@
     self.precipitationType = todaysForecast[@"precipType"] ? todaysForecast[@"precipType"] : @"rain";
     self.conditionsDescription = currentConditions[@"icon"];
     [self updateCurrentTemperaturesWithConditions:currentConditions withForecast:todaysForecast];
-    self.yesterdaysTemperature = [[Temperature alloc] initWithFahrenheitValue:[yesterdaysConditions[@"temperature"] integerValue]];
+    self.yesterdaysTemperature = [[TRTemperature alloc] initWithFahrenheitValue:[yesterdaysConditions[@"temperature"] integerValue]];
     self.windBearing = [currentConditions[@"windBearing"] floatValue];
     self.windSpeed = [currentConditions[@"windSpeed"] floatValue];
     self.date = [NSDate date];
@@ -75,9 +75,9 @@
 
 - (void)updateCurrentTemperaturesWithConditions:(NSDictionary *)conditions withForecast:(NSDictionary *)forecast
 {
-    self.currentTemperature = [[Temperature alloc] initWithFahrenheitValue:[conditions[@"temperature"] integerValue]];
-    self.currentLow = [[Temperature alloc] initWithFahrenheitValue:[forecast[@"temperatureMin"] integerValue]];
-    self.currentHigh = [[Temperature alloc] initWithFahrenheitValue:[forecast[@"temperatureMax"] integerValue]];
+    self.currentTemperature = [[TRTemperature alloc] initWithFahrenheitValue:[conditions[@"temperature"] integerValue]];
+    self.currentLow = [[TRTemperature alloc] initWithFahrenheitValue:[forecast[@"temperatureMin"] integerValue]];
+    self.currentHigh = [[TRTemperature alloc] initWithFahrenheitValue:[forecast[@"temperatureMax"] integerValue]];
     if (self.currentTemperature.fahrenheitValue < self.currentLow.fahrenheitValue) {
         self.currentLow = self.currentTemperature;
     } else if (self.currentTemperature.fahrenheitValue > self.currentHigh.fahrenheitValue) {

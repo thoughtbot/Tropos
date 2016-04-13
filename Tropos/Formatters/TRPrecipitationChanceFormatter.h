@@ -1,7 +1,7 @@
-@class Precipitation;
+@class TRPrecipitation;
 
 @interface TRPrecipitationChanceFormatter : NSObject
 
-+ (NSString *)precipitationChanceStringFromPrecipitation:(Precipitation *)precipitation;
++ (NSString *)precipitationChanceStringFromPrecipitation:(TRPrecipitation *)precipitation;
 
 @end

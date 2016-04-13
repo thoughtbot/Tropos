@@ -23,7 +23,7 @@ describe(@"TRTemperatureComparisonFormatter", ^{
             [[TRTemperatureComparisonFormatter calendar] setTimeZone:[NSTimeZone timeZoneWithAbbreviation:@"UTC"]];
             NSString *adjective;
             NSDate *date = dateFromString(@"2015-05-15 22:00:00 UTC");
-            NSString *stringComparison = [TRTemperatureComparisonFormatter localizedStringFromComparison:TemperatureComparisonSame
+            NSString *stringComparison = [TRTemperatureComparisonFormatter localizedStringFromComparison:TRTemperatureComparisonSame
                                                                                                adjective:&adjective
                                                                                            precipitation:@""
                                                                                                     date:date];

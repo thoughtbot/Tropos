@@ -1,7 +1,7 @@
-@class Temperature;
+@class TRTemperature;
 
 @interface TRTemperatureFormatter : NSObject
 
-- (NSString *)stringFromTemperature:(Temperature *)temperature;
+- (NSString *)stringFromTemperature:(TRTemperature *)temperature;
 
 @end

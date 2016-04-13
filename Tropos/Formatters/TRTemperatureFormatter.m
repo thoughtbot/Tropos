@@ -3,7 +3,7 @@
 
 @implementation TRTemperatureFormatter
 
-- (NSString *)stringFromTemperature:(Temperature *)temperature
+- (NSString *)stringFromTemperature:(TRTemperature *)temperature
 {
     BOOL usesMetricSystem = [[TRSettingsController new] unitSystem] == TRUnitSystemMetric;
     CGFloat temperatureValue = usesMetricSystem? temperature.celsiusValue : temperature.fahrenheitValue;

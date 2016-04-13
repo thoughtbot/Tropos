@@ -1,6 +1,6 @@
 import Foundation
 
-@objc enum TemperatureComparison: Int {
+@objc(TRTemperatureComparison) enum TemperatureComparison: Int {
     case Same, Hotter, Warmer, Cooler, Colder
 }
 
@@ -13,7 +13,7 @@ func -(lhs: Temperature, rhs: Temperature) -> Temperature {
     return Temperature(fahrenheitValue: lhs.fahrenheitValue - rhs.fahrenheitValue)
 }
 
-@objc class Temperature: NSObject {
+@objc(TRTemperature) class Temperature: NSObject {
     let fahrenheitValue: Int
     
     lazy var celsiusValue: Int = {

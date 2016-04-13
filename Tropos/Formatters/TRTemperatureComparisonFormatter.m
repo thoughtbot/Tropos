@@ -10,9 +10,9 @@ typedef NS_ENUM(NSUInteger, TRTimeOfDay) {
 
 @implementation TRTemperatureComparisonFormatter
 
-+ (NSString *)localizedStringFromComparison:(TemperatureComparison)comparison adjective:(NSString *__autoreleasing *)adjective precipitation:(NSString *)precipitation date:(NSDate *)date
++ (NSString *)localizedStringFromComparison:(TRTemperatureComparison)comparison adjective:(NSString *__autoreleasing *)adjective precipitation:(NSString *)precipitation date:(NSDate *)date
 {
-    NSString *formatString = (comparison == TemperatureComparisonSame)? NSLocalizedString(@"SameTemperatureFormat", nil) : NSLocalizedString(@"DifferentTemperatureFormat", nil);
+    NSString *formatString = (comparison == TRTemperatureComparisonSame)? NSLocalizedString(@"SameTemperatureFormat", nil) : NSLocalizedString(@"DifferentTemperatureFormat", nil);
     *adjective = [self localizedAdjectiveForTemperatureComparison:comparison];
 
     return [NSString stringWithFormat:formatString, *adjective, [self localizedCurrentTimeOfDayForDate:date], [self localizedPreviousTimeOfDayForDate:date], precipitation];
@@ -20,18 +20,18 @@ typedef NS_ENUM(NSUInteger, TRTimeOfDay) {
 
 #pragma mark - Private Methods
 
-+ (NSString *)localizedAdjectiveForTemperatureComparison:(TemperatureComparison)comparison
++ (NSString *)localizedAdjectiveForTemperatureComparison:(TRTemperatureComparison)comparison
 {
     switch (comparison) {
-        case TemperatureComparisonHotter:
+        case TRTemperatureComparisonHotter:
             return NSLocalizedString(@"Hotter", nil);
-        case TemperatureComparisonWarmer:
+        case TRTemperatureComparisonWarmer:
             return NSLocalizedString(@"Warmer", nil);
-        case TemperatureComparisonCooler:
+        case TRTemperatureComparisonCooler:
             return NSLocalizedString(@"Cooler", nil);
-        case TemperatureComparisonColder:
+        case TRTemperatureComparisonColder:
             return NSLocalizedString(@"Colder", nil);
-        case TemperatureComparisonSame:
+        case TRTemperatureComparisonSame:
             return NSLocalizedString(@"Same", nil);
     }
 }

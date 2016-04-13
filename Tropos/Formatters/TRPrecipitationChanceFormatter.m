@@ -5,7 +5,7 @@
 
 #pragma mark - Class Methods
 
-+ (NSString *)precipitationChanceStringFromPrecipitation:(Precipitation *)precipitation
++ (NSString *)precipitationChanceStringFromPrecipitation:(TRPrecipitation *)precipitation
 {
     NSString *adjective = [self localizedAdjectiveForPrecipitationChance:[precipitation chance]];
     NSString *precipitationName = [self localizedNameForPrecipitationType:[precipitation type]];
@@ -15,12 +15,12 @@
 
 #pragma mark - Private Methods
 
-+ (NSString *)localizedAdjectiveForPrecipitationChance:(PrecipitationChance)chance
++ (NSString *)localizedAdjectiveForPrecipitationChance:(TRPrecipitationChance)chance
 {
     switch (chance) {
-        case PrecipitationChanceGood: return @"Good";
-        case PrecipitationChanceSlight: return @"Slight";
-        case PrecipitationChanceNone: return @"None";
+        case TRPrecipitationChanceGood: return @"Good";
+        case TRPrecipitationChanceSlight: return @"Slight";
+        case TRPrecipitationChanceNone: return @"None";
     }
 }
 
