@@ -1,5 +1,5 @@
 #import "TRSettingsController.h"
-#import "NSBundle+TRBundleInfo.h"
+#import "Tropos-Swift.h"
 
 NSString *const TRSettingsUnitSystemKey = @"TRUnitSystem";
 NSString *const TRSettingsLastVersionKey = @"TRLastVersion";

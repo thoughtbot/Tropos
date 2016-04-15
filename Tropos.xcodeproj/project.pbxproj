@@ -18,7 +18,6 @@
 		4D1ABA0B1A89686200B7F8FB /* TRNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D1ABA0A1A89686200B7F8FB /* TRNavigationBar.m */; };
 		4D3336F61A80BE16001BA9A8 /* TRDailyForecastView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D3336F51A80BE16001BA9A8 /* TRDailyForecastView.xib */; };
 		4D3386FF1A5D27260087B88F /* TRTemperatureFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D3386FE1A5D27260087B88F /* TRTemperatureFormatter.m */; };
-		4D3387021A5D4C300087B88F /* NSBundle+TRBundleInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D3387011A5D4C300087B88F /* NSBundle+TRBundleInfo.m */; };
 		4D4937781A82F30D007A1FA9 /* TRLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D4937771A82F30D007A1FA9 /* TRLabel.m */; };
 		4D49377B1A82F33B007A1FA9 /* CATransition+TRFadeTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D49377A1A82F33B007A1FA9 /* CATransition+TRFadeTransition.m */; };
 		4D49377E1A82F82A007A1FA9 /* TRImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D49377D1A82F82A007A1FA9 /* TRImageView.m */; };
@@ -134,8 +133,6 @@
 		4D3336F51A80BE16001BA9A8 /* TRDailyForecastView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TRDailyForecastView.xib; sourceTree = "<group>"; };
 		4D3386FD1A5D27260087B88F /* TRTemperatureFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRTemperatureFormatter.h; sourceTree = "<group>"; };
 		4D3386FE1A5D27260087B88F /* TRTemperatureFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRTemperatureFormatter.m; sourceTree = "<group>"; };
-		4D3387001A5D4C300087B88F /* NSBundle+TRBundleInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSBundle+TRBundleInfo.h"; sourceTree = "<group>"; };
-		4D3387011A5D4C300087B88F /* NSBundle+TRBundleInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSBundle+TRBundleInfo.m"; sourceTree = "<group>"; };
 		4D4937761A82F30D007A1FA9 /* TRLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRLabel.h; sourceTree = "<group>"; };
 		4D4937771A82F30D007A1FA9 /* TRLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRLabel.m; sourceTree = "<group>"; };
 		4D4937791A82F33B007A1FA9 /* CATransition+TRFadeTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CATransition+TRFadeTransition.h"; sourceTree = "<group>"; };
@@ -587,8 +584,7 @@
 				4D7CDEC41A47DCD60038DD33 /* NSMutableAttributedString+TRAttributeHelpers.m */,
 				4D7CDEC61A47E0500038DD33 /* UIFont+TRAppFonts.h */,
 				4D7CDEC71A47E0500038DD33 /* UIFont+TRAppFonts.m */,
-				4D3387001A5D4C300087B88F /* NSBundle+TRBundleInfo.h */,
-				4D3387011A5D4C300087B88F /* NSBundle+TRBundleInfo.m */,
+				4ACA583E1CC18DE600DD0CDC /* NSBundle+BundleInfo.swift */,
 				4D4937791A82F33B007A1FA9 /* CATransition+TRFadeTransition.h */,
 				4D49377A1A82F33B007A1FA9 /* CATransition+TRFadeTransition.m */,
 				4D4955501A8C2B5D0066F278 /* UIImage+TRColorBackdrop.h */,
@@ -893,7 +889,6 @@
 				4D49554C1A8C298A0066F278 /* TRRefreshView.m in Sources */,
 				C2E44CEF1A3B6E89009CC844 /* NSDate+TRRelativeDate.m in Sources */,
 				4D4937781A82F30D007A1FA9 /* TRLabel.m in Sources */,
-				4D3387021A5D4C300087B88F /* NSBundle+TRBundleInfo.m in Sources */,
 				C2E44CDD1A3A38A2009CC844 /* TRLocationController.m in Sources */,
 				4D76CCD41A99C3FA00DDE5EB /* TRRefreshLayer.m in Sources */,
 				D7DD1B8AD495AFA4EC1CEFF9 /* TRAppDelegate.m in Sources */,
@@ -909,6 +904,7 @@
 				4D98E98B1A80C89600856412 /* TRDailyForecast.m in Sources */,
 				E7A895541AFD11AA0023205B /* TRApplicationController.m in Sources */,
 				4D98E9851A80C43F00856412 /* TRDailyForecastView.m in Sources */,
+				4ACA583F1CC18DE600DD0CDC /* NSBundle+BundleInfo.swift in Sources */,
 				C4B3320C1AFD480E00401873 /* TRPrecipitationChanceFormatter.m in Sources */,
 				4D9A00061A9D61CD000835A9 /* TRAnalyticsController.m in Sources */,
 				4D7CDECC1A47E13F0038DD33 /* TRTemperatureComparisonFormatter.m in Sources */,
