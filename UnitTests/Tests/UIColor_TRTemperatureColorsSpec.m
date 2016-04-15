@@ -1,3 +1,5 @@
+#import <Specta/Specta.h>
+#import <Expecta/Expecta.h>
 #import "UIColor+TRTemperatureColors.h"
 
 SpecBegin(UIColor_TRTemperatureColors)

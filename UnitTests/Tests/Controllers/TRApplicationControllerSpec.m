@@ -1,4 +1,7 @@
 @import CoreLocation;
+#import <Specta/Specta.h>
+#import <Expecta/Expecta.h>
+#import <OCMock/OCMock.h>
 #import "TRApplicationController.h"
 #import "TRWeatherController.h"
 #import "TRLocationController.h"

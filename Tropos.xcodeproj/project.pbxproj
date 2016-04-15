@@ -224,7 +224,6 @@
 		C4B3320A1AFD476500401873 /* TRPrecipitationChanceFormatter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TRPrecipitationChanceFormatter.h; sourceTree = "<group>"; };
 		C4B3320B1AFD480E00401873 /* TRPrecipitationChanceFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRPrecipitationChanceFormatter.m; sourceTree = "<group>"; };
 		DED70296CC99B4AAD0DE42BD /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
-		E2B218FB5F097AAE3080F4DD /* UnitTests-Prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UnitTests-Prefix.pch"; sourceTree = "<group>"; };
 		E59B090E67C8BD269D3CD9DB /* Main.storyboard */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		E74676A71B8B76620012AD51 /* TRTemperatureComparisonFormatterSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TRTemperatureComparisonFormatterSpec.m; path = Formatters/TRTemperatureComparisonFormatterSpec.m; sourceTree = "<group>"; };
 		E7A895521AFD11AA0023205B /* TRApplicationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRApplicationController.h; sourceTree = "<group>"; };
@@ -452,7 +451,6 @@
 			isa = PBXGroup;
 			children = (
 				0B30A1610CAE1C2E302C28B0 /* UnitTests-Info.plist */,
-				E2B218FB5F097AAE3080F4DD /* UnitTests-Prefix.pch */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -1156,10 +1154,9 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
-				GCC_PREFIX_HEADER = "UnitTests/Resources/UnitTests-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"$(inherited)",
-					"COCOAPODS=1",
+					EXP_SHORTHAND,
 					"XCODE_VERSION=$(XCODE_VERSION_MAJOR)",
 				);
 				INFOPLIST_FILE = "UnitTests/Resources/UnitTests-Info.plist";
@@ -1187,7 +1184,6 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
-				GCC_PREFIX_HEADER = "UnitTests/Resources/UnitTests-Prefix.pch";
 				INFOPLIST_FILE = "UnitTests/Resources/UnitTests-Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.thoughtbot.${PRODUCT_NAME:rfc1034identifier}";

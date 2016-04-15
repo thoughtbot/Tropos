@@ -1,3 +1,6 @@
+#import <Foundation/Foundation.h>
+#import <ReactiveCocoa/ReactiveCocoa.h>
+
 FOUNDATION_EXPORT NSString *const TRSettingsDidChangeNotification;
 
 typedef NS_ENUM(NSInteger, TRUnitSystem) {

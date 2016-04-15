@@ -1,3 +1,5 @@
+#import <Foundation/Foundation.h>
+#import <ReactiveCocoa/ReactiveCocoa.h>
 #import "TRWeatherViewController.h"
 
 @interface TRApplicationController : NSObject

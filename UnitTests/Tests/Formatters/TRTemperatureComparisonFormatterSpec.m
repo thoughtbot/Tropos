@@ -1,3 +1,5 @@
+#import <Specta/Specta.h>
+#import <Expecta/Expecta.h>
 #import "UnitTests-Swift.h"
 #import "TRTemperatureComparisonFormatter.h"
 

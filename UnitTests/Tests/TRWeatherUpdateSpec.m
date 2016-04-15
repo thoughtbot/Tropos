@@ -1,7 +1,9 @@
 @import CoreLocation;
+#import <Specta/Specta.h>
+#import <Expecta/Expecta.h>
+#import <OCMock/OCMock.h>
 #import "TRWeatherUpdate.h"
 #import "UnitTests-Swift.h"
-#import <OCMock/OCMock.h>
 
 QuickSpecBegin(TRWeatherUpdateSpec)
 
