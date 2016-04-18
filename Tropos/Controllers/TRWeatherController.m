@@ -1,4 +1,5 @@
 @import CoreLocation;
+#import "RACSignal+TROperators.h"
 #import "TRWeatherController.h"
 #import "TRWeatherUpdate.h"
 #import "TRLocationController.h"
@@ -38,7 +39,7 @@
     self.geocodeController = [TRGeocodeController new];
     self.forecastController = [TRForecastController new];
     self.settingsController = [TRSettingsController new];
-    self.unitSystemChanged = [self.settingsController unitSystemChanged];
+    self.unitSystemChanged = [[self.settingsController unitSystemChanged] replayLastLazily];
 
     @weakify(self)
     self.updateWeatherCommand = [[RACCommand alloc] initWithSignalBlock:^RACSignal *(id input) {
