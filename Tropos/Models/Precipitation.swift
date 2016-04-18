@@ -1,9 +1,5 @@
 import Foundation
 
-@objc(TRPrecipitationChance) enum PrecipitationChance: Int {
-    case None, Slight, Good
-}
-
 @objc(TRPrecipitation) class Precipitation: NSObject {
     let type: String
     let probability: Float

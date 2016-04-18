@@ -1,6 +1,5 @@
 #import "TRWeatherViewModel.h"
 #import "Tropos-Swift.h"
-#import "TRPrecipitationChanceFormatter.h"
 #import "TRWindSpeedFormatter.h"
 #import "NSMutableAttributedString+TRAttributeHelpers.h"
 
@@ -63,7 +62,7 @@
 - (NSString *)precipitationDescription
 {
     TRPrecipitation *precipitation = [[TRPrecipitation alloc] initWithProbability:(float)self.weatherUpdate.precipitationPercentage type:self.weatherUpdate.precipitationType];
-    return [TRPrecipitationChanceFormatter precipitationChanceStringFromPrecipitation:precipitation];
+    return [[TRPrecipitationChanceFormatter new] localizedStringFromPrecipitation:precipitation];
 }
 
 - (NSAttributedString *)temperatureDescription
