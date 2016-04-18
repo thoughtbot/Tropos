@@ -1,6 +1,5 @@
 #import <Foundation/Foundation.h>
 
-FOUNDATION_EXPORT NSString *const TRSettingsDidChangeNotification;
 FOUNDATION_EXPORT NSString *const TRSettingsLastVersionKey;
 FOUNDATION_EXPORT NSString *const TRSettingsUnitSystemKey;
 
