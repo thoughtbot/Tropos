@@ -1,6 +1,5 @@
-#import "Tropos-Swift.h"
 #import "TRTemperatureFormatter.h"
-#import "TRSettingsController.h"
+#import "Tropos-Swift.h"
 
 @implementation TRTemperatureFormatter
 

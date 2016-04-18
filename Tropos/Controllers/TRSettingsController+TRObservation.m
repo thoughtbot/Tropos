@@ -1,4 +1,5 @@
 #import "TRSettingsController+TRObservation.h"
+#import "TRConstants.h"
 
 @implementation TRSettingsController (TRObservation)
 

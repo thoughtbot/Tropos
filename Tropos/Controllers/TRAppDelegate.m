@@ -1,7 +1,7 @@
 #import <HockeySDK/HockeySDK.h>
+#import "Tropos-Swift.h"
 #import "TRAppDelegate.h"
 #import "TRAnalyticsController.h"
-#import "TRSettingsController.h"
 #import "TRApplicationController.h"
 
 #ifndef DEBUG

@@ -1,6 +1,6 @@
 #import "TRWindSpeedFormatter.h"
 #import "TRBearingFormatter.h"
-#import "TRSettingsController.h"
+#import "Tropos-Swift.h"
 
 @implementation TRWindSpeedFormatter
 
