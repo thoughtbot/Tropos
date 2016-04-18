@@ -3,7 +3,6 @@
 #import "TRDateFormatter.h"
 #import "Tropos-Swift.h"
 #import "TRPrecipitationChanceFormatter.h"
-#import "TRTemperatureFormatter.h"
 #import "TRWindSpeedFormatter.h"
 #import "NSMutableAttributedString+TRAttributeHelpers.h"
 
