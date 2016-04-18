@@ -384,7 +384,6 @@
 				4ACA585D1CC56D6300DD0CDC /* RelativeDateFormatter.swift */,
 				4A2F35141CBECBD800417986 /* TemperatureComparisonFormatter.swift */,
 				4ACA584E1CC5564E00DD0CDC /* TemperatureFormatter.swift */,
-				4A2F35161CBED29C00417986 /* TimeOfDay.swift */,
 			);
 			path = Formatters;
 			sourceTree = "<group>";
@@ -395,6 +394,7 @@
 				4DEDF4F41A6FA682006F3F11 /* TRWeatherUpdate+Analytics.h */,
 				4DEDF4F51A6FA682006F3F11 /* TRWeatherUpdate+Analytics.m */,
 				6D8ACB361B44270A003087A7 /* Temperature.swift */,
+				4A2F35161CBED29C00417986 /* TimeOfDay.swift */,
 				6D0F13641B4333CE001685BA /* Precipitation.swift */,
 				4ACA58621CC5790700DD0CDC /* PrecipitationChance.swift */,
 				4A2F34C71CBE808A00417986 /* DailyForecast.swift */,
