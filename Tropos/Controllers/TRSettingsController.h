@@ -1,5 +1,4 @@
 #import <Foundation/Foundation.h>
-#import <ReactiveCocoa/ReactiveCocoa.h>
 
 FOUNDATION_EXPORT NSString *const TRSettingsLastVersionKey;
 FOUNDATION_EXPORT NSString *const TRSettingsUnitSystemKey;
