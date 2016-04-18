@@ -1,7 +1,6 @@
 #import "TRSettingsController.h"
 #import "NSBundle+TRBundleInfo.h"
 
-NSString *const TRSettingsDidChangeNotification = @"TRSettingsDidChangeNotification";
 NSString *const TRSettingsUnitSystemKey = @"TRUnitSystem";
 NSString *const TRSettingsLastVersionKey = @"TRLastVersion";
 
