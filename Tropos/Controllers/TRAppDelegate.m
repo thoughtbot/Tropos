@@ -12,6 +12,10 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    if ([self isCurrentlyTesting]) {
+        return YES;
+    }
+
 #ifndef DEBUG
     [[BITHockeyManager sharedHockeyManager] configureWithIdentifier:TRHockeyIdentifier];
     [[BITHockeyManager sharedHockeyManager].crashManager setCrashManagerStatus:BITCrashManagerStatusAutoSend];
@@ -43,6 +47,12 @@
     } error:^(NSError *error) {
         completionHandler(UIBackgroundFetchResultFailed);
     }];
+}
+
+- (BOOL)isCurrentlyTesting
+{
+    NSString *bundleInjectionPath = [[[NSProcessInfo processInfo] environment] objectForKey:@"XCInjectBundleInto"];
+    return [bundleInjectionPath length] > 0;
 }
 
 @end
