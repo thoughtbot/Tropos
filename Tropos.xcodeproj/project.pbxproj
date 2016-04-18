@@ -28,6 +28,9 @@
 		4ACA584B1CC526D600DD0CDC /* RACSignal+TROperators.m in Sources */ = {isa = PBXBuildFile; fileRef = 4ACA584A1CC526D600DD0CDC /* RACSignal+TROperators.m */; };
 		4ACA584F1CC5564E00DD0CDC /* TemperatureFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ACA584E1CC5564E00DD0CDC /* TemperatureFormatter.swift */; };
 		4ACA58511CC5570B00DD0CDC /* TemperatureFormatterSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ACA58501CC5570B00DD0CDC /* TemperatureFormatterSpec.swift */; };
+		4ACA58581CC5629300DD0CDC /* DailyForecastViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ACA58571CC5629300DD0CDC /* DailyForecastViewModel.swift */; };
+		4ACA585A1CC562BC00DD0CDC /* DailyForecastViewModelSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ACA58591CC562BC00DD0CDC /* DailyForecastViewModelSpec.swift */; };
+		4ACA585C1CC5641000DD0CDC /* NSDate+ISO8601.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ACA585B1CC5641000DD0CDC /* NSDate+ISO8601.swift */; };
 		4D0A5C381A3A27510084C41E /* TRForecastController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D0A5C371A3A27510084C41E /* TRForecastController.m */; };
 		4D0A5C3D1A3A53DD0084C41E /* CWForecastDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D0A5C3C1A3A53DD0084C41E /* CWForecastDetailView.xib */; };
 		4D1ABA0B1A89686200B7F8FB /* TRNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D1ABA0A1A89686200B7F8FB /* TRNavigationBar.m */; };
@@ -48,7 +51,6 @@
 		4D7CDEC81A47E0500038DD33 /* UIFont+TRAppFonts.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D7CDEC71A47E0500038DD33 /* UIFont+TRAppFonts.m */; };
 		4D9315201A6F44EB00CE95B3 /* TRDateFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D93151F1A6F44EB00CE95B3 /* TRDateFormatter.m */; };
 		4D98E9851A80C43F00856412 /* TRDailyForecastView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D98E9841A80C43F00856412 /* TRDailyForecastView.m */; };
-		4D98E9881A80C6DF00856412 /* TRDailyForecastViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D98E9871A80C6DF00856412 /* TRDailyForecastViewModel.m */; };
 		4D9A00061A9D61CD000835A9 /* TRAnalyticsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D9A00051A9D61CD000835A9 /* TRAnalyticsController.m */; };
 		4D9CA35D1A5C7672009E24DD /* TRBearingFormatterSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D9CA35C1A5C7672009E24DD /* TRBearingFormatterSpec.m */; };
 		4D9CA35F1A5CABDD009E24DD /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 4D9CA35E1A5CABDD009E24DD /* Settings.bundle */; };
@@ -143,6 +145,9 @@
 		4ACA584A1CC526D600DD0CDC /* RACSignal+TROperators.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "RACSignal+TROperators.m"; sourceTree = "<group>"; };
 		4ACA584E1CC5564E00DD0CDC /* TemperatureFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TemperatureFormatter.swift; sourceTree = "<group>"; };
 		4ACA58501CC5570B00DD0CDC /* TemperatureFormatterSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TemperatureFormatterSpec.swift; sourceTree = "<group>"; };
+		4ACA58571CC5629300DD0CDC /* DailyForecastViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DailyForecastViewModel.swift; sourceTree = "<group>"; };
+		4ACA58591CC562BC00DD0CDC /* DailyForecastViewModelSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DailyForecastViewModelSpec.swift; sourceTree = "<group>"; };
+		4ACA585B1CC5641000DD0CDC /* NSDate+ISO8601.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSDate+ISO8601.swift"; sourceTree = "<group>"; };
 		4D0A5C361A3A27510084C41E /* TRForecastController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRForecastController.h; sourceTree = "<group>"; };
 		4D0A5C371A3A27510084C41E /* TRForecastController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRForecastController.m; sourceTree = "<group>"; };
 		4D0A5C3C1A3A53DD0084C41E /* CWForecastDetailView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CWForecastDetailView.xib; sourceTree = "<group>"; };
@@ -181,8 +186,6 @@
 		4D93151F1A6F44EB00CE95B3 /* TRDateFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRDateFormatter.m; sourceTree = "<group>"; };
 		4D98E9831A80C43F00856412 /* TRDailyForecastView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRDailyForecastView.h; sourceTree = "<group>"; };
 		4D98E9841A80C43F00856412 /* TRDailyForecastView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRDailyForecastView.m; sourceTree = "<group>"; };
-		4D98E9861A80C6DF00856412 /* TRDailyForecastViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRDailyForecastViewModel.h; sourceTree = "<group>"; };
-		4D98E9871A80C6DF00856412 /* TRDailyForecastViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRDailyForecastViewModel.m; sourceTree = "<group>"; };
 		4D9A00041A9D61CD000835A9 /* TRAnalyticsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRAnalyticsController.h; sourceTree = "<group>"; };
 		4D9A00051A9D61CD000835A9 /* TRAnalyticsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRAnalyticsController.m; sourceTree = "<group>"; };
 		4D9A000D1A9D7868000835A9 /* TRAnalyticsEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRAnalyticsEvent.h; sourceTree = "<group>"; };
@@ -345,6 +348,14 @@
 			path = UnitTests;
 			sourceTree = "<group>";
 		};
+		4ACA58541CC5604800DD0CDC /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				4ACA58591CC562BC00DD0CDC /* DailyForecastViewModelSpec.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
 		4D0A5C3E1A3A578E0084C41E /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
@@ -468,10 +479,9 @@
 		7D9BB5368E9215FC0EBBCE0A /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
-				4D98E9861A80C6DF00856412 /* TRDailyForecastViewModel.h */,
-				4D98E9871A80C6DF00856412 /* TRDailyForecastViewModel.m */,
 				4DDF65071AB3AF4200909D67 /* TRWeatherViewModel.h */,
 				4DDF65081AB3AF4200909D67 /* TRWeatherViewModel.m */,
+				4ACA58571CC5629300DD0CDC /* DailyForecastViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -509,6 +519,7 @@
 		CC2E8FB0D6953D8A2B6BF65A /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				4ACA585B1CC5641000DD0CDC /* NSDate+ISO8601.swift */,
 				4A3F7D6F1CBEDD6E005DF19E /* TestPlacemark.swift */,
 			);
 			path = Helpers;
@@ -532,13 +543,14 @@
 		D487E2F8148F4F831FE4B216 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
+				E7B3B9281B34EE0500BDD5A4 /* Controllers */,
 				6D0F13661B433521001685BA /* Models */,
 				234BD0111B46419F00D5AEC5 /* Formatters */,
+				4ACA58541CC5604800DD0CDC /* ViewModels */,
 				4D9CA35C1A5C7672009E24DD /* TRBearingFormatterSpec.m */,
 				4DA79AC01A68806600C3539D /* UIColor_TRTemperatureColorsSpec.m */,
 				4A2F35121CBEC6D600417986 /* WeatherUpdateSpec.swift */,
 				E7E4A3A11B069BB500F489E3 /* WeatherUpdateCacheSpec.swift */,
-				E7B3B9281B34EE0500BDD5A4 /* Controllers */,
 				6D5F2A1C1B42F39E00425B19 /* UnitTests-Bridging-Header.h */,
 			);
 			path = Tests;
@@ -919,6 +931,7 @@
 				4A2F35171CBED29C00417986 /* TimeOfDay.swift in Sources */,
 				4D7CDEC51A47DCD60038DD33 /* NSMutableAttributedString+TRAttributeHelpers.m in Sources */,
 				4A2F34C81CBE808A00417986 /* DailyForecast.swift in Sources */,
+				4ACA58581CC5629300DD0CDC /* DailyForecastViewModel.swift in Sources */,
 				C2E44CE11A3A3C09009CC844 /* TRWeatherViewController.m in Sources */,
 				4D1ABA0B1A89686200B7F8FB /* TRNavigationBar.m in Sources */,
 				CE5D7F3B45F980082E1BCA30 /* LaunchScreen.xib in Sources */,
@@ -930,7 +943,6 @@
 				4D4955521A8C2B5D0066F278 /* UIImage+TRColorBackdrop.m in Sources */,
 				4DDF65091AB3AF4200909D67 /* TRWeatherViewModel.m in Sources */,
 				4ACA584F1CC5564E00DD0CDC /* TemperatureFormatter.swift in Sources */,
-				4D98E9881A80C6DF00856412 /* TRDailyForecastViewModel.m in Sources */,
 				4D7CDEC81A47E0500038DD33 /* UIFont+TRAppFonts.m in Sources */,
 				4D49377B1A82F33B007A1FA9 /* CATransition+TRFadeTransition.m in Sources */,
 			);
@@ -943,7 +955,9 @@
 				6D0F13681B43353D001685BA /* PrecipitationSpec.swift in Sources */,
 				E7B3B9271B34EDFE00BDD5A4 /* TRApplicationControllerSpec.m in Sources */,
 				4ACA58511CC5570B00DD0CDC /* TemperatureFormatterSpec.swift in Sources */,
+				4ACA585C1CC5641000DD0CDC /* NSDate+ISO8601.swift in Sources */,
 				4ACA58451CC191DE00DD0CDC /* SettingsControllerSpec.swift in Sources */,
+				4ACA585A1CC562BC00DD0CDC /* DailyForecastViewModelSpec.swift in Sources */,
 				4D9CA35D1A5C7672009E24DD /* TRBearingFormatterSpec.m in Sources */,
 				4DA79AC11A68806600C3539D /* UIColor_TRTemperatureColorsSpec.m in Sources */,
 				6D8ACB3A1B4432A8003087A7 /* TemperatureSpec.swift in Sources */,

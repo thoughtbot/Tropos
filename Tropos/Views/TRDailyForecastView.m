@@ -1,5 +1,5 @@
 #import "TRDailyForecastView.h"
-#import "TRDailyForecastViewModel.h"
+#import "Tropos-Swift.h"
 
 @interface TRDailyForecastView ()
 

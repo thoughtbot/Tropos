@@ -7,7 +7,6 @@
 #import "TRForecastController.h"
 #import "TRSettingsController+TRObservation.h"
 #import "TRGeocodeController.h"
-#import "TRDailyForecastViewModel.h"
 #import "TRAnalyticsController.h"
 #import "TRWeatherViewModel.h"
 
