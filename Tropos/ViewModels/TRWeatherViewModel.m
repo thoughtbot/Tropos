@@ -1,5 +1,4 @@
 #import "TRWeatherViewModel.h"
-#import "TRDateFormatter.h"
 #import "Tropos-Swift.h"
 #import "TRPrecipitationChanceFormatter.h"
 #import "TRWindSpeedFormatter.h"
@@ -32,7 +31,7 @@
 
 - (NSString *)updatedDateString
 {
-    return [self.dateFormatter stringFromDate:self.weatherUpdate.date];
+    return [self.dateFormatter localizedStringFromDate:self.weatherUpdate.date];
 }
 
 - (UIImage *)conditionsImage
