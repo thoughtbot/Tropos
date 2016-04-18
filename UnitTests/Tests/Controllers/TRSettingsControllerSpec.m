@@ -27,6 +27,14 @@ describe(@"TRSettingsController", ^{
             expect(@([controller unitSystem])).to(equal(@(TRUnitSystemMetric)));
         });
     });
+
+    describe(@"migration", ^{
+        it(@"converts from a string unit system representation to an integer", ^{
+            [[NSUserDefaults standardUserDefaults] setObject:@"1" forKey:TRSettingsUnitSystemKey];
+            TRSettingsController *controller = [TRSettingsController new];
+            expect(@([controller unitSystem])).to(equal(@(TRUnitSystemImperial)));
+        });
+    });
 });
 
 QuickSpecEnd

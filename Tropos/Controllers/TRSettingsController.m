@@ -2,8 +2,8 @@
 #import "NSBundle+TRBundleInfo.h"
 
 NSString *const TRSettingsDidChangeNotification = @"TRSettingsDidChangeNotification";
-static NSString *const TRSettingsUnitSystemKey = @"TRUnitSystem";
-static NSString *const TRSettingsLastVersionKey = @"TRLastVersion";
+NSString *const TRSettingsUnitSystemKey = @"TRUnitSystem";
+NSString *const TRSettingsLastVersionKey = @"TRLastVersion";
 
 @interface TRSettingsController ()
 
@@ -54,13 +54,12 @@ static NSString *const TRSettingsLastVersionKey = @"TRLastVersion";
 
 - (TRUnitSystem)unitSystem
 {
-    return [[[NSUserDefaults standardUserDefaults] stringForKey:TRSettingsUnitSystemKey] integerValue];
+    return (TRUnitSystem)[[NSUserDefaults standardUserDefaults] integerForKey:TRSettingsUnitSystemKey];
 }
 
 - (void)setUnitSystem:(TRUnitSystem)unitSystem
 {
-    NSString *systemString = [NSString stringWithFormat:@"%zd", unitSystem];
-    [[NSUserDefaults standardUserDefaults] setObject:systemString forKey:TRSettingsUnitSystemKey];
+    [[NSUserDefaults standardUserDefaults] setInteger:(NSInteger)unitSystem forKey:TRSettingsUnitSystemKey];
 }
 
 #pragma mark - Private

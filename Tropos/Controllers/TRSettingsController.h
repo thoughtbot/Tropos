@@ -2,6 +2,8 @@
 #import <ReactiveCocoa/ReactiveCocoa.h>
 
 FOUNDATION_EXPORT NSString *const TRSettingsDidChangeNotification;
+FOUNDATION_EXPORT NSString *const TRSettingsLastVersionKey;
+FOUNDATION_EXPORT NSString *const TRSettingsUnitSystemKey;
 
 typedef NS_ENUM(NSInteger, TRUnitSystem) {
     TRUnitSystemMetric,
