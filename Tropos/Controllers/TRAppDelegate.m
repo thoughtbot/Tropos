@@ -27,6 +27,7 @@
 
     [self.applicationController setMinimumBackgroundFetchIntervalForApplication:application];
 
+    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     self.window.rootViewController = self.applicationController.rootViewController;
     [self.window makeKeyAndVisible];
 
