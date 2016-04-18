@@ -12,8 +12,6 @@ typedef NS_ENUM(NSInteger, TRUnitSystem) {
 
 @interface TRSettingsController : NSObject
 
-@property (nonatomic, readonly) RACSignal *unitSystemChanged;
-
 - (instancetype)initWithLocale:(NSLocale *)locale NS_DESIGNATED_INITIALIZER;
 
 - (void)registerSettings;
