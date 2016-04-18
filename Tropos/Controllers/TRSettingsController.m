@@ -8,7 +8,6 @@ NSString *const TRSettingsLastVersionKey = @"TRLastVersion";
 @interface TRSettingsController ()
 
 @property (nonatomic) NSLocale *locale;
-@property (nonatomic) RACSignal *userDefaultsChanged;
 
 @end
 
@@ -22,7 +21,6 @@ NSString *const TRSettingsLastVersionKey = @"TRLastVersion";
     if (!self) return nil;
 
     self.locale = locale;
-    self.userDefaultsChanged = [[NSNotificationCenter defaultCenter] rac_addObserverForName:NSUserDefaultsDidChangeNotification object:nil];
 
     return self;
 }
@@ -30,17 +28,6 @@ NSString *const TRSettingsLastVersionKey = @"TRLastVersion";
 - (instancetype)init
 {
     return [self initWithLocale:[NSLocale autoupdatingCurrentLocale]];
-}
-
-#pragma mark - Properties
-
-- (RACSignal *)unitSystemChanged
-{
-    return [[[self.userDefaultsChanged filter:^BOOL(NSNotification *notification) {
-        return [notification.name isEqualToString:NSUserDefaultsDidChangeNotification];
-    }] map:^id(id value) {
-        return @([self unitSystem]);
-    }] startWith:@([self unitSystem])];
 }
 
 #pragma mark - Public Methods

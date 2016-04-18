@@ -3,7 +3,7 @@
 #import "TRWeatherUpdate.h"
 #import "TRLocationController.h"
 #import "TRForecastController.h"
-#import "TRSettingsController.h"
+#import "TRSettingsController+TRObservation.h"
 #import "TRGeocodeController.h"
 #import "TRDailyForecastViewModel.h"
 #import "TRAnalyticsController.h"
@@ -18,6 +18,7 @@
 @property (nonatomic) TRGeocodeController *geocodeController;
 @property (nonatomic) TRForecastController *forecastController;
 @property (nonatomic) TRSettingsController *settingsController;
+@property (nonatomic) RACSignal *unitSystemChanged;
 
 @property (nonatomic) TRWeatherViewModel *viewModel;
 @property (nonatomic) NSError *weatherUpdateError;
@@ -37,6 +38,7 @@
     self.geocodeController = [TRGeocodeController new];
     self.forecastController = [TRForecastController new];
     self.settingsController = [TRSettingsController new];
+    self.unitSystemChanged = [self.settingsController unitSystemChanged];
 
     @weakify(self)
     self.updateWeatherCommand = [[RACCommand alloc] initWithSignalBlock:^RACSignal *(id input) {
@@ -110,14 +112,14 @@
 
 - (RACSignal *)windDescription
 {
-    return [[RACObserve(self, viewModel.windDescription) combineLatestWith:self.settingsController.unitSystemChanged] map:^id(id value) {
+    return [[RACObserve(self, viewModel.windDescription) combineLatestWith:self.unitSystemChanged] map:^id(id value) {
         return self.viewModel.windDescription;
     }];
 }
 
 - (RACSignal *)highLowTemperatureDescription
 {
-    return [[RACObserve(self, viewModel.temperatureDescription) combineLatestWith:self.settingsController.unitSystemChanged] map:^id(RACTuple *tuple) {
+    return [[RACObserve(self, viewModel.temperatureDescription) combineLatestWith:self.unitSystemChanged] map:^id(RACTuple *tuple) {
         return self.viewModel.temperatureDescription;
     }];
 }
