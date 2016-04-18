@@ -51,8 +51,7 @@
 
 - (BOOL)isCurrentlyTesting
 {
-    NSString *bundleInjectionPath = [[[NSProcessInfo processInfo] environment] objectForKey:@"XCInjectBundleInto"];
-    return [bundleInjectionPath length] > 0;
+    return [[NSUserDefaults standardUserDefaults] boolForKey:@"TRTesting"];
 }
 
 @end
