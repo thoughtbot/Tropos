@@ -1,6 +1,5 @@
 #import "TRWeatherViewModel.h"
 #import "Tropos-Swift.h"
-#import "TRWindSpeedFormatter.h"
 #import "NSMutableAttributedString+TRAttributeHelpers.h"
 
 @interface TRWeatherViewModel ()
@@ -56,7 +55,7 @@
 
 - (NSString *)windDescription
 {
-    return [TRWindSpeedFormatter localizedStringForWindSpeed:self.weatherUpdate.windSpeed bearing:self.weatherUpdate.windBearing];
+    return [[TRWindSpeedFormatter new] localizedStringForWindSpeed:self.weatherUpdate.windSpeed bearing:self.weatherUpdate.windBearing];
 }
 
 - (NSString *)precipitationDescription
