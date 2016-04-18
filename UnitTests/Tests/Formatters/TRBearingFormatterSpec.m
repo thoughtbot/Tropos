@@ -13,7 +13,7 @@ describe(@"TRBearingFormatter", ^{
             expect([TRBearingFormatter cardinalDirectionStringFromBearing:270]).to.equal(@"West");
         });
     });
-    
+
     describe(@"abbreviatedCardinalDirectionStringFromBearing:", ^{
         it(@"returns the correct cardinal direction", ^{
             expect([TRBearingFormatter abbreviatedCardinalDirectionStringFromBearing:45]).to.equal(@"NE");

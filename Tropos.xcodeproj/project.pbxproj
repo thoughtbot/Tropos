@@ -241,7 +241,7 @@
 		C4B3320B1AFD480E00401873 /* TRPrecipitationChanceFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRPrecipitationChanceFormatter.m; sourceTree = "<group>"; };
 		DED70296CC99B4AAD0DE42BD /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		E59B090E67C8BD269D3CD9DB /* Main.storyboard */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
-		E74676A71B8B76620012AD51 /* TemperatureComparisonFormatterSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TemperatureComparisonFormatterSpec.swift; path = Formatters/TemperatureComparisonFormatterSpec.swift; sourceTree = "<group>"; };
+		E74676A71B8B76620012AD51 /* TemperatureComparisonFormatterSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TemperatureComparisonFormatterSpec.swift; sourceTree = "<group>"; };
 		E7A895521AFD11AA0023205B /* TRApplicationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRApplicationController.h; sourceTree = "<group>"; };
 		E7A895531AFD11AA0023205B /* TRApplicationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRApplicationController.m; sourceTree = "<group>"; };
 		E7B3B9261B34EDFE00BDD5A4 /* TRApplicationControllerSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRApplicationControllerSpec.m; sourceTree = "<group>"; };
@@ -310,10 +310,12 @@
 		234BD0111B46419F00D5AEC5 /* Formatters */ = {
 			isa = PBXGroup;
 			children = (
+				4D9CA35C1A5C7672009E24DD /* TRBearingFormatterSpec.m */,
 				E74676A71B8B76620012AD51 /* TemperatureComparisonFormatterSpec.swift */,
 				4ACA58501CC5570B00DD0CDC /* TemperatureFormatterSpec.swift */,
+				4ACA585F1CC56DDA00DD0CDC /* RelativeDateFormatterSpec.swift */,
 			);
-			name = Formatters;
+			path = Formatters;
 			sourceTree = "<group>";
 		};
 		301CF0A99B4C5FAECDB23D75 /* Resources */ = {
@@ -354,6 +356,14 @@
 				4ACA58591CC562BC00DD0CDC /* DailyForecastViewModelSpec.swift */,
 			);
 			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		4ACA58611CC56EF600DD0CDC /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				4DA79AC01A68806600C3539D /* UIColor_TRTemperatureColorsSpec.m */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		4D0A5C3E1A3A578E0084C41E /* Fonts */ = {
@@ -426,8 +436,10 @@
 			children = (
 				6D8ACB391B4432A8003087A7 /* TemperatureSpec.swift */,
 				6D0F13671B43353D001685BA /* PrecipitationSpec.swift */,
+				E7E4A3A11B069BB500F489E3 /* WeatherUpdateCacheSpec.swift */,
+				4A2F35121CBEC6D600417986 /* WeatherUpdateSpec.swift */,
 			);
-			name = Models;
+			path = Models;
 			sourceTree = "<group>";
 		};
 		702F42EA5C215DCFAE2AAC5C /* Products */ = {
@@ -544,13 +556,10 @@
 			isa = PBXGroup;
 			children = (
 				E7B3B9281B34EE0500BDD5A4 /* Controllers */,
+				4ACA58611CC56EF600DD0CDC /* Extensions */,
 				6D0F13661B433521001685BA /* Models */,
 				234BD0111B46419F00D5AEC5 /* Formatters */,
 				4ACA58541CC5604800DD0CDC /* ViewModels */,
-				4D9CA35C1A5C7672009E24DD /* TRBearingFormatterSpec.m */,
-				4DA79AC01A68806600C3539D /* UIColor_TRTemperatureColorsSpec.m */,
-				4A2F35121CBEC6D600417986 /* WeatherUpdateSpec.swift */,
-				E7E4A3A11B069BB500F489E3 /* WeatherUpdateCacheSpec.swift */,
 				6D5F2A1C1B42F39E00425B19 /* UnitTests-Bridging-Header.h */,
 			);
 			path = Tests;
