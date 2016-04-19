@@ -35,6 +35,5 @@ import Foundation
     private func registerLastVersion() {
         let version = NSBundle.mainBundle().versionNumber
         NSUserDefaults.standardUserDefaults().registerDefaults([TRSettingsLastVersionKey: version])
-        NSUserDefaults.standardUserDefaults().setObject(version, forKey: TRSettingsLastVersionKey)
     }
 }
