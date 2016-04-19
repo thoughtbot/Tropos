@@ -1,6 +1,5 @@
 #import "TRWeatherViewModel.h"
 #import "Tropos-Swift.h"
-#import "NSMutableAttributedString+TRAttributeHelpers.h"
 
 @interface TRWeatherViewModel ()
 
@@ -45,8 +44,8 @@
     NSString *comparisonString = [TRTemperatureComparisonFormatter localizedStringFromComparison:comparison adjective:&adjective  precipitation: self.precipitationDescription date:self.weatherUpdate.date];
 
     NSMutableAttributedString *attributedString = [[NSMutableAttributedString alloc] initWithString:comparisonString];
-    [attributedString setFont:[UIFont defaultUltraLightFontOfSize:26]];
-    [attributedString setTextColor:[UIColor defaultTextColor]];
+    attributedString.font = [UIFont defaultUltraLightFontOfSize:26];
+    attributedString.textColor = [UIColor defaultTextColor];
     TRTemperature *difference = [self.weatherUpdate.currentTemperature temperatureDifferenceFrom:self.weatherUpdate.yesterdaysTemperature];
     [attributedString setTextColor:[self colorForTemperatureComparison:comparison difference:difference.fahrenheitValue] forSubstring:adjective];
 
