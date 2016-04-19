@@ -1,5 +1,4 @@
 PODS:
-  - Expecta (1.0.3)
   - HockeySDK (3.8.6):
     - HockeySDK/AllFeaturesLib (= 3.8.6)
   - HockeySDK/AllFeaturesLib (3.8.6)
@@ -27,24 +26,19 @@ PODS:
   - ReactiveCocoa/no-arc (2.4.7)
   - ReactiveCocoa/UI (2.4.7):
     - ReactiveCocoa/Core
-  - Specta (1.0.4)
 
 DEPENDENCIES:
-  - Expecta
   - HockeySDK (~> 3.6)
   - Mixpanel (~> 2.7)
   - OCMock
   - OHHTTPStubs
   - ReactiveCocoa (~> 2.4.7)
-  - Specta
 
 SPEC CHECKSUMS:
-  Expecta: 9d1bff6c8b0eeee73a166a2ee898892478927a15
   HockeySDK: ab68303eec6680f6b539de65d747742dd276e934
   Mixpanel: 048a9f2512ac1bb8bfdecf719da024873f50a9c2
   OCMock: 4c2925291f80407c3738dd1db14d21d0cc278864
   OHHTTPStubs: 0aec5755528693a165bd616cb79f69387de306a8
   ReactiveCocoa: eb38dee0a0e698f73a9b25e5c1faea2bb4c79240
-  Specta: 69bb134672aae190a1379ff91df07dad8dd1f869
 
 COCOAPODS: 0.39.0

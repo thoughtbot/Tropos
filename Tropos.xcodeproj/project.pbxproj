@@ -73,7 +73,6 @@
 		6D8ACB371B44270A003087A7 /* Temperature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D8ACB361B44270A003087A7 /* Temperature.swift */; };
 		6D8ACB3A1B4432A8003087A7 /* TemperatureSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D8ACB391B4432A8003087A7 /* TemperatureSpec.swift */; };
 		7D54C46B9E7FA5B0724FC775 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B3068282D6E4B66BB58E93BC /* libPods.a */; };
-		8EAE701DFB2DC16543CE1B3C /* libPods-unit_tests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A548375C4E5D454F542CFA0D /* libPods-unit_tests.a */; };
 		C2E44CDD1A3A38A2009CC844 /* TRLocationController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2E44CDC1A3A38A2009CC844 /* TRLocationController.m */; };
 		C2E44CE11A3A3C09009CC844 /* TRWeatherViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2E44CE01A3A3C09009CC844 /* TRWeatherViewController.m */; };
 		C2E44CE41A3A4273009CC844 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = C2E44CE61A3A4273009CC844 /* Localizable.strings */; };
@@ -84,6 +83,7 @@
 		CE5D7F3B45F980082E1BCA30 /* LaunchScreen.xib in Sources */ = {isa = PBXBuildFile; fileRef = B6D58F8AA6976EA1B35682B7 /* LaunchScreen.xib */; };
 		CFC0721C2D9EFFD3C3AE11A7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 059D0BDDF8DCE56549A4C9C6 /* Images.xcassets */; };
 		D7DD1B8AD495AFA4EC1CEFF9 /* TRAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A6B1ADBC73A8A2EF7FB4E257 /* TRAppDelegate.m */; };
+		E4E88F93D7A75EAC4C87660F /* libPods-unit_tests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2077A81F4D138B4F5693A546 /* libPods-unit_tests.a */; };
 		E74CDAD61BB614D700F57C1D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E59B090E67C8BD269D3CD9DB /* Main.storyboard */; };
 		E7A895541AFD11AA0023205B /* TRApplicationController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7A895531AFD11AA0023205B /* TRApplicationController.m */; };
 		E7B3B9271B34EDFE00BDD5A4 /* TRApplicationControllerSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = E7B3B9261B34EDFE00BDD5A4 /* TRApplicationControllerSpec.m */; };
@@ -119,6 +119,7 @@
 		0B30A1610CAE1C2E302C28B0 /* UnitTests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "UnitTests-Info.plist"; sourceTree = "<group>"; };
 		0CC72A6E0EE525537F241EB7 /* TRAppDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = TRAppDelegate.h; sourceTree = "<group>"; };
 		1CDD2312F1EF05277F045E15 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2077A81F4D138B4F5693A546 /* libPods-unit_tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-unit_tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		22FE01C01AF3F5550085B494 /* Secrets.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Secrets.h; sourceTree = "<group>"; };
 		2763A13D16F7B234E309A37C /* Pods-unit_tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-unit_tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-unit_tests/Pods-unit_tests.release.xcconfig"; sourceTree = "<group>"; };
 		2853082980109C89B8F07D3C /* main.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -217,7 +218,6 @@
 		6D8ACB391B4432A8003087A7 /* TemperatureSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TemperatureSpec.swift; sourceTree = "<group>"; };
 		6DDC15EF1B42F1CB004F15E5 /* Tropos-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "Tropos-Bridging-Header.h"; path = "Models/Tropos-Bridging-Header.h"; sourceTree = "<group>"; };
 		986C425E5A2268D27FAE2FAA /* Tropos-Prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Tropos-Prefix.pch"; sourceTree = "<group>"; };
-		A548375C4E5D454F542CFA0D /* libPods-unit_tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-unit_tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A6B1ADBC73A8A2EF7FB4E257 /* TRAppDelegate.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = TRAppDelegate.m; sourceTree = "<group>"; };
 		B1E75D271B6E8ADC007B03F9 /* sv */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = sv; path = sv.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		B1E75D281B6E8ADC007B03F9 /* sv */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = sv; path = sv.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -258,9 +258,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8EAE701DFB2DC16543CE1B3C /* libPods-unit_tests.a in Frameworks */,
 				6D0F135C1B432976001685BA /* Nimble.framework in Frameworks */,
 				6D0F135D1B432976001685BA /* Quick.framework in Frameworks */,
+				E4E88F93D7A75EAC4C87660F /* libPods-unit_tests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -465,8 +465,8 @@
 				6D0F135A1B432976001685BA /* Nimble.framework */,
 				6D0F135B1B432976001685BA /* Quick.framework */,
 				AFACA54B2AA00A57E3FA59D1 /* iOS */,
-				A548375C4E5D454F542CFA0D /* libPods-unit_tests.a */,
 				B3068282D6E4B66BB58E93BC /* libPods.a */,
+				2077A81F4D138B4F5693A546 /* libPods-unit_tests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
