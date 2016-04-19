@@ -8,7 +8,6 @@
 #import "TRSettingsController+TRObservation.h"
 #import "TRGeocodeController.h"
 #import "TRAnalyticsController.h"
-#import "TRWeatherViewModel.h"
 
 @interface TRWeatherController ()
 

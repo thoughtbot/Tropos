@@ -15,13 +15,4 @@ import Foundation
             adjective: adjective
         )
     }
-
-    @available(*, unavailable, message="use localizedStrings(fromComparison:precipitation:date:) instead")
-    static func localizedStringFromComparison(comparison: TemperatureComparison, adjective: UnsafeMutablePointer<NSString?>, precipitation: String, date: NSDate) -> String {
-        let result = localizedStrings(fromComparison: comparison, precipitation: precipitation, date: date)
-        if adjective != nil {
-            adjective.memory = result.adjective
-        }
-        return result.description
-    }
 }

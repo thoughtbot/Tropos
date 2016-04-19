@@ -2,7 +2,7 @@ import Foundation
 
 @objc(TRPrecipitation) class Precipitation: NSObject {
     let type: String
-    let probability: Float
+    let probability: Double
 
     var chance: PrecipitationChance {
         switch probability {
@@ -12,7 +12,7 @@ import Foundation
         }
     }
 
-    init(probability: Float, type: String) {
+    init(probability: Double, type: String) {
         self.probability = probability
         self.type = type
     }
