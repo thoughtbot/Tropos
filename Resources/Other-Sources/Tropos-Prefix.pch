@@ -12,7 +12,6 @@
     #import "TRErrors.h"
 
     #import "NSError+TRErrors.h"
-    #import "UIColor+TRTemperatureColors.h"
     #import "UIFont+TRAppFonts.h"
 
     #import <ReactiveCocoa/ReactiveCocoa.h>

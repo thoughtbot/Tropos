@@ -1,4 +1,5 @@
 #import "UIImage+TRColorBackdrop.h"
+#import "Tropos-Swift.h"
 
 @implementation UIImage (TRColorBackdrop)
 

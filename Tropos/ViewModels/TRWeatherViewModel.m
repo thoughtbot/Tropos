@@ -127,7 +127,7 @@
 
         if (lighterAmount > 0.80) lighterAmount = 0.80f;
 
-        color = [color lighterColorByAmount:lighterAmount];
+        color = [color lightenBy:lighterAmount];
     }
 
     return color;

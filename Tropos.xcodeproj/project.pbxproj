@@ -37,6 +37,8 @@
 		4ACA58671CC57CC000DD0CDC /* CardinalDirection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ACA58661CC57CC000DD0CDC /* CardinalDirection.swift */; };
 		4ACA58691CC57EDD00DD0CDC /* CardinalDirectionSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ACA58681CC57EDD00DD0CDC /* CardinalDirectionSpec.swift */; };
 		4ACA586B1CC5816800DD0CDC /* WindSpeedFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ACA586A1CC5816800DD0CDC /* WindSpeedFormatter.swift */; };
+		4AFF80371CC6B77700CDBA0C /* UIColor+TemperatureColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AFF80361CC6B77700CDBA0C /* UIColor+TemperatureColors.swift */; };
+		4AFF803A1CC6BCAC00CDBA0C /* UIColor_TRTemperatureColorsSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AFF80391CC6BCAC00CDBA0C /* UIColor_TRTemperatureColorsSpec.swift */; };
 		4D0A5C381A3A27510084C41E /* TRForecastController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D0A5C371A3A27510084C41E /* TRForecastController.m */; };
 		4D0A5C3D1A3A53DD0084C41E /* CWForecastDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D0A5C3C1A3A53DD0084C41E /* CWForecastDetailView.xib */; };
 		4D1ABA0B1A89686200B7F8FB /* TRNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D1ABA0A1A89686200B7F8FB /* TRNavigationBar.m */; };
@@ -52,13 +54,11 @@
 		4D76CCD41A99C3FA00DDE5EB /* TRRefreshLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D76CCD31A99C3FA00DDE5EB /* TRRefreshLayer.m */; };
 		4D7CDEBC1A46D3610038DD33 /* CLLocation+TRRecentLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D7CDEBB1A46D3610038DD33 /* CLLocation+TRRecentLocation.m */; };
 		4D7CDEBF1A46DD030038DD33 /* NSError+TRErrors.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D7CDEBE1A46DD030038DD33 /* NSError+TRErrors.m */; };
-		4D7CDEC21A4705400038DD33 /* UIColor+TRTemperatureColors.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D7CDEC11A4705400038DD33 /* UIColor+TRTemperatureColors.m */; };
 		4D7CDEC51A47DCD60038DD33 /* NSMutableAttributedString+TRAttributeHelpers.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D7CDEC41A47DCD60038DD33 /* NSMutableAttributedString+TRAttributeHelpers.m */; };
 		4D7CDEC81A47E0500038DD33 /* UIFont+TRAppFonts.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D7CDEC71A47E0500038DD33 /* UIFont+TRAppFonts.m */; };
 		4D98E9851A80C43F00856412 /* TRDailyForecastView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D98E9841A80C43F00856412 /* TRDailyForecastView.m */; };
 		4D9A00061A9D61CD000835A9 /* TRAnalyticsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D9A00051A9D61CD000835A9 /* TRAnalyticsController.m */; };
 		4D9CA35F1A5CABDD009E24DD /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 4D9CA35E1A5CABDD009E24DD /* Settings.bundle */; };
-		4DA79AC11A68806600C3539D /* UIColor_TRTemperatureColorsSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DA79AC01A68806600C3539D /* UIColor_TRTemperatureColorsSpec.m */; };
 		4DC069CD1A95B8F800F3BCEB /* TRColorBackdropLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DC069CC1A95B8F800F3BCEB /* TRColorBackdropLayer.m */; };
 		4DC716601A9B1D5B00BC4BD4 /* TRRefreshControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DC7165F1A9B1D5B00BC4BD4 /* TRRefreshControl.m */; };
 		4DDF65061AB3AC0C00909D67 /* TRWeatherController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DDF65051AB3AC0C00909D67 /* TRWeatherController.m */; };
@@ -155,6 +155,8 @@
 		4ACA58661CC57CC000DD0CDC /* CardinalDirection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardinalDirection.swift; sourceTree = "<group>"; };
 		4ACA58681CC57EDD00DD0CDC /* CardinalDirectionSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardinalDirectionSpec.swift; sourceTree = "<group>"; };
 		4ACA586A1CC5816800DD0CDC /* WindSpeedFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WindSpeedFormatter.swift; sourceTree = "<group>"; };
+		4AFF80361CC6B77700CDBA0C /* UIColor+TemperatureColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+TemperatureColors.swift"; sourceTree = "<group>"; };
+		4AFF80391CC6BCAC00CDBA0C /* UIColor_TRTemperatureColorsSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColor_TRTemperatureColorsSpec.swift; sourceTree = "<group>"; };
 		4D0A5C361A3A27510084C41E /* TRForecastController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRForecastController.h; sourceTree = "<group>"; };
 		4D0A5C371A3A27510084C41E /* TRForecastController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRForecastController.m; sourceTree = "<group>"; };
 		4D0A5C3C1A3A53DD0084C41E /* CWForecastDetailView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CWForecastDetailView.xib; sourceTree = "<group>"; };
@@ -183,8 +185,6 @@
 		4D7CDEBB1A46D3610038DD33 /* CLLocation+TRRecentLocation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CLLocation+TRRecentLocation.m"; sourceTree = "<group>"; };
 		4D7CDEBD1A46DD030038DD33 /* NSError+TRErrors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSError+TRErrors.h"; sourceTree = "<group>"; };
 		4D7CDEBE1A46DD030038DD33 /* NSError+TRErrors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSError+TRErrors.m"; sourceTree = "<group>"; };
-		4D7CDEC01A4705400038DD33 /* UIColor+TRTemperatureColors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+TRTemperatureColors.h"; sourceTree = "<group>"; };
-		4D7CDEC11A4705400038DD33 /* UIColor+TRTemperatureColors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+TRTemperatureColors.m"; sourceTree = "<group>"; };
 		4D7CDEC31A47DCD60038DD33 /* NSMutableAttributedString+TRAttributeHelpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableAttributedString+TRAttributeHelpers.h"; sourceTree = "<group>"; };
 		4D7CDEC41A47DCD60038DD33 /* NSMutableAttributedString+TRAttributeHelpers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableAttributedString+TRAttributeHelpers.m"; sourceTree = "<group>"; };
 		4D7CDEC61A47E0500038DD33 /* UIFont+TRAppFonts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIFont+TRAppFonts.h"; sourceTree = "<group>"; };
@@ -195,7 +195,6 @@
 		4D9A00051A9D61CD000835A9 /* TRAnalyticsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRAnalyticsController.m; sourceTree = "<group>"; };
 		4D9A000D1A9D7868000835A9 /* TRAnalyticsEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRAnalyticsEvent.h; sourceTree = "<group>"; };
 		4D9CA35E1A5CABDD009E24DD /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
-		4DA79AC01A68806600C3539D /* UIColor_TRTemperatureColorsSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIColor_TRTemperatureColorsSpec.m; sourceTree = "<group>"; };
 		4DC069CB1A95B8F800F3BCEB /* TRColorBackdropLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRColorBackdropLayer.h; sourceTree = "<group>"; };
 		4DC069CC1A95B8F800F3BCEB /* TRColorBackdropLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRColorBackdropLayer.m; sourceTree = "<group>"; };
 		4DC7165E1A9B1D5B00BC4BD4 /* TRRefreshControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRRefreshControl.h; sourceTree = "<group>"; };
@@ -357,7 +356,7 @@
 		4ACA58611CC56EF600DD0CDC /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				4DA79AC01A68806600C3539D /* UIColor_TRTemperatureColorsSpec.m */,
+				4AFF80391CC6BCAC00CDBA0C /* UIColor_TRTemperatureColorsSpec.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -597,8 +596,6 @@
 				4D7CDEBB1A46D3610038DD33 /* CLLocation+TRRecentLocation.m */,
 				4D7CDEBD1A46DD030038DD33 /* NSError+TRErrors.h */,
 				4D7CDEBE1A46DD030038DD33 /* NSError+TRErrors.m */,
-				4D7CDEC01A4705400038DD33 /* UIColor+TRTemperatureColors.h */,
-				4D7CDEC11A4705400038DD33 /* UIColor+TRTemperatureColors.m */,
 				4D7CDEC31A47DCD60038DD33 /* NSMutableAttributedString+TRAttributeHelpers.h */,
 				4D7CDEC41A47DCD60038DD33 /* NSMutableAttributedString+TRAttributeHelpers.m */,
 				4D7CDEC61A47E0500038DD33 /* UIFont+TRAppFonts.h */,
@@ -612,6 +609,7 @@
 				4D7389DE1A9890CD0039F13B /* UIScrollView+TRReactiveCocoa.m */,
 				4ACA58491CC526D600DD0CDC /* RACSignal+TROperators.h */,
 				4ACA584A1CC526D600DD0CDC /* RACSignal+TROperators.m */,
+				4AFF80361CC6B77700CDBA0C /* UIColor+TemperatureColors.swift */,
 			);
 			path = Categories;
 			sourceTree = "<group>";
@@ -920,7 +918,6 @@
 				4DC716601A9B1D5B00BC4BD4 /* TRRefreshControl.m in Sources */,
 				4ACA58481CC5255E00DD0CDC /* TRSettingsController+TRObservation.m in Sources */,
 				4D49377E1A82F82A007A1FA9 /* TRImageView.m in Sources */,
-				4D7CDEC21A4705400038DD33 /* UIColor+TRTemperatureColors.m in Sources */,
 				4ACA583B1CC1884400DD0CDC /* SettingsController.swift in Sources */,
 				C2E44CFB1A3B76B3009CC844 /* NSNumber+TRRoundedNumber.m in Sources */,
 				4D7CDEBF1A46DD030038DD33 /* NSError+TRErrors.m in Sources */,
@@ -939,6 +936,7 @@
 				C2E44CE11A3A3C09009CC844 /* TRWeatherViewController.m in Sources */,
 				4D1ABA0B1A89686200B7F8FB /* TRNavigationBar.m in Sources */,
 				CE5D7F3B45F980082E1BCA30 /* LaunchScreen.xib in Sources */,
+				4AFF80371CC6B77700CDBA0C /* UIColor+TemperatureColors.swift in Sources */,
 				C9318C8461EB5FE3914F9AC0 /* main.m in Sources */,
 				6D0F13651B4333CE001685BA /* Precipitation.swift in Sources */,
 				4D72D12A1A7330E700FAB67B /* TRGeocodeController.m in Sources */,
@@ -963,9 +961,9 @@
 				4ACA58451CC191DE00DD0CDC /* SettingsControllerSpec.swift in Sources */,
 				4ACA58691CC57EDD00DD0CDC /* CardinalDirectionSpec.swift in Sources */,
 				4ACA585A1CC562BC00DD0CDC /* DailyForecastViewModelSpec.swift in Sources */,
-				4DA79AC11A68806600C3539D /* UIColor_TRTemperatureColorsSpec.m in Sources */,
 				6D8ACB3A1B4432A8003087A7 /* TemperatureSpec.swift in Sources */,
 				4A2F35131CBEC6D600417986 /* WeatherUpdateSpec.swift in Sources */,
+				4AFF803A1CC6BCAC00CDBA0C /* UIColor_TRTemperatureColorsSpec.swift in Sources */,
 				4A3F7D701CBEDD6E005DF19E /* TestPlacemark.swift in Sources */,
 				4A3F7D6E1CBEDD33005DF19E /* WeatherUpdateCacheSpec.swift in Sources */,
 			);
