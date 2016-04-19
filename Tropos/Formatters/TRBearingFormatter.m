@@ -15,7 +15,7 @@ typedef NS_ENUM(NSUInteger, TRCardinalDirection) {
 
 #pragma mark - Public Methods
 
-+ (NSString *)cardinalDirectionStringFromBearing:(CGFloat)bearing
++ (NSString *)cardinalDirectionStringFromBearing:(double)bearing
 {
     TRCardinalDirection direction = [self cardinalDirectionFromBearing:bearing];
 
@@ -39,7 +39,7 @@ typedef NS_ENUM(NSUInteger, TRCardinalDirection) {
     }
 }
 
-+ (NSString *)abbreviatedCardinalDirectionStringFromBearing:(CGFloat)bearing
++ (NSString *)abbreviatedCardinalDirectionStringFromBearing:(double)bearing
 {
     TRCardinalDirection direction = [self cardinalDirectionFromBearing:bearing];
 
@@ -65,7 +65,7 @@ typedef NS_ENUM(NSUInteger, TRCardinalDirection) {
 
 #pragma mark - Private Methods
 
-+ (TRCardinalDirection)cardinalDirectionFromBearing:(CGFloat)bearing
++ (TRCardinalDirection)cardinalDirectionFromBearing:(double)bearing
 {
     if (bearing < 22.5) {
         return TRCardinalDirectionNorth;

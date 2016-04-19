@@ -1,5 +1,5 @@
 @interface TRWindSpeedFormatter : NSObject
 
-+ (NSString *)localizedStringForWindSpeed:(CGFloat)speed bearing:(CGFloat)bearing;
++ (NSString *)localizedStringForWindSpeed:(double)speed bearing:(double)bearing;
 
 @end

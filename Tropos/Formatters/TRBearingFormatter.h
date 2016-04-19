@@ -1,6 +1,6 @@
 @interface TRBearingFormatter : NSObject
 
-+ (NSString *)cardinalDirectionStringFromBearing:(CGFloat)bearing;
-+ (NSString *)abbreviatedCardinalDirectionStringFromBearing:(CGFloat)bearing;
++ (NSString *)cardinalDirectionStringFromBearing:(double)bearing;
++ (NSString *)abbreviatedCardinalDirectionStringFromBearing:(double)bearing;
 
 @end

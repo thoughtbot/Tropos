@@ -4,15 +4,15 @@
 
 @implementation TRWindSpeedFormatter
 
-static inline CGFloat TRKilometersPerHourFromMilesPerHour(CGFloat milesPerHour) {
+static inline double TRKilometersPerHourFromMilesPerHour(double milesPerHour) {
     return milesPerHour * 1.60934f;
 }
 
-static inline CGFloat TRMetersPerSecondFromMilesPerHour(CGFloat milesPerHour) {
+static inline double TRMetersPerSecondFromMilesPerHour(double milesPerHour) {
     return milesPerHour * 0.44704f;
 }
 
-+ (NSString *)localizedStringForWindSpeed:(CGFloat)speed bearing:(CGFloat)bearing
++ (NSString *)localizedStringForWindSpeed:(double)speed bearing:(double)bearing
 {
     NSString *abbreviatedSpeedUnit = @"mph";
 
