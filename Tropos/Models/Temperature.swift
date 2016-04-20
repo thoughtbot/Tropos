@@ -1,6 +1,6 @@
 import Foundation
 
-@objc(TRTemperatureComparison) enum TemperatureComparison: Int {
+enum TemperatureComparison {
     case Same, Hotter, Warmer, Cooler, Colder
 }
 

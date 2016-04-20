@@ -1,14 +1,10 @@
 import Foundation
 
-@objc(TRWindSpeedFormatter) final class WindSpeedFormatter: NSObject {
+struct WindSpeedFormatter {
     var unitSystem: UnitSystem
 
-    init(unitSystem: UnitSystem) {
+    init(unitSystem: UnitSystem = SettingsController().unitSystem) {
         self.unitSystem = unitSystem
-    }
-
-    convenience override init() {
-        self.init(unitSystem: SettingsController().unitSystem)
     }
 
     func localizedString(forWindSpeed windSpeed: Double, bearing: Double) -> String {

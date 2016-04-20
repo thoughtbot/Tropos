@@ -30,7 +30,7 @@ import UIKit
     var conditionsDescription: NSAttributedString {
         let comparison = weatherUpdate.currentTemperature.comparedTo(weatherUpdate.yesterdaysTemperature!)
 
-        let (description, adjective) = TemperatureComparisonFormatter.localizedStrings(
+        let (description, adjective) = TemperatureComparisonFormatter().localizedStrings(
             fromComparison: comparison,
             precipitation: precipitationDescription,
             date: weatherUpdate.date

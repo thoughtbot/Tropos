@@ -1,18 +1,13 @@
 import Foundation
 
-@objc(TRDateFormatter) final class RelativeDateFormatter: NSObject {
+struct RelativeDateFormatter {
     private let calendar: NSCalendar
     private let dateFormatter: NSDateFormatter
 
-    init(calendar: NSCalendar) {
+    init(calendar: NSCalendar = .currentCalendar()) {
         self.calendar = calendar
         self.dateFormatter = NSDateFormatter()
         self.dateFormatter.doesRelativeDateFormatting = true
-        super.init()
-    }
-
-    convenience override init() {
-        self.init(calendar: .currentCalendar())
     }
 
     func localizedStringFromDate(date: NSDate) -> String {

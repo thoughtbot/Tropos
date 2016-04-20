@@ -1,13 +1,8 @@
-@objc(TRTemperatureFormatter) final class TemperatureFormatter: NSObject {
+struct TemperatureFormatter {
     var unitSystem: UnitSystem
 
-    init(unitSystem: UnitSystem) {
+    init(unitSystem: UnitSystem = SettingsController().unitSystem) {
         self.unitSystem = unitSystem
-        super.init()
-    }
-
-    convenience override init() {
-        self.init(unitSystem: SettingsController().unitSystem)
     }
 
     func stringFromTemperature(temperature: Temperature) -> String {

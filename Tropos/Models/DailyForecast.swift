@@ -1,10 +1,10 @@
 import Foundation
 
-@objc(TRDailyForecast) class DailyForecast: NSObject {
-    let date: NSDate
-    let conditionsDescription: String
-    let highTemperature: Temperature
-    let lowTemperature: Temperature
+struct DailyForecast {
+    var date: NSDate
+    var conditionsDescription: String
+    var highTemperature: Temperature
+    var lowTemperature: Temperature
 
     init?(JSON: AnyObject?) {
         guard let dict = JSON as? [String: AnyObject],

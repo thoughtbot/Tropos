@@ -1,6 +1,6 @@
 import Foundation
 
-@objc(TRUnitSystem) enum UnitSystem: Int {
+enum UnitSystem: Int {
     case Metric
     case Imperial
 }
