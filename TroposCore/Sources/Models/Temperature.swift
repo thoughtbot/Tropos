@@ -1,7 +1,15 @@
 import Foundation
 
-enum TemperatureComparison {
+public enum TemperatureComparison: String, CustomStringConvertible {
     case Same, Hotter, Warmer, Cooler, Colder
+
+    public var description: String {
+        return rawValue
+    }
+
+    public var localizedAdjective: String {
+        return TroposCoreLocalizedString(description)
+    }
 }
 
 private enum TemperatureLimit: Int {
@@ -13,30 +21,30 @@ func -(lhs: Temperature, rhs: Temperature) -> Temperature {
     return Temperature(fahrenheitValue: lhs.fahrenheitValue - rhs.fahrenheitValue)
 }
 
-@objc(TRTemperature) class Temperature: NSObject {
-    lazy private(set) var fahrenheitValue: Int = {
+@objc(TRTemperature) public class Temperature: NSObject {
+    public private(set) lazy var fahrenheitValue: Int = {
         return Int(round(Float(self.celsiusValue) * 9.0 / 5.0)) + 32
     }()
 
-    lazy private(set) var celsiusValue: Int = {
+    public private(set) lazy var celsiusValue: Int = {
         return Int(round(Float(self.fahrenheitValue - 32) * 5.0 / 9.0))
     }()
 
-    init(fahrenheitValue: Int) {
+    public init(fahrenheitValue: Int) {
         super.init()
         self.fahrenheitValue = fahrenheitValue
     }
 
-    init(celsiusValue: Int) {
+    public init(celsiusValue: Int) {
         super.init()
         self.celsiusValue = celsiusValue
     }
     
-    func temperatureDifferenceFrom(temperature: Temperature) -> Temperature {
+    public func temperatureDifferenceFrom(temperature: Temperature) -> Temperature {
         return self - temperature
     }
 
-    func comparedTo(temperature: Temperature) -> TemperatureComparison {
+    public func comparedTo(temperature: Temperature) -> TemperatureComparison {
         let diff = fahrenheitValue - temperature.fahrenheitValue
         switch diff {
         case _ where diff >= 10 && fahrenheitValue > TemperatureLimit.Hotter.rawValue: return .Hotter
@@ -48,24 +56,7 @@ func -(lhs: Temperature, rhs: Temperature) -> Temperature {
     }
     
     // MARK: NSObjectProtocol
-    override var description: String {
+    public override var description: String {
         return "Fahrenheit: \(fahrenheitValue)°\nCelsius: \(celsiusValue)°"
-    }
-}
-
-extension TemperatureComparison {
-    var localizedAdjective: String {
-        switch self {
-        case .Hotter:
-            return NSLocalizedString("Hotter", comment: "")
-        case .Warmer:
-            return NSLocalizedString("Warmer", comment: "")
-        case .Cooler:
-            return NSLocalizedString("Cooler", comment: "")
-        case .Colder:
-            return NSLocalizedString("Colder", comment: "")
-        case .Same:
-            return NSLocalizedString("Same", comment: "")
-        }
     }
 }

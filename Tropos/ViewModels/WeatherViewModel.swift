@@ -1,3 +1,4 @@
+import TroposCore
 import UIKit
 
 @objc(TRWeatherViewModel) final class WeatherViewModel: NSObject {

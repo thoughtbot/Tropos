@@ -1,0 +1,33 @@
+// CardinalDirection.swift
+"North" = "Norr";
+"Northeast" = "Nordöst";
+"East" = "Öst";
+"Southeast" = "Sydöst";
+"South" = "Syd";
+"Southwest" = "Sydväst";
+"West" = "Väst";
+"Northwest" = "Nordväst";
+
+// PrecipitationChance.swift
+/* These keys are translated so that they can be used in the context of weather prognosis followed by the word for "chance" - "chans" (SWE). */ 
+"Good" = "Stor";
+"Slight" = "Liten";
+"None" = "Ingen";
+
+// Temperature.swift
+"Hotter" = "hetare";
+"Warmer" = "varmare";
+"Cooler" = "svalare";
+"Colder" = "kallare";
+/* The word temperature is added at the end since the word is needed to make the sentence understandable in this context */
+"Same" = "samma temperatur";
+
+// TimeOfDay.swift
+"Today" = "idag";
+"Yesterday" = "igår";
+"Tonight" = "ikväll";
+"LastNight" = "igår kväll";
+"ThisMorning" = "denna morgon";
+"YesterdayMorning" = "igår morse";
+"ThisAfternoon" = "denna eftermiddag";
+"YesterdayAfternoon" = "igår eftermiddag";

@@ -1,4 +1,5 @@
 import Foundation
+import TroposCore
 
 struct TemperatureComparisonFormatter {
     func localizedStrings(fromComparison comparison: TemperatureComparison, precipitation: String, date: NSDate) -> (description: String, adjective: String) {

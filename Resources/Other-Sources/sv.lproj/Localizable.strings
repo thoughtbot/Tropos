@@ -2,42 +2,12 @@
 "PrecipitationChanceFormat" = "%@ chans för %@ %@.";
 "SameTemperatureFormat" = "Det är %@ %@ som %@%@.";
 
-"Hotter" = "hetare";
-"Warmer" = "varmare";
-"Cooler" = "svalare";
-"Colder" = "kallare";
-/* The word temperature is added at the end since the word is needed to make the sentence understandable in this context */
-"Same" = "samma temperatur";
-
-"Today" = "idag";
-"Yesterday" = "igår";
-"Tonight" = "ikväll";
-"LastNight" = "igår kväll";
-"ThisMorning" = "denna morgon";
-"YesterdayMorning" = "igår morse";
-"ThisAfternoon" = "denna eftermiddag";
-"YesterdayAfternoon" = "igår eftermiddag";
-
 "NoneRain" = "";
 "SlightRain" = ", med liten chans för regn";
 "GoodRain" = ", med stor chans för regn";
 "NoneSnow" = ", utan chans för snö";
 "SlightSnow" = ", med liten chans för snö";
 "GoodSnow" = ", med stor chans för snö";
-
-"North" = "Norr";
-"Northeast" = "Nordöst";
-"East" = "Öst";
-"Southeast" = "Sydöst";
-"South" = "Syd";
-"Southwest" = "Sydväst";
-"West" = "Väst";
-"Northwest" = "Nordväst";
-
-/* These keys are translated so that they can be used in the context of weather prognosis followed by the word for "chance" - "chans" (SWE). */ 
-"Good" = "Stor";
-"Slight" = "Liten";
-"None" = "Ingen";
 
 "UpdatedAtDateAndTime" = "Uppdaterat %@ vid %@";
 "UpdatedAtTime" = "Uppdaterat vid %@";

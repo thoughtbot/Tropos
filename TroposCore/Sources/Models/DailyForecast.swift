@@ -1,12 +1,12 @@
 import Foundation
 
-struct DailyForecast {
-    var date: NSDate
-    var conditionsDescription: String
-    var highTemperature: Temperature
-    var lowTemperature: Temperature
+public struct DailyForecast {
+    public var date: NSDate
+    public var conditionsDescription: String
+    public var highTemperature: Temperature
+    public var lowTemperature: Temperature
 
-    init?(JSON: AnyObject?) {
+    public init?(JSON: AnyObject?) {
         guard let dict = JSON as? [String: AnyObject],
             let time = dict["time"] as? Double,
             let icon = dict["icon"] as? String,

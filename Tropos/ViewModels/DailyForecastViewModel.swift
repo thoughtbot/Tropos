@@ -1,3 +1,4 @@
+import TroposCore
 import UIKit
 
 @objc(TRDailyForecastViewModel) final class DailyForecastViewModel: NSObject {

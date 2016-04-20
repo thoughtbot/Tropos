@@ -1,4 +1,4 @@
-#import "Tropos-Swift.h"
+@import TroposCore;
 #import "TRAnalyticsEvent.h"
 
 @interface TRWeatherUpdate (TRAnalytics) <TRAnalyticsEvent>

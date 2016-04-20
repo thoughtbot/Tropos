@@ -2,10 +2,10 @@ import Foundation
 
 private let TRLatestWeatherUpdateFileName = "TRLatestWeatherUpdateFile"
 
-@objc(TRWeatherUpdateCache) class WeatherUpdateCache: NSObject {
-    let cachePath: String
+@objc(TRWeatherUpdateCache) public final class WeatherUpdateCache: NSObject {
+    public let cachePath: String
 
-    init(fileName: String, inDirectory directory: NSURL) {
+    public init(fileName: String, inDirectory directory: NSURL) {
         let url = directory.URLByAppendingPathComponent(fileName)
         guard let path = url.path else {
             fatalError("not a valid path: \(url)")
@@ -13,7 +13,7 @@ private let TRLatestWeatherUpdateFileName = "TRLatestWeatherUpdateFile"
         cachePath = path
     }
 
-    convenience init(fileName: String) {
+    public convenience init(fileName: String) {
         let fileManager = NSFileManager.defaultManager()
         guard let cachesURL = fileManager.URLsForDirectory(.CachesDirectory, inDomains: .UserDomainMask).first else {
             fatalError("Unable to locate user caches directory")
@@ -21,15 +21,15 @@ private let TRLatestWeatherUpdateFileName = "TRLatestWeatherUpdateFile"
         self.init(fileName: fileName, inDirectory: cachesURL)
     }
 
-    convenience override init() {
+    public convenience override init() {
         self.init(fileName: TRLatestWeatherUpdateFileName)
     }
 
-    var latestWeatherUpdate: WeatherUpdate? {
+    public var latestWeatherUpdate: WeatherUpdate? {
         return NSKeyedUnarchiver.unarchiveObjectWithFile(cachePath) as? WeatherUpdate
     }
 
-    func archiveWeatherUpdate(weatherUpdate: WeatherUpdate) -> Bool {
+    public func archiveWeatherUpdate(weatherUpdate: WeatherUpdate) -> Bool {
         return NSKeyedArchiver.archiveRootObject(weatherUpdate, toFile: cachePath)
     }
 }

@@ -1,4 +1,6 @@
-enum CardinalDirection: String, CustomStringConvertible {
+import Foundation
+
+public enum CardinalDirection: String, CustomStringConvertible {
     case North
     case NorthEast
     case East
@@ -8,7 +10,7 @@ enum CardinalDirection: String, CustomStringConvertible {
     case West
     case NorthWest
 
-    init?(bearing: Double) {
+    public init?(bearing: Double) {
         guard (0.0...360.0).contains(bearing) else { return nil }
 
         if bearing < 22.5 {
@@ -32,20 +34,22 @@ enum CardinalDirection: String, CustomStringConvertible {
         }
     }
 
-    var description: String {
+    public var description: String {
         return rawValue
     }
 
-    var abbreviation: String {
+    public var abbreviation: String {
         let characters = "NSEW".characters
         return String(description.characters.filter { characters.contains($0) })
     }
+}
 
+public extension CardinalDirection {
     var localizedDescription: String {
-        return NSLocalizedString(description, comment: "")
+        return TroposCoreLocalizedString(description)
     }
 
     var localizedAbbreviation: String {
-        return NSLocalizedString(abbreviation, comment: "")
+        return TroposCoreLocalizedString(abbreviation)
     }
 }

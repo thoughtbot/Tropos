@@ -1,13 +1,13 @@
 import Foundation
 
-enum TimeOfDay {
+public enum TimeOfDay {
     case Morning
     case Day
     case Afternoon
     case Night
 }
 
-extension NSCalendar {
+public extension NSCalendar {
     func timeOfDay(forDate date: NSDate) -> TimeOfDay {
         let components = self.components(.Hour, fromDate: date)
 
@@ -27,26 +27,26 @@ extension NSCalendar {
     func localizedTimeOfDay(forDate date: NSDate) -> String {
         switch timeOfDay(forDate: date) {
         case .Night:
-            return NSLocalizedString("Tonight", comment: "")
+            return TroposCoreLocalizedString("Tonight")
         case .Morning:
-            return NSLocalizedString("ThisMorning", comment: "")
+            return TroposCoreLocalizedString("ThisMorning")
         case .Day:
-            return NSLocalizedString("Today", comment: "")
+            return TroposCoreLocalizedString("Today")
         case .Afternoon:
-            return NSLocalizedString("ThisAfternoon", comment: "")
+            return TroposCoreLocalizedString("ThisAfternoon")
         }
     }
 
     func localizedTimeOfYesterday(relativeToDate date: NSDate) -> String {
         switch timeOfDay(forDate: date) {
         case .Night:
-            return NSLocalizedString("LastNight", comment: "")
+            return TroposCoreLocalizedString("LastNight")
         case .Morning:
-            return NSLocalizedString("YesterdayMorning", comment: "")
+            return TroposCoreLocalizedString("YesterdayMorning")
         case .Day:
-            return NSLocalizedString("Yesterday", comment: "")
+            return TroposCoreLocalizedString("Yesterday")
         case .Afternoon:
-            return NSLocalizedString("YesterdayAfternoon", comment: "")
+            return TroposCoreLocalizedString("YesterdayAfternoon")
         }
     }
 }

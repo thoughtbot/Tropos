@@ -1,0 +1,31 @@
+// CardinalDirection.swift
+"North" = "Północ";
+"Northeast" = "Północny wschód";
+"East" = "Wschód";
+"Southeast" = "Południowy wschód";
+"South" = "Południe";
+"Southwest" = "Południowy zachód";
+"West" = "Zachód";
+"Northwest" = "Północny zachód";
+
+// PrecipitationChance.swift
+"Good" = "Duża";
+"Slight" = "Niewielka";
+"None" = "Brak";
+
+// Temperature.swift
+"Hotter" = "goręcej";
+"Warmer" = "cieplej";
+"Cooler" = "chłodniej";
+"Colder" = "zimniej";
+"Same" = "tak samo";
+
+// TimeOfDay.swift
+"Today" = "dziś";
+"Yesterday" = "wczoraj";
+"Tonight" = "dziś wieczorem";
+"LastNight" = "zeszłej nocy";
+"ThisMorning" = "dziś rano";
+"YesterdayMorning" = "wczoraj rano";
+"ThisAfternoon" = "dziś po południu";
+"YesterdayAfternoon" = "wczoraj po południu";

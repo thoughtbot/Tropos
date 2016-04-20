@@ -2,40 +2,12 @@
 "PrecipitationChanceFormat" = "%@ chance of %@ %@.";
 "SameTemperatureFormat" = "It's the %@ %@ as %@%@.";
 
-"Hotter" = "hotter";
-"Warmer" = "warmer";
-"Cooler" = "cooler";
-"Colder" = "colder";
-"Same" = "same";
-
-"Today" = "today";
-"Yesterday" = "yesterday";
-"Tonight" = "tonight";
-"LastNight" = "last night";
-"ThisMorning" = "this morning";
-"YesterdayMorning" = "yesterday morning";
-"ThisAfternoon" = "this afternoon";
-"YesterdayAfternoon" = "yesterday afternoon";
-
 "NoneRain" = "";
 "SlightRain" = ", with a slight chance of rain";
 "GoodRain" = ", with a good chance of rain";
 "NoneSnow" = ", with no chance of snow";
 "SlightSnow" = ", with a slight chance of snow";
 "GoodSnow" = ", with a good chance of snow";
-
-"North" = "North";
-"Northeast" = "Northeast";
-"East" = "East";
-"Southeast" = "Southeast";
-"South" = "South";
-"Southwest" = "Southwest";
-"West" = "West";
-"Northwest" = "Northwest";
-
-"Good" = "Good";
-"Slight" = "Slight";
-"None" = "None";
 
 "UpdatedAtDateAndTime" = "Updated %@ at %@";
 "UpdatedAtTime" = "Updated at %@";

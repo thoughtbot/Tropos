@@ -1,3 +1,5 @@
+import TroposCore
+
 struct TemperatureFormatter {
     var unitSystem: UnitSystem
 

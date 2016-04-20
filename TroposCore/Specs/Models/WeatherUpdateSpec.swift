@@ -1,4 +1,4 @@
-@testable import Tropos
+import TroposCore
 import CoreLocation
 import Quick
 import Nimble

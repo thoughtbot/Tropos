@@ -1,4 +1,5 @@
 import Foundation
+import TroposCore
 
 struct WindSpeedFormatter {
     var unitSystem: UnitSystem
