@@ -2,19 +2,25 @@ import Foundation
 
 @objc(TRSettingsController) public final class SettingsController: NSObject {
     private let locale: NSLocale
+    private let userDefaults: NSUserDefaults
 
     public var unitSystem: UnitSystem {
         get {
-            let rawUnitSystem = NSUserDefaults.standardUserDefaults().integerForKey(TRSettingsUnitSystemKey)
+            let rawUnitSystem = userDefaults.integerForKey(TRSettingsUnitSystemKey)
             return UnitSystem(rawValue: rawUnitSystem)!
         }
         set {
-            NSUserDefaults.standardUserDefaults().setInteger(newValue.rawValue, forKey: TRSettingsUnitSystemKey)
+            userDefaults.setInteger(newValue.rawValue, forKey: TRSettingsUnitSystemKey)
         }
     }
 
-    public init(locale: NSLocale) {
+    public init(locale: NSLocale, userDefaults: NSUserDefaults) {
         self.locale = locale
+        self.userDefaults = userDefaults
+    }
+
+    public convenience init(locale: NSLocale) {
+        self.init(locale: locale, userDefaults: .standardUserDefaults())
     }
 
     public convenience override init() {
@@ -29,12 +35,12 @@ import Foundation
     private func registerUnitSystem() {
         let localeUsesMetric = locale.objectForKey(NSLocaleUsesMetricSystem)?.boolValue ?? false
         let unitSystem: UnitSystem = localeUsesMetric ? .Metric : .Imperial
-        NSUserDefaults.standardUserDefaults().registerDefaults([TRSettingsUnitSystemKey: unitSystem.rawValue])
+        userDefaults.registerDefaults([TRSettingsUnitSystemKey: unitSystem.rawValue])
     }
 
     private func registerLastVersion() {
         if let version = NSBundle.mainBundle().versionNumber {
-            NSUserDefaults.standardUserDefaults().registerDefaults([TRSettingsLastVersionKey: version])
+            userDefaults.registerDefaults([TRSettingsLastVersionKey: version])
         }
     }
 }
