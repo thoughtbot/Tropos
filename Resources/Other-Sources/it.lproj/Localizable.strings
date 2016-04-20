@@ -1,16 +1,2 @@
-"DifferentTemperatureFormat" = "Fa %@ %@ rispetto %@%@.";
-"PrecipitationChanceFormat" = "%@ possibilità di %@ %@.";
-"SameTemperatureFormat" = "La temperatura %@ %@ rispetto a %@%@.";
-
-"NoneRain" = "";
-"SlightRain" = ", con bassa probabilità di pioggia";
-"GoodRain" = ", con alta probabilità di pioggia";
-"NoneSnow" = ", nessuna possibilità di nevicate";
-"SlightSnow" = ", con bassa probabilità di nevicate";
-"GoodSnow" = ", con alta probabilità di nevicate";
-
-"UpdatedAtDateAndTime" = "Aggiornato il %@ alle %@";
-"UpdatedAtTime" = "Aggiornato il %@";
-
 "CheckingWeather" = "Controllo il Meteo...";
 "UpdateFailed" = "Update non riuscito";

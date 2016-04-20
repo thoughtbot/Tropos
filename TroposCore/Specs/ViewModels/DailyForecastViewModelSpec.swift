@@ -1,5 +1,4 @@
-@testable import Tropos
-import TroposCore
+@testable import TroposCore
 import Quick
 import Nimble
 
@@ -21,7 +20,7 @@ final class DailyForecastViewModelSpec: QuickSpec {
 
         it("returns the expected icon image") {
             let viewModel = DailyForecastViewModel(dailyForecast: testForecast)
-            expect(viewModel.conditionsImage) == UIImage(named: "clear-day")!
+            expect(viewModel.conditionsImage) == UIImage(named: "clear-day", inBundle: .troposBundle, compatibleWithTraitCollection: nil)
         }
 
         it("returns the formatted high temperature") {

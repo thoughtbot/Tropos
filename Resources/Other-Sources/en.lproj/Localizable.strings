@@ -1,17 +1,3 @@
-"DifferentTemperatureFormat" = "It's %@ %@ than %@%@.";
-"PrecipitationChanceFormat" = "%@ chance of %@ %@.";
-"SameTemperatureFormat" = "It's the %@ %@ as %@%@.";
-
-"NoneRain" = "";
-"SlightRain" = ", with a slight chance of rain";
-"GoodRain" = ", with a good chance of rain";
-"NoneSnow" = ", with no chance of snow";
-"SlightSnow" = ", with a slight chance of snow";
-"GoodSnow" = ", with a good chance of snow";
-
-"UpdatedAtDateAndTime" = "Updated %@ at %@";
-"UpdatedAtTime" = "Updated at %@";
-
 "CheckingWeather" = "Checking Weather...";
 "UpdateFailed" = "Update Failed";
 

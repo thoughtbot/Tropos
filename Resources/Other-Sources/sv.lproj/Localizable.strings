@@ -1,16 +1,2 @@
-"DifferentTemperatureFormat" = "Det är %@ %@ än %@%@.";
-"PrecipitationChanceFormat" = "%@ chans för %@ %@.";
-"SameTemperatureFormat" = "Det är %@ %@ som %@%@.";
-
-"NoneRain" = "";
-"SlightRain" = ", med liten chans för regn";
-"GoodRain" = ", med stor chans för regn";
-"NoneSnow" = ", utan chans för snö";
-"SlightSnow" = ", med liten chans för snö";
-"GoodSnow" = ", med stor chans för snö";
-
-"UpdatedAtDateAndTime" = "Uppdaterat %@ vid %@";
-"UpdatedAtTime" = "Uppdaterat vid %@";
-
 "CheckingWeather" = "Uppdaterar prognos...";
 "UpdateFailed" = "Uppdatering misslyckades";

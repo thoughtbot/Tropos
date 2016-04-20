@@ -1,7 +1,6 @@
 @import CoreLocation;
 @import TroposCore;
 #import "RACSignal+TROperators.h"
-#import "Tropos-Swift.h"
 #import "TRWeatherController.h"
 #import "TRWeatherUpdate+Analytics.h"
 #import "TRLocationController.h"

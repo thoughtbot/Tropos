@@ -13,12 +13,29 @@
 "Slight" = "Lieve";
 "None" = "Nessuna";
 
+// PrecipitationChanceFormatter.swift
+"NoneRain" = "";
+"SlightRain" = ", con bassa probabilità di pioggia";
+"GoodRain" = ", con alta probabilità di pioggia";
+"NoneSnow" = ", nessuna possibilità di nevicate";
+"SlightSnow" = ", con bassa probabilità di nevicate";
+"GoodSnow" = ", con alta probabilità di nevicate";
+
+// RelativeDateFormatter.swift
+"UpdatedAtDateAndTime" = "Aggiornato il %@ alle %@";
+"UpdatedAtTime" = "Aggiornato il %@";
+
 // Temperature.swift
 "Hotter" = "molto più caldo";
 "Warmer" = "più caldo";
 "Cooler" = "più freddo";
 "Colder" = "molto più freddo";
 "Same" = "è stabile";
+
+// TemperatureComparisonFormatter.swift
+"DifferentTemperatureFormat" = "Fa %@ %@ rispetto %@%@.";
+"PrecipitationChanceFormat" = "%@ possibilità di %@ %@.";
+"SameTemperatureFormat" = "La temperatura %@ %@ rispetto a %@%@.";
 
 // TimeOfDay.swift
 "Today" = "oggi";

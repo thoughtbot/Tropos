@@ -1,23 +1,23 @@
 import Foundation
 
-struct RelativeDateFormatter {
+public struct RelativeDateFormatter {
     private let calendar: NSCalendar
     private let dateFormatter: NSDateFormatter
 
-    init(calendar: NSCalendar = .currentCalendar()) {
+    public init(calendar: NSCalendar = .currentCalendar()) {
         self.calendar = calendar
         self.dateFormatter = NSDateFormatter()
         self.dateFormatter.doesRelativeDateFormatting = true
     }
 
-    func localizedStringFromDate(date: NSDate) -> String {
+    public func localizedStringFromDate(date: NSDate) -> String {
         let timeString = timeStringFromDate(date)
 
         if let dateString = dateStringFromDate(date) {
-            let format = NSLocalizedString("UpdatedAtDateAndTime", comment: "")
+            let format = TroposCoreLocalizedString("UpdatedAtDateAndTime")
             return NSString.localizedStringWithFormat(format, dateString, timeString) as String
         } else {
-            let format = NSLocalizedString("UpdatedAtTime", comment: "")
+            let format = TroposCoreLocalizedString("UpdatedAtTime")
             return NSString.localizedStringWithFormat(format, timeString) as String
         }
     }

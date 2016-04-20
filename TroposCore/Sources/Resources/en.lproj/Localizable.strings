@@ -13,12 +13,29 @@
 "Slight" = "Slight";
 "None" = "None";
 
+// PrecipitationChanceFormatter.swift
+"NoneRain" = "";
+"SlightRain" = ", with a slight chance of rain";
+"GoodRain" = ", with a good chance of rain";
+"NoneSnow" = ", with no chance of snow";
+"SlightSnow" = ", with a slight chance of snow";
+"GoodSnow" = ", with a good chance of snow";
+
+// RelativeDateFormatter.swift
+"UpdatedAtDateAndTime" = "Updated %@ at %@";
+"UpdatedAtTime" = "Updated at %@";
+
 // Temperature.swift
 "Hotter" = "hotter";
 "Warmer" = "warmer";
 "Cooler" = "cooler";
 "Colder" = "colder";
 "Same" = "same";
+
+// TemperatureComparisonFormatter.swift
+"DifferentTemperatureFormat" = "It's %@ %@ than %@%@.";
+"PrecipitationChanceFormat" = "%@ chance of %@ %@.";
+"SameTemperatureFormat" = "It's the %@ %@ as %@%@.";
 
 // TimeOfDay.swift
 "Today" = "today";

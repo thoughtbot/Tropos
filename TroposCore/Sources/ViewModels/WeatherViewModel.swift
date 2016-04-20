@@ -1,19 +1,20 @@
-import TroposCore
 import UIKit
 
-@objc(TRWeatherViewModel) final class WeatherViewModel: NSObject {
+@objc(TRWeatherViewModel) public final class WeatherViewModel: NSObject {
     private let weatherUpdate: WeatherUpdate
     private let dateFormatter: RelativeDateFormatter
 
-    init(weatherUpdate: WeatherUpdate, dateFormatter: RelativeDateFormatter) {
+    public init(weatherUpdate: WeatherUpdate, dateFormatter: RelativeDateFormatter) {
         self.weatherUpdate = weatherUpdate
         self.dateFormatter = dateFormatter
     }
 
-    convenience init(weatherUpdate: WeatherUpdate) {
+    public convenience init(weatherUpdate: WeatherUpdate) {
         self.init(weatherUpdate: weatherUpdate, dateFormatter: RelativeDateFormatter())
     }
+}
 
+public extension WeatherViewModel {
     var locationName: String {
         return [weatherUpdate.city, weatherUpdate.state].lazy
             .flatMap { $0 }
@@ -25,7 +26,7 @@ import UIKit
     }
 
     var conditionsImage: UIImage? {
-        return weatherUpdate.conditionsDescription.flatMap { UIImage(named: $0) }
+        return weatherUpdate.conditionsDescription.flatMap { UIImage(named: $0, inBundle: .troposBundle, compatibleWithTraitCollection: nil) }
     }
 
     var conditionsDescription: NSAttributedString {
@@ -77,8 +78,10 @@ import UIKit
     var dailyForecasts: [DailyForecastViewModel] {
         return weatherUpdate.dailyForecasts.map(DailyForecastViewModel.init)
     }
+}
 
-    private func colorForTemperatureComparison(comparison: TemperatureComparison, difference: Int) -> UIColor {
+private extension WeatherViewModel {
+    func colorForTemperatureComparison(comparison: TemperatureComparison, difference: Int) -> UIColor {
         let color: UIColor
 
         switch comparison {

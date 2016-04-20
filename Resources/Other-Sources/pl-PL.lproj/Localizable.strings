@@ -1,16 +1,2 @@
-"DifferentTemperatureFormat" = "%2$@ jest %1$@ niż %3$@%4$@.";
-"PrecipitationChanceFormat" = "%@ szansy na %@ %@.";
-"SameTemperatureFormat" = "%2$@ jest %1$@ jak %3$@%4$@.";
-
-"NoneRain" = "";
-"SlightRain" = ", z małą szansą na deszcz";
-"GoodRain" = ", z dużą szansą na deszcz";
-"NoneSnow" = " bez śniegu";
-"SlightSnow" = ", z małą szansą na śnieg";
-"GoodSnow" = ", z dużą szansą na śnieg";
-
-"UpdatedAtDateAndTime" = "Zaktualizowano %@ o %@";
-"UpdatedAtTime" = "Zaktualizowano o %@";
-
 "CheckingWeather" = "Sprawdzam pogodę...";
 "UpdateFailed" = "Brak połączenia z serwerem";

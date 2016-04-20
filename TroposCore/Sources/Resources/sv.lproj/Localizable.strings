@@ -14,6 +14,18 @@
 "Slight" = "Liten";
 "None" = "Ingen";
 
+// PrecipitationChanceFormatter.swift
+"NoneRain" = "";
+"SlightRain" = ", med liten chans för regn";
+"GoodRain" = ", med stor chans för regn";
+"NoneSnow" = ", utan chans för snö";
+"SlightSnow" = ", med liten chans för snö";
+"GoodSnow" = ", med stor chans för snö";
+
+// RelativeDateFormatter.swift
+"UpdatedAtDateAndTime" = "Uppdaterat %@ vid %@";
+"UpdatedAtTime" = "Uppdaterat vid %@";
+
 // Temperature.swift
 "Hotter" = "hetare";
 "Warmer" = "varmare";
@@ -21,6 +33,11 @@
 "Colder" = "kallare";
 /* The word temperature is added at the end since the word is needed to make the sentence understandable in this context */
 "Same" = "samma temperatur";
+
+// TemperatureComparisonFormatter.swift
+"DifferentTemperatureFormat" = "Det är %@ %@ än %@%@.";
+"PrecipitationChanceFormat" = "%@ chans för %@ %@.";
+"SameTemperatureFormat" = "Det är %@ %@ som %@%@.";
 
 // TimeOfDay.swift
 "Today" = "idag";

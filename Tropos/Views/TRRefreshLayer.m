@@ -1,5 +1,5 @@
+@import TroposCore;
 #import "TRRefreshLayer.h"
-#import "Tropos-Swift.h"
 
 @implementation TRRefreshLayer
 

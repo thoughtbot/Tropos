@@ -1,4 +1,4 @@
-@testable import Tropos
+import TroposCore
 import Quick
 import Nimble
 
@@ -18,7 +18,7 @@ final class TemperatureComparisonFormatterSpec: QuickSpec {
                     defer { NSCalendar.currentCalendar().timeZone = previousTimeZone }
 
                     let date = dateFromString("2015-05-15 22:00:00 UTC")
-                    let (description, _) = TemperatureComparisonFormatter.localizedStrings(fromComparison: .Same, precipitation: "", date: date)
+                    let (description, _) = TemperatureComparisonFormatter().localizedStrings(fromComparison: .Same, precipitation: "", date: date)
                     expect(description) == "It's the same tonight as last night."
                 }
             }

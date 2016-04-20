@@ -1,14 +1,13 @@
 import Foundation
-import TroposCore
 
-struct WindSpeedFormatter {
-    var unitSystem: UnitSystem
+public struct WindSpeedFormatter {
+    public var unitSystem: UnitSystem
 
-    init(unitSystem: UnitSystem = SettingsController().unitSystem) {
+    public init(unitSystem: UnitSystem = SettingsController().unitSystem) {
         self.unitSystem = unitSystem
     }
 
-    func localizedString(forWindSpeed windSpeed: Double, bearing: Double) -> String {
+    public func localizedString(forWindSpeed windSpeed: Double, bearing: Double) -> String {
         guard let cardinalDirection = CardinalDirection(bearing: bearing) else {
             preconditionFailure("invalid bearing: \(bearing)")
         }
