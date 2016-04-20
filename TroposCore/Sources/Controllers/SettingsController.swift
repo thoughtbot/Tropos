@@ -1,9 +1,9 @@
 import Foundation
 
-@objc(TRSettingsController) final class SettingsController: NSObject {
+@objc(TRSettingsController) public final class SettingsController: NSObject {
     private let locale: NSLocale
 
-    var unitSystem: UnitSystem {
+    public var unitSystem: UnitSystem {
         get {
             let rawUnitSystem = NSUserDefaults.standardUserDefaults().integerForKey(TRSettingsUnitSystemKey)
             return UnitSystem(rawValue: rawUnitSystem)!
@@ -13,15 +13,15 @@ import Foundation
         }
     }
 
-    init(locale: NSLocale) {
+    public init(locale: NSLocale) {
         self.locale = locale
     }
 
-    convenience override init() {
+    public convenience override init() {
         self.init(locale: .autoupdatingCurrentLocale())
     }
 
-    func registerSettings() {
+    public func registerSettings() {
         registerUnitSystem()
         registerLastVersion()
     }
@@ -33,7 +33,8 @@ import Foundation
     }
 
     private func registerLastVersion() {
-        let version = NSBundle.mainBundle().versionNumber
-        NSUserDefaults.standardUserDefaults().registerDefaults([TRSettingsLastVersionKey: version])
+        if let version = NSBundle.mainBundle().versionNumber {
+            NSUserDefaults.standardUserDefaults().registerDefaults([TRSettingsLastVersionKey: version])
+        }
     }
 }

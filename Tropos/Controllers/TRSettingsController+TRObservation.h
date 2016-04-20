@@ -1,5 +1,5 @@
 #import <ReactiveCocoa/ReactiveCocoa.h>
-#import "Tropos-Swift.h"
+#import <TroposCore/TroposCore.h>
 
 @interface TRSettingsController (TRObservation)
 
