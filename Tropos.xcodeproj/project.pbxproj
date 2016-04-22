@@ -288,7 +288,7 @@
 		6D0F135B1B432976001685BA /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
 		734AAC0DB56096A9514A0647 /* Pods-Tropos-metadata.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; name = "Pods-Tropos-metadata.plist"; path = "Pods/Pods-Tropos-metadata.plist"; sourceTree = "<group>"; };
 		8AC74E321865FC3EE1BBCAA3 /* Pods-Tropos-settings-metadata.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; name = "Pods-Tropos-settings-metadata.plist"; path = "Resources/Other-Sources/Settings.bundle/Pods-Tropos-settings-metadata.plist"; sourceTree = "<group>"; };
-		986C425E5A2268D27FAE2FAA /* Tropos-Prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Tropos-Prefix.pch"; sourceTree = "<group>"; };
+		986C425E5A2268D27FAE2FAA /* Prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = Prefix.pch; sourceTree = "<group>"; };
 		A11D71D21CD73697000EB4A3 /* Courier.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Courier.framework; path = Carthage/Build/iOS/Courier.framework; sourceTree = "<group>"; };
 		A11D71D41CD73751000EB4A3 /* CourierClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CourierClient.swift; sourceTree = "<group>"; };
 		A6B1ADBC73A8A2EF7FB4E257 /* TRAppDelegate.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = TRAppDelegate.m; sourceTree = "<group>"; };
@@ -422,8 +422,9 @@
 		3BE8FEB37F8EAA83D075A253 /* Specs */ = {
 			isa = PBXGroup;
 			children = (
+				E7B3B9281B34EE0500BDD5A4 /* Controllers */,
 				7B05273CCDF63C9DA71C049A /* Resources */,
-				D487E2F8148F4F831FE4B216 /* Tests */,
+				4A0DD7531CCA97BB00E7A451 /* Support */,
 			);
 			path = Specs;
 			sourceTree = "<group>";
@@ -436,6 +437,13 @@
 				301CF0A99B4C5FAECDB23D75 /* Resources */,
 			);
 			path = Tropos;
+			sourceTree = "<group>";
+		};
+		4A0DD7531CCA97BB00E7A451 /* Support */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Support;
 			sourceTree = "<group>";
 		};
 		4A552EF01CC7C8F8008C7298 /* Core */ = {
@@ -699,8 +707,6 @@
 			isa = PBXGroup;
 			children = (
 				1CDD2312F1EF05277F045E15 /* Info.plist */,
-				986C425E5A2268D27FAE2FAA /* Tropos-Prefix.pch */,
-				2853082980109C89B8F07D3C /* main.m */,
 				C2E44CE61A3A4273009CC844 /* Localizable.strings */,
 				C2E44CEB1A3A42C6009CC844 /* InfoPlist.strings */,
 				4D9CA35E1A5CABDD009E24DD /* Settings.bundle */,
@@ -731,14 +737,6 @@
 			tabWidth = 4;
 			usesTabs = 0;
 		};
-		D487E2F8148F4F831FE4B216 /* Tests */ = {
-			isa = PBXGroup;
-			children = (
-				E7B3B9281B34EE0500BDD5A4 /* Controllers */,
-			);
-			path = Tests;
-			sourceTree = "<group>";
-		};
 		E4F796A1BFA14961F3C5EE5E /* Sources */ = {
 			isa = PBXGroup;
 			children = (
@@ -749,7 +747,9 @@
 				C2E44CDE1A3A3BFB009CC844 /* ViewControllers */,
 				639AAB142C96B59FC995CA1D /* Views */,
 				4A6987441CC80699002D3F87 /* Bridging-Header.h */,
+				986C425E5A2268D27FAE2FAA /* Prefix.pch */,
 				22FE01C01AF3F5550085B494 /* Secrets.h */,
+				2853082980109C89B8F07D3C /* main.m */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -1452,7 +1452,7 @@
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Tropos/Resources/Other-Sources/Tropos-Prefix.pch";
+				GCC_PREFIX_HEADER = Tropos/Sources/Prefix.pch;
 				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/Tropos/Resources/Other-Sources/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -1548,7 +1548,7 @@
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Tropos/Resources/Other-Sources/Tropos-Prefix.pch";
+				GCC_PREFIX_HEADER = Tropos/Sources/Prefix.pch;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
