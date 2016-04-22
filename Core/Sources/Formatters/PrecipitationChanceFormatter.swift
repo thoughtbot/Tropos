@@ -1,5 +1,4 @@
 import Foundation
-import TroposCore
 
 struct PrecipitationChanceFormatter {
     func localizedStringFromPrecipitation(precipitation: Precipitation) -> String {

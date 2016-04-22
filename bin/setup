@@ -5,10 +5,13 @@ bundle exec pod install
 brew install carthage 2> /dev/null
 carthage bootstrap --no-use-binaries --platform iphoneos,watchos
 
-if [ ! -d Tropos/Secrets.h ]; then
-  cp Tropos/Secrets-Example.h Tropos/Secrets.h
+tropos_secrets="Tropos/Sources/Secrets.h"
+example_secrets="Tropos/Sources/Secrets-Example.h"
+
+if [ ! -f "${tropos_secrets}" ]; then
+  cp "${example_secrets}" "${tropos_secrets}"
   echo ""
-  echo "-------------------------------------------------"
-  echo "Created Tropos/Secrets.h. Please add your keys to it."
-  echo "-------------------------------------------------"
+  echo "--------------------------------------------------------------------------------"
+  echo "Created ${tropos_secrets}. Please add your keys to it."
+  echo "--------------------------------------------------------------------------------"
 fi
