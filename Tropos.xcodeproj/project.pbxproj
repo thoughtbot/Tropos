@@ -433,6 +433,7 @@
 			children = (
 				4A552F401CC7CB9B008C7298 /* Sources */,
 				4A552F441CC7CB9B008C7298 /* Specs */,
+				4A552F7B1CC7D0C6008C7298 /* Resources */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -444,7 +445,6 @@
 				4A552F841CC7D196008C7298 /* Extensions */,
 				4A6987481CC815BF002D3F87 /* Formatters */,
 				4A552F541CC7CCF9008C7298 /* Models */,
-				4A552F7B1CC7D0C6008C7298 /* Resources */,
 				4A6987531CC81698002D3F87 /* ViewModels */,
 				4A552F431CC7CB9B008C7298 /* TroposCore.h */,
 				4A6987401CC80471002D3F87 /* TroposCore.m */,
@@ -1392,7 +1392,7 @@
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				INFOPLIST_FILE = TroposCore/Specs/Info.plist;
+				INFOPLIST_FILE = Core/Specs/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = YES;
@@ -1419,7 +1419,7 @@
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				INFOPLIST_FILE = TroposCore/Specs/Info.plist;
+				INFOPLIST_FILE = Core/Specs/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = NO;
