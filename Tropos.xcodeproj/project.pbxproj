@@ -428,13 +428,13 @@
 			path = UnitTests;
 			sourceTree = "<group>";
 		};
-		4A552EF01CC7C8F8008C7298 /* TroposCore */ = {
+		4A552EF01CC7C8F8008C7298 /* Core */ = {
 			isa = PBXGroup;
 			children = (
 				4A552F401CC7CB9B008C7298 /* Sources */,
 				4A552F441CC7CB9B008C7298 /* Specs */,
 			);
-			path = TroposCore;
+			path = Core;
 			sourceTree = "<group>";
 		};
 		4A552F401CC7CB9B008C7298 /* Sources */ = {
@@ -713,7 +713,7 @@
 				E4F796A1BFA14961F3C5EE5E /* Tropos */,
 				3BE8FEB37F8EAA83D075A253 /* UnitTests */,
 				301CF0A99B4C5FAECDB23D75 /* Resources */,
-				4A552EF01CC7C8F8008C7298 /* TroposCore */,
+				4A552EF01CC7C8F8008C7298 /* Core */,
 				79646077C042F7DDDC35EBEA /* Frameworks */,
 				702F42EA5C215DCFAE2AAC5C /* Products */,
 				032A87AB5FF403B628188E3C /* Pods */,
@@ -1326,7 +1326,7 @@
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				INFOPLIST_FILE = "$(SRCROOT)/TroposCore/Sources/Info.plist";
+				INFOPLIST_FILE = Core/Sources/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = YES;
@@ -1361,7 +1361,7 @@
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				INFOPLIST_FILE = "$(SRCROOT)/TroposCore/Sources/Info.plist";
+				INFOPLIST_FILE = Core/Sources/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = NO;
