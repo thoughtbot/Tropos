@@ -1,4 +1,5 @@
 platform :ios, '8.0'
+use_frameworks!
 
 pod 'HockeySDK', '~> 3.6', :inhibit_warnings => true
 pod 'ReactiveCocoa', '~> 2.4.7'
