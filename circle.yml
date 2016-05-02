@@ -1,13 +1,17 @@
 machine:
   pre:
-    - brew install ruby ; brew unlink ruby20; brew link --overwrite ruby
+    - brew install ruby ; brew link --overwrite ruby
   xcode:
     version: "7.3"
 
 dependencies:
-  override:
+  pre:
     - brew update
-    - bin/setup
+  post:
+    - bundle install
+    - bundle exec pod install
+    - brew install carthage 2> /dev/null
+    - carthage bootstrap --no-use-binaries --platform iphoneos,watchos
 
 test:
   override:
