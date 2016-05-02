@@ -1,6 +1,6 @@
 machine:
   pre:
-    - brew install ruby ; brew link --overwrite ruby
+    - brew install ruby ; brew unlink ruby20; brew link --overwrite ruby
   xcode:
     version: "7.3"
 
