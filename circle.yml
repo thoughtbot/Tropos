@@ -3,7 +3,7 @@ machine:
     version: "7.3"
 
 dependencies:
-  override:
+  post:
     - brew update
     - bin/setup
 
