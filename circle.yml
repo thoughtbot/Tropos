@@ -1,6 +1,8 @@
 machine:
   xcode:
     version: "7.3"
+  ruby:
+    version: 2.3.0
 
 dependencies:
   post:
