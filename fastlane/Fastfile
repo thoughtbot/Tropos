@@ -7,7 +7,6 @@ default_platform :ios
 
 platform :ios do
   before_all do
-    validate_env!
     cocoapods
     carthage(platform: "iOS")
   end
@@ -20,6 +19,7 @@ platform :ios do
   desc "Submit a new Beta Build to Apple TestFlight"
   desc "This will also make sure the profile is up to date"
   lane :beta do
+    validate_env!
     match(type: "appstore")
     gym(scheme: "Tropos")
     pilot
@@ -27,6 +27,7 @@ platform :ios do
 
   desc "Deploy a new version to the App Store"
   lane :appstore do
+    validate_env!
     match(type: "appstore")
     gym(scheme: "Tropos")
     deliver(force: true)
