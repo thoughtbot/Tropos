@@ -1054,6 +1054,7 @@
 					"-DNS_BLOCK_ASSERTIONS=1",
 					"$(inherited)",
 				);
+				OTHER_SWIFT_FLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.thoughtbot.carlweathers;
 				PRODUCT_NAME = Tropos;
 				PROVISIONING_PROFILE = "";
@@ -1146,6 +1147,7 @@
 				INFOPLIST_FILE = "Resources/Other-Sources/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_SWIFT_FLAGS = "-D DEBUG";
 				PRODUCT_BUNDLE_IDENTIFIER = com.thoughtbot.carlweathers;
 				PRODUCT_NAME = Tropos;
 				PROVISIONING_PROFILE = "";

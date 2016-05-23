@@ -4,7 +4,15 @@ import Courier
     private let instance: Courier
 
     init(apiToken: String) {
-        instance = Courier(apiToken: apiToken, environment: .Development)
+        let environment: Environment
+
+        #if DEBUG
+            environment = .Development
+        #else
+            environment = .Production
+        #endif
+
+        instance = Courier(apiToken: apiToken, environment: environment)
     }
 
     func subscribeToChannel(channel: String, withToken token: NSData) {
