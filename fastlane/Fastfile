@@ -21,6 +21,7 @@ platform :ios do
   lane :beta do
     validate_env!
     match(type: "appstore")
+    increment_build_number
     gym(scheme: "Tropos")
     pilot
   end
@@ -29,7 +30,9 @@ platform :ios do
   lane :appstore do
     validate_env!
     match(type: "appstore")
+    increment_build_number
     gym(scheme: "Tropos")
+    increment_build_number
     deliver(force: true)
   end
 end
