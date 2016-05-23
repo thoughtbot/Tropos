@@ -1435,7 +1435,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
-				CURRENT_PROJECT_VERSION = 195;
+				CURRENT_PROJECT_VERSION = 197;
 				DEFINES_MODULE = YES;
 				DSTROOT = /tmp/xcodeproj.dst;
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
@@ -1533,7 +1533,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 195;
+				CURRENT_PROJECT_VERSION = 197;
 				DEFINES_MODULE = YES;
 				DSTROOT = /tmp/xcodeproj.dst;
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
