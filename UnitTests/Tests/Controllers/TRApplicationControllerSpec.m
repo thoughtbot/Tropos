@@ -5,6 +5,7 @@
 #import "TRApplicationController.h"
 #import "TRWeatherController.h"
 #import "TRLocationController.h"
+#import "UnitTests-Swift.h"
 
 @interface TRApplicationController (Tests)
 
