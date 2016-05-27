@@ -13,4 +13,6 @@
 - (RACSignal *)localWeatherNotification;
 - (void)setMinimumBackgroundFetchIntervalForApplication:(UIApplication *)application;
 
+- (void)subscribeToNotificationsWithDeviceToken:(NSData *)deviceToken;
+
 @end

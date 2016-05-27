@@ -20,6 +20,13 @@
 
 @end
 
+void inTimeZone(NSTimeZone *timeZone, void (^callback)(void)) {
+    NSTimeZone *defaultTimeZone = [NSTimeZone defaultTimeZone];
+    [NSTimeZone setDefaultTimeZone:timeZone];
+    callback();
+    [NSTimeZone setDefaultTimeZone:defaultTimeZone];
+}
+
 QuickSpecBegin(TRApplicationControllerSpec)
 
 TRLocationController* (^locationControllerWithAuthorizationStatusAuthorizedAlwaysEqualTo) (BOOL) = ^TRLocationController* (BOOL enabled){
@@ -60,6 +67,38 @@ describe(@"TRApplicationController", ^{
             [applicationController performBackgroundFetch];
 
             OCMVerify([updateWeatherCommand execute:applicationController]);
+        });
+    });
+
+    describe(@"subscribeForNotificationsWithDeviceToken:", ^{
+        it(@"subscribes to notifications on the channel corresponding to the device's time zone", ^{
+            TRCourierClient *courier = OCMClassMock([TRCourierClient class]);
+            TRApplicationController *applicationController = [TRApplicationController new];
+            applicationController.courier = courier;
+
+            NSData *deviceToken = [NSData new];
+            [applicationController subscribeToNotificationsWithDeviceToken:deviceToken];
+
+            NSString *channel = [[NSTimeZone localTimeZone] name];
+            OCMVerify([courier subscribeToChannel:channel withToken:deviceToken]);
+        });
+
+        it(@"unsubscribes from notifications if the device's time zone has changed", ^{
+            TRCourierClient *courier = OCMClassMock([TRCourierClient class]);
+            TRApplicationController *applicationController = [TRApplicationController new];
+            applicationController.courier = courier;
+            NSTimeZone *initialTimeZone = [NSTimeZone timeZoneWithAbbreviation:@"CEST"];
+            NSString *expectedChannel = initialTimeZone.name;
+            NSData *deviceToken = [NSData new];
+
+            inTimeZone(initialTimeZone, ^{
+                [applicationController subscribeToNotificationsWithDeviceToken:deviceToken];
+            });
+            inTimeZone([NSTimeZone timeZoneWithAbbreviation:@"HKT"], ^{
+                [applicationController subscribeToNotificationsWithDeviceToken:deviceToken];
+            });
+
+            OCMVerify([courier unsubscribeFromChannel:expectedChannel]);
         });
     });
 });
