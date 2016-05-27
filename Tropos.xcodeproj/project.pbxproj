@@ -88,12 +88,10 @@
 		6D0F135D1B432976001685BA /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D0F135B1B432976001685BA /* Quick.framework */; };
 		6D0F135E1B43298C001685BA /* Nimble.framework in Resources */ = {isa = PBXBuildFile; fileRef = 6D0F135A1B432976001685BA /* Nimble.framework */; };
 		6D0F135F1B43298E001685BA /* Quick.framework in Resources */ = {isa = PBXBuildFile; fileRef = 6D0F135B1B432976001685BA /* Quick.framework */; };
-		8C027F48FE426D774C9C75ED /* Pods-Tropos-settings-metadata.plist in Resources */ = {isa = PBXBuildFile; fileRef = 396C46E68DD44925058FAA3E /* Pods-Tropos-settings-metadata.plist */; };
 		8E55CA903A39795581785ED4 /* libPods-Tropos.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D281611EA8A7B26EFB4FBBAC /* libPods-Tropos.a */; };
 		9B35F8D49294C95354F26638 /* Pods-Tropos-metadata.plist in Resources */ = {isa = PBXBuildFile; fileRef = 734AAC0DB56096A9514A0647 /* Pods-Tropos-metadata.plist */; };
 		A11D71D31CD73697000EB4A3 /* Courier.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A11D71D21CD73697000EB4A3 /* Courier.framework */; };
 		A11D71D51CD73751000EB4A3 /* CourierClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11D71D41CD73751000EB4A3 /* CourierClient.swift */; };
-		AC8F9A91D027B96271B1C5FE /* Pods-UnitTests-settings-metadata.plist in Resources */ = {isa = PBXBuildFile; fileRef = 16D74B5547F809E3FAB45344 /* Pods-UnitTests-settings-metadata.plist */; };
 		C2E44CDD1A3A38A2009CC844 /* TRLocationController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2E44CDC1A3A38A2009CC844 /* TRLocationController.m */; };
 		C2E44CE11A3A3C09009CC844 /* TRWeatherViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2E44CE01A3A3C09009CC844 /* TRWeatherViewController.m */; };
 		C2E44CE41A3A4273009CC844 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = C2E44CE61A3A4273009CC844 /* Localizable.strings */; };
@@ -175,12 +173,10 @@
 		059D0BDDF8DCE56549A4C9C6 /* Images.xcassets */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		0B30A1610CAE1C2E302C28B0 /* UnitTests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "UnitTests-Info.plist"; sourceTree = "<group>"; };
 		0CC72A6E0EE525537F241EB7 /* TRAppDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = TRAppDelegate.h; sourceTree = "<group>"; };
-		16D74B5547F809E3FAB45344 /* Pods-UnitTests-settings-metadata.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; name = "Pods-UnitTests-settings-metadata.plist"; path = "build/Tropos.xcarchive/Products/Applications/Tropos.app/Settings.bundle/Pods-UnitTests-settings-metadata.plist"; sourceTree = "<group>"; };
 		1CDD2312F1EF05277F045E15 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		22FE01C01AF3F5550085B494 /* Secrets.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Secrets.h; sourceTree = "<group>"; };
 		27A5B8BB9F1CED0B64ACCC20 /* Pods-Tropos.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tropos.release.xcconfig"; path = "Pods/Target Support Files/Pods-Tropos/Pods-Tropos.release.xcconfig"; sourceTree = "<group>"; };
 		2853082980109C89B8F07D3C /* main.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		396C46E68DD44925058FAA3E /* Pods-Tropos-settings-metadata.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; name = "Pods-Tropos-settings-metadata.plist"; path = "build/Tropos.xcarchive/Products/Applications/Tropos.app/Settings.bundle/Pods-Tropos-settings-metadata.plist"; sourceTree = "<group>"; };
 		436D9431497525313B32E225 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		449386DA1B5044EE00766EC9 /* pl-PL */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pl-PL"; path = "pl-PL.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		449386DB1B5044EE00766EC9 /* pl-PL */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pl-PL"; path = "pl-PL.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
@@ -391,8 +387,6 @@
 				8AC74E321865FC3EE1BBCAA3 /* Pods-Tropos-settings-metadata.plist */,
 				571BCCE1FA0A73FC26505F27 /* Pods-UnitTests-metadata.plist */,
 				53AB1C3D15474F1BDC3868F6 /* Pods-UnitTests-settings-metadata.plist */,
-				396C46E68DD44925058FAA3E /* Pods-Tropos-settings-metadata.plist */,
-				16D74B5547F809E3FAB45344 /* Pods-UnitTests-settings-metadata.plist */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -961,7 +955,6 @@
 				6D0F135F1B43298E001685BA /* Quick.framework in Resources */,
 				05805A8D2E279D1E4F3368B8 /* Pods-UnitTests-metadata.plist in Resources */,
 				D565DEFF2AB8D09C8C2D043C /* Pods-UnitTests-settings-metadata.plist in Resources */,
-				AC8F9A91D027B96271B1C5FE /* Pods-UnitTests-settings-metadata.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -981,7 +974,6 @@
 				4D9CA35F1A5CABDD009E24DD /* Settings.bundle in Resources */,
 				9B35F8D49294C95354F26638 /* Pods-Tropos-metadata.plist in Resources */,
 				CD0522FB5D92C0517EB54750 /* Pods-Tropos-settings-metadata.plist in Resources */,
-				8C027F48FE426D774C9C75ED /* Pods-Tropos-settings-metadata.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
