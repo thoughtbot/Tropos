@@ -18,4 +18,8 @@ import Courier
     func subscribeToChannel(channel: String, withToken token: NSData) {
         instance.subscribeToChannel(channel, withToken: token)
     }
+
+    func unsubscribeFromChannel(channel: String) {
+        instance.unsubscribeFromChannel(channel)
+    }
 }
