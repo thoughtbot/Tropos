@@ -13,9 +13,9 @@ final class TemperatureComparisonFormatterSpec: QuickSpec {
         describe("TRTemperatureComparisonFormatter") {
             describe("localizedStringFromComparison:adjective:precipitation") {
                 it("bases the time of day off of the date") {
-                    let previousTimeZone = NSCalendar.currentCalendar().timeZone
-                    NSCalendar.currentCalendar().timeZone = NSTimeZone(abbreviation: "UTC")!
-                    defer { NSCalendar.currentCalendar().timeZone = previousTimeZone }
+                    let previousTimeZone = NSTimeZone.defaultTimeZone()
+                    NSTimeZone.setDefaultTimeZone(NSTimeZone(abbreviation: "UTC")!)
+                    defer { NSTimeZone.setDefaultTimeZone(previousTimeZone) }
 
                     let date = dateFromString("2015-05-15 22:00:00 UTC")
                     let (description, _) = TemperatureComparisonFormatter().localizedStrings(fromComparison: .Same, precipitation: "", date: date)
