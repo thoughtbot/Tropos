@@ -58,4 +58,20 @@
     }
 }
 
+- (void)subscribeToNotificationsWithDeviceToken:(NSData *)deviceToken
+{
+    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    NSString *formerChannelKey = @"CourierChannel";
+
+    NSString *channel = [[NSTimeZone localTimeZone] name];
+
+    NSString *formerChannel = [userDefaults stringForKey:formerChannelKey];
+    if (formerChannel && ![channel isEqualToString:formerChannel]) {
+        [self.courier unsubscribeFromChannel:formerChannel];
+    }
+    [self.courier subscribeToChannel:channel withToken:deviceToken];
+
+    [userDefaults setObject:channel forKey:formerChannelKey];
+}
+
 @end
