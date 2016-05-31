@@ -36,10 +36,7 @@
 
 - (RACSignal *)localWeatherNotification
 {
-    RACSignal *updatedConditions = [[self performBackgroundFetch] then:^{
-        return [self.weatherController.conditionsDescription take: 1];
-    }];
-
+    RACSignal *updatedConditions = self.weatherController.conditionsDescription;
     return [updatedConditions map:^(NSAttributedString *conditions) {
         UILocalNotification *notification = [[UILocalNotification alloc] init];
         notification.fireDate = [NSDate distantPast];
