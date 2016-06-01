@@ -10,7 +10,6 @@
 		05805A8D2E279D1E4F3368B8 /* Pods-UnitTests-metadata.plist in Resources */ = {isa = PBXBuildFile; fileRef = 571BCCE1FA0A73FC26505F27 /* Pods-UnitTests-metadata.plist */; };
 		46660A27B04F4C7B78A7920F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 436D9431497525313B32E225 /* Foundation.framework */; };
 		4A552EF91CC7C8F8008C7298 /* TroposCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A552EEF1CC7C8F8008C7298 /* TroposCore.framework */; };
-		4A552F041CC7C8F8008C7298 /* TroposCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A552EEF1CC7C8F8008C7298 /* TroposCore.framework */; };
 		4A552F491CC7CB9B008C7298 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4A552F421CC7CB9B008C7298 /* Info.plist */; };
 		4A552F4B1CC7CB9B008C7298 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4A552F461CC7CB9B008C7298 /* Info.plist */; };
 		4A552F4D1CC7CBB2008C7298 /* TroposCore.h in Headers */ = {isa = PBXBuildFile; fileRef = 4A552F431CC7CB9B008C7298 /* TroposCore.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -92,6 +91,8 @@
 		9B35F8D49294C95354F26638 /* Pods-Tropos-metadata.plist in Resources */ = {isa = PBXBuildFile; fileRef = 734AAC0DB56096A9514A0647 /* Pods-Tropos-metadata.plist */; };
 		A11D71D31CD73697000EB4A3 /* Courier.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A11D71D21CD73697000EB4A3 /* Courier.framework */; };
 		A11D71D51CD73751000EB4A3 /* CourierClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11D71D41CD73751000EB4A3 /* CourierClient.swift */; };
+		A1FC9ED21CFEA23B00E62618 /* TroposCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A552EEF1CC7C8F8008C7298 /* TroposCore.framework */; };
+		A1FC9ED31CFEA23B00E62618 /* TroposCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4A552EEF1CC7C8F8008C7298 /* TroposCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		C2E44CDD1A3A38A2009CC844 /* TRLocationController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2E44CDC1A3A38A2009CC844 /* TRLocationController.m */; };
 		C2E44CE11A3A3C09009CC844 /* TRWeatherViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2E44CE01A3A3C09009CC844 /* TRWeatherViewController.m */; };
 		C2E44CE41A3A4273009CC844 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = C2E44CE61A3A4273009CC844 /* Localizable.strings */; };
@@ -132,12 +133,12 @@
 			remoteGlobalIDString = 45ADD324EABFD89F9E640007;
 			remoteInfo = Tropos;
 		};
-		4A552F021CC7C8F8008C7298 /* PBXContainerItemProxy */ = {
+		A1FC9ED41CFEA23B00E62618 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 198EF8739DFBDBC4FBC67D3B /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 4A552EEE1CC7C8F8008C7298;
-			remoteInfo = TroposCore;
+			remoteInfo = "TroposCore-iOS";
 		};
 /* End PBXContainerItemProxy section */
 
@@ -164,6 +165,17 @@
 				4AC287A51CBC3D820064F48A /* Quick.framework in Embed Carthage Frameworks */,
 			);
 			name = "Embed Carthage Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A1FC9ED61CFEA23B00E62618 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				A1FC9ED31CFEA23B00E62618 /* TroposCore.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
@@ -334,9 +346,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A1FC9ED21CFEA23B00E62618 /* TroposCore.framework in Frameworks */,
 				A11D71D31CD73697000EB4A3 /* Courier.framework in Frameworks */,
 				46660A27B04F4C7B78A7920F /* Foundation.framework in Frameworks */,
-				4A552F041CC7C8F8008C7298 /* TroposCore.framework in Frameworks */,
 				8E55CA903A39795581785ED4 /* libPods-Tropos.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -819,11 +831,12 @@
 				6D0F13551B4328C2001685BA /* Copy Carthage Frameworks */,
 				B7DE70105B59EDB7B1D6100E /* 📦 Embed Pods Frameworks */,
 				8F3D51D42744160EA1F9AAE2 /* 📦 Copy Pods Resources */,
+				A1FC9ED61CFEA23B00E62618 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				4A552F031CC7C8F8008C7298 /* PBXTargetDependency */,
+				A1FC9ED51CFEA23B00E62618 /* PBXTargetDependency */,
 			);
 			name = Tropos;
 			productName = CarlWeathers;
@@ -1255,15 +1268,15 @@
 			target = 45ADD324EABFD89F9E640007 /* Tropos */;
 			targetProxy = 4A552EFC1CC7C8F8008C7298 /* PBXContainerItemProxy */;
 		};
-		4A552F031CC7C8F8008C7298 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 4A552EEE1CC7C8F8008C7298 /* TroposCore-iOS */;
-			targetProxy = 4A552F021CC7C8F8008C7298 /* PBXContainerItemProxy */;
-		};
 		9BB8CE14790AABA30710CABC /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 45ADD324EABFD89F9E640007 /* Tropos */;
 			targetProxy = 2456BE753DC19DA06BBDACF6 /* PBXContainerItemProxy */;
+		};
+		A1FC9ED51CFEA23B00E62618 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4A552EEE1CC7C8F8008C7298 /* TroposCore-iOS */;
+			targetProxy = A1FC9ED41CFEA23B00E62618 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -1439,6 +1452,7 @@
 				COPY_PHASE_STRIP = YES;
 				DEFINES_MODULE = YES;
 				DSTROOT = /tmp/xcodeproj.dst;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
@@ -1533,6 +1547,7 @@
 				COPY_PHASE_STRIP = NO;
 				DEFINES_MODULE = YES;
 				DSTROOT = /tmp/xcodeproj.dst;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
