@@ -32,7 +32,6 @@ platform :ios do
     match(type: "appstore")
     increment_build_number
     gym(scheme: "Tropos")
-    increment_build_number
     deliver(force: true)
   end
 end
