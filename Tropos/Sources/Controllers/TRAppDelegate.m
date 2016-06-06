@@ -56,7 +56,7 @@
     RACSignal *notifications = [self.applicationController localWeatherNotification];
 
     [notifications subscribeNext:^(UILocalNotification *notification) {
-        [application scheduleLocalNotification:notification];
+        [application presentLocalNotificationNow:notification];
         completionHandler(UIBackgroundFetchResultNewData);
     } error:^(NSError *error) {
         completionHandler(UIBackgroundFetchResultFailed);
