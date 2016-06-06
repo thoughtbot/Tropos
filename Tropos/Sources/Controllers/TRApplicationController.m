@@ -40,7 +40,7 @@
     return [updatedConditions map:^(NSAttributedString *conditions) {
         UILocalNotification *notification = [[UILocalNotification alloc] init];
         notification.fireDate = [NSDate distantPast];
-        notification.alertTitle = NSLocalizedString(@"TodayWeatherForecast", "");
+        notification.alertTitle = @"Tropos";
         notification.alertBody = conditions.string;
         return notification;
     }];
