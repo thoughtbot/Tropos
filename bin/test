@@ -1,5 +1,4 @@
-#!/usr/bin/env bash
+#!/bin/sh
 
 set -eo pipefail
-
-xcodebuild test -workspace Tropos.xcworkspace -scheme Tropos -sdk iphonesimulator BUILD_ACTIVE_ARCH=NO | xcpretty -c
+bundle exec fastlane test

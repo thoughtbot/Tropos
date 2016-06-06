@@ -36,14 +36,11 @@
 
 - (RACSignal *)localWeatherNotification
 {
-    RACSignal *updatedConditions = [[self performBackgroundFetch] then:^{
-        return [self.weatherController.conditionsDescription take: 1];
-    }];
-
+    RACSignal *updatedConditions = self.weatherController.conditionsDescription;
     return [updatedConditions map:^(NSAttributedString *conditions) {
         UILocalNotification *notification = [[UILocalNotification alloc] init];
         notification.fireDate = [NSDate distantPast];
-        notification.alertTitle = NSLocalizedString(@"TodayWeatherForecast", "");
+        notification.alertTitle = @"Tropos";
         notification.alertBody = conditions.string;
         return notification;
     }];
@@ -56,6 +53,22 @@
     } else {
         [application setMinimumBackgroundFetchInterval:UIApplicationBackgroundFetchIntervalNever];
     }
+}
+
+- (void)subscribeToNotificationsWithDeviceToken:(NSData *)deviceToken
+{
+    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    NSString *formerChannelKey = @"CourierChannel";
+
+    NSString *channel = [[NSTimeZone localTimeZone] name];
+
+    NSString *formerChannel = [userDefaults stringForKey:formerChannelKey];
+    if (formerChannel && ![channel isEqualToString:formerChannel]) {
+        [self.courier unsubscribeFromChannel:formerChannel];
+    }
+    [self.courier subscribeToChannel:channel withToken:deviceToken];
+
+    [userDefaults setObject:channel forKey:formerChannelKey];
 }
 
 @end

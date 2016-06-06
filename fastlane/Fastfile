@@ -1,0 +1,75 @@
+require "dotenv"
+Dotenv.load("../.env")
+
+fastlane_version "1.89.0"
+
+default_platform :ios
+
+platform :ios do
+  before_all do
+    cocoapods
+    carthage(platform: "iOS")
+  end
+
+  desc "Runs all the tests"
+  lane :test do
+    scan(scheme: "Tropos")
+  end
+
+  desc "Submit a new Beta Build to Apple TestFlight"
+  desc "This will also make sure the profile is up to date"
+  lane :beta do
+    validate_env!
+    match(type: "appstore")
+    increment_build_number
+    gym(scheme: "Tropos")
+    pilot
+  end
+
+  desc "Deploy a new version to the App Store"
+  lane :appstore do
+    validate_env!
+    match(type: "appstore")
+    increment_build_number
+    gym(scheme: "Tropos")
+    deliver(force: true)
+  end
+end
+
+def validate_env!
+  username = ensure_deliver_username
+  match_url = ensure_match_url
+  if !username || !match_url
+    offer_to_write_env_file
+  end
+end
+
+def ensure_deliver_username
+  username = ENV["DELIVER_USERNAME"]
+  if !username || username.empty?
+    ENV["DELIVER_USERNAME"] = UI.input("Please provide your Apple ID username:")
+    ensure_deliver_username
+  end
+  username
+end
+
+def ensure_match_url
+  match_url = ENV["MATCH_GIT_URL"]
+  if !match_url || match_url.empty?
+    ENV["MATCH_GIT_URL"] = UI.input("Please provide the URL to your match repo:")
+    ensure_match_url
+  end
+  match_url
+end
+
+def offer_to_write_env_file
+  return unless UI.interactive?
+
+  if UI.confirm("Some environment variables were missing. "\
+      "Would you like to write them to a .env file?")
+    File.open("../.env", "w") do |file|
+      file.puts("DELIVER_USERNAME=#{ENV["DELIVER_USERNAME"]}")
+      file.puts("MATCH_GIT_URL=#{ENV["MATCH_GIT_URL"]}")
+    end
+  end
+end
