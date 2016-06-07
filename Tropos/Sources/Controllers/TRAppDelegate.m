@@ -43,11 +43,14 @@
 
 - (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken;
 {
+    NSLog(@"device token: %@", deviceToken);
     [self.applicationController subscribeToNotificationsWithDeviceToken:deviceToken];
 }
 
 - (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo fetchCompletionHandler:(nonnull void (^)(UIBackgroundFetchResult))completionHandler;
 {
+    NSLog(@"did receive remote notification: %@", userInfo);
+
     if (![userInfo[@"aps"][@"content-available"] isEqual: @1]) {
         completionHandler(UIBackgroundFetchResultNoData);
         return;
@@ -59,6 +62,7 @@
         [application presentLocalNotificationNow:notification];
         completionHandler(UIBackgroundFetchResultNewData);
     } error:^(NSError *error) {
+        NSLog(@"presenting local notification failed with: %@", error);
         completionHandler(UIBackgroundFetchResultFailed);
     }];
 }
