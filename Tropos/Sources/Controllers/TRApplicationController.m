@@ -36,7 +36,10 @@
 
 - (RACSignal *)localWeatherNotification
 {
-    RACSignal *updatedConditions = self.weatherController.conditionsDescription;
+    RACSignal *updatedConditions = [[self performBackgroundFetch] then:^{
+        return [self.weatherController.conditionsDescription take: 1];
+    }];
+
     return [updatedConditions map:^(NSAttributedString *conditions) {
         UILocalNotification *notification = [[UILocalNotification alloc] init];
         notification.fireDate = [NSDate distantPast];
@@ -64,8 +67,11 @@
 
     NSString *formerChannel = [userDefaults stringForKey:formerChannelKey];
     if (formerChannel && ![channel isEqualToString:formerChannel]) {
+        NSLog(@"unsubscribe from channel: %@", formerChannel);
         [self.courier unsubscribeFromChannel:formerChannel];
     }
+
+    NSLog(@"subscribe to channel: %@", channel);
     [self.courier subscribeToChannel:channel withToken:deviceToken];
 
     [userDefaults setObject:channel forKey:formerChannelKey];

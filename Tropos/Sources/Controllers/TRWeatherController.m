@@ -1,13 +1,14 @@
 @import CoreLocation;
 @import TroposCore;
 #import "RACSignal+TROperators.h"
+#import "TRAnalyticsController.h"
+#import "TRCommand.h"
+#import "TRForecastController.h"
+#import "TRGeocodeController.h"
+#import "TRLocationController.h"
+#import "TRSettingsController+TRObservation.h"
 #import "TRWeatherController.h"
 #import "TRWeatherUpdate+Analytics.h"
-#import "TRLocationController.h"
-#import "TRForecastController.h"
-#import "TRSettingsController+TRObservation.h"
-#import "TRGeocodeController.h"
-#import "TRAnalyticsController.h"
 
 @interface TRWeatherController ()
 
@@ -40,7 +41,7 @@
     self.unitSystemChanged = [[self.settingsController unitSystemChanged] replayLastLazily];
 
     @weakify(self)
-    self.updateWeatherCommand = [[RACCommand alloc] initWithSignalBlock:^RACSignal *(id input) {
+    self.updateWeatherCommand = [[TRCommand alloc] initWithSignalBlock:^RACSignal *(id input) {
         @strongify(self)
         return [[[[self.locationController requestAlwaysAuthorization] then:^RACSignal *{
             return [self.locationController updateCurrentLocation];
