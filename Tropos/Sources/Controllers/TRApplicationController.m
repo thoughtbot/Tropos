@@ -36,9 +36,27 @@
 
 - (RACSignal *)localWeatherNotification
 {
-    RACSignal *updatedConditions = [[self performBackgroundFetch] then:^{
-        return [self.weatherController.conditionsDescription take: 1];
-    }];
+    RACCommand *command = self.weatherController.updateWeatherCommand;
+    RACSignal *conditionsDescription = self.weatherController.conditionsDescription;
+
+    RACSignal *updatedConditions = [[[command execute:self]
+        catch:^(NSError *error) {
+            BOOL disabled = [error.domain isEqualToString:RACCommandErrorDomain] && error.code == RACCommandErrorNotEnabled;
+            if (!disabled) {
+                return [RACSignal error:error];
+            }
+
+            return [[command.executing
+                map:^(NSNumber *executing) {
+                    if (executing.boolValue) {
+                        return [conditionsDescription skip:1];
+                    } else {
+                        return conditionsDescription;
+                    }
+                }]
+                switchToLatest];
+        }]
+        take:1];
 
     return [updatedConditions map:^(NSAttributedString *conditions) {
         UILocalNotification *notification = [[UILocalNotification alloc] init];
