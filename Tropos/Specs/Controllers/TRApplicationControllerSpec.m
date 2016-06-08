@@ -79,7 +79,7 @@ describe(@"TRApplicationController", ^{
             NSData *deviceToken = [NSData new];
             [applicationController subscribeToNotificationsWithDeviceToken:deviceToken];
 
-            NSString *channel = [[NSTimeZone localTimeZone] name];
+            NSString *channel = [TRCourierClient channelNameForTimeZone:[NSTimeZone localTimeZone]];
             OCMVerify([courier subscribeToChannel:channel withToken:deviceToken]);
         });
 
@@ -88,7 +88,7 @@ describe(@"TRApplicationController", ^{
             TRApplicationController *applicationController = [TRApplicationController new];
             applicationController.courier = courier;
             NSTimeZone *initialTimeZone = [NSTimeZone timeZoneWithAbbreviation:@"CEST"];
-            NSString *expectedChannel = initialTimeZone.name;
+            NSString *expectedChannel = [TRCourierClient channelNameForTimeZone: initialTimeZone];
             NSData *deviceToken = [NSData new];
 
             inTimeZone(initialTimeZone, ^{

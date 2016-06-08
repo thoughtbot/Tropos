@@ -92,6 +92,7 @@
 		A11D71D31CD73697000EB4A3 /* Courier.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A11D71D21CD73697000EB4A3 /* Courier.framework */; };
 		A11D71D51CD73751000EB4A3 /* CourierClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11D71D41CD73751000EB4A3 /* CourierClient.swift */; };
 		A19A00DA1D06ADB600338426 /* TRCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = A19A00D91D06ADB600338426 /* TRCommand.m */; };
+		A1BBE84F1D07D2F900A9631A /* CourierClientSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1BBE84D1D07D2C500A9631A /* CourierClientSpec.swift */; };
 		A1FC9ECD1CFE935500E62618 /* CourierClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11D71D41CD73751000EB4A3 /* CourierClient.swift */; };
 		A1FC9ED21CFEA23B00E62618 /* TroposCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A552EEF1CC7C8F8008C7298 /* TroposCore.framework */; };
 		A1FC9ED31CFEA23B00E62618 /* TroposCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4A552EEF1CC7C8F8008C7298 /* TroposCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -303,6 +304,7 @@
 		A11D71D41CD73751000EB4A3 /* CourierClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CourierClient.swift; sourceTree = "<group>"; };
 		A19A00D81D06ADB600338426 /* TRCommand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRCommand.h; sourceTree = "<group>"; };
 		A19A00D91D06ADB600338426 /* TRCommand.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRCommand.m; sourceTree = "<group>"; };
+		A1BBE84D1D07D2C500A9631A /* CourierClientSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CourierClientSpec.swift; sourceTree = "<group>"; };
 		A1FC9ECE1CFE937900E62618 /* UnitTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UnitTests-Bridging-Header.h"; sourceTree = "<group>"; };
 		A6B1ADBC73A8A2EF7FB4E257 /* TRAppDelegate.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = TRAppDelegate.m; sourceTree = "<group>"; };
 		B1E75D271B6E8ADC007B03F9 /* sv */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = sv; path = sv.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -772,6 +774,7 @@
 			isa = PBXGroup;
 			children = (
 				E7B3B9261B34EDFE00BDD5A4 /* TRApplicationControllerSpec.m */,
+				A1BBE84D1D07D2C500A9631A /* CourierClientSpec.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -1246,6 +1249,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A1FC9ECD1CFE935500E62618 /* CourierClient.swift in Sources */,
+				A1BBE84F1D07D2F900A9631A /* CourierClientSpec.swift in Sources */,
 				E7B3B9271B34EDFE00BDD5A4 /* TRApplicationControllerSpec.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
