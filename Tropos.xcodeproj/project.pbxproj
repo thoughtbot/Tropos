@@ -91,6 +91,9 @@
 		9B35F8D49294C95354F26638 /* Pods-Tropos-metadata.plist in Resources */ = {isa = PBXBuildFile; fileRef = 734AAC0DB56096A9514A0647 /* Pods-Tropos-metadata.plist */; };
 		A11D71D31CD73697000EB4A3 /* Courier.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A11D71D21CD73697000EB4A3 /* Courier.framework */; };
 		A11D71D51CD73751000EB4A3 /* CourierClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11D71D41CD73751000EB4A3 /* CourierClient.swift */; };
+		A19A00DA1D06ADB600338426 /* TRCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = A19A00D91D06ADB600338426 /* TRCommand.m */; };
+		A1BBE84F1D07D2F900A9631A /* CourierClientSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1BBE84D1D07D2C500A9631A /* CourierClientSpec.swift */; };
+		A1FC9ECD1CFE935500E62618 /* CourierClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11D71D41CD73751000EB4A3 /* CourierClient.swift */; };
 		A1FC9ED21CFEA23B00E62618 /* TroposCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A552EEF1CC7C8F8008C7298 /* TroposCore.framework */; };
 		A1FC9ED31CFEA23B00E62618 /* TroposCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4A552EEF1CC7C8F8008C7298 /* TroposCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		C2E44CDD1A3A38A2009CC844 /* TRLocationController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2E44CDC1A3A38A2009CC844 /* TRLocationController.m */; };
@@ -299,6 +302,10 @@
 		986C425E5A2268D27FAE2FAA /* Prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = Prefix.pch; sourceTree = "<group>"; };
 		A11D71D21CD73697000EB4A3 /* Courier.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Courier.framework; path = Carthage/Build/iOS/Courier.framework; sourceTree = "<group>"; };
 		A11D71D41CD73751000EB4A3 /* CourierClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CourierClient.swift; sourceTree = "<group>"; };
+		A19A00D81D06ADB600338426 /* TRCommand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRCommand.h; sourceTree = "<group>"; };
+		A19A00D91D06ADB600338426 /* TRCommand.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRCommand.m; sourceTree = "<group>"; };
+		A1BBE84D1D07D2C500A9631A /* CourierClientSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CourierClientSpec.swift; sourceTree = "<group>"; };
+		A1FC9ECE1CFE937900E62618 /* UnitTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UnitTests-Bridging-Header.h"; sourceTree = "<group>"; };
 		A6B1ADBC73A8A2EF7FB4E257 /* TRAppDelegate.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = TRAppDelegate.m; sourceTree = "<group>"; };
 		B1E75D271B6E8ADC007B03F9 /* sv */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = sv; path = sv.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		B1E75D281B6E8ADC007B03F9 /* sv */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = sv; path = sv.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -448,6 +455,7 @@
 		4A0DD7531CCA97BB00E7A451 /* Support */ = {
 			isa = PBXGroup;
 			children = (
+				A1FC9ECE1CFE937900E62618 /* UnitTests-Bridging-Header.h */,
 			);
 			path = Support;
 			sourceTree = "<group>";
@@ -756,6 +764,8 @@
 				986C425E5A2268D27FAE2FAA /* Prefix.pch */,
 				22FE01C01AF3F5550085B494 /* Secrets.h */,
 				2853082980109C89B8F07D3C /* main.m */,
+				A19A00D81D06ADB600338426 /* TRCommand.h */,
+				A19A00D91D06ADB600338426 /* TRCommand.m */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -764,6 +774,7 @@
 			isa = PBXGroup;
 			children = (
 				E7B3B9261B34EDFE00BDD5A4 /* TRApplicationControllerSpec.m */,
+				A1BBE84D1D07D2C500A9631A /* CourierClientSpec.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -826,7 +837,6 @@
 				800364D174D6FAD56EBFE31C /* Frameworks */,
 				442A628001B45C7CDD01A96E /* Resources */,
 				CD82E5F062CDF04B4CEEC2B5 /* Warn for TODO and FIXME comments */,
-				C247D7F61A5F07A00032F747 /* Update Build Number */,
 				C2422E4B1A718BC800F72769 /* Hockey Run Script */,
 				6D0F13551B4328C2001685BA /* Copy Carthage Frameworks */,
 				B7DE70105B59EDB7B1D6100E /* 📦 Embed Pods Frameworks */,
@@ -1115,20 +1125,6 @@
 			shellPath = /bin/sh;
 			shellScript = "FILE=\"${SRCROOT}/HockeySDK-iOS/BuildAgent\"\nif [ -f \"$FILE\" ]; then\n    \"$FILE\"\nfi";
 		};
-		C247D7F61A5F07A00032F747 /* Update Build Number */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Update Build Number";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/bash;
-			shellScript = "branch=\"master\"\nbuildNumber=$(expr $(git rev-list $branch --count) - $(git rev-list HEAD..$branch --count))\necho \"Updating build number to $buildNumber using branch '$branch'\"\n/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $buildNumber\" \"${TARGET_BUILD_DIR}/${INFOPLIST_PATH}\"\n";
-		};
 		CD82E5F062CDF04B4CEEC2B5 /* Warn for TODO and FIXME comments */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -1217,6 +1213,7 @@
 				4D49554F1A8C29C30066F278 /* TRCircularProgressLayer.m in Sources */,
 				A11D71D51CD73751000EB4A3 /* CourierClient.swift in Sources */,
 				4D7389DF1A9890CD0039F13B /* UIScrollView+TRReactiveCocoa.m in Sources */,
+				A19A00DA1D06ADB600338426 /* TRCommand.m in Sources */,
 				4DC069CD1A95B8F800F3BCEB /* TRColorBackdropLayer.m in Sources */,
 				4A8163941CC830A400279952 /* TRSettingsController+TRObservation.m in Sources */,
 				4DDF65061AB3AC0C00909D67 /* TRWeatherController.m in Sources */,
@@ -1251,6 +1248,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A1FC9ECD1CFE935500E62618 /* CourierClient.swift in Sources */,
+				A1BBE84F1D07D2F900A9631A /* CourierClientSpec.swift in Sources */,
 				E7B3B9271B34EDFE00BDD5A4 /* TRApplicationControllerSpec.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1329,11 +1328,11 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 200;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 200;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -1364,11 +1363,11 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 200;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 200;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -1460,7 +1459,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = Tropos/Sources/Prefix.pch;
 				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
-				INFOPLIST_FILE = "$(SRCROOT)/Tropos/Resources/Other-Sources/Info.plist";
+				INFOPLIST_FILE = "Tropos/Resources/Other-Sources/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_CFLAGS = (
@@ -1471,6 +1470,7 @@
 					"-DNS_BLOCK_ASSERTIONS=1",
 					"$(inherited)",
 				);
+				OTHER_SWIFT_FLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.thoughtbot.carlweathers;
 				PRODUCT_NAME = Tropos;
 				PROVISIONING_PROFILE = "";
@@ -1503,6 +1503,7 @@
 				CLANG_WARN_SUSPICIOUS_IMPLICIT_CONVERSION = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
+				CURRENT_PROJECT_VERSION = 200;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -1533,6 +1534,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				RUN_CLANG_STATIC_ANALYZER = YES;
 				SDKROOT = iphoneos;
+				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Debug;
 		};
@@ -1561,9 +1563,10 @@
 					"$(inherited)",
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				INFOPLIST_FILE = "$(SRCROOT)/Tropos/Resources/Other-Sources/Info.plist";
+				INFOPLIST_FILE = "Tropos/Resources/Other-Sources/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_SWIFT_FLAGS = "-D DEBUG";
 				PRODUCT_BUNDLE_IDENTIFIER = com.thoughtbot.carlweathers;
 				PRODUCT_NAME = Tropos;
 				PROVISIONING_PROFILE = "";
@@ -1596,6 +1599,7 @@
 				CLANG_WARN_SUSPICIOUS_IMPLICIT_CONVERSION = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 200;
 				ENABLE_NS_ASSERTIONS = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -1619,6 +1623,7 @@
 				RUN_CLANG_STATIC_ANALYZER = YES;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Release;
 		};
@@ -1645,6 +1650,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "Tropos/Specs/Support/UnitTests-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
@@ -1669,6 +1675,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "Tropos/Specs/Support/UnitTests-Bridging-Header.h";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};

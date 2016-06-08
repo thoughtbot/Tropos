@@ -43,12 +43,14 @@
 
 - (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken;
 {
-    NSString *channel = [[NSTimeZone localTimeZone] name];
-    [self.courier subscribeToChannel:channel withToken:deviceToken];
+    NSLog(@"device token: %@", deviceToken);
+    [self.applicationController subscribeToNotificationsWithDeviceToken:deviceToken];
 }
 
 - (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo fetchCompletionHandler:(nonnull void (^)(UIBackgroundFetchResult))completionHandler;
 {
+    NSLog(@"did receive remote notification: %@", userInfo);
+
     if (![userInfo[@"aps"][@"content-available"] isEqual: @1]) {
         completionHandler(UIBackgroundFetchResultNoData);
         return;
@@ -57,9 +59,10 @@
     RACSignal *notifications = [self.applicationController localWeatherNotification];
 
     [notifications subscribeNext:^(UILocalNotification *notification) {
-        [application scheduleLocalNotification:notification];
+        [application presentLocalNotificationNow:notification];
         completionHandler(UIBackgroundFetchResultNewData);
     } error:^(NSError *error) {
+        NSLog(@"presenting local notification failed with: %@", error);
         completionHandler(UIBackgroundFetchResultFailed);
     }];
 }
@@ -78,11 +81,6 @@
 - (BOOL)isCurrentlyTesting
 {
     return [[NSUserDefaults standardUserDefaults] boolForKey:@"TRTesting"];
-}
-
-- (TRCourierClient *)courier;
-{
-    return self.applicationController.courier;
 }
 
 @end

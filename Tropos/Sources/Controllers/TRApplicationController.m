@@ -36,14 +36,32 @@
 
 - (RACSignal *)localWeatherNotification
 {
-    RACSignal *updatedConditions = [[self performBackgroundFetch] then:^{
-        return [self.weatherController.conditionsDescription take: 1];
-    }];
+    RACCommand *command = self.weatherController.updateWeatherCommand;
+    RACSignal *conditionsDescription = self.weatherController.conditionsDescription;
+
+    RACSignal *updatedConditions = [[[command execute:self]
+        catch:^(NSError *error) {
+            BOOL disabled = [error.domain isEqualToString:RACCommandErrorDomain] && error.code == RACCommandErrorNotEnabled;
+            if (!disabled) {
+                return [RACSignal error:error];
+            }
+
+            return [[command.executing
+                map:^(NSNumber *executing) {
+                    if (executing.boolValue) {
+                        return [conditionsDescription skip:1];
+                    } else {
+                        return conditionsDescription;
+                    }
+                }]
+                switchToLatest];
+        }]
+        take:1];
 
     return [updatedConditions map:^(NSAttributedString *conditions) {
         UILocalNotification *notification = [[UILocalNotification alloc] init];
         notification.fireDate = [NSDate distantPast];
-        notification.alertTitle = NSLocalizedString(@"TodayWeatherForecast", "");
+        notification.alertTitle = @"Tropos";
         notification.alertBody = conditions.string;
         return notification;
     }];
@@ -56,6 +74,26 @@
     } else {
         [application setMinimumBackgroundFetchInterval:UIApplicationBackgroundFetchIntervalNever];
     }
+}
+
+- (void)subscribeToNotificationsWithDeviceToken:(NSData *)deviceToken
+{
+    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    NSString *formerChannelKey = @"CourierChannel";
+
+    NSTimeZone *timeZone = [NSTimeZone localTimeZone];
+    NSString *channel = [TRCourierClient channelNameForTimeZone:timeZone];
+
+    NSString *formerChannel = [userDefaults stringForKey:formerChannelKey];
+    if (formerChannel && ![channel isEqualToString:formerChannel]) {
+        NSLog(@"unsubscribe from channel: %@", formerChannel);
+        [self.courier unsubscribeFromChannel:formerChannel];
+    }
+
+    NSLog(@"subscribe to channel: %@", channel);
+    [self.courier subscribeToChannel:channel withToken:deviceToken];
+
+    [userDefaults setObject:channel forKey:formerChannelKey];
 }
 
 @end
