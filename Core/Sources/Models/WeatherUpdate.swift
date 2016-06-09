@@ -98,8 +98,11 @@ public extension WeatherUpdate {
     }
 
     var yesterdaysTemperature: Temperature? {
-        let rawTemperature = yesterdaysConditionsJSON["temperature"] as? Int ?? 0
-        return Temperature(fahrenheitValue: rawTemperature)
+        let rawTemperature = yesterdaysConditionsJSON["currently"]?["temperature"]
+        guard let fahrenheitValue = rawTemperature as? Int else {
+            return .None
+        }
+        return Temperature(fahrenheitValue: fahrenheitValue)
     }
 
     var precipitationPercentage: Double {

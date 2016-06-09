@@ -57,5 +57,27 @@ final class WeatherUpdateSpec: QuickSpec {
                 }
             }
         }
+
+        describe("yesterdaysTemperature") {
+            it("returns yesterday's temperature") {
+                let yesterdaysConditions = weatherConditions(temperature: 70)
+                let update = WeatherUpdate(
+                    placemark: testPlacemark,
+                    currentConditionsJSON: [:],
+                    yesterdaysConditionsJSON: yesterdaysConditions
+                )
+                expect(update?.yesterdaysTemperature?.fahrenheitValue) == 70
+            }
+
+            it("returns .None if yesterday's temperature is unavailable") {
+
+                let update = WeatherUpdate(
+                    placemark: testPlacemark,
+                    currentConditionsJSON: [:],
+                    yesterdaysConditionsJSON: [:]
+                )
+                expect(update?.yesterdaysTemperature?.fahrenheitValue).to(beNil())
+            }
+        }
     }
 }
