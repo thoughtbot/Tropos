@@ -32,7 +32,7 @@ extension NSTimeZone: TimeZone {}
         instance.subscribeToChannel(channel, withToken: token)
     }
 
-    func unsubscribeFromChannel(channel: String) {
+    func unsubscribeFromChannel(channel: String, completionHandler: (NSError?) -> Void) {
         instance.unsubscribeFromChannel(channel)
     }
 }

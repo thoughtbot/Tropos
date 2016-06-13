@@ -87,7 +87,17 @@
     NSString *formerChannel = [userDefaults stringForKey:formerChannelKey];
     if (formerChannel && ![channel isEqualToString:formerChannel]) {
         NSLog(@"unsubscribe from channel: %@", formerChannel);
-        [self.courier unsubscribeFromChannel:formerChannel];
+        [[RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
+            [self.courier unsubscribeFromChannel:formerChannel completionHandler:^(NSError * _Nullable error) {
+                if (!error) {
+                    [subscriber sendCompleted];
+                } else {
+                    [subscriber sendError:error];
+                }
+            }];
+
+            return [RACDisposable disposableWithBlock:^{}];
+        }] retry];
     }
 
     NSLog(@"subscribe to channel: %@", channel);
