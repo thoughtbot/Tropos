@@ -39,7 +39,7 @@
     [self.window makeKeyAndVisible];
 
     if (!launchOptions[UIApplicationLaunchOptionsRemoteNotificationKey]) {
-        [self.applicationController performBackgroundFetch];
+        [self.applicationController updateWeather];
     }
 
     return YES;
@@ -47,7 +47,7 @@
 
 - (void)applicationWillEnterForeground:(UIApplication *)application
 {
-    [self.applicationController performBackgroundFetch];
+    [self.applicationController updateWeather];
 }
 
 - (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken;
@@ -78,7 +78,7 @@
 
 - (void)application:(UIApplication *)application performFetchWithCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler
 {
-    RACSignal *signal = [self.applicationController performBackgroundFetch];
+    RACSignal *signal = [self.applicationController updateWeather];
 
     [signal subscribeNext:^(id x) {
         completionHandler(UIBackgroundFetchResultNewData);

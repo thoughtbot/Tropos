@@ -64,7 +64,7 @@ describe(@"TRApplicationController", ^{
             TRApplicationController *applicationController = [TRApplicationController new];
             applicationController.weatherController.updateWeatherCommand = updateWeatherCommand;
 
-            [applicationController performBackgroundFetch];
+            [applicationController updateWeather];
 
             OCMVerify([updateWeatherCommand execute:applicationController]);
         });

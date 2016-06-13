@@ -29,17 +29,16 @@
     return self;
 }
 
-- (RACSignal *)performBackgroundFetch
+- (RACSignal *)updateWeather
 {
     return [self.weatherController.updateWeatherCommand execute:self];
 }
 
 - (RACSignal *)localWeatherNotification
 {
-    RACCommand *command = self.weatherController.updateWeatherCommand;
     RACSignal *conditionsDescription = self.weatherController.conditionsDescription;
 
-    RACSignal *updatedConditions = [[command execute:nil] then:^RACSignal *{
+    RACSignal *updatedConditions = [self.updateWeather then:^RACSignal *{
         return [conditionsDescription take:1];
     }];
 
