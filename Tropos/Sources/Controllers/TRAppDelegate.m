@@ -38,7 +38,16 @@
     self.window.rootViewController = self.applicationController.rootViewController;
     [self.window makeKeyAndVisible];
 
+    if (!launchOptions[UIApplicationLaunchOptionsRemoteNotificationKey]) {
+        [self.applicationController performBackgroundFetch];
+    }
+
     return YES;
+}
+
+- (void)applicationWillEnterForeground:(UIApplication *)application
+{
+    [self.applicationController performBackgroundFetch];
 }
 
 - (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken;

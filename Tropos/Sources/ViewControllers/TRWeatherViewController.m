@@ -61,19 +61,7 @@
         }];
     }];
 
-    @weakify(self)
-    [[[NSNotificationCenter defaultCenter] rac_addObserverForName:UIApplicationWillEnterForegroundNotification object:nil] subscribeNext:^(id x) {
-        @strongify(self)
-        [self.controller.updateWeatherCommand execute:self];
-    }];
-
     [self configureAnalytics];
-}
-
-- (void)viewDidAppear:(BOOL)animated
-{
-    [super viewDidAppear:animated];
-    [self.controller.updateWeatherCommand execute:self];
 }
 
 - (UIStatusBarStyle)preferredStatusBarStyle
