@@ -2,7 +2,6 @@
 @import TroposCore;
 #import "RACSignal+TROperators.h"
 #import "TRAnalyticsController.h"
-#import "TRCommand.h"
 #import "TRForecastController.h"
 #import "TRGeocodeController.h"
 #import "TRLocationController.h"
@@ -42,7 +41,7 @@
     self.unitSystemChanged = [[self.settingsController unitSystemChanged] replayLastLazily];
 
     @weakify(self)
-    self.updateWeatherCommand = [[TRCommand alloc] initWithSignalBlock:^RACSignal *(id input) {
+    self.updateWeatherCommand = [[RACCommand alloc] initWithSignalBlock:^RACSignal *(id input) {
         return [[UIApplication sharedApplication] tr_backgroundTaskWithSignal:^RACSignal *{
             @strongify(self)
             return [[[[self.locationController requestAlwaysAuthorization] then:^RACSignal *{
