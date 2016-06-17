@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		05805A8D2E279D1E4F3368B8 /* Pods-UnitTests-metadata.plist in Resources */ = {isa = PBXBuildFile; fileRef = 571BCCE1FA0A73FC26505F27 /* Pods-UnitTests-metadata.plist */; };
+		2AF412B1E290AFB95662FC23 /* Pods-Tropos-settings-metadata.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6CC8F544AD18438C09CEC3AD /* Pods-Tropos-settings-metadata.plist */; };
 		46660A27B04F4C7B78A7920F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 436D9431497525313B32E225 /* Foundation.framework */; };
 		4A552EF91CC7C8F8008C7298 /* TroposCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A552EEF1CC7C8F8008C7298 /* TroposCore.framework */; };
 		4A552F491CC7CB9B008C7298 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4A552F421CC7CB9B008C7298 /* Info.plist */; };
@@ -82,6 +83,7 @@
 		4DC069CD1A95B8F800F3BCEB /* TRColorBackdropLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DC069CC1A95B8F800F3BCEB /* TRColorBackdropLayer.m */; };
 		4DC716601A9B1D5B00BC4BD4 /* TRRefreshControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DC7165F1A9B1D5B00BC4BD4 /* TRRefreshControl.m */; };
 		4DDF65061AB3AC0C00909D67 /* TRWeatherController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DDF65051AB3AC0C00909D67 /* TRWeatherController.m */; };
+		5BD35672428A79CCD490AB28 /* Pods-UnitTests-settings-metadata.plist in Resources */ = {isa = PBXBuildFile; fileRef = 414C6701F7CAC4A423B6FE09 /* Pods-UnitTests-settings-metadata.plist */; };
 		5DA50AD91A82CAB300CAE666 /* DINNextLTPro-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5DA50AD81A82CAB300CAE666 /* DINNextLTPro-Light.otf */; };
 		6D0F135C1B432976001685BA /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D0F135A1B432976001685BA /* Nimble.framework */; };
 		6D0F135D1B432976001685BA /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D0F135B1B432976001685BA /* Quick.framework */; };
@@ -192,6 +194,7 @@
 		22FE01C01AF3F5550085B494 /* Secrets.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Secrets.h; sourceTree = "<group>"; };
 		27A5B8BB9F1CED0B64ACCC20 /* Pods-Tropos.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tropos.release.xcconfig"; path = "Pods/Target Support Files/Pods-Tropos/Pods-Tropos.release.xcconfig"; sourceTree = "<group>"; };
 		2853082980109C89B8F07D3C /* main.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		414C6701F7CAC4A423B6FE09 /* Pods-UnitTests-settings-metadata.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; name = "Pods-UnitTests-settings-metadata.plist"; path = "build/Tropos.xcarchive/Products/Applications/Tropos.app/Settings.bundle/Pods-UnitTests-settings-metadata.plist"; sourceTree = "<group>"; };
 		436D9431497525313B32E225 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		449386DA1B5044EE00766EC9 /* pl-PL */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pl-PL"; path = "pl-PL.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		449386DB1B5044EE00766EC9 /* pl-PL */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pl-PL"; path = "pl-PL.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
@@ -295,6 +298,7 @@
 		5DC78109457DAFE306854F5B /* libPods-UnitTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-UnitTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		650F157E1B3DD256004B01B2 /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		65685FF21B3D299C0054BA1A /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/Localizable.strings; sourceTree = "<group>"; };
+		6CC8F544AD18438C09CEC3AD /* Pods-Tropos-settings-metadata.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; name = "Pods-Tropos-settings-metadata.plist"; path = "build/Tropos.xcarchive/Products/Applications/Tropos.app/Settings.bundle/Pods-Tropos-settings-metadata.plist"; sourceTree = "<group>"; };
 		6D0F135A1B432976001685BA /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
 		6D0F135B1B432976001685BA /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
 		734AAC0DB56096A9514A0647 /* Pods-Tropos-metadata.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; name = "Pods-Tropos-metadata.plist"; path = "Pods/Pods-Tropos-metadata.plist"; sourceTree = "<group>"; };
@@ -406,6 +410,8 @@
 				8AC74E321865FC3EE1BBCAA3 /* Pods-Tropos-settings-metadata.plist */,
 				571BCCE1FA0A73FC26505F27 /* Pods-UnitTests-metadata.plist */,
 				53AB1C3D15474F1BDC3868F6 /* Pods-UnitTests-settings-metadata.plist */,
+				6CC8F544AD18438C09CEC3AD /* Pods-Tropos-settings-metadata.plist */,
+				414C6701F7CAC4A423B6FE09 /* Pods-UnitTests-settings-metadata.plist */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -978,6 +984,7 @@
 				6D0F135F1B43298E001685BA /* Quick.framework in Resources */,
 				05805A8D2E279D1E4F3368B8 /* Pods-UnitTests-metadata.plist in Resources */,
 				D565DEFF2AB8D09C8C2D043C /* Pods-UnitTests-settings-metadata.plist in Resources */,
+				5BD35672428A79CCD490AB28 /* Pods-UnitTests-settings-metadata.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -997,6 +1004,7 @@
 				4D9CA35F1A5CABDD009E24DD /* Settings.bundle in Resources */,
 				9B35F8D49294C95354F26638 /* Pods-Tropos-metadata.plist in Resources */,
 				CD0522FB5D92C0517EB54750 /* Pods-Tropos-settings-metadata.plist in Resources */,
+				2AF412B1E290AFB95662FC23 /* Pods-Tropos-settings-metadata.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1328,11 +1336,11 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 201;
+				CURRENT_PROJECT_VERSION = 202;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 201;
+				DYLIB_CURRENT_VERSION = 202;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -1363,11 +1371,11 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 201;
+				CURRENT_PROJECT_VERSION = 202;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 201;
+				DYLIB_CURRENT_VERSION = 202;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -1503,7 +1511,7 @@
 				CLANG_WARN_SUSPICIOUS_IMPLICIT_CONVERSION = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
-				CURRENT_PROJECT_VERSION = 201;
+				CURRENT_PROJECT_VERSION = 202;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -1599,7 +1607,7 @@
 				CLANG_WARN_SUSPICIOUS_IMPLICIT_CONVERSION = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 201;
+				CURRENT_PROJECT_VERSION = 202;
 				ENABLE_NS_ASSERTIONS = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
