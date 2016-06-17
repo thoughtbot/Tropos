@@ -4,7 +4,6 @@
 #import "TRAppDelegate.h"
 #import "TRAnalyticsController.h"
 #import "TRApplicationController.h"
-#import "TRWeatherController.h"
 #import "Secrets.h"
 
 @implementation TRAppDelegate

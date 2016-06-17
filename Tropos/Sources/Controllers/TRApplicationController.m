@@ -19,12 +19,13 @@
     self = [super init];
     if (!self) { return nil; }
 
-    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
-    self.rootViewController = [storyboard instantiateInitialViewController];
-
     self.weatherController = [TRWeatherController new];
     self.locationController = [TRLocationController new];
     self.courier = [[TRCourierClient alloc] initWithApiToken: TRCourierAPIToken];
+
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
+    self.rootViewController = [storyboard instantiateInitialViewController];
+    self.rootViewController.controller = self.weatherController;
 
     return self;
 }

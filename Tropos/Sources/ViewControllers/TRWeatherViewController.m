@@ -1,6 +1,5 @@
 #import "TRWeatherViewController.h"
 #import "TRWeatherController.h"
-#import "TRWeatherController.h"
 #import "TRDailyForecastView.h"
 #import "TRRefreshControl.h"
 #import "TRAnalyticsController.h"
@@ -8,7 +7,6 @@
 
 @interface TRWeatherViewController () <UIScrollViewDelegate>
 
-@property (nonatomic) TRWeatherController *controller;
 @property (strong, nonatomic) IBOutlet TRRefreshControl *refreshControl;
 
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
@@ -35,7 +33,6 @@
 {
     [super viewDidLoad];
 
-    self.controller = [TRWeatherController new];
     RAC(self.cityLabel, text) = self.controller.locationName;
     RAC(self.lastUpdatedLabel, text) = self.controller.status;
     RAC(self.conditionsImageView, image) = self.controller.conditionsImage;
