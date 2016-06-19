@@ -98,7 +98,11 @@ describe(@"TRApplicationController", ^{
                 [applicationController subscribeToNotificationsWithDeviceToken:deviceToken];
             });
 
-            OCMVerify([courier unsubscribeFromChannel:expectedChannel]);
+            XCTestExpectation *expectation = [self expectationWithDescription:@"Unsubscribed from channel"];
+            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 1 * NSEC_PER_SEC), dispatch_get_main_queue(), ^{
+                OCMVerify([courier unsubscribeFromChannel:expectedChannel completionHandler: [OCMArg any]]);
+                [expectation fulfill];
+            });
         });
     });
 });

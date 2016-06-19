@@ -79,12 +79,12 @@
 - (void)subscribeToNotificationsWithDeviceToken:(NSData *)deviceToken
 {
     NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
-    NSString *formerChannelKey = @"CourierChannel";
+    NSString *courierChannelKey = @"CourierChannel";
 
     NSTimeZone *timeZone = [NSTimeZone localTimeZone];
     NSString *channel = [TRCourierClient channelNameForTimeZone:timeZone];
 
-    NSString *formerChannel = [userDefaults stringForKey:formerChannelKey];
+    NSString *formerChannel = [userDefaults stringForKey:courierChannelKey];
     if (formerChannel && ![channel isEqualToString:formerChannel]) {
         NSLog(@"unsubscribe from channel: %@", formerChannel);
         [[RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
@@ -103,7 +103,7 @@
     NSLog(@"subscribe to channel: %@", channel);
     [self.courier subscribeToChannel:channel withToken:deviceToken];
 
-    [userDefaults setObject:channel forKey:formerChannelKey];
+    [userDefaults setObject:channel forKey:courierChannelKey];
 }
 
 @end
