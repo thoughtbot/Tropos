@@ -10,7 +10,7 @@ but that doesn't answer the question of "What does it feel like outside?".
 Tropos answers this by relating the current conditions
 to conditions at the same time yesterday.
 
-[![Download on the App Store](http://troposweather.com/assets/images/app-store-badge-5eb1a238.svg)](https://itunes.apple.com/us/app/tropos-weather-forecasts-for/id955209376?mt=8)
+[Download on the App Store](https://itunes.apple.com/us/app/tropos-weather-forecasts-for/id955209376?mt=8)
 
 Setup
 -----
