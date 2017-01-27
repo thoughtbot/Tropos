@@ -1,5 +1,6 @@
-<img height="30" width="30" src="http://troposweather.com/assets/images/icon-491180cb.png" alt="Tropos Logo"> Tropos
-===============
+Tropos
+======
+
 [![Circle CI](https://circleci.com/gh/thoughtbot/Tropos.svg?style=svg)](https://circleci.com/gh/thoughtbot/Tropos)
 
 Weather and forecasts for humans.
