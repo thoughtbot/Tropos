@@ -7,7 +7,7 @@ private let TRLatestWeatherUpdateFileName = "TRLatestWeatherUpdateFile"
 
     public init(fileName: String, inDirectory directory: NSURL) {
         let url = directory.URLByAppendingPathComponent(fileName)
-        guard let path = url.path else {
+        guard let path = url?.path else {
             fatalError("not a valid path: \(url)")
         }
         cachePath = path
