@@ -11,7 +11,7 @@ private var testCachesDirectory: NSURL {
 }
 
 private var testWeatherUpdateURL: NSURL {
-    return testCachesDirectory.URLByAppendingPathComponent(testCacheFileName)
+    return testCachesDirectory.URLByAppendingPathComponent(testCacheFileName)!
 }
 
 private func resetFilesystem() {

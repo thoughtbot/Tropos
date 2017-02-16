@@ -15,6 +15,7 @@
 
 - (void)awakeFromNib
 {
+    [super awakeFromNib];
     [[NSBundle mainBundle] loadNibNamed:NSStringFromClass([self class]) owner:self options:nil];
     [self addSubview:self.contentView];
 }
