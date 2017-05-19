@@ -1,3 +1,0 @@
-@interface TRNavigationBar : UINavigationBar
-
-@end

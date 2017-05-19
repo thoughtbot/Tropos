@@ -1,3 +1,0 @@
-@interface TRImageView : UIImageView
-
-@end

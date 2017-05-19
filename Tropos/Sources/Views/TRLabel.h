@@ -1,3 +1,0 @@
-@interface TRLabel : UILabel
-
-@end
