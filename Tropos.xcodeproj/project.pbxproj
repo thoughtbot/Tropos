@@ -1,0 +1,423 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BA55B2B61ECF89E400FBBDF4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA55B2B51ECF89E400FBBDF4 /* AppDelegate.swift */; };
+		BA55B2B81ECF89E400FBBDF4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA55B2B71ECF89E400FBBDF4 /* ViewController.swift */; };
+		BA55B2BB1ECF89E400FBBDF4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA55B2B91ECF89E400FBBDF4 /* Main.storyboard */; };
+		BA55B2BD1ECF89E400FBBDF4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA55B2BC1ECF89E400FBBDF4 /* Assets.xcassets */; };
+		BA55B2C01ECF89E400FBBDF4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA55B2BE1ECF89E400FBBDF4 /* LaunchScreen.storyboard */; };
+		BA55B2CB1ECF89E400FBBDF4 /* TroposTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA55B2CA1ECF89E400FBBDF4 /* TroposTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BA55B2C71ECF89E400FBBDF4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BA55B2AA1ECF89E400FBBDF4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BA55B2B11ECF89E400FBBDF4;
+			remoteInfo = Tropos;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		BA55B2B21ECF89E400FBBDF4 /* Tropos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tropos.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BA55B2B51ECF89E400FBBDF4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		BA55B2B71ECF89E400FBBDF4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		BA55B2BA1ECF89E400FBBDF4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		BA55B2BC1ECF89E400FBBDF4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BA55B2BF1ECF89E400FBBDF4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		BA55B2C11ECF89E400FBBDF4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BA55B2C61ECF89E400FBBDF4 /* TroposTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TroposTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BA55B2CA1ECF89E400FBBDF4 /* TroposTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TroposTests.swift; sourceTree = "<group>"; };
+		BA55B2CC1ECF89E400FBBDF4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BA55B2AF1ECF89E400FBBDF4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BA55B2C31ECF89E400FBBDF4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		BA55B2A91ECF89E400FBBDF4 = {
+			isa = PBXGroup;
+			children = (
+				BA55B2B41ECF89E400FBBDF4 /* Tropos */,
+				BA55B2C91ECF89E400FBBDF4 /* TroposTests */,
+				BA55B2B31ECF89E400FBBDF4 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		BA55B2B31ECF89E400FBBDF4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BA55B2B21ECF89E400FBBDF4 /* Tropos.app */,
+				BA55B2C61ECF89E400FBBDF4 /* TroposTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BA55B2B41ECF89E400FBBDF4 /* Tropos */ = {
+			isa = PBXGroup;
+			children = (
+				BA55B2B51ECF89E400FBBDF4 /* AppDelegate.swift */,
+				BA55B2B71ECF89E400FBBDF4 /* ViewController.swift */,
+				BA55B2B91ECF89E400FBBDF4 /* Main.storyboard */,
+				BA55B2BC1ECF89E400FBBDF4 /* Assets.xcassets */,
+				BA55B2BE1ECF89E400FBBDF4 /* LaunchScreen.storyboard */,
+				BA55B2C11ECF89E400FBBDF4 /* Info.plist */,
+			);
+			path = Tropos;
+			sourceTree = "<group>";
+		};
+		BA55B2C91ECF89E400FBBDF4 /* TroposTests */ = {
+			isa = PBXGroup;
+			children = (
+				BA55B2CA1ECF89E400FBBDF4 /* TroposTests.swift */,
+				BA55B2CC1ECF89E400FBBDF4 /* Info.plist */,
+			);
+			path = TroposTests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BA55B2B11ECF89E400FBBDF4 /* Tropos */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BA55B2CF1ECF89E400FBBDF4 /* Build configuration list for PBXNativeTarget "Tropos" */;
+			buildPhases = (
+				BA55B2AE1ECF89E400FBBDF4 /* Sources */,
+				BA55B2AF1ECF89E400FBBDF4 /* Frameworks */,
+				BA55B2B01ECF89E400FBBDF4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Tropos;
+			productName = Tropos;
+			productReference = BA55B2B21ECF89E400FBBDF4 /* Tropos.app */;
+			productType = "com.apple.product-type.application";
+		};
+		BA55B2C51ECF89E400FBBDF4 /* TroposTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BA55B2D21ECF89E400FBBDF4 /* Build configuration list for PBXNativeTarget "TroposTests" */;
+			buildPhases = (
+				BA55B2C21ECF89E400FBBDF4 /* Sources */,
+				BA55B2C31ECF89E400FBBDF4 /* Frameworks */,
+				BA55B2C41ECF89E400FBBDF4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BA55B2C81ECF89E400FBBDF4 /* PBXTargetDependency */,
+			);
+			name = TroposTests;
+			productName = TroposTests;
+			productReference = BA55B2C61ECF89E400FBBDF4 /* TroposTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BA55B2AA1ECF89E400FBBDF4 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = thoughtbot;
+				TargetAttributes = {
+					BA55B2B11ECF89E400FBBDF4 = {
+						CreatedOnToolsVersion = 8.3.2;
+						ProvisioningStyle = Automatic;
+					};
+					BA55B2C51ECF89E400FBBDF4 = {
+						CreatedOnToolsVersion = 8.3.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = BA55B2B11ECF89E400FBBDF4;
+					};
+				};
+			};
+			buildConfigurationList = BA55B2AD1ECF89E400FBBDF4 /* Build configuration list for PBXProject "Tropos" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = BA55B2A91ECF89E400FBBDF4;
+			productRefGroup = BA55B2B31ECF89E400FBBDF4 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BA55B2B11ECF89E400FBBDF4 /* Tropos */,
+				BA55B2C51ECF89E400FBBDF4 /* TroposTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BA55B2B01ECF89E400FBBDF4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BA55B2C01ECF89E400FBBDF4 /* LaunchScreen.storyboard in Resources */,
+				BA55B2BD1ECF89E400FBBDF4 /* Assets.xcassets in Resources */,
+				BA55B2BB1ECF89E400FBBDF4 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BA55B2C41ECF89E400FBBDF4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BA55B2AE1ECF89E400FBBDF4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BA55B2B81ECF89E400FBBDF4 /* ViewController.swift in Sources */,
+				BA55B2B61ECF89E400FBBDF4 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BA55B2C21ECF89E400FBBDF4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BA55B2CB1ECF89E400FBBDF4 /* TroposTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BA55B2C81ECF89E400FBBDF4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BA55B2B11ECF89E400FBBDF4 /* Tropos */;
+			targetProxy = BA55B2C71ECF89E400FBBDF4 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		BA55B2B91ECF89E400FBBDF4 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BA55B2BA1ECF89E400FBBDF4 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		BA55B2BE1ECF89E400FBBDF4 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BA55B2BF1ECF89E400FBBDF4 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		BA55B2CD1ECF89E400FBBDF4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		BA55B2CE1ECF89E400FBBDF4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BA55B2D01ECF89E400FBBDF4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Tropos/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.thoughtbot.Tropos;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		BA55B2D11ECF89E400FBBDF4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Tropos/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.thoughtbot.Tropos;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		BA55B2D31ECF89E400FBBDF4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = TroposTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.thoughtbot.TroposTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Tropos.app/Tropos";
+			};
+			name = Debug;
+		};
+		BA55B2D41ECF89E400FBBDF4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = TroposTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.thoughtbot.TroposTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Tropos.app/Tropos";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BA55B2AD1ECF89E400FBBDF4 /* Build configuration list for PBXProject "Tropos" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BA55B2CD1ECF89E400FBBDF4 /* Debug */,
+				BA55B2CE1ECF89E400FBBDF4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BA55B2CF1ECF89E400FBBDF4 /* Build configuration list for PBXNativeTarget "Tropos" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BA55B2D01ECF89E400FBBDF4 /* Debug */,
+				BA55B2D11ECF89E400FBBDF4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		BA55B2D21ECF89E400FBBDF4 /* Build configuration list for PBXNativeTarget "TroposTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BA55B2D31ECF89E400FBBDF4 /* Debug */,
+				BA55B2D41ECF89E400FBBDF4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BA55B2AA1ECF89E400FBBDF4 /* Project object */;
+}
