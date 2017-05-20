@@ -8,9 +8,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     return window
   }()
 
-  func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+  func application(_ application: UIApplication,
+                   didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
     window?.makeKeyAndVisible()
     return true
   }
 }
-
