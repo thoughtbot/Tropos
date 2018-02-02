@@ -1,10 +1,10 @@
 import Foundation
 
 struct AcknowledgementsParser {
-    let propertyList: [String: AnyObject]
+    let propertyList: [String: Any]
 
-    init?(fileURL: NSURL) {
-        if let plist = NSDictionary(contentsOfURL: fileURL) as? [String: AnyObject] {
+    init?(fileURL: URL) {
+        if let plist = NSDictionary(contentsOf: fileURL) as? [String: Any] {
             propertyList = plist
         } else {
             return nil
@@ -19,8 +19,8 @@ struct AcknowledgementsParser {
         }
     }
 
-    private func displayStringForAcknowledgement(acknowledgement: [String: String]) -> String {
-        let appendNewline: String -> String = { "\($0)\n" }
+    private func displayStringForAcknowledgement(_ acknowledgement: [String: String]) -> String {
+        let appendNewline: (String) -> String = { "\($0)\n" }
         let title = acknowledgement["Title"].map(appendNewline) ?? ""
         let footer = acknowledgement["FooterText"].map(appendNewline) ?? ""
         return title + footer

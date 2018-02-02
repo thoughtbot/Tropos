@@ -1,6 +1,6 @@
 import Foundation
 
 public enum UnitSystem: Int {
-    case Metric
-    case Imperial
+    case metric
+    case imperial
 }

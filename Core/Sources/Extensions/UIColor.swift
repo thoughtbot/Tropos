@@ -2,7 +2,7 @@ import UIKit
 
 extension UIColor {
     public static var defaultTextColor: UIColor {
-        return .whiteColor()
+        return .white
     }
 
     public static var lighterTextColor: UIColor {

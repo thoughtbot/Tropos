@@ -1,7 +1,7 @@
 import Foundation
 
 public enum TemperatureComparison: String, CustomStringConvertible {
-    case Same, Hotter, Warmer, Cooler, Colder
+    case same, hotter, warmer, cooler, colder
 
     public var description: String {
         return rawValue
@@ -13,8 +13,8 @@ public enum TemperatureComparison: String, CustomStringConvertible {
 }
 
 private enum TemperatureLimit: Int {
-    case Hotter = 32
-    case Colder = 75
+    case hotter = 32
+    case colder = 75
 }
 
 func -(lhs: Temperature, rhs: Temperature) -> Temperature {
@@ -40,18 +40,18 @@ func -(lhs: Temperature, rhs: Temperature) -> Temperature {
         self.celsiusValue = celsiusValue
     }
     
-    public func temperatureDifferenceFrom(temperature: Temperature) -> Temperature {
+    public func temperatureDifferenceFrom(_ temperature: Temperature) -> Temperature {
         return self - temperature
     }
 
-    public func comparedTo(temperature: Temperature) -> TemperatureComparison {
+    public func comparedTo(_ temperature: Temperature) -> TemperatureComparison {
         let diff = fahrenheitValue - temperature.fahrenheitValue
         switch diff {
-        case _ where diff >= 10 && fahrenheitValue > TemperatureLimit.Hotter.rawValue: return .Hotter
-        case _ where diff > 0: return .Warmer
-        case _ where diff == 0: return .Same
-        case _ where diff > -10 || fahrenheitValue > TemperatureLimit.Colder.rawValue: return .Cooler
-        default: return .Colder
+        case _ where diff >= 10 && fahrenheitValue > TemperatureLimit.hotter.rawValue: return .hotter
+        case _ where diff > 0: return .warmer
+        case _ where diff == 0: return .same
+        case _ where diff > -10 || fahrenheitValue > TemperatureLimit.colder.rawValue: return .cooler
+        default: return .colder
         }
     }
     

@@ -3,8 +3,8 @@ import CoreLocation
 import Quick
 import Nimble
 
-private func weatherConditions(temperature temperature: Int = 90, precipitationProbability: String? = nil, precipitationType: String? = "rain") -> [String: AnyObject] {
-    var data: [String: AnyObject] = [
+private func weatherConditions(temperature: Int = 90, precipitationProbability: String? = nil, precipitationType: String? = "rain") -> [String: Any] {
+    var data: [String: Int] = [
         "temperatureMin": 50,
         "temperatureMax": 60,
     ]

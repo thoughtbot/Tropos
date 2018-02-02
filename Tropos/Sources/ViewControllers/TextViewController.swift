@@ -7,7 +7,7 @@ class TextViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        textView.contentInset = UIEdgeInsetsZero
+        textView.contentInset = UIEdgeInsets.zero
         textView.textContainerInset = UIEdgeInsets(
             top: 20.0,
             left: 20.0,
@@ -15,10 +15,10 @@ class TextViewController: UIViewController {
             right: 20.0
         )
         textView.font = UIFont.defaultRegularFont(size: 14)
-        textView.textColor = .lightTextColor()
+        textView.textColor = .lightText
     }
 
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         textView.text = text
     }

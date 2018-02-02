@@ -1,51 +1,51 @@
 import Foundation
 
 public enum TimeOfDay {
-    case Morning
-    case Day
-    case Afternoon
-    case Night
+    case morning
+    case day
+    case afternoon
+    case night
 }
 
-public extension NSCalendar {
-    func timeOfDay(forDate date: NSDate) -> TimeOfDay {
-        let components = self.components(.Hour, fromDate: date)
+public extension Calendar {
+    func timeOfDay(forDate date: Date) -> TimeOfDay {
+        let components = self.dateComponents([.hour], from: date)
 
-        if components.hour < 4 {
-            return .Night
-        } else if components.hour < 9 {
-            return .Morning
-        } else if components.hour < 14 {
-            return .Day
-        } else if components.hour < 17 {
-            return .Afternoon
+        if components.hour! < 4 {
+            return .night
+        } else if components.hour! < 9 {
+            return .morning
+        } else if components.hour! < 14 {
+            return .day
+        } else if components.hour! < 17 {
+            return .afternoon
         } else {
-            return .Night
+            return .night
         }
     }
 
-    func localizedTimeOfDay(forDate date: NSDate) -> String {
+    func localizedTimeOfDay(forDate date: Date) -> String {
         switch timeOfDay(forDate: date) {
-        case .Night:
+        case .night:
             return TroposCoreLocalizedString("Tonight")
-        case .Morning:
+        case .morning:
             return TroposCoreLocalizedString("ThisMorning")
-        case .Day:
+        case .day:
             return TroposCoreLocalizedString("Today")
-        case .Afternoon:
+        case .afternoon:
             return TroposCoreLocalizedString("ThisAfternoon")
         }
     }
 
-    func localizedTimeOfYesterday(relativeToDate date: NSDate) -> String {
+    func localizedTimeOfYesterday(relativeToDate date: Date) -> String {
         switch timeOfDay(forDate: date) {
-        case .Night:
+        case .night:
             return TroposCoreLocalizedString("LastNight")
-        case .Morning:
+        case .morning:
             return TroposCoreLocalizedString("YesterdayMorning")
-        case .Day:
+        case .day:
             return TroposCoreLocalizedString("Yesterday")
-        case .Afternoon:
+        case .afternoon:
             return TroposCoreLocalizedString("YesterdayAfternoon")
         }
     }

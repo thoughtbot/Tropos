@@ -8,7 +8,7 @@ extension NSTimeZone: TimeZone {}
 @objc(TRCourierClient) final class CourierClient: NSObject {
     private let instance: Courier
 
-    class func channelNameForTimeZone(timeZone: TimeZone) -> String {
+    class func channelNameForTimeZone(_ timeZone: TimeZone) -> String {
         let seconds = timeZone.secondsFromGMT
         let sign = seconds < 0 ? "minus" : "plus"
         let hours = abs(seconds) / 3600
@@ -28,11 +28,11 @@ extension NSTimeZone: TimeZone {}
         instance = Courier(apiToken: apiToken, environment: environment)
     }
 
-    func subscribeToChannel(channel: String, withToken token: NSData) {
-        instance.subscribeToChannel(channel, withToken: token)
+    func subscribeToChannel(_ channel: String, withToken token: Data) {
+        instance.subscribe(toChannel: channel, withToken: token)
     }
 
-    func unsubscribeFromChannel(channel: String) {
-        instance.unsubscribeFromChannel(channel)
+    func unsubscribeFromChannel(_ channel: String) {
+        instance.unsubscribe(fromChannel: channel)
     }
 }

@@ -12,24 +12,24 @@ enum SettingsTableViewControllerSegueIdentifier: String {
 }
 
 enum Section: Int {
-    case UnitSystem
-    case Info
-    case About
+    case unitSystem
+    case info
+    case about
 }
 
 enum UnitSystemSection: Int {
-    case Metric
-    case Imperial
+    case metric
+    case imperial
 }
 
 enum InfoSection: Int {
-    case PrivacyPolicy
-    case Acknowledgements
-    case Forecast
+    case privacyPolicy
+    case acknowledgements
+    case forecast
 }
 
 enum AboutSection: Int {
-    case Thoughtbot
+    case thoughtbot
 }
 
 class SettingsTableViewController: UITableViewController {
@@ -44,35 +44,35 @@ class SettingsTableViewController: UITableViewController {
           self?.tableView.checkCellAtIndexPath(indexPath)
         }
 
-        thoughtbotImageView.tintColor = .lightTextColor()
-        thoughtbotImageView.image = thoughtbotImageView.image?.imageWithRenderingMode(
-          .AlwaysTemplate
+        thoughtbotImageView.tintColor = .lightText
+        thoughtbotImageView.image = thoughtbotImageView.image?.withRenderingMode(
+          .alwaysTemplate
         )
 
-        NSNotificationCenter.defaultCenter().addObserverForName(
-          UIApplicationWillResignActiveNotification,
-          object: .None,
-          queue: .None
+        NotificationCenter.default.addObserver(
+          forName: .UIApplicationWillResignActive,
+          object: nil,
+          queue: nil
         ) { [weak self] _ in
           guard let selectedIndexPath = self?.tableView.indexPathForSelectedRow else { return }
-          self?.tableView.deselectRowAtIndexPath(selectedIndexPath, animated: true)
+          self?.tableView.deselectRow(at: selectedIndexPath, animated: true)
         }
     }
 
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         tableView.checkCellAtIndexPath(indexPathForUnitSystem(settingsController.unitSystem))
     }
 
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         switch SettingsTableViewControllerSegueIdentifier(identifier: segue.identifier) {
           case .PrivacyPolicy?:
-              let webViewController = segue.destinationViewController as? WebViewController
-              webViewController?.URL = NSURL(string: "http://www.troposweather.com/privacy/")!
+              let webViewController = segue.destination as? WebViewController
+              webViewController?.url = URL(string: "http://www.troposweather.com/privacy/")!
           case .Acknowledgements?:
-              let textViewController = segue.destinationViewController as? TextViewController
-              let fileURL = NSBundle.mainBundle().URLForResource(
-                "Pods-Tropos-settings-metadata",
+              let textViewController = segue.destination as? TextViewController
+              let fileURL = Bundle.main.url(
+                forResource: "Pods-Tropos-settings-metadata",
                 withExtension: "plist"
               )
               let parser = fileURL.flatMap { AcknowledgementsParser(fileURL: $0) }
@@ -83,77 +83,77 @@ class SettingsTableViewController: UITableViewController {
     }
 
     override func tableView(
-      tableView: UITableView,
-      didSelectRowAtIndexPath
-      indexPath: NSIndexPath
+      _ tableView: UITableView,
+      didSelectRowAt
+      indexPath: IndexPath
     ) {
         switch (indexPath.section, indexPath.row) {
-        case (Section.UnitSystem.rawValue, _):
-            tableView.deselectRowAtIndexPath(indexPath, animated: true)
+        case (Section.unitSystem.rawValue, _):
+            tableView.deselectRow(at: indexPath, animated: true)
             tableView.uncheckCellsInSection(indexPath.section)
             selectUnitSystemAtIndexPath(indexPath)
-        case (Section.Info.rawValue, InfoSection.Forecast.rawValue):
-            UIApplication.sharedApplication().openURL(NSURL(string: "https://forecast.io")!)
-        case (Section.About.rawValue, AboutSection.Thoughtbot.rawValue):
-            UIApplication.sharedApplication().openURL(NSURL(string: "https://thoughtbot.com")!)
+        case (Section.info.rawValue, InfoSection.forecast.rawValue):
+            UIApplication.shared.openURL(URL(string: "https://forecast.io")!)
+        case (Section.about.rawValue, AboutSection.thoughtbot.rawValue):
+            UIApplication.shared.openURL(URL(string: "https://thoughtbot.com")!)
         default: break
         }
     }
 
     override func tableView(
-      tableView: UITableView,
+      _ tableView: UITableView,
       willDisplayHeaderView view: UIView,
       forSection section: Int
     ) {
         if let headerView = view as? UITableViewHeaderFooterView {
             headerView.textLabel?.font = .defaultLightFont(size: 13)
-            headerView.textLabel?.textColor = .lightTextColor()
+            headerView.textLabel?.textColor = .lightText
         }
     }
 
     override func tableView(
-      tableView: UITableView,
+      _ tableView: UITableView,
       titleForHeaderInSection section: Int
     ) -> String? {
         switch section {
-        case Section.About.rawValue: return appVersionString()
+        case Section.about.rawValue: return appVersionString()
         default: return super.tableView(tableView, titleForHeaderInSection: section)
         }
     }
 
     private func appVersionString() -> String? {
-        let bundle = NSBundle.mainBundle()
+        let bundle = Bundle.main
         guard let infoDictionary = bundle.infoDictionary as? [String: String] else {
-          return .None
+          return .none
         }
 
-        guard let version = infoDictionary["CFBundleShortVersionString"] else { return .None }
-        guard let buildNumber = infoDictionary["CFBundleVersion"] else { return .None }
+        guard let version = infoDictionary["CFBundleShortVersionString"] else { return .none }
+        guard let buildNumber = infoDictionary["CFBundleVersion"] else { return .none }
 
-        return "Tropos \(version) (\(buildNumber))".uppercaseString
+        return "Tropos \(version) (\(buildNumber))".uppercased()
 
     }
 
-    private func selectUnitSystemAtIndexPath(indexPath: NSIndexPath) {
+    private func selectUnitSystemAtIndexPath(_ indexPath: IndexPath) {
         if let system = UnitSystem(rawValue: indexPath.row) {
             settingsController.unitSystem = system
         }
     }
 
-    private func indexPathForUnitSystem(unitSystem: UnitSystem) -> NSIndexPath {
-        return NSIndexPath(forRow: unitSystem.rawValue, inSection: 0)
+    private func indexPathForUnitSystem(_ unitSystem: UnitSystem) -> IndexPath {
+        return IndexPath(row: unitSystem.rawValue, section: 0)
     }
 }
 
 extension UITableView {
-    func checkCellAtIndexPath(indexPath: NSIndexPath) {
-        cellForRowAtIndexPath(indexPath)?.accessoryType = .Checkmark
+    func checkCellAtIndexPath(_ indexPath: IndexPath) {
+        cellForRow(at: indexPath)?.accessoryType = .checkmark
     }
 
-    func uncheckCellsInSection(section: Int) {
-        for index in 0 ..< numberOfRowsInSection(section) {
-            let indexPath = NSIndexPath(forRow: index, inSection: section)
-            cellForRowAtIndexPath(indexPath)?.accessoryType = .None
+    func uncheckCellsInSection(_ section: Int) {
+        for index in 0 ..< numberOfRows(inSection: section) {
+            let indexPath = IndexPath(row: index, section: section)
+            cellForRow(at: indexPath)?.accessoryType = .none
         }
     }
 }

@@ -1,44 +1,44 @@
 import Foundation
 
 @objc(TRSettingsController) public final class SettingsController: NSObject {
-    private let locale: NSLocale
-    private let userDefaults: NSUserDefaults
+    private let locale: Locale
+    private let userDefaults: UserDefaults
 
     public var unitSystem: UnitSystem {
         get {
-            let rawUnitSystem = userDefaults.integerForKey(TRSettingsUnitSystemKey)
+            let rawUnitSystem = userDefaults.integer(forKey: TRSettingsUnitSystemKey)
             return UnitSystem(rawValue: rawUnitSystem)!
         }
         set {
-            userDefaults.setInteger(newValue.rawValue, forKey: TRSettingsUnitSystemKey)
+            userDefaults.set(newValue.rawValue, forKey: TRSettingsUnitSystemKey)
         }
     }
 
     public var unitSystemChanged: ((UnitSystem) -> Void)?
 
-    public init(locale: NSLocale, userDefaults: NSUserDefaults) {
+    public init(locale: Locale, userDefaults: UserDefaults) {
         self.locale = locale
         self.userDefaults = userDefaults
 
         super.init()
 
-        NSNotificationCenter.defaultCenter().addObserver(
+        NotificationCenter.default.addObserver(
             self,
             selector: #selector(userDefaultsDidChange(_:)),
-            name: NSUserDefaultsDidChangeNotification,
+            name: UserDefaults.didChangeNotification,
             object: userDefaults)
     }
 
-    func userDefaultsDidChange(notification: NSNotification) {
+    func userDefaultsDidChange(_ notification: Notification) {
         unitSystemChanged?(unitSystem)
     }
 
-    public convenience init(locale: NSLocale) {
-        self.init(locale: locale, userDefaults: .standardUserDefaults())
+    public convenience init(locale: Locale) {
+        self.init(locale: locale, userDefaults: .standard)
     }
 
     public convenience override init() {
-        self.init(locale: .autoupdatingCurrentLocale())
+        self.init(locale: .autoupdatingCurrent)
     }
 
     public func registerSettings() {
@@ -47,14 +47,13 @@ import Foundation
     }
 
     private func registerUnitSystem() {
-        let localeUsesMetric = locale.objectForKey(NSLocaleUsesMetricSystem)?.boolValue ?? false
-        let unitSystem: UnitSystem = localeUsesMetric ? .Metric : .Imperial
-        userDefaults.registerDefaults([TRSettingsUnitSystemKey: unitSystem.rawValue])
+        let unitSystem: UnitSystem = locale.usesMetricSystem ? .metric : .imperial
+        userDefaults.register(defaults: [TRSettingsUnitSystemKey: unitSystem.rawValue])
     }
 
     private func registerLastVersion() {
-        if let version = NSBundle.mainBundle().versionNumber {
-            userDefaults.registerDefaults([TRSettingsLastVersionKey: version])
+        if let version = Bundle.main.versionNumber {
+            userDefaults.register(defaults: [TRSettingsLastVersionKey: version])
         }
     }
 }

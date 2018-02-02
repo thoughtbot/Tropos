@@ -1,8 +1,8 @@
 import UIKit
 
 @objc(TRWeatherViewModel) public final class WeatherViewModel: NSObject {
-    private let weatherUpdate: WeatherUpdate
-    private let dateFormatter: RelativeDateFormatter
+    fileprivate let weatherUpdate: WeatherUpdate
+    fileprivate let dateFormatter: RelativeDateFormatter
 
     public init(weatherUpdate: WeatherUpdate, dateFormatter: RelativeDateFormatter) {
         self.weatherUpdate = weatherUpdate
@@ -18,7 +18,7 @@ public extension WeatherViewModel {
     var locationName: String {
         return [weatherUpdate.city, weatherUpdate.state].lazy
             .flatMap { $0 }
-            .joinWithSeparator(", ")
+            .joined(separator: ", ")
     }
 
     var updatedDateString: String {
@@ -26,7 +26,7 @@ public extension WeatherViewModel {
     }
 
     var conditionsImage: UIImage? {
-        return weatherUpdate.conditionsDescription.flatMap { UIImage(named: $0, inBundle: .troposBundle, compatibleWithTraitCollection: nil) }
+        return weatherUpdate.conditionsDescription.flatMap { UIImage(named: $0, in: .troposBundle, compatibleWith: nil) }
     }
 
     var conditionsDescription: NSAttributedString {
@@ -60,15 +60,15 @@ public extension WeatherViewModel {
     var temperatureDescription: NSAttributedString {
         let formatter = TemperatureFormatter()
         let temperatures = [weatherUpdate.currentHigh, weatherUpdate.currentTemperature, weatherUpdate.currentLow]
-        let temperatureString = temperatures.lazy.map(formatter.stringFromTemperature).joinWithSeparator(" / ")
+        let temperatureString = temperatures.lazy.map(formatter.stringFromTemperature).joined(separator: " / ")
 
         let attributedString = NSMutableAttributedString(string: temperatureString)
         let comparison = weatherUpdate.currentTemperature.comparedTo(weatherUpdate.yesterdaysTemperature!)
         let difference = weatherUpdate.currentTemperature.temperatureDifferenceFrom(weatherUpdate.yesterdaysTemperature!)
 
-        let rangeOfFirstSlash = (temperatureString as NSString).rangeOfString("/")
-        let rangeOfLastSlash = (temperatureString as NSString).rangeOfString("/", options: .BackwardsSearch)
-        let start = rangeOfFirstSlash.location.successor()
+        let rangeOfFirstSlash = (temperatureString as NSString).range(of: "/")
+        let rangeOfLastSlash = (temperatureString as NSString).range(of: "/", options: .backwards)
+        let start = (rangeOfFirstSlash.location + 1)
         let range = NSRange(location: start, length: rangeOfLastSlash.location - start)
         attributedString.setTextColor(colorForTemperatureComparison(comparison, difference: difference.fahrenheitValue), forRange: range)
 
@@ -81,23 +81,23 @@ public extension WeatherViewModel {
 }
 
 private extension WeatherViewModel {
-    func colorForTemperatureComparison(comparison: TemperatureComparison, difference: Int) -> UIColor {
+    func colorForTemperatureComparison(_ comparison: TemperatureComparison, difference: Int) -> UIColor {
         let color: UIColor
 
         switch comparison {
-        case .Same:
+        case .same:
             color = .defaultTextColor
-        case .Colder:
+        case .colder:
             color = .coldColor
-        case .Cooler:
+        case .cooler:
             color = .coolerColor
-        case .Hotter:
+        case .hotter:
             color = .hotColor
-        case .Warmer:
+        case .warmer:
             color = .warmerColor
         }
 
-        if comparison == .Cooler || comparison == .Warmer {
+        if comparison == .cooler || comparison == .warmer {
             let amount = CGFloat(min(abs(difference), 10)) / 10.0
             let lighterAmount = min(1 - amount, 0.8)
             return color.lighten(by: lighterAmount)

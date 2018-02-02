@@ -1,8 +1,8 @@
 import UIKit
 
 @objc(TRDailyForecastViewModel) public final class DailyForecastViewModel: NSObject {
-    private let dailyForecast: DailyForecast
-    private let temperatureFormatter: TemperatureFormatter
+    fileprivate let dailyForecast: DailyForecast
+    fileprivate let temperatureFormatter: TemperatureFormatter
 
     public init(dailyForecast: DailyForecast, temperatureFormatter: TemperatureFormatter) {
         self.dailyForecast = dailyForecast
@@ -16,13 +16,13 @@ import UIKit
 
 public extension DailyForecastViewModel {
     var dayOfWeek: String {
-        let formatter = NSDateFormatter()
+        let formatter = DateFormatter()
         formatter.dateFormat = "ccc"
-        return formatter.stringFromDate(dailyForecast.date)
+        return formatter.string(from: dailyForecast.date)
     }
 
     var conditionsImage: UIImage? {
-        return UIImage(named: dailyForecast.conditionsDescription, inBundle: .troposBundle, compatibleWithTraitCollection: nil)
+        return UIImage(named: dailyForecast.conditionsDescription, in: .troposBundle, compatibleWith: nil)
     }
 
     var highTemperature: String {

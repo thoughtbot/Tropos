@@ -962,6 +962,7 @@
 				TargetAttributes = {
 					45ADD324EABFD89F9E640007 = {
 						DevelopmentTeam = 8E7TQ638ZD;
+						LastSwiftMigration = 0830;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
 								enabled = 1;
@@ -974,6 +975,7 @@
 					4A552EEE1CC7C8F8008C7298 = {
 						CreatedOnToolsVersion = 7.3;
 						DevelopmentTeam = 8E7TQ638ZD;
+						LastSwiftMigration = 0830;
 					};
 					4A552EF71CC7C8F8008C7298 = {
 						CreatedOnToolsVersion = 7.3;
@@ -1388,6 +1390,7 @@
 				PRODUCT_NAME = TroposCore;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -1422,6 +1425,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.thoughtbot.TroposCore;
 				PRODUCT_NAME = TroposCore;
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -1519,6 +1523,7 @@
 				PUBLIC_HEADERS_FOLDER_PATH = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SWIFT_OBJC_BRIDGING_HEADER = "Tropos/Sources/Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -1617,6 +1622,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_OBJC_BRIDGING_HEADER = "Tropos/Sources/Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};

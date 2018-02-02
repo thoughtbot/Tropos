@@ -3,11 +3,11 @@ import UIKit
 class WebViewController: UIViewController, UIWebViewDelegate {
     @IBOutlet weak var webView: UIWebView!
 
-    var URL = NSURL()
+    var url = URL(string: "about:blank")!
 
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        webView.loadRequest(NSURLRequest(URL: URL))
+        webView.loadRequest(URLRequest(url: url))
         webView.scrollView.contentInset = UIEdgeInsets(
             top: 20.0,
             left: 20.0,
@@ -16,26 +16,26 @@ class WebViewController: UIViewController, UIWebViewDelegate {
         )
     }
 
-    @IBAction func share(sender: UIBarButtonItem) {
+    @IBAction func share(_ sender: UIBarButtonItem) {
         let activityViewController = UIActivityViewController(
-            activityItems: [URL],
+            activityItems: [url],
             applicationActivities: nil
         )
-        presentViewController(activityViewController, animated: true, completion: nil)
+        present(activityViewController, animated: true, completion: nil)
     }
 
-    func webViewDidStartLoad(webView: UIWebView) {
+    func webViewDidStartLoad(_ webView: UIWebView) {
         navigationItem.rightBarButtonItem = .activityIndicatorBarButtonItem()
     }
 
-    func webViewDidFinishLoad(webView: UIWebView) {
+    func webViewDidFinishLoad(_ webView: UIWebView) {
         navigationItem.rightBarButtonItem = nil
     }
 }
 
 extension UIBarButtonItem {
     static func activityIndicatorBarButtonItem() -> UIBarButtonItem {
-        let activityIndicatorView = UIActivityIndicatorView(activityIndicatorStyle: .White)
+        let activityIndicatorView = UIActivityIndicatorView(activityIndicatorStyle: .white)
         activityIndicatorView.startAnimating()
         return UIBarButtonItem(customView: activityIndicatorView)
     }

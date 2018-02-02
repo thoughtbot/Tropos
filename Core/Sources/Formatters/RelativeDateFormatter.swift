@@ -1,38 +1,38 @@
 import Foundation
 
 public struct RelativeDateFormatter {
-    private let calendar: NSCalendar
-    private let dateFormatter: NSDateFormatter
+    private let calendar: Calendar
+    private let dateFormatter: DateFormatter
 
-    public init(calendar: NSCalendar = .currentCalendar()) {
+    public init(calendar: Calendar = .current) {
         self.calendar = calendar
-        self.dateFormatter = NSDateFormatter()
+        self.dateFormatter = DateFormatter()
         self.dateFormatter.doesRelativeDateFormatting = true
     }
 
-    public func localizedStringFromDate(date: NSDate) -> String {
+    public func localizedStringFromDate(_ date: Date) -> String {
         let timeString = timeStringFromDate(date)
 
         if let dateString = dateStringFromDate(date) {
             let format = TroposCoreLocalizedString("UpdatedAtDateAndTime")
-            return NSString.localizedStringWithFormat(format, dateString, timeString) as String
+            return String.localizedStringWithFormat(format, dateString, timeString)
         } else {
             let format = TroposCoreLocalizedString("UpdatedAtTime")
-            return NSString.localizedStringWithFormat(format, timeString) as String
+            return String.localizedStringWithFormat(format, timeString)
         }
     }
 
-    private func dateStringFromDate(date: NSDate) -> String? {
-        let components = calendar.components([.Day, .Hour, .Minute, .Second], fromDate: date, toDate: NSDate(), options: [])
+    private func dateStringFromDate(_ date: Date) -> String? {
+        let components = calendar.dateComponents([.day, .hour, .minute, .second], from: date, to: Date())
         guard components.day == 0 else { return nil }
-        dateFormatter.dateStyle = .ShortStyle
-        dateFormatter.timeStyle = .NoStyle
-        return dateFormatter.stringFromDate(date)
+        dateFormatter.dateStyle = .short
+        dateFormatter.timeStyle = .none
+        return dateFormatter.string(from: date)
     }
 
-    private func timeStringFromDate(date: NSDate) -> String {
-        dateFormatter.dateStyle = .NoStyle
-        dateFormatter.timeStyle = .ShortStyle
-        return dateFormatter.stringFromDate(date)
+    private func timeStringFromDate(_ date: Date) -> String {
+        dateFormatter.dateStyle = .none
+        dateFormatter.timeStyle = .short
+        return dateFormatter.string(from: date)
     }
 }

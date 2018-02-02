@@ -1,3 +1,3 @@
-github "Quick/Nimble" "v4.1.0"
-github "Quick/Quick" "v0.9.3"
-github "thoughtbot/courier-ios" "v0.2.0"
+github "Quick/Nimble" "v7.0.3"
+github "Quick/Quick" "v1.2.0"
+github "thoughtbot/courier-ios" "b5a2cff8323ca81ea5cc9b1589330bceae640777"

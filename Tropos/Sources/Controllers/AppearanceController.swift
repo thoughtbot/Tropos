@@ -14,6 +14,6 @@ import TroposCore
             NSFontAttributeName: UIFont.defaultLightFont(size: 17),
             NSForegroundColorAttributeName: UIColor.lighterTextColor
         ]
-        UIBarButtonItem.appearance().setTitleTextAttributes(attributes, forState: .Normal)
+        UIBarButtonItem.appearance().setTitleTextAttributes(attributes, for: .normal)
     }
 }

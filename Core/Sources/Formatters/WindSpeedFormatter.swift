@@ -15,8 +15,8 @@ public struct WindSpeedFormatter {
         let abbreviatedSpeedUnit: String
         let speed: Double
 
-        if unitSystem == .Metric {
-            if case "CA"? = NSLocale.currentLocale().objectForKey(NSLocaleCountryCode) as? String {
+        if unitSystem == .metric {
+            if Locale.current.regionCode == "CA" {
                 abbreviatedSpeedUnit = "km/h"
                 speed = kilometersPerHourFromMilesPerHour(windSpeed)
             } else {
@@ -31,11 +31,11 @@ public struct WindSpeedFormatter {
         return String(format: "%.0f %@ %@", speed, abbreviatedSpeedUnit, cardinalDirection.localizedAbbreviation)
     }
 
-    private func kilometersPerHourFromMilesPerHour(mph: Double) -> Double {
+    private func kilometersPerHourFromMilesPerHour(_ mph: Double) -> Double {
         return mph * 1.60934
     }
 
-    private func metersPerSecondFromMilesPerHour(mph: Double) -> Double {
+    private func metersPerSecondFromMilesPerHour(_ mph: Double) -> Double {
         return mph * 0.44704
     }
 }

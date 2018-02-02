@@ -8,11 +8,11 @@ extension NSAttributedString {
 
 extension NSAttributedString {
     var font: UIFont? {
-        return attribute(NSFontAttributeName, atIndex: 0, effectiveRange: nil) as? UIFont
+        return attribute(NSFontAttributeName, at: 0, effectiveRange: nil) as? UIFont
     }
 
     var textColor: UIColor? {
-        return attribute(NSForegroundColorAttributeName, atIndex: 0, effectiveRange: nil) as? UIColor
+        return attribute(NSForegroundColorAttributeName, at: 0, effectiveRange: nil) as? UIColor
     }
 }
 
@@ -43,12 +43,12 @@ extension NSMutableAttributedString {
         }
     }
 
-    func setTextColor(color: UIColor, forRange range: NSRange) {
+    func setTextColor(_ color: UIColor, forRange range: NSRange) {
         setAttributes([NSForegroundColorAttributeName: color], range: range)
     }
 
-    func setTextColor(color: UIColor, forSubstring substring: String) {
-        let range = (string as NSString).rangeOfString(substring)
+    func setTextColor(_ color: UIColor, forSubstring substring: String) {
+        let range = (string as NSString).range(of: substring)
         setTextColor(color, forRange: range)
     }
 }

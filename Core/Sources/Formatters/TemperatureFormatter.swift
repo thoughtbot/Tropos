@@ -5,8 +5,8 @@ public struct TemperatureFormatter {
         self.unitSystem = unitSystem
     }
 
-    public func stringFromTemperature(temperature: Temperature) -> String {
-        let usesMetricSystem = unitSystem == .Metric
+    public func stringFromTemperature(_ temperature: Temperature) -> String {
+        let usesMetricSystem = unitSystem == .metric
         let rawTemperature = usesMetricSystem ? temperature.celsiusValue : temperature.fahrenheitValue
         return String(format: "%.f°", Double(rawTemperature))
     }

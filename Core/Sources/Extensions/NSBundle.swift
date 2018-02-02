@@ -1,12 +1,12 @@
 import Foundation
 
-extension NSBundle {
-    static var troposBundle: NSBundle {
-        return NSBundle(forClass: TroposBundleClass.self)
+extension Bundle {
+    static var troposBundle: Bundle {
+        return Bundle(for: TroposBundleClass.self)
     }
 
     var versionNumber: String? {
-        return objectForInfoDictionaryKey(kCFBundleVersionKey as String) as? String
+        return object(forInfoDictionaryKey: kCFBundleVersionKey as String) as? String
     }
 }
 
