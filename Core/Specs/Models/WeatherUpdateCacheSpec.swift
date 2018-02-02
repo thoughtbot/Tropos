@@ -4,19 +4,19 @@ import Nimble
 
 private let testCacheFileName = "TestWeatherUpdate"
 
-private var testCachesDirectory: NSURL {
-    return NSFileManager.defaultManager()
-        .URLsForDirectory(.DocumentDirectory, inDomains: .UserDomainMask)
+private var testCachesDirectory: URL {
+    return FileManager.default
+        .urls(for: .documentDirectory, in: .userDomainMask)
         .first!
 }
 
-private var testWeatherUpdateURL: NSURL {
-    return testCachesDirectory.URLByAppendingPathComponent(testCacheFileName)!
+private var testWeatherUpdateURL: URL {
+    return testCachesDirectory.appendingPathComponent(testCacheFileName)
 }
 
 private func resetFilesystem() {
     do {
-        try NSFileManager.defaultManager().removeItemAtURL(testWeatherUpdateURL)
+        try FileManager.default.removeItem(at: testWeatherUpdateURL)
     } catch {}
 }
 
@@ -33,7 +33,7 @@ final class WeatherUpdateCacheSpec: QuickSpec {
 
                     cache.archiveWeatherUpdate(update)
 
-                    expect(NSFileManager.defaultManager().isReadableFileAtPath(testWeatherUpdateURL.path!)).to(beTrue())
+                    expect(FileManager.default.isReadableFile(atPath: testWeatherUpdateURL.path)).to(beTrue())
                 }
             }
 
@@ -55,7 +55,7 @@ final class WeatherUpdateCacheSpec: QuickSpec {
 
                 it("caches the date") {
                     let cache = WeatherUpdateCache(fileName: testCacheFileName, inDirectory: testCachesDirectory)
-                    let date = NSDate(timeIntervalSince1970: 0)
+                    let date = Date(timeIntervalSince1970: 0)
                     let update = WeatherUpdate(placemark: testPlacemark, currentConditionsJSON: [:], yesterdaysConditionsJSON: [:], date: date)!
 
                     cache.archiveWeatherUpdate(update)

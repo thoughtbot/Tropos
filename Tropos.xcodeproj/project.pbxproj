@@ -979,7 +979,11 @@
 					};
 					4A552EF71CC7C8F8008C7298 = {
 						CreatedOnToolsVersion = 7.3;
+						LastSwiftMigration = 0830;
 						TestTargetID = 45ADD324EABFD89F9E640007;
+					};
+					AA349281EBCAE02432E93D8E = {
+						LastSwiftMigration = 0830;
 					};
 				};
 			};
@@ -1457,6 +1461,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.thoughtbot.TroposCoreSpecs;
 				PRODUCT_NAME = TroposCoreSpecs;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -1483,6 +1488,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = com.thoughtbot.TroposCoreSpecs;
 				PRODUCT_NAME = TroposCoreSpecs;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -1702,6 +1708,7 @@
 				SKIP_INSTALL = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "Tropos/Specs/Support/UnitTests-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -1726,6 +1733,7 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "Tropos/Specs/Support/UnitTests-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};

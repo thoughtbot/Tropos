@@ -9,24 +9,24 @@ final class SettingsControllerSpec: QuickSpec {
                 beforeEach(resetUserDefaults)
                 afterEach(resetUserDefaults)
 
-                it("returns the correct value in an imperial locale") {
-                    let controller = SettingsController(locale: NSLocale(localeIdentifier: "en_US"))
+                fit("returns the correct value in an imperial locale") {
+                    let controller = SettingsController(locale: Locale(identifier: "en_US"))
                     controller.registerSettings()
-                    expect(controller.unitSystem) == UnitSystem.Imperial
+                    expect(controller.unitSystem) == UnitSystem.imperial
                 }
 
                 it("returns the correct value in a metric locale") {
-                    let controller = SettingsController(locale: NSLocale(localeIdentifier: "en_AU"))
+                    let controller = SettingsController(locale: Locale(identifier: "en_AU"))
                     controller.registerSettings()
-                    expect(controller.unitSystem) == UnitSystem.Metric
+                    expect(controller.unitSystem) == UnitSystem.metric
                 }
             }
 
             describe("migration") {
                 it("converts from a string unit system representation to an integer") {
-                    NSUserDefaults.standardUserDefaults().setObject("1", forKey: TRSettingsUnitSystemKey)
+                    UserDefaults.standard.set("1", forKey: TRSettingsUnitSystemKey)
                     let controller = SettingsController()
-                    expect(controller.unitSystem) == UnitSystem.Imperial
+                    expect(controller.unitSystem) == UnitSystem.imperial
                 }
             }
         }
@@ -34,9 +34,9 @@ final class SettingsControllerSpec: QuickSpec {
 }
 
 private func resetUserDefaults() {
-    let defaults = NSUserDefaults.standardUserDefaults()
+    let defaults = UserDefaults.standard
 
     defaults.dictionaryRepresentation()
         .keys
-        .forEach(defaults.removeObjectForKey)
+        .forEach(defaults.removeObject)
 }

@@ -3,8 +3,8 @@ import CoreLocation
 import Quick
 import Nimble
 
-private func weatherConditions(temperature: Int = 90, precipitationProbability: String? = nil, precipitationType: String? = "rain") -> [String: Any] {
-    var data: [String: Int] = [
+private func weatherConditions(_ temperature: Int = 90, precipitationProbability: String? = nil, precipitationType: String? = "rain") -> [String: Any] {
+    var data: [String: Any] = [
         "temperatureMin": 50,
         "temperatureMax": 60,
     ]
@@ -27,13 +27,13 @@ final class WeatherUpdateSpec: QuickSpec {
         describe("TRWeatherUpdate") {
             context("currentTemp is higher than currentHigh") {
                 it("updates currentHigh to match") {
-                    let conditions = weatherConditions(temperature: 70)
+                    let conditions = weatherConditions(70)
                     let update = WeatherUpdate(placemark: testPlacemark, currentConditionsJSON: conditions, yesterdaysConditionsJSON: [:])
                     expect(update?.currentHigh.fahrenheitValue) == 70
                 }
 
                 it("updates currentLow to match") {
-                    let conditions = weatherConditions(temperature: 40)
+                    let conditions = weatherConditions(40)
                     let update = WeatherUpdate(placemark: testPlacemark, currentConditionsJSON: conditions, yesterdaysConditionsJSON: [:])
                     expect(update?.currentLow.fahrenheitValue) == 40
                 }
@@ -60,7 +60,7 @@ final class WeatherUpdateSpec: QuickSpec {
 
         describe("yesterdaysTemperature") {
             it("returns yesterday's temperature") {
-                let yesterdaysConditions = weatherConditions(temperature: 70)
+                let yesterdaysConditions = weatherConditions(70)
                 let update = WeatherUpdate(
                     placemark: testPlacemark,
                     currentConditionsJSON: [:],

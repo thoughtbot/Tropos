@@ -5,8 +5,8 @@ import Nimble
 final class DailyForecastViewModelSpec: QuickSpec {
     override func spec() {
         var testForecast: DailyForecast {
-            return DailyForecast(JSON: [
-                "time": NSDate(ISO8601String: "2016-04-18")!.timeIntervalSince1970,
+            return DailyForecast(json: [
+                "time": Date(iso8601String: "2016-04-18")!.timeIntervalSince1970,
                 "icon": "clear-day",
                 "temperatureMin": 50,
                 "temperatureMax": 75,
@@ -20,17 +20,17 @@ final class DailyForecastViewModelSpec: QuickSpec {
 
         it("returns the expected icon image") {
             let viewModel = DailyForecastViewModel(dailyForecast: testForecast)
-            expect(viewModel.conditionsImage) == UIImage(named: "clear-day", inBundle: .troposBundle, compatibleWithTraitCollection: nil)
+            expect(viewModel.conditionsImage) == UIImage(named: "clear-day", in: .troposBundle, compatibleWith: nil)
         }
 
         it("returns the formatted high temperature") {
-            let formatter = TemperatureFormatter(unitSystem: .Imperial)
+            let formatter = TemperatureFormatter(unitSystem: .imperial)
             let viewModel = DailyForecastViewModel(dailyForecast: testForecast, temperatureFormatter: formatter)
             expect(viewModel.highTemperature) == "75°"
         }
 
         it("returns the formatted low temperature") {
-            let formatter = TemperatureFormatter(unitSystem: .Imperial)
+            let formatter = TemperatureFormatter(unitSystem: .imperial)
             let viewModel = DailyForecastViewModel(dailyForecast: testForecast, temperatureFormatter: formatter)
             expect(viewModel.lowTemperature) == "50°"
         }

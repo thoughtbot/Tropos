@@ -5,7 +5,7 @@ import Nimble
 class TemperatureSpec: QuickSpec {
     override func spec() {
         describe("Temperature") {
-            func compare(temp1: Int, _ temp2: Int) -> TemperatureComparison {
+            func compare(_ temp1: Int, _ temp2: Int) -> TemperatureComparison {
                 let t1 = Temperature(fahrenheitValue: temp1)
                 let t2 = Temperature(fahrenheitValue: temp2)
                 return t1.comparedTo(t2)
@@ -13,39 +13,39 @@ class TemperatureSpec: QuickSpec {
             
             context("temperature is 10 less than the receiver") {
                 it("is above freezing and returns hotter") {
-                    expect(compare(80, 70)).to(equal(TemperatureComparison.Hotter))
+                    expect(compare(80, 70)).to(equal(TemperatureComparison.hotter))
                 }
                 
                 it("is below freezing and returns warmer") {
-                    expect(compare(21, 10)).to(equal(TemperatureComparison.Warmer))
+                    expect(compare(21, 10)).to(equal(TemperatureComparison.warmer))
                 }
             }
             
             context("temperature is withing 10 less of the receiver") {
                 it("returns warmer") {
-                    expect(compare(9, 0)).to(equal(TemperatureComparison.Warmer))
+                    expect(compare(9, 0)).to(equal(TemperatureComparison.warmer))
                 }
             }
             
             context("temperature is within 10 greater of the receiver") {
                 it("returns cooler") {
-                    expect(compare(0, 9)).to(equal(TemperatureComparison.Cooler))
+                    expect(compare(0, 9)).to(equal(TemperatureComparison.cooler))
                 }
             }
             
             context("temperature is 10 greater than the receiver") {
                 it("temperature is above 75 and returns cooler") {
-                    expect(compare(85, 95)).to(equal(TemperatureComparison.Cooler))
+                    expect(compare(85, 95)).to(equal(TemperatureComparison.cooler))
                 }
                 
                 it("temperature is below 75 and returns colder") {
-                    expect(compare(0, 10)).to(equal(TemperatureComparison.Colder))
+                    expect(compare(0, 10)).to(equal(TemperatureComparison.colder))
                 }
             }
             
             context("temperatures are the same") {
                 it("returns same") {
-                    expect(compare(0, 0)).to(equal(TemperatureComparison.Same))
+                    expect(compare(0, 0)).to(equal(TemperatureComparison.same))
                 }
             }
             
