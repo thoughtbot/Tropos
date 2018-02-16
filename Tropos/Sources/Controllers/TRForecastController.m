@@ -46,7 +46,7 @@ static NSString *const TRForecastAPIExclusions = @"minutely,hourly,alerts,flags"
 
 - (RACSignal *)fetchConditionsFromURL:(NSURL *)URL
 {
-    return [[self fetchDataFromURL:URL] flattenMap:^RACStream *(NSData *data) {
+    return [[self fetchDataFromURL:URL] flattenMap:^RACSignal *(NSData *data) {
         return [self parseJSONFromData:data];
     }];
 }

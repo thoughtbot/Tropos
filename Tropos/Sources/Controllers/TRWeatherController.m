@@ -46,9 +46,9 @@
             @strongify(self)
             return [[[[self.locationController requestAlwaysAuthorization] then:^RACSignal *{
                 return [self.locationController updateCurrentLocation];
-            }] flattenMap:^RACStream *(CLLocation *location) {
+            }] flattenMap:^RACSignal *(CLLocation *location) {
                 return [self.geocodeController reverseGeocodeLocation:location];
-            }] flattenMap:^RACStream *(CLPlacemark *placemark) {
+            }] flattenMap:^RACSignal *(CLPlacemark *placemark) {
                 return [self.forecastController fetchWeatherUpdateForPlacemark:placemark];
             }];
         }];

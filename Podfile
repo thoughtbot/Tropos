@@ -3,7 +3,7 @@ plugin 'cocoapods-acknowledgements'
 
 target 'Tropos' do
   pod 'HockeySDK', '~> 3.6', :inhibit_warnings => true
-  pod 'ReactiveCocoa', '~> 2.4.7'
+  pod 'ReactiveObjC', '~> 3.1'
   pod 'Mixpanel', '~> 2.7', :inhibit_warnings => true
 
   target 'UnitTests' do

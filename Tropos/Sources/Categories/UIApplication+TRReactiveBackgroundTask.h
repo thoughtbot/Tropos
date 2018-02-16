@@ -1,5 +1,5 @@
+#import <ReactiveObjC/ReactiveObjC.h>
 #import <UIKit/UIKit.h>
-#import <ReactiveCocoa/ReactiveCocoa.h>
 
 @interface UIApplication (TRReactiveBackgroundTask)
 

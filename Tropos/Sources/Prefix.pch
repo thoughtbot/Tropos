@@ -13,5 +13,5 @@
 
     #import "NSError+TRErrors.h"
 
-    #import <ReactiveCocoa/ReactiveCocoa.h>
+    #import <ReactiveObjC/ReactiveObjC.h>
 #endif
