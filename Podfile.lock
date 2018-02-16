@@ -5,7 +5,7 @@ PODS:
   - Mixpanel (2.9.6):
     - Mixpanel/Mixpanel (= 2.9.6)
   - Mixpanel/Mixpanel (2.9.6)
-  - OCMock (3.1.5)
+  - OCMock (3.4.1)
   - OHHTTPStubs (4.3.0):
     - OHHTTPStubs/Default (= 4.3.0)
   - OHHTTPStubs/Core (4.3.0)
@@ -37,7 +37,7 @@ DEPENDENCIES:
 SPEC CHECKSUMS:
   HockeySDK: ab68303eec6680f6b539de65d747742dd276e934
   Mixpanel: 048a9f2512ac1bb8bfdecf719da024873f50a9c2
-  OCMock: 4c2925291f80407c3738dd1db14d21d0cc278864
+  OCMock: 2cd0716969bab32a2283ff3a46fd26a8c8b4c5e3
   OHHTTPStubs: 0aec5755528693a165bd616cb79f69387de306a8
   ReactiveCocoa: eb38dee0a0e698f73a9b25e5c1faea2bb4c79240
 
