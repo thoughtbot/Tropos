@@ -10,8 +10,6 @@
 		3178BB7A28794DB9F26B3131 /* Pods-UnitTests-metadata.plist in Resources */ = {isa = PBXBuildFile; fileRef = FE15A3F5D523F3C485802CAC /* Pods-UnitTests-metadata.plist */; };
 		46660A27B04F4C7B78A7920F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 436D9431497525313B32E225 /* Foundation.framework */; };
 		4A552EF91CC7C8F8008C7298 /* TroposCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A552EEF1CC7C8F8008C7298 /* TroposCore.framework */; };
-		4A552F491CC7CB9B008C7298 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4A552F421CC7CB9B008C7298 /* Info.plist */; };
-		4A552F4B1CC7CB9B008C7298 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4A552F461CC7CB9B008C7298 /* Info.plist */; };
 		4A552F4D1CC7CBB2008C7298 /* TroposCore.h in Headers */ = {isa = PBXBuildFile; fileRef = 4A552F431CC7CB9B008C7298 /* TroposCore.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4A552F4F1CC7CC37008C7298 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D0F135B1B432976001685BA /* Quick.framework */; };
 		4A552F501CC7CC39008C7298 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D0F135A1B432976001685BA /* Nimble.framework */; };
@@ -1034,9 +1032,7 @@
 				C2E44CE91A3A42C6009CC844 /* InfoPlist.strings in Resources */,
 				4D3336F61A80BE16001BA9A8 /* TRDailyForecastView.xib in Resources */,
 				C2E44CE41A3A4273009CC844 /* Localizable.strings in Resources */,
-				4A552F4B1CC7CB9B008C7298 /* Info.plist in Resources */,
 				5DA50AD91A82CAB300CAE666 /* DINNextLTPro-Light.otf in Resources */,
-				4A552F491CC7CB9B008C7298 /* Info.plist in Resources */,
 				A12FCE2A1D338A4A0062E7F1 /* DINNextLTPro-Regular.otf in Resources */,
 				571D9DD5621C37A62892B73F /* Pods-Tropos-metadata.plist in Resources */,
 			);
