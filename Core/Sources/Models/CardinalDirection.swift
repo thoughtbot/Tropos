@@ -39,8 +39,7 @@ public enum CardinalDirection: String, CustomStringConvertible {
     }
 
     public var abbreviation: String {
-        let characters = "NSEW".characters
-        return String(description.characters.filter { characters.contains($0) })
+        return description.filter { "NSEW".contains($0) }
     }
 }
 
