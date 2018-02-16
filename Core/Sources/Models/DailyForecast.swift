@@ -10,8 +10,8 @@ public struct DailyForecast {
         guard let json = json,
             let time = json["time"] as? Double,
             let icon = json["icon"] as? String,
-            let temperatureMax = json["temperatureMax"] as? Int,
-            let temperatureMin = json["temperatureMin"] as? Int
+            let temperatureMax = (json["temperatureMax"] as? NSNumber)?.intValue,
+            let temperatureMin = (json["temperatureMin"] as? NSNumber)?.intValue
             else {
                 return nil
             }

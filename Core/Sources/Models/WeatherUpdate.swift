@@ -92,12 +92,12 @@ public extension WeatherUpdate {
     }
 
     @objc var currentTemperature: Temperature {
-        let rawTemperature = self.currentConditions["temperature"] as? Int ?? 0
+        let rawTemperature = (self.currentConditions["temperature"] as? NSNumber)?.intValue ?? 0
         return Temperature(fahrenheitValue: rawTemperature)
     }
 
     @objc var currentHigh: Temperature {
-        let rawHigh = todaysForecast["temperatureMax"] as? Int ?? 0
+        let rawHigh = (todaysForecast["temperatureMax"] as? NSNumber)?.intValue ?? 0
 
         if rawHigh > currentTemperature.fahrenheitValue {
             return Temperature(fahrenheitValue: rawHigh)
@@ -107,7 +107,7 @@ public extension WeatherUpdate {
     }
 
     @objc var currentLow: Temperature {
-        let rawLow = todaysForecast["temperatureMin"] as? Int ?? 0
+        let rawLow = (todaysForecast["temperatureMin"] as? NSNumber)?.intValue ?? 0
 
         if rawLow < currentTemperature.fahrenheitValue {
             return Temperature(fahrenheitValue: rawLow)
@@ -118,8 +118,8 @@ public extension WeatherUpdate {
 
     @objc var yesterdaysTemperature: Temperature? {
         let currently = yesterdaysConditionsJSON["currently"] as? [String: Any]
-        let rawTemperature = currently?["temperature"]
-        guard let fahrenheitValue = rawTemperature as? Int else {
+        let rawTemperature = currently?["temperature"] as? NSNumber
+        guard let fahrenheitValue = rawTemperature?.intValue else {
             return .none
         }
         return Temperature(fahrenheitValue: fahrenheitValue)
