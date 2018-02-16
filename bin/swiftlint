@@ -1,3 +1,9 @@
 #!/bin/sh
 
-exec swiftlint --config "${SRCROOT}"/.swiftlint.yml "$@"
+set -e
+
+if command -v swiftlint; then
+  swiftlint --config "${SRCROOT}"/.swiftlint.yml "$@"
+else
+  echo "warning: run bin/setup to install SwiftLint"
+fi
