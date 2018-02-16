@@ -34,6 +34,7 @@ enum AboutSection: Int {
 
 class SettingsTableViewController: UITableViewController {
     @IBOutlet var thoughtbotImageView: UIImageView!
+    private var resignActiveObservation: Any?
     private let settingsController = SettingsController()
 
     override func viewDidLoad() {
@@ -49,13 +50,19 @@ class SettingsTableViewController: UITableViewController {
           .alwaysTemplate
         )
 
-        NotificationCenter.default.addObserver(
+        resignActiveObservation = NotificationCenter.default.addObserver(
           forName: .UIApplicationWillResignActive,
           object: nil,
           queue: nil
         ) { [weak self] _ in
           guard let selectedIndexPath = self?.tableView.indexPathForSelectedRow else { return }
           self?.tableView.deselectRow(at: selectedIndexPath, animated: true)
+        }
+    }
+
+    deinit {
+        if let resignActiveObservation = resignActiveObservation {
+            NotificationCenter.default.removeObserver(resignActiveObservation)
         }
     }
 
