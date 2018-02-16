@@ -2,7 +2,7 @@
 import Quick
 import Nimble
 
-final class UIColor_TRTemperatureColorsSpec: QuickSpec {
+final class TRTemperatureColorsSpec: QuickSpec {
     override func spec() {
         describe("UIColor+TRTemperatureColors") {
             describe("lighterColorByAmount") {

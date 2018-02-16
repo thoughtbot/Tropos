@@ -17,7 +17,7 @@ private enum TemperatureLimit: Int {
     case colder = 75
 }
 
-func -(lhs: Temperature, rhs: Temperature) -> Temperature {
+func - (lhs: Temperature, rhs: Temperature) -> Temperature {
     return Temperature(fahrenheitValue: lhs.fahrenheitValue - rhs.fahrenheitValue)
 }
 
@@ -39,7 +39,7 @@ func -(lhs: Temperature, rhs: Temperature) -> Temperature {
         super.init()
         self.celsiusValue = celsiusValue
     }
-    
+
     public func temperatureDifferenceFrom(_ temperature: Temperature) -> Temperature {
         return self - temperature
     }
@@ -54,7 +54,7 @@ func -(lhs: Temperature, rhs: Temperature) -> Temperature {
         default: return .colder
         }
     }
-    
+
     // MARK: NSObjectProtocol
     public override var description: String {
         return "Fahrenheit: \(fahrenheitValue)°\nCelsius: \(celsiusValue)°"

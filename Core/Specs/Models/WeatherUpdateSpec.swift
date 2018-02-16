@@ -3,7 +3,11 @@ import CoreLocation
 import Quick
 import Nimble
 
-private func weatherConditions(_ temperature: Int = 90, precipitationProbability: String? = nil, precipitationType: String? = "rain") -> [String: Any] {
+private func weatherConditions(
+    _ temperature: Int = 90,
+    precipitationProbability: String? = nil,
+    precipitationType: String? = "rain"
+) -> [String: Any] {
     var data: [String: Any] = [
         "temperatureMin": 50,
         "temperatureMax": 60,
@@ -28,13 +32,21 @@ final class WeatherUpdateSpec: QuickSpec {
             context("currentTemp is higher than currentHigh") {
                 it("updates currentHigh to match") {
                     let conditions = weatherConditions(70)
-                    let update = WeatherUpdate(placemark: testPlacemark, currentConditionsJSON: conditions, yesterdaysConditionsJSON: [:])
+                    let update = WeatherUpdate(
+                        placemark: testPlacemark,
+                        currentConditionsJSON: conditions,
+                        yesterdaysConditionsJSON: [:]
+                    )
                     expect(update?.currentHigh.fahrenheitValue) == 70
                 }
 
                 it("updates currentLow to match") {
                     let conditions = weatherConditions(40)
-                    let update = WeatherUpdate(placemark: testPlacemark, currentConditionsJSON: conditions, yesterdaysConditionsJSON: [:])
+                    let update = WeatherUpdate(
+                        placemark: testPlacemark,
+                        currentConditionsJSON: conditions,
+                        yesterdaysConditionsJSON: [:]
+                    )
                     expect(update?.currentLow.fahrenheitValue) == 40
                 }
             }
@@ -42,7 +54,11 @@ final class WeatherUpdateSpec: QuickSpec {
             context("with a chance of precipitation") {
                 it("stores the precipitation probability and type") {
                     let conditions = weatherConditions(precipitationProbability: "0.43")
-                    let update = WeatherUpdate(placemark: testPlacemark, currentConditionsJSON: conditions, yesterdaysConditionsJSON: [:])
+                    let update = WeatherUpdate(
+                        placemark: testPlacemark,
+                        currentConditionsJSON: conditions,
+                        yesterdaysConditionsJSON: [:]
+                    )
                     let rawPercentage = update?.precipitationPercentage ?? 0
                     expect(round(rawPercentage * 100)) == 43
                 }
@@ -51,7 +67,11 @@ final class WeatherUpdateSpec: QuickSpec {
             context("with a no chance of precipitation") {
                 it("stores the precipitation probability and defaults the type") {
                     let conditions = weatherConditions(precipitationProbability: "0", precipitationType: nil)
-                    let update = WeatherUpdate(placemark: testPlacemark, currentConditionsJSON: conditions, yesterdaysConditionsJSON: [:])
+                    let update = WeatherUpdate(
+                        placemark: testPlacemark,
+                        currentConditionsJSON: conditions,
+                        yesterdaysConditionsJSON: [:]
+                    )
                     expect(update?.precipitationPercentage) == 0
                     expect(update?.precipitationType) == "rain"
                 }

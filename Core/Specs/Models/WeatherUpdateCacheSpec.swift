@@ -29,7 +29,11 @@ final class WeatherUpdateCacheSpec: QuickSpec {
             context("-archiveLatestWeatherUpdate") {
                 it("archives the object to disk") {
                     let cache = WeatherUpdateCache(fileName: testCacheFileName, inDirectory: testCachesDirectory)
-                    let update = WeatherUpdate(placemark: testPlacemark, currentConditionsJSON: [:], yesterdaysConditionsJSON: [:])!
+                    let update = WeatherUpdate(
+                        placemark: testPlacemark,
+                        currentConditionsJSON: [:],
+                        yesterdaysConditionsJSON: [:]
+                    )!
 
                     cache.archiveWeatherUpdate(update)
 
@@ -45,7 +49,11 @@ final class WeatherUpdateCacheSpec: QuickSpec {
 
                 it("returns an initialized TRWeatherUpdate when archive exists") {
                     let cache = WeatherUpdateCache(fileName: testCacheFileName, inDirectory: testCachesDirectory)
-                    let update = WeatherUpdate(placemark: testPlacemark, currentConditionsJSON: [:], yesterdaysConditionsJSON: [:])!
+                    let update = WeatherUpdate(
+                        placemark: testPlacemark,
+                        currentConditionsJSON: [:],
+                        yesterdaysConditionsJSON: [:]
+                    )!
 
                     let success = cache.archiveWeatherUpdate(update)
 
@@ -56,7 +64,12 @@ final class WeatherUpdateCacheSpec: QuickSpec {
                 it("caches the date") {
                     let cache = WeatherUpdateCache(fileName: testCacheFileName, inDirectory: testCachesDirectory)
                     let date = Date(timeIntervalSince1970: 0)
-                    let update = WeatherUpdate(placemark: testPlacemark, currentConditionsJSON: [:], yesterdaysConditionsJSON: [:], date: date)!
+                    let update = WeatherUpdate(
+                        placemark: testPlacemark,
+                        currentConditionsJSON: [:],
+                        yesterdaysConditionsJSON: [:],
+                        date: date
+                    )!
 
                     cache.archiveWeatherUpdate(update)
 

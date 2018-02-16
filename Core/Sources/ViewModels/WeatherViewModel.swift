@@ -26,7 +26,9 @@ public extension WeatherViewModel {
     }
 
     var conditionsImage: UIImage? {
-        return weatherUpdate.conditionsDescription.flatMap { UIImage(named: $0, in: .troposBundle, compatibleWith: nil) }
+        return weatherUpdate.conditionsDescription.flatMap {
+            UIImage(named: $0, in: .troposBundle, compatibleWith: nil)
+        }
     }
 
     var conditionsDescription: NSAttributedString {
@@ -42,18 +44,27 @@ public extension WeatherViewModel {
         attributedString.font = .defaultLightFont(size: 26)
         attributedString.textColor = .defaultTextColor
 
-        let difference = weatherUpdate.currentTemperature.temperatureDifferenceFrom(weatherUpdate.yesterdaysTemperature!)
-        attributedString.setTextColor(colorForTemperatureComparison(comparison, difference: difference.fahrenheitValue), forSubstring: adjective)
-
+        let difference = weatherUpdate.currentTemperature
+            .temperatureDifferenceFrom(weatherUpdate.yesterdaysTemperature!)
+        attributedString.setTextColor(
+            colorForTemperatureComparison(comparison, difference: difference.fahrenheitValue),
+            forSubstring: adjective
+        )
         return attributedString.copy() as! NSAttributedString
     }
 
     var windDescription: String {
-        return WindSpeedFormatter().localizedString(forWindSpeed: weatherUpdate.windSpeed, bearing: weatherUpdate.windBearing)
+        return WindSpeedFormatter().localizedString(
+            forWindSpeed: weatherUpdate.windSpeed,
+            bearing: weatherUpdate.windBearing
+        )
     }
 
     var precipitationDescription: String {
-        let precipitation = Precipitation(probability: weatherUpdate.precipitationPercentage, type: weatherUpdate.precipitationType)
+        let precipitation = Precipitation(
+            probability: weatherUpdate.precipitationPercentage,
+            type: weatherUpdate.precipitationType
+        )
         return PrecipitationChanceFormatter().localizedStringFromPrecipitation(precipitation)
     }
 
@@ -64,13 +75,17 @@ public extension WeatherViewModel {
 
         let attributedString = NSMutableAttributedString(string: temperatureString)
         let comparison = weatherUpdate.currentTemperature.comparedTo(weatherUpdate.yesterdaysTemperature!)
-        let difference = weatherUpdate.currentTemperature.temperatureDifferenceFrom(weatherUpdate.yesterdaysTemperature!)
+        let difference = weatherUpdate.currentTemperature
+            .temperatureDifferenceFrom(weatherUpdate.yesterdaysTemperature!)
 
         let rangeOfFirstSlash = (temperatureString as NSString).range(of: "/")
         let rangeOfLastSlash = (temperatureString as NSString).range(of: "/", options: .backwards)
         let start = (rangeOfFirstSlash.location + 1)
         let range = NSRange(location: start, length: rangeOfLastSlash.location - start)
-        attributedString.setTextColor(colorForTemperatureComparison(comparison, difference: difference.fahrenheitValue), forRange: range)
+        attributedString.setTextColor(
+            colorForTemperatureComparison(comparison, difference: difference.fahrenheitValue),
+            forRange: range
+        )
 
         return attributedString.copy() as! NSAttributedString
     }

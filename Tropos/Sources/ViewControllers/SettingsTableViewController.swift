@@ -1,13 +1,13 @@
 import UIKit
 import TroposCore
 
-enum SettingsTableViewControllerSegueIdentifier: String {
+private enum SegueIdentifier: String {
     case privacyPolicy = "ShowWebViewController"
     case acknowledgements = "ShowTextViewController"
 
     init?(identifier: String?) {
-      guard let identifier = identifier else { return nil }
-      self.init(rawValue: identifier)
+        guard let identifier = identifier else { return nil }
+        self.init(rawValue: identifier)
     }
 }
 
@@ -39,7 +39,7 @@ class SettingsTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-      settingsController.unitSystemChanged = { [weak self] unitSystem in
+        settingsController.unitSystemChanged = { [weak self] unitSystem in
           guard let indexPath = self?.indexPathForUnitSystem(unitSystem) else { return }
           self?.tableView.checkCellAtIndexPath(indexPath)
         }
@@ -65,20 +65,20 @@ class SettingsTableViewController: UITableViewController {
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        switch SettingsTableViewControllerSegueIdentifier(identifier: segue.identifier) {
-          case .privacyPolicy?:
-              let webViewController = segue.destination as? WebViewController
-              webViewController?.url = URL(string: "http://www.troposweather.com/privacy/")!
-          case .acknowledgements?:
-              let textViewController = segue.destination as? TextViewController
-              let fileURL = Bundle.main.url(
-                forResource: "Pods-Tropos-settings-metadata",
-                withExtension: "plist"
-              )
-              let parser = fileURL.flatMap { AcknowledgementsParser(fileURL: $0) }
-              textViewController?.text = parser?.displayString()
+        switch SegueIdentifier(identifier: segue.identifier) {
+        case .privacyPolicy?:
+            let webViewController = segue.destination as? WebViewController
+            webViewController?.url = URL(string: "http://www.troposweather.com/privacy/")!
+        case .acknowledgements?:
+            let textViewController = segue.destination as? TextViewController
+            let fileURL = Bundle.main.url(
+              forResource: "Pods-Tropos-settings-metadata",
+              withExtension: "plist"
+            )
+            let parser = fileURL.flatMap { AcknowledgementsParser(fileURL: $0) }
+            textViewController?.text = parser?.displayString()
         case nil:
-          break
+            break
         }
     }
 

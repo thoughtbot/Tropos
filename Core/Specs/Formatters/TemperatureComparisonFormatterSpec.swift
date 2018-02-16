@@ -18,7 +18,8 @@ final class TemperatureComparisonFormatterSpec: QuickSpec {
                     defer { NSTimeZone.default = previousTimeZone }
 
                     let date = dateFromString("2015-05-15 22:00:00 UTC")
-                    let (description, _) = TemperatureComparisonFormatter().localizedStrings(fromComparison: .same, precipitation: "", date: date)
+                    let (description, _) = TemperatureComparisonFormatter()
+                        .localizedStrings(fromComparison: .same, precipitation: "", date: date)
                     expect(description) == "It's the same tonight as last night."
                 }
             }

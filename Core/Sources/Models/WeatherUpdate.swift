@@ -12,7 +12,12 @@ private let TRDateKey = "TRDateAt"
     private let currentConditionsJSON: [String: Any]
     fileprivate let yesterdaysConditionsJSON: [String: Any]
 
-    public init?(placemark: CLPlacemark, currentConditionsJSON: [String: Any], yesterdaysConditionsJSON: [String: Any], date: Date) {
+    public init?(
+        placemark: CLPlacemark,
+        currentConditionsJSON: [String: Any],
+        yesterdaysConditionsJSON: [String: Any],
+        date: Date
+    ) {
         self.date = date
         self.placemark = placemark
         self.currentConditionsJSON = currentConditionsJSON
@@ -20,8 +25,17 @@ private let TRDateKey = "TRDateAt"
         super.init()
     }
 
-    public convenience init?(placemark: CLPlacemark, currentConditionsJSON: [String: Any], yesterdaysConditionsJSON: [String: Any]) {
-        self.init(placemark: placemark, currentConditionsJSON: currentConditionsJSON, yesterdaysConditionsJSON: yesterdaysConditionsJSON, date: Date())
+    public convenience init?(
+        placemark: CLPlacemark,
+        currentConditionsJSON: [String: Any],
+        yesterdaysConditionsJSON: [String: Any]
+    ) {
+        self.init(
+            placemark: placemark,
+            currentConditionsJSON: currentConditionsJSON,
+            yesterdaysConditionsJSON: yesterdaysConditionsJSON,
+            date: Date()
+        )
     }
 
     fileprivate lazy var currentConditions: [String: Any] = {
@@ -83,7 +97,9 @@ public extension WeatherUpdate {
     }
 
     var currentHigh: Temperature {
-        if case let rawHigh = todaysForecast["temperatureMax"] as? Int ?? 0, rawHigh > currentTemperature.fahrenheitValue {
+        let rawHigh = todaysForecast["temperatureMax"] as? Int ?? 0
+
+        if rawHigh > currentTemperature.fahrenheitValue {
             return Temperature(fahrenheitValue: rawHigh)
         } else {
             return currentTemperature
@@ -91,7 +107,9 @@ public extension WeatherUpdate {
     }
 
     var currentLow: Temperature {
-        if case let rawLow = todaysForecast["temperatureMin"] as? Int ?? 0, rawLow < currentTemperature.fahrenheitValue {
+        let rawLow = todaysForecast["temperatureMin"] as? Int ?? 0
+
+        if rawLow < currentTemperature.fahrenheitValue {
             return Temperature(fahrenheitValue: rawLow)
         } else {
             return currentTemperature
