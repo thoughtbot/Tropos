@@ -22,25 +22,25 @@ func - (lhs: Temperature, rhs: Temperature) -> Temperature {
 }
 
 @objc(TRTemperature) public class Temperature: NSObject {
-    public private(set) lazy var fahrenheitValue: Int = {
+    @objc public private(set) lazy var fahrenheitValue: Int = {
         return Int(round(Float(self.celsiusValue) * 9.0 / 5.0)) + 32
     }()
 
-    public private(set) lazy var celsiusValue: Int = {
+    @objc public private(set) lazy var celsiusValue: Int = {
         return Int(round(Float(self.fahrenheitValue - 32) * 5.0 / 9.0))
     }()
 
-    public init(fahrenheitValue: Int) {
+    @objc public init(fahrenheitValue: Int) {
         super.init()
         self.fahrenheitValue = fahrenheitValue
     }
 
-    public init(celsiusValue: Int) {
+    @objc public init(celsiusValue: Int) {
         super.init()
         self.celsiusValue = celsiusValue
     }
 
-    public func temperatureDifferenceFrom(_ temperature: Temperature) -> Temperature {
+    @objc public func temperatureDifferenceFrom(_ temperature: Temperature) -> Temperature {
         return self - temperature
     }
 

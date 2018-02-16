@@ -3,7 +3,7 @@ import UIKit
 class TextViewController: UIViewController {
     @IBOutlet var textView: UITextView!
 
-    var text: String?
+    @objc var text: String?
 
     override func viewDidLoad() {
         super.viewDidLoad()

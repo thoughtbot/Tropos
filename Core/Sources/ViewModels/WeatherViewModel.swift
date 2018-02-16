@@ -9,29 +9,29 @@ import UIKit
         self.dateFormatter = dateFormatter
     }
 
-    public convenience init(weatherUpdate: WeatherUpdate) {
+    @objc public convenience init(weatherUpdate: WeatherUpdate) {
         self.init(weatherUpdate: weatherUpdate, dateFormatter: RelativeDateFormatter())
     }
 }
 
 public extension WeatherViewModel {
-    var locationName: String {
+    @objc var locationName: String {
         return [weatherUpdate.city, weatherUpdate.state].lazy
             .flatMap { $0 }
             .joined(separator: ", ")
     }
 
-    var updatedDateString: String {
+    @objc var updatedDateString: String {
         return dateFormatter.localizedStringFromDate(weatherUpdate.date)
     }
 
-    var conditionsImage: UIImage? {
+    @objc var conditionsImage: UIImage? {
         return weatherUpdate.conditionsDescription.flatMap {
             UIImage(named: $0, in: .troposBundle, compatibleWith: nil)
         }
     }
 
-    var conditionsDescription: NSAttributedString {
+    @objc var conditionsDescription: NSAttributedString {
         let comparison = weatherUpdate.currentTemperature.comparedTo(weatherUpdate.yesterdaysTemperature!)
 
         let (description, adjective) = TemperatureComparisonFormatter().localizedStrings(
@@ -53,14 +53,14 @@ public extension WeatherViewModel {
         return attributedString.copy() as! NSAttributedString
     }
 
-    var windDescription: String {
+    @objc var windDescription: String {
         return WindSpeedFormatter().localizedString(
             forWindSpeed: weatherUpdate.windSpeed,
             bearing: weatherUpdate.windBearing
         )
     }
 
-    var precipitationDescription: String {
+    @objc var precipitationDescription: String {
         let precipitation = Precipitation(
             probability: weatherUpdate.precipitationPercentage,
             type: weatherUpdate.precipitationType
@@ -68,7 +68,7 @@ public extension WeatherViewModel {
         return PrecipitationChanceFormatter().localizedStringFromPrecipitation(precipitation)
     }
 
-    var temperatureDescription: NSAttributedString {
+    @objc var temperatureDescription: NSAttributedString {
         let formatter = TemperatureFormatter()
         let temperatures = [weatherUpdate.currentHigh, weatherUpdate.currentTemperature, weatherUpdate.currentLow]
         let temperatureString = temperatures.lazy.map(formatter.stringFromTemperature).joined(separator: " / ")
@@ -90,7 +90,7 @@ public extension WeatherViewModel {
         return attributedString.copy() as! NSAttributedString
     }
 
-    var dailyForecasts: [DailyForecastViewModel] {
+    @objc var dailyForecasts: [DailyForecastViewModel] {
         return weatherUpdate.dailyForecasts.map(DailyForecastViewModel.init)
     }
 }

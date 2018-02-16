@@ -3,13 +3,13 @@ import Foundation
 private let TRLatestWeatherUpdateFileName = "TRLatestWeatherUpdateFile"
 
 @objc(TRWeatherUpdateCache) public final class WeatherUpdateCache: NSObject {
-    public let cachePath: String
+    @objc public let cachePath: String
 
-    public init(fileName: String, inDirectory directory: URL) {
+    @objc public init(fileName: String, inDirectory directory: URL) {
         cachePath = directory.appendingPathComponent(fileName).path
     }
 
-    public convenience init(fileName: String) {
+    @objc public convenience init(fileName: String) {
         let fileManager = FileManager.default
         guard let cachesURL = fileManager.urls(for: .cachesDirectory, in: .userDomainMask).first else {
             fatalError("Unable to locate user caches directory")
@@ -21,11 +21,11 @@ private let TRLatestWeatherUpdateFileName = "TRLatestWeatherUpdateFile"
         self.init(fileName: TRLatestWeatherUpdateFileName)
     }
 
-    public var latestWeatherUpdate: WeatherUpdate? {
+    @objc public var latestWeatherUpdate: WeatherUpdate? {
         return NSKeyedUnarchiver.unarchiveObject(withFile: cachePath) as? WeatherUpdate
     }
 
-    @discardableResult
+    @objc @discardableResult
     public func archiveWeatherUpdate(_ weatherUpdate: WeatherUpdate) -> Bool {
         return NSKeyedArchiver.archiveRootObject(weatherUpdate, toFile: cachePath)
     }

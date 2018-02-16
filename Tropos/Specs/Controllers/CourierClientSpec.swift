@@ -36,7 +36,7 @@ class CourierClientSpec: QuickSpec {
 @objc class FakeTimeZone: NSObject, TimeZone {
     var secondsFromGMT: Int
 
-    init(secondsFromGMT: Int) {
+    @objc init(secondsFromGMT: Int) {
         self.secondsFromGMT = secondsFromGMT
     }
 }

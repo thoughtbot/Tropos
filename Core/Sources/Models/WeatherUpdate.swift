@@ -7,12 +7,12 @@ private let TRPlacemarkKey = "TRPlacemark"
 private let TRDateKey = "TRDateAt"
 
 @objc(TRWeatherUpdate) public final class WeatherUpdate: NSObject, NSCoding {
-    public let date: Date
-    public let placemark: CLPlacemark
+    @objc public let date: Date
+    @objc public let placemark: CLPlacemark
     private let currentConditionsJSON: [String: Any]
     fileprivate let yesterdaysConditionsJSON: [String: Any]
 
-    public init?(
+    @objc public init?(
         placemark: CLPlacemark,
         currentConditionsJSON: [String: Any],
         yesterdaysConditionsJSON: [String: Any],
@@ -25,7 +25,7 @@ private let TRDateKey = "TRDateAt"
         super.init()
     }
 
-    public convenience init?(
+    @objc public convenience init?(
         placemark: CLPlacemark,
         currentConditionsJSON: [String: Any],
         yesterdaysConditionsJSON: [String: Any]
@@ -75,28 +75,28 @@ private let TRDateKey = "TRDateAt"
 }
 
 public extension WeatherUpdate {
-    var city: String? {
+    @objc var city: String? {
         return placemark.locality
     }
 
-    var state: String? {
+    @objc var state: String? {
         return placemark.administrativeArea
     }
 
-    var conditionsDescription: String? {
+    @objc var conditionsDescription: String? {
         return currentConditions["icon"] as? String
     }
 
-    var precipitationType: String {
+    @objc var precipitationType: String {
         return (todaysForecast["precipType"] as? String) ?? "rain"
     }
 
-    var currentTemperature: Temperature {
+    @objc var currentTemperature: Temperature {
         let rawTemperature = self.currentConditions["temperature"] as? Int ?? 0
         return Temperature(fahrenheitValue: rawTemperature)
     }
 
-    var currentHigh: Temperature {
+    @objc var currentHigh: Temperature {
         let rawHigh = todaysForecast["temperatureMax"] as? Int ?? 0
 
         if rawHigh > currentTemperature.fahrenheitValue {
@@ -106,7 +106,7 @@ public extension WeatherUpdate {
         }
     }
 
-    var currentLow: Temperature {
+    @objc var currentLow: Temperature {
         let rawLow = todaysForecast["temperatureMin"] as? Int ?? 0
 
         if rawLow < currentTemperature.fahrenheitValue {
@@ -116,7 +116,7 @@ public extension WeatherUpdate {
         }
     }
 
-    var yesterdaysTemperature: Temperature? {
+    @objc var yesterdaysTemperature: Temperature? {
         let currently = yesterdaysConditionsJSON["currently"] as? [String: Any]
         let rawTemperature = currently?["temperature"]
         guard let fahrenheitValue = rawTemperature as? Int else {
@@ -125,15 +125,15 @@ public extension WeatherUpdate {
         return Temperature(fahrenheitValue: fahrenheitValue)
     }
 
-    var precipitationPercentage: Double {
+    @objc var precipitationPercentage: Double {
         return Double(todaysForecast["precipProbability"] as? String ?? "") ?? 0
     }
 
-    var windSpeed: Double {
+    @objc var windSpeed: Double {
         return currentConditions["windSpeed"] as? Double ?? 0
     }
 
-    var windBearing: Double {
+    @objc var windBearing: Double {
         return currentConditions["windBearing"] as? Double ?? 0
     }
 

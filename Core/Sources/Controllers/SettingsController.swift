@@ -16,7 +16,7 @@ import Foundation
 
     public var unitSystemChanged: ((UnitSystem) -> Void)?
 
-    public init(locale: Locale, userDefaults: UserDefaults) {
+    @objc public init(locale: Locale, userDefaults: UserDefaults) {
         self.locale = locale
         self.userDefaults = userDefaults
 
@@ -29,11 +29,11 @@ import Foundation
             object: userDefaults)
     }
 
-    func userDefaultsDidChange(_ notification: Notification) {
+    @objc func userDefaultsDidChange(_ notification: Notification) {
         unitSystemChanged?(unitSystem)
     }
 
-    public convenience init(locale: Locale) {
+    @objc public convenience init(locale: Locale) {
         self.init(locale: locale, userDefaults: .standard)
     }
 
@@ -41,7 +41,7 @@ import Foundation
         self.init(locale: .autoupdatingCurrent)
     }
 
-    public func registerSettings() {
+    @objc public func registerSettings() {
         registerUnitSystem()
         registerLastVersion()
     }

@@ -15,21 +15,21 @@ import UIKit
 }
 
 public extension DailyForecastViewModel {
-    var dayOfWeek: String {
+    @objc var dayOfWeek: String {
         let formatter = DateFormatter()
         formatter.dateFormat = "ccc"
         return formatter.string(from: dailyForecast.date)
     }
 
-    var conditionsImage: UIImage? {
+    @objc var conditionsImage: UIImage? {
         return UIImage(named: dailyForecast.conditionsDescription, in: .troposBundle, compatibleWith: nil)
     }
 
-    var highTemperature: String {
+    @objc var highTemperature: String {
         return temperatureFormatter.stringFromTemperature(dailyForecast.highTemperature)
     }
 
-    var lowTemperature: String {
+    @objc var lowTemperature: String {
         return temperatureFormatter.stringFromTemperature(dailyForecast.lowTemperature)
     }
 }

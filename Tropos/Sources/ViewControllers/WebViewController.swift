@@ -3,7 +3,7 @@ import UIKit
 class WebViewController: UIViewController, UIWebViewDelegate {
     @IBOutlet weak var webView: UIWebView!
 
-    var url = URL(string: "about:blank")!
+    @objc var url = URL(string: "about:blank")!
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -34,7 +34,7 @@ class WebViewController: UIViewController, UIWebViewDelegate {
 }
 
 extension UIBarButtonItem {
-    static func activityIndicatorBarButtonItem() -> UIBarButtonItem {
+    @objc static func activityIndicatorBarButtonItem() -> UIBarButtonItem {
         let activityIndicatorView = UIActivityIndicatorView(activityIndicatorStyle: .white)
         activityIndicatorView.startAnimating()
         return UIBarButtonItem(customView: activityIndicatorView)

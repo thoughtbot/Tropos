@@ -153,11 +153,11 @@ class SettingsTableViewController: UITableViewController {
 }
 
 extension UITableView {
-    func checkCellAtIndexPath(_ indexPath: IndexPath) {
+    @objc func checkCellAtIndexPath(_ indexPath: IndexPath) {
         cellForRow(at: indexPath)?.accessoryType = .checkmark
     }
 
-    func uncheckCellsInSection(_ section: Int) {
+    @objc func uncheckCellsInSection(_ section: Int) {
         for index in 0 ..< numberOfRows(inSection: section) {
             let indexPath = IndexPath(row: index, section: section)
             cellForRow(at: indexPath)?.accessoryType = .none

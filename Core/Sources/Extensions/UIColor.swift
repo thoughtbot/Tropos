@@ -1,39 +1,39 @@
 import UIKit
 
 extension UIColor {
-    public static var defaultTextColor: UIColor {
+    @objc public static var defaultTextColor: UIColor {
         return .white
     }
 
-    public static var lighterTextColor: UIColor {
+    @objc public static var lighterTextColor: UIColor {
         return UIColor(hue: 240.0 / 360.0, saturation: 0.02, brightness: 0.8, alpha: 1.0)
     }
 
-    public static var primaryBackgroundColor: UIColor {
+    @objc public static var primaryBackgroundColor: UIColor {
         return UIColor(hue: 240.0 / 360.0, saturation: 0.24, brightness: 0.13, alpha: 1.0)
     }
 
-    public static var secondaryBackgroundColor: UIColor {
+    @objc public static var secondaryBackgroundColor: UIColor {
         return UIColor(hue: 240.0 / 360.0, saturation: 0.22, brightness: 0.16, alpha: 1.0)
     }
 
-    public static var hotColor: UIColor {
+    @objc public static var hotColor: UIColor {
         return UIColor(hue: 11.0 / 360.0, saturation: 0.80, brightness: 0.92, alpha: 1.0)
     }
 
-    public static var warmerColor: UIColor {
+    @objc public static var warmerColor: UIColor {
         return UIColor(hue: 40.0 / 360.0, saturation: 1.0, brightness: 0.97, alpha: 1.0)
     }
 
-    public static var coolerColor: UIColor {
+    @objc public static var coolerColor: UIColor {
         return UIColor(hue: 194.0 / 360.0, saturation: 1.0, brightness: 0.93, alpha: 1.0)
     }
 
-    public static var coldColor: UIColor {
+    @objc public static var coldColor: UIColor {
         return UIColor(hue: 194.0 / 360.0, saturation: 0.54, brightness: 0.95, alpha: 1.0)
     }
 
-    func lighten(by amount: CGFloat) -> UIColor {
+    @objc func lighten(by amount: CGFloat) -> UIColor {
         var hue: CGFloat = 0
         var saturation: CGFloat = 0
         var brightness: CGFloat = 0
