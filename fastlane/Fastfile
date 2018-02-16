@@ -1,4 +1,6 @@
-require "dotenv"
+# vim: ft=ruby
+
+fastlane_require "dotenv"
 Dotenv.load("../.env")
 
 fastlane_version "1.89.0"
