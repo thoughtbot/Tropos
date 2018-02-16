@@ -66,7 +66,7 @@
     NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
     NSString *formerChannelKey = @"CourierChannel";
 
-    NSTimeZone *timeZone = [NSTimeZone localTimeZone];
+    NSTimeZone *timeZone = [NSTimeZone defaultTimeZone];
     NSString *channel = [TRCourierClient channelNameForTimeZone:timeZone];
 
     NSString *formerChannel = [userDefaults stringForKey:formerChannelKey];
