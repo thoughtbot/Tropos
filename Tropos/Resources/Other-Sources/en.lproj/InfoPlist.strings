@@ -1,3 +1,3 @@
 "CFBundleDisplayName" = "Tropos";
 "NSLocationWhenInUseUsageDescription" = "Tropos will only use your location to discover current weather conditions and forecasts for your area.";
-"NSLocationAlwaysUsageDescription" = "Tropos will only use your location to stay updated on current weather conditions and forecasts for your area.";
+"NSLocationAlwaysAndWhenInUseUsageDescription" = "Tropos will only use your location to stay updated on current weather conditions and forecasts for your area.";
