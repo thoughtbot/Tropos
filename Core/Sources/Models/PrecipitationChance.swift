@@ -1,7 +1,7 @@
 import Foundation
 
 public enum PrecipitationChance: String, CustomStringConvertible {
-    case None, Slight, Good
+    case none, slight, good
 
     public var description: String {
         return rawValue

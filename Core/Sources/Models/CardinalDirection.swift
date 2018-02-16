@@ -1,36 +1,36 @@
 import Foundation
 
 public enum CardinalDirection: String, CustomStringConvertible {
-    case North
-    case NorthEast
-    case East
-    case SouthEast
-    case South
-    case SouthWest
-    case West
-    case NorthWest
+    case north
+    case northEast
+    case east
+    case southEast
+    case south
+    case southWest
+    case west
+    case northWest
 
     public init?(bearing: Double) {
         guard (0.0...360.0).contains(bearing) else { return nil }
 
         if bearing < 22.5 {
-            self = .North
+            self = .north
         } else if bearing < 67.5 {
-            self = .NorthEast
+            self = .northEast
         } else if bearing < 112.5 {
-            self = .East
+            self = .east
         } else if bearing < 157.5 {
-            self = .SouthEast
+            self = .southEast
         } else if bearing < 202.5 {
-            self = .South
+            self = .south
         } else if bearing < 247.5 {
-            self = .SouthWest
+            self = .southWest
         } else if bearing < 292.5 {
-            self = .West
+            self = .west
         } else if bearing < 337.5 {
-            self = .NorthWest
+            self = .northWest
         } else {
-            self = .North
+            self = .north
         }
     }
 

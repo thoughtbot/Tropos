@@ -1,0 +1,5 @@
+disabled_rules:
+  - force_cast
+identifier_name:
+  excluded:
+    - TroposCoreLocalizedString(_:comment:)

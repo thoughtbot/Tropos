@@ -2,8 +2,8 @@ import UIKit
 import TroposCore
 
 enum SettingsTableViewControllerSegueIdentifier: String {
-    case PrivacyPolicy = "ShowWebViewController"
-    case Acknowledgements = "ShowTextViewController"
+    case privacyPolicy = "ShowWebViewController"
+    case acknowledgements = "ShowTextViewController"
 
     init?(identifier: String?) {
       guard let identifier = identifier else { return nil }
@@ -66,10 +66,10 @@ class SettingsTableViewController: UITableViewController {
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         switch SettingsTableViewControllerSegueIdentifier(identifier: segue.identifier) {
-          case .PrivacyPolicy?:
+          case .privacyPolicy?:
               let webViewController = segue.destination as? WebViewController
               webViewController?.url = URL(string: "http://www.troposweather.com/privacy/")!
-          case .Acknowledgements?:
+          case .acknowledgements?:
               let textViewController = segue.destination as? TextViewController
               let fileURL = Bundle.main.url(
                 forResource: "Pods-Tropos-settings-metadata",

@@ -871,6 +871,7 @@
 				7C2C287E78ABB83892B5E8B6 /* Sources */,
 				800364D174D6FAD56EBFE31C /* Frameworks */,
 				442A628001B45C7CDD01A96E /* Resources */,
+				E4240B7F20373EC30054E064 /* SwiftLint */,
 				CD82E5F062CDF04B4CEEC2B5 /* Warn for TODO and FIXME comments */,
 				C2422E4B1A718BC800F72769 /* Hockey Run Script */,
 				6D0F13551B4328C2001685BA /* Copy Carthage Frameworks */,
@@ -893,6 +894,7 @@
 			buildConfigurationList = 4A552F061CC7C8F8008C7298 /* Build configuration list for PBXNativeTarget "TroposCore-iOS" */;
 			buildPhases = (
 				4A552EEA1CC7C8F8008C7298 /* Sources */,
+				E4240B8020373FBA0054E064 /* SwiftLint */,
 				4A552EEB1CC7C8F8008C7298 /* Frameworks */,
 				4A552EEC1CC7C8F8008C7298 /* Headers */,
 				4A552EED1CC7C8F8008C7298 /* Resources */,
@@ -911,6 +913,7 @@
 			buildConfigurationList = 4A552F0A1CC7C8F8008C7298 /* Build configuration list for PBXNativeTarget "TroposCoreSpecs-iOS" */;
 			buildPhases = (
 				4A552EF41CC7C8F8008C7298 /* Sources */,
+				E4240B82203740560054E064 /* SwiftLint */,
 				4A552EF51CC7C8F8008C7298 /* Frameworks */,
 				4A552F511CC7CC43008C7298 /* Embed Frameworks */,
 				4A552EF61CC7C8F8008C7298 /* Resources */,
@@ -932,6 +935,7 @@
 			buildPhases = (
 				A565C89E886EB8A1055BA279 /* [CP] Check Pods Manifest.lock */,
 				EA479D4EB3908A519BE3068F /* Sources */,
+				E4240B8120373FDE0054E064 /* SwiftLint */,
 				C0B1FEA5C5D5A245394E3479 /* Frameworks */,
 				00C863EF3E2818AC40D913B2 /* Resources */,
 				4AC287A31CBC3D700064F48A /* Embed Carthage Frameworks */,
@@ -1177,6 +1181,66 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "KEYWORDS=\"TODO:|FIXME:|\\?\\?\\?:|\\!\\!\\!:\"\nFILE_EXTENSIONS=\"h|m|mm|c|cpp\"\nfind -E \"${SRCROOT}\" -ipath \"${SRCROOT}/pods\" -prune -o \\( -regex \".*\\.($FILE_EXTENSIONS)$\" \\) -print0 | xargs -0 egrep --with-filename --line-number --only-matching \"($KEYWORDS).*\\$\" | perl -p -e \"s/($KEYWORDS)/ warning: \\$1/\"\n";
+		};
+		E4240B7F20373EC30054E064 /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}\"/bin/swiftlint --path Tropos/Sources";
+			showEnvVarsInLog = 0;
+		};
+		E4240B8020373FBA0054E064 /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}\"/bin/swiftlint --path Core/Sources";
+			showEnvVarsInLog = 0;
+		};
+		E4240B8120373FDE0054E064 /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}\"/bin/swiftlint --path Tropos/Specs";
+			showEnvVarsInLog = 0;
+		};
+		E4240B82203740560054E064 /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}\"/bin/swiftlint --path Core/Specs";
+			showEnvVarsInLog = 0;
 		};
 		EE4945A9579F47C2B90523B2 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
