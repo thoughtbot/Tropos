@@ -1,7 +1,7 @@
 PODS:
-  - HockeySDK (3.8.6):
-    - HockeySDK/AllFeaturesLib (= 3.8.6)
-  - HockeySDK/AllFeaturesLib (3.8.6)
+  - HockeySDK (5.1.2):
+    - HockeySDK/DefaultLib (= 5.1.2)
+  - HockeySDK/DefaultLib (5.1.2)
   - Mixpanel (2.9.6):
     - Mixpanel/Mixpanel (= 2.9.6)
   - Mixpanel/Mixpanel (2.9.6)
@@ -22,19 +22,19 @@ PODS:
   - ReactiveObjC (3.1.0)
 
 DEPENDENCIES:
-  - HockeySDK (~> 3.6)
+  - HockeySDK (~> 5.0)
   - Mixpanel (~> 2.7)
   - OCMock
   - OHHTTPStubs
   - ReactiveObjC (~> 3.1)
 
 SPEC CHECKSUMS:
-  HockeySDK: ab68303eec6680f6b539de65d747742dd276e934
+  HockeySDK: 38b7e2726af1ea86ae97ce4b5de33ab0817e3500
   Mixpanel: 048a9f2512ac1bb8bfdecf719da024873f50a9c2
   OCMock: 2cd0716969bab32a2283ff3a46fd26a8c8b4c5e3
   OHHTTPStubs: 0aec5755528693a165bd616cb79f69387de306a8
   ReactiveObjC: 2a38ea15335de4119d8b17caf1db1484f61db902
 
-PODFILE CHECKSUM: ac3c54a92e31bc282240b1ff95cfe4ba3cbe51ae
+PODFILE CHECKSUM: f61aa4562022012beb72c47d25b6ea2dcfc228ec
 
 COCOAPODS: 1.4.0
