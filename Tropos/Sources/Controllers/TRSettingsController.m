@@ -1,15 +1,75 @@
-FOUNDATION_EXPORT NSString *const TRSettingsDidChangeNotification;
+#import "TRSettingsController.h"
+#import "NSBundle+TRBundleInfo.h"
 
-typedef NS_ENUM(NSInteger, TRUnitSystem) {
-    TRUnitSystemMetric,
-    TRUnitSystemImperial
-};
+NSString *const TRSettingsDidChangeNotification = @"TRSettingsDidChangeNotification";
+static NSString *const TRSettingsUnitSystemKey = @"TRUnitSystem";
+static NSString *const TRSettingsLastVersionKey = @"TRLastVersion";
 
-@interface TRSettingsController : NSObject
+@interface TRSettingsController ()
 
-@property (nonatomic, readonly) RACSignal *unitSystemChanged;
-@property (nonatomic) TRUnitSystem unitSystem;
+@property (nonatomic) RACSignal *userDefaultsChanged;
 
-- (void)registerSettings;
+@end
+
+@implementation TRSettingsController
+
+#pragma mark - Initializers
+
+- (instancetype)init
+{
+    self = [super init];
+    if (!self) return nil;
+
+    self.userDefaultsChanged = [[NSNotificationCenter defaultCenter] rac_addObserverForName:NSUserDefaultsDidChangeNotification object:nil];
+
+    return self;
+}
+
+#pragma mark - Properties
+
+- (RACSignal *)unitSystemChanged
+{
+    return [[[self.userDefaultsChanged filter:^BOOL(NSNotification *notification) {
+        return [notification.name isEqualToString:NSUserDefaultsDidChangeNotification];
+    }] map:^id(id value) {
+        return @([self unitSystem]);
+    }] startWith:@([self unitSystem])];
+}
+
+#pragma mark - Public Methods
+
+- (void)registerSettings
+{
+    [self registerUnitSystem];
+    [self registerLastVersion];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+}
+
+- (TRUnitSystem)unitSystem
+{
+    return [[[NSUserDefaults standardUserDefaults] stringForKey:TRSettingsUnitSystemKey] integerValue];
+}
+
+- (void)setUnitSystem:(TRUnitSystem)unitSystem
+{
+    NSString *systemString = [NSString stringWithFormat:@"%zd", unitSystem];
+    [[NSUserDefaults standardUserDefaults] setObject:systemString forKey:TRSettingsUnitSystemKey];
+}
+
+#pragma mark - Private
+
+- (void)registerUnitSystem
+{
+    BOOL localeUsesMetric = [[[NSLocale currentLocale] objectForKey:NSLocaleUsesMetricSystem] boolValue];
+    TRUnitSystem unitSystem = localeUsesMetric? TRUnitSystemMetric : TRUnitSystemImperial;
+    [[NSUserDefaults standardUserDefaults] registerDefaults:@{TRSettingsUnitSystemKey: @(unitSystem)}];
+}
+
+- (void)registerLastVersion
+{
+    NSString *version = [[NSBundle mainBundle] versionNumber];
+    [[NSUserDefaults standardUserDefaults] registerDefaults:@{TRSettingsLastVersionKey: version}];
+    [[NSUserDefaults standardUserDefaults] setObject:version forKey:TRSettingsLastVersionKey];
+}
 
 @end
