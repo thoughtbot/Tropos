@@ -861,7 +861,6 @@
 				800364D174D6FAD56EBFE31C /* Frameworks */,
 				442A628001B45C7CDD01A96E /* Resources */,
 				E4240B7F20373EC30054E064 /* SwiftLint */,
-				CD82E5F062CDF04B4CEEC2B5 /* Warn for TODO and FIXME comments */,
 				C2422E4B1A718BC800F72769 /* Hockey Run Script */,
 				B7DE70105B59EDB7B1D6100E /* [CP] Embed Pods Frameworks */,
 				8F3D51D42744160EA1F9AAE2 /* [CP] Copy Pods Resources */,
@@ -1171,20 +1170,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "FILE=\"${SRCROOT}/HockeySDK-iOS/BuildAgent\"\nif [ -f \"$FILE\" ]; then\n    \"$FILE\"\nfi";
-		};
-		CD82E5F062CDF04B4CEEC2B5 /* Warn for TODO and FIXME comments */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Warn for TODO and FIXME comments";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "KEYWORDS=\"TODO:|FIXME:|\\?\\?\\?:|\\!\\!\\!:\"\nFILE_EXTENSIONS=\"h|m|mm|c|cpp\"\nfind -E \"${SRCROOT}/Tropos\" \"${SRCROOT}/Core\" -ipath \"${SRCROOT}/pods\" -prune -o \\( -regex \".*\\.($FILE_EXTENSIONS)$\" \\) -print0 | xargs -0 egrep --with-filename --line-number --only-matching \"($KEYWORDS).*\\$\" | perl -p -e \"s/($KEYWORDS)/ warning: \\$1/\"\n";
 		};
 		E4240B7F20373EC30054E064 /* SwiftLint */ = {
 			isa = PBXShellScriptBuildPhase;
