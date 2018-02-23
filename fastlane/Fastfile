@@ -21,11 +21,10 @@ platform :ios do
   desc "Submit a new Beta Build to Apple TestFlight"
   desc "This will also make sure the profile is up to date"
   lane :beta do
-    validate_env!
-    match(type: "appstore")
+    sync_code_signing(type: "appstore")
     increment_build_number
-    gym(scheme: "Tropos")
-    pilot
+    build_app(scheme: "Tropos")
+    upload_to_testflight
   end
 
   desc "Deploy a new version to the App Store"
