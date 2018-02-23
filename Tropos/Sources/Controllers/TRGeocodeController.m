@@ -1,21 +1,27 @@
+#import "Tropos-Swift.h"
 #import "TRGeocodeController.h"
 
 @interface TRGeocodeController ()
 
-@property (nonatomic) CLGeocoder *geocoder;
+@property (nonatomic) id<TRGeocoder> geocoder;
 
 @end
 
 @implementation TRGeocodeController
 
-- (instancetype)init
+- (instancetype)initWithGeocoder:(id<TRGeocoder>)geocoder
 {
     self = [super init];
     if (!self) return nil;
 
-    self.geocoder = [CLGeocoder new];
+    self.geocoder = geocoder;
 
     return self;
+}
+
+- (instancetype)init
+{
+    return [self initWithGeocoder:[CLGeocoder new]];
 }
 
 - (RACSignal *)reverseGeocodeLocation:(CLLocation *)location
