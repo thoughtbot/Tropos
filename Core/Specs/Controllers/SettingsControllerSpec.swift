@@ -6,17 +6,16 @@ final class SettingsControllerSpec: QuickSpec {
     override func spec() {
         describe("TRSettingsController") {
             describe("registered defaults") {
-                beforeEach(resetUserDefaults)
-                afterEach(resetUserDefaults)
-
-                fit("returns the correct value in an imperial locale") {
-                    let controller = SettingsController(locale: Locale(identifier: "en_US"))
+                it("returns the correct value in an imperial locale") {
+                    let defaults = UserDefaults.makeRandomDefaults()
+                    let controller = SettingsController(locale: Locale(identifier: "en_US"), userDefaults: defaults)
                     controller.registerSettings()
                     expect(controller.unitSystem) == UnitSystem.imperial
                 }
 
                 it("returns the correct value in a metric locale") {
-                    let controller = SettingsController(locale: Locale(identifier: "en_AU"))
+                    let defaults = UserDefaults.makeRandomDefaults()
+                    let controller = SettingsController(locale: Locale(identifier: "en_AU"), userDefaults: defaults)
                     controller.registerSettings()
                     expect(controller.unitSystem) == UnitSystem.metric
                 }
@@ -31,12 +30,4 @@ final class SettingsControllerSpec: QuickSpec {
             }
         }
     }
-}
-
-private func resetUserDefaults() {
-    let defaults = UserDefaults.standard
-
-    defaults.dictionaryRepresentation()
-        .keys
-        .forEach(defaults.removeObject)
 }

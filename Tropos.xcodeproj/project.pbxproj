@@ -47,6 +47,7 @@
 		4A69875E1CC817D9002D3F87 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A69875B1CC817D9002D3F87 /* UIColor.swift */; };
 		4A69875F1CC817D9002D3F87 /* NSAttributedString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A69875C1CC817D9002D3F87 /* NSAttributedString.swift */; };
 		4A6987621CC818B4002D3F87 /* TRTemperatureColorsSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6987611CC818B4002D3F87 /* TRTemperatureColorsSpec.swift */; };
+		4A6BB9C62040A38D00835531 /* UserDefaults+Random.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6BB9C42040A37C00835531 /* UserDefaults+Random.swift */; };
 		4A7A12351CC8219600363A5C /* TemperatureComparisonFormatterSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A7A12331CC8219600363A5C /* TemperatureComparisonFormatterSpec.swift */; };
 		4A7A12361CC8219600363A5C /* TemperatureFormatterSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A7A12341CC8219600363A5C /* TemperatureFormatterSpec.swift */; };
 		4A7A12391CC821DA00363A5C /* DailyForecastViewModelSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A7A12381CC821DA00363A5C /* DailyForecastViewModelSpec.swift */; };
@@ -245,6 +246,7 @@
 		4A6987671CC81D20002D3F87 /* TRWeatherUpdate+Analytics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TRWeatherUpdate+Analytics.h"; sourceTree = "<group>"; };
 		4A6987681CC81D20002D3F87 /* TRSettingsController+TRObservation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "TRSettingsController+TRObservation.m"; sourceTree = "<group>"; };
 		4A6987691CC81D20002D3F87 /* TRSettingsController+TRObservation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TRSettingsController+TRObservation.h"; sourceTree = "<group>"; };
+		4A6BB9C42040A37C00835531 /* UserDefaults+Random.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+Random.swift"; sourceTree = "<group>"; };
 		4A7A12331CC8219600363A5C /* TemperatureComparisonFormatterSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TemperatureComparisonFormatterSpec.swift; sourceTree = "<group>"; };
 		4A7A12341CC8219600363A5C /* TemperatureFormatterSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TemperatureFormatterSpec.swift; sourceTree = "<group>"; };
 		4A7A12381CC821DA00363A5C /* DailyForecastViewModelSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DailyForecastViewModelSpec.swift; sourceTree = "<group>"; };
@@ -549,6 +551,7 @@
 			children = (
 				4A7A123A1CC8223F00363A5C /* NSDate+ISO8601.swift */,
 				4A552F791CC7D06F008C7298 /* TestPlacemark.swift */,
+				4A6BB9C42040A37C00835531 /* UserDefaults+Random.swift */,
 			);
 			path = Support;
 			sourceTree = "<group>";
@@ -1330,6 +1333,7 @@
 				4A552F731CC7CD60008C7298 /* WeatherUpdateCacheSpec.swift in Sources */,
 				4A7A12361CC8219600363A5C /* TemperatureFormatterSpec.swift in Sources */,
 				4A7A123B1CC8223F00363A5C /* NSDate+ISO8601.swift in Sources */,
+				4A6BB9C62040A38D00835531 /* UserDefaults+Random.swift in Sources */,
 				4A6987471CC80CBD002D3F87 /* SettingsControllerSpec.swift in Sources */,
 				4A552F7A1CC7D06F008C7298 /* TestPlacemark.swift in Sources */,
 				4A552F711CC7CD60008C7298 /* PrecipitationSpec.swift in Sources */,
