@@ -46,7 +46,7 @@
     return [updatedConditions map:^(NSAttributedString *conditions) {
         UILocalNotification *notification = [[UILocalNotification alloc] init];
         notification.fireDate = [NSDate distantPast];
-        notification.alertTitle = @"Tropos";
+        notification.alertTitle = NSLocalizedStringFromTable(@"CFBundleDisplayName", @"InfoPlist", @"The app's display name");
         notification.alertBody = conditions.string;
         return notification;
     }];
