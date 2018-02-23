@@ -1,3 +1,5 @@
+@import UIKit;
+
 @interface TRColorBackdropLayer : CALayer
 
 - (void)startAnimating;

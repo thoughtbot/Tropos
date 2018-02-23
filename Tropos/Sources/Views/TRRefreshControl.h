@@ -1,3 +1,6 @@
+#import <ReactiveObjC/ReactiveObjC.h>
+@import UIKit;
+
 @class TRRefreshView;
 
 @interface TRRefreshControl : UIControl

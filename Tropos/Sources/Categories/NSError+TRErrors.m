@@ -1,4 +1,5 @@
 #import "NSError+TRErrors.h"
+#import "TRErrors.h"
 
 @implementation NSError (TRErrors)
 

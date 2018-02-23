@@ -1,5 +1,6 @@
-@import CoreLocation;
 @import TroposCore;
+
+#import "TRErrors.h"
 #import "TRForecastController.h"
 #import "NSDate+TRRelativeDate.h"
 #import "Secrets.h"

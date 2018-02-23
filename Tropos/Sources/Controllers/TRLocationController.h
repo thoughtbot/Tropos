@@ -1,3 +1,7 @@
+@import CoreLocation;
+@import Foundation;
+#import <ReactiveObjC/ReactiveObjC.h>
+
 @interface TRLocationController : NSObject
 
 - (RACSignal *)requestAlwaysAuthorization;

@@ -1,3 +1,5 @@
+@import UIKit;
+
 @class TRWeatherController;
 
 @interface TRWeatherViewController : UIViewController

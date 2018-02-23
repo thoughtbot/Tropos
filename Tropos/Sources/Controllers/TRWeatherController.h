@@ -1,3 +1,5 @@
+#import <ReactiveObjC/ReactiveObjC.h>
+
 @interface TRWeatherController : NSObject
 
 @property (nonatomic, readonly) RACSignal *locationName;

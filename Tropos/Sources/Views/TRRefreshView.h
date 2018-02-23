@@ -1,3 +1,5 @@
+@import UIKit;
+
 @interface TRRefreshView : UIView
 
 @property (nonatomic) CGFloat progress;

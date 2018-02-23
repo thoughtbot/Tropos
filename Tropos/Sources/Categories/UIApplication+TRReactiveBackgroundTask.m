@@ -1,3 +1,4 @@
+#import "TRErrors.h"
 #import "UIApplication+TRReactiveBackgroundTask.h"
 
 @implementation UIApplication (TRReactiveBackgroundTask)

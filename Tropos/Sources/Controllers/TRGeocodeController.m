@@ -1,4 +1,3 @@
-@import CoreLocation;
 #import "TRGeocodeController.h"
 
 @interface TRGeocodeController ()

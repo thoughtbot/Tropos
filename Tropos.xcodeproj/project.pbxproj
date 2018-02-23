@@ -293,7 +293,6 @@
 		65685FF21B3D299C0054BA1A /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/Localizable.strings; sourceTree = "<group>"; };
 		6D0F135A1B432976001685BA /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
 		6D0F135B1B432976001685BA /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
-		986C425E5A2268D27FAE2FAA /* Prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = Prefix.pch; sourceTree = "<group>"; };
 		A10108F71D3369EB0024B1BA /* NSBundle+TRBundleInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSBundle+TRBundleInfo.h"; sourceTree = "<group>"; };
 		A10108F81D3369EB0024B1BA /* NSBundle+TRBundleInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSBundle+TRBundleInfo.m"; sourceTree = "<group>"; };
 		A10108FD1D336C6A0024B1BA /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
@@ -770,7 +769,6 @@
 				C2E44CDE1A3A3BFB009CC844 /* ViewControllers */,
 				639AAB142C96B59FC995CA1D /* Views */,
 				4A6987441CC80699002D3F87 /* Bridging-Header.h */,
-				986C425E5A2268D27FAE2FAA /* Prefix.pch */,
 				22FE01C01AF3F5550085B494 /* Secrets.h */,
 			);
 			path = Sources;
@@ -1540,7 +1538,6 @@
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = Tropos/Sources/Prefix.pch;
 				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
 				INFOPLIST_FILE = "Tropos/Resources/Other-Sources/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -1651,7 +1648,6 @@
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = Tropos/Sources/Prefix.pch;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",

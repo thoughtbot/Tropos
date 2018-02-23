@@ -1,3 +1,5 @@
+@import UIKit;
+
 @class TRDailyForecastViewModel;
 
 @interface TRDailyForecastView : UIView

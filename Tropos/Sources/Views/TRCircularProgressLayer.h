@@ -1,3 +1,5 @@
+@import UIKit;
+
 @interface TRCircularProgressLayer : CALayer
 
 @property (nonatomic) CGFloat progress;

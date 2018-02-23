@@ -1,4 +1,6 @@
-@class CLLocation;
+@import CoreLocation;
+@import Foundation;
+#import <ReactiveObjC/ReactiveObjC.h>
 
 @interface TRGeocodeController : NSObject
 
