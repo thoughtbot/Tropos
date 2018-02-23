@@ -1,14 +1,14 @@
 import Foundation
 
-public enum CardinalDirection: String, CustomStringConvertible {
-    case north
-    case northEast
-    case east
-    case southEast
-    case south
-    case southWest
-    case west
-    case northWest
+public enum CardinalDirection: String {
+    case north = "North"
+    case northEast = "NorthEast"
+    case east = "East"
+    case southEast = "SouthEast"
+    case south = "South"
+    case southWest = "SouthWest"
+    case west = "West"
+    case northWest = "NorthWest"
 
     public init?(bearing: Double) {
         guard (0.0...360.0).contains(bearing) else { return nil }
@@ -34,21 +34,17 @@ public enum CardinalDirection: String, CustomStringConvertible {
         }
     }
 
-    public var description: String {
-        return rawValue
-    }
-
     public var abbreviation: String {
-        return description.filter { "NSEW".contains($0) }
+        return rawValue.filter { "NSEW".contains($0) }
     }
 }
 
 public extension CardinalDirection {
     var localizedDescription: String {
-        return TroposCoreLocalizedString(description)
+        return TroposCoreLocalizedString(rawValue)
     }
 
     var localizedAbbreviation: String {
-        return TroposCoreLocalizedString(abbreviation)
+        return TroposCoreLocalizedString(rawValue)
     }
 }
