@@ -9,6 +9,8 @@ NS_SWIFT_NAME(Geocoder)
 - (void)reverseGeocodeLocation:(CLLocation *)location
              completionHandler:(CLGeocodeCompletionHandler)completionHandler;
 
+- (void)cancelGeocode;
+
 @end
 
 @interface CLGeocoder (TRGeocoder) <TRGeocoder>

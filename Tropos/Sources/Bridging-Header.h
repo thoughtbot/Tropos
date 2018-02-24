@@ -1,4 +1,4 @@
 #import "Secrets.h"
 #import "TRAnalyticsController.h"
 #import "TRApplicationController.h"
-#import "TRGeocodeController.h"
+#import "TRGeocoder.h"

@@ -15,7 +15,7 @@ final class GeocodeControllerSpec: QuickSpec {
                 var place: CLPlacemark?
 
                 controller.reverseGeocodeLocation(location).subscribeNext({
-                    place = $0 as? CLPlacemark
+                    place = $0
                 }, error: {
                     error = $0
                 }, completed: {
@@ -29,14 +29,34 @@ final class GeocodeControllerSpec: QuickSpec {
             }
 
             it("passes through an error if it occurs") {
-                let geocoder = TestGeocoder(error: TestError.geocodeFailed)
+                let geocoder = TestGeocoder(error: .geocodeFoundNoResult)
                 let controller = GeocodeController(geocoder: geocoder)
                 let location = CLLocation(latitude: -1, longitude: -2)
 
                 var error: Error?
                 controller.reverseGeocodeLocation(location).subscribeError { error = $0 }
 
-                expect(error).toEventually(matchError(TestError.geocodeFailed))
+                expect(error).toEventually(matchError(CLError.self))
+            }
+
+            it("cancels the underlying geocode if the subscription is cancelled") {
+                let geocoder = TestGeocoder(name: "test place")
+                let controller = GeocodeController(geocoder: geocoder)
+                let location = CLLocation(latitude: 3, longitude: 4)
+
+                var error: Error?
+                var isCompleted = false
+                controller.reverseGeocodeLocation(location).subscribeError({
+                    error = $0
+                }, completed: {
+                    isCompleted = true
+                })
+
+                geocoder.cancelGeocode()
+                RunLoop.current.run(until: Date().addingTimeInterval(0.1))
+
+                expect(error).to(beNil())
+                expect(isCompleted).to(beFalse())
             }
         }
     }

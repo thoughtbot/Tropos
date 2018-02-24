@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		3178BB7A28794DB9F26B3131 /* Pods-UnitTests-metadata.plist in Resources */ = {isa = PBXBuildFile; fileRef = FE15A3F5D523F3C485802CAC /* Pods-UnitTests-metadata.plist */; };
 		46660A27B04F4C7B78A7920F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 436D9431497525313B32E225 /* Foundation.framework */; };
-		4A23F4F62040FF1800FDDC5E /* TestError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A23F4F52040FF1800FDDC5E /* TestError.swift */; };
+		4A23F4F82041019000FDDC5E /* GeocodeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A23F4F72041019000FDDC5E /* GeocodeController.swift */; };
 		4A4B75E92040D0D600CE8E05 /* TestGeocoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4B75E82040D0D600CE8E05 /* TestGeocoder.swift */; };
 		4A4B75EB2040D10800CE8E05 /* CoreLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4B75EA2040D10800CE8E05 /* CoreLocation.swift */; };
 		4A552EF91CC7C8F8008C7298 /* TroposCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A552EEF1CC7C8F8008C7298 /* TroposCore.framework */; };
@@ -78,7 +78,6 @@
 		4D49554C1A8C298A0066F278 /* TRRefreshView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D49554B1A8C298A0066F278 /* TRRefreshView.m */; };
 		4D49554F1A8C29C30066F278 /* TRCircularProgressLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D49554E1A8C29C30066F278 /* TRCircularProgressLayer.m */; };
 		4D4955521A8C2B5D0066F278 /* UIImage+TRColorBackdrop.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D4955511A8C2B5D0066F278 /* UIImage+TRColorBackdrop.m */; };
-		4D72D12A1A7330E700FAB67B /* TRGeocodeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D72D1291A7330E700FAB67B /* TRGeocodeController.m */; };
 		4D7389DF1A9890CD0039F13B /* UIScrollView+TRReactiveCocoa.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D7389DE1A9890CD0039F13B /* UIScrollView+TRReactiveCocoa.m */; };
 		4D76CCD41A99C3FA00DDE5EB /* TRRefreshLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D76CCD31A99C3FA00DDE5EB /* TRRefreshLayer.m */; };
 		4D7CDEBC1A46D3610038DD33 /* CLLocation+TRRecentLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D7CDEBB1A46D3610038DD33 /* CLLocation+TRRecentLocation.m */; };
@@ -198,7 +197,7 @@
 		436D9431497525313B32E225 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		449386DA1B5044EE00766EC9 /* pl-PL */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pl-PL"; path = "pl-PL.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		449386DB1B5044EE00766EC9 /* pl-PL */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pl-PL"; path = "pl-PL.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
-		4A23F4F52040FF1800FDDC5E /* TestError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestError.swift; sourceTree = "<group>"; };
+		4A23F4F72041019000FDDC5E /* GeocodeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeocodeController.swift; sourceTree = "<group>"; };
 		4A4B75E82040D0D600CE8E05 /* TestGeocoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestGeocoder.swift; sourceTree = "<group>"; };
 		4A4B75EA2040D10800CE8E05 /* CoreLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreLocation.swift; sourceTree = "<group>"; };
 		4A552EEF1CC7C8F8008C7298 /* TroposCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TroposCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -283,8 +282,6 @@
 		4D49554E1A8C29C30066F278 /* TRCircularProgressLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRCircularProgressLayer.m; sourceTree = "<group>"; };
 		4D4955501A8C2B5D0066F278 /* UIImage+TRColorBackdrop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+TRColorBackdrop.h"; sourceTree = "<group>"; };
 		4D4955511A8C2B5D0066F278 /* UIImage+TRColorBackdrop.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+TRColorBackdrop.m"; sourceTree = "<group>"; };
-		4D72D1281A7330E700FAB67B /* TRGeocodeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRGeocodeController.h; sourceTree = "<group>"; };
-		4D72D1291A7330E700FAB67B /* TRGeocodeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRGeocodeController.m; sourceTree = "<group>"; };
 		4D7389DD1A9890CD0039F13B /* UIScrollView+TRReactiveCocoa.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+TRReactiveCocoa.h"; sourceTree = "<group>"; };
 		4D7389DE1A9890CD0039F13B /* UIScrollView+TRReactiveCocoa.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+TRReactiveCocoa.m"; sourceTree = "<group>"; };
 		4D76CCD21A99C3FA00DDE5EB /* TRRefreshLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRRefreshLayer.h; sourceTree = "<group>"; };
@@ -399,6 +396,7 @@
 				A10109011D336DBE0024B1BA /* AcknowledgementsParser.swift */,
 				4A86FB64205C0E4D00E761C3 /* AppDelegate.swift */,
 				A1F8691F1D3357D6003A826D /* AppearanceController.swift */,
+				4A23F4F72041019000FDDC5E /* GeocodeController.swift */,
 				4DDF65041AB3AC0C00909D67 /* TRWeatherController.h */,
 				4DDF65051AB3AC0C00909D67 /* TRWeatherController.m */,
 				4D9A00041A9D61CD000835A9 /* TRAnalyticsController.h */,
@@ -407,8 +405,6 @@
 				4D0A5C371A3A27510084C41E /* TRForecastController.m */,
 				C2E44CDB1A3A38A2009CC844 /* TRLocationController.h */,
 				C2E44CDC1A3A38A2009CC844 /* TRLocationController.m */,
-				4D72D1281A7330E700FAB67B /* TRGeocodeController.h */,
-				4D72D1291A7330E700FAB67B /* TRGeocodeController.m */,
 				E7A895521AFD11AA0023205B /* TRApplicationController.h */,
 				E7A895531AFD11AA0023205B /* TRApplicationController.m */,
 			);
@@ -475,7 +471,6 @@
 			children = (
 				4ABCA775205C497A009DF765 /* UnitTests-Bridging-Header.h */,
 				4A4B75EA2040D10800CE8E05 /* CoreLocation.swift */,
-				4A23F4F52040FF1800FDDC5E /* TestError.swift */,
 				4A4B75E82040D0D600CE8E05 /* TestGeocoder.swift */,
 			);
 			path = Support;
@@ -1340,6 +1335,7 @@
 				A10109001D336C9C0024B1BA /* TRTableViewCell.swift in Sources */,
 				4D49554C1A8C298A0066F278 /* TRRefreshView.m in Sources */,
 				A12FCE251D336FA90062E7F1 /* Color.swift in Sources */,
+				4A23F4F82041019000FDDC5E /* GeocodeController.swift in Sources */,
 				A1F869201D3357D6003A826D /* AppearanceController.swift in Sources */,
 				A10109021D336DBE0024B1BA /* AcknowledgementsParser.swift in Sources */,
 				A12FCE261D3385440062E7F1 /* SettingsTableViewController.swift in Sources */,
@@ -1361,7 +1357,6 @@
 				C2E44CE11A3A3C09009CC844 /* TRWeatherViewController.m in Sources */,
 				4D1ABA0B1A89686200B7F8FB /* TRNavigationBar.m in Sources */,
 				CE5D7F3B45F980082E1BCA30 /* LaunchScreen.xib in Sources */,
-				4D72D12A1A7330E700FAB67B /* TRGeocodeController.m in Sources */,
 				4D7CDEBC1A46D3610038DD33 /* CLLocation+TRRecentLocation.m in Sources */,
 				4D4955521A8C2B5D0066F278 /* UIImage+TRColorBackdrop.m in Sources */,
 				4D49377B1A82F33B007A1FA9 /* CATransition+TRFadeTransition.m in Sources */,
@@ -1375,7 +1370,6 @@
 				4AEF9E882040C47400CDDEEA /* GeocodeControllerSpec.swift in Sources */,
 				E7B3B9271B34EDFE00BDD5A4 /* TRApplicationControllerSpec.m in Sources */,
 				4A4B75E92040D0D600CE8E05 /* TestGeocoder.swift in Sources */,
-				4A23F4F62040FF1800FDDC5E /* TestError.swift in Sources */,
 				4A4B75EB2040D10800CE8E05 /* CoreLocation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
