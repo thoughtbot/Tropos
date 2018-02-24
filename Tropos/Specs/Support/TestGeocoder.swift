@@ -1,29 +1,27 @@
 import CoreLocation
 import Foundation
 import MapKit
+import Result
 
 final class TestGeocoder: NSObject, Geocoder {
-    private var name: String?
-    private var error: Error?
+    private let result: Result<String, AnyError>
 
     init(name: String) {
-        self.name = name
+        result = .success(name)
     }
 
     init(error: Error) {
-        self.error = error
+        result = .failure(AnyError(error))
     }
 
     func reverseGeocodeLocation(_ location: CLLocation, completionHandler: @escaping CLGeocodeCompletionHandler) {
         DispatchQueue.main.async {
-            switch (self.name, self.error) {
-            case let (name?, _):
-                let placemark = MKPlacemark(coordinate: location.coordinate, addressDictionary: ["Name": name])
+            switch self.result {
+            case let .success(country):
+                let placemark = MKPlacemark(coordinate: location.coordinate, addressDictionary: ["Name": country])
                 completionHandler([placemark], nil)
-            case let (_, error?):
-                completionHandler(nil, error)
-            default:
-                fatalError("unreachable")
+            case let .failure(error):
+                completionHandler(nil, error.error)
             }
         }
     }

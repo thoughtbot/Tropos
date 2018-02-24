@@ -51,6 +51,10 @@
 		4A69875F1CC817D9002D3F87 /* NSAttributedString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A69875C1CC817D9002D3F87 /* NSAttributedString.swift */; };
 		4A6987621CC818B4002D3F87 /* TRTemperatureColorsSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6987611CC818B4002D3F87 /* TRTemperatureColorsSpec.swift */; };
 		4A6BB9C62040A38D00835531 /* UserDefaults+Random.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6BB9C42040A37C00835531 /* UserDefaults+Random.swift */; };
+		4A6BB9CB2040C33000835531 /* ReactiveSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A6BB9C72040C32F00835531 /* ReactiveSwift.framework */; };
+		4A6BB9CC2040C33000835531 /* ReactiveObjC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A6BB9C82040C33000835531 /* ReactiveObjC.framework */; };
+		4A6BB9CD2040C33000835531 /* ReactiveObjCBridge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A6BB9C92040C33000835531 /* ReactiveObjCBridge.framework */; };
+		4A6BB9CE2040C33000835531 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A6BB9CA2040C33000835531 /* Result.framework */; };
 		4A7A12351CC8219600363A5C /* TemperatureComparisonFormatterSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A7A12331CC8219600363A5C /* TemperatureComparisonFormatterSpec.swift */; };
 		4A7A12361CC8219600363A5C /* TemperatureFormatterSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A7A12341CC8219600363A5C /* TemperatureFormatterSpec.swift */; };
 		4A7A12391CC821DA00363A5C /* DailyForecastViewModelSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A7A12381CC821DA00363A5C /* DailyForecastViewModelSpec.swift */; };
@@ -244,6 +248,10 @@
 		4A6987681CC81D20002D3F87 /* TRSettingsController+TRObservation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "TRSettingsController+TRObservation.m"; sourceTree = "<group>"; };
 		4A6987691CC81D20002D3F87 /* TRSettingsController+TRObservation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TRSettingsController+TRObservation.h"; sourceTree = "<group>"; };
 		4A6BB9C42040A37C00835531 /* UserDefaults+Random.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+Random.swift"; sourceTree = "<group>"; };
+		4A6BB9C72040C32F00835531 /* ReactiveSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveSwift.framework; path = Carthage/Build/iOS/ReactiveSwift.framework; sourceTree = "<group>"; };
+		4A6BB9C82040C33000835531 /* ReactiveObjC.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveObjC.framework; path = Carthage/Build/iOS/ReactiveObjC.framework; sourceTree = "<group>"; };
+		4A6BB9C92040C33000835531 /* ReactiveObjCBridge.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveObjCBridge.framework; path = Carthage/Build/iOS/ReactiveObjCBridge.framework; sourceTree = "<group>"; };
+		4A6BB9CA2040C33000835531 /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = Carthage/Build/iOS/Result.framework; sourceTree = "<group>"; };
 		4A7A12331CC8219600363A5C /* TemperatureComparisonFormatterSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TemperatureComparisonFormatterSpec.swift; sourceTree = "<group>"; };
 		4A7A12341CC8219600363A5C /* TemperatureFormatterSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TemperatureFormatterSpec.swift; sourceTree = "<group>"; };
 		4A7A12381CC821DA00363A5C /* DailyForecastViewModelSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DailyForecastViewModelSpec.swift; sourceTree = "<group>"; };
@@ -363,6 +371,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				A1FC9ED21CFEA23B00E62618 /* TroposCore.framework in Frameworks */,
+				4A6BB9CC2040C33000835531 /* ReactiveObjC.framework in Frameworks */,
+				4A6BB9CE2040C33000835531 /* Result.framework in Frameworks */,
+				4A6BB9CD2040C33000835531 /* ReactiveObjCBridge.framework in Frameworks */,
+				4A6BB9CB2040C33000835531 /* ReactiveSwift.framework in Frameworks */,
 				46660A27B04F4C7B78A7920F /* Foundation.framework in Frameworks */,
 				8E55CA903A39795581785ED4 /* libPods-Tropos.a in Frameworks */,
 			);
@@ -704,11 +716,15 @@
 		79646077C042F7DDDC35EBEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				6D0F135A1B432976001685BA /* Nimble.framework */,
-				6D0F135B1B432976001685BA /* Quick.framework */,
-				AFACA54B2AA00A57E3FA59D1 /* iOS */,
 				D281611EA8A7B26EFB4FBBAC /* libPods-Tropos.a */,
 				5DC78109457DAFE306854F5B /* libPods-UnitTests.a */,
+				6D0F135A1B432976001685BA /* Nimble.framework */,
+				6D0F135B1B432976001685BA /* Quick.framework */,
+				4A6BB9C82040C33000835531 /* ReactiveObjC.framework */,
+				4A6BB9C92040C33000835531 /* ReactiveObjCBridge.framework */,
+				4A6BB9C72040C32F00835531 /* ReactiveSwift.framework */,
+				4A6BB9CA2040C33000835531 /* Result.framework */,
+				AFACA54B2AA00A57E3FA59D1 /* iOS */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -862,6 +878,7 @@
 				442A628001B45C7CDD01A96E /* Resources */,
 				E4240B7F20373EC30054E064 /* SwiftLint */,
 				C2422E4B1A718BC800F72769 /* Hockey Run Script */,
+				6D0F13551B4328C2001685BA /* Copy Carthage Frameworks */,
 				B7DE70105B59EDB7B1D6100E /* [CP] Embed Pods Frameworks */,
 				8F3D51D42744160EA1F9AAE2 /* [CP] Copy Pods Resources */,
 				A1FC9ED61CFEA23B00E62618 /* Embed Frameworks */,
@@ -1058,6 +1075,29 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-UnitTests/Pods-UnitTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6D0F13551B4328C2001685BA /* Copy Carthage Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/ReactiveSwift.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Result.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/ReactiveObjC.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/ReactiveObjCBridge.framework",
+			);
+			name = "Copy Carthage Frameworks";
+			outputPaths = (
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/ReactiveSwift.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Result.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/ReactiveObjC.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/ReactiveObjCBridge.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
 			showEnvVarsInLog = 0;
 		};
 		8F3D51D42744160EA1F9AAE2 /* [CP] Copy Pods Resources */ = {

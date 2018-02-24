@@ -1,0 +1,2 @@
+github "ReactiveCocoa/ReactiveObjCBridge" "xcode-10"
+github "ReactiveCocoa/ReactiveSwift"

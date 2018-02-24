@@ -19,22 +19,19 @@ PODS:
   - OHHTTPStubs/NSURLSession (4.3.0):
     - OHHTTPStubs/Core
   - OHHTTPStubs/OHPathHelpers (4.3.0)
-  - ReactiveObjC (3.1.0)
 
 DEPENDENCIES:
   - HockeySDK (~> 5.0)
   - Mixpanel (~> 2.7)
   - OCMock
   - OHHTTPStubs
-  - ReactiveObjC (~> 3.1)
 
 SPEC CHECKSUMS:
   HockeySDK: 38b7e2726af1ea86ae97ce4b5de33ab0817e3500
   Mixpanel: 048a9f2512ac1bb8bfdecf719da024873f50a9c2
   OCMock: 2cd0716969bab32a2283ff3a46fd26a8c8b4c5e3
   OHHTTPStubs: 0aec5755528693a165bd616cb79f69387de306a8
-  ReactiveObjC: 2a38ea15335de4119d8b17caf1db1484f61db902
 
-PODFILE CHECKSUM: f61aa4562022012beb72c47d25b6ea2dcfc228ec
+PODFILE CHECKSUM: dbc2d3e4f0f91d3223a93385cd1585ec10fdeefe
 
 COCOAPODS: 1.4.0
