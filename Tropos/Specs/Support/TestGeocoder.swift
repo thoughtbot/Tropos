@@ -2,8 +2,9 @@ import CoreLocation
 import Foundation
 import MapKit
 import Result
+@testable import Tropos
 
-final class TestGeocoder: NSObject, Geocoder {
+final class TestGeocoder: Geocoder {
     private enum State {
         case ready
         case geocoding

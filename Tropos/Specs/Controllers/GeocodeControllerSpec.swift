@@ -1,3 +1,4 @@
+import CoreLocation
 import Quick
 import Nimble
 @testable import Tropos
