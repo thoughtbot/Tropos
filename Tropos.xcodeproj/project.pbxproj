@@ -91,16 +91,12 @@
 		A10108FE1D336C6A0024B1BA /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10108FD1D336C6A0024B1BA /* WebViewController.swift */; };
 		A10109001D336C9C0024B1BA /* TRTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10108FF1D336C9C0024B1BA /* TRTableViewCell.swift */; };
 		A10109021D336DBE0024B1BA /* AcknowledgementsParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10109011D336DBE0024B1BA /* AcknowledgementsParser.swift */; };
-		A11D71D31CD73697000EB4A3 /* Courier.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A11D71D21CD73697000EB4A3 /* Courier.framework */; };
-		A11D71D51CD73751000EB4A3 /* CourierClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11D71D41CD73751000EB4A3 /* CourierClient.swift */; };
 		A12FCE251D336FA90062E7F1 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12FCE241D336FA90062E7F1 /* Color.swift */; };
 		A12FCE261D3385440062E7F1 /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D115AF11ADC8C0C0032AAA3 /* SettingsTableViewController.swift */; };
 		A12FCE281D3389A10062E7F1 /* TextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12FCE271D3389A10062E7F1 /* TextViewController.swift */; };
 		A12FCE2A1D338A4A0062E7F1 /* DINNextLTPro-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = A12FCE291D338A4A0062E7F1 /* DINNextLTPro-Regular.otf */; };
 		A1628AE81D0E56FB00B6AF29 /* UIApplication+TRReactiveBackgroundTask.m in Sources */ = {isa = PBXBuildFile; fileRef = A1628AE71D0E56FB00B6AF29 /* UIApplication+TRReactiveBackgroundTask.m */; };
-		A1BBE84F1D07D2F900A9631A /* CourierClientSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1BBE84D1D07D2C500A9631A /* CourierClientSpec.swift */; };
 		A1F869201D3357D6003A826D /* AppearanceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1F8691F1D3357D6003A826D /* AppearanceController.swift */; };
-		A1FC9ECD1CFE935500E62618 /* CourierClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11D71D41CD73751000EB4A3 /* CourierClient.swift */; };
 		A1FC9ED21CFEA23B00E62618 /* TroposCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A552EEF1CC7C8F8008C7298 /* TroposCore.framework */; };
 		A1FC9ED31CFEA23B00E62618 /* TroposCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4A552EEF1CC7C8F8008C7298 /* TroposCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		C2E44CDD1A3A38A2009CC844 /* TRLocationController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2E44CDC1A3A38A2009CC844 /* TRLocationController.m */; };
@@ -310,16 +306,12 @@
 		A10108FD1D336C6A0024B1BA /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		A10108FF1D336C9C0024B1BA /* TRTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TRTableViewCell.swift; sourceTree = "<group>"; };
 		A10109011D336DBE0024B1BA /* AcknowledgementsParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AcknowledgementsParser.swift; sourceTree = "<group>"; };
-		A11D71D21CD73697000EB4A3 /* Courier.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Courier.framework; path = Carthage/Build/iOS/Courier.framework; sourceTree = "<group>"; };
-		A11D71D41CD73751000EB4A3 /* CourierClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CourierClient.swift; sourceTree = "<group>"; };
 		A12FCE241D336FA90062E7F1 /* Color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		A12FCE271D3389A10062E7F1 /* TextViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextViewController.swift; sourceTree = "<group>"; };
 		A12FCE291D338A4A0062E7F1 /* DINNextLTPro-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DINNextLTPro-Regular.otf"; sourceTree = "<group>"; };
 		A1628AE61D0E56FB00B6AF29 /* UIApplication+TRReactiveBackgroundTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIApplication+TRReactiveBackgroundTask.h"; sourceTree = "<group>"; };
 		A1628AE71D0E56FB00B6AF29 /* UIApplication+TRReactiveBackgroundTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIApplication+TRReactiveBackgroundTask.m"; sourceTree = "<group>"; };
-		A1BBE84D1D07D2C500A9631A /* CourierClientSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CourierClientSpec.swift; sourceTree = "<group>"; };
 		A1F8691F1D3357D6003A826D /* AppearanceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppearanceController.swift; sourceTree = "<group>"; };
-		A1FC9ECE1CFE937900E62618 /* UnitTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UnitTests-Bridging-Header.h"; sourceTree = "<group>"; };
 		A6B1ADBC73A8A2EF7FB4E257 /* TRAppDelegate.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = TRAppDelegate.m; sourceTree = "<group>"; };
 		AFAAC7C0DE54A102E5AED4DC /* Pods-UnitTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UnitTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-UnitTests/Pods-UnitTests.debug.xcconfig"; sourceTree = "<group>"; };
 		B1E75D271B6E8ADC007B03F9 /* sv */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = sv; path = sv.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -370,7 +362,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				A1FC9ED21CFEA23B00E62618 /* TroposCore.framework in Frameworks */,
-				A11D71D31CD73697000EB4A3 /* Courier.framework in Frameworks */,
 				46660A27B04F4C7B78A7920F /* Foundation.framework in Frameworks */,
 				8E55CA903A39795581785ED4 /* libPods-Tropos.a in Frameworks */,
 			);
@@ -408,7 +399,6 @@
 				4D72D1291A7330E700FAB67B /* TRGeocodeController.m */,
 				E7A895521AFD11AA0023205B /* TRApplicationController.h */,
 				E7A895531AFD11AA0023205B /* TRApplicationController.m */,
-				A11D71D41CD73751000EB4A3 /* CourierClient.swift */,
 				A10108FA1D336A940024B1BA /* TRSettingsController.h */,
 				A10108FB1D336A940024B1BA /* TRSettingsController.m */,
 			);
@@ -473,7 +463,6 @@
 		4A0DD7531CCA97BB00E7A451 /* Support */ = {
 			isa = PBXGroup;
 			children = (
-				A1FC9ECE1CFE937900E62618 /* UnitTests-Bridging-Header.h */,
 			);
 			path = Support;
 			sourceTree = "<group>";
@@ -712,7 +701,6 @@
 		79646077C042F7DDDC35EBEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				A11D71D21CD73697000EB4A3 /* Courier.framework */,
 				6D0F135A1B432976001685BA /* Nimble.framework */,
 				6D0F135B1B432976001685BA /* Quick.framework */,
 				AFACA54B2AA00A57E3FA59D1 /* iOS */,
@@ -804,7 +792,6 @@
 			isa = PBXGroup;
 			children = (
 				E7B3B9261B34EDFE00BDD5A4 /* TRApplicationControllerSpec.m */,
-				A1BBE84D1D07D2C500A9631A /* CourierClientSpec.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -874,7 +861,6 @@
 				E4240B7F20373EC30054E064 /* SwiftLint */,
 				CD82E5F062CDF04B4CEEC2B5 /* Warn for TODO and FIXME comments */,
 				C2422E4B1A718BC800F72769 /* Hockey Run Script */,
-				6D0F13551B4328C2001685BA /* Copy Carthage Frameworks */,
 				B7DE70105B59EDB7B1D6100E /* [CP] Embed Pods Frameworks */,
 				8F3D51D42744160EA1F9AAE2 /* [CP] Copy Pods Resources */,
 				A1FC9ED61CFEA23B00E62618 /* Embed Frameworks */,
@@ -935,7 +921,6 @@
 			buildPhases = (
 				A565C89E886EB8A1055BA279 /* [CP] Check Pods Manifest.lock */,
 				EA479D4EB3908A519BE3068F /* Sources */,
-				E4240B8120373FDE0054E064 /* SwiftLint */,
 				C0B1FEA5C5D5A245394E3479 /* Frameworks */,
 				00C863EF3E2818AC40D913B2 /* Resources */,
 				4AC287A31CBC3D700064F48A /* Embed Carthage Frameworks */,
@@ -972,7 +957,7 @@
 								enabled = 1;
 							};
 							com.apple.Push = {
-								enabled = 1;
+								enabled = 0;
 							};
 						};
 					};
@@ -1075,22 +1060,6 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-UnitTests/Pods-UnitTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
-		};
-		6D0F13551B4328C2001685BA /* Copy Carthage Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"$(SRCROOT)/Carthage/Build/iOS/Courier.framework",
-			);
-			name = "Copy Carthage Frameworks";
-			outputPaths = (
-				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Courier.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "/usr/local/bin/carthage copy-frameworks";
 		};
 		8F3D51D42744160EA1F9AAE2 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -1247,21 +1216,6 @@
 			shellScript = "\"${SRCROOT}\"/bin/swiftlint --path Core/Sources";
 			showEnvVarsInLog = 0;
 		};
-		E4240B8120373FDE0054E064 /* SwiftLint */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = SwiftLint;
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}\"/bin/swiftlint --path Tropos/Specs";
-			showEnvVarsInLog = 0;
-		};
 		E4240B82203740560054E064 /* SwiftLint */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -1350,7 +1304,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				4D49554F1A8C29C30066F278 /* TRCircularProgressLayer.m in Sources */,
-				A11D71D51CD73751000EB4A3 /* CourierClient.swift in Sources */,
 				4D7389DF1A9890CD0039F13B /* UIScrollView+TRReactiveCocoa.m in Sources */,
 				4DC069CD1A95B8F800F3BCEB /* TRColorBackdropLayer.m in Sources */,
 				A10108F91D3369EB0024B1BA /* NSBundle+TRBundleInfo.m in Sources */,
@@ -1396,8 +1349,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A1FC9ECD1CFE935500E62618 /* CourierClient.swift in Sources */,
-				A1BBE84F1D07D2F900A9631A /* CourierClientSpec.swift in Sources */,
 				E7B3B9271B34EDFE00BDD5A4 /* TRApplicationControllerSpec.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1821,7 +1772,6 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SWIFT_OBJC_BRIDGING_HEADER = "Tropos/Specs/Support/UnitTests-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TEST_HOST = "$(BUNDLE_LOADER)";
@@ -1847,7 +1797,6 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SWIFT_OBJC_BRIDGING_HEADER = "Tropos/Specs/Support/UnitTests-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;

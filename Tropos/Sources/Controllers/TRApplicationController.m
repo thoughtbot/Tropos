@@ -21,7 +21,6 @@
 
     self.weatherController = [TRWeatherController new];
     self.locationController = [TRLocationController new];
-    self.courier = [[TRCourierClient alloc] initWithApiToken: TRCourierAPIToken];
 
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
     self.rootViewController = [storyboard instantiateInitialViewController];
@@ -59,26 +58,6 @@
     } else {
         [application setMinimumBackgroundFetchInterval:UIApplicationBackgroundFetchIntervalNever];
     }
-}
-
-- (void)subscribeToNotificationsWithDeviceToken:(NSData *)deviceToken
-{
-    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
-    NSString *formerChannelKey = @"CourierChannel";
-
-    NSTimeZone *timeZone = [NSTimeZone defaultTimeZone];
-    NSString *channel = [TRCourierClient channelNameForTimeZone:timeZone];
-
-    NSString *formerChannel = [userDefaults stringForKey:formerChannelKey];
-    if (formerChannel && ![channel isEqualToString:formerChannel]) {
-        NSLog(@"unsubscribe from channel: %@", formerChannel);
-        [self.courier unsubscribeFromChannel:formerChannel];
-    }
-
-    NSLog(@"subscribe to channel: %@", channel);
-    [self.courier subscribeToChannel:channel withToken:deviceToken];
-
-    [userDefaults setObject:channel forKey:formerChannelKey];
 }
 
 @end
