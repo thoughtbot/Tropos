@@ -36,7 +36,7 @@
 		</dict>
 	</dict>
 	<key>NSPhotoLibraryUsageDescription</key>
-	<string></string>
+	<string>Tropos does not access your photo library.</string>
 	<key>UIAppFonts</key>
 	<array>
 		<string>DINNextLTPro-Light.otf</string>
