@@ -20,6 +20,8 @@
 	<string>TBOT</string>
 	<key>CFBundleVersion</key>
 	<string>205</string>
+	<key>ITSAppUsesNonExemptEncryption</key>
+	<false/>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>NSAppTransportSecurity</key>
