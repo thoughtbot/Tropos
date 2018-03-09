@@ -41,7 +41,7 @@ public enum CardinalDirection: String {
 
 public extension CardinalDirection {
     var localizedDescription: String {
-        return TroposCoreLocalizedString(rawValue)
+        return TroposCoreLocalizedString(rawValue.capitalized)
     }
 
     var localizedAbbreviation: String {
