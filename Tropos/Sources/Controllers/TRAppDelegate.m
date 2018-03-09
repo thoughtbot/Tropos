@@ -34,6 +34,8 @@
     self.window.rootViewController = self.applicationController.rootViewController;
     [self.window makeKeyAndVisible];
 
+    [self.applicationController updateWeather];
+
     return YES;
 }
 
