@@ -25,7 +25,7 @@ platform :ios do
     match(type: "appstore")
     increment_build_number
     gym(scheme: "Tropos")
-    pilot
+    testflight(skip_waiting_for_build_processing: true)
   end
 
   desc "Deploy a new version to the App Store"
