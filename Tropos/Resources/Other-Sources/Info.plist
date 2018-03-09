@@ -19,7 +19,7 @@
 	<key>CFBundleSignature</key>
 	<string>TBOT</string>
 	<key>CFBundleVersion</key>
-	<string>203</string>
+	<string>204</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>NSAppTransportSecurity</key>
