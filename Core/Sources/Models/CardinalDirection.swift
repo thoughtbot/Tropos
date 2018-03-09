@@ -45,6 +45,6 @@ public extension CardinalDirection {
     }
 
     var localizedAbbreviation: String {
-        return TroposCoreLocalizedString(rawValue)
+        return TroposCoreLocalizedString(abbreviation)
     }
 }
