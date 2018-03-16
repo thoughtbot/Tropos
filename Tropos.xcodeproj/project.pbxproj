@@ -55,6 +55,7 @@
 		4A8163921CC82B4D00279952 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A8163911CC82B4D00279952 /* Images.xcassets */; };
 		4A8163941CC830A400279952 /* TRSettingsController+TRObservation.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A6987681CC81D20002D3F87 /* TRSettingsController+TRObservation.m */; };
 		4A8163951CC830A700279952 /* TRWeatherUpdate+Analytics.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A6987661CC81D20002D3F87 /* TRWeatherUpdate+Analytics.m */; };
+		4A86FB65205C0E4D00E761C3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A86FB64205C0E4D00E761C3 /* AppDelegate.swift */; };
 		4AB9C18A1CC8286F006CBC24 /* New York.placemark in Resources */ = {isa = PBXBuildFile; fileRef = 4A552F771CC7D063008C7298 /* New York.placemark */; };
 		4AC287A41CBC3D800064F48A /* Nimble.framework in Embed Carthage Frameworks */ = {isa = PBXBuildFile; fileRef = 6D0F135A1B432976001685BA /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		4AC287A51CBC3D820064F48A /* Quick.framework in Embed Carthage Frameworks */ = {isa = PBXBuildFile; fileRef = 6D0F135B1B432976001685BA /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -87,7 +88,6 @@
 		6D0F135F1B43298E001685BA /* Quick.framework in Resources */ = {isa = PBXBuildFile; fileRef = 6D0F135B1B432976001685BA /* Quick.framework */; };
 		8E55CA903A39795581785ED4 /* libPods-Tropos.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D281611EA8A7B26EFB4FBBAC /* libPods-Tropos.a */; };
 		A10108F91D3369EB0024B1BA /* NSBundle+TRBundleInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = A10108F81D3369EB0024B1BA /* NSBundle+TRBundleInfo.m */; };
-		A10108FC1D336A940024B1BA /* TRSettingsController.m in Sources */ = {isa = PBXBuildFile; fileRef = A10108FB1D336A940024B1BA /* TRSettingsController.m */; };
 		A10108FE1D336C6A0024B1BA /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10108FD1D336C6A0024B1BA /* WebViewController.swift */; };
 		A10109001D336C9C0024B1BA /* TRTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10108FF1D336C9C0024B1BA /* TRTableViewCell.swift */; };
 		A10109021D336DBE0024B1BA /* AcknowledgementsParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10109011D336DBE0024B1BA /* AcknowledgementsParser.swift */; };
@@ -106,10 +106,8 @@
 		C2E44CEF1A3B6E89009CC844 /* NSDate+TRRelativeDate.m in Sources */ = {isa = PBXBuildFile; fileRef = C2E44CEE1A3B6E89009CC844 /* NSDate+TRRelativeDate.m */; };
 		C2E44CFB1A3B76B3009CC844 /* NSNumber+TRRoundedNumber.m in Sources */ = {isa = PBXBuildFile; fileRef = C2E44CFA1A3B76B3009CC844 /* NSNumber+TRRoundedNumber.m */; };
 		C8534D527FC57B65D79719CA /* libPods-UnitTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DC78109457DAFE306854F5B /* libPods-UnitTests.a */; };
-		C9318C8461EB5FE3914F9AC0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2853082980109C89B8F07D3C /* main.m */; };
 		CE5D7F3B45F980082E1BCA30 /* LaunchScreen.xib in Sources */ = {isa = PBXBuildFile; fileRef = B6D58F8AA6976EA1B35682B7 /* LaunchScreen.xib */; };
 		CFC0721C2D9EFFD3C3AE11A7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 059D0BDDF8DCE56549A4C9C6 /* Images.xcassets */; };
-		D7DD1B8AD495AFA4EC1CEFF9 /* TRAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A6B1ADBC73A8A2EF7FB4E257 /* TRAppDelegate.m */; };
 		E74CDAD61BB614D700F57C1D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E59B090E67C8BD269D3CD9DB /* Main.storyboard */; };
 		E7A895541AFD11AA0023205B /* TRApplicationController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7A895531AFD11AA0023205B /* TRApplicationController.m */; };
 		E7B3B9271B34EDFE00BDD5A4 /* TRApplicationControllerSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = E7B3B9261B34EDFE00BDD5A4 /* TRApplicationControllerSpec.m */; };
@@ -187,11 +185,9 @@
 /* Begin PBXFileReference section */
 		059D0BDDF8DCE56549A4C9C6 /* Images.xcassets */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		0B30A1610CAE1C2E302C28B0 /* UnitTests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "UnitTests-Info.plist"; sourceTree = "<group>"; };
-		0CC72A6E0EE525537F241EB7 /* TRAppDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = TRAppDelegate.h; sourceTree = "<group>"; };
 		1CDD2312F1EF05277F045E15 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2014A1EA2643FF36A4C94B5F /* Pods-Tropos.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tropos.release.xcconfig"; path = "Pods/Target Support Files/Pods-Tropos/Pods-Tropos.release.xcconfig"; sourceTree = "<group>"; };
 		22FE01C01AF3F5550085B494 /* Secrets.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Secrets.h; sourceTree = "<group>"; };
-		2853082980109C89B8F07D3C /* main.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		29FF8F48DC831249EC3150FB /* Pods-Tropos.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tropos.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Tropos/Pods-Tropos.debug.xcconfig"; sourceTree = "<group>"; };
 		436D9431497525313B32E225 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		449386DA1B5044EE00766EC9 /* pl-PL */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pl-PL"; path = "pl-PL.lproj/Localizable.strings"; sourceTree = "<group>"; };
@@ -248,6 +244,7 @@
 		4A7A12381CC821DA00363A5C /* DailyForecastViewModelSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DailyForecastViewModelSpec.swift; sourceTree = "<group>"; };
 		4A7A123A1CC8223F00363A5C /* NSDate+ISO8601.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSDate+ISO8601.swift"; sourceTree = "<group>"; };
 		4A8163911CC82B4D00279952 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		4A86FB64205C0E4D00E761C3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4ACA58491CC526D600DD0CDC /* RACSignal+TROperators.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "RACSignal+TROperators.h"; sourceTree = "<group>"; };
 		4ACA584A1CC526D600DD0CDC /* RACSignal+TROperators.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "RACSignal+TROperators.m"; sourceTree = "<group>"; };
 		4D0A5C361A3A27510084C41E /* TRForecastController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRForecastController.h; sourceTree = "<group>"; };
@@ -301,8 +298,6 @@
 		986C425E5A2268D27FAE2FAA /* Prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = Prefix.pch; sourceTree = "<group>"; };
 		A10108F71D3369EB0024B1BA /* NSBundle+TRBundleInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSBundle+TRBundleInfo.h"; sourceTree = "<group>"; };
 		A10108F81D3369EB0024B1BA /* NSBundle+TRBundleInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSBundle+TRBundleInfo.m"; sourceTree = "<group>"; };
-		A10108FA1D336A940024B1BA /* TRSettingsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRSettingsController.h; sourceTree = "<group>"; };
-		A10108FB1D336A940024B1BA /* TRSettingsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRSettingsController.m; sourceTree = "<group>"; };
 		A10108FD1D336C6A0024B1BA /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		A10108FF1D336C9C0024B1BA /* TRTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TRTableViewCell.swift; sourceTree = "<group>"; };
 		A10109011D336DBE0024B1BA /* AcknowledgementsParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AcknowledgementsParser.swift; sourceTree = "<group>"; };
@@ -312,7 +307,6 @@
 		A1628AE61D0E56FB00B6AF29 /* UIApplication+TRReactiveBackgroundTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIApplication+TRReactiveBackgroundTask.h"; sourceTree = "<group>"; };
 		A1628AE71D0E56FB00B6AF29 /* UIApplication+TRReactiveBackgroundTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIApplication+TRReactiveBackgroundTask.m"; sourceTree = "<group>"; };
 		A1F8691F1D3357D6003A826D /* AppearanceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppearanceController.swift; sourceTree = "<group>"; };
-		A6B1ADBC73A8A2EF7FB4E257 /* TRAppDelegate.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = TRAppDelegate.m; sourceTree = "<group>"; };
 		AFAAC7C0DE54A102E5AED4DC /* Pods-UnitTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UnitTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-UnitTests/Pods-UnitTests.debug.xcconfig"; sourceTree = "<group>"; };
 		B1E75D271B6E8ADC007B03F9 /* sv */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = sv; path = sv.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		B1E75D281B6E8ADC007B03F9 /* sv */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = sv; path = sv.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -384,13 +378,12 @@
 			isa = PBXGroup;
 			children = (
 				A10109011D336DBE0024B1BA /* AcknowledgementsParser.swift */,
+				4A86FB64205C0E4D00E761C3 /* AppDelegate.swift */,
 				A1F8691F1D3357D6003A826D /* AppearanceController.swift */,
 				4DDF65041AB3AC0C00909D67 /* TRWeatherController.h */,
 				4DDF65051AB3AC0C00909D67 /* TRWeatherController.m */,
 				4D9A00041A9D61CD000835A9 /* TRAnalyticsController.h */,
 				4D9A00051A9D61CD000835A9 /* TRAnalyticsController.m */,
-				0CC72A6E0EE525537F241EB7 /* TRAppDelegate.h */,
-				A6B1ADBC73A8A2EF7FB4E257 /* TRAppDelegate.m */,
 				4D0A5C361A3A27510084C41E /* TRForecastController.h */,
 				4D0A5C371A3A27510084C41E /* TRForecastController.m */,
 				C2E44CDB1A3A38A2009CC844 /* TRLocationController.h */,
@@ -399,8 +392,6 @@
 				4D72D1291A7330E700FAB67B /* TRGeocodeController.m */,
 				E7A895521AFD11AA0023205B /* TRApplicationController.h */,
 				E7A895531AFD11AA0023205B /* TRApplicationController.m */,
-				A10108FA1D336A940024B1BA /* TRSettingsController.h */,
-				A10108FB1D336A940024B1BA /* TRSettingsController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -783,7 +774,6 @@
 				4A6987441CC80699002D3F87 /* Bridging-Header.h */,
 				986C425E5A2268D27FAE2FAA /* Prefix.pch */,
 				22FE01C01AF3F5550085B494 /* Secrets.h */,
-				2853082980109C89B8F07D3C /* main.m */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -1311,6 +1301,7 @@
 				4DDF65061AB3AC0C00909D67 /* TRWeatherController.m in Sources */,
 				4ACA584B1CC526D600DD0CDC /* RACSignal+TROperators.m in Sources */,
 				4D0A5C381A3A27510084C41E /* TRForecastController.m in Sources */,
+				4A86FB65205C0E4D00E761C3 /* AppDelegate.swift in Sources */,
 				A10109001D336C9C0024B1BA /* TRTableViewCell.swift in Sources */,
 				4D49554C1A8C298A0066F278 /* TRRefreshView.m in Sources */,
 				A12FCE251D336FA90062E7F1 /* Color.swift in Sources */,
@@ -1323,10 +1314,8 @@
 				A1628AE81D0E56FB00B6AF29 /* UIApplication+TRReactiveBackgroundTask.m in Sources */,
 				C2E44CDD1A3A38A2009CC844 /* TRLocationController.m in Sources */,
 				4D76CCD41A99C3FA00DDE5EB /* TRRefreshLayer.m in Sources */,
-				D7DD1B8AD495AFA4EC1CEFF9 /* TRAppDelegate.m in Sources */,
 				4DC716601A9B1D5B00BC4BD4 /* TRRefreshControl.m in Sources */,
 				A10108FE1D336C6A0024B1BA /* WebViewController.swift in Sources */,
-				A10108FC1D336A940024B1BA /* TRSettingsController.m in Sources */,
 				4A8163951CC830A700279952 /* TRWeatherUpdate+Analytics.m in Sources */,
 				4D49377E1A82F82A007A1FA9 /* TRImageView.m in Sources */,
 				C2E44CFB1A3B76B3009CC844 /* NSNumber+TRRoundedNumber.m in Sources */,
@@ -1337,7 +1326,6 @@
 				C2E44CE11A3A3C09009CC844 /* TRWeatherViewController.m in Sources */,
 				4D1ABA0B1A89686200B7F8FB /* TRNavigationBar.m in Sources */,
 				CE5D7F3B45F980082E1BCA30 /* LaunchScreen.xib in Sources */,
-				C9318C8461EB5FE3914F9AC0 /* main.m in Sources */,
 				4D72D12A1A7330E700FAB67B /* TRGeocodeController.m in Sources */,
 				4D7CDEBC1A46D3610038DD33 /* CLLocation+TRRecentLocation.m in Sources */,
 				4D4955521A8C2B5D0066F278 /* UIImage+TRColorBackdrop.m in Sources */,

@@ -1,3 +1,5 @@
+@import Foundation;
+
 @protocol TRAnalyticsEvent <NSObject>
 
 @property (nonatomic, readonly) NSString *eventName;
