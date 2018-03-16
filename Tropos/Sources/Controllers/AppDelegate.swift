@@ -35,12 +35,10 @@ final class AppDelegate: UIResponder, UIApplicationDelegate {
         window!.rootViewController = applicationController.rootViewController
         window!.makeKeyAndVisible()
 
-        applicationController.updateWeather()
-
         return true
     }
 
-    func applicationWillEnterForeground(_: UIApplication) {
+    func applicationDidBecomeActive(_: UIApplication) {
         applicationController.updateWeather().subscribeError(weatherUpdateFailed)
     }
 
