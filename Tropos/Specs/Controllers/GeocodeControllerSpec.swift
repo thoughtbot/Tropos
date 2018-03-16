@@ -1,6 +1,7 @@
 import CoreLocation
 import Quick
 import Nimble
+import ReactiveSwift
 @testable import Tropos
 
 final class GeocodeControllerSpec: QuickSpec {
@@ -12,16 +13,21 @@ final class GeocodeControllerSpec: QuickSpec {
                 let location = CLLocation(latitude: 1, longitude: 2)
 
                 var isComplete = false
-                var error: Error?
+                var error: CLError?
                 var place: CLPlacemark?
 
-                controller.reverseGeocodeLocation(location).subscribeNext({
-                    place = $0
-                }, error: {
-                    error = $0
-                }, completed: {
-                    isComplete = true
-                })
+                controller.reverseGeocode(location).start { event in
+                    switch event {
+                    case let .value(value):
+                        place = value
+                    case let .failed(err):
+                        error = err
+                    case .completed:
+                        isComplete = true
+                    case .interrupted:
+                        break
+                    }
+                }
 
                 expect(isComplete).toEventually(beTrue())
                 expect(place?.location?.coordinate).to(equal(location.coordinate))
@@ -34,10 +40,10 @@ final class GeocodeControllerSpec: QuickSpec {
                 let controller = GeocodeController(geocoder: geocoder)
                 let location = CLLocation(latitude: -1, longitude: -2)
 
-                var error: Error?
-                controller.reverseGeocodeLocation(location).subscribeError { error = $0 }
+                var error: CLError?
+                controller.reverseGeocode(location).startWithFailed { error = $0 }
 
-                expect(error).toEventually(matchError(CLError.self))
+                expect(error).toEventuallyNot(beNil())
             }
 
             it("cancels the underlying geocode if the subscription is cancelled") {
@@ -45,19 +51,30 @@ final class GeocodeControllerSpec: QuickSpec {
                 let controller = GeocodeController(geocoder: geocoder)
                 let location = CLLocation(latitude: 3, longitude: 4)
 
+                var value: CLPlacemark?
                 var error: Error?
                 var isCompleted = false
-                controller.reverseGeocodeLocation(location).subscribeError({
-                    error = $0
-                }, completed: {
-                    isCompleted = true
-                })
+                var isInterrupted = false
+
+                controller.reverseGeocode(location).start { event in
+                    switch event {
+                    case let .value(val):
+                        value = val
+                    case let .failed(err):
+                        error = err
+                    case .completed:
+                        isCompleted = true
+                    case .interrupted:
+                        isInterrupted = true
+                    }
+                }
 
                 geocoder.cancelGeocode()
-                RunLoop.current.run(until: Date().addingTimeInterval(0.1))
 
-                expect(error).to(beNil())
+                expect(isInterrupted).toEventually(beTrue())
                 expect(isCompleted).to(beFalse())
+                expect(error).to(beNil())
+                expect(value).to(beNil())
             }
         }
     }
