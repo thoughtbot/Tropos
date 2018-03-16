@@ -1,4 +1,5 @@
 import HockeySDK
+import os.log
 import TroposCore
 import UIKit
 
@@ -40,7 +41,7 @@ final class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func applicationWillEnterForeground(_: UIApplication) {
-        applicationController.updateWeather()
+        applicationController.updateWeather().subscribeError(weatherUpdateFailed)
     }
 
     func application(
@@ -49,9 +50,18 @@ final class AppDelegate: UIResponder, UIApplicationDelegate {
     ) {
         applicationController.updateWeather().subscribeNext({ _ in
             completionHandler(.newData)
-        }, error: { _ in
+        }, error: {
+            weatherUpdateFailed(with: $0)
             completionHandler(.failed)
         })
+    }
+}
+
+private func weatherUpdateFailed(with error: Error!) {
+    if #available(iOS 10.0, *) {
+        os_log("Failed to update weather: %{public}@", type: .error, error.localizedDescription)
+    } else {
+        NSLog("Failed to update weather: %@", error.localizedDescription)
     }
 }
 
