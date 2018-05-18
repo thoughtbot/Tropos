@@ -52,7 +52,7 @@ static NSString *const TRSettingsLastVersionKey = @"TRLastVersion";
 
 - (void)setUnitSystem:(TRUnitSystem)unitSystem
 {
-    NSString *systemString = [NSString stringWithFormat:@"%zd", unitSystem];
+    NSString *systemString = [NSString stringWithFormat:@"%ld", (long)unitSystem];
     [[NSUserDefaults standardUserDefaults] setObject:systemString forKey:TRSettingsUnitSystemKey];
 }
 
