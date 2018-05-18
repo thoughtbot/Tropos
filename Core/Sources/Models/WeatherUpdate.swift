@@ -130,11 +130,11 @@ public extension WeatherUpdate {
     }
 
     @objc var windSpeed: Double {
-        return currentConditions["windSpeed"] as? Double ?? 0
+        return (currentConditions["windSpeed"] as? NSNumber)?.doubleValue ?? 0
     }
 
     @objc var windBearing: Double {
-        return currentConditions["windBearing"] as? Double ?? 0
+        return (currentConditions["windBearing"] as? NSNumber)?.doubleValue ?? 0
     }
 
     var dailyForecasts: [DailyForecast] {
