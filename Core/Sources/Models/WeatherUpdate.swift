@@ -126,7 +126,7 @@ public extension WeatherUpdate {
     }
 
     @objc var precipitationPercentage: Double {
-        return Double(todaysForecast["precipProbability"] as? String ?? "") ?? 0
+        return (todaysForecast["precipProbability"] as? NSNumber)?.doubleValue ?? 0
     }
 
     @objc var windSpeed: Double {
