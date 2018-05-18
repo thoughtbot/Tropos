@@ -5,7 +5,7 @@ import Nimble
 
 private func weatherConditions(
     _ temperature: Int = 90,
-    precipitationProbability: String? = nil,
+    precipitationProbability: Double? = nil,
     precipitationType: String? = "rain"
 ) -> [String: Any] {
     var data: [String: Any] = [
@@ -53,7 +53,7 @@ final class WeatherUpdateSpec: QuickSpec {
 
             context("with a chance of precipitation") {
                 it("stores the precipitation probability and type") {
-                    let conditions = weatherConditions(precipitationProbability: "0.43")
+                    let conditions = weatherConditions(precipitationProbability: 0.43)
                     let update = WeatherUpdate(
                         placemark: testPlacemark,
                         currentConditionsJSON: conditions,
@@ -66,7 +66,7 @@ final class WeatherUpdateSpec: QuickSpec {
 
             context("with a no chance of precipitation") {
                 it("stores the precipitation probability and defaults the type") {
-                    let conditions = weatherConditions(precipitationProbability: "0", precipitationType: nil)
+                    let conditions = weatherConditions(precipitationProbability: 0, precipitationType: nil)
                     let update = WeatherUpdate(
                         placemark: testPlacemark,
                         currentConditionsJSON: conditions,
