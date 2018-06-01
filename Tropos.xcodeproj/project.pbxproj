@@ -84,8 +84,6 @@
 		5DA50AD91A82CAB300CAE666 /* DINNextLTPro-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5DA50AD81A82CAB300CAE666 /* DINNextLTPro-Light.otf */; };
 		6D0F135C1B432976001685BA /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D0F135A1B432976001685BA /* Nimble.framework */; };
 		6D0F135D1B432976001685BA /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D0F135B1B432976001685BA /* Quick.framework */; };
-		6D0F135E1B43298C001685BA /* Nimble.framework in Resources */ = {isa = PBXBuildFile; fileRef = 6D0F135A1B432976001685BA /* Nimble.framework */; };
-		6D0F135F1B43298E001685BA /* Quick.framework in Resources */ = {isa = PBXBuildFile; fileRef = 6D0F135B1B432976001685BA /* Quick.framework */; };
 		8E55CA903A39795581785ED4 /* libPods-Tropos.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D281611EA8A7B26EFB4FBBAC /* libPods-Tropos.a */; };
 		A10108F91D3369EB0024B1BA /* NSBundle+TRBundleInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = A10108F81D3369EB0024B1BA /* NSBundle+TRBundleInfo.m */; };
 		A10108FE1D336C6A0024B1BA /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10108FD1D336C6A0024B1BA /* WebViewController.swift */; };
@@ -159,7 +157,7 @@
 		};
 		4AC287A31CBC3D700064F48A /* Embed Carthage Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 8;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
@@ -167,7 +165,7 @@
 				4AC287A51CBC3D820064F48A /* Quick.framework in Embed Carthage Frameworks */,
 			);
 			name = "Embed Carthage Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
+			runOnlyForDeploymentPostprocessing = 1;
 		};
 		A1FC9ED61CFEA23B00E62618 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
@@ -764,11 +762,11 @@
 		E4F796A1BFA14961F3C5EE5E /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				F7756A61DA7A0F0958F6D728 /* Categories */,
-				02DE38BC587E0F44ACAB470A /* Controllers */,
-				F7F5AA24C89DC3F636256017 /* Headers */,
 				A12FCE231D336F940062E7F1 /* Models */,
+				F7756A61DA7A0F0958F6D728 /* Categories */,
 				771282ADE8938D4011617AD5 /* Protocols */,
+				F7F5AA24C89DC3F636256017 /* Headers */,
+				02DE38BC587E0F44ACAB470A /* Controllers */,
 				C2E44CDE1A3A3BFB009CC844 /* ViewControllers */,
 				639AAB142C96B59FC995CA1D /* Views */,
 				4A6987441CC80699002D3F87 /* Bridging-Header.h */,
@@ -936,7 +934,7 @@
 				CLASSPREFIX = TR;
 				LastSwiftMigration = 0700;
 				LastSwiftUpdateCheck = 0730;
-				LastUpgradeCheck = 0920;
+				LastUpgradeCheck = 0940;
 				ORGANIZATIONNAME = thoughtbot;
 				TargetAttributes = {
 					45ADD324EABFD89F9E640007 = {
@@ -994,8 +992,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6D0F135E1B43298C001685BA /* Nimble.framework in Resources */,
-				6D0F135F1B43298E001685BA /* Quick.framework in Resources */,
 				3178BB7A28794DB9F26B3131 /* Pods-UnitTests-metadata.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1174,7 +1170,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "KEYWORDS=\"TODO:|FIXME:|\\?\\?\\?:|\\!\\!\\!:\"\nFILE_EXTENSIONS=\"h|m|mm|c|cpp\"\nfind -E \"${SRCROOT}\" -ipath \"${SRCROOT}/pods\" -prune -o \\( -regex \".*\\.($FILE_EXTENSIONS)$\" \\) -print0 | xargs -0 egrep --with-filename --line-number --only-matching \"($KEYWORDS).*\\$\" | perl -p -e \"s/($KEYWORDS)/ warning: \\$1/\"\n";
+			shellScript = "KEYWORDS=\"TODO:|FIXME:|\\?\\?\\?:|\\!\\!\\!:\"\nFILE_EXTENSIONS=\"h|m|mm|c|cpp\"\nfind -E \"${SRCROOT}/Tropos\" \"${SRCROOT}/Core\" -ipath \"${SRCROOT}/pods\" -prune -o \\( -regex \".*\\.($FILE_EXTENSIONS)$\" \\) -print0 | xargs -0 egrep --with-filename --line-number --only-matching \"($KEYWORDS).*\\$\" | perl -p -e \"s/($KEYWORDS)/ warning: \\$1/\"\n";
 		};
 		E4240B7F20373EC30054E064 /* SwiftLint */ = {
 			isa = PBXShellScriptBuildPhase;

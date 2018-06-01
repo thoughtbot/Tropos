@@ -138,7 +138,7 @@ public extension WeatherUpdate {
     }
 
     var dailyForecasts: [DailyForecast] {
-        return (1...3).flatMap {
+        return (1...3).compactMap {
             if forecasts.indices.contains($0) {
                 return DailyForecast(json: forecasts[$0])
             } else {

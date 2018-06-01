@@ -4,5 +4,6 @@ disabled_rules:
 identifier_name:
   excluded:
     - TroposCoreLocalizedString(_:comment:)
+  min_length: 0
 trailing_comma:
   mandatory_comma: true

@@ -17,7 +17,7 @@ import UIKit
 public extension WeatherViewModel {
     @objc var locationName: String {
         return [weatherUpdate.city, weatherUpdate.state].lazy
-            .flatMap { $0 }
+            .compactMap { $0 }
             .joined(separator: ", ")
     }
 
