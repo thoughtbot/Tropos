@@ -16,19 +16,9 @@ final class AppDelegate: UIResponder, UIApplicationDelegate {
             return true
         }
 
-#if !DEBUG
-        let hockeyManager = BITHockeyManager.shared()
-        hockeyManager.configure(withIdentifier: TRHockeyIdentifier)
-        hockeyManager.crashManager.crashManagerStatus = .autoSend
-        hockeyManager.start()
-        hockeyManager.authenticator.authenticateInstallation()
-
-        AnalyticsController.shared.install()
-#endif
-
+        setupHockey()
         SettingsController().registerSettings()
         AppearanceController.configureAppearance()
-
         applicationController.setMinimumBackgroundFetchInterval(for: application)
 
         window = UIWindow(frame: UIScreen.main.bounds)
@@ -66,5 +56,17 @@ private func weatherUpdateFailed(with error: Error!) {
 private extension AppDelegate {
     var isCurrentlyTesting: Bool {
         return UserDefaults.standard.bool(forKey: "TRTesting")
+    }
+
+    func setupHockey() {
+#if !DEBUG
+        let hockeyManager = BITHockeyManager.shared()
+        hockeyManager.configure(withIdentifier: TRHockeyIdentifier)
+        hockeyManager.crashManager.crashManagerStatus = .autoSend
+        hockeyManager.start()
+        hockeyManager.authenticator.authenticateInstallation()
+
+        AnalyticsController.shared.install()
+#endif
     }
 }
