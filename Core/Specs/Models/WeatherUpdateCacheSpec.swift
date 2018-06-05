@@ -14,17 +14,23 @@ private var testWeatherUpdateURL: URL {
     return testCachesDirectory.appendingPathComponent(testCacheFileName)
 }
 
-private func resetFilesystem() {
+private func resetFilesystem(file: StaticString = #file, line: UInt = #line) {
     do {
         try FileManager.default.removeItem(at: testWeatherUpdateURL)
-    } catch {}
+    } catch CocoaError.fileNoSuchFile {
+        // already doesn't exist
+    } catch POSIXError.ENOENT {
+        // same
+    } catch {
+        XCTFail("\(error)", file: file, line: line)
+    }
 }
 
 final class WeatherUpdateCacheSpec: QuickSpec {
     override func spec() {
         describe("TRWeatherUpdateCache") {
-            beforeEach(resetFilesystem)
-            afterEach(resetFilesystem)
+            beforeEach { resetFilesystem() }
+            afterEach { resetFilesystem() }
 
             context("-archiveLatestWeatherUpdate") {
                 it("archives the object to disk") {
