@@ -8,11 +8,6 @@ fastlane_version "1.89.0"
 default_platform :ios
 
 platform :ios do
-  before_all do
-    cocoapods
-    carthage(platform: "iOS")
-  end
-
   desc "Runs all the tests"
   lane :test do
     scan(scheme: "Tropos")
