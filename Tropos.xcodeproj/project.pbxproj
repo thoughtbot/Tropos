@@ -157,7 +157,7 @@
 		};
 		4AC287A31CBC3D700064F48A /* Embed Carthage Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 8;
+			buildActionMask = 12;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
@@ -165,7 +165,7 @@
 				4AC287A51CBC3D820064F48A /* Quick.framework in Embed Carthage Frameworks */,
 			);
 			name = "Embed Carthage Frameworks";
-			runOnlyForDeploymentPostprocessing = 1;
+			runOnlyForDeploymentPostprocessing = 0;
 		};
 		A1FC9ED61CFEA23B00E62618 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
