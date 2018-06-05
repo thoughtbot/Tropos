@@ -5,9 +5,9 @@ import Nimble
 private let testCacheFileName = "TestWeatherUpdate"
 
 private var testCachesDirectory: URL {
-    return FileManager.default
-        .urls(for: .documentDirectory, in: .userDomainMask)
-        .first!
+    // swiftlint:disable:next force_try
+    return try! FileManager.default
+        .url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: true)
 }
 
 private var testWeatherUpdateURL: URL {
@@ -41,7 +41,7 @@ final class WeatherUpdateCacheSpec: QuickSpec {
                         yesterdaysConditionsJSON: [:]
                     )!
 
-                    cache.archiveWeatherUpdate(update)
+                    expect(cache.archiveWeatherUpdate(update)).to(beTrue())
 
                     expect(FileManager.default.isReadableFile(atPath: testWeatherUpdateURL.path)).to(beTrue())
                 }
