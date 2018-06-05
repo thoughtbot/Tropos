@@ -6,6 +6,10 @@ jobs:
 
     steps:
       - checkout
+      - run:
+          name: Pre-fetch CocoaPods specs
+          command: |
+            curl https://cocoapods-specs.circleci.com/fetch-cocoapods-repo-from-s3.sh | bash -s cf
       - run: bin/setup
       - run: bin/test
       - run: bin/archive
