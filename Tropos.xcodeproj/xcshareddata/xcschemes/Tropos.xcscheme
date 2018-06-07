@@ -29,8 +29,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "AA349281EBCAE02432E93D8E"
-               BuildableName = "UnitTests.xctest"
-               BlueprintName = "UnitTests"
+               BuildableName = "TroposTests.xctest"
+               BlueprintName = "TroposTests"
                ReferencedContainer = "container:Tropos.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -48,7 +48,7 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "4A552EF71CC7C8F8008C7298"
                BuildableName = "TroposCoreSpecs.xctest"
-               BlueprintName = "TroposCoreSpecs-iOS"
+               BlueprintName = "TroposCoreTests"
                ReferencedContainer = "container:Tropos.xcodeproj">
             </BuildableReference>
          </TestableReference>
@@ -57,8 +57,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "AA349281EBCAE02432E93D8E"
-               BuildableName = "UnitTests.xctest"
-               BlueprintName = "UnitTests"
+               BuildableName = "TroposTests.xctest"
+               BlueprintName = "TroposTests"
                ReferencedContainer = "container:Tropos.xcodeproj">
             </BuildableReference>
          </TestableReference>
