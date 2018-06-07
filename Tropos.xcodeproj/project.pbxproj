@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		46660A27B04F4C7B78A7920F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 436D9431497525313B32E225 /* Foundation.framework */; };
+		4A21D76820C9E6FA0055A2AF /* IntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A21D76720C9E6FA0055A2AF /* IntentHandler.swift */; };
+		4A21D76C20C9E6FB0055A2AF /* TroposIntents.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 4A21D76520C9E6FA0055A2AF /* TroposIntents.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		4A23F4F82041019000FDDC5E /* GeocodeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A23F4F72041019000FDDC5E /* GeocodeController.swift */; };
 		4A23F4FA2041127A00FDDC5E /* Geocoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A23F4F92041127A00FDDC5E /* Geocoder.swift */; };
 		4A4B75E92040D0D600CE8E05 /* TestGeocoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4B75E82040D0D600CE8E05 /* TestGeocoder.swift */; };
@@ -128,6 +130,13 @@
 			remoteGlobalIDString = 45ADD324EABFD89F9E640007;
 			remoteInfo = CarlWeathers;
 		};
+		4A21D76A20C9E6FB0055A2AF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 198EF8739DFBDBC4FBC67D3B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4A21D76420C9E6FA0055A2AF;
+			remoteInfo = TroposIntents;
+		};
 		4A552EFA1CC7C8F8008C7298 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 198EF8739DFBDBC4FBC67D3B /* Project object */;
@@ -152,6 +161,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		4A21D77020C9E6FB0055A2AF /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				4A21D76C20C9E6FB0055A2AF /* TroposIntents.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		4A552F511CC7CC43008C7298 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -201,6 +221,10 @@
 		436D9431497525313B32E225 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		449386DA1B5044EE00766EC9 /* pl-PL */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pl-PL"; path = "pl-PL.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		449386DB1B5044EE00766EC9 /* pl-PL */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pl-PL"; path = "pl-PL.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		4A21D76520C9E6FA0055A2AF /* TroposIntents.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = TroposIntents.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		4A21D76720C9E6FA0055A2AF /* IntentHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntentHandler.swift; sourceTree = "<group>"; };
+		4A21D76920C9E6FB0055A2AF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4A21D77120C9E72E0055A2AF /* Tropos.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Tropos.entitlements; sourceTree = "<group>"; };
 		4A23F4F72041019000FDDC5E /* GeocodeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeocodeController.swift; sourceTree = "<group>"; };
 		4A23F4F92041127A00FDDC5E /* Geocoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Geocoder.swift; sourceTree = "<group>"; };
 		4A4B75E82040D0D600CE8E05 /* TestGeocoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestGeocoder.swift; sourceTree = "<group>"; };
@@ -352,6 +376,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		4A21D76220C9E6FA0055A2AF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		4A552EEB1CC7C8F8008C7298 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -478,6 +509,7 @@
 				C2E44CDE1A3A3BFB009CC844 /* ViewControllers */,
 				639AAB142C96B59FC995CA1D /* Views */,
 				1CDD2312F1EF05277F045E15 /* Info.plist */,
+				4A21D77120C9E72E0055A2AF /* Tropos.entitlements */,
 			);
 			path = Tropos;
 			sourceTree = "<group>";
@@ -506,8 +538,18 @@
 			children = (
 				4A0DD7521CCA968500E7A451 /* Tropos */,
 				4A552F401CC7CB9B008C7298 /* TroposCore */,
+				4A21D76620C9E6FA0055A2AF /* TroposIntents */,
 			);
 			path = Sources;
+			sourceTree = "<group>";
+		};
+		4A21D76620C9E6FA0055A2AF /* TroposIntents */ = {
+			isa = PBXGroup;
+			children = (
+				4A21D76720C9E6FA0055A2AF /* IntentHandler.swift */,
+				4A21D76920C9E6FB0055A2AF /* Info.plist */,
+			);
+			path = TroposIntents;
 			sourceTree = "<group>";
 		};
 		4A552F401CC7CB9B008C7298 /* TroposCore */ = {
@@ -712,6 +754,7 @@
 				BE299336DA1BFBE36CB7763B /* TroposTests.xctest */,
 				4A552EEF1CC7C8F8008C7298 /* TroposCore.framework */,
 				4A552EF81CC7C8F8008C7298 /* TroposCoreSpecs.xctest */,
+				4A21D76520C9E6FA0055A2AF /* TroposIntents.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -871,16 +914,35 @@
 				B7DE70105B59EDB7B1D6100E /* [CP] Embed Pods Frameworks */,
 				8F3D51D42744160EA1F9AAE2 /* [CP] Copy Pods Resources */,
 				A1FC9ED61CFEA23B00E62618 /* Embed Frameworks */,
+				4A21D77020C9E6FB0055A2AF /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 				A1FC9ED51CFEA23B00E62618 /* PBXTargetDependency */,
+				4A21D76B20C9E6FB0055A2AF /* PBXTargetDependency */,
 			);
 			name = Tropos;
 			productName = CarlWeathers;
 			productReference = 57761BB4DFB42997964F13EE /* Tropos.app */;
 			productType = "com.apple.product-type.application";
+		};
+		4A21D76420C9E6FA0055A2AF /* TroposIntents */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4A21D76D20C9E6FB0055A2AF /* Build configuration list for PBXNativeTarget "TroposIntents" */;
+			buildPhases = (
+				4A21D76120C9E6FA0055A2AF /* Sources */,
+				4A21D76220C9E6FA0055A2AF /* Frameworks */,
+				4A21D76320C9E6FA0055A2AF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TroposIntents;
+			productName = TroposIntents;
+			productReference = 4A21D76520C9E6FA0055A2AF /* TroposIntents.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 		4A552EEE1CC7C8F8008C7298 /* TroposCore */ = {
 			isa = PBXNativeTarget;
@@ -952,7 +1014,7 @@
 			attributes = {
 				CLASSPREFIX = TR;
 				LastSwiftMigration = 0700;
-				LastSwiftUpdateCheck = 0730;
+				LastSwiftUpdateCheck = 1000;
 				LastUpgradeCheck = 0940;
 				ORGANIZATIONNAME = thoughtbot;
 				TargetAttributes = {
@@ -966,7 +1028,14 @@
 							com.apple.Push = {
 								enabled = 0;
 							};
+							com.apple.Siri = {
+								enabled = 1;
+							};
 						};
+					};
+					4A21D76420C9E6FA0055A2AF = {
+						CreatedOnToolsVersion = 10.0;
+						ProvisioningStyle = Automatic;
 					};
 					4A552EEE1CC7C8F8008C7298 = {
 						CreatedOnToolsVersion = 7.3;
@@ -999,6 +1068,7 @@
 			projectRoot = "";
 			targets = (
 				45ADD324EABFD89F9E640007 /* Tropos */,
+				4A21D76420C9E6FA0055A2AF /* TroposIntents */,
 				AA349281EBCAE02432E93D8E /* TroposTests */,
 				4A552EEE1CC7C8F8008C7298 /* TroposCore */,
 				4A552EF71CC7C8F8008C7298 /* TroposCoreTests */,
@@ -1028,6 +1098,13 @@
 				5DA50AD91A82CAB300CAE666 /* DINNextLTPro-Light.otf in Resources */,
 				A12FCE2A1D338A4A0062E7F1 /* DINNextLTPro-Regular.otf in Resources */,
 				571D9DD5621C37A62892B73F /* Pods-Tropos-metadata.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4A21D76320C9E6FA0055A2AF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1263,6 +1340,14 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		4A21D76120C9E6FA0055A2AF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4A21D76820C9E6FA0055A2AF /* IntentHandler.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		4A552EEA1CC7C8F8008C7298 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1373,6 +1458,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		4A21D76B20C9E6FB0055A2AF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4A21D76420C9E6FA0055A2AF /* TroposIntents */;
+			targetProxy = 4A21D76A20C9E6FB0055A2AF /* PBXContainerItemProxy */;
+		};
 		4A552EFB1CC7C8F8008C7298 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 4A552EEE1CC7C8F8008C7298 /* TroposCore */;
@@ -1432,6 +1522,71 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		4A21D76E20C9E6FB0055A2AF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = Sources/TroposIntents/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				PRODUCT_BUNDLE_IDENTIFIER = com.thoughtbot.carlweathers.TroposIntents;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		4A21D76F20C9E6FB0055A2AF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = Sources/TroposIntents/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = com.thoughtbot.carlweathers.TroposIntents;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		4A552F071CC7C8F8008C7298 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1565,6 +1720,8 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = Sources/Tropos/Tropos.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				DEFINES_MODULE = YES;
 				DSTROOT = /tmp/xcodeproj.dst;
@@ -1673,6 +1830,8 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = Sources/Tropos/Tropos.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEFINES_MODULE = YES;
 				DSTROOT = /tmp/xcodeproj.dst;
@@ -1839,6 +1998,15 @@
 			buildConfigurations = (
 				F4E6325B50F0BD99456C271F /* Release */,
 				BE35CA6D8F6866BE32125599 /* Debug */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4A21D76D20C9E6FB0055A2AF /* Build configuration list for PBXNativeTarget "TroposIntents" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4A21D76E20C9E6FB0055A2AF /* Debug */,
+				4A21D76F20C9E6FB0055A2AF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
