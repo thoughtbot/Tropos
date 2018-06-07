@@ -13,6 +13,7 @@
 		4A23F4FA2041127A00FDDC5E /* Geocoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A23F4F92041127A00FDDC5E /* Geocoder.swift */; };
 		4A4B75E92040D0D600CE8E05 /* TestGeocoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4B75E82040D0D600CE8E05 /* TestGeocoder.swift */; };
 		4A4B75EB2040D10800CE8E05 /* CoreLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4B75EA2040D10800CE8E05 /* CoreLocation.swift */; };
+		4A5109D520C9CB8100F993FC /* NSUserActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A5109D420C9CB8100F993FC /* NSUserActivity.swift */; };
 		4A552EF91CC7C8F8008C7298 /* TroposCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A552EEF1CC7C8F8008C7298 /* TroposCore.framework */; };
 		4A552F4D1CC7CBB2008C7298 /* TroposCore.h in Headers */ = {isa = PBXBuildFile; fileRef = 4A552F431CC7CB9B008C7298 /* TroposCore.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4A552F4F1CC7CC37008C7298 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D0F135B1B432976001685BA /* Quick.framework */; };
@@ -202,6 +203,7 @@
 		4A23F4F92041127A00FDDC5E /* Geocoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Geocoder.swift; sourceTree = "<group>"; };
 		4A4B75E82040D0D600CE8E05 /* TestGeocoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestGeocoder.swift; sourceTree = "<group>"; };
 		4A4B75EA2040D10800CE8E05 /* CoreLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreLocation.swift; sourceTree = "<group>"; };
+		4A5109D420C9CB8100F993FC /* NSUserActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSUserActivity.swift; sourceTree = "<group>"; };
 		4A552EEF1CC7C8F8008C7298 /* TroposCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TroposCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A552EF81CC7C8F8008C7298 /* TroposCoreSpecs.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TroposCoreSpecs.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A552F421CC7CB9B008C7298 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -816,26 +818,27 @@
 				4D49377A1A82F33B007A1FA9 /* CATransition+TRFadeTransition.m */,
 				4D7CDEBA1A46D3610038DD33 /* CLLocation+TRRecentLocation.h */,
 				4D7CDEBB1A46D3610038DD33 /* CLLocation+TRRecentLocation.m */,
+				A10108F71D3369EB0024B1BA /* NSBundle+TRBundleInfo.h */,
+				A10108F81D3369EB0024B1BA /* NSBundle+TRBundleInfo.m */,
 				C2E44CED1A3B6E89009CC844 /* NSDate+TRRelativeDate.h */,
 				C2E44CEE1A3B6E89009CC844 /* NSDate+TRRelativeDate.m */,
 				4D7CDEBD1A46DD030038DD33 /* NSError+TRErrors.h */,
 				4D7CDEBE1A46DD030038DD33 /* NSError+TRErrors.m */,
 				C2E44CF91A3B76B3009CC844 /* NSNumber+TRRoundedNumber.h */,
 				C2E44CFA1A3B76B3009CC844 /* NSNumber+TRRoundedNumber.m */,
+				4A5109D420C9CB8100F993FC /* NSUserActivity.swift */,
 				4ACA58491CC526D600DD0CDC /* RACSignal+TROperators.h */,
 				4ACA584A1CC526D600DD0CDC /* RACSignal+TROperators.m */,
 				4A6987691CC81D20002D3F87 /* TRSettingsController+TRObservation.h */,
 				4A6987681CC81D20002D3F87 /* TRSettingsController+TRObservation.m */,
 				4A6987671CC81D20002D3F87 /* TRWeatherUpdate+Analytics.h */,
 				4A6987661CC81D20002D3F87 /* TRWeatherUpdate+Analytics.m */,
+				A1628AE61D0E56FB00B6AF29 /* UIApplication+TRReactiveBackgroundTask.h */,
+				A1628AE71D0E56FB00B6AF29 /* UIApplication+TRReactiveBackgroundTask.m */,
 				4D4955501A8C2B5D0066F278 /* UIImage+TRColorBackdrop.h */,
 				4D4955511A8C2B5D0066F278 /* UIImage+TRColorBackdrop.m */,
 				4D7389DD1A9890CD0039F13B /* UIScrollView+TRReactiveCocoa.h */,
 				4D7389DE1A9890CD0039F13B /* UIScrollView+TRReactiveCocoa.m */,
-				A1628AE61D0E56FB00B6AF29 /* UIApplication+TRReactiveBackgroundTask.h */,
-				A1628AE71D0E56FB00B6AF29 /* UIApplication+TRReactiveBackgroundTask.m */,
-				A10108F71D3369EB0024B1BA /* NSBundle+TRBundleInfo.h */,
-				A10108F81D3369EB0024B1BA /* NSBundle+TRBundleInfo.m */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -1336,6 +1339,7 @@
 				4D49554C1A8C298A0066F278 /* TRRefreshView.m in Sources */,
 				A12FCE251D336FA90062E7F1 /* Color.swift in Sources */,
 				4A23F4F82041019000FDDC5E /* GeocodeController.swift in Sources */,
+				4A5109D520C9CB8100F993FC /* NSUserActivity.swift in Sources */,
 				A1F869201D3357D6003A826D /* AppearanceController.swift in Sources */,
 				A10109021D336DBE0024B1BA /* AcknowledgementsParser.swift in Sources */,
 				A12FCE261D3385440062E7F1 /* SettingsTableViewController.swift in Sources */,

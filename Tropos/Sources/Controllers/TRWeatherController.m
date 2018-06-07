@@ -43,13 +43,18 @@
     @weakify(self)
     self.updateWeatherCommand = [[RACCommand alloc] initWithSignalBlock:^RACSignal *(id input) {
         return [[UIApplication sharedApplication] tr_backgroundTaskWithSignal:^RACSignal *{
+            NSUserActivity *activity = [NSUserActivity tr_checkWeatherUserActivity];
+            [activity becomeCurrent];
+
             @strongify(self)
-            return [[[[self.locationController requestAlwaysAuthorization] then:^RACSignal *{
+            return [[[[[self.locationController requestAlwaysAuthorization] then:^RACSignal *{
                 return [self.locationController updateCurrentLocation];
             }] flattenMap:^RACSignal *(CLLocation *location) {
                 return [self.geocodeController reverseGeocodeLocation:location];
             }] flattenMap:^RACSignal *(CLPlacemark *placemark) {
                 return [self.forecastController fetchWeatherUpdateForPlacemark:placemark];
+            }] doCompleted:^{
+                [activity invalidate];
             }];
         }];
     }];
