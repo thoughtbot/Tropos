@@ -788,7 +788,7 @@
 			isa = PBXGroup;
 			children = (
 				A12FCE231D336F940062E7F1 /* Models */,
-				F7756A61DA7A0F0958F6D728 /* Categories */,
+				F7756A61DA7A0F0958F6D728 /* Extensions */,
 				771282ADE8938D4011617AD5 /* Protocols */,
 				F7F5AA24C89DC3F636256017 /* Headers */,
 				02DE38BC587E0F44ACAB470A /* Controllers */,
@@ -809,7 +809,7 @@
 			path = Controllers;
 			sourceTree = "<group>";
 		};
-		F7756A61DA7A0F0958F6D728 /* Categories */ = {
+		F7756A61DA7A0F0958F6D728 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
 				4D4937791A82F33B007A1FA9 /* CATransition+TRFadeTransition.h */,
@@ -837,7 +837,7 @@
 				A10108F71D3369EB0024B1BA /* NSBundle+TRBundleInfo.h */,
 				A10108F81D3369EB0024B1BA /* NSBundle+TRBundleInfo.m */,
 			);
-			path = Categories;
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		F7F5AA24C89DC3F636256017 /* Headers */ = {
