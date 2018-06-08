@@ -26,8 +26,12 @@
 		<dict>
 			<key>IntentsRestrictedWhileLocked</key>
 			<array/>
-			<key>IntentsSupported</key>
+			<key>IntentsRestrictedWhileProtectedDataUnavailable</key>
 			<array/>
+			<key>IntentsSupported</key>
+			<array>
+				<string>CheckWeatherIntent</string>
+			</array>
 		</dict>
 		<key>NSExtensionPointIdentifier</key>
 		<string>com.apple.intents-service</string>

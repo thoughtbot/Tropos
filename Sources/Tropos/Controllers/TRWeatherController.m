@@ -1,5 +1,7 @@
 @import CoreLocation;
+@import Intents;
 @import TroposCore;
+@import os.log;
 #import "RACSignal+TROperators.h"
 #import "Tropos-Swift.h"
 #import "TRAnalyticsController.h"
@@ -43,18 +45,23 @@
     @weakify(self)
     self.updateWeatherCommand = [[RACCommand alloc] initWithSignalBlock:^RACSignal *(id input) {
         return [[UIApplication sharedApplication] tr_backgroundTaskWithSignal:^RACSignal *{
-            NSUserActivity *activity = [NSUserActivity tr_checkWeatherUserActivity];
-            [activity becomeCurrent];
+            if (@available(iOS 12.0, *)) {
+                [[INInteraction tr_checkWeatherInteraction] donateInteractionWithCompletion:^(NSError * _Nullable error) {
+                    if (error != nil) {
+                        os_log_error(OS_LOG_DEFAULT, "Failed to donate interaction: %{public}@", error);
+                    } else {
+                        os_log(OS_LOG_DEFAULT, "Successfully donated check weather interaction!");
+                    }
+                }];
+            }
 
             @strongify(self)
-            return [[[[[self.locationController requestAlwaysAuthorization] then:^RACSignal *{
+            return [[[[self.locationController requestAlwaysAuthorization] then:^RACSignal *{
                 return [self.locationController updateCurrentLocation];
             }] flattenMap:^RACSignal *(CLLocation *location) {
                 return [self.geocodeController reverseGeocodeLocation:location];
             }] flattenMap:^RACSignal *(CLPlacemark *placemark) {
                 return [self.forecastController fetchWeatherUpdateForPlacemark:placemark];
-            }] doCompleted:^{
-                [activity invalidate];
             }];
         }];
     }];
