@@ -37,6 +37,10 @@
 		4A5FA2FC212DF6AA00CC313C /* TRLocationController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2E44CDC1A3A38A2009CC844 /* TRLocationController.m */; };
 		4A5FA2FD212DF6CC00CC313C /* TRLocationController.h in Headers */ = {isa = PBXBuildFile; fileRef = C2E44CDB1A3A38A2009CC844 /* TRLocationController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4A5FA2FE212DF76C00CC313C /* CLLocation+TRRecentLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D7CDEBB1A46D3610038DD33 /* CLLocation+TRRecentLocation.m */; };
+		4A5FA2FF212DFA7300CC313C /* TRErrors.h in Headers */ = {isa = PBXBuildFile; fileRef = C2E44CEC1A3A4F56009CC844 /* TRErrors.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4A5FA300212DFAB200CC313C /* NSDate+TRRelativeDate.m in Sources */ = {isa = PBXBuildFile; fileRef = C2E44CEE1A3B6E89009CC844 /* NSDate+TRRelativeDate.m */; };
+		4A5FA301212DFACA00CC313C /* TRForecastController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D0A5C371A3A27510084C41E /* TRForecastController.m */; };
+		4A5FA302212DFAD700CC313C /* TRForecastController.h in Headers */ = {isa = PBXBuildFile; fileRef = 4D0A5C361A3A27510084C41E /* TRForecastController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4A61FEAF1CF881A200B259E5 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4A552F801CC7D118008C7298 /* Localizable.strings */; };
 		4A69873F1CC80414002D3F87 /* SettingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A69873E1CC80414002D3F87 /* SettingsController.swift */; };
 		4A6987411CC80471002D3F87 /* TroposCore.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A6987401CC80471002D3F87 /* TroposCore.m */; };
@@ -90,7 +94,6 @@
 		4AC287A41CBC3D800064F48A /* Nimble.framework in Embed Carthage Frameworks */ = {isa = PBXBuildFile; fileRef = 6D0F135A1B432976001685BA /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		4AC287A51CBC3D820064F48A /* Quick.framework in Embed Carthage Frameworks */ = {isa = PBXBuildFile; fileRef = 6D0F135B1B432976001685BA /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		4ACA584B1CC526D600DD0CDC /* RACSignal+TROperators.m in Sources */ = {isa = PBXBuildFile; fileRef = 4ACA584A1CC526D600DD0CDC /* RACSignal+TROperators.m */; };
-		4D0A5C381A3A27510084C41E /* TRForecastController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D0A5C371A3A27510084C41E /* TRForecastController.m */; };
 		4D0A5C3D1A3A53DD0084C41E /* CWForecastDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D0A5C3C1A3A53DD0084C41E /* CWForecastDetailView.xib */; };
 		4D1ABA0B1A89686200B7F8FB /* TRNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D1ABA0A1A89686200B7F8FB /* TRNavigationBar.m */; };
 		4D3336F61A80BE16001BA9A8 /* TRDailyForecastView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D3336F51A80BE16001BA9A8 /* TRDailyForecastView.xib */; };
@@ -130,7 +133,6 @@
 		C2E44CE11A3A3C09009CC844 /* TRWeatherViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2E44CE01A3A3C09009CC844 /* TRWeatherViewController.m */; };
 		C2E44CE41A3A4273009CC844 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = C2E44CE61A3A4273009CC844 /* Localizable.strings */; };
 		C2E44CE91A3A42C6009CC844 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C2E44CEB1A3A42C6009CC844 /* InfoPlist.strings */; };
-		C2E44CEF1A3B6E89009CC844 /* NSDate+TRRelativeDate.m in Sources */ = {isa = PBXBuildFile; fileRef = C2E44CEE1A3B6E89009CC844 /* NSDate+TRRelativeDate.m */; };
 		C2E44CFB1A3B76B3009CC844 /* NSNumber+TRRoundedNumber.m in Sources */ = {isa = PBXBuildFile; fileRef = C2E44CFA1A3B76B3009CC844 /* NSNumber+TRRoundedNumber.m */; };
 		CE5D7F3B45F980082E1BCA30 /* LaunchScreen.xib in Sources */ = {isa = PBXBuildFile; fileRef = B6D58F8AA6976EA1B35682B7 /* LaunchScreen.xib */; };
 		CFC0721C2D9EFFD3C3AE11A7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 059D0BDDF8DCE56549A4C9C6 /* Images.xcassets */; };
@@ -464,8 +466,6 @@
 				4DDF65051AB3AC0C00909D67 /* TRWeatherController.m */,
 				4D9A00041A9D61CD000835A9 /* TRAnalyticsController.h */,
 				4D9A00051A9D61CD000835A9 /* TRAnalyticsController.m */,
-				4D0A5C361A3A27510084C41E /* TRForecastController.h */,
-				4D0A5C371A3A27510084C41E /* TRForecastController.m */,
 				E7A895521AFD11AA0023205B /* TRApplicationController.h */,
 				E7A895531AFD11AA0023205B /* TRApplicationController.m */,
 			);
@@ -585,6 +585,7 @@
 				4A95A141212DDF6400E0B33A /* Protocols */,
 				4A552F7B1CC7D0C6008C7298 /* Resources */,
 				4A6987531CC81698002D3F87 /* ViewModels */,
+				C2E44CEC1A3A4F56009CC844 /* TRErrors.h */,
 				4A552F431CC7CB9B008C7298 /* TroposCore.h */,
 				4A6987401CC80471002D3F87 /* TroposCore.m */,
 				4ABCA2BF20CAD06100C46C4C /* Intents.intentdefinition */,
@@ -672,6 +673,8 @@
 				4D7CDEBB1A46D3610038DD33 /* CLLocation+TRRecentLocation.m */,
 				4A69875C1CC817D9002D3F87 /* NSAttributedString.swift */,
 				4A552F851CC7D1A4008C7298 /* NSBundle.swift */,
+				C2E44CED1A3B6E89009CC844 /* NSDate+TRRelativeDate.h */,
+				C2E44CEE1A3B6E89009CC844 /* NSDate+TRRelativeDate.m */,
 				4A81678D212DB8F200E1AD21 /* NSFileCoordinator.swift */,
 				4A552F871CC7D20D008C7298 /* NSLocalizedString.swift */,
 				4A69875B1CC817D9002D3F87 /* UIColor.swift */,
@@ -686,6 +689,8 @@
 				4ABCA2C420CAD14C00C46C4C /* CheckWeatherIntentHandler.swift */,
 				4A23F4F72041019000FDDC5E /* GeocodeController.swift */,
 				4A69873E1CC80414002D3F87 /* SettingsController.swift */,
+				4D0A5C361A3A27510084C41E /* TRForecastController.h */,
+				4D0A5C371A3A27510084C41E /* TRForecastController.m */,
 				C2E44CDB1A3A38A2009CC844 /* TRLocationController.h */,
 				C2E44CDC1A3A38A2009CC844 /* TRLocationController.m */,
 			);
@@ -895,8 +900,6 @@
 				4A5109D420C9CB8100F993FC /* INInteraction.swift */,
 				A10108F71D3369EB0024B1BA /* NSBundle+TRBundleInfo.h */,
 				A10108F81D3369EB0024B1BA /* NSBundle+TRBundleInfo.m */,
-				C2E44CED1A3B6E89009CC844 /* NSDate+TRRelativeDate.h */,
-				C2E44CEE1A3B6E89009CC844 /* NSDate+TRRelativeDate.m */,
 				4D7CDEBD1A46DD030038DD33 /* NSError+TRErrors.h */,
 				4D7CDEBE1A46DD030038DD33 /* NSError+TRErrors.m */,
 				C2E44CF91A3B76B3009CC844 /* NSNumber+TRRoundedNumber.h */,
@@ -921,7 +924,6 @@
 			isa = PBXGroup;
 			children = (
 				22FE01C01AF3F5550085B494 /* Secrets.h */,
-				C2E44CEC1A3A4F56009CC844 /* TRErrors.h */,
 				4A6987441CC80699002D3F87 /* Tropos-Bridging-Header.h */,
 			);
 			path = Headers;
@@ -935,7 +937,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				4A552F4D1CC7CBB2008C7298 /* TroposCore.h in Headers */,
+				4A5FA302212DFAD700CC313C /* TRForecastController.h in Headers */,
 				4A5FA2FD212DF6CC00CC313C /* TRLocationController.h in Headers */,
+				4A5FA2FF212DFA7300CC313C /* TRErrors.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1410,6 +1414,7 @@
 				4A6987431CC804FE002D3F87 /* UnitSystem.swift in Sources */,
 				4A552F621CC7CCFA008C7298 /* TimeOfDay.swift in Sources */,
 				4A24AFC3212DE95A00666E95 /* CheckWeatherIntentHandler.swift in Sources */,
+				4A5FA300212DFAB200CC313C /* NSDate+TRRelativeDate.m in Sources */,
 				4A552F5E1CC7CCFA008C7298 /* DailyForecast.swift in Sources */,
 				4A552F641CC7CCFA008C7298 /* WeatherUpdateCache.swift in Sources */,
 				4A6987591CC81698002D3F87 /* WeatherViewModel.swift in Sources */,
@@ -1422,6 +1427,7 @@
 				4A552F601CC7CCFA008C7298 /* PrecipitationChance.swift in Sources */,
 				4A81678E212DB8F200E1AD21 /* NSFileCoordinator.swift in Sources */,
 				4A552F631CC7CCFA008C7298 /* WeatherUpdate.swift in Sources */,
+				4A5FA301212DFACA00CC313C /* TRForecastController.m in Sources */,
 				4A69874F1CC815BF002D3F87 /* RelativeDateFormatter.swift in Sources */,
 				4A69873F1CC80414002D3F87 /* SettingsController.swift in Sources */,
 				4A69874E1CC815BF002D3F87 /* PrecipitationChanceFormatter.swift in Sources */,
@@ -1472,7 +1478,6 @@
 				4A8163941CC830A400279952 /* TRSettingsController+TRObservation.m in Sources */,
 				4DDF65061AB3AC0C00909D67 /* TRWeatherController.m in Sources */,
 				4ACA584B1CC526D600DD0CDC /* RACSignal+TROperators.m in Sources */,
-				4D0A5C381A3A27510084C41E /* TRForecastController.m in Sources */,
 				4A86FB65205C0E4D00E761C3 /* AppDelegate.swift in Sources */,
 				A10109001D336C9C0024B1BA /* TRTableViewCell.swift in Sources */,
 				4D49554C1A8C298A0066F278 /* TRRefreshView.m in Sources */,
@@ -1482,7 +1487,6 @@
 				A10109021D336DBE0024B1BA /* AcknowledgementsParser.swift in Sources */,
 				A12FCE261D3385440062E7F1 /* SettingsTableViewController.swift in Sources */,
 				A12FCE281D3389A10062E7F1 /* TextViewController.swift in Sources */,
-				C2E44CEF1A3B6E89009CC844 /* NSDate+TRRelativeDate.m in Sources */,
 				4D4937781A82F30D007A1FA9 /* TRLabel.m in Sources */,
 				A1628AE81D0E56FB00B6AF29 /* UIApplication+TRReactiveBackgroundTask.m in Sources */,
 				4D76CCD41A99C3FA00DDE5EB /* TRRefreshLayer.m in Sources */,

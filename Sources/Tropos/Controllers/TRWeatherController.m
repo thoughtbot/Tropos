@@ -3,9 +3,9 @@
 @import TroposCore;
 @import os.log;
 #import "RACSignal+TROperators.h"
+#import "Secrets.h"
 #import "Tropos-Swift.h"
 #import "TRAnalyticsController.h"
-#import "TRForecastController.h"
 #import "TRSettingsController+TRObservation.h"
 #import "TRWeatherController.h"
 #import "TRWeatherUpdate+Analytics.h"
@@ -39,7 +39,7 @@
     self.cache = [[TRWeatherUpdateCache alloc] initWithFileName:TRWeatherUpdateCache.latestWeatherUpdateFileName];
     self.locationController = [TRLocationController new];
     self.geocodeController = [TRGeocodeController new];
-    self.forecastController = [TRForecastController new];
+    self.forecastController = [[TRForecastController alloc] initWithAPIKey:TRForecastAPIKey];
     self.settingsController = [TRSettingsController new];
     self.unitSystemChanged = [[self.settingsController unitSystemChanged] replayLastLazily];
 

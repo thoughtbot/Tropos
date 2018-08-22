@@ -1,15 +1,14 @@
-@import TroposCore;
-
+#import <TroposCore/TroposCore-Swift.h>
 #import "TRErrors.h"
 #import "TRForecastController.h"
 #import "NSDate+TRRelativeDate.h"
-#import "Secrets.h"
 
 static NSString *const TRForecastAPIExclusions = @"minutely,hourly,alerts,flags";
 
 @interface TRForecastController ()
 
-@property (nonatomic) NSURLSession *session;
+@property (nonatomic, readonly) NSString *APIKey;
+@property (nonatomic, readonly) NSURLSession *session;
 
 @end
 
@@ -17,15 +16,17 @@ static NSString *const TRForecastAPIExclusions = @"minutely,hourly,alerts,flags"
 
 #pragma mark - Initializers
 
-- (instancetype)init
+- (instancetype)initWithAPIKey:(NSString *)APIKey
 {
     self = [super init];
     if (!self) return nil;
 
+    _APIKey = APIKey;
+
     NSURLSessionConfiguration *configuration = [NSURLSessionConfiguration defaultSessionConfiguration];
     configuration.HTTPAdditionalHeaders = @{@"Accept": @"application/json"};
     configuration.requestCachePolicy = NSURLRequestReloadIgnoringCacheData;
-    self.session = [NSURLSession sessionWithConfiguration:configuration];
+    _session = [NSURLSession sessionWithConfiguration:configuration];
 
     return self;
 }
@@ -95,7 +96,7 @@ static NSString *const TRForecastAPIExclusions = @"minutely,hourly,alerts,flags"
 
 - (NSURL *)URLForCurrentConditionsAtLatitude:(double)latitude longitude:(double)longitude yesterday:(BOOL)yesterday
 {
-    NSURLComponents *components = [self.class baseURLComponents];
+    NSURLComponents *components = [self baseURLComponents];
     NSDate *date = yesterday? [NSDate yesterday] : nil;
     components.path = [components.path stringByAppendingString:[self pathComponentForLatitude:latitude longitude:longitude date:date]];
     NSURLQueryItem *item = [NSURLQueryItem queryItemWithName:@"exclude" value:TRForecastAPIExclusions];
@@ -122,12 +123,12 @@ static NSString *const TRForecastAPIExclusions = @"minutely,hourly,alerts,flags"
     return [path copy];
 }
 
-+ (NSURLComponents *)baseURLComponents
+- (NSURLComponents *)baseURLComponents
 {
     NSURLComponents *components = [NSURLComponents new];
     components.scheme = @"https";
     components.host = @"api.forecast.io";
-    components.path = [NSString stringWithFormat:@"/forecast/%@", TRForecastAPIKey];
+    components.path = [NSString stringWithFormat:@"/forecast/%@", self.APIKey];
     return components;
 }
 
