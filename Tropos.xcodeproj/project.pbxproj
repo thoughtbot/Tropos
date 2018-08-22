@@ -150,13 +150,6 @@
 			remoteGlobalIDString = 4A552EEE1CC7C8F8008C7298;
 			remoteInfo = TroposCore;
 		};
-		4A552EFC1CC7C8F8008C7298 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 198EF8739DFBDBC4FBC67D3B /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 45ADD324EABFD89F9E640007;
-			remoteInfo = Tropos;
-		};
 		A1FC9ED41CFEA23B00E62618 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 198EF8739DFBDBC4FBC67D3B /* Project object */;
@@ -992,7 +985,6 @@
 			);
 			dependencies = (
 				4A552EFB1CC7C8F8008C7298 /* PBXTargetDependency */,
-				4A552EFD1CC7C8F8008C7298 /* PBXTargetDependency */,
 			);
 			name = TroposCoreTests;
 			productName = TroposCoreTests;
@@ -1496,11 +1488,6 @@
 			isa = PBXTargetDependency;
 			target = 4A552EEE1CC7C8F8008C7298 /* TroposCore */;
 			targetProxy = 4A552EFA1CC7C8F8008C7298 /* PBXContainerItemProxy */;
-		};
-		4A552EFD1CC7C8F8008C7298 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 45ADD324EABFD89F9E640007 /* Tropos */;
-			targetProxy = 4A552EFC1CC7C8F8008C7298 /* PBXContainerItemProxy */;
 		};
 		9BB8CE14790AABA30710CABC /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
