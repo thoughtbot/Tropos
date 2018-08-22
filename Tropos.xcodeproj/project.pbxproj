@@ -10,10 +10,7 @@
 		46660A27B04F4C7B78A7920F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 436D9431497525313B32E225 /* Foundation.framework */; };
 		4A21D76820C9E6FA0055A2AF /* IntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A21D76720C9E6FA0055A2AF /* IntentHandler.swift */; };
 		4A21D76C20C9E6FB0055A2AF /* TroposIntents.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 4A21D76520C9E6FA0055A2AF /* TroposIntents.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		4A23F4F82041019000FDDC5E /* GeocodeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A23F4F72041019000FDDC5E /* GeocodeController.swift */; };
-		4A23F4FA2041127A00FDDC5E /* Geocoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A23F4F92041127A00FDDC5E /* Geocoder.swift */; };
-		4A4B75E92040D0D600CE8E05 /* TestGeocoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4B75E82040D0D600CE8E05 /* TestGeocoder.swift */; };
-		4A4B75EB2040D10800CE8E05 /* CoreLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4B75EA2040D10800CE8E05 /* CoreLocation.swift */; };
+		4A24AFC3212DE95A00666E95 /* CheckWeatherIntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ABCA2C420CAD14C00C46C4C /* CheckWeatherIntentHandler.swift */; };
 		4A5109D520C9CB8100F993FC /* INInteraction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A5109D420C9CB8100F993FC /* INInteraction.swift */; };
 		4A552EF91CC7C8F8008C7298 /* TroposCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A552EEF1CC7C8F8008C7298 /* TroposCore.framework */; };
 		4A552F4D1CC7CBB2008C7298 /* TroposCore.h in Headers */ = {isa = PBXBuildFile; fileRef = 4A552F431CC7CB9B008C7298 /* TroposCore.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -67,16 +64,29 @@
 		4A8163951CC830A700279952 /* TRWeatherUpdate+Analytics.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A6987661CC81D20002D3F87 /* TRWeatherUpdate+Analytics.m */; };
 		4A81678E212DB8F200E1AD21 /* NSFileCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A81678D212DB8F200E1AD21 /* NSFileCoordinator.swift */; };
 		4A86FB65205C0E4D00E761C3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A86FB64205C0E4D00E761C3 /* AppDelegate.swift */; };
+		4A95A13D212DDEEF00E0B33A /* GeocodeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A23F4F72041019000FDDC5E /* GeocodeController.swift */; };
+		4A95A140212DDF5100E0B33A /* ReactiveSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A6BB9C72040C32F00835531 /* ReactiveSwift.framework */; };
+		4A95A142212DDFA600E0B33A /* Geocoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A23F4F92041127A00FDDC5E /* Geocoder.swift */; };
+		4A95A144212DDFF900E0B33A /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A95A143212DDFF900E0B33A /* CoreLocation.framework */; };
+		4A95A145212DE1D300E0B33A /* ReactiveObjC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A6BB9C82040C33000835531 /* ReactiveObjC.framework */; };
+		4A95A146212DE1D700E0B33A /* ReactiveObjCBridge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A6BB9C92040C33000835531 /* ReactiveObjCBridge.framework */; };
+		4A95A147212DE1DC00E0B33A /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A6BB9CA2040C33000835531 /* Result.framework */; };
+		4A95A148212DE21000E0B33A /* GeocodeControllerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AEF9E872040C47400CDDEEA /* GeocodeControllerSpec.swift */; };
+		4A95A149212DE23800E0B33A /* TestGeocoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4B75E82040D0D600CE8E05 /* TestGeocoder.swift */; };
+		4A95A14A212DE28D00E0B33A /* CoreLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4B75EA2040D10800CE8E05 /* CoreLocation.swift */; };
+		4A95A14B212DE3DE00E0B33A /* ReactiveSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4A6BB9C72040C32F00835531 /* ReactiveSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		4A95A14C212DE3E000E0B33A /* ReactiveObjCBridge.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4A6BB9C92040C33000835531 /* ReactiveObjCBridge.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		4A95A14D212DE3E300E0B33A /* Result.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4A6BB9CA2040C33000835531 /* Result.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		4A95A14E212DE3F000E0B33A /* ReactiveObjC.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4A6BB9C82040C33000835531 /* ReactiveObjC.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		4A95A151212DE48E00E0B33A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A95A150212DE48E00E0B33A /* Foundation.framework */; };
 		4AB9C18A1CC8286F006CBC24 /* New York.placemark in Resources */ = {isa = PBXBuildFile; fileRef = 4A552F771CC7D063008C7298 /* New York.placemark */; };
 		4ABCA2C320CAD0B300C46C4C /* TroposCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A552EEF1CC7C8F8008C7298 /* TroposCore.framework */; };
 		4ABCA2C820CB162900C46C4C /* Intents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 4ABCA2BF20CAD06100C46C4C /* Intents.intentdefinition */; };
 		4ABCA2C920CB188400C46C4C /* Intents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 4ABCA2BF20CAD06100C46C4C /* Intents.intentdefinition */; settings = {ATTRIBUTES = (no_codegen, ); }; };
 		4ABCA2CA20CB189000C46C4C /* Intents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 4ABCA2BF20CAD06100C46C4C /* Intents.intentdefinition */; settings = {ATTRIBUTES = (no_codegen, ); }; };
-		4ABCA2CB20CB1BB400C46C4C /* CheckWeatherIntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ABCA2C420CAD14C00C46C4C /* CheckWeatherIntentHandler.swift */; };
 		4AC287A41CBC3D800064F48A /* Nimble.framework in Embed Carthage Frameworks */ = {isa = PBXBuildFile; fileRef = 6D0F135A1B432976001685BA /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		4AC287A51CBC3D820064F48A /* Quick.framework in Embed Carthage Frameworks */ = {isa = PBXBuildFile; fileRef = 6D0F135B1B432976001685BA /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		4ACA584B1CC526D600DD0CDC /* RACSignal+TROperators.m in Sources */ = {isa = PBXBuildFile; fileRef = 4ACA584A1CC526D600DD0CDC /* RACSignal+TROperators.m */; };
-		4AEF9E882040C47400CDDEEA /* GeocodeControllerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AEF9E872040C47400CDDEEA /* GeocodeControllerSpec.swift */; };
 		4D0A5C381A3A27510084C41E /* TRForecastController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D0A5C371A3A27510084C41E /* TRForecastController.m */; };
 		4D0A5C3D1A3A53DD0084C41E /* CWForecastDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D0A5C3C1A3A53DD0084C41E /* CWForecastDetailView.xib */; };
 		4D1ABA0B1A89686200B7F8FB /* TRNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D1ABA0A1A89686200B7F8FB /* TRNavigationBar.m */; };
@@ -179,6 +189,10 @@
 			files = (
 				4A552F521CC7CC54008C7298 /* Quick.framework in Embed Frameworks */,
 				4A552F531CC7CC56008C7298 /* Nimble.framework in Embed Frameworks */,
+				4A95A14B212DE3DE00E0B33A /* ReactiveSwift.framework in Embed Frameworks */,
+				4A95A14C212DE3E000E0B33A /* ReactiveObjCBridge.framework in Embed Frameworks */,
+				4A95A14E212DE3F000E0B33A /* ReactiveObjC.framework in Embed Frameworks */,
+				4A95A14D212DE3E300E0B33A /* Result.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -287,6 +301,8 @@
 		4A8163911CC82B4D00279952 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		4A81678D212DB8F200E1AD21 /* NSFileCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSFileCoordinator.swift; sourceTree = "<group>"; };
 		4A86FB64205C0E4D00E761C3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		4A95A143212DDFF900E0B33A /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		4A95A150212DE48E00E0B33A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		4ABCA2BF20CAD06100C46C4C /* Intents.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = Intents.intentdefinition; sourceTree = "<group>"; };
 		4ABCA2C420CAD14C00C46C4C /* CheckWeatherIntentHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckWeatherIntentHandler.swift; sourceTree = "<group>"; };
 		4ABCA2CC20CB1F5500C46C4C /* TroposIntents.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TroposIntents.entitlements; sourceTree = "<group>"; };
@@ -391,6 +407,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4A95A151212DE48E00E0B33A /* Foundation.framework in Frameworks */,
+				4A95A146212DE1D700E0B33A /* ReactiveObjCBridge.framework in Frameworks */,
+				4A95A144212DDFF900E0B33A /* CoreLocation.framework in Frameworks */,
+				4A95A140212DDF5100E0B33A /* ReactiveSwift.framework in Frameworks */,
+				4A95A147212DE1DC00E0B33A /* Result.framework in Frameworks */,
+				4A95A145212DE1D300E0B33A /* ReactiveObjC.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -437,7 +459,6 @@
 				A10109011D336DBE0024B1BA /* AcknowledgementsParser.swift */,
 				4A86FB64205C0E4D00E761C3 /* AppDelegate.swift */,
 				A1F8691F1D3357D6003A826D /* AppearanceController.swift */,
-				4A23F4F72041019000FDDC5E /* GeocodeController.swift */,
 				4DDF65041AB3AC0C00909D67 /* TRWeatherController.h */,
 				4DDF65051AB3AC0C00909D67 /* TRWeatherController.m */,
 				4D9A00041A9D61CD000835A9 /* TRAnalyticsController.h */,
@@ -521,8 +542,6 @@
 		4A0DD7531CCA97BB00E7A451 /* Support */ = {
 			isa = PBXGroup;
 			children = (
-				4A4B75EA2040D10800CE8E05 /* CoreLocation.swift */,
-				4A4B75E82040D0D600CE8E05 /* TestGeocoder.swift */,
 				4ABCA775205C497A009DF765 /* TroposTests-Bridging-Header.h */,
 			);
 			path = Support;
@@ -564,6 +583,7 @@
 				4A552F841CC7D196008C7298 /* Extensions */,
 				4A6987481CC815BF002D3F87 /* Formatters */,
 				4A552F541CC7CCF9008C7298 /* Models */,
+				4A95A141212DDF6400E0B33A /* Protocols */,
 				4A552F7B1CC7D0C6008C7298 /* Resources */,
 				4A6987531CC81698002D3F87 /* ViewModels */,
 				4A552F431CC7CB9B008C7298 /* TroposCore.h */,
@@ -620,7 +640,9 @@
 		4A552F751CC7CFF5008C7298 /* Support */ = {
 			isa = PBXGroup;
 			children = (
+				4A4B75EA2040D10800CE8E05 /* CoreLocation.swift */,
 				4A7A123A1CC8223F00363A5C /* NSDate+ISO8601.swift */,
+				4A4B75E82040D0D600CE8E05 /* TestGeocoder.swift */,
 				4A552F791CC7D06F008C7298 /* TestPlacemark.swift */,
 				4A6BB9C42040A37C00835531 /* UserDefaults+Random.swift */,
 			);
@@ -661,6 +683,7 @@
 			isa = PBXGroup;
 			children = (
 				4ABCA2C420CAD14C00C46C4C /* CheckWeatherIntentHandler.swift */,
+				4A23F4F72041019000FDDC5E /* GeocodeController.swift */,
 				4A69873E1CC80414002D3F87 /* SettingsController.swift */,
 			);
 			path = Controllers;
@@ -669,6 +692,7 @@
 		4A6987451CC80CBD002D3F87 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				4AEF9E872040C47400CDDEEA /* GeocodeControllerSpec.swift */,
 				4A6987461CC80CBD002D3F87 /* SettingsControllerSpec.swift */,
 			);
 			path = Controllers;
@@ -718,6 +742,14 @@
 				4A7A12381CC821DA00363A5C /* DailyForecastViewModelSpec.swift */,
 			);
 			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		4A95A141212DDF6400E0B33A /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				4A23F4F92041127A00FDDC5E /* Geocoder.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 		4D0A5C3E1A3A578E0084C41E /* Fonts */ = {
@@ -770,7 +802,6 @@
 		771282ADE8938D4011617AD5 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
-				4A23F4F92041127A00FDDC5E /* Geocoder.swift */,
 				4D9A000D1A9D7868000835A9 /* TRAnalyticsEvent.h */,
 			);
 			path = Protocols;
@@ -787,6 +818,8 @@
 		79646077C042F7DDDC35EBEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4A95A150212DE48E00E0B33A /* Foundation.framework */,
+				4A95A143212DDFF900E0B33A /* CoreLocation.framework */,
 				D281611EA8A7B26EFB4FBBAC /* libPods-Tropos.a */,
 				5DC78109457DAFE306854F5B /* libPods-UnitTests.a */,
 				6D0F135A1B432976001685BA /* Nimble.framework */,
@@ -846,7 +879,6 @@
 		E7B3B9281B34EE0500BDD5A4 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				4AEF9E872040C47400CDDEEA /* GeocodeControllerSpec.swift */,
 				E7B3B9261B34EDFE00BDD5A4 /* TRApplicationControllerSpec.m */,
 			);
 			path = Controllers;
@@ -1372,8 +1404,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				4A6987521CC815BF002D3F87 /* WindSpeedFormatter.swift in Sources */,
+				4A95A142212DDFA600E0B33A /* Geocoder.swift in Sources */,
 				4A6987431CC804FE002D3F87 /* UnitSystem.swift in Sources */,
 				4A552F621CC7CCFA008C7298 /* TimeOfDay.swift in Sources */,
+				4A24AFC3212DE95A00666E95 /* CheckWeatherIntentHandler.swift in Sources */,
 				4A552F5E1CC7CCFA008C7298 /* DailyForecast.swift in Sources */,
 				4A552F641CC7CCFA008C7298 /* WeatherUpdateCache.swift in Sources */,
 				4A6987591CC81698002D3F87 /* WeatherViewModel.swift in Sources */,
@@ -1383,7 +1417,6 @@
 				4A69875F1CC817D9002D3F87 /* NSAttributedString.swift in Sources */,
 				4A6987511CC815BF002D3F87 /* TemperatureFormatter.swift in Sources */,
 				4A552F601CC7CCFA008C7298 /* PrecipitationChance.swift in Sources */,
-				4ABCA2CB20CB1BB400C46C4C /* CheckWeatherIntentHandler.swift in Sources */,
 				4A81678E212DB8F200E1AD21 /* NSFileCoordinator.swift in Sources */,
 				4A552F631CC7CCFA008C7298 /* WeatherUpdate.swift in Sources */,
 				4A69874F1CC815BF002D3F87 /* RelativeDateFormatter.swift in Sources */,
@@ -1392,6 +1425,7 @@
 				4A552F5D1CC7CCF9008C7298 /* CardinalDirection.swift in Sources */,
 				4A552F861CC7D1A4008C7298 /* NSBundle.swift in Sources */,
 				4A6987581CC81698002D3F87 /* DailyForecastViewModel.swift in Sources */,
+				4A95A13D212DDEEF00E0B33A /* GeocodeController.swift in Sources */,
 				4A6987501CC815BF002D3F87 /* TemperatureComparisonFormatter.swift in Sources */,
 				4A69875D1CC817D9002D3F87 /* UIFont.swift in Sources */,
 				4A552F611CC7CCFA008C7298 /* Temperature.swift in Sources */,
@@ -1409,14 +1443,17 @@
 				4A7A12361CC8219600363A5C /* TemperatureFormatterSpec.swift in Sources */,
 				4A7A123B1CC8223F00363A5C /* NSDate+ISO8601.swift in Sources */,
 				4A6BB9C62040A38D00835531 /* UserDefaults+Random.swift in Sources */,
+				4A95A148212DE21000E0B33A /* GeocodeControllerSpec.swift in Sources */,
 				4A6987471CC80CBD002D3F87 /* SettingsControllerSpec.swift in Sources */,
 				4A552F7A1CC7D06F008C7298 /* TestPlacemark.swift in Sources */,
 				4A552F711CC7CD60008C7298 /* PrecipitationSpec.swift in Sources */,
+				4A95A149212DE23800E0B33A /* TestGeocoder.swift in Sources */,
 				4A7A12391CC821DA00363A5C /* DailyForecastViewModelSpec.swift in Sources */,
 				4A7A12351CC8219600363A5C /* TemperatureComparisonFormatterSpec.swift in Sources */,
 				4A6987621CC818B4002D3F87 /* TRTemperatureColorsSpec.swift in Sources */,
 				4A552F741CC7CD60008C7298 /* WeatherUpdateSpec.swift in Sources */,
 				4A552F701CC7CD60008C7298 /* CardinalDirectionSpec.swift in Sources */,
+				4A95A14A212DE28D00E0B33A /* CoreLocation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1425,7 +1462,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				4D49554F1A8C29C30066F278 /* TRCircularProgressLayer.m in Sources */,
-				4A23F4FA2041127A00FDDC5E /* Geocoder.swift in Sources */,
 				4D7389DF1A9890CD0039F13B /* UIScrollView+TRReactiveCocoa.m in Sources */,
 				4DC069CD1A95B8F800F3BCEB /* TRColorBackdropLayer.m in Sources */,
 				A10108F91D3369EB0024B1BA /* NSBundle+TRBundleInfo.m in Sources */,
@@ -1437,7 +1473,6 @@
 				A10109001D336C9C0024B1BA /* TRTableViewCell.swift in Sources */,
 				4D49554C1A8C298A0066F278 /* TRRefreshView.m in Sources */,
 				A12FCE251D336FA90062E7F1 /* Color.swift in Sources */,
-				4A23F4F82041019000FDDC5E /* GeocodeController.swift in Sources */,
 				4A5109D520C9CB8100F993FC /* INInteraction.swift in Sources */,
 				A1F869201D3357D6003A826D /* AppearanceController.swift in Sources */,
 				A10109021D336DBE0024B1BA /* AcknowledgementsParser.swift in Sources */,
@@ -1471,10 +1506,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4AEF9E882040C47400CDDEEA /* GeocodeControllerSpec.swift in Sources */,
 				E7B3B9271B34EDFE00BDD5A4 /* TRApplicationControllerSpec.m in Sources */,
-				4A4B75E92040D0D600CE8E05 /* TestGeocoder.swift in Sources */,
-				4A4B75EB2040D10800CE8E05 /* CoreLocation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1622,6 +1654,10 @@
 				DYLIB_CURRENT_VERSION = 208;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
@@ -1658,6 +1694,10 @@
 				DYLIB_CURRENT_VERSION = 208;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;

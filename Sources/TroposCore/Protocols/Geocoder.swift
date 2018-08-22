@@ -1,7 +1,7 @@
 import CoreLocation
 import Foundation
 
-protocol Geocoder: class {
+public protocol Geocoder: class {
     func reverseGeocodeLocation(
         _ location: CLLocation,
         completionHandler: @escaping CoreLocation.CLGeocodeCompletionHandler)

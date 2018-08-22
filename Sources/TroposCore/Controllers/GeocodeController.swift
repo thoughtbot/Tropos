@@ -4,18 +4,18 @@ import ReactiveSwift
 import Result
 
 @objc(TRGeocodeController)
-final class GeocodeController: NSObject {
+public final class GeocodeController: NSObject {
     private let geocoder: Geocoder
 
-    init(geocoder: Geocoder) {
+    public init(geocoder: Geocoder) {
         self.geocoder = geocoder
     }
 
-    convenience override init() {
+    public convenience override init() {
         self.init(geocoder: CLGeocoder())
     }
 
-    func reverseGeocode(_ location: CLLocation) -> SignalProducer<CLPlacemark, CLError> {
+    public func reverseGeocode(_ location: CLLocation) -> SignalProducer<CLPlacemark, CLError> {
         return SignalProducer { [geocoder] observer, lifetime in
             lifetime.observeEnded(geocoder.cancelGeocode)
 
@@ -37,7 +37,7 @@ final class GeocodeController: NSObject {
 }
 
 extension GeocodeController {
-    @objc func reverseGeocodeLocation(_ location: CLLocation) -> RACSignal<CLPlacemark> {
+    @objc public func reverseGeocodeLocation(_ location: CLLocation) -> RACSignal<CLPlacemark> {
         return reverseGeocode(location).bridged
     }
 }

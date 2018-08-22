@@ -2,7 +2,7 @@ import CoreLocation
 import Foundation
 import MapKit
 import Result
-@testable import Tropos
+@testable import TroposCore
 
 final class TestGeocoder: Geocoder {
     private enum State {

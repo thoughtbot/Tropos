@@ -2,7 +2,7 @@ import CoreLocation
 import Quick
 import Nimble
 import ReactiveSwift
-@testable import Tropos
+@testable import TroposCore
 
 final class GeocodeControllerSpec: QuickSpec {
     override func spec() {
