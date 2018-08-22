@@ -16,6 +16,7 @@
 
 @property (nonatomic, readwrite) RACCommand *updateWeatherCommand;
 
+@property (nonatomic) TRWeatherUpdateCache *cache;
 @property (nonatomic) TRLocationController *locationController;
 @property (nonatomic) TRGeocodeController *geocodeController;
 @property (nonatomic) TRForecastController *forecastController;
@@ -36,6 +37,7 @@
     self = [super init];
     if (!self) return nil;
 
+    self.cache = [[TRWeatherUpdateCache alloc] initWithFileName:TRWeatherUpdateCache.latestWeatherUpdateFileName];
     self.locationController = [TRLocationController new];
     self.geocodeController = [TRGeocodeController new];
     self.forecastController = [TRForecastController new];
@@ -74,9 +76,21 @@
         [[TRAnalyticsController sharedController] trackError:error eventName:@"Error: Weather Update"];
     }];
 
+    __weak typeof(self) weakSelf = self;
     [[self latestWeatherUpdates] subscribeNext:^(TRWeatherUpdate *update) {
         [[TRAnalyticsController sharedController] trackEvent:update];
-        [[TRWeatherUpdateCache new] archiveWeatherUpdate:update];
+
+        [weakSelf.cache archiveWeatherUpdate:update completionHandler:^(BOOL success, NSError * _Nullable error) {
+            if (success) {
+                return;
+            }
+
+            if (error != nil) {
+                os_log_error(OS_LOG_DEFAULT, "Failed to archive weather update: %{public}@", error);
+            } else {
+                os_log_error(OS_LOG_DEFAULT, "Failed to archive weather update");
+            }
+        }];
     }];
 
     return self;
@@ -84,7 +98,7 @@
 
 - (RACSignal *)latestWeatherUpdates
 {
-    TRWeatherUpdate *cachedUpdate = [[TRWeatherUpdateCache new] latestWeatherUpdate];
+    TRWeatherUpdate *cachedUpdate = [self.cache latestWeatherUpdate];
     RACSignal *weatherUpdates = [self.updateWeatherCommand.executionSignals startWith:[RACSignal return:cachedUpdate]];
 
     return [[weatherUpdates switchToLatest] filter:^BOOL(TRWeatherUpdate *update) {

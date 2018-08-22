@@ -41,8 +41,15 @@ final class WeatherUpdateCacheSpec: QuickSpec {
                         yesterdaysConditionsJSON: [:]
                     )!
 
-                    expect(cache.archiveWeatherUpdate(update)).to(beTrue())
+                    var success: Bool?
+                    var error: Error?
+                    cache.archiveWeatherUpdate(update) {
+                        success = $0
+                        error = $1
+                    }
 
+                    expect(success).toEventually(beTrue())
+                    expect(error).to(beNil())
                     expect(FileManager.default.isReadableFile(atPath: testWeatherUpdateURL.path)).to(beTrue())
                 }
             }
@@ -61,9 +68,15 @@ final class WeatherUpdateCacheSpec: QuickSpec {
                         yesterdaysConditionsJSON: [:]
                     )!
 
-                    let success = cache.archiveWeatherUpdate(update)
+                    var success: Bool?
+                    var error: Error?
+                    cache.archiveWeatherUpdate(update) {
+                        success = $0
+                        error = $1
+                    }
 
-                    expect(success).to(beTruthy())
+                    expect(success).toEventually(beTrue())
+                    expect(error).to(beNil())
                     expect(cache.latestWeatherUpdate).to(beAKindOf(WeatherUpdate.self))
                 }
 
@@ -77,9 +90,9 @@ final class WeatherUpdateCacheSpec: QuickSpec {
                         date: date
                     )!
 
-                    cache.archiveWeatherUpdate(update)
+                    cache.archiveWeatherUpdate(update) { _, _ in }
 
-                    expect(cache.latestWeatherUpdate?.date) == date
+                    expect(cache.latestWeatherUpdate?.date).toEventually(equal(date))
                 }
             }
         }

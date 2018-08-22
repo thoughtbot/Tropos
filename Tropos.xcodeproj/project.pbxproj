@@ -65,6 +65,7 @@
 		4A8163921CC82B4D00279952 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A8163911CC82B4D00279952 /* Images.xcassets */; };
 		4A8163941CC830A400279952 /* TRSettingsController+TRObservation.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A6987681CC81D20002D3F87 /* TRSettingsController+TRObservation.m */; };
 		4A8163951CC830A700279952 /* TRWeatherUpdate+Analytics.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A6987661CC81D20002D3F87 /* TRWeatherUpdate+Analytics.m */; };
+		4A81678E212DB8F200E1AD21 /* NSFileCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A81678D212DB8F200E1AD21 /* NSFileCoordinator.swift */; };
 		4A86FB65205C0E4D00E761C3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A86FB64205C0E4D00E761C3 /* AppDelegate.swift */; };
 		4AB9C18A1CC8286F006CBC24 /* New York.placemark in Resources */ = {isa = PBXBuildFile; fileRef = 4A552F771CC7D063008C7298 /* New York.placemark */; };
 		4ABCA2C320CAD0B300C46C4C /* TroposCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A552EEF1CC7C8F8008C7298 /* TroposCore.framework */; };
@@ -291,9 +292,11 @@
 		4A7A12381CC821DA00363A5C /* DailyForecastViewModelSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DailyForecastViewModelSpec.swift; sourceTree = "<group>"; };
 		4A7A123A1CC8223F00363A5C /* NSDate+ISO8601.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSDate+ISO8601.swift"; sourceTree = "<group>"; };
 		4A8163911CC82B4D00279952 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		4A81678D212DB8F200E1AD21 /* NSFileCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSFileCoordinator.swift; sourceTree = "<group>"; };
 		4A86FB64205C0E4D00E761C3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4ABCA2BF20CAD06100C46C4C /* Intents.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = Intents.intentdefinition; sourceTree = "<group>"; };
 		4ABCA2C420CAD14C00C46C4C /* CheckWeatherIntentHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckWeatherIntentHandler.swift; sourceTree = "<group>"; };
+		4ABCA2CC20CB1F5500C46C4C /* TroposIntents.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TroposIntents.entitlements; sourceTree = "<group>"; };
 		4ABCA775205C497A009DF765 /* TroposTests-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TroposTests-Bridging-Header.h"; sourceTree = "<group>"; };
 		4ACA58491CC526D600DD0CDC /* RACSignal+TROperators.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "RACSignal+TROperators.h"; sourceTree = "<group>"; };
 		4ACA584A1CC526D600DD0CDC /* RACSignal+TROperators.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "RACSignal+TROperators.m"; sourceTree = "<group>"; };
@@ -556,6 +559,7 @@
 			children = (
 				4A21D76920C9E6FB0055A2AF /* Info.plist */,
 				4A21D76720C9E6FA0055A2AF /* IntentHandler.swift */,
+				4ABCA2CC20CB1F5500C46C4C /* TroposIntents.entitlements */,
 			);
 			path = TroposIntents;
 			sourceTree = "<group>";
@@ -652,6 +656,7 @@
 			children = (
 				4A69875C1CC817D9002D3F87 /* NSAttributedString.swift */,
 				4A552F851CC7D1A4008C7298 /* NSBundle.swift */,
+				4A81678D212DB8F200E1AD21 /* NSFileCoordinator.swift */,
 				4A552F871CC7D20D008C7298 /* NSLocalizedString.swift */,
 				4A69875B1CC817D9002D3F87 /* UIColor.swift */,
 				4A69875A1CC817D9002D3F87 /* UIFont.swift */,
@@ -1032,6 +1037,9 @@
 						DevelopmentTeam = 8E7TQ638ZD;
 						LastSwiftMigration = 0920;
 						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
 							com.apple.BackgroundModes = {
 								enabled = 1;
 							};
@@ -1047,6 +1055,11 @@
 						CreatedOnToolsVersion = 10.0;
 						DevelopmentTeam = 8E7TQ638ZD;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					4A552EEE1CC7C8F8008C7298 = {
 						CreatedOnToolsVersion = 7.3;
@@ -1377,6 +1390,7 @@
 				4A6987511CC815BF002D3F87 /* TemperatureFormatter.swift in Sources */,
 				4A552F601CC7CCFA008C7298 /* PrecipitationChance.swift in Sources */,
 				4ABCA2CB20CB1BB400C46C4C /* CheckWeatherIntentHandler.swift in Sources */,
+				4A81678E212DB8F200E1AD21 /* NSFileCoordinator.swift in Sources */,
 				4A552F631CC7CCFA008C7298 /* WeatherUpdate.swift in Sources */,
 				4A69874F1CC815BF002D3F87 /* RelativeDateFormatter.swift in Sources */,
 				4A69873F1CC80414002D3F87 /* SettingsController.swift in Sources */,
@@ -1550,6 +1564,7 @@
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_ENTITLEMENTS = Sources/TroposIntents/TroposIntents.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COPY_PHASE_STRIP = NO;
@@ -1585,6 +1600,7 @@
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_ENTITLEMENTS = Sources/TroposIntents/TroposIntents.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
