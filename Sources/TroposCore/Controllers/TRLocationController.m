@@ -1,6 +1,5 @@
-@import CoreLocation;
-#import "TRLocationController.h"
 #import "CLLocation+TRRecentLocation.h"
+#import "TRLocationController.h"
 
 @interface TRLocationController () <CLLocationManagerDelegate>
 
@@ -27,7 +26,7 @@
 
 #pragma mark - Properties
 
-- (RACSignal *)requestAlwaysAuthorization
+- (RACSignal<NSNumber *> *)requestAlwaysAuthorization
 {
     if ([self needsAuthorization]) {
         [self.locationManager requestAlwaysAuthorization];
@@ -37,7 +36,7 @@
     }
 }
 
-- (RACSignal *)updateCurrentLocation
+- (RACSignal<CLLocation *> *)updateCurrentLocation
 {
     RACSignal *currentLocationUpdated = [[[self didUpdateLocations] map:^id(NSArray *locations) {
         return locations.lastObject;
@@ -68,14 +67,14 @@
     return [self authorizationStatusEqualTo:kCLAuthorizationStatusNotDetermined];
 }
 
-- (RACSignal *)didAuthorize
+- (RACSignal<NSNumber *> *)didAuthorize
 {
     return [[[[self didChangeAuthorizationStatus] ignore:@(kCLAuthorizationStatusNotDetermined)] map:^id(NSNumber *status) {
         return @(status.integerValue == kCLAuthorizationStatusAuthorizedWhenInUse || status.integerValue == kCLAuthorizationStatusAuthorizedAlways);
     }] take:1];
 }
 
-- (RACSignal *)authorized
+- (RACSignal<NSNumber *> *)authorized
 {
     BOOL authorized = [self authorizationStatusEqualTo:kCLAuthorizationStatusAuthorizedWhenInUse] || [self authorizationStatusEqualTo:kCLAuthorizationStatusAuthorizedAlways];
     return [RACSignal return:@(authorized)];
@@ -83,21 +82,21 @@
 
 #pragma mark - CLLocationManagerDelegate Signals
 
-- (RACSignal *)didUpdateLocations
+- (RACSignal<NSArray<CLLocation *> *> *)didUpdateLocations
 {
     return [[self rac_signalForSelector:@selector(locationManager:didUpdateLocations:) fromProtocol:@protocol(CLLocationManagerDelegate)] reduceEach:^id(CLLocationManager *manager, NSArray *locations) {
         return locations;
     }];
 }
 
-- (RACSignal *)didFailWithError
+- (RACSignal<NSError *> *)didFailWithError
 {
     return [[self rac_signalForSelector:@selector(locationManager:didFailWithError:) fromProtocol:@protocol(CLLocationManagerDelegate)] reduceEach:^id(CLLocationManager *manager, NSError *error) {
         return error;
     }];
 }
 
-- (RACSignal *)didChangeAuthorizationStatus
+- (RACSignal<NSNumber *> *)didChangeAuthorizationStatus
 {
     return [[self rac_signalForSelector:@selector(locationManager:didChangeAuthorizationStatus:) fromProtocol:@protocol(CLLocationManagerDelegate)] reduceEach:^id(CLLocationManager *manager, NSNumber *status) {
         return status;

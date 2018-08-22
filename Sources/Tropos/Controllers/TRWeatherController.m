@@ -6,7 +6,6 @@
 #import "Tropos-Swift.h"
 #import "TRAnalyticsController.h"
 #import "TRForecastController.h"
-#import "TRLocationController.h"
 #import "TRSettingsController+TRObservation.h"
 #import "TRWeatherController.h"
 #import "TRWeatherUpdate+Analytics.h"

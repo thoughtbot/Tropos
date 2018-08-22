@@ -34,6 +34,9 @@
 		4A552F7A1CC7D06F008C7298 /* TestPlacemark.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A552F791CC7D06F008C7298 /* TestPlacemark.swift */; };
 		4A552F861CC7D1A4008C7298 /* NSBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A552F851CC7D1A4008C7298 /* NSBundle.swift */; };
 		4A552F881CC7D20D008C7298 /* NSLocalizedString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A552F871CC7D20D008C7298 /* NSLocalizedString.swift */; };
+		4A5FA2FC212DF6AA00CC313C /* TRLocationController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2E44CDC1A3A38A2009CC844 /* TRLocationController.m */; };
+		4A5FA2FD212DF6CC00CC313C /* TRLocationController.h in Headers */ = {isa = PBXBuildFile; fileRef = C2E44CDB1A3A38A2009CC844 /* TRLocationController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4A5FA2FE212DF76C00CC313C /* CLLocation+TRRecentLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D7CDEBB1A46D3610038DD33 /* CLLocation+TRRecentLocation.m */; };
 		4A61FEAF1CF881A200B259E5 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4A552F801CC7D118008C7298 /* Localizable.strings */; };
 		4A69873F1CC80414002D3F87 /* SettingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A69873E1CC80414002D3F87 /* SettingsController.swift */; };
 		4A6987411CC80471002D3F87 /* TroposCore.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A6987401CC80471002D3F87 /* TroposCore.m */; };
@@ -99,7 +102,6 @@
 		4D4955521A8C2B5D0066F278 /* UIImage+TRColorBackdrop.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D4955511A8C2B5D0066F278 /* UIImage+TRColorBackdrop.m */; };
 		4D7389DF1A9890CD0039F13B /* UIScrollView+TRReactiveCocoa.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D7389DE1A9890CD0039F13B /* UIScrollView+TRReactiveCocoa.m */; };
 		4D76CCD41A99C3FA00DDE5EB /* TRRefreshLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D76CCD31A99C3FA00DDE5EB /* TRRefreshLayer.m */; };
-		4D7CDEBC1A46D3610038DD33 /* CLLocation+TRRecentLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D7CDEBB1A46D3610038DD33 /* CLLocation+TRRecentLocation.m */; };
 		4D7CDEBF1A46DD030038DD33 /* NSError+TRErrors.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D7CDEBE1A46DD030038DD33 /* NSError+TRErrors.m */; };
 		4D98E9851A80C43F00856412 /* TRDailyForecastView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D98E9841A80C43F00856412 /* TRDailyForecastView.m */; };
 		4D9A00061A9D61CD000835A9 /* TRAnalyticsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D9A00051A9D61CD000835A9 /* TRAnalyticsController.m */; };
@@ -125,7 +127,6 @@
 		A1FC9ED21CFEA23B00E62618 /* TroposCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A552EEF1CC7C8F8008C7298 /* TroposCore.framework */; };
 		A1FC9ED31CFEA23B00E62618 /* TroposCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4A552EEF1CC7C8F8008C7298 /* TroposCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B5AC964D04349C0D8BAD632A /* libPods-TroposTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FABB92576EA6757C2BBC71D5 /* libPods-TroposTests.a */; };
-		C2E44CDD1A3A38A2009CC844 /* TRLocationController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2E44CDC1A3A38A2009CC844 /* TRLocationController.m */; };
 		C2E44CE11A3A3C09009CC844 /* TRWeatherViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2E44CE01A3A3C09009CC844 /* TRWeatherViewController.m */; };
 		C2E44CE41A3A4273009CC844 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = C2E44CE61A3A4273009CC844 /* Localizable.strings */; };
 		C2E44CE91A3A42C6009CC844 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C2E44CEB1A3A42C6009CC844 /* InfoPlist.strings */; };
@@ -465,8 +466,6 @@
 				4D9A00051A9D61CD000835A9 /* TRAnalyticsController.m */,
 				4D0A5C361A3A27510084C41E /* TRForecastController.h */,
 				4D0A5C371A3A27510084C41E /* TRForecastController.m */,
-				C2E44CDB1A3A38A2009CC844 /* TRLocationController.h */,
-				C2E44CDC1A3A38A2009CC844 /* TRLocationController.m */,
 				E7A895521AFD11AA0023205B /* TRApplicationController.h */,
 				E7A895531AFD11AA0023205B /* TRApplicationController.m */,
 			);
@@ -669,6 +668,8 @@
 		4A552F841CC7D196008C7298 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				4D7CDEBA1A46D3610038DD33 /* CLLocation+TRRecentLocation.h */,
+				4D7CDEBB1A46D3610038DD33 /* CLLocation+TRRecentLocation.m */,
 				4A69875C1CC817D9002D3F87 /* NSAttributedString.swift */,
 				4A552F851CC7D1A4008C7298 /* NSBundle.swift */,
 				4A81678D212DB8F200E1AD21 /* NSFileCoordinator.swift */,
@@ -685,6 +686,8 @@
 				4ABCA2C420CAD14C00C46C4C /* CheckWeatherIntentHandler.swift */,
 				4A23F4F72041019000FDDC5E /* GeocodeController.swift */,
 				4A69873E1CC80414002D3F87 /* SettingsController.swift */,
+				C2E44CDB1A3A38A2009CC844 /* TRLocationController.h */,
+				C2E44CDC1A3A38A2009CC844 /* TRLocationController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -889,8 +892,6 @@
 			children = (
 				4D4937791A82F33B007A1FA9 /* CATransition+TRFadeTransition.h */,
 				4D49377A1A82F33B007A1FA9 /* CATransition+TRFadeTransition.m */,
-				4D7CDEBA1A46D3610038DD33 /* CLLocation+TRRecentLocation.h */,
-				4D7CDEBB1A46D3610038DD33 /* CLLocation+TRRecentLocation.m */,
 				4A5109D420C9CB8100F993FC /* INInteraction.swift */,
 				A10108F71D3369EB0024B1BA /* NSBundle+TRBundleInfo.h */,
 				A10108F81D3369EB0024B1BA /* NSBundle+TRBundleInfo.m */,
@@ -934,6 +935,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4A552F4D1CC7CBB2008C7298 /* TroposCore.h in Headers */,
+				4A5FA2FD212DF6CC00CC313C /* TRLocationController.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1414,6 +1416,7 @@
 				4ABCA2C820CB162900C46C4C /* Intents.intentdefinition in Sources */,
 				4A6987411CC80471002D3F87 /* TroposCore.m in Sources */,
 				4A69875E1CC817D9002D3F87 /* UIColor.swift in Sources */,
+				4A5FA2FE212DF76C00CC313C /* CLLocation+TRRecentLocation.m in Sources */,
 				4A69875F1CC817D9002D3F87 /* NSAttributedString.swift in Sources */,
 				4A6987511CC815BF002D3F87 /* TemperatureFormatter.swift in Sources */,
 				4A552F601CC7CCFA008C7298 /* PrecipitationChance.swift in Sources */,
@@ -1427,6 +1430,7 @@
 				4A6987581CC81698002D3F87 /* DailyForecastViewModel.swift in Sources */,
 				4A95A13D212DDEEF00E0B33A /* GeocodeController.swift in Sources */,
 				4A6987501CC815BF002D3F87 /* TemperatureComparisonFormatter.swift in Sources */,
+				4A5FA2FC212DF6AA00CC313C /* TRLocationController.m in Sources */,
 				4A69875D1CC817D9002D3F87 /* UIFont.swift in Sources */,
 				4A552F611CC7CCFA008C7298 /* Temperature.swift in Sources */,
 				4A552F5F1CC7CCFA008C7298 /* Precipitation.swift in Sources */,
@@ -1481,7 +1485,6 @@
 				C2E44CEF1A3B6E89009CC844 /* NSDate+TRRelativeDate.m in Sources */,
 				4D4937781A82F30D007A1FA9 /* TRLabel.m in Sources */,
 				A1628AE81D0E56FB00B6AF29 /* UIApplication+TRReactiveBackgroundTask.m in Sources */,
-				C2E44CDD1A3A38A2009CC844 /* TRLocationController.m in Sources */,
 				4D76CCD41A99C3FA00DDE5EB /* TRRefreshLayer.m in Sources */,
 				4DC716601A9B1D5B00BC4BD4 /* TRRefreshControl.m in Sources */,
 				A10108FE1D336C6A0024B1BA /* WebViewController.swift in Sources */,
@@ -1495,7 +1498,6 @@
 				C2E44CE11A3A3C09009CC844 /* TRWeatherViewController.m in Sources */,
 				4D1ABA0B1A89686200B7F8FB /* TRNavigationBar.m in Sources */,
 				CE5D7F3B45F980082E1BCA30 /* LaunchScreen.xib in Sources */,
-				4D7CDEBC1A46D3610038DD33 /* CLLocation+TRRecentLocation.m in Sources */,
 				4D4955521A8C2B5D0066F278 /* UIImage+TRColorBackdrop.m in Sources */,
 				4ABCA2CA20CB189000C46C4C /* Intents.intentdefinition in Sources */,
 				4D49377B1A82F33B007A1FA9 /* CATransition+TRFadeTransition.m in Sources */,

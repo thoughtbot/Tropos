@@ -1,4 +1,3 @@
-@import CoreLocation;
 #import "CLLocation+TRRecentLocation.h"
 
 static NSTimeInterval const TRRecentLocationMaximumElapsedTimeInterval = 5;
