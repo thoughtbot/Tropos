@@ -2,16 +2,15 @@
 @import Foundation;
 @import ReactiveObjC;
 
-@class TRWeatherUpdate;
-
 NS_ASSUME_NONNULL_BEGIN
 
+NS_SWIFT_NAME(ForecastController)
 @interface TRForecastController : NSObject
 
 - (instancetype)initWithAPIKey:(NSString *)APIKey NS_DESIGNATED_INITIALIZER;
 - (instancetype)init NS_UNAVAILABLE;
 
-- (RACSignal<TRWeatherUpdate *> *)fetchWeatherUpdateForPlacemark:(CLPlacemark *)placemark;
+- (RACSignal *)fetchWeatherUpdateForPlacemark:(CLPlacemark *)placemark NS_REFINED_FOR_SWIFT;
 
 @end
 

@@ -46,6 +46,7 @@
 		4A5FA311212EFC6A00CC313C /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A6BB9CA2040C33000835531 /* Result.framework */; };
 		4A5FA312212EFCD100CC313C /* CheckWeatherIntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ABCA2C420CAD14C00C46C4C /* CheckWeatherIntentHandler.swift */; };
 		4A5FA304212DFD1600CC313C /* LocationController+Bridging.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A5FA303212DFD1600CC313C /* LocationController+Bridging.swift */; };
+		4A5FA306212DFF6E00CC313C /* ForecastController+Bridging.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A5FA305212DFF6E00CC313C /* ForecastController+Bridging.swift */; };
 		4A61FEAF1CF881A200B259E5 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4A552F801CC7D118008C7298 /* Localizable.strings */; };
 		4A69873F1CC80414002D3F87 /* SettingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A69873E1CC80414002D3F87 /* SettingsController.swift */; };
 		4A6987411CC80471002D3F87 /* TroposCore.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A6987401CC80471002D3F87 /* TroposCore.m */; };
@@ -278,6 +279,7 @@
 		4A552F851CC7D1A4008C7298 /* NSBundle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSBundle.swift; sourceTree = "<group>"; };
 		4A552F871CC7D20D008C7298 /* NSLocalizedString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSLocalizedString.swift; sourceTree = "<group>"; };
 		4A5FA303212DFD1600CC313C /* LocationController+Bridging.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LocationController+Bridging.swift"; sourceTree = "<group>"; };
+		4A5FA305212DFF6E00CC313C /* ForecastController+Bridging.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ForecastController+Bridging.swift"; sourceTree = "<group>"; };
 		4A69873E1CC80414002D3F87 /* SettingsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsController.swift; sourceTree = "<group>"; };
 		4A6987401CC80471002D3F87 /* TroposCore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TroposCore.m; sourceTree = "<group>"; };
 		4A6987421CC804FE002D3F87 /* UnitSystem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UnitSystem.swift; sourceTree = "<group>"; };
@@ -682,6 +684,7 @@
 			children = (
 				4D7CDEBA1A46D3610038DD33 /* CLLocation+TRRecentLocation.h */,
 				4D7CDEBB1A46D3610038DD33 /* CLLocation+TRRecentLocation.m */,
+				4A5FA305212DFF6E00CC313C /* ForecastController+Bridging.swift */,
 				4A5FA303212DFD1600CC313C /* LocationController+Bridging.swift */,
 				4A69875C1CC817D9002D3F87 /* NSAttributedString.swift */,
 				4A552F851CC7D1A4008C7298 /* NSBundle.swift */,
@@ -1440,6 +1443,7 @@
 				4A6987591CC81698002D3F87 /* WeatherViewModel.swift in Sources */,
 				4ABCA2C820CB162900C46C4C /* Intents.intentdefinition in Sources */,
 				4A6987411CC80471002D3F87 /* TroposCore.m in Sources */,
+				4A5FA306212DFF6E00CC313C /* ForecastController+Bridging.swift in Sources */,
 				4A69875E1CC817D9002D3F87 /* UIColor.swift in Sources */,
 				4A5FA2FE212DF76C00CC313C /* CLLocation+TRRecentLocation.m in Sources */,
 				4A69875F1CC817D9002D3F87 /* NSAttributedString.swift in Sources */,

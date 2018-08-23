@@ -12,7 +12,7 @@ private let TRDateKey = "TRDateAt"
     private let currentConditionsJSON: [String: Any]
     fileprivate let yesterdaysConditionsJSON: [String: Any]
 
-    @objc public init?(
+    @objc public init(
         placemark: CLPlacemark,
         currentConditionsJSON: [String: Any],
         yesterdaysConditionsJSON: [String: Any],
@@ -25,7 +25,7 @@ private let TRDateKey = "TRDateAt"
         super.init()
     }
 
-    @objc public convenience init?(
+    @objc public convenience init(
         placemark: CLPlacemark,
         currentConditionsJSON: [String: Any],
         yesterdaysConditionsJSON: [String: Any]
