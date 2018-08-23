@@ -9,7 +9,7 @@ private let cacheQueue: OperationQueue = {
 }()
 
 @objc(TRWeatherUpdateCache) public final class WeatherUpdateCache: NSObject {
-    @objc static let latestWeatherUpdateFileName = "TRLatestWeatherUpdateFile"
+    @objc public static let latestWeatherUpdateFileName = "TRLatestWeatherUpdateFile"
 
     private let cacheURL: URL
 

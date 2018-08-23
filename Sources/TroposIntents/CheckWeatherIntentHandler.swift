@@ -1,4 +1,5 @@
 import Foundation
+import TroposCore
 
 @available(iOS 12.0, *)
 public final class CheckWeatherIntentHandler: NSObject, CheckWeatherIntentHandling {

@@ -10,7 +10,6 @@
 		46660A27B04F4C7B78A7920F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 436D9431497525313B32E225 /* Foundation.framework */; };
 		4A21D76820C9E6FA0055A2AF /* IntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A21D76720C9E6FA0055A2AF /* IntentHandler.swift */; };
 		4A21D76C20C9E6FB0055A2AF /* TroposIntents.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 4A21D76520C9E6FA0055A2AF /* TroposIntents.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		4A24AFC3212DE95A00666E95 /* CheckWeatherIntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ABCA2C420CAD14C00C46C4C /* CheckWeatherIntentHandler.swift */; };
 		4A5109D520C9CB8100F993FC /* INInteraction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A5109D420C9CB8100F993FC /* INInteraction.swift */; };
 		4A552EF91CC7C8F8008C7298 /* TroposCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A552EEF1CC7C8F8008C7298 /* TroposCore.framework */; };
 		4A552F4D1CC7CBB2008C7298 /* TroposCore.h in Headers */ = {isa = PBXBuildFile; fileRef = 4A552F431CC7CB9B008C7298 /* TroposCore.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -41,6 +40,11 @@
 		4A5FA300212DFAB200CC313C /* NSDate+TRRelativeDate.m in Sources */ = {isa = PBXBuildFile; fileRef = C2E44CEE1A3B6E89009CC844 /* NSDate+TRRelativeDate.m */; };
 		4A5FA301212DFACA00CC313C /* TRForecastController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D0A5C371A3A27510084C41E /* TRForecastController.m */; };
 		4A5FA302212DFAD700CC313C /* TRForecastController.h in Headers */ = {isa = PBXBuildFile; fileRef = 4D0A5C361A3A27510084C41E /* TRForecastController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4A5FA30E212EFC6A00CC313C /* ReactiveObjC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A6BB9C82040C33000835531 /* ReactiveObjC.framework */; };
+		4A5FA30F212EFC6A00CC313C /* ReactiveObjCBridge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A6BB9C92040C33000835531 /* ReactiveObjCBridge.framework */; };
+		4A5FA310212EFC6A00CC313C /* ReactiveSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A6BB9C72040C32F00835531 /* ReactiveSwift.framework */; };
+		4A5FA311212EFC6A00CC313C /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A6BB9CA2040C33000835531 /* Result.framework */; };
+		4A5FA312212EFCD100CC313C /* CheckWeatherIntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ABCA2C420CAD14C00C46C4C /* CheckWeatherIntentHandler.swift */; };
 		4A61FEAF1CF881A200B259E5 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4A552F801CC7D118008C7298 /* Localizable.strings */; };
 		4A69873F1CC80414002D3F87 /* SettingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A69873E1CC80414002D3F87 /* SettingsController.swift */; };
 		4A6987411CC80471002D3F87 /* TroposCore.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A6987401CC80471002D3F87 /* TroposCore.m */; };
@@ -403,6 +407,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				4ABCA2C320CAD0B300C46C4C /* TroposCore.framework in Frameworks */,
+				4A5FA30E212EFC6A00CC313C /* ReactiveObjC.framework in Frameworks */,
+				4A5FA30F212EFC6A00CC313C /* ReactiveObjCBridge.framework in Frameworks */,
+				4A5FA310212EFC6A00CC313C /* ReactiveSwift.framework in Frameworks */,
+				4A5FA311212EFC6A00CC313C /* Result.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -569,6 +577,7 @@
 			isa = PBXGroup;
 			children = (
 				4A21D76920C9E6FB0055A2AF /* Info.plist */,
+				4ABCA2C420CAD14C00C46C4C /* CheckWeatherIntentHandler.swift */,
 				4A21D76720C9E6FA0055A2AF /* IntentHandler.swift */,
 				4ABCA2CC20CB1F5500C46C4C /* TroposIntents.entitlements */,
 			);
@@ -686,7 +695,6 @@
 		4A69873D1CC803E6002D3F87 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				4ABCA2C420CAD14C00C46C4C /* CheckWeatherIntentHandler.swift */,
 				4A23F4F72041019000FDDC5E /* GeocodeController.swift */,
 				4A69873E1CC80414002D3F87 /* SettingsController.swift */,
 				4D0A5C361A3A27510084C41E /* TRForecastController.h */,
@@ -1402,6 +1410,7 @@
 			files = (
 				4ABCA2C920CB188400C46C4C /* Intents.intentdefinition in Sources */,
 				4A21D76820C9E6FA0055A2AF /* IntentHandler.swift in Sources */,
+				4A5FA312212EFCD100CC313C /* CheckWeatherIntentHandler.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1413,7 +1422,6 @@
 				4A95A142212DDFA600E0B33A /* Geocoder.swift in Sources */,
 				4A6987431CC804FE002D3F87 /* UnitSystem.swift in Sources */,
 				4A552F621CC7CCFA008C7298 /* TimeOfDay.swift in Sources */,
-				4A24AFC3212DE95A00666E95 /* CheckWeatherIntentHandler.swift in Sources */,
 				4A5FA300212DFAB200CC313C /* NSDate+TRRelativeDate.m in Sources */,
 				4A552F5E1CC7CCFA008C7298 /* DailyForecast.swift in Sources */,
 				4A552F641CC7CCFA008C7298 /* WeatherUpdateCache.swift in Sources */,
@@ -1594,6 +1602,10 @@
 				CODE_SIGN_ENTITLEMENTS = Sources/TroposIntents/TroposIntents.entitlements;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
@@ -1626,6 +1638,10 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CODE_SIGN_ENTITLEMENTS = Sources/TroposIntents/TroposIntents.entitlements;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
