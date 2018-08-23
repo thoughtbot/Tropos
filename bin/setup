@@ -4,7 +4,7 @@ bundle install
 bundle exec pod install
 brew install carthage 2> /dev/null
 brew install swiftlint 2> /dev/null
-carthage bootstrap --no-use-binaries --platform iphoneos,watchos
+carthage bootstrap --no-use-binaries --platform iOS
 
 tropos_secrets="Sources/Tropos/Headers/Secrets.h"
 example_secrets="Sources/Tropos/Headers/Secrets-Example.h"
