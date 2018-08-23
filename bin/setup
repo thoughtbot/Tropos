@@ -8,8 +8,8 @@ brew install carthage 2> /dev/null
 brew install swiftlint 2> /dev/null
 carthage bootstrap --platform iOS --cache-builds
 
-tropos_secrets="Sources/Tropos/Headers/Secrets.h"
-example_secrets="Sources/Tropos/Headers/Secrets-Example.h"
+tropos_secrets="Config/Secrets.h"
+example_secrets="Config/Secrets-Example.h"
 
 if [ ! -f "${tropos_secrets}" ]; then
   cp "${example_secrets}" "${tropos_secrets}"

@@ -692,6 +692,14 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		4A5FA307212E049700CC313C /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				22FE01C01AF3F5550085B494 /* Secrets.h */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
 		4A69873D1CC803E6002D3F87 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -881,6 +889,7 @@
 		D02B1FEF37316A9F6B8E4B34 = {
 			isa = PBXGroup;
 			children = (
+				4A5FA307212E049700CC313C /* Config */,
 				4A21D76020C9E1C10055A2AF /* Sources */,
 				4A21D75E20C9E16F0055A2AF /* Tests */,
 				79646077C042F7DDDC35EBEA /* Frameworks */,
@@ -931,7 +940,6 @@
 		F7F5AA24C89DC3F636256017 /* Headers */ = {
 			isa = PBXGroup;
 			children = (
-				22FE01C01AF3F5550085B494 /* Secrets.h */,
 				4A6987441CC80699002D3F87 /* Tropos-Bridging-Header.h */,
 			);
 			path = Headers;
