@@ -1,5 +1,6 @@
-#import <Foundation/Foundation.h>
-#import <ReactiveObjC/ReactiveObjC.h>
+@import ReactiveObjC;
+@import UIKit;
+
 #import "TRWeatherViewController.h"
 
 NS_ASSUME_NONNULL_BEGIN
