@@ -45,6 +45,7 @@
 		4A5FA310212EFC6A00CC313C /* ReactiveSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A6BB9C72040C32F00835531 /* ReactiveSwift.framework */; };
 		4A5FA311212EFC6A00CC313C /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A6BB9CA2040C33000835531 /* Result.framework */; };
 		4A5FA312212EFCD100CC313C /* CheckWeatherIntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ABCA2C420CAD14C00C46C4C /* CheckWeatherIntentHandler.swift */; };
+		4A5FA304212DFD1600CC313C /* LocationController+Bridging.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A5FA303212DFD1600CC313C /* LocationController+Bridging.swift */; };
 		4A61FEAF1CF881A200B259E5 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4A552F801CC7D118008C7298 /* Localizable.strings */; };
 		4A69873F1CC80414002D3F87 /* SettingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A69873E1CC80414002D3F87 /* SettingsController.swift */; };
 		4A6987411CC80471002D3F87 /* TroposCore.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A6987401CC80471002D3F87 /* TroposCore.m */; };
@@ -276,6 +277,7 @@
 		4A552F831CC7D123008C7298 /* pl-PL */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pl-PL"; path = "pl-PL.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		4A552F851CC7D1A4008C7298 /* NSBundle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSBundle.swift; sourceTree = "<group>"; };
 		4A552F871CC7D20D008C7298 /* NSLocalizedString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSLocalizedString.swift; sourceTree = "<group>"; };
+		4A5FA303212DFD1600CC313C /* LocationController+Bridging.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LocationController+Bridging.swift"; sourceTree = "<group>"; };
 		4A69873E1CC80414002D3F87 /* SettingsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsController.swift; sourceTree = "<group>"; };
 		4A6987401CC80471002D3F87 /* TroposCore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TroposCore.m; sourceTree = "<group>"; };
 		4A6987421CC804FE002D3F87 /* UnitSystem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UnitSystem.swift; sourceTree = "<group>"; };
@@ -680,6 +682,7 @@
 			children = (
 				4D7CDEBA1A46D3610038DD33 /* CLLocation+TRRecentLocation.h */,
 				4D7CDEBB1A46D3610038DD33 /* CLLocation+TRRecentLocation.m */,
+				4A5FA303212DFD1600CC313C /* LocationController+Bridging.swift */,
 				4A69875C1CC817D9002D3F87 /* NSAttributedString.swift */,
 				4A552F851CC7D1A4008C7298 /* NSBundle.swift */,
 				C2E44CED1A3B6E89009CC844 /* NSDate+TRRelativeDate.h */,
@@ -1427,6 +1430,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4A6987521CC815BF002D3F87 /* WindSpeedFormatter.swift in Sources */,
+				4A5FA304212DFD1600CC313C /* LocationController+Bridging.swift in Sources */,
 				4A95A142212DDFA600E0B33A /* Geocoder.swift in Sources */,
 				4A6987431CC804FE002D3F87 /* UnitSystem.swift in Sources */,
 				4A552F621CC7CCFA008C7298 /* TimeOfDay.swift in Sources */,
