@@ -280,6 +280,7 @@
 		4A552F871CC7D20D008C7298 /* NSLocalizedString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSLocalizedString.swift; sourceTree = "<group>"; };
 		4A5FA303212DFD1600CC313C /* LocationController+Bridging.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LocationController+Bridging.swift"; sourceTree = "<group>"; };
 		4A5FA305212DFF6E00CC313C /* ForecastController+Bridging.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ForecastController+Bridging.swift"; sourceTree = "<group>"; };
+		4A5FA309212E052C00CC313C /* TroposIntents-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TroposIntents-Bridging-Header.h"; sourceTree = "<group>"; };
 		4A69873E1CC80414002D3F87 /* SettingsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsController.swift; sourceTree = "<group>"; };
 		4A6987401CC80471002D3F87 /* TroposCore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TroposCore.m; sourceTree = "<group>"; };
 		4A6987421CC804FE002D3F87 /* UnitSystem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UnitSystem.swift; sourceTree = "<group>"; };
@@ -583,6 +584,7 @@
 				4A21D76920C9E6FB0055A2AF /* Info.plist */,
 				4ABCA2C420CAD14C00C46C4C /* CheckWeatherIntentHandler.swift */,
 				4A21D76720C9E6FA0055A2AF /* IntentHandler.swift */,
+				4A5FA309212E052C00CC313C /* TroposIntents-Bridging-Header.h */,
 				4ABCA2CC20CB1F5500C46C4C /* TroposIntents.entitlements */,
 			);
 			path = TroposIntents;
@@ -1633,6 +1635,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OBJC_BRIDGING_HEADER = "Sources/$(TARGET_NAME)/$(TARGET_NAME)-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1668,6 +1671,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.thoughtbot.carlweathers.TroposIntents;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "Sources/$(TARGET_NAME)/$(TARGET_NAME)-Bridging-Header.h";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1859,6 +1863,7 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_MODULES_AUTOLINK = NO;
 				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
@@ -1967,6 +1972,7 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_MODULES_AUTOLINK = NO;
 				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
