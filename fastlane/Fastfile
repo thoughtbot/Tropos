@@ -24,7 +24,7 @@ platform :ios do
   end
 
   desc "Deploy a new version to the App Store"
-  lane :appstore do
+  lane :release do
     validate_env!
     match(type: "appstore")
     increment_build_number
