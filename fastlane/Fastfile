@@ -17,7 +17,10 @@ platform :ios do
   desc "This will also make sure the profile is up to date"
   lane :beta do
     validate_env!
-    match(type: "appstore")
+    match(type: "appstore", app_identifier: [
+      "com.thoughtbot.carlweathers",
+      "com.thoughtbot.carlweathers.TroposIntents",
+    ])
     increment_build_number
     gym(scheme: "Tropos")
     testflight(skip_waiting_for_build_processing: true)
