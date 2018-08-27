@@ -40,14 +40,15 @@
 		4A5FA300212DFAB200CC313C /* NSDate+TRRelativeDate.m in Sources */ = {isa = PBXBuildFile; fileRef = C2E44CEE1A3B6E89009CC844 /* NSDate+TRRelativeDate.m */; };
 		4A5FA301212DFACA00CC313C /* TRForecastController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D0A5C371A3A27510084C41E /* TRForecastController.m */; };
 		4A5FA302212DFAD700CC313C /* TRForecastController.h in Headers */ = {isa = PBXBuildFile; fileRef = 4D0A5C361A3A27510084C41E /* TRForecastController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4A5FA304212DFD1600CC313C /* LocationController+Bridging.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A5FA303212DFD1600CC313C /* LocationController+Bridging.swift */; };
+		4A5FA306212DFF6E00CC313C /* ForecastController+Bridging.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A5FA305212DFF6E00CC313C /* ForecastController+Bridging.swift */; };
 		4A5FA30E212EFC6A00CC313C /* ReactiveObjC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A6BB9C82040C33000835531 /* ReactiveObjC.framework */; };
 		4A5FA30F212EFC6A00CC313C /* ReactiveObjCBridge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A6BB9C92040C33000835531 /* ReactiveObjCBridge.framework */; };
 		4A5FA310212EFC6A00CC313C /* ReactiveSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A6BB9C72040C32F00835531 /* ReactiveSwift.framework */; };
 		4A5FA311212EFC6A00CC313C /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A6BB9CA2040C33000835531 /* Result.framework */; };
 		4A5FA312212EFCD100CC313C /* CheckWeatherIntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ABCA2C420CAD14C00C46C4C /* CheckWeatherIntentHandler.swift */; };
-		4A5FA304212DFD1600CC313C /* LocationController+Bridging.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A5FA303212DFD1600CC313C /* LocationController+Bridging.swift */; };
-		4A5FA306212DFF6E00CC313C /* ForecastController+Bridging.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A5FA305212DFF6E00CC313C /* ForecastController+Bridging.swift */; };
 		4A61FEAF1CF881A200B259E5 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4A552F801CC7D118008C7298 /* Localizable.strings */; };
+		4A628AB42134514000F455F8 /* Intents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 4ABCA2BF20CAD06100C46C4C /* Intents.intentdefinition */; };
 		4A69873F1CC80414002D3F87 /* SettingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A69873E1CC80414002D3F87 /* SettingsController.swift */; };
 		4A6987411CC80471002D3F87 /* TroposCore.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A6987401CC80471002D3F87 /* TroposCore.m */; };
 		4A6987431CC804FE002D3F87 /* UnitSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6987421CC804FE002D3F87 /* UnitSystem.swift */; };
@@ -94,9 +95,7 @@
 		4A95A151212DE48E00E0B33A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A95A150212DE48E00E0B33A /* Foundation.framework */; };
 		4AB9C18A1CC8286F006CBC24 /* New York.placemark in Resources */ = {isa = PBXBuildFile; fileRef = 4A552F771CC7D063008C7298 /* New York.placemark */; };
 		4ABCA2C320CAD0B300C46C4C /* TroposCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A552EEF1CC7C8F8008C7298 /* TroposCore.framework */; };
-		4ABCA2C820CB162900C46C4C /* Intents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 4ABCA2BF20CAD06100C46C4C /* Intents.intentdefinition */; };
-		4ABCA2C920CB188400C46C4C /* Intents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 4ABCA2BF20CAD06100C46C4C /* Intents.intentdefinition */; settings = {ATTRIBUTES = (no_codegen, ); }; };
-		4ABCA2CA20CB189000C46C4C /* Intents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 4ABCA2BF20CAD06100C46C4C /* Intents.intentdefinition */; settings = {ATTRIBUTES = (no_codegen, ); }; };
+		4ABCA2C920CB188400C46C4C /* Intents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 4ABCA2BF20CAD06100C46C4C /* Intents.intentdefinition */; settings = {ATTRIBUTES = (codegen, ); }; };
 		4AC287A41CBC3D800064F48A /* Nimble.framework in Embed Carthage Frameworks */ = {isa = PBXBuildFile; fileRef = 6D0F135A1B432976001685BA /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		4AC287A51CBC3D820064F48A /* Quick.framework in Embed Carthage Frameworks */ = {isa = PBXBuildFile; fileRef = 6D0F135B1B432976001685BA /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		4ACA584B1CC526D600DD0CDC /* RACSignal+TROperators.m in Sources */ = {isa = PBXBuildFile; fileRef = 4ACA584A1CC526D600DD0CDC /* RACSignal+TROperators.m */; };
@@ -582,6 +581,7 @@
 			isa = PBXGroup;
 			children = (
 				4A21D76920C9E6FB0055A2AF /* Info.plist */,
+				4ABCA2BF20CAD06100C46C4C /* Intents.intentdefinition */,
 				4ABCA2C420CAD14C00C46C4C /* CheckWeatherIntentHandler.swift */,
 				4A21D76720C9E6FA0055A2AF /* IntentHandler.swift */,
 				4A5FA309212E052C00CC313C /* TroposIntents-Bridging-Header.h */,
@@ -603,7 +603,6 @@
 				C2E44CEC1A3A4F56009CC844 /* TRErrors.h */,
 				4A552F431CC7CB9B008C7298 /* TroposCore.h */,
 				4A6987401CC80471002D3F87 /* TroposCore.m */,
-				4ABCA2BF20CAD06100C46C4C /* Intents.intentdefinition */,
 				4A552F421CC7CB9B008C7298 /* Info.plist */,
 			);
 			path = TroposCore;
@@ -1443,7 +1442,6 @@
 				4A552F5E1CC7CCFA008C7298 /* DailyForecast.swift in Sources */,
 				4A552F641CC7CCFA008C7298 /* WeatherUpdateCache.swift in Sources */,
 				4A6987591CC81698002D3F87 /* WeatherViewModel.swift in Sources */,
-				4ABCA2C820CB162900C46C4C /* Intents.intentdefinition in Sources */,
 				4A6987411CC80471002D3F87 /* TroposCore.m in Sources */,
 				4A5FA306212DFF6E00CC313C /* ForecastController+Bridging.swift in Sources */,
 				4A69875E1CC817D9002D3F87 /* UIColor.swift in Sources */,
@@ -1499,6 +1497,7 @@
 			files = (
 				4D49554F1A8C29C30066F278 /* TRCircularProgressLayer.m in Sources */,
 				4D7389DF1A9890CD0039F13B /* UIScrollView+TRReactiveCocoa.m in Sources */,
+				4A628AB42134514000F455F8 /* Intents.intentdefinition in Sources */,
 				4DC069CD1A95B8F800F3BCEB /* TRColorBackdropLayer.m in Sources */,
 				A10108F91D3369EB0024B1BA /* NSBundle+TRBundleInfo.m in Sources */,
 				4A8163941CC830A400279952 /* TRSettingsController+TRObservation.m in Sources */,
@@ -1529,7 +1528,6 @@
 				4D1ABA0B1A89686200B7F8FB /* TRNavigationBar.m in Sources */,
 				CE5D7F3B45F980082E1BCA30 /* LaunchScreen.xib in Sources */,
 				4D4955521A8C2B5D0066F278 /* UIImage+TRColorBackdrop.m in Sources */,
-				4ABCA2CA20CB189000C46C4C /* Intents.intentdefinition in Sources */,
 				4D49377B1A82F33B007A1FA9 /* CATransition+TRFadeTransition.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

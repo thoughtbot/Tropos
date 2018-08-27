@@ -1,5 +1,4 @@
 import Intents
-import TroposCore
 
 @available(iOS 12.0, *)
 extension INInteraction {
