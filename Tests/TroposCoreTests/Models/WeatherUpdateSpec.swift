@@ -37,7 +37,7 @@ final class WeatherUpdateSpec: QuickSpec {
                         currentConditionsJSON: conditions,
                         yesterdaysConditionsJSON: [:]
                     )
-                    expect(update?.currentHigh.fahrenheitValue) == 70
+                    expect(update.currentHigh.fahrenheitValue) == 70
                 }
 
                 it("updates currentLow to match") {
@@ -47,7 +47,7 @@ final class WeatherUpdateSpec: QuickSpec {
                         currentConditionsJSON: conditions,
                         yesterdaysConditionsJSON: [:]
                     )
-                    expect(update?.currentLow.fahrenheitValue) == 40
+                    expect(update.currentLow.fahrenheitValue) == 40
                 }
             }
 
@@ -59,8 +59,7 @@ final class WeatherUpdateSpec: QuickSpec {
                         currentConditionsJSON: conditions,
                         yesterdaysConditionsJSON: [:]
                     )
-                    let rawPercentage = update?.precipitationPercentage ?? 0
-                    expect(round(rawPercentage * 100)) == 43
+                    expect(round(update.precipitationPercentage * 100)) == 43
                 }
             }
 
@@ -72,8 +71,8 @@ final class WeatherUpdateSpec: QuickSpec {
                         currentConditionsJSON: conditions,
                         yesterdaysConditionsJSON: [:]
                     )
-                    expect(update?.precipitationPercentage) == 0
-                    expect(update?.precipitationType) == "rain"
+                    expect(update.precipitationPercentage) == 0
+                    expect(update.precipitationType) == "rain"
                 }
             }
         }
@@ -86,7 +85,7 @@ final class WeatherUpdateSpec: QuickSpec {
                     currentConditionsJSON: [:],
                     yesterdaysConditionsJSON: yesterdaysConditions
                 )
-                expect(update?.yesterdaysTemperature?.fahrenheitValue) == 70
+                expect(update.yesterdaysTemperature?.fahrenheitValue) == 70
             }
 
             it("returns .None if yesterday's temperature is unavailable") {
@@ -96,7 +95,7 @@ final class WeatherUpdateSpec: QuickSpec {
                     currentConditionsJSON: [:],
                     yesterdaysConditionsJSON: [:]
                 )
-                expect(update?.yesterdaysTemperature?.fahrenheitValue).to(beNil())
+                expect(update.yesterdaysTemperature?.fahrenheitValue).to(beNil())
             }
         }
     }

@@ -39,7 +39,7 @@ final class WeatherUpdateCacheSpec: QuickSpec {
                         placemark: testPlacemark,
                         currentConditionsJSON: [:],
                         yesterdaysConditionsJSON: [:]
-                    )!
+                    )
 
                     var success: Bool?
                     var error: Error?
@@ -66,7 +66,7 @@ final class WeatherUpdateCacheSpec: QuickSpec {
                         placemark: testPlacemark,
                         currentConditionsJSON: [:],
                         yesterdaysConditionsJSON: [:]
-                    )!
+                    )
 
                     var success: Bool?
                     var error: Error?
@@ -88,7 +88,7 @@ final class WeatherUpdateCacheSpec: QuickSpec {
                         currentConditionsJSON: [:],
                         yesterdaysConditionsJSON: [:],
                         date: date
-                    )!
+                    )
 
                     cache.archiveWeatherUpdate(update) { _, _ in }
 

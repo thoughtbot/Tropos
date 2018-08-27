@@ -1,10 +1,10 @@
 @import CoreLocation;
 @import Quick;
 @import Nimble;
+@import TroposCore;
 #import <OCMock/OCMock.h>
 #import "TRApplicationController.h"
 #import "TRWeatherController.h"
-#import "TRLocationController.h"
 
 @interface TRApplicationController (Tests)
 

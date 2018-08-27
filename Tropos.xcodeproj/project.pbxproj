@@ -93,6 +93,8 @@
 		4A95A14D212DE3E300E0B33A /* Result.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4A6BB9CA2040C33000835531 /* Result.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		4A95A14E212DE3F000E0B33A /* ReactiveObjC.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4A6BB9C82040C33000835531 /* ReactiveObjC.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		4A95A151212DE48E00E0B33A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A95A150212DE48E00E0B33A /* Foundation.framework */; };
+		4AA138D9213494970083B816 /* TroposCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A552EEF1CC7C8F8008C7298 /* TroposCore.framework */; };
+		4AA138DA213494B20083B816 /* ReactiveObjC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A6BB9C82040C33000835531 /* ReactiveObjC.framework */; };
 		4AB9C18A1CC8286F006CBC24 /* New York.placemark in Resources */ = {isa = PBXBuildFile; fileRef = 4A552F771CC7D063008C7298 /* New York.placemark */; };
 		4ABCA2C320CAD0B300C46C4C /* TroposCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A552EEF1CC7C8F8008C7298 /* TroposCore.framework */; };
 		4ABCA2C920CB188400C46C4C /* Intents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 4ABCA2BF20CAD06100C46C4C /* Intents.intentdefinition */; settings = {ATTRIBUTES = (codegen, ); }; };
@@ -459,6 +461,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4AA138DA213494B20083B816 /* ReactiveObjC.framework in Frameworks */,
+				4AA138D9213494970083B816 /* TroposCore.framework in Frameworks */,
 				6D0F135C1B432976001685BA /* Nimble.framework in Frameworks */,
 				6D0F135D1B432976001685BA /* Quick.framework in Frameworks */,
 				B5AC964D04349C0D8BAD632A /* libPods-TroposTests.a in Frameworks */,
