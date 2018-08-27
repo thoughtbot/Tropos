@@ -48,7 +48,6 @@
 		4A5FA311212EFC6A00CC313C /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A6BB9CA2040C33000835531 /* Result.framework */; };
 		4A5FA312212EFCD100CC313C /* CheckWeatherIntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ABCA2C420CAD14C00C46C4C /* CheckWeatherIntentHandler.swift */; };
 		4A61FEAF1CF881A200B259E5 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4A552F801CC7D118008C7298 /* Localizable.strings */; };
-		4A628AB42134514000F455F8 /* Intents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 4ABCA2BF20CAD06100C46C4C /* Intents.intentdefinition */; };
 		4A69873F1CC80414002D3F87 /* SettingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A69873E1CC80414002D3F87 /* SettingsController.swift */; };
 		4A6987411CC80471002D3F87 /* TroposCore.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A6987401CC80471002D3F87 /* TroposCore.m */; };
 		4A6987431CC804FE002D3F87 /* UnitSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6987421CC804FE002D3F87 /* UnitSystem.swift */; };
@@ -96,9 +95,10 @@
 		4AA138D9213494970083B816 /* TroposCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A552EEF1CC7C8F8008C7298 /* TroposCore.framework */; };
 		4AA138DA213494B20083B816 /* ReactiveObjC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A6BB9C82040C33000835531 /* ReactiveObjC.framework */; };
 		4AA138C021347AAA0083B816 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4AA138C221347AAA0083B816 /* Main.storyboard */; };
+		4AA138C42134835A0083B816 /* Intents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 4AA138C72134835A0083B816 /* Intents.intentdefinition */; };
+		4AA138C52134835A0083B816 /* Intents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 4AA138C72134835A0083B816 /* Intents.intentdefinition */; };
 		4AB9C18A1CC8286F006CBC24 /* New York.placemark in Resources */ = {isa = PBXBuildFile; fileRef = 4A552F771CC7D063008C7298 /* New York.placemark */; };
 		4ABCA2C320CAD0B300C46C4C /* TroposCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A552EEF1CC7C8F8008C7298 /* TroposCore.framework */; };
-		4ABCA2C920CB188400C46C4C /* Intents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 4ABCA2BF20CAD06100C46C4C /* Intents.intentdefinition */; settings = {ATTRIBUTES = (codegen, ); }; };
 		4AC287A41CBC3D800064F48A /* Nimble.framework in Embed Carthage Frameworks */ = {isa = PBXBuildFile; fileRef = 6D0F135A1B432976001685BA /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		4AC287A51CBC3D820064F48A /* Quick.framework in Embed Carthage Frameworks */ = {isa = PBXBuildFile; fileRef = 6D0F135B1B432976001685BA /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		4ACA584B1CC526D600DD0CDC /* RACSignal+TROperators.m in Sources */ = {isa = PBXBuildFile; fileRef = 4ACA584A1CC526D600DD0CDC /* RACSignal+TROperators.m */; };
@@ -317,7 +317,10 @@
 		4A95A143212DDFF900E0B33A /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		4A95A150212DE48E00E0B33A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		4AA138C321347AB80083B816 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		4ABCA2BF20CAD06100C46C4C /* Intents.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = Intents.intentdefinition; sourceTree = "<group>"; };
+		4AA138C62134835A0083B816 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; name = Base; path = Base.lproj/Intents.intentdefinition; sourceTree = "<group>"; };
+		4AA138D421348E350083B816 /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/Intents.strings; sourceTree = "<group>"; };
+		4AA138D621348E360083B816 /* sv */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = sv; path = sv.lproj/Intents.strings; sourceTree = "<group>"; };
+		4AA138D821348E360083B816 /* pl-PL */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pl-PL"; path = "pl-PL.lproj/Intents.strings"; sourceTree = "<group>"; };
 		4ABCA2C420CAD14C00C46C4C /* CheckWeatherIntentHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckWeatherIntentHandler.swift; sourceTree = "<group>"; };
 		4ABCA2CC20CB1F5500C46C4C /* TroposIntents.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TroposIntents.entitlements; sourceTree = "<group>"; };
 		4ABCA775205C497A009DF765 /* TroposTests-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TroposTests-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -585,7 +588,7 @@
 			isa = PBXGroup;
 			children = (
 				4A21D76920C9E6FB0055A2AF /* Info.plist */,
-				4ABCA2BF20CAD06100C46C4C /* Intents.intentdefinition */,
+				4AA138C72134835A0083B816 /* Intents.intentdefinition */,
 				4ABCA2C420CAD14C00C46C4C /* CheckWeatherIntentHandler.swift */,
 				4A21D76720C9E6FA0055A2AF /* IntentHandler.swift */,
 				4A5FA309212E052C00CC313C /* TroposIntents-Bridging-Header.h */,
@@ -1428,7 +1431,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4ABCA2C920CB188400C46C4C /* Intents.intentdefinition in Sources */,
+				4AA138C52134835A0083B816 /* Intents.intentdefinition in Sources */,
 				4A21D76820C9E6FA0055A2AF /* IntentHandler.swift in Sources */,
 				4A5FA312212EFCD100CC313C /* CheckWeatherIntentHandler.swift in Sources */,
 			);
@@ -1502,7 +1505,7 @@
 			files = (
 				4D49554F1A8C29C30066F278 /* TRCircularProgressLayer.m in Sources */,
 				4D7389DF1A9890CD0039F13B /* UIScrollView+TRReactiveCocoa.m in Sources */,
-				4A628AB42134514000F455F8 /* Intents.intentdefinition in Sources */,
+				4AA138C42134835A0083B816 /* Intents.intentdefinition in Sources */,
 				4DC069CD1A95B8F800F3BCEB /* TRColorBackdropLayer.m in Sources */,
 				A10108F91D3369EB0024B1BA /* NSBundle+TRBundleInfo.m in Sources */,
 				4A8163941CC830A400279952 /* TRSettingsController+TRObservation.m in Sources */,
@@ -1588,6 +1591,17 @@
 				4AA138C321347AB80083B816 /* Base */,
 			);
 			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		4AA138C72134835A0083B816 /* Intents.intentdefinition */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4AA138C62134835A0083B816 /* Base */,
+				4AA138D421348E350083B816 /* it */,
+				4AA138D621348E360083B816 /* sv */,
+				4AA138D821348E360083B816 /* pl-PL */,
+			);
+			name = Intents.intentdefinition;
 			sourceTree = "<group>";
 		};
 		C2E44CE61A3A4273009CC844 /* Localizable.strings */ = {
