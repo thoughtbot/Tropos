@@ -21,6 +21,7 @@ static NSString *const TRForecastAPIExclusions = @"minutely,hourly,alerts,flags"
     self = [super init];
     if (!self) return nil;
 
+    NSParameterAssert(APIKey.length > 0);
     _APIKey = APIKey;
 
     NSURLSessionConfiguration *configuration = [NSURLSessionConfiguration defaultSessionConfiguration];
