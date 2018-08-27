@@ -9,7 +9,6 @@ extension INInteraction {
         return INInteraction(intent: intent, response: nil)
     }
 
-    private static let checkWeatherSuggestedPhrase = NSLocalizedString(
-        "Check the weather",
-        comment: "Siri suggestion phrase to check weather")
+    private static let checkWeatherSuggestedPhrase = NSString
+        .deferredLocalizedIntentsString(with: "CheckWeatherSuggestedPhrase") as String
 }
