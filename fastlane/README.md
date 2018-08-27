@@ -33,6 +33,11 @@ This will also make sure the profile is up to date
 fastlane ios release
 ```
 Deploy a new version to the App Store
+### ios bump_version
+```
+fastlane ios bump_version
+```
+Bump the version, tag and push
 
 ----
 

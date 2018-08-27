@@ -34,6 +34,17 @@ platform :ios do
     gym(scheme: "Tropos")
     deliver(force: true)
   end
+
+  desc "Bump the version, tag and push"
+  lane :bump_version do
+    validate_env!
+    increment_build_number
+    commit_version_bump(xcodeproj: "Tropos.xcodeproj", ignore: %r{^(?!Sources)/})
+    version = get_version_number(target: "Tropos")
+    build = get_build_number
+    add_git_tag(tag: "v#{version}+#{build}")
+    push_to_git_remote
+  end
 end
 
 def validate_env!
