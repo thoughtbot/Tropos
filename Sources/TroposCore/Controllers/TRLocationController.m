@@ -16,6 +16,10 @@
     self = [super init];
     if (!self) return nil;
 
+    if (@available(iOS 10.0, *)) {
+        dispatch_assert_queue(dispatch_get_main_queue());
+    }
+
     self.locationManager = [CLLocationManager new];
     self.locationManager.delegate = self;
     self.locationManager.distanceFilter = kCLDistanceFilterNone;
