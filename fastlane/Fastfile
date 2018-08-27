@@ -36,9 +36,17 @@ platform :ios do
   end
 
   desc "Bump the version, tag and push"
-  lane :bump_version do
+  lane :bump_version do |options|
     validate_env!
-    increment_build_number
+    type = options.fetch(:type, "build")
+
+    case type
+    when "build"
+      increment_build_number
+    else
+      increment_version_number(bump_type: type)
+    end
+
     commit_version_bump(xcodeproj: "Tropos.xcodeproj", ignore: %r{^(?!Sources)/})
     version = get_version_number(target: "Tropos")
     build = get_build_number
