@@ -95,6 +95,7 @@
 		4A95A151212DE48E00E0B33A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A95A150212DE48E00E0B33A /* Foundation.framework */; };
 		4AA138D9213494970083B816 /* TroposCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A552EEF1CC7C8F8008C7298 /* TroposCore.framework */; };
 		4AA138DA213494B20083B816 /* ReactiveObjC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A6BB9C82040C33000835531 /* ReactiveObjC.framework */; };
+		4AA138C021347AAA0083B816 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4AA138C221347AAA0083B816 /* Main.storyboard */; };
 		4AB9C18A1CC8286F006CBC24 /* New York.placemark in Resources */ = {isa = PBXBuildFile; fileRef = 4A552F771CC7D063008C7298 /* New York.placemark */; };
 		4ABCA2C320CAD0B300C46C4C /* TroposCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A552EEF1CC7C8F8008C7298 /* TroposCore.framework */; };
 		4ABCA2C920CB188400C46C4C /* Intents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 4ABCA2BF20CAD06100C46C4C /* Intents.intentdefinition */; settings = {ATTRIBUTES = (codegen, ); }; };
@@ -143,7 +144,6 @@
 		C2E44CFB1A3B76B3009CC844 /* NSNumber+TRRoundedNumber.m in Sources */ = {isa = PBXBuildFile; fileRef = C2E44CFA1A3B76B3009CC844 /* NSNumber+TRRoundedNumber.m */; };
 		CE5D7F3B45F980082E1BCA30 /* LaunchScreen.xib in Sources */ = {isa = PBXBuildFile; fileRef = B6D58F8AA6976EA1B35682B7 /* LaunchScreen.xib */; };
 		CFC0721C2D9EFFD3C3AE11A7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 059D0BDDF8DCE56549A4C9C6 /* Images.xcassets */; };
-		E74CDAD61BB614D700F57C1D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E59B090E67C8BD269D3CD9DB /* Main.storyboard */; };
 		E7A895541AFD11AA0023205B /* TRApplicationController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7A895531AFD11AA0023205B /* TRApplicationController.m */; };
 		E7B3B9271B34EDFE00BDD5A4 /* TRApplicationControllerSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = E7B3B9261B34EDFE00BDD5A4 /* TRApplicationControllerSpec.m */; };
 /* End PBXBuildFile section */
@@ -316,6 +316,7 @@
 		4A86FB64205C0E4D00E761C3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4A95A143212DDFF900E0B33A /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		4A95A150212DE48E00E0B33A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		4AA138C321347AB80083B816 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4ABCA2BF20CAD06100C46C4C /* Intents.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = Intents.intentdefinition; sourceTree = "<group>"; };
 		4ABCA2C420CAD14C00C46C4C /* CheckWeatherIntentHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckWeatherIntentHandler.swift; sourceTree = "<group>"; };
 		4ABCA2CC20CB1F5500C46C4C /* TroposIntents.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TroposIntents.entitlements; sourceTree = "<group>"; };
@@ -398,7 +399,6 @@
 		C2E44CFA1A3B76B3009CC844 /* NSNumber+TRRoundedNumber.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSNumber+TRRoundedNumber.m"; sourceTree = "<group>"; };
 		D281611EA8A7B26EFB4FBBAC /* libPods-Tropos.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Tropos.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4B3B3DB12D62EC9A8EC8411 /* Pods-Tropos-metadata.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; name = "Pods-Tropos-metadata.plist"; path = "Pods/Pods-Tropos-metadata.plist"; sourceTree = "<group>"; };
-		E59B090E67C8BD269D3CD9DB /* Main.storyboard */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		E7A895521AFD11AA0023205B /* TRApplicationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRApplicationController.h; sourceTree = "<group>"; };
 		E7A895531AFD11AA0023205B /* TRApplicationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRApplicationController.m; sourceTree = "<group>"; };
 		E7B3B9261B34EDFE00BDD5A4 /* TRApplicationControllerSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRApplicationControllerSpec.m; sourceTree = "<group>"; };
@@ -845,7 +845,7 @@
 		7786B6CD5802E36505CA8896 /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
-				E59B090E67C8BD269D3CD9DB /* Main.storyboard */,
+				4AA138C221347AAA0083B816 /* Main.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -1144,6 +1144,7 @@
 				it,
 				sv,
 				"pl-PL",
+				Base,
 			);
 			mainGroup = D02B1FEF37316A9F6B8E4B34;
 			productRefGroup = 702F42EA5C215DCFAE2AAC5C /* Products */;
@@ -1172,7 +1173,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E74CDAD61BB614D700F57C1D /* Main.storyboard in Resources */,
+				4AA138C021347AAA0083B816 /* Main.storyboard in Resources */,
 				4D0A5C3D1A3A53DD0084C41E /* CWForecastDetailView.xib in Resources */,
 				CFC0721C2D9EFFD3C3AE11A7 /* Images.xcassets in Resources */,
 				C2E44CE91A3A42C6009CC844 /* InfoPlist.strings in Resources */,
@@ -1579,6 +1580,14 @@
 				4A552F831CC7D123008C7298 /* pl-PL */,
 			);
 			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		4AA138C221347AAA0083B816 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4AA138C321347AB80083B816 /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 		C2E44CE61A3A4273009CC844 /* Localizable.strings */ = {
