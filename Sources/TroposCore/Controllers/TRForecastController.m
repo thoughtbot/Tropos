@@ -32,6 +32,12 @@ static NSString *const TRForecastAPIExclusions = @"minutely,hourly,alerts,flags"
     return self;
 }
 
+- (instancetype)init
+{
+    [self doesNotRecognizeSelector:_cmd];
+    return self;
+}
+
 #pragma mark - API
 
 - (RACSignal *)fetchWeatherUpdateForPlacemark:(CLPlacemark *)placemark
