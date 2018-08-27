@@ -45,6 +45,7 @@ platform :ios do
       increment_build_number
     else
       increment_version_number(bump_type: type)
+      increment_build_number
     end
 
     commit_version_bump(xcodeproj: "Tropos.xcodeproj", ignore: %r{^(?!Sources)/})
