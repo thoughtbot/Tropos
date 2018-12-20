@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0F9A6CB421C9A9D40035C811 /* CLLocation+TRRecentLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F9A6CB121C996EC0035C811 /* CLLocation+TRRecentLocation.swift */; };
 		46660A27B04F4C7B78A7920F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 436D9431497525313B32E225 /* Foundation.framework */; };
 		4A21D76820C9E6FA0055A2AF /* IntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A21D76720C9E6FA0055A2AF /* IntentHandler.swift */; };
 		4A21D76C20C9E6FB0055A2AF /* TroposIntents.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 4A21D76520C9E6FA0055A2AF /* TroposIntents.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -35,7 +36,6 @@
 		4A552F881CC7D20D008C7298 /* NSLocalizedString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A552F871CC7D20D008C7298 /* NSLocalizedString.swift */; };
 		4A5FA2FC212DF6AA00CC313C /* TRLocationController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2E44CDC1A3A38A2009CC844 /* TRLocationController.m */; };
 		4A5FA2FD212DF6CC00CC313C /* TRLocationController.h in Headers */ = {isa = PBXBuildFile; fileRef = C2E44CDB1A3A38A2009CC844 /* TRLocationController.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		4A5FA2FE212DF76C00CC313C /* CLLocation+TRRecentLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D7CDEBB1A46D3610038DD33 /* CLLocation+TRRecentLocation.m */; };
 		4A5FA2FF212DFA7300CC313C /* TRErrors.h in Headers */ = {isa = PBXBuildFile; fileRef = C2E44CEC1A3A4F56009CC844 /* TRErrors.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4A5FA300212DFAB200CC313C /* NSDate+TRRelativeDate.m in Sources */ = {isa = PBXBuildFile; fileRef = C2E44CEE1A3B6E89009CC844 /* NSDate+TRRelativeDate.m */; };
 		4A5FA301212DFACA00CC313C /* TRForecastController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D0A5C371A3A27510084C41E /* TRForecastController.m */; };
@@ -235,6 +235,7 @@
 /* Begin PBXFileReference section */
 		059D0BDDF8DCE56549A4C9C6 /* Images.xcassets */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		0B30A1610CAE1C2E302C28B0 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0F9A6CB121C996EC0035C811 /* CLLocation+TRRecentLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CLLocation+TRRecentLocation.swift"; sourceTree = "<group>"; };
 		1646534197E2CBA85836CD1F /* Pods-TroposTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TroposTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TroposTests/Pods-TroposTests.release.xcconfig"; sourceTree = "<group>"; };
 		1CDD2312F1EF05277F045E15 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2014A1EA2643FF36A4C94B5F /* Pods-Tropos.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tropos.release.xcconfig"; path = "Pods/Target Support Files/Pods-Tropos/Pods-Tropos.release.xcconfig"; sourceTree = "<group>"; };
@@ -346,8 +347,6 @@
 		4D7389DE1A9890CD0039F13B /* UIScrollView+TRReactiveCocoa.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+TRReactiveCocoa.m"; sourceTree = "<group>"; };
 		4D76CCD21A99C3FA00DDE5EB /* TRRefreshLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRRefreshLayer.h; sourceTree = "<group>"; };
 		4D76CCD31A99C3FA00DDE5EB /* TRRefreshLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRRefreshLayer.m; sourceTree = "<group>"; };
-		4D7CDEBA1A46D3610038DD33 /* CLLocation+TRRecentLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CLLocation+TRRecentLocation.h"; sourceTree = "<group>"; };
-		4D7CDEBB1A46D3610038DD33 /* CLLocation+TRRecentLocation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CLLocation+TRRecentLocation.m"; sourceTree = "<group>"; };
 		4D7CDEBD1A46DD030038DD33 /* NSError+TRErrors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSError+TRErrors.h"; sourceTree = "<group>"; };
 		4D7CDEBE1A46DD030038DD33 /* NSError+TRErrors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSError+TRErrors.m"; sourceTree = "<group>"; };
 		4D98E9831A80C43F00856412 /* TRDailyForecastView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRDailyForecastView.h; sourceTree = "<group>"; };
@@ -687,8 +686,6 @@
 		4A552F841CC7D196008C7298 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				4D7CDEBA1A46D3610038DD33 /* CLLocation+TRRecentLocation.h */,
-				4D7CDEBB1A46D3610038DD33 /* CLLocation+TRRecentLocation.m */,
 				4A5FA305212DFF6E00CC313C /* ForecastController+Bridging.swift */,
 				4A5FA303212DFD1600CC313C /* LocationController+Bridging.swift */,
 				4A69875C1CC817D9002D3F87 /* NSAttributedString.swift */,
@@ -699,6 +696,7 @@
 				4A552F871CC7D20D008C7298 /* NSLocalizedString.swift */,
 				4A69875B1CC817D9002D3F87 /* UIColor.swift */,
 				4A69875A1CC817D9002D3F87 /* UIFont.swift */,
+				0F9A6CB121C996EC0035C811 /* CLLocation+TRRecentLocation.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -1446,10 +1444,10 @@
 				4A552F5E1CC7CCFA008C7298 /* DailyForecast.swift in Sources */,
 				4A552F641CC7CCFA008C7298 /* WeatherUpdateCache.swift in Sources */,
 				4A6987591CC81698002D3F87 /* WeatherViewModel.swift in Sources */,
+				0F9A6CB421C9A9D40035C811 /* CLLocation+TRRecentLocation.swift in Sources */,
 				4A6987411CC80471002D3F87 /* TroposCore.m in Sources */,
 				4A5FA306212DFF6E00CC313C /* ForecastController+Bridging.swift in Sources */,
 				4A69875E1CC817D9002D3F87 /* UIColor.swift in Sources */,
-				4A5FA2FE212DF76C00CC313C /* CLLocation+TRRecentLocation.m in Sources */,
 				4A69875F1CC817D9002D3F87 /* NSAttributedString.swift in Sources */,
 				4A6987511CC815BF002D3F87 /* TemperatureFormatter.swift in Sources */,
 				4A552F601CC7CCFA008C7298 /* PrecipitationChance.swift in Sources */,

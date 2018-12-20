@@ -1,4 +1,4 @@
-#import "CLLocation+TRRecentLocation.h"
+#import <TroposCore/TroposCore-Swift.h>
 #import "TRLocationController.h"
 
 @interface TRLocationController () <CLLocationManagerDelegate>
