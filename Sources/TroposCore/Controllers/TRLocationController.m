@@ -1,4 +1,4 @@
-#import "CLLocation+TRRecentLocation.h"
+#import <TroposCore/TroposCore-Swift.h>
 #import "TRLocationController.h"
 
 @interface TRLocationController () <CLLocationManagerDelegate>
@@ -45,7 +45,7 @@
     RACSignal *currentLocationUpdated = [[[self didUpdateLocations] map:^id(NSArray *locations) {
         return locations.lastObject;
     }] filter:^BOOL(CLLocation *location) {
-        return !location.isStale;
+        return !location.tr_isStale;
     }];
 
     RACSignal *locationUpdateFailed = [[[self didFailWithError] map:^id(NSError *error) {
