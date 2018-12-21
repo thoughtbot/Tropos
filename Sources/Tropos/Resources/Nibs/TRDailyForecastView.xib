@@ -1,15 +1,17 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6751" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
-        <mutableArray key="DINNextLTPro-Light.otf">
+        <array key="DINNextLTPro-Light.otf">
             <string>DINNextLTPro-Light</string>
-            <string>DINNextLTPro-Light</string>
-            <string>DINNextLTPro-Light</string>
-        </mutableArray>
+        </array>
     </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TRDailyForecastView">
@@ -27,35 +29,35 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="t05-X5-mRj">
-                    <rect key="frame" x="8" y="22" width="234" height="156"/>
+                    <rect key="frame" x="8" y="16.5" width="234" height="167.5"/>
                     <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sun" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ymp-Eh-Wn8" customClass="TRLabel">
-                            <rect key="frame" x="0.0" y="0.0" width="234" height="20"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sun" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ymp-Eh-Wn8" customClass="FadingLabel" customModule="Tropos" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="0.0" width="234" height="23.5"/>
                             <fontDescription key="fontDescription" name="DINNextLTPro-Light" family="DIN Next LT Pro" pointSize="20"/>
-                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ebP-tb-Ze0" customClass="TRImageView">
-                            <rect key="frame" x="96" y="44" width="42" height="42"/>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ebP-tb-Ze0" customClass="FadingImageView" customModule="Tropos" customModuleProvider="target">
+                            <rect key="frame" x="96" y="47.5" width="42" height="42"/>
                             <constraints>
                                 <constraint firstAttribute="width" secondItem="ebP-tb-Ze0" secondAttribute="height" multiplier="1:1" id="3y7-U4-2TD"/>
                                 <constraint firstAttribute="width" constant="42" id="BHF-Ao-qw1"/>
                             </constraints>
                         </imageView>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="64°" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sPp-Kx-zdL" customClass="TRLabel">
-                            <rect key="frame" x="0.0" y="110" width="234" height="24"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="64°" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sPp-Kx-zdL" customClass="FadingLabel" customModule="Tropos" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="113.5" width="234" height="28"/>
                             <fontDescription key="fontDescription" name="DINNextLTPro-Light" family="DIN Next LT Pro" pointSize="24"/>
-                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="58°" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ThQ-lO-XcB" customClass="TRLabel">
-                            <rect key="frame" x="0.0" y="132" width="234" height="24"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="58°" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ThQ-lO-XcB" customClass="FadingLabel" customModule="Tropos" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="139.5" width="234" height="28"/>
                             <fontDescription key="fontDescription" name="DINNextLTPro-Light" family="DIN Next LT Pro" pointSize="24"/>
-                            <color key="textColor" red="0.36862745098039218" green="0.35686274509803922" blue="0.32941176470588235" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="textColor" red="0.36862745098039218" green="0.35686274509803922" blue="0.32941176470588235" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
                     </subviews>
-                    <color key="backgroundColor" red="0.12549019607843137" green="0.12549019607843137" blue="0.16078431372549018" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="backgroundColor" red="0.12549019607843137" green="0.12549019607843137" blue="0.16078431372549018" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstItem="ebP-tb-Ze0" firstAttribute="top" secondItem="Ymp-Eh-Wn8" secondAttribute="bottom" constant="24" id="1LR-Ll-uSm"/>
                         <constraint firstAttribute="trailing" secondItem="sPp-Kx-zdL" secondAttribute="trailing" id="CaB-4m-m6o"/>
@@ -72,7 +74,7 @@
                     </constraints>
                 </view>
             </subviews>
-            <color key="backgroundColor" red="0.12549019607843137" green="0.12549019607843137" blue="0.16078431372549018" alpha="1" colorSpace="calibratedRGB"/>
+            <color key="backgroundColor" red="0.12549019607843137" green="0.12549019607843137" blue="0.16078431372549018" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstAttribute="centerY" secondItem="t05-X5-mRj" secondAttribute="centerY" id="1JC-Xl-Y2f"/>
                 <constraint firstAttribute="trailing" secondItem="t05-X5-mRj" secondAttribute="trailing" constant="8" id="cKz-uk-r9s"/>

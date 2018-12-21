@@ -1,13 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="FiB-B0-bK5">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="FiB-B0-bK5">
     <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
-        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -46,7 +44,7 @@
                             <tableViewSection headerTitle="Unit System" id="kVx-dF-Vjg">
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="z4x-in-xqM" style="IBUITableViewCellStyleDefault" id="vhg-1S-7Vq" customClass="TRTableViewCell" customModule="Tropos" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="55.333333333333336" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="55.333333333333343" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="vhg-1S-7Vq" id="wPK-ox-JNH">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.666666666666664"/>
@@ -109,7 +107,7 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="bPq-Pp-YNA" style="IBUITableViewCellStyleDefault" id="coj-3Q-1ZV" customClass="TRTableViewCell" customModule="Tropos" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="235.33333333333334" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="235.33333333333337" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="coj-3Q-1ZV" id="zq4-Dp-sXj">
                                             <rect key="frame" x="0.0" y="0.0" width="341" height="43.666666666666664"/>
@@ -159,7 +157,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hat-b3-Z3z">
-                                                    <rect key="frame" x="87.000000000000014" y="17" width="179.33333333333337" height="65"/>
+                                                    <rect key="frame" x="87.000000000000014" y="17.333333333333329" width="179.33333333333337" height="65"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Handcrafted with love by" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SLJ-Pj-eOI">
                                                             <rect key="frame" x="0.0" y="0.0" width="179.33333333333334" height="17"/>
@@ -168,7 +166,7 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="thoughtbot-logo-full" translatesAutoresizingMaskIntoConstraints="NO" id="wl8-Vy-9eF">
-                                                            <rect key="frame" x="7.6666666666666714" y="25" width="164" height="40"/>
+                                                            <rect key="frame" x="8" y="25" width="163" height="40"/>
                                                             <color key="tintColor" red="0.78039216995239258" green="0.78039216995239258" blue="0.80000001192092896" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" secondItem="wl8-Vy-9eF" secondAttribute="height" multiplier="1:1" id="Cx9-mq-op9"/>
@@ -389,16 +387,16 @@
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="690"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RbN-Zl-kZA" userLabel="Forecast Container View">
-                                                <rect key="frame" x="48" y="248.33333333333331" width="307" height="194.33333333333331"/>
+                                                <rect key="frame" x="48" y="240" width="307" height="210"/>
                                                 <subviews>
-                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8PG-bg-g8T" userLabel="Conditions Icon" customClass="TRImageView">
-                                                        <rect key="frame" x="0.0" y="0.0" width="56" height="56.333333333333336"/>
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8PG-bg-g8T" userLabel="Conditions Icon" customClass="FadingImageView" customModule="Tropos" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="55.666666666666664" height="56"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" secondItem="8PG-bg-g8T" secondAttribute="height" multiplier="1:1" id="ryr-dV-kKq"/>
                                                         </constraints>
                                                     </imageView>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="It's warmer today than yesterday at this time." lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qR0-2t-XFf" userLabel="Conditions Description" customClass="TRLabel">
-                                                        <rect key="frame" x="0.0" y="98.333333333333371" width="297" height="96"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="It's warmer today than yesterday at this time." lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qR0-2t-XFf" userLabel="Conditions Description" customClass="FadingLabel" customModule="Tropos" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="98" width="297" height="112"/>
                                                         <fontDescription key="fontDescription" name="DINNextLTPro-Light" family="DIN Next LT Pro" pointSize="32"/>
                                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
@@ -414,7 +412,7 @@
                                                     <constraint firstAttribute="trailing" secondItem="qR0-2t-XFf" secondAttribute="trailing" constant="10" id="yvO-2r-2qJ"/>
                                                 </constraints>
                                             </view>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="51° / 38°" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4jy-gb-8E8" userLabel="High and Low Temp Label" customClass="TRLabel">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="51° / 38°" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4jy-gb-8E8" userLabel="High and Low Temp Label" customClass="FadingLabel" customModule="Tropos" customModuleProvider="target">
                                                 <rect key="frame" x="48" y="627" width="307" height="30"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="KOI-aA-9pL"/>
@@ -423,7 +421,7 @@
                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wind-icon-small" translatesAutoresizingMaskIntoConstraints="NO" id="wWW-Vm-RFc" userLabel="Wind Icon" customClass="TRImageView">
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wind-icon-small" translatesAutoresizingMaskIntoConstraints="NO" id="wWW-Vm-RFc" userLabel="Wind Icon" customClass="FadingImageView" customModule="Tropos" customModuleProvider="target">
                                                 <rect key="frame" x="20" y="601" width="16" height="16"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="wWW-Vm-RFc" secondAttribute="height" multiplier="1:1" id="Iq3-bj-jFA"/>
@@ -436,13 +434,13 @@
                                                     </mask>
                                                 </variation>
                                             </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="8.0 mph SWE" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k75-Ag-qid" userLabel="Wind Label" customClass="TRLabel">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="8.0 mph SWE" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k75-Ag-qid" userLabel="Wind Label" customClass="FadingLabel" customModule="Tropos" customModuleProvider="target">
                                                 <rect key="frame" x="48" y="595" width="307" height="30"/>
                                                 <fontDescription key="fontDescription" name="DINNextLTPro-Light" family="DIN Next LT Pro" pointSize="20"/>
                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="temp" translatesAutoresizingMaskIntoConstraints="NO" id="4xC-2K-Kt6" userLabel="Temperature Icon" customClass="TRImageView">
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="temp" translatesAutoresizingMaskIntoConstraints="NO" id="4xC-2K-Kt6" userLabel="Temperature Icon" customClass="FadingImageView" customModule="Tropos" customModuleProvider="target">
                                                 <rect key="frame" x="20" y="633" width="16" height="16"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="16" id="7yi-xD-OKw"/>
@@ -527,14 +525,14 @@
                                             <rect key="frame" x="87.666666666666686" y="7" width="200" height="30"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Updated 19 seconds ago" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fWc-Li-a6R" customClass="TRLabel">
-                                                    <rect key="frame" x="0.0" y="17" width="200" height="13"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Updated 19 seconds ago" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fWc-Li-a6R" customClass="FadingLabel" customModule="Tropos" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="14.666666666666664" width="200" height="15.333333333333336"/>
                                                     <fontDescription key="fontDescription" name="DINNextLTPro-Light" family="DIN Next LT Pro" pointSize="13"/>
                                                     <color key="textColor" red="0.63137254899999995" green="0.65490196079999996" blue="0.69411764710000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalCompressionResistancePriority="749" text="SAN FRANCISCO, CA" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kJg-0l-P4Y" customClass="TRLabel">
-                                                    <rect key="frame" x="0.0" y="0.0" width="200" height="17"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalCompressionResistancePriority="749" text="SAN FRANCISCO, CA" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kJg-0l-P4Y" customClass="FadingLabel" customModule="Tropos" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="0.0" width="200" height="14.666666666666666"/>
                                                     <fontDescription key="fontDescription" name="DINNextLTPro-Light" family="DIN Next LT Pro" pointSize="17"/>
                                                     <color key="textColor" red="0.63137254899999995" green="0.65490196079999996" blue="0.69411764710000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
