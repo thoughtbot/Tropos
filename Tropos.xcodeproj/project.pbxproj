@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0F9A6CB421C9A9D40035C811 /* CLLocation+TRRecentLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F9A6CB121C996EC0035C811 /* CLLocation+TRRecentLocation.swift */; };
+		0F9A6CBA21CBF4C30035C811 /* LocationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F9A6CB921CBF4C30035C811 /* LocationController.swift */; };
 		46660A27B04F4C7B78A7920F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 436D9431497525313B32E225 /* Foundation.framework */; };
 		4A21D76820C9E6FA0055A2AF /* IntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A21D76720C9E6FA0055A2AF /* IntentHandler.swift */; };
 		4A21D76C20C9E6FB0055A2AF /* TroposIntents.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 4A21D76520C9E6FA0055A2AF /* TroposIntents.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -34,13 +35,10 @@
 		4A552F7A1CC7D06F008C7298 /* TestPlacemark.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A552F791CC7D06F008C7298 /* TestPlacemark.swift */; };
 		4A552F861CC7D1A4008C7298 /* NSBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A552F851CC7D1A4008C7298 /* NSBundle.swift */; };
 		4A552F881CC7D20D008C7298 /* NSLocalizedString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A552F871CC7D20D008C7298 /* NSLocalizedString.swift */; };
-		4A5FA2FC212DF6AA00CC313C /* TRLocationController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2E44CDC1A3A38A2009CC844 /* TRLocationController.m */; };
-		4A5FA2FD212DF6CC00CC313C /* TRLocationController.h in Headers */ = {isa = PBXBuildFile; fileRef = C2E44CDB1A3A38A2009CC844 /* TRLocationController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4A5FA2FF212DFA7300CC313C /* TRErrors.h in Headers */ = {isa = PBXBuildFile; fileRef = C2E44CEC1A3A4F56009CC844 /* TRErrors.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4A5FA300212DFAB200CC313C /* NSDate+TRRelativeDate.m in Sources */ = {isa = PBXBuildFile; fileRef = C2E44CEE1A3B6E89009CC844 /* NSDate+TRRelativeDate.m */; };
 		4A5FA301212DFACA00CC313C /* TRForecastController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D0A5C371A3A27510084C41E /* TRForecastController.m */; };
 		4A5FA302212DFAD700CC313C /* TRForecastController.h in Headers */ = {isa = PBXBuildFile; fileRef = 4D0A5C361A3A27510084C41E /* TRForecastController.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		4A5FA304212DFD1600CC313C /* LocationController+Bridging.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A5FA303212DFD1600CC313C /* LocationController+Bridging.swift */; };
 		4A5FA306212DFF6E00CC313C /* ForecastController+Bridging.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A5FA305212DFF6E00CC313C /* ForecastController+Bridging.swift */; };
 		4A5FA30E212EFC6A00CC313C /* ReactiveObjC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A6BB9C82040C33000835531 /* ReactiveObjC.framework */; };
 		4A5FA30F212EFC6A00CC313C /* ReactiveObjCBridge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A6BB9C92040C33000835531 /* ReactiveObjCBridge.framework */; };
@@ -236,6 +234,7 @@
 		059D0BDDF8DCE56549A4C9C6 /* Images.xcassets */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		0B30A1610CAE1C2E302C28B0 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0F9A6CB121C996EC0035C811 /* CLLocation+TRRecentLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CLLocation+TRRecentLocation.swift"; sourceTree = "<group>"; };
+		0F9A6CB921CBF4C30035C811 /* LocationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationController.swift; sourceTree = "<group>"; };
 		1646534197E2CBA85836CD1F /* Pods-TroposTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TroposTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TroposTests/Pods-TroposTests.release.xcconfig"; sourceTree = "<group>"; };
 		1CDD2312F1EF05277F045E15 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2014A1EA2643FF36A4C94B5F /* Pods-Tropos.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tropos.release.xcconfig"; path = "Pods/Target Support Files/Pods-Tropos/Pods-Tropos.release.xcconfig"; sourceTree = "<group>"; };
@@ -280,7 +279,6 @@
 		4A552F831CC7D123008C7298 /* pl-PL */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pl-PL"; path = "pl-PL.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		4A552F851CC7D1A4008C7298 /* NSBundle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSBundle.swift; sourceTree = "<group>"; };
 		4A552F871CC7D20D008C7298 /* NSLocalizedString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSLocalizedString.swift; sourceTree = "<group>"; };
-		4A5FA303212DFD1600CC313C /* LocationController+Bridging.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LocationController+Bridging.swift"; sourceTree = "<group>"; };
 		4A5FA305212DFF6E00CC313C /* ForecastController+Bridging.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ForecastController+Bridging.swift"; sourceTree = "<group>"; };
 		4A5FA309212E052C00CC313C /* TroposIntents-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TroposIntents-Bridging-Header.h"; sourceTree = "<group>"; };
 		4A69873E1CC80414002D3F87 /* SettingsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsController.swift; sourceTree = "<group>"; };
@@ -385,8 +383,6 @@
 		B1E75D281B6E8ADC007B03F9 /* sv */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = sv; path = sv.lproj/Localizable.strings; sourceTree = "<group>"; };
 		B6D58F8AA6976EA1B35682B7 /* LaunchScreen.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
 		BE299336DA1BFBE36CB7763B /* TroposTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TroposTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		C2E44CDB1A3A38A2009CC844 /* TRLocationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRLocationController.h; sourceTree = "<group>"; };
-		C2E44CDC1A3A38A2009CC844 /* TRLocationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRLocationController.m; sourceTree = "<group>"; };
 		C2E44CDF1A3A3C09009CC844 /* TRWeatherViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRWeatherViewController.h; sourceTree = "<group>"; };
 		C2E44CE01A3A3C09009CC844 /* TRWeatherViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRWeatherViewController.m; sourceTree = "<group>"; };
 		C2E44CE51A3A4273009CC844 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -687,7 +683,6 @@
 			isa = PBXGroup;
 			children = (
 				4A5FA305212DFF6E00CC313C /* ForecastController+Bridging.swift */,
-				4A5FA303212DFD1600CC313C /* LocationController+Bridging.swift */,
 				4A69875C1CC817D9002D3F87 /* NSAttributedString.swift */,
 				4A552F851CC7D1A4008C7298 /* NSBundle.swift */,
 				C2E44CED1A3B6E89009CC844 /* NSDate+TRRelativeDate.h */,
@@ -716,8 +711,7 @@
 				4A69873E1CC80414002D3F87 /* SettingsController.swift */,
 				4D0A5C361A3A27510084C41E /* TRForecastController.h */,
 				4D0A5C371A3A27510084C41E /* TRForecastController.m */,
-				C2E44CDB1A3A38A2009CC844 /* TRLocationController.h */,
-				C2E44CDC1A3A38A2009CC844 /* TRLocationController.m */,
+				0F9A6CB921CBF4C30035C811 /* LocationController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -960,7 +954,6 @@
 			files = (
 				4A552F4D1CC7CBB2008C7298 /* TroposCore.h in Headers */,
 				4A5FA302212DFAD700CC313C /* TRForecastController.h in Headers */,
-				4A5FA2FD212DF6CC00CC313C /* TRLocationController.h in Headers */,
 				4A5FA2FF212DFA7300CC313C /* TRErrors.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1434,8 +1427,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0F9A6CBA21CBF4C30035C811 /* LocationController.swift in Sources */,
 				4A6987521CC815BF002D3F87 /* WindSpeedFormatter.swift in Sources */,
-				4A5FA304212DFD1600CC313C /* LocationController+Bridging.swift in Sources */,
 				4A95A142212DDFA600E0B33A /* Geocoder.swift in Sources */,
 				4A6987431CC804FE002D3F87 /* UnitSystem.swift in Sources */,
 				4A552F621CC7CCFA008C7298 /* TimeOfDay.swift in Sources */,
@@ -1461,7 +1454,6 @@
 				4A6987581CC81698002D3F87 /* DailyForecastViewModel.swift in Sources */,
 				4A95A13D212DDEEF00E0B33A /* GeocodeController.swift in Sources */,
 				4A6987501CC815BF002D3F87 /* TemperatureComparisonFormatter.swift in Sources */,
-				4A5FA2FC212DF6AA00CC313C /* TRLocationController.m in Sources */,
 				4A69875D1CC817D9002D3F87 /* UIFont.swift in Sources */,
 				4A552F611CC7CCFA008C7298 /* Temperature.swift in Sources */,
 				4A552F5F1CC7CCFA008C7298 /* Precipitation.swift in Sources */,

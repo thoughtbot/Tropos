@@ -8,4 +8,3 @@ FOUNDATION_EXPORT NSString *const TRSettingsLastVersionKey;
 
 #import <TroposCore/TRErrors.h>
 #import <TroposCore/TRForecastController.h>
-#import <TroposCore/TRLocationController.h>
