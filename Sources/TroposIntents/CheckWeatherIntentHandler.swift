@@ -17,8 +17,8 @@ public final class CheckWeatherIntentHandler: NSObject, CheckWeatherIntentHandli
         let geocode = GeocodeController()
         let location = LocationController()
 
-        let weatherUpdate = location.requestAlwaysAuthorization()
-            .flatMap(.latest) { _ in location.updateCurrentLocation() }
+        let weatherUpdate = location.requestAuthorization()
+            .flatMap(.latest) { _ in location.requestLocation() }
             .flatMap(.latest) { location in geocode.reverseGeocode(location) }
             .mapError(AnyError.init)
             .flatMap(.latest) { placemark in forecast.fetchWeatherUpdate(for: placemark) }
