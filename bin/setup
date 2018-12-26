@@ -4,8 +4,7 @@ set -e
 
 bundle install
 bundle exec pod install
-brew install carthage 2> /dev/null
-brew install swiftlint 2> /dev/null
+brew bundle
 carthage bootstrap --platform iOS --cache-builds
 
 tropos_secrets="Config/Secrets.h"
