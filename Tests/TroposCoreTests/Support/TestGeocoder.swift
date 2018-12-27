@@ -37,8 +37,8 @@ final class TestGeocoder: Geocoder {
             }
 
             switch self.result {
-            case let .success(country):
-                let placemark = MKPlacemark(coordinate: location.coordinate, addressDictionary: ["Name": country])
+            case let .success(name):
+                let placemark = MKPlacemark(coordinate: location.coordinate, addressDictionary: ["Name": name])
                 completionHandler([placemark], nil)
             case let .failure(error):
                 completionHandler(nil, error)

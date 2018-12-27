@@ -80,6 +80,10 @@
 		4A92135C21D568CB00F524AA /* Result.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 4A6BB9CA2040C33000835531 /* Result.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		4A92135D21D568D700F524AA /* ReactiveObjCBridge.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 4A6BB9C92040C33000835531 /* ReactiveObjCBridge.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		4A92135E21D568D900F524AA /* ReactiveObjC.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 4A6BB9C82040C33000835531 /* ReactiveObjC.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		4A92136021D5693C00F524AA /* ForecastControllerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A92135F21D5693C00F524AA /* ForecastControllerSpec.swift */; };
+		4A92136421D56FFC00F524AA /* TestError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A92136321D56FFC00F524AA /* TestError.swift */; };
+		4A92136621D5797E00F524AA /* StubCondition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A92136521D5797E00F524AA /* StubCondition.swift */; };
+		4A92136821D579BF00F524AA /* OHHTTPStubs+Matchers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A92136721D579BF00F524AA /* OHHTTPStubs+Matchers.swift */; };
 		4A95A13D212DDEEF00E0B33A /* GeocodeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A23F4F72041019000FDDC5E /* GeocodeController.swift */; };
 		4A95A140212DDF5100E0B33A /* ReactiveSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A6BB9C72040C32F00835531 /* ReactiveSwift.framework */; };
 		4A95A142212DDFA600E0B33A /* Geocoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A23F4F92041127A00FDDC5E /* Geocoder.swift */; };
@@ -315,6 +319,10 @@
 		4A86FB64205C0E4D00E761C3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4A92135321D5680200F524AA /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		4A92135421D5683200F524AA /* OHHTTPStubs.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OHHTTPStubs.framework; path = Carthage/Build/iOS/OHHTTPStubs.framework; sourceTree = "<group>"; };
+		4A92135F21D5693C00F524AA /* ForecastControllerSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForecastControllerSpec.swift; sourceTree = "<group>"; };
+		4A92136321D56FFC00F524AA /* TestError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestError.swift; sourceTree = "<group>"; };
+		4A92136521D5797E00F524AA /* StubCondition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StubCondition.swift; sourceTree = "<group>"; };
+		4A92136721D579BF00F524AA /* OHHTTPStubs+Matchers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "OHHTTPStubs+Matchers.swift"; sourceTree = "<group>"; };
 		4A95A150212DE48E00E0B33A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		4AA138C321347AB80083B816 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4AA138C62134835A0083B816 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; name = Base; path = Base.lproj/Intents.intentdefinition; sourceTree = "<group>"; };
@@ -647,7 +655,10 @@
 			isa = PBXGroup;
 			children = (
 				4A4B75EA2040D10800CE8E05 /* CoreLocation.swift */,
+				4A92136721D579BF00F524AA /* OHHTTPStubs+Matchers.swift */,
 				4A7A123A1CC8223F00363A5C /* NSDate+ISO8601.swift */,
+				4A92136521D5797E00F524AA /* StubCondition.swift */,
+				4A92136321D56FFC00F524AA /* TestError.swift */,
 				4A4B75E82040D0D600CE8E05 /* TestGeocoder.swift */,
 				4A552F791CC7D06F008C7298 /* TestPlacemark.swift */,
 				4A6BB9C42040A37C00835531 /* UserDefaults+Random.swift */,
@@ -712,6 +723,7 @@
 		4A6987451CC80CBD002D3F87 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				4A92135F21D5693C00F524AA /* ForecastControllerSpec.swift */,
 				4AEF9E872040C47400CDDEEA /* GeocodeControllerSpec.swift */,
 				4A6987461CC80CBD002D3F87 /* SettingsControllerSpec.swift */,
 			);
@@ -1454,17 +1466,21 @@
 				4A7A12361CC8219600363A5C /* TemperatureFormatterSpec.swift in Sources */,
 				4A7A123B1CC8223F00363A5C /* NSDate+ISO8601.swift in Sources */,
 				4A6BB9C62040A38D00835531 /* UserDefaults+Random.swift in Sources */,
+				4A92136621D5797E00F524AA /* StubCondition.swift in Sources */,
 				4A95A148212DE21000E0B33A /* GeocodeControllerSpec.swift in Sources */,
+				4A92136821D579BF00F524AA /* OHHTTPStubs+Matchers.swift in Sources */,
 				4A6987471CC80CBD002D3F87 /* SettingsControllerSpec.swift in Sources */,
 				4A552F7A1CC7D06F008C7298 /* TestPlacemark.swift in Sources */,
 				4A552F711CC7CD60008C7298 /* PrecipitationSpec.swift in Sources */,
 				4A95A149212DE23800E0B33A /* TestGeocoder.swift in Sources */,
 				4A7A12391CC821DA00363A5C /* DailyForecastViewModelSpec.swift in Sources */,
 				4A7A12351CC8219600363A5C /* TemperatureComparisonFormatterSpec.swift in Sources */,
+				4A92136421D56FFC00F524AA /* TestError.swift in Sources */,
 				4A6987621CC818B4002D3F87 /* TRTemperatureColorsSpec.swift in Sources */,
 				4A552F741CC7CD60008C7298 /* WeatherUpdateSpec.swift in Sources */,
 				4A552F701CC7CD60008C7298 /* CardinalDirectionSpec.swift in Sources */,
 				4A95A14A212DE28D00E0B33A /* CoreLocation.swift in Sources */,
+				4A92136021D5693C00F524AA /* ForecastControllerSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
