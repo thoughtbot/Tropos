@@ -53,7 +53,7 @@ import Result
     }
 
     public func requestAuthorization() -> SignalProducer<Bool, NoError> {
-        return SignalProducer { [authorizationStatus, locationManager] observer, _ in
+        return SignalProducer { [authorizationStatus, locationManager] observer, lifetime in
             let isAuthorized = authorizationStatus.producer.filterMap { status -> Bool? in
                 switch status {
                 case .authorizedAlways, .authorizedWhenInUse:
@@ -61,16 +61,12 @@ import Result
                 case .restricted, .denied:
                     return false
                 case .notDetermined:
+                    locationManager.requestAlwaysAuthorization()
                     return nil
                 }
             }.take(first: 1)
 
-            isAuthorized.start(observer)
-
-            if authorizationStatus.value == .notDetermined {
-                locationManager.requestAlwaysAuthorization()
-            }
-
+            lifetime += isAuthorized.start(observer)
         }
     }
 
