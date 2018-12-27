@@ -16,6 +16,7 @@ final class AppDelegate: UIResponder, UIApplicationDelegate {
             return true
         }
 
+        assertValidSecrets()
         setupHockey()
         SettingsController().registerSettings()
         AppearanceController.configureAppearance()
@@ -56,6 +57,12 @@ private func weatherUpdateFailed(with error: Error!) {
 private extension AppDelegate {
     var isCurrentlyTesting: Bool {
         return UserDefaults.standard.bool(forKey: "TRTesting")
+    }
+
+    func assertValidSecrets() {
+        assert(!TRForecastAPIKey.isEmpty, "Forecast API key not set")
+        assert(!TRHockeyIdentifier.isEmpty, "Hockey identifier not set")
+        assert(!TRMixpanelToken.isEmpty, "Mixpanel token not set")
     }
 
     func setupHockey() {
