@@ -53,7 +53,7 @@ import Result
     }
 
     public func requestAuthorization() -> SignalProducer<Bool, NoError> {
-        return SignalProducer {[locationManager, authorizationStatus] observer, _ in
+        return SignalProducer { [authorizationStatus, locationManager] observer, _ in
             let isAuthorized = authorizationStatus.producer.filterMap { status -> Bool? in
                 switch status {
                 case .authorizedAlways, .authorizedWhenInUse:
