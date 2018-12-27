@@ -51,7 +51,7 @@
                     if (error != nil) {
                         os_log_error(OS_LOG_DEFAULT, "Failed to donate interaction: %{public}@", error);
                     } else {
-                        os_log(OS_LOG_DEFAULT, "Successfully donated check weather interaction!");
+                        os_log_info(OS_LOG_DEFAULT, "Successfully donated check weather interaction.");
                     }
                 }];
             }
