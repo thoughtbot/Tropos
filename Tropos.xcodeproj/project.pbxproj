@@ -1124,6 +1124,7 @@
 					AA349281EBCAE02432E93D8E = {
 						DevelopmentTeam = 8E7TQ638ZD;
 						LastSwiftMigration = 0920;
+						TestTargetID = 45ADD324EABFD89F9E640007;
 					};
 				};
 			};
@@ -2028,7 +2029,7 @@
 			baseConfigurationReference = 244290A030AFC3C803EEAEEF /* Pods-TroposTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Tropos.app/Tropos";
+				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -2049,7 +2050,7 @@
 				SWIFT_OBJC_BRIDGING_HEADER = "Tests/TroposTests/Support/TroposTests-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
-				TEST_HOST = "$(BUNDLE_LOADER)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Tropos.app/Tropos";
 				WRAPPER_EXTENSION = xctest;
 			};
 			name = Debug;
@@ -2059,7 +2060,7 @@
 			baseConfigurationReference = 1646534197E2CBA85836CD1F /* Pods-TroposTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Tropos.app/Tropos";
+				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -2074,7 +2075,7 @@
 				SKIP_INSTALL = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "Tests/TroposTests/Support/TroposTests-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
-				TEST_HOST = "$(BUNDLE_LOADER)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Tropos.app/Tropos";
 				WRAPPER_EXTENSION = xctest;
 			};
 			name = Release;

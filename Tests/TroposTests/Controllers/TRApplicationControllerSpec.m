@@ -19,13 +19,6 @@
 
 @end
 
-void inTimeZone(NSTimeZone *timeZone, void (^callback)(void)) {
-    NSTimeZone *defaultTimeZone = [NSTimeZone defaultTimeZone];
-    [NSTimeZone setDefaultTimeZone:timeZone];
-    callback();
-    [NSTimeZone setDefaultTimeZone:defaultTimeZone];
-}
-
 QuickSpecBegin(TRApplicationControllerSpec)
 
 TRLocationController* (^locationControllerWithAuthorizationStatusAuthorizedAlwaysEqualTo) (BOOL) = ^TRLocationController* (BOOL enabled){
