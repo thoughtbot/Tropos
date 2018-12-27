@@ -8,6 +8,5 @@ target 'Tropos' do
   target 'TroposTests' do
     inherit! :search_paths
     pod 'OCMock'
-    pod 'OHHTTPStubs'
   end
 end
