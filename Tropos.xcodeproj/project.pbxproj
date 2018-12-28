@@ -964,7 +964,6 @@
 				E4240B7F20373EC30054E064 /* SwiftLint */,
 				C2422E4B1A718BC800F72769 /* Hockey Run Script */,
 				6D0F13551B4328C2001685BA /* Copy Carthage Frameworks */,
-				B7DE70105B59EDB7B1D6100E /* [CP] Embed Pods Frameworks */,
 				8F3D51D42744160EA1F9AAE2 /* [CP] Copy Pods Resources */,
 				A1FC9ED61CFEA23B00E62618 /* Embed Frameworks */,
 				4A21D77020C9E6FB0055A2AF /* Embed App Extensions */,
@@ -1220,7 +1219,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-Tropos/Pods-Tropos-resources.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-Tropos/Pods-Tropos-resources.sh",
 				"${PODS_CONFIGURATION_BUILD_DIR}/HockeySDK/HockeySDKResources.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
@@ -1229,22 +1228,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Tropos/Pods-Tropos-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		B7DE70105B59EDB7B1D6100E /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Tropos/Pods-Tropos-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Tropos/Pods-Tropos-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		B9EA6F2B83CB1F85157FB34F /* [CP] Check Pods Manifest.lock */ = {
