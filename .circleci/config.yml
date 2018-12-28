@@ -1,6 +1,9 @@
 version: 2
 jobs:
   build-and-test:
+    environment:
+      CARTHAGE_LOG_PATH: Carthage/build.log
+
     macos:
       xcode: "10.1.0"
 
@@ -25,6 +28,10 @@ jobs:
             - carthage-
 
       - run: bin/setup
+
+      - store_artifacts:
+          path: Carthage/build.log
+          destination: carthage-build.log
 
       - save_cache:
           key: cocoapods-{{ checksum "Podfile.lock" }}

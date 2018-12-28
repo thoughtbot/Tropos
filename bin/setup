@@ -2,10 +2,14 @@
 
 set -e
 
+if [[ -n $CARTHAGE_LOG_PATH ]]; then
+  carthage_log_opts=(--log-path "$CARTHAGE_LOG_PATH")
+fi
+
 bundle install
 bundle exec pod install
 brew bundle
-carthage bootstrap --platform iOS --cache-builds --no-use-binaries
+carthage bootstrap --platform iOS --cache-builds --no-use-binaries "${carthage_log_opts[@]}"
 
 tropos_secrets="Config/Secrets.h"
 example_secrets="Config/Secrets-Example.h"
