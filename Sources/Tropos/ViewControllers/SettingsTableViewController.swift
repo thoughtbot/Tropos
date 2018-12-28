@@ -1,5 +1,6 @@
-import UIKit
+import AppCenterCrashes
 import TroposCore
+import UIKit
 
 private enum SegueIdentifier: String {
     case privacyPolicy = "ShowWebViewController"
@@ -14,6 +15,7 @@ private enum SegueIdentifier: String {
 enum Section: Int {
     case unitSystem
     case info
+    case debugging
     case about
 }
 
@@ -26,6 +28,10 @@ enum InfoSection: Int {
     case privacyPolicy
     case acknowledgements
     case forecast
+}
+
+enum DebuggingSection: Int {
+    case generateTestCrash
 }
 
 enum AboutSection: Int {
@@ -101,9 +107,12 @@ class SettingsTableViewController: UITableViewController {
             selectUnitSystemAtIndexPath(indexPath)
         case (Section.info.rawValue, InfoSection.forecast.rawValue):
             UIApplication.shared.openURL(URL(string: "https://forecast.io")!)
+        case (Section.debugging.rawValue, DebuggingSection.generateTestCrash.rawValue):
+            MSCrashes.generateTestCrash()
         case (Section.about.rawValue, AboutSection.thoughtbot.rawValue):
             UIApplication.shared.openURL(URL(string: "https://thoughtbot.com")!)
-        default: break
+        default:
+            break
         }
     }
 

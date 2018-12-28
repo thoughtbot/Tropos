@@ -147,62 +147,84 @@
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
-                            <tableViewSection headerTitle="Tropos 1.0.1 (132)" id="GXv-dP-JVI">
+                            <tableViewSection headerTitle="Debugging" id="GXv-dP-JVI">
                                 <cells>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" rowHeight="100" id="Bo5-Uc-GVG" customClass="TRTableViewCell" customModule="Tropos" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="371.33333333333337" width="375" height="100"/>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="pRv-Bj-rpA" style="IBUITableViewCellStyleDefault" id="Pgn-Ry-kRa" customClass="TRTableViewCell" customModule="Tropos" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="371.33333333333337" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Bo5-Uc-GVG" id="wAy-NI-QDe">
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Pgn-Ry-kRa" id="P16-9A-PiG">
+                                            <rect key="frame" x="0.0" y="0.0" width="341" height="43.666666666666664"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Generate Test Crash Report" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="pRv-Bj-rpA">
+                                                    <rect key="frame" x="16" y="0.0" width="324" height="43.666666666666664"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="DINNextLTPro-Light" family="DIN Next LT Pro" pointSize="18"/>
+                                                    <color key="textColor" red="0.78039215689999997" green="0.78039215689999997" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.12549019610000001" green="0.12549019610000001" blue="0.16078431369999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="Tropos 1.0.1 (132)" id="EFY-P2-Nng">
+                                <cells>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" rowHeight="100" id="Abc-uH-MFY" customClass="TRTableViewCell" customModule="Tropos" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="463.33333333333337" width="375" height="100"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Abc-uH-MFY" id="QIk-SF-4c6">
                                             <rect key="frame" x="0.0" y="0.0" width="341" height="99.666666666666671"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hat-b3-Z3z">
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qf6-en-XoB">
                                                     <rect key="frame" x="87.000000000000014" y="17.333333333333329" width="179.33333333333337" height="65"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Handcrafted with love by" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SLJ-Pj-eOI">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Handcrafted with love by" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jIx-T6-aej">
                                                             <rect key="frame" x="0.0" y="0.0" width="179.33333333333334" height="17"/>
                                                             <fontDescription key="fontDescription" name="DINNextLTPro-Light" family="DIN Next LT Pro" pointSize="17"/>
-                                                            <color key="textColor" red="0.78039216995239258" green="0.78039216995239258" blue="0.80000001192092896" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <color key="textColor" red="0.78039217000000005" green="0.78039217000000005" blue="0.80000001190000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="thoughtbot-logo-full" translatesAutoresizingMaskIntoConstraints="NO" id="wl8-Vy-9eF">
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="thoughtbot-logo-full" translatesAutoresizingMaskIntoConstraints="NO" id="3Z7-bo-i51">
                                                             <rect key="frame" x="8" y="25" width="163" height="40"/>
-                                                            <color key="tintColor" red="0.78039216995239258" green="0.78039216995239258" blue="0.80000001192092896" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <color key="tintColor" red="0.78039217000000005" green="0.78039217000000005" blue="0.80000001190000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <constraints>
-                                                                <constraint firstAttribute="width" secondItem="wl8-Vy-9eF" secondAttribute="height" multiplier="1:1" id="Cx9-mq-op9"/>
-                                                                <constraint firstAttribute="width" constant="88" id="FNh-Fy-y1Q"/>
-                                                                <constraint firstAttribute="height" constant="40" id="GWY-9x-ucM"/>
-                                                                <constraint firstAttribute="width" secondItem="wl8-Vy-9eF" secondAttribute="height" multiplier="200:49" id="WzN-ZH-haI"/>
-                                                                <constraint firstAttribute="width" constant="200" id="cXW-dy-V8X"/>
-                                                                <constraint firstAttribute="height" constant="49" id="pSy-tr-GOr"/>
-                                                                <constraint firstAttribute="height" constant="37" id="ywq-IM-jdu"/>
+                                                                <constraint firstAttribute="height" constant="49" id="48f-vx-KQ0"/>
+                                                                <constraint firstAttribute="height" constant="37" id="MSa-c9-9BJ"/>
+                                                                <constraint firstAttribute="width" constant="88" id="SQR-op-TG5"/>
+                                                                <constraint firstAttribute="width" secondItem="3Z7-bo-i51" secondAttribute="height" multiplier="1:1" id="bPG-nf-hRb"/>
+                                                                <constraint firstAttribute="height" constant="40" id="j8f-F0-TUi"/>
+                                                                <constraint firstAttribute="width" constant="200" id="wir-wC-Oof"/>
+                                                                <constraint firstAttribute="width" secondItem="3Z7-bo-i51" secondAttribute="height" multiplier="200:49" id="yIf-a4-V9x"/>
                                                             </constraints>
                                                             <variation key="default">
                                                                 <mask key="constraints">
-                                                                    <exclude reference="Cx9-mq-op9"/>
-                                                                    <exclude reference="FNh-Fy-y1Q"/>
-                                                                    <exclude reference="cXW-dy-V8X"/>
-                                                                    <exclude reference="pSy-tr-GOr"/>
-                                                                    <exclude reference="ywq-IM-jdu"/>
+                                                                    <exclude reference="bPG-nf-hRb"/>
+                                                                    <exclude reference="SQR-op-TG5"/>
+                                                                    <exclude reference="wir-wC-Oof"/>
+                                                                    <exclude reference="48f-vx-KQ0"/>
+                                                                    <exclude reference="MSa-c9-9BJ"/>
                                                                 </mask>
                                                             </variation>
                                                         </imageView>
                                                     </subviews>
-                                                    <color key="backgroundColor" red="0.12549020349979401" green="0.12549020349979401" blue="0.16078431904315948" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="backgroundColor" red="0.12549020350000001" green="0.12549020350000001" blue="0.16078431900000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="bottom" secondItem="wl8-Vy-9eF" secondAttribute="bottom" id="3tg-DA-Vns"/>
-                                                        <constraint firstItem="wl8-Vy-9eF" firstAttribute="top" secondItem="SLJ-Pj-eOI" secondAttribute="bottom" constant="8" id="QKJ-hH-4YV"/>
-                                                        <constraint firstItem="SLJ-Pj-eOI" firstAttribute="top" secondItem="Hat-b3-Z3z" secondAttribute="top" id="REa-pn-0Dp"/>
-                                                        <constraint firstItem="wl8-Vy-9eF" firstAttribute="centerX" secondItem="SLJ-Pj-eOI" secondAttribute="centerX" id="TO8-Ux-Bzv"/>
-                                                        <constraint firstAttribute="trailing" secondItem="SLJ-Pj-eOI" secondAttribute="trailing" id="VA7-AT-iIh"/>
-                                                        <constraint firstAttribute="centerX" secondItem="SLJ-Pj-eOI" secondAttribute="centerX" id="jAA-p6-Gko"/>
-                                                        <constraint firstItem="SLJ-Pj-eOI" firstAttribute="leading" secondItem="Hat-b3-Z3z" secondAttribute="leading" id="thr-55-RUW"/>
+                                                        <constraint firstItem="jIx-T6-aej" firstAttribute="leading" secondItem="qf6-en-XoB" secondAttribute="leading" id="EMW-Ed-Z6A"/>
+                                                        <constraint firstAttribute="trailing" secondItem="jIx-T6-aej" secondAttribute="trailing" id="GX1-fP-CBV"/>
+                                                        <constraint firstItem="3Z7-bo-i51" firstAttribute="top" secondItem="jIx-T6-aej" secondAttribute="bottom" constant="8" id="RmK-Q0-SsQ"/>
+                                                        <constraint firstItem="jIx-T6-aej" firstAttribute="top" secondItem="qf6-en-XoB" secondAttribute="top" id="Vyu-CC-LZC"/>
+                                                        <constraint firstAttribute="centerX" secondItem="jIx-T6-aej" secondAttribute="centerX" id="ZFd-Q5-23C"/>
+                                                        <constraint firstItem="3Z7-bo-i51" firstAttribute="centerX" secondItem="jIx-T6-aej" secondAttribute="centerX" id="gWg-So-TmC"/>
+                                                        <constraint firstAttribute="bottom" secondItem="3Z7-bo-i51" secondAttribute="bottom" id="oWw-dO-pEZ"/>
                                                     </constraints>
                                                 </view>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="centerY" secondItem="Hat-b3-Z3z" secondAttribute="centerY" id="0S4-Vw-DHI"/>
-                                                <constraint firstAttribute="centerX" secondItem="Hat-b3-Z3z" secondAttribute="centerX" constant="-6" id="6q0-wz-QPC"/>
+                                                <constraint firstAttribute="centerX" secondItem="qf6-en-XoB" secondAttribute="centerX" constant="-6" id="LtY-Ix-gTk"/>
+                                                <constraint firstAttribute="centerY" secondItem="qf6-en-XoB" secondAttribute="centerY" id="XUi-Xf-gCf"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.12549019610000001" green="0.12549019610000001" blue="0.16078431369999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -225,7 +247,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="thoughtbotImageView" destination="wl8-Vy-9eF" id="gXU-Sg-fTu"/>
+                        <outlet property="thoughtbotImageView" destination="3Z7-bo-i51" id="2OE-8U-SJD"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ych-ep-rVP" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -387,7 +409,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="690"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RbN-Zl-kZA" userLabel="Forecast Container View">
-                                                <rect key="frame" x="48" y="240" width="307" height="210"/>
+                                                <rect key="frame" x="48" y="248" width="307" height="194"/>
                                                 <subviews>
                                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8PG-bg-g8T" userLabel="Conditions Icon" customClass="FadingImageView" customModule="Tropos" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="0.0" width="55.666666666666664" height="56"/>
@@ -396,7 +418,7 @@
                                                         </constraints>
                                                     </imageView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="It's warmer today than yesterday at this time." lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qR0-2t-XFf" userLabel="Conditions Description" customClass="FadingLabel" customModule="Tropos" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="98" width="297" height="112"/>
+                                                        <rect key="frame" x="0.0" y="98" width="297" height="96"/>
                                                         <fontDescription key="fontDescription" name="DINNextLTPro-Light" family="DIN Next LT Pro" pointSize="32"/>
                                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
@@ -526,13 +548,13 @@
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Updated 19 seconds ago" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fWc-Li-a6R" customClass="FadingLabel" customModule="Tropos" customModuleProvider="target">
-                                                    <rect key="frame" x="0.0" y="14.666666666666664" width="200" height="15.333333333333336"/>
+                                                    <rect key="frame" x="0.0" y="17" width="200" height="13"/>
                                                     <fontDescription key="fontDescription" name="DINNextLTPro-Light" family="DIN Next LT Pro" pointSize="13"/>
                                                     <color key="textColor" red="0.63137254899999995" green="0.65490196079999996" blue="0.69411764710000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalCompressionResistancePriority="749" text="SAN FRANCISCO, CA" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kJg-0l-P4Y" customClass="FadingLabel" customModule="Tropos" customModuleProvider="target">
-                                                    <rect key="frame" x="0.0" y="0.0" width="200" height="14.666666666666666"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="200" height="17"/>
                                                     <fontDescription key="fontDescription" name="DINNextLTPro-Light" family="DIN Next LT Pro" pointSize="17"/>
                                                     <color key="textColor" red="0.63137254899999995" green="0.65490196079999996" blue="0.69411764710000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
