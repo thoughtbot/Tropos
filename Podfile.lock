@@ -2,18 +2,13 @@ PODS:
   - HockeySDK (5.1.2):
     - HockeySDK/DefaultLib (= 5.1.2)
   - HockeySDK/DefaultLib (5.1.2)
-  - Mixpanel (2.9.6):
-    - Mixpanel/Mixpanel (= 2.9.6)
-  - Mixpanel/Mixpanel (2.9.6)
 
 DEPENDENCIES:
   - HockeySDK (~> 5.0)
-  - Mixpanel (~> 2.7)
 
 SPEC CHECKSUMS:
   HockeySDK: 38b7e2726af1ea86ae97ce4b5de33ab0817e3500
-  Mixpanel: 048a9f2512ac1bb8bfdecf719da024873f50a9c2
 
-PODFILE CHECKSUM: d86747923281b032125976fa4afdf737add39b32
+PODFILE CHECKSUM: bc2d8164191a2f2e27c19a8a633b611a9df9575d
 
 COCOAPODS: 1.4.0

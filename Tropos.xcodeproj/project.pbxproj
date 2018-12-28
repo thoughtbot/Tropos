@@ -103,6 +103,7 @@
 		4ACA584B1CC526D600DD0CDC /* RACSignal+TROperators.m in Sources */ = {isa = PBXBuildFile; fileRef = 4ACA584A1CC526D600DD0CDC /* RACSignal+TROperators.m */; };
 		4AFCB1CF21D67AD100176FDD /* ForecastController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AFCB1CD21D67A7600176FDD /* ForecastController.swift */; };
 		4AFCB1D121D67F2000176FDD /* Date+Relative.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AFCB1D021D67F2000176FDD /* Date+Relative.swift */; };
+		4AFCB1D721D6931400176FDD /* Mixpanel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AFCB1D621D6930C00176FDD /* Mixpanel.framework */; };
 		4AFCB1D921D69A0900176FDD /* ApplicationControllerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AFCB1D821D69A0900176FDD /* ApplicationControllerSpec.swift */; };
 		4AFCB1DB21D69A4300176FDD /* TestApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AFCB1DA21D69A4300176FDD /* TestApplication.swift */; };
 		4AFCB1DD21D69B9000176FDD /* Intents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 4AA138C72134835A0083B816 /* Intents.intentdefinition */; };
@@ -334,6 +335,7 @@
 		4AEF9E872040C47400CDDEEA /* GeocodeControllerSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeocodeControllerSpec.swift; sourceTree = "<group>"; };
 		4AFCB1CD21D67A7600176FDD /* ForecastController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForecastController.swift; sourceTree = "<group>"; };
 		4AFCB1D021D67F2000176FDD /* Date+Relative.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Relative.swift"; sourceTree = "<group>"; };
+		4AFCB1D621D6930C00176FDD /* Mixpanel.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Mixpanel.framework; path = Carthage/Build/iOS/Mixpanel.framework; sourceTree = "<group>"; };
 		4AFCB1D821D69A0900176FDD /* ApplicationControllerSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationControllerSpec.swift; sourceTree = "<group>"; };
 		4AFCB1DA21D69A4300176FDD /* TestApplication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestApplication.swift; sourceTree = "<group>"; };
 		4AFCB1DE21D69BF200176FDD /* TroposTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TroposTests-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -448,6 +450,7 @@
 				4A6BB9CC2040C33000835531 /* ReactiveObjC.framework in Frameworks */,
 				4A6BB9CE2040C33000835531 /* Result.framework in Frameworks */,
 				4A6BB9CD2040C33000835531 /* ReactiveObjCBridge.framework in Frameworks */,
+				4AFCB1D721D6931400176FDD /* Mixpanel.framework in Frameworks */,
 				4A6BB9CB2040C33000835531 /* ReactiveSwift.framework in Frameworks */,
 				8E55CA903A39795581785ED4 /* libPods-Tropos.a in Frameworks */,
 			);
@@ -845,6 +848,7 @@
 				D281611EA8A7B26EFB4FBBAC /* libPods-Tropos.a */,
 				4A92135321D5680200F524AA /* CoreLocation.framework */,
 				4A95A150212DE48E00E0B33A /* Foundation.framework */,
+				4AFCB1D621D6930C00176FDD /* Mixpanel.framework */,
 				6D0F135A1B432976001685BA /* Nimble.framework */,
 				4A92135421D5683200F524AA /* OHHTTPStubs.framework */,
 				6D0F135B1B432976001685BA /* Quick.framework */,
@@ -1195,6 +1199,7 @@
 				"$(SRCROOT)/Carthage/Build/iOS/Result.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/ReactiveObjC.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/ReactiveObjCBridge.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Mixpanel.framework",
 			);
 			name = "Copy Carthage Frameworks";
 			outputPaths = (
@@ -1202,6 +1207,7 @@
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Result.framework",
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/ReactiveObjC.framework",
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/ReactiveObjCBridge.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Mixpanel.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1216,38 +1222,10 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Tropos/Pods-Tropos-resources.sh",
 				"${PODS_CONFIGURATION_BUILD_DIR}/HockeySDK/HockeySDKResources.bundle",
-				"${PODS_ROOT}/Mixpanel/Mixpanel/Media.xcassets/MPArrowLeft.imageset/MPArrowLeft.png",
-				"${PODS_ROOT}/Mixpanel/Mixpanel/Media.xcassets/MPArrowLeft.imageset/MPArrowLeft@2x.png",
-				"${PODS_ROOT}/Mixpanel/Mixpanel/Media.xcassets/MPArrowRight.imageset/MPArrowRight.png",
-				"${PODS_ROOT}/Mixpanel/Mixpanel/Media.xcassets/MPArrowRight.imageset/MPArrowRight@2x.png",
-				"${PODS_ROOT}/Mixpanel/Mixpanel/Media.xcassets/MPCheckmark.imageset/MPCheckmark.png",
-				"${PODS_ROOT}/Mixpanel/Mixpanel/Media.xcassets/MPCheckmark.imageset/MPCheckmark@2x.png",
-				"${PODS_ROOT}/Mixpanel/Mixpanel/Media.xcassets/MPCloseBtn.imageset/MPCloseBtn.png",
-				"${PODS_ROOT}/Mixpanel/Mixpanel/Media.xcassets/MPCloseBtn.imageset/MPCloseBtn@2x.png",
-				"${PODS_ROOT}/Mixpanel/Mixpanel/Media.xcassets/MPDismissKeyboard.imageset/MPDismissKeyboard.png",
-				"${PODS_ROOT}/Mixpanel/Mixpanel/Media.xcassets/MPDismissKeyboard.imageset/MPDismissKeyboard@2x.png",
-				"${PODS_ROOT}/Mixpanel/Mixpanel/Media.xcassets/MPLogo.imageset/MPLogo.png",
-				"${PODS_ROOT}/Mixpanel/Mixpanel/Media.xcassets/MPLogo.imageset/MPLogo@2x.png",
-				"${PODS_ROOT}/Mixpanel/Mixpanel/MPNotification.storyboard",
-				"${PODS_ROOT}/Mixpanel/Mixpanel/MPSurvey.storyboard",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/HockeySDKResources.bundle",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MPArrowLeft.png",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MPArrowLeft@2x.png",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MPArrowRight.png",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MPArrowRight@2x.png",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MPCheckmark.png",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MPCheckmark@2x.png",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MPCloseBtn.png",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MPCloseBtn@2x.png",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MPDismissKeyboard.png",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MPDismissKeyboard@2x.png",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MPLogo.png",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MPLogo@2x.png",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MPNotification.storyboardc",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MPSurvey.storyboardc",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;

@@ -1,2 +1,3 @@
 github "ReactiveCocoa/ReactiveObjCBridge"
 github "ReactiveCocoa/ReactiveSwift"
+github "mixpanel/mixpanel-iphone"
