@@ -44,19 +44,17 @@
     if (!command) return;
 
     self.commandExecutionDisposable = [[[[self rac_signalForControlEvents:UIControlEventValueChanged]
-    map:^id(TRRefreshControl *control) {
-        return [[[command execute:control]
-        catchTo:[RACSignal empty]]
-        then:^RACSignal *{
-            return [RACSignal return:control];
+        map:^id(TRRefreshControl *control) {
+            return [[[command execute:control]
+                catchTo:[RACSignal empty]]
+                then:^RACSignal *{
+                    return [RACSignal return:control];
+                }];
         }]
-        ;
-    }]
-    concat]
-    subscribeNext:^(TRRefreshControl *control) {
-        [control endRefreshing];
-    }];
-    ;
+        concat]
+        subscribeNext:^(TRRefreshControl *control) {
+            [control endRefreshing];
+        }];
 }
 
 #pragma mark - Private
