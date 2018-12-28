@@ -108,6 +108,8 @@
 		4AFCB1DB21D69A4300176FDD /* TestApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AFCB1DA21D69A4300176FDD /* TestApplication.swift */; };
 		4AFCB1DD21D69B9000176FDD /* Intents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 4AA138C72134835A0083B816 /* Intents.intentdefinition */; };
 		4AFCB1E121D69F8B00176FDD /* TestLocationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AFCB1E021D69F8B00176FDD /* TestLocationController.swift */; };
+		4AFCB1E921D6C32100176FDD /* AppCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AFCB1E821D6C2F800176FDD /* AppCenter.framework */; };
+		4AFCB1EA21D6C32100176FDD /* AppCenterCrashes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AFCB1E721D6C2F800176FDD /* AppCenterCrashes.framework */; };
 		4D0A5C3D1A3A53DD0084C41E /* CWForecastDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D0A5C3C1A3A53DD0084C41E /* CWForecastDetailView.xib */; };
 		4D1ABA0B1A89686200B7F8FB /* TRNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D1ABA0A1A89686200B7F8FB /* TRNavigationBar.m */; };
 		4D3336F61A80BE16001BA9A8 /* TRDailyForecastView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D3336F51A80BE16001BA9A8 /* TRDailyForecastView.xib */; };
@@ -125,11 +127,9 @@
 		51FEC99A21CD9AC500CDBC97 /* FadingLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51FEC99921CD9AC500CDBC97 /* FadingLabel.swift */; };
 		51FEC99C21CD9E4A00CDBC97 /* CATransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51FEC99B21CD9E4A00CDBC97 /* CATransition.swift */; };
 		51FEC99E21CD9F3300CDBC97 /* FadingImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51FEC99D21CD9F3300CDBC97 /* FadingImageView.swift */; };
-		571D9DD5621C37A62892B73F /* Pods-Tropos-metadata.plist in Resources */ = {isa = PBXBuildFile; fileRef = D4B3B3DB12D62EC9A8EC8411 /* Pods-Tropos-metadata.plist */; };
 		5DA50AD91A82CAB300CAE666 /* DINNextLTPro-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5DA50AD81A82CAB300CAE666 /* DINNextLTPro-Light.otf */; };
 		6D0F135C1B432976001685BA /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D0F135A1B432976001685BA /* Nimble.framework */; };
 		6D0F135D1B432976001685BA /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D0F135B1B432976001685BA /* Quick.framework */; };
-		8E55CA903A39795581785ED4 /* libPods-Tropos.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D281611EA8A7B26EFB4FBBAC /* libPods-Tropos.a */; };
 		A10108F91D3369EB0024B1BA /* NSBundle+TRBundleInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = A10108F81D3369EB0024B1BA /* NSBundle+TRBundleInfo.m */; };
 		A10108FE1D336C6A0024B1BA /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10108FD1D336C6A0024B1BA /* WebViewController.swift */; };
 		A10109001D336C9C0024B1BA /* TRTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10108FF1D336C9C0024B1BA /* TRTableViewCell.swift */; };
@@ -242,9 +242,7 @@
 		0F9A6CB121C996EC0035C811 /* CLLocation+TRRecentLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CLLocation+TRRecentLocation.swift"; sourceTree = "<group>"; };
 		0F9A6CB921CBF4C30035C811 /* LocationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationController.swift; sourceTree = "<group>"; };
 		1CDD2312F1EF05277F045E15 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2014A1EA2643FF36A4C94B5F /* Pods-Tropos.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tropos.release.xcconfig"; path = "Pods/Target Support Files/Pods-Tropos/Pods-Tropos.release.xcconfig"; sourceTree = "<group>"; };
 		22FE01C01AF3F5550085B494 /* Secrets.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Secrets.h; sourceTree = "<group>"; };
-		29FF8F48DC831249EC3150FB /* Pods-Tropos.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tropos.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Tropos/Pods-Tropos.debug.xcconfig"; sourceTree = "<group>"; };
 		449386DA1B5044EE00766EC9 /* pl-PL */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pl-PL"; path = "pl-PL.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		449386DB1B5044EE00766EC9 /* pl-PL */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pl-PL"; path = "pl-PL.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		4A21D76520C9E6FA0055A2AF /* TroposIntents.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = TroposIntents.appex; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -341,6 +339,8 @@
 		4AFCB1DE21D69BF200176FDD /* TroposTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TroposTests-Bridging-Header.h"; sourceTree = "<group>"; };
 		4AFCB1DF21D69D1600176FDD /* TRApplication.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TRApplication.h; sourceTree = "<group>"; };
 		4AFCB1E021D69F8B00176FDD /* TestLocationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestLocationController.swift; sourceTree = "<group>"; };
+		4AFCB1E721D6C2F800176FDD /* AppCenterCrashes.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppCenterCrashes.framework; path = Frameworks/AppCenter/AppCenterCrashes.framework; sourceTree = "<group>"; };
+		4AFCB1E821D6C2F800176FDD /* AppCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppCenter.framework; path = Frameworks/AppCenter/AppCenter.framework; sourceTree = "<group>"; };
 		4D0A5C3C1A3A53DD0084C41E /* CWForecastDetailView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CWForecastDetailView.xib; sourceTree = "<group>"; };
 		4D115AF11ADC8C0C0032AAA3 /* SettingsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; tabWidth = 2; };
 		4D1ABA091A89686200B7F8FB /* TRNavigationBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRNavigationBar.h; sourceTree = "<group>"; };
@@ -400,8 +400,6 @@
 		C2E44CEC1A3A4F56009CC844 /* TRErrors.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TRErrors.h; sourceTree = "<group>"; };
 		C2E44CF91A3B76B3009CC844 /* NSNumber+TRRoundedNumber.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSNumber+TRRoundedNumber.h"; sourceTree = "<group>"; };
 		C2E44CFA1A3B76B3009CC844 /* NSNumber+TRRoundedNumber.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSNumber+TRRoundedNumber.m"; sourceTree = "<group>"; };
-		D281611EA8A7B26EFB4FBBAC /* libPods-Tropos.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Tropos.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		D4B3B3DB12D62EC9A8EC8411 /* Pods-Tropos-metadata.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; name = "Pods-Tropos-metadata.plist"; path = "Pods/Pods-Tropos-metadata.plist"; sourceTree = "<group>"; };
 		E7A895521AFD11AA0023205B /* TRApplicationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRApplicationController.h; sourceTree = "<group>"; };
 		E7A895531AFD11AA0023205B /* TRApplicationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRApplicationController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -446,13 +444,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4AFCB1E921D6C32100176FDD /* AppCenter.framework in Frameworks */,
+				4AFCB1EA21D6C32100176FDD /* AppCenterCrashes.framework in Frameworks */,
 				A1FC9ED21CFEA23B00E62618 /* TroposCore.framework in Frameworks */,
 				4A6BB9CC2040C33000835531 /* ReactiveObjC.framework in Frameworks */,
 				4A6BB9CE2040C33000835531 /* Result.framework in Frameworks */,
 				4A6BB9CD2040C33000835531 /* ReactiveObjCBridge.framework in Frameworks */,
 				4AFCB1D721D6931400176FDD /* Mixpanel.framework in Frameworks */,
 				4A6BB9CB2040C33000835531 /* ReactiveSwift.framework in Frameworks */,
-				8E55CA903A39795581785ED4 /* libPods-Tropos.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -484,16 +483,6 @@
 				E7A895531AFD11AA0023205B /* TRApplicationController.m */,
 			);
 			path = Controllers;
-			sourceTree = "<group>";
-		};
-		032A87AB5FF403B628188E3C /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				2014A1EA2643FF36A4C94B5F /* Pods-Tropos.release.xcconfig */,
-				29FF8F48DC831249EC3150FB /* Pods-Tropos.debug.xcconfig */,
-				D4B3B3DB12D62EC9A8EC8411 /* Pods-Tropos-metadata.plist */,
-			);
-			name = Pods;
 			sourceTree = "<group>";
 		};
 		301CF0A99B4C5FAECDB23D75 /* Resources */ = {
@@ -845,7 +834,8 @@
 		79646077C042F7DDDC35EBEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				D281611EA8A7B26EFB4FBBAC /* libPods-Tropos.a */,
+				4AFCB1E821D6C2F800176FDD /* AppCenter.framework */,
+				4AFCB1E721D6C2F800176FDD /* AppCenterCrashes.framework */,
 				4A92135321D5680200F524AA /* CoreLocation.framework */,
 				4A95A150212DE48E00E0B33A /* Foundation.framework */,
 				4AFCB1D621D6930C00176FDD /* Mixpanel.framework */,
@@ -888,7 +878,6 @@
 				4A21D75E20C9E16F0055A2AF /* Tests */,
 				79646077C042F7DDDC35EBEA /* Frameworks */,
 				702F42EA5C215DCFAE2AAC5C /* Products */,
-				032A87AB5FF403B628188E3C /* Pods */,
 			);
 			indentWidth = 4;
 			sourceTree = "<group>";
@@ -957,14 +946,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FA143D2AD1081C4274E37CCE /* Build configuration list for PBXNativeTarget "Tropos" */;
 			buildPhases = (
-				B9EA6F2B83CB1F85157FB34F /* [CP] Check Pods Manifest.lock */,
 				7C2C287E78ABB83892B5E8B6 /* Sources */,
 				800364D174D6FAD56EBFE31C /* Frameworks */,
 				442A628001B45C7CDD01A96E /* Resources */,
 				E4240B7F20373EC30054E064 /* SwiftLint */,
-				C2422E4B1A718BC800F72769 /* Hockey Run Script */,
 				6D0F13551B4328C2001685BA /* Copy Carthage Frameworks */,
-				8F3D51D42744160EA1F9AAE2 /* [CP] Copy Pods Resources */,
 				A1FC9ED61CFEA23B00E62618 /* Embed Frameworks */,
 				4A21D77020C9E6FB0055A2AF /* Embed App Extensions */,
 			);
@@ -1157,7 +1143,6 @@
 				C2E44CE41A3A4273009CC844 /* Localizable.strings in Resources */,
 				5DA50AD91A82CAB300CAE666 /* DINNextLTPro-Light.otf in Resources */,
 				A12FCE2A1D338A4A0062E7F1 /* DINNextLTPro-Regular.otf in Resources */,
-				571D9DD5621C37A62892B73F /* Pods-Tropos-metadata.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1212,56 +1197,6 @@
 			shellPath = /bin/sh;
 			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
 			showEnvVarsInLog = 0;
-		};
-		8F3D51D42744160EA1F9AAE2 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Tropos/Pods-Tropos-resources.sh",
-				"${PODS_CONFIGURATION_BUILD_DIR}/HockeySDK/HockeySDKResources.bundle",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/HockeySDKResources.bundle",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Tropos/Pods-Tropos-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		B9EA6F2B83CB1F85157FB34F /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Tropos-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		C2422E4B1A718BC800F72769 /* Hockey Run Script */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Hockey Run Script";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "FILE=\"${SRCROOT}/HockeySDK-iOS/BuildAgent\"\nif [ -f \"$FILE\" ]; then\n    \"$FILE\"\nfi\n";
 		};
 		E4240B7F20373EC30054E064 /* SwiftLint */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -1730,7 +1665,6 @@
 		};
 		4C523B4DE48AC8A7CC413F1E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2014A1EA2643FF36A4C94B5F /* Pods-Tropos.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -1742,6 +1676,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/Frameworks/AppCenter",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
@@ -1842,7 +1777,6 @@
 		};
 		7019ACE22E2C8639E913B385 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 29FF8F48DC831249EC3150FB /* Pods-Tropos.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -1854,6 +1788,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/Frameworks/AppCenter",
 				);
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;

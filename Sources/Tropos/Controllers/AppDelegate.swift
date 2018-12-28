@@ -1,4 +1,5 @@
-import HockeySDK
+import AppCenter
+import AppCenterCrashes
 import os.log
 import TroposCore
 import UIKit
@@ -17,7 +18,8 @@ final class AppDelegate: UIResponder, UIApplicationDelegate {
         }
 
         assertValidSecrets()
-        setupHockey()
+        setupAnalytics()
+        setupCrashReporting()
         SettingsController().registerSettings()
         AppearanceController.configureAppearance()
         applicationController.setMinimumBackgroundFetchInterval(for: application)
@@ -60,20 +62,20 @@ private extension AppDelegate {
     }
 
     func assertValidSecrets() {
+        assert(!TRAppCenterIdentifier.isEmpty, "App Center identifier not set")
         assert(!TRForecastAPIKey.isEmpty, "Forecast API key not set")
-        assert(!TRHockeyIdentifier.isEmpty, "Hockey identifier not set")
         assert(!TRMixpanelToken.isEmpty, "Mixpanel token not set")
     }
 
-    func setupHockey() {
+    func setupAnalytics() {
 #if !DEBUG
-        let hockeyManager = BITHockeyManager.shared()
-        hockeyManager.configure(withIdentifier: TRHockeyIdentifier)
-        hockeyManager.crashManager.crashManagerStatus = .autoSend
-        hockeyManager.start()
-        hockeyManager.authenticator.authenticateInstallation()
-
         AnalyticsController.shared.install()
+#endif
+    }
+
+    func setupCrashReporting() {
+#if !DEBUG
+        MSAppCenter.start(TRAppCenterIdentifier, withServices: [MSCrashes.self])
 #endif
     }
 }
