@@ -100,9 +100,9 @@
     TRWeatherUpdate *cachedUpdate = [self.cache latestWeatherUpdate];
     RACSignal *weatherUpdates = [self.updateWeatherCommand.executionSignals startWith:[RACSignal return:cachedUpdate]];
 
-    return [[weatherUpdates switchToLatest] filter:^BOOL(TRWeatherUpdate *update) {
+    return [[[weatherUpdates switchToLatest] filter:^BOOL(TRWeatherUpdate *update) {
         return update != nil;
-    }];
+    }] deliverOnMainThread];
 }
 
 #pragma mark - Properties

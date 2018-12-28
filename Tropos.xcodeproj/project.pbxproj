@@ -33,9 +33,6 @@
 		4A552F861CC7D1A4008C7298 /* NSBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A552F851CC7D1A4008C7298 /* NSBundle.swift */; };
 		4A552F881CC7D20D008C7298 /* NSLocalizedString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A552F871CC7D20D008C7298 /* NSLocalizedString.swift */; };
 		4A5FA2FF212DFA7300CC313C /* TRErrors.h in Headers */ = {isa = PBXBuildFile; fileRef = C2E44CEC1A3A4F56009CC844 /* TRErrors.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		4A5FA300212DFAB200CC313C /* NSDate+TRRelativeDate.m in Sources */ = {isa = PBXBuildFile; fileRef = C2E44CEE1A3B6E89009CC844 /* NSDate+TRRelativeDate.m */; };
-		4A5FA301212DFACA00CC313C /* TRForecastController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D0A5C371A3A27510084C41E /* TRForecastController.m */; };
-		4A5FA302212DFAD700CC313C /* TRForecastController.h in Headers */ = {isa = PBXBuildFile; fileRef = 4D0A5C361A3A27510084C41E /* TRForecastController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4A5FA306212DFF6E00CC313C /* ForecastController+Bridging.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A5FA305212DFF6E00CC313C /* ForecastController+Bridging.swift */; };
 		4A5FA30E212EFC6A00CC313C /* ReactiveObjC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A6BB9C82040C33000835531 /* ReactiveObjC.framework */; };
 		4A5FA30F212EFC6A00CC313C /* ReactiveObjCBridge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A6BB9C92040C33000835531 /* ReactiveObjCBridge.framework */; };
@@ -104,6 +101,8 @@
 		4AC287A41CBC3D800064F48A /* Nimble.framework in Embed Carthage Frameworks */ = {isa = PBXBuildFile; fileRef = 6D0F135A1B432976001685BA /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		4AC287A51CBC3D820064F48A /* Quick.framework in Embed Carthage Frameworks */ = {isa = PBXBuildFile; fileRef = 6D0F135B1B432976001685BA /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		4ACA584B1CC526D600DD0CDC /* RACSignal+TROperators.m in Sources */ = {isa = PBXBuildFile; fileRef = 4ACA584A1CC526D600DD0CDC /* RACSignal+TROperators.m */; };
+		4AFCB1CF21D67AD100176FDD /* ForecastController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AFCB1CD21D67A7600176FDD /* ForecastController.swift */; };
+		4AFCB1D121D67F2000176FDD /* Date+Relative.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AFCB1D021D67F2000176FDD /* Date+Relative.swift */; };
 		4D0A5C3D1A3A53DD0084C41E /* CWForecastDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D0A5C3C1A3A53DD0084C41E /* CWForecastDetailView.xib */; };
 		4D1ABA0B1A89686200B7F8FB /* TRNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D1ABA0A1A89686200B7F8FB /* TRNavigationBar.m */; };
 		4D3336F61A80BE16001BA9A8 /* TRDailyForecastView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D3336F51A80BE16001BA9A8 /* TRDailyForecastView.xib */; };
@@ -335,8 +334,8 @@
 		4ACA58491CC526D600DD0CDC /* RACSignal+TROperators.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "RACSignal+TROperators.h"; sourceTree = "<group>"; };
 		4ACA584A1CC526D600DD0CDC /* RACSignal+TROperators.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "RACSignal+TROperators.m"; sourceTree = "<group>"; };
 		4AEF9E872040C47400CDDEEA /* GeocodeControllerSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeocodeControllerSpec.swift; sourceTree = "<group>"; };
-		4D0A5C361A3A27510084C41E /* TRForecastController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRForecastController.h; sourceTree = "<group>"; };
-		4D0A5C371A3A27510084C41E /* TRForecastController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRForecastController.m; sourceTree = "<group>"; };
+		4AFCB1CD21D67A7600176FDD /* ForecastController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForecastController.swift; sourceTree = "<group>"; };
+		4AFCB1D021D67F2000176FDD /* Date+Relative.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Relative.swift"; sourceTree = "<group>"; };
 		4D0A5C3C1A3A53DD0084C41E /* CWForecastDetailView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CWForecastDetailView.xib; sourceTree = "<group>"; };
 		4D115AF11ADC8C0C0032AAA3 /* SettingsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; tabWidth = 2; };
 		4D1ABA091A89686200B7F8FB /* TRNavigationBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRNavigationBar.h; sourceTree = "<group>"; };
@@ -395,8 +394,6 @@
 		C2E44CE51A3A4273009CC844 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		C2E44CEA1A3A42C6009CC844 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		C2E44CEC1A3A4F56009CC844 /* TRErrors.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TRErrors.h; sourceTree = "<group>"; };
-		C2E44CED1A3B6E89009CC844 /* NSDate+TRRelativeDate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+TRRelativeDate.h"; sourceTree = "<group>"; };
-		C2E44CEE1A3B6E89009CC844 /* NSDate+TRRelativeDate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+TRRelativeDate.m"; sourceTree = "<group>"; };
 		C2E44CF91A3B76B3009CC844 /* NSNumber+TRRoundedNumber.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSNumber+TRRoundedNumber.h"; sourceTree = "<group>"; };
 		C2E44CFA1A3B76B3009CC844 /* NSNumber+TRRoundedNumber.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSNumber+TRRoundedNumber.m"; sourceTree = "<group>"; };
 		D281611EA8A7B26EFB4FBBAC /* libPods-Tropos.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Tropos.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -686,11 +683,10 @@
 		4A552F841CC7D196008C7298 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				4AFCB1D021D67F2000176FDD /* Date+Relative.swift */,
 				4A5FA305212DFF6E00CC313C /* ForecastController+Bridging.swift */,
 				4A69875C1CC817D9002D3F87 /* NSAttributedString.swift */,
 				4A552F851CC7D1A4008C7298 /* NSBundle.swift */,
-				C2E44CED1A3B6E89009CC844 /* NSDate+TRRelativeDate.h */,
-				C2E44CEE1A3B6E89009CC844 /* NSDate+TRRelativeDate.m */,
 				4A81678D212DB8F200E1AD21 /* NSFileCoordinator.swift */,
 				4A552F871CC7D20D008C7298 /* NSLocalizedString.swift */,
 				4A69875B1CC817D9002D3F87 /* UIColor.swift */,
@@ -711,11 +707,10 @@
 		4A69873D1CC803E6002D3F87 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				4AFCB1CD21D67A7600176FDD /* ForecastController.swift */,
 				4A23F4F72041019000FDDC5E /* GeocodeController.swift */,
-				4A69873E1CC80414002D3F87 /* SettingsController.swift */,
-				4D0A5C361A3A27510084C41E /* TRForecastController.h */,
-				4D0A5C371A3A27510084C41E /* TRForecastController.m */,
 				0F9A6CB921CBF4C30035C811 /* LocationController.swift */,
+				4A69873E1CC80414002D3F87 /* SettingsController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -949,7 +944,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				4A552F4D1CC7CBB2008C7298 /* TroposCore.h in Headers */,
-				4A5FA302212DFAD700CC313C /* TRForecastController.h in Headers */,
 				4A5FA2FF212DFA7300CC313C /* TRErrors.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1425,10 +1419,10 @@
 			files = (
 				0F9A6CBA21CBF4C30035C811 /* LocationController.swift in Sources */,
 				4A6987521CC815BF002D3F87 /* WindSpeedFormatter.swift in Sources */,
+				4AFCB1CF21D67AD100176FDD /* ForecastController.swift in Sources */,
 				4A95A142212DDFA600E0B33A /* Geocoder.swift in Sources */,
 				4A6987431CC804FE002D3F87 /* UnitSystem.swift in Sources */,
 				4A552F621CC7CCFA008C7298 /* TimeOfDay.swift in Sources */,
-				4A5FA300212DFAB200CC313C /* NSDate+TRRelativeDate.m in Sources */,
 				4A552F5E1CC7CCFA008C7298 /* DailyForecast.swift in Sources */,
 				4A552F641CC7CCFA008C7298 /* WeatherUpdateCache.swift in Sources */,
 				4A6987591CC81698002D3F87 /* WeatherViewModel.swift in Sources */,
@@ -1441,8 +1435,8 @@
 				4A552F601CC7CCFA008C7298 /* PrecipitationChance.swift in Sources */,
 				4A81678E212DB8F200E1AD21 /* NSFileCoordinator.swift in Sources */,
 				4A552F631CC7CCFA008C7298 /* WeatherUpdate.swift in Sources */,
-				4A5FA301212DFACA00CC313C /* TRForecastController.m in Sources */,
 				4A69874F1CC815BF002D3F87 /* RelativeDateFormatter.swift in Sources */,
+				4AFCB1D121D67F2000176FDD /* Date+Relative.swift in Sources */,
 				4A69873F1CC80414002D3F87 /* SettingsController.swift in Sources */,
 				4A69874E1CC815BF002D3F87 /* PrecipitationChanceFormatter.swift in Sources */,
 				4A552F5D1CC7CCF9008C7298 /* CardinalDirection.swift in Sources */,

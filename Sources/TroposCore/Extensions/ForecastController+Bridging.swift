@@ -3,7 +3,9 @@ import ReactiveSwift
 import Result
 
 extension ForecastController {
-    public func fetchWeatherUpdate(for placemark: CLPlacemark) -> SignalProducer<WeatherUpdate, AnyError> {
-        return SignalProducer(__fetchWeatherUpdate(for: placemark)).map { $0 as! WeatherUpdate }
+    @objc(fetchWeatherUpdateForPlacemark:)
+    // swiftlint:disable:next identifier_name
+    public func __fetchWeatherUpdate(for placemark: CLPlacemark) -> RACSignal<WeatherUpdate> {
+        return fetchWeatherUpdate(for: placemark).bridged
     }
 }
