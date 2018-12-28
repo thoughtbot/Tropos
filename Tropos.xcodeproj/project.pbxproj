@@ -103,6 +103,10 @@
 		4ACA584B1CC526D600DD0CDC /* RACSignal+TROperators.m in Sources */ = {isa = PBXBuildFile; fileRef = 4ACA584A1CC526D600DD0CDC /* RACSignal+TROperators.m */; };
 		4AFCB1CF21D67AD100176FDD /* ForecastController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AFCB1CD21D67A7600176FDD /* ForecastController.swift */; };
 		4AFCB1D121D67F2000176FDD /* Date+Relative.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AFCB1D021D67F2000176FDD /* Date+Relative.swift */; };
+		4AFCB1D921D69A0900176FDD /* ApplicationControllerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AFCB1D821D69A0900176FDD /* ApplicationControllerSpec.swift */; };
+		4AFCB1DB21D69A4300176FDD /* TestApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AFCB1DA21D69A4300176FDD /* TestApplication.swift */; };
+		4AFCB1DD21D69B9000176FDD /* Intents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 4AA138C72134835A0083B816 /* Intents.intentdefinition */; };
+		4AFCB1E121D69F8B00176FDD /* TestLocationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AFCB1E021D69F8B00176FDD /* TestLocationController.swift */; };
 		4D0A5C3D1A3A53DD0084C41E /* CWForecastDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D0A5C3C1A3A53DD0084C41E /* CWForecastDetailView.xib */; };
 		4D1ABA0B1A89686200B7F8FB /* TRNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D1ABA0A1A89686200B7F8FB /* TRNavigationBar.m */; };
 		4D3336F61A80BE16001BA9A8 /* TRDailyForecastView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D3336F51A80BE16001BA9A8 /* TRDailyForecastView.xib */; };
@@ -122,7 +126,6 @@
 		51FEC99E21CD9F3300CDBC97 /* FadingImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51FEC99D21CD9F3300CDBC97 /* FadingImageView.swift */; };
 		571D9DD5621C37A62892B73F /* Pods-Tropos-metadata.plist in Resources */ = {isa = PBXBuildFile; fileRef = D4B3B3DB12D62EC9A8EC8411 /* Pods-Tropos-metadata.plist */; };
 		5DA50AD91A82CAB300CAE666 /* DINNextLTPro-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5DA50AD81A82CAB300CAE666 /* DINNextLTPro-Light.otf */; };
-		5FAE96CA5229DFBDD775F941 /* Pods-TroposTests-metadata.plist in Resources */ = {isa = PBXBuildFile; fileRef = 595C8FCA9791AF242AAFC284 /* Pods-TroposTests-metadata.plist */; };
 		6D0F135C1B432976001685BA /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D0F135A1B432976001685BA /* Nimble.framework */; };
 		6D0F135D1B432976001685BA /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D0F135B1B432976001685BA /* Quick.framework */; };
 		8E55CA903A39795581785ED4 /* libPods-Tropos.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D281611EA8A7B26EFB4FBBAC /* libPods-Tropos.a */; };
@@ -138,7 +141,6 @@
 		A1F869201D3357D6003A826D /* AppearanceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1F8691F1D3357D6003A826D /* AppearanceController.swift */; };
 		A1FC9ED21CFEA23B00E62618 /* TroposCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A552EEF1CC7C8F8008C7298 /* TroposCore.framework */; };
 		A1FC9ED31CFEA23B00E62618 /* TroposCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4A552EEF1CC7C8F8008C7298 /* TroposCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		B5AC964D04349C0D8BAD632A /* libPods-TroposTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FABB92576EA6757C2BBC71D5 /* libPods-TroposTests.a */; };
 		C2E44CE11A3A3C09009CC844 /* TRWeatherViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2E44CE01A3A3C09009CC844 /* TRWeatherViewController.m */; };
 		C2E44CE41A3A4273009CC844 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = C2E44CE61A3A4273009CC844 /* Localizable.strings */; };
 		C2E44CE91A3A42C6009CC844 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C2E44CEB1A3A42C6009CC844 /* InfoPlist.strings */; };
@@ -146,7 +148,6 @@
 		CE5D7F3B45F980082E1BCA30 /* LaunchScreen.xib in Sources */ = {isa = PBXBuildFile; fileRef = B6D58F8AA6976EA1B35682B7 /* LaunchScreen.xib */; };
 		CFC0721C2D9EFFD3C3AE11A7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 059D0BDDF8DCE56549A4C9C6 /* Images.xcassets */; };
 		E7A895541AFD11AA0023205B /* TRApplicationController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7A895531AFD11AA0023205B /* TRApplicationController.m */; };
-		E7B3B9271B34EDFE00BDD5A4 /* TRApplicationControllerSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = E7B3B9261B34EDFE00BDD5A4 /* TRApplicationControllerSpec.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -239,11 +240,9 @@
 		0B30A1610CAE1C2E302C28B0 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0F9A6CB121C996EC0035C811 /* CLLocation+TRRecentLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CLLocation+TRRecentLocation.swift"; sourceTree = "<group>"; };
 		0F9A6CB921CBF4C30035C811 /* LocationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationController.swift; sourceTree = "<group>"; };
-		1646534197E2CBA85836CD1F /* Pods-TroposTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TroposTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TroposTests/Pods-TroposTests.release.xcconfig"; sourceTree = "<group>"; };
 		1CDD2312F1EF05277F045E15 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2014A1EA2643FF36A4C94B5F /* Pods-Tropos.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tropos.release.xcconfig"; path = "Pods/Target Support Files/Pods-Tropos/Pods-Tropos.release.xcconfig"; sourceTree = "<group>"; };
 		22FE01C01AF3F5550085B494 /* Secrets.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Secrets.h; sourceTree = "<group>"; };
-		244290A030AFC3C803EEAEEF /* Pods-TroposTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TroposTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TroposTests/Pods-TroposTests.debug.xcconfig"; sourceTree = "<group>"; };
 		29FF8F48DC831249EC3150FB /* Pods-Tropos.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tropos.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Tropos/Pods-Tropos.debug.xcconfig"; sourceTree = "<group>"; };
 		449386DA1B5044EE00766EC9 /* pl-PL */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pl-PL"; path = "pl-PL.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		449386DB1B5044EE00766EC9 /* pl-PL */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pl-PL"; path = "pl-PL.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
@@ -330,12 +329,16 @@
 		4AA138D821348E360083B816 /* pl-PL */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pl-PL"; path = "pl-PL.lproj/Intents.strings"; sourceTree = "<group>"; };
 		4ABCA2C420CAD14C00C46C4C /* CheckWeatherIntentHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckWeatherIntentHandler.swift; sourceTree = "<group>"; };
 		4ABCA2CC20CB1F5500C46C4C /* TroposIntents.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TroposIntents.entitlements; sourceTree = "<group>"; };
-		4ABCA775205C497A009DF765 /* TroposTests-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TroposTests-Bridging-Header.h"; sourceTree = "<group>"; };
 		4ACA58491CC526D600DD0CDC /* RACSignal+TROperators.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "RACSignal+TROperators.h"; sourceTree = "<group>"; };
 		4ACA584A1CC526D600DD0CDC /* RACSignal+TROperators.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "RACSignal+TROperators.m"; sourceTree = "<group>"; };
 		4AEF9E872040C47400CDDEEA /* GeocodeControllerSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeocodeControllerSpec.swift; sourceTree = "<group>"; };
 		4AFCB1CD21D67A7600176FDD /* ForecastController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForecastController.swift; sourceTree = "<group>"; };
 		4AFCB1D021D67F2000176FDD /* Date+Relative.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Relative.swift"; sourceTree = "<group>"; };
+		4AFCB1D821D69A0900176FDD /* ApplicationControllerSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationControllerSpec.swift; sourceTree = "<group>"; };
+		4AFCB1DA21D69A4300176FDD /* TestApplication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestApplication.swift; sourceTree = "<group>"; };
+		4AFCB1DE21D69BF200176FDD /* TroposTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TroposTests-Bridging-Header.h"; sourceTree = "<group>"; };
+		4AFCB1DF21D69D1600176FDD /* TRApplication.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TRApplication.h; sourceTree = "<group>"; };
+		4AFCB1E021D69F8B00176FDD /* TestLocationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestLocationController.swift; sourceTree = "<group>"; };
 		4D0A5C3C1A3A53DD0084C41E /* CWForecastDetailView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CWForecastDetailView.xib; sourceTree = "<group>"; };
 		4D115AF11ADC8C0C0032AAA3 /* SettingsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; tabWidth = 2; };
 		4D1ABA091A89686200B7F8FB /* TRNavigationBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRNavigationBar.h; sourceTree = "<group>"; };
@@ -368,7 +371,6 @@
 		51FEC99B21CD9E4A00CDBC97 /* CATransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CATransition.swift; sourceTree = "<group>"; };
 		51FEC99D21CD9F3300CDBC97 /* FadingImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FadingImageView.swift; sourceTree = "<group>"; };
 		57761BB4DFB42997964F13EE /* Tropos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tropos.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		595C8FCA9791AF242AAFC284 /* Pods-TroposTests-metadata.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; name = "Pods-TroposTests-metadata.plist"; path = "Pods/Pods-TroposTests-metadata.plist"; sourceTree = "<group>"; };
 		5DA50AD81A82CAB300CAE666 /* DINNextLTPro-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DINNextLTPro-Light.otf"; sourceTree = "<group>"; };
 		650F157E1B3DD256004B01B2 /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		65685FF21B3D299C0054BA1A /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -400,8 +402,6 @@
 		D4B3B3DB12D62EC9A8EC8411 /* Pods-Tropos-metadata.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; name = "Pods-Tropos-metadata.plist"; path = "Pods/Pods-Tropos-metadata.plist"; sourceTree = "<group>"; };
 		E7A895521AFD11AA0023205B /* TRApplicationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRApplicationController.h; sourceTree = "<group>"; };
 		E7A895531AFD11AA0023205B /* TRApplicationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRApplicationController.m; sourceTree = "<group>"; };
-		E7B3B9261B34EDFE00BDD5A4 /* TRApplicationControllerSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRApplicationControllerSpec.m; sourceTree = "<group>"; };
-		FABB92576EA6757C2BBC71D5 /* libPods-TroposTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TroposTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -461,7 +461,6 @@
 				4AA138D9213494970083B816 /* TroposCore.framework in Frameworks */,
 				6D0F135C1B432976001685BA /* Nimble.framework in Frameworks */,
 				6D0F135D1B432976001685BA /* Quick.framework in Frameworks */,
-				B5AC964D04349C0D8BAD632A /* libPods-TroposTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -490,9 +489,6 @@
 				2014A1EA2643FF36A4C94B5F /* Pods-Tropos.release.xcconfig */,
 				29FF8F48DC831249EC3150FB /* Pods-Tropos.debug.xcconfig */,
 				D4B3B3DB12D62EC9A8EC8411 /* Pods-Tropos-metadata.plist */,
-				1646534197E2CBA85836CD1F /* Pods-TroposTests.release.xcconfig */,
-				244290A030AFC3C803EEAEEF /* Pods-TroposTests.debug.xcconfig */,
-				595C8FCA9791AF242AAFC284 /* Pods-TroposTests-metadata.plist */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -550,7 +546,9 @@
 		4A0DD7531CCA97BB00E7A451 /* Support */ = {
 			isa = PBXGroup;
 			children = (
-				4ABCA775205C497A009DF765 /* TroposTests-Bridging-Header.h */,
+				4AFCB1DA21D69A4300176FDD /* TestApplication.swift */,
+				4AFCB1E021D69F8B00176FDD /* TestLocationController.swift */,
+				4AFCB1DE21D69BF200176FDD /* TroposTests-Bridging-Header.h */,
 			);
 			path = Support;
 			sourceTree = "<group>";
@@ -828,6 +826,7 @@
 			isa = PBXGroup;
 			children = (
 				4D9A000D1A9D7868000835A9 /* TRAnalyticsEvent.h */,
+				4AFCB1DF21D69D1600176FDD /* TRApplication.h */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -844,7 +843,6 @@
 			isa = PBXGroup;
 			children = (
 				D281611EA8A7B26EFB4FBBAC /* libPods-Tropos.a */,
-				FABB92576EA6757C2BBC71D5 /* libPods-TroposTests.a */,
 				4A92135321D5680200F524AA /* CoreLocation.framework */,
 				4A95A150212DE48E00E0B33A /* Foundation.framework */,
 				6D0F135A1B432976001685BA /* Nimble.framework */,
@@ -896,7 +894,7 @@
 		E7B3B9281B34EE0500BDD5A4 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				E7B3B9261B34EDFE00BDD5A4 /* TRApplicationControllerSpec.m */,
+				4AFCB1D821D69A0900176FDD /* ApplicationControllerSpec.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -1038,13 +1036,10 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2F9F5A62DE2B467BF3AC0803 /* Build configuration list for PBXNativeTarget "TroposTests" */;
 			buildPhases = (
-				A565C89E886EB8A1055BA279 /* [CP] Check Pods Manifest.lock */,
 				EA479D4EB3908A519BE3068F /* Sources */,
 				C0B1FEA5C5D5A245394E3479 /* Frameworks */,
 				00C863EF3E2818AC40D913B2 /* Resources */,
 				4AC287A31CBC3D700064F48A /* Embed Carthage Frameworks */,
-				32CF71B2B8F90619C0D52046 /* [CP] Embed Pods Frameworks */,
-				EE4945A9579F47C2B90523B2 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -1144,7 +1139,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5FAE96CA5229DFBDD775F941 /* Pods-TroposTests-metadata.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1191,21 +1185,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		32CF71B2B8F90619C0D52046 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TroposTests/Pods-TroposTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		6D0F13551B4328C2001685BA /* Copy Carthage Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -1273,24 +1252,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Tropos/Pods-Tropos-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		A565C89E886EB8A1055BA279 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-TroposTests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		B7DE70105B59EDB7B1D6100E /* [CP] Embed Pods Frameworks */ = {
@@ -1383,21 +1344,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}\"/bin/swiftlint --path Tests/TroposCoreTests\n";
-			showEnvVarsInLog = 0;
-		};
-		EE4945A9579F47C2B90523B2 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TroposTests/Pods-TroposTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -1523,7 +1469,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E7B3B9271B34EDFE00BDD5A4 /* TRApplicationControllerSpec.m in Sources */,
+				4AFCB1E121D69F8B00176FDD /* TestLocationController.swift in Sources */,
+				4AFCB1DB21D69A4300176FDD /* TestApplication.swift in Sources */,
+				4AFCB1DD21D69B9000176FDD /* Intents.intentdefinition in Sources */,
+				4AFCB1D921D69A0900176FDD /* ApplicationControllerSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2035,7 +1984,6 @@
 		};
 		BE35CA6D8F6866BE32125599 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 244290A030AFC3C803EEAEEF /* Pods-TroposTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -2066,7 +2014,6 @@
 		};
 		F4E6325B50F0BD99456C271F /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1646534197E2CBA85836CD1F /* Pods-TroposTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";

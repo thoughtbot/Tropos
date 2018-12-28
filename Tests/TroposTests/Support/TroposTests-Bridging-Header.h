@@ -1,1 +1,1 @@
-#import "Tropos-Bridging-Header.h"
+#import "TRApplicationController.h"
