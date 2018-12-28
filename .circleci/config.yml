@@ -41,7 +41,7 @@ jobs:
           paths:
             - "Pods"
       - save_cache:
-          key: carthage-{{ checksum ".circle-xcode-version" }}-{{ checksum "Cartfile.resolved" }}
+          key: carthage-{{ checksum ".circle-carthage-cache-version" }}-{{ checksum ".circle-xcode-version" }}-{{ checksum "Cartfile.resolved" }}
           paths:
             - "~/Library/Caches/org.carthage.CarthageKit"
             - "Carthage"
