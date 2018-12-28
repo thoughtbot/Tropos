@@ -13,6 +13,9 @@ jobs:
           name: Save Xcode version
           command: xcodebuild -version | tee .circle-xcode-version
       - run:
+          name: Save Carthage cache version
+          command: echo "$CARTHAGE_CACHE_VERSION" | tee .circle-carthage-cache-version
+      - run:
           name: Pre-fetch CocoaPods specs
           command: |
             curl https://cocoapods-specs.circleci.com/fetch-cocoapods-repo-from-s3.sh | bash -s cf
@@ -23,9 +26,9 @@ jobs:
             - cocoapods-
       - restore_cache:
           keys:
-            - carthage-{{ checksum ".circle-xcode-version" }}-{{ checksum "Cartfile.resolved" }}
-            - carthage-{{ checksum ".circle-xcode-version" }}
-            - carthage-
+            - carthage-{{ checksum ".circle-carthage-cache-version" }}-{{ checksum ".circle-xcode-version" }}-{{ checksum "Cartfile.resolved" }}
+            - carthage-{{ checksum ".circle-carthage-cache-version" }}-{{ checksum ".circle-xcode-version" }}
+            - carthage-{{ checksum ".circle-carthage-cache-version" }}-
 
       - run: bin/setup
 
