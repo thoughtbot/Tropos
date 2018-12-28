@@ -38,7 +38,10 @@ import Result
 
     public func requestLocation() -> SignalProducer<CLLocation, CLError> {
         return SignalProducer { [locationManager, locationUpdates, locationUpdateError] observer, lifetime in
-            lifetime += locationUpdates.output.promoteError().observe(observer)
+            lifetime += locationUpdates.output
+                .take(first: 1)
+                .promoteError()
+                .observe(observer)
 
             lifetime += locationUpdateError.output.observeValues { error in
                 observer.send(error: error)
