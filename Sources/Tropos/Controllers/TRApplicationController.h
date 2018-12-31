@@ -11,7 +11,6 @@ NS_SWIFT_NAME(ApplicationController)
 @property (nonatomic) TRWeatherViewController *rootViewController;
 
 - (RACSignal *)updateWeather;
-- (RACSignal *)localWeatherNotification;
 - (void)setMinimumBackgroundFetchIntervalForApplication:(UIApplication *)application
     NS_SWIFT_NAME(setMinimumBackgroundFetchInterval(for:));
 

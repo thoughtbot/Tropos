@@ -34,23 +34,6 @@
     return [self.weatherController.updateWeatherCommand execute:self];
 }
 
-- (RACSignal *)localWeatherNotification
-{
-    RACSignal *conditionsDescription = self.weatherController.conditionsDescription;
-
-    RACSignal *updatedConditions = [self.updateWeather then:^RACSignal *{
-        return [conditionsDescription take:1];
-    }];
-
-    return [updatedConditions map:^(NSAttributedString *conditions) {
-        UILocalNotification *notification = [[UILocalNotification alloc] init];
-        notification.fireDate = [NSDate distantPast];
-        notification.alertTitle = NSLocalizedStringFromTable(@"CFBundleDisplayName", @"InfoPlist", @"The app's display name");
-        notification.alertBody = conditions.string;
-        return notification;
-    }];
-}
-
 - (void)setMinimumBackgroundFetchIntervalForApplication:(UIApplication *)application
 {
     if ([self.locationController authorizationStatusEqualTo:kCLAuthorizationStatusAuthorizedAlways]) {
