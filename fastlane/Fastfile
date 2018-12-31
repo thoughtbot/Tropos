@@ -15,49 +15,63 @@ platform :ios do
 
   desc "Submit a new Beta Build to Apple TestFlight"
   desc "This will also make sure the profile is up to date"
-  lane :beta do
-    validate_env!
-    match(type: "appstore", app_identifier: [
-      "com.thoughtbot.carlweathers",
-      "com.thoughtbot.carlweathers.TroposIntents",
-    ])
-    increment_build_number
-    build
-    testflight(skip_waiting_for_build_processing: true)
+  lane :beta do |options|
+    setup_certs
+
+    next_build_number(options) do
+      build
+      testflight(skip_waiting_for_build_processing: true)
+    end
   end
 
   desc "Deploy a new version to the App Store"
-  lane :release do
-    validate_env!
-    match(type: "appstore")
-    increment_build_number
-    build
-    deliver(force: true)
+  lane :release do |options|
+    setup_certs
+
+    next_build_number(options) do
+      build
+      deliver(force: true)
+    end
   end
 
   desc "Bump the version, tag and push"
   lane :bump_version do |options|
-    validate_env!
-    type = options.fetch(:type, "build")
-
-    case type
-    when "build"
-      increment_build_number
-    else
-      increment_version_number(bump_type: type)
-      increment_build_number
-    end
-
-    commit_version_bump(xcodeproj: "Tropos.xcodeproj", ignore: %r{^(?!Sources)/})
-    version = get_version_number(target: "Tropos")
-    build = get_build_number
-    add_git_tag(tag: "v#{version}+#{build}")
-    push_to_git_remote
+    next_build_number(options)
   end
 
   private_lane :build do
     build_ios_app(scheme: "Tropos", buildlog_path: "log")
   end
+
+  private_lane :setup_certs do
+    validate_env!
+    match(type: "appstore", app_identifier: [
+      "com.thoughtbot.carlweathers",
+      "com.thoughtbot.carlweathers.TroposIntents",
+    ])
+  end
+end
+
+def next_build_number(options={})
+  type = options.fetch(:type, "build")
+
+  case type
+  when "build"
+    increment_build_number
+  else
+    increment_version_number(bump_type: type)
+    increment_build_number
+  end
+
+  result = yield if block_given?
+
+  commit_version_bump(xcodeproj: "Tropos.xcodeproj", ignore: %r{^(?!Sources)/})
+  version = get_version_number(target: "Tropos")
+  build = get_build_number
+  add_git_tag(tag: "v#{version}+#{build}")
+  push_to_git_remote
+
+  result
 end
 
 def validate_env!
