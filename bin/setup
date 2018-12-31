@@ -7,6 +7,7 @@ if [[ -n $CARTHAGE_LOG_PATH ]]; then
 fi
 
 brew bundle
+gem install xcpretty
 carthage bootstrap --platform iOS --cache-builds --no-use-binaries "${carthage_log_opts[@]}"
 
 tropos_secrets="Config/Secrets.h"
