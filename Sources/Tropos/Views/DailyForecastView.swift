@@ -24,12 +24,4 @@ import TroposCore
         super.layoutSubviews()
         contentView.frame = bounds
     }
-
-    func setViewModel(dailyForecastViewModel: DailyForecastViewModel) {
-        viewModel = dailyForecastViewModel
-        dayOfWeekLabel.text = dailyForecastViewModel.dayOfWeek
-        conditionsImageView.image = dailyForecastViewModel.conditionsImage
-        highTemperatureLabel.text = dailyForecastViewModel.highTemperature
-        lowTemperatureLabel.text = dailyForecastViewModel.lowTemperature
-    }
 }
