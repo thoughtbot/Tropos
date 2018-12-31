@@ -2,3 +2,4 @@
 
 brew "carthage"
 brew "swiftlint"
+cask "fastlane"

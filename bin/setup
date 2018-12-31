@@ -6,7 +6,6 @@ if [[ -n $CARTHAGE_LOG_PATH ]]; then
   carthage_log_opts=(--log-path "$CARTHAGE_LOG_PATH")
 fi
 
-bundle install
 brew bundle
 carthage bootstrap --platform iOS --cache-builds --no-use-binaries "${carthage_log_opts[@]}"
 
