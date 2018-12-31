@@ -2,28 +2,22 @@ version: 2
 jobs:
   build-and-test:
     environment:
-      CARTHAGE_LOG_PATH: Carthage/build.log
+      CARTHAGE_LOG_PATH: log/carthage-build.log
+      GEM_INSTALL_LOG_PATH: log/gem-install.log
 
     macos:
       xcode: "10.1.0"
 
     steps:
       - checkout
+      - run: mkdir log
       - run:
           name: Save Xcode version
           command: xcodebuild -version | tee .circle-xcode-version
       - run:
           name: Save Carthage cache version
           command: echo "$CARTHAGE_CACHE_VERSION" | tee .circle-carthage-cache-version
-      - run:
-          name: Pre-fetch CocoaPods specs
-          command: |
-            curl https://cocoapods-specs.circleci.com/fetch-cocoapods-repo-from-s3.sh | bash -s cf
 
-      - restore_cache:
-          keys:
-            - cocoapods-{{ checksum "Podfile.lock" }}
-            - cocoapods-
       - restore_cache:
           keys:
             - carthage-{{ checksum ".circle-carthage-cache-version" }}-{{ checksum ".circle-xcode-version" }}-{{ checksum "Cartfile.resolved" }}
@@ -32,14 +26,6 @@ jobs:
 
       - run: bin/setup
 
-      - store_artifacts:
-          path: Carthage/build.log
-          destination: carthage-build.log
-
-      - save_cache:
-          key: cocoapods-{{ checksum "Podfile.lock" }}
-          paths:
-            - "Pods"
       - save_cache:
           key: carthage-{{ checksum ".circle-carthage-cache-version" }}-{{ checksum ".circle-xcode-version" }}-{{ checksum "Cartfile.resolved" }}
           paths:
@@ -48,6 +34,9 @@ jobs:
 
       - run: bin/test
       - run: bin/archive
+
+      - store_artifacts:
+          path: log
 
 workflows:
   version: 2

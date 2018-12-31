@@ -2,13 +2,21 @@
 
 set -e
 
+gem_install_log="${GEM_INSTALL_LOG_PATH:-.gem-install.log}"
+
+gem_install() {
+  gem_name=$1
+
+  gem install "$gem_name" --user-install &> "$gem_install_log" \
+    && echo "Installed $gem_name"
+}
+
 if [[ -n $CARTHAGE_LOG_PATH ]]; then
   carthage_log_opts=(--log-path "$CARTHAGE_LOG_PATH")
 fi
 
-bundle install
-bundle exec pod install
 brew bundle
+gem_install xcpretty
 carthage bootstrap --platform iOS --cache-builds --no-use-binaries "${carthage_log_opts[@]}"
 
 tropos_secrets="Config/Secrets.h"

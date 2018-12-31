@@ -10,7 +10,7 @@ default_platform :ios
 platform :ios do
   desc "Runs all the tests"
   lane :test do
-    scan(scheme: "Tropos")
+    run_tests(scheme: "Tropos")
   end
 
   desc "Submit a new Beta Build to Apple TestFlight"
@@ -22,7 +22,7 @@ platform :ios do
       "com.thoughtbot.carlweathers.TroposIntents",
     ])
     increment_build_number
-    gym(scheme: "Tropos")
+    build
     testflight(skip_waiting_for_build_processing: true)
   end
 
@@ -31,7 +31,7 @@ platform :ios do
     validate_env!
     match(type: "appstore")
     increment_build_number
-    gym(scheme: "Tropos")
+    build
     deliver(force: true)
   end
 
@@ -53,6 +53,10 @@ platform :ios do
     build = get_build_number
     add_git_tag(tag: "v#{version}+#{build}")
     push_to_git_remote
+  end
+
+  private_lane :build do
+    build_ios_app(scheme: "Tropos", buildlog_path: "log")
   end
 end
 

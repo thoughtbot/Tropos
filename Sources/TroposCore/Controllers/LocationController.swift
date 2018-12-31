@@ -4,7 +4,8 @@ import ReactiveObjCBridge
 import ReactiveSwift
 import Result
 
-@objc(TRLocationController) public class LocationController: NSObject, CLLocationManagerDelegate {
+@objc(TRLocationController)
+open class LocationController: NSObject, CLLocationManagerDelegate {
     private let locationManager: CLLocationManager
     private let locationUpdates = Signal<CLLocation, NoError>.pipe()
     private let locationUpdateError = Signal<CLError, NoError>.pipe()
@@ -32,7 +33,7 @@ import Result
         self.init(locationManager: CLLocationManager())
     }
 
-    @objc public func authorizationStatusEqualTo(_ status: CLAuthorizationStatus) -> Bool {
+    @objc open func authorizationStatusEqualTo(_ status: CLAuthorizationStatus) -> Bool {
         return CLLocationManager.authorizationStatus() == status
     }
 

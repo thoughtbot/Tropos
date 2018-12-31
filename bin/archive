@@ -2,7 +2,9 @@
 
 set -eo pipefail
 
-if [ "$CI" = "true" -a -z "$DISABLE_CODE_SIGNING" ]; then
+xcpretty="$(ruby -r rubygems -e 'puts Gem.bindir(Gem.user_dir)')"/xcpretty
+
+if [ "$CI" = "true" ] && [ -z "$DISABLE_CODE_SIGNING" ]; then
   DISABLE_CODE_SIGNING="true"
 fi
 
@@ -10,8 +12,8 @@ if [ "$DISABLE_CODE_SIGNING" = "true" ]; then
   echo >&2 "Running with code signing disabled (set DISABLE_CODE_SIGNING=false to enable)"
 
   code_sign_xcconfig=$(mktemp /tmp/tropos-bin-archive.XXXXXX)
+  # shellcheck disable=SC2064
   trap "rm -f '$code_sign_xcconfig'" INT TERM HUP EXIT
-
   cat >"$code_sign_xcconfig" <<EOF
 CODE_SIGNING_REQUIRED=NO
 CODE_SIGN_ENTITLEMENTS=
@@ -24,8 +26,8 @@ else
 fi
 
 xcodebuild archive \
-  -workspace Tropos.xcworkspace \
+  -project Tropos.xcodeproj \
   -scheme Tropos \
-  -archivePath $PWD/build/Tropos.xcarchive \
-  SYMROOT=$PWD/build \
-| xcpretty -c
+  -archivePath "$PWD/build/Tropos.xcarchive" \
+  SYMROOT="$PWD/build" \
+  | "$xcpretty" -c
