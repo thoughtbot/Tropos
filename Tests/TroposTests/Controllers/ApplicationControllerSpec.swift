@@ -1,12 +1,15 @@
 import Nimble
 import Quick
+import UIKit
 
 final class ApplicationControllerSpec: QuickSpec {
     override func spec() {
         describe("setMinimimBackgroundFetchIntervalForApplication") {
             it("sets the interval to minimum when authorization is always") {
                 let application = TestApplication()
-                let controller = ApplicationController()
+                let locationController = TestLocationController()
+                locationController.authorizationStatus = .authorizedAlways
+                let controller = ApplicationController(locationController: locationController)
 
                 var interval: TimeInterval?
                 application.didSetMinimumBackgroundFetchInterval = { interval = $0 }
