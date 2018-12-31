@@ -2,6 +2,8 @@
 
 set -eo pipefail
 
+xcpretty="$(ruby -r rubygems -e 'puts Gem.bindir(Gem.user_dir)')"/xcpretty
+
 if [ "$CI" = "true" ] && [ -z "$DISABLE_CODE_SIGNING" ]; then
   DISABLE_CODE_SIGNING="true"
 fi
@@ -28,4 +30,4 @@ xcodebuild archive \
   -scheme Tropos \
   -archivePath "$PWD/build/Tropos.xcarchive" \
   SYMROOT="$PWD/build" \
-  | xcpretty -c
+  | "$xcpretty" -c

@@ -19,6 +19,10 @@ build/
 *.LinkFileList
 *.hmap
 
+# Log files
+/log/
+.*.log
+
 # Automatic backup files
 *~.nib/
 *.swp

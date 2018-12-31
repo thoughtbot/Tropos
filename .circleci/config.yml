@@ -2,13 +2,15 @@ version: 2
 jobs:
   build-and-test:
     environment:
-      CARTHAGE_LOG_PATH: Carthage/build.log
+      CARTHAGE_LOG_PATH: log/carthage-build.log
+      GEM_INSTALL_LOG_PATH: log/gem-install.log
 
     macos:
       xcode: "10.1.0"
 
     steps:
       - checkout
+      - run: mkdir log
       - run:
           name: Save Xcode version
           command: xcodebuild -version | tee .circle-xcode-version
@@ -24,10 +26,6 @@ jobs:
 
       - run: bin/setup
 
-      - store_artifacts:
-          path: Carthage/build.log
-          destination: carthage-build.log
-
       - save_cache:
           key: carthage-{{ checksum ".circle-carthage-cache-version" }}-{{ checksum ".circle-xcode-version" }}-{{ checksum "Cartfile.resolved" }}
           paths:
@@ -36,6 +34,9 @@ jobs:
 
       - run: bin/test
       - run: bin/archive
+
+      - store_artifacts:
+          path: log
 
 workflows:
   version: 2
