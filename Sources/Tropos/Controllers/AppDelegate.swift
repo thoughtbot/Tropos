@@ -62,7 +62,7 @@ private extension AppDelegate {
     }
 
     func assertValidSecrets() {
-        assert(!TRAppCenterIdentifier.isEmpty, "App Center identifier not set")
+        assert(!TRAppCenterSecret.isEmpty, "App Center identifier not set")
         assert(!TRForecastAPIKey.isEmpty, "Forecast API key not set")
         assert(!TRMixpanelToken.isEmpty, "Mixpanel token not set")
     }
@@ -75,7 +75,7 @@ private extension AppDelegate {
 
     func setupCrashReporting() {
 #if !DEBUG
-        MSAppCenter.start(TRAppCenterIdentifier, withServices: [MSCrashes.self])
+        MSAppCenter.start(TRAppCenterSecret, withServices: [MSCrashes.self])
 #endif
     }
 }
