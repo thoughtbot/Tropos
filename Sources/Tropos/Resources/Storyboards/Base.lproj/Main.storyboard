@@ -12,6 +12,9 @@
         <array key="DINNextLTPro-Light.otf">
             <string>DINNextLTPro-Light</string>
         </array>
+        <array key="DINNextLTPro-Regular.otf">
+            <string>DINNextLTPro-Regular</string>
+        </array>
     </customFonts>
     <scenes>
         <!--Navigation Controller-->
@@ -21,6 +24,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" translucent="NO" id="RuT-sk-dJ7" customClass="TRNavigationBar">
                         <rect key="frame" x="0.0" y="44" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="barTintColor" red="0.098039217293262482" green="0.098039217293262482" blue="0.12941177189350128" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </navigationBar>
                     <connections>
@@ -124,7 +128,7 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.12549019610000001" green="0.12549019610000001" blue="0.16078431369999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <connections>
-                                            <segue destination="Enm-0f-f8E" kind="show" identifier="ShowTextViewController" id="abn-8w-Ca5"/>
+                                            <segue destination="l0Q-5J-KY6" kind="show" identifier="ShowAcknowledgementsViewController" id="jSH-km-Hdi"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="Kyi-gF-n4C" style="IBUITableViewCellStyleDefault" id="xtL-JB-Fj2" customClass="TRTableViewCell" customModule="Tropos" customModuleProvider="target">
@@ -234,9 +238,51 @@
             <point key="canvasLocation" x="1592" y="489"/>
         </scene>
         <!--Acknowledgements-->
+        <scene sceneID="fGE-LT-R6L">
+            <objects>
+                <tableViewController title="Acknowledgements" id="l0Q-5J-KY6" customClass="AcknowledgementsViewController" customModule="Tropos" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="Eok-nf-JVz">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="724"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.098039215690000001" green="0.098039215690000001" blue="0.12941176469999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="separatorColor" red="0.31764705879999999" green="0.31764705879999999" blue="0.3411764706" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="Library" textLabel="fL4-BI-6Jc" style="IBUITableViewCellStyleDefault" id="bKf-7C-C6j" customClass="TRTableViewCell" customModule="Tropos" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="55.333333333333343" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="bKf-7C-C6j" id="AZn-ge-Afa">
+                                    <rect key="frame" x="0.0" y="0.0" width="341" height="43.666666666666664"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Library Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="fL4-BI-6Jc">
+                                            <rect key="frame" x="16" y="0.0" width="324" height="43.666666666666664"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" name="DINNextLTPro-Regular" family="DIN Next LT Pro" pointSize="18"/>
+                                            <color key="textColor" red="0.78039215689999997" green="0.78039215689999997" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" red="0.12549019610000001" green="0.12549019610000001" blue="0.16078431369999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <segue destination="Enm-0f-f8E" kind="show" id="48M-Ck-KaC"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="l0Q-5J-KY6" id="yOj-tt-NQF"/>
+                            <outlet property="delegate" destination="l0Q-5J-KY6" id="WlW-TC-ERt"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="z76-Hb-eo5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2438" y="825"/>
+        </scene>
+        <!--Library Name-->
         <scene sceneID="4t6-Kg-YO5">
             <objects>
-                <viewController title="Acknowledgements" extendedLayoutIncludesOpaqueBars="YES" id="Enm-0f-f8E" customClass="TextViewController" customModule="Tropos" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Library Name" extendedLayoutIncludesOpaqueBars="YES" id="Enm-0f-f8E" customClass="TextViewController" customModule="Tropos" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y43-bw-wdo"/>
                         <viewControllerLayoutGuide type="bottom" id="8G0-NH-pi4"/>
@@ -268,7 +314,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wme-Ob-5Di" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2296.8000000000002" y="853.44827586206895"/>
+            <point key="canvasLocation" x="3249" y="825"/>
         </scene>
         <!--Privacy Policy-->
         <scene sceneID="DxE-L7-Zc8">
@@ -306,7 +352,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VrL-gb-FND" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2297" y="157"/>
+            <point key="canvasLocation" x="2438" y="151"/>
         </scene>
         <!--Weather View Controller-->
         <scene sceneID="cNb-lY-ZEM">

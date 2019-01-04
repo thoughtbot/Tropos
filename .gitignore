@@ -15,6 +15,7 @@ xcuserdata
 
 # Build products
 build/
+.build/
 *.o
 *.LinkFileList
 *.hmap
@@ -30,9 +31,6 @@ build/
 *.dat
 *.dep
 
-# Cocoapods
-Pods
-
 # AppCode specific files
 .idea/
 *.iml
@@ -43,5 +41,9 @@ fastlane/Preview.html
 fastlane/screenshots
 fastlane/test_output
 
+# Config files
 Secrets.h
 .env
+
+# Generated files
+Sources/Tropos/Resources/Settings.bundle/Acknowledgements*

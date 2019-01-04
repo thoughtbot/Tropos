@@ -3,7 +3,7 @@ import UIKit
 
 private enum SegueIdentifier: String {
     case privacyPolicy = "ShowWebViewController"
-    case acknowledgements = "ShowTextViewController"
+    case acknowledgements = "ShowAcknowledgementsViewController"
 
     init?(identifier: String?) {
         guard let identifier = identifier else { return nil }
@@ -76,15 +76,7 @@ class SettingsTableViewController: UITableViewController {
         case .privacyPolicy?:
             let webViewController = segue.destination as? WebViewController
             webViewController?.url = URL(string: "http://www.troposweather.com/privacy/")!
-        case .acknowledgements?:
-            let textViewController = segue.destination as? TextViewController
-            let fileURL = Bundle.main.url(
-                forResource: "Pods-Tropos-settings-metadata",
-                withExtension: "plist"
-            )
-            let parser = fileURL.flatMap { AcknowledgementsParser(fileURL: $0) }
-            textViewController?.text = parser?.displayString()
-        case nil:
+        default:
             break
         }
     }

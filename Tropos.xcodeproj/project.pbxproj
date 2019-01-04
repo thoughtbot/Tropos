@@ -100,6 +100,14 @@
 		4ABCA2C320CAD0B300C46C4C /* TroposCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A552EEF1CC7C8F8008C7298 /* TroposCore.framework */; };
 		4AC287A41CBC3D800064F48A /* Nimble.framework in Embed Carthage Frameworks */ = {isa = PBXBuildFile; fileRef = 6D0F135A1B432976001685BA /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		4AC287A51CBC3D820064F48A /* Quick.framework in Embed Carthage Frameworks */ = {isa = PBXBuildFile; fileRef = 6D0F135B1B432976001685BA /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		4ACA4F1921DFB69100741046 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 4ACA4F1821DFB69100741046 /* Settings.bundle */; };
+		4ACA4F1B21DFD2ED00741046 /* AcknowledgementsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ACA4F1A21DFD2ED00741046 /* AcknowledgementsViewController.swift */; };
+		4ACA4F2321E0019400741046 /* PreferencePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ACA4F2221E0019400741046 /* PreferencePage.swift */; };
+		4ACA4F2721E0020900741046 /* libSettings.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4ACA4F2021E0019400741046 /* libSettings.a */; };
+		4ACA4F2B21E0025100741046 /* PreferenceSpecifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ACA4F2A21E0025100741046 /* PreferenceSpecifier.swift */; };
+		4ACA4F2D21E002C000741046 /* Bundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ACA4F2C21E002C000741046 /* Bundle.swift */; };
+		4ACA4F2F21E0152000741046 /* Optional.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ACA4F2E21E0152000741046 /* Optional.swift */; };
+		4ACA4F3121E0166200741046 /* NilError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ACA4F3021E0166200741046 /* NilError.swift */; };
 		4ACA584B1CC526D600DD0CDC /* RACSignal+TROperators.m in Sources */ = {isa = PBXBuildFile; fileRef = 4ACA584A1CC526D600DD0CDC /* RACSignal+TROperators.m */; };
 		4AFCB1CF21D67AD100176FDD /* ForecastController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AFCB1CD21D67A7600176FDD /* ForecastController.swift */; };
 		4AFCB1D121D67F2000176FDD /* Date+Relative.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AFCB1D021D67F2000176FDD /* Date+Relative.swift */; };
@@ -172,6 +180,13 @@
 			remoteGlobalIDString = 4A552EEE1CC7C8F8008C7298;
 			remoteInfo = TroposCore;
 		};
+		4ACA4F2821E0022900741046 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 198EF8739DFBDBC4FBC67D3B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4ACA4F1F21E0019400741046;
+			remoteInfo = Settings;
+		};
 		A1FC9ED41CFEA23B00E62618 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 198EF8739DFBDBC4FBC67D3B /* Project object */;
@@ -220,6 +235,15 @@
 				4AC287A51CBC3D820064F48A /* Quick.framework in Embed Carthage Frameworks */,
 			);
 			name = "Embed Carthage Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4ACA4F1E21E0019400741046 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		A1FC9ED61CFEA23B00E62618 /* Embed Frameworks */ = {
@@ -327,6 +351,14 @@
 		4AA138D821348E360083B816 /* pl-PL */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pl-PL"; path = "pl-PL.lproj/Intents.strings"; sourceTree = "<group>"; };
 		4ABCA2C420CAD14C00C46C4C /* CheckWeatherIntentHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckWeatherIntentHandler.swift; sourceTree = "<group>"; };
 		4ABCA2CC20CB1F5500C46C4C /* TroposIntents.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TroposIntents.entitlements; sourceTree = "<group>"; };
+		4ACA4F1821DFB69100741046 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
+		4ACA4F1A21DFD2ED00741046 /* AcknowledgementsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcknowledgementsViewController.swift; sourceTree = "<group>"; };
+		4ACA4F2021E0019400741046 /* libSettings.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libSettings.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		4ACA4F2221E0019400741046 /* PreferencePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencePage.swift; sourceTree = "<group>"; };
+		4ACA4F2A21E0025100741046 /* PreferenceSpecifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferenceSpecifier.swift; sourceTree = "<group>"; };
+		4ACA4F2C21E002C000741046 /* Bundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bundle.swift; sourceTree = "<group>"; };
+		4ACA4F2E21E0152000741046 /* Optional.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Optional.swift; sourceTree = "<group>"; };
+		4ACA4F3021E0166200741046 /* NilError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NilError.swift; sourceTree = "<group>"; };
 		4ACA58491CC526D600DD0CDC /* RACSignal+TROperators.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "RACSignal+TROperators.h"; sourceTree = "<group>"; };
 		4ACA584A1CC526D600DD0CDC /* RACSignal+TROperators.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "RACSignal+TROperators.m"; sourceTree = "<group>"; };
 		4AEF9E872040C47400CDDEEA /* GeocodeControllerSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeocodeControllerSpec.swift; sourceTree = "<group>"; };
@@ -439,10 +471,18 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		4ACA4F1D21E0019400741046 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		800364D174D6FAD56EBFE31C /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4ACA4F2721E0020900741046 /* libSettings.a in Frameworks */,
 				4AFCB1E921D6C32100176FDD /* AppCenter.framework in Frameworks */,
 				4AFCB1EA21D6C32100176FDD /* AppCenterCrashes.framework in Frameworks */,
 				A1FC9ED21CFEA23B00E62618 /* TroposCore.framework in Frameworks */,
@@ -492,6 +532,7 @@
 				C2E44CEB1A3A42C6009CC844 /* InfoPlist.strings */,
 				C2E44CE61A3A4273009CC844 /* Localizable.strings */,
 				3AC958D858D40E8D581F9DD8 /* Nibs */,
+				4ACA4F1821DFB69100741046 /* Settings.bundle */,
 				7786B6CD5802E36505CA8896 /* Storyboards */,
 			);
 			path = Resources;
@@ -556,6 +597,7 @@
 		4A21D76020C9E1C10055A2AF /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				4ACA4F2121E0019400741046 /* Settings */,
 				4A0DD7521CCA968500E7A451 /* Tropos */,
 				4A552F401CC7CB9B008C7298 /* TroposCore */,
 				4A21D76620C9E6FA0055A2AF /* TroposIntents */,
@@ -768,6 +810,16 @@
 			path = Protocols;
 			sourceTree = "<group>";
 		};
+		4ACA4F2121E0019400741046 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				4ACA4F2C21E002C000741046 /* Bundle.swift */,
+				4ACA4F2221E0019400741046 /* PreferencePage.swift */,
+				4ACA4F2A21E0025100741046 /* PreferenceSpecifier.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
 		4D0A5C3E1A3A578E0084C41E /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
@@ -809,6 +861,7 @@
 				4A552EEF1CC7C8F8008C7298 /* TroposCore.framework */,
 				4A552EF81CC7C8F8008C7298 /* TroposCoreSpecs.xctest */,
 				4A21D76520C9E6FA0055A2AF /* TroposIntents.appex */,
+				4ACA4F2021E0019400741046 /* libSettings.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -853,6 +906,7 @@
 			isa = PBXGroup;
 			children = (
 				A12FCE241D336FA90062E7F1 /* Color.swift */,
+				4ACA4F3021E0166200741046 /* NilError.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -860,6 +914,7 @@
 		C2E44CDE1A3A3BFB009CC844 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				4ACA4F1A21DFD2ED00741046 /* AcknowledgementsViewController.swift */,
 				4D115AF11ADC8C0C0032AAA3 /* SettingsTableViewController.swift */,
 				A12FCE271D3389A10062E7F1 /* TextViewController.swift */,
 				C2E44CDF1A3A3C09009CC844 /* TRWeatherViewController.h */,
@@ -896,6 +951,7 @@
 			children = (
 				51FEC99B21CD9E4A00CDBC97 /* CATransition.swift */,
 				4A5109D420C9CB8100F993FC /* INInteraction.swift */,
+				4ACA4F2E21E0152000741046 /* Optional.swift */,
 				A10108F71D3369EB0024B1BA /* NSBundle+TRBundleInfo.h */,
 				A10108F81D3369EB0024B1BA /* NSBundle+TRBundleInfo.m */,
 				4D7CDEBD1A46DD030038DD33 /* NSError+TRErrors.h */,
@@ -956,6 +1012,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				4ACA4F2921E0022900741046 /* PBXTargetDependency */,
 				A1FC9ED51CFEA23B00E62618 /* PBXTargetDependency */,
 				4A21D76B20C9E6FB0055A2AF /* PBXTargetDependency */,
 			);
@@ -1020,6 +1077,23 @@
 			productReference = 4A552EF81CC7C8F8008C7298 /* TroposCoreSpecs.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		4ACA4F1F21E0019400741046 /* Settings */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4ACA4F2421E0019400741046 /* Build configuration list for PBXNativeTarget "Settings" */;
+			buildPhases = (
+				4ACA4F1C21E0019400741046 /* Sources */,
+				4ACA4F1D21E0019400741046 /* Frameworks */,
+				4ACA4F1E21E0019400741046 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Settings;
+			productName = Settings;
+			productReference = 4ACA4F2021E0019400741046 /* libSettings.a */;
+			productType = "com.apple.product-type.library.static";
+		};
 		AA349281EBCAE02432E93D8E /* TroposTests */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2F9F5A62DE2B467BF3AC0803 /* Build configuration list for PBXNativeTarget "TroposTests" */;
@@ -1047,7 +1121,7 @@
 			attributes = {
 				CLASSPREFIX = TR;
 				LastSwiftMigration = 0700;
-				LastSwiftUpdateCheck = 1000;
+				LastSwiftUpdateCheck = 1010;
 				LastUpgradeCheck = 0940;
 				ORGANIZATIONNAME = thoughtbot;
 				TargetAttributes = {
@@ -1090,6 +1164,11 @@
 						LastSwiftMigration = 0920;
 						TestTargetID = 45ADD324EABFD89F9E640007;
 					};
+					4ACA4F1F21E0019400741046 = {
+						CreatedOnToolsVersion = 10.1;
+						DevelopmentTeam = 8E7TQ638ZD;
+						ProvisioningStyle = Automatic;
+					};
 					AA349281EBCAE02432E93D8E = {
 						DevelopmentTeam = 8E7TQ638ZD;
 						LastSwiftMigration = 0920;
@@ -1118,6 +1197,7 @@
 				AA349281EBCAE02432E93D8E /* TroposTests */,
 				4A552EEE1CC7C8F8008C7298 /* TroposCore */,
 				4A552EF71CC7C8F8008C7298 /* TroposCoreTests */,
+				4ACA4F1F21E0019400741046 /* Settings */,
 			);
 		};
 /* End PBXProject section */
@@ -1141,6 +1221,7 @@
 				4D3336F61A80BE16001BA9A8 /* TRDailyForecastView.xib in Resources */,
 				C2E44CE41A3A4273009CC844 /* Localizable.strings in Resources */,
 				5DA50AD91A82CAB300CAE666 /* DINNextLTPro-Light.otf in Resources */,
+				4ACA4F1921DFB69100741046 /* Settings.bundle in Resources */,
 				A12FCE2A1D338A4A0062E7F1 /* DINNextLTPro-Regular.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1320,6 +1401,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		4ACA4F1C21E0019400741046 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4ACA4F2321E0019400741046 /* PreferencePage.swift in Sources */,
+				4ACA4F2D21E002C000741046 /* Bundle.swift in Sources */,
+				4ACA4F2B21E0025100741046 /* PreferenceSpecifier.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		7C2C287E78ABB83892B5E8B6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1335,6 +1426,7 @@
 				4A86FB65205C0E4D00E761C3 /* AppDelegate.swift in Sources */,
 				A10109001D336C9C0024B1BA /* TRTableViewCell.swift in Sources */,
 				4D49554C1A8C298A0066F278 /* TRRefreshView.m in Sources */,
+				4ACA4F2F21E0152000741046 /* Optional.swift in Sources */,
 				A12FCE251D336FA90062E7F1 /* Color.swift in Sources */,
 				4A5109D520C9CB8100F993FC /* INInteraction.swift in Sources */,
 				A1F869201D3357D6003A826D /* AppearanceController.swift in Sources */,
@@ -1344,10 +1436,12 @@
 				A12FCE281D3389A10062E7F1 /* TextViewController.swift in Sources */,
 				A1628AE81D0E56FB00B6AF29 /* UIApplication+TRReactiveBackgroundTask.m in Sources */,
 				4D76CCD41A99C3FA00DDE5EB /* TRRefreshLayer.m in Sources */,
+				4ACA4F1B21DFD2ED00741046 /* AcknowledgementsViewController.swift in Sources */,
 				4DC716601A9B1D5B00BC4BD4 /* TRRefreshControl.m in Sources */,
 				A10108FE1D336C6A0024B1BA /* WebViewController.swift in Sources */,
 				4A8163951CC830A700279952 /* TRWeatherUpdate+Analytics.m in Sources */,
 				51FEC99E21CD9F3300CDBC97 /* FadingImageView.swift in Sources */,
+				4ACA4F3121E0166200741046 /* NilError.swift in Sources */,
 				C2E44CFB1A3B76B3009CC844 /* NSNumber+TRRoundedNumber.m in Sources */,
 				51FEC99C21CD9E4A00CDBC97 /* CATransition.swift in Sources */,
 				4D7CDEBF1A46DD030038DD33 /* NSError+TRErrors.m in Sources */,
@@ -1383,6 +1477,11 @@
 			isa = PBXTargetDependency;
 			target = 4A552EEE1CC7C8F8008C7298 /* TroposCore */;
 			targetProxy = 4A552EFA1CC7C8F8008C7298 /* PBXContainerItemProxy */;
+		};
+		4ACA4F2921E0022900741046 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4ACA4F1F21E0019400741046 /* Settings */;
+			targetProxy = 4ACA4F2821E0022900741046 /* PBXContainerItemProxy */;
 		};
 		9BB8CE14790AABA30710CABC /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -1658,6 +1757,67 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.thoughtbot.TroposCoreSpecs;
 				PRODUCT_NAME = TroposCoreSpecs;
 				SWIFT_VERSION = 4.0;
+			};
+			name = Release;
+		};
+		4ACA4F2521E0019400741046 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		4ACA4F2621E0019400741046 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -1975,6 +2135,15 @@
 			buildConfigurations = (
 				4A552F0B1CC7C8F8008C7298 /* Debug */,
 				4A552F0C1CC7C8F8008C7298 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4ACA4F2421E0019400741046 /* Build configuration list for PBXNativeTarget "Settings" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4ACA4F2521E0019400741046 /* Debug */,
+				4ACA4F2621E0019400741046 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
