@@ -20,15 +20,14 @@ Run `bin/setup`
 
 This will:
 
-- Install the gem dependencies
-- Install the pod dependencies
+- Install `fastlane`, `swiftlint` and `xcpretty`
 - Install the carthage dependencies
 - Create `Secrets.h`. `TRForecastAPIKey` is the only one required for the
   application to run. You can get a key from https://developer.forecast.io. You
   should include all keys for production builds.
 
 Testing
------
+-------
 
 Run `bin/test`
 
