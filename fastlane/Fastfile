@@ -19,6 +19,7 @@ platform :ios do
     setup_certs
 
     next_build_number(options) do
+      generate_acknowledgements
       build
       testflight(skip_waiting_for_build_processing: true)
     end
@@ -29,6 +30,7 @@ platform :ios do
     setup_certs
 
     next_build_number(options) do
+      generate_acknowledgements
       build
       deliver(force: true)
     end
