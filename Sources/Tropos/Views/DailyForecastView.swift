@@ -2,12 +2,19 @@ import UIKit
 import TroposCore
 
 @objc(TRDailyForecastView) public class DailyForecastView: UIView {
-    @IBOutlet weak var dayOfWeekLabel: UILabel!
-    @IBOutlet weak var highTemperatureLabel: UILabel!
-    @IBOutlet weak var lowTemperatureLabel: UILabel!
-    @IBOutlet weak var conditionsImageView: UIImageView!
+    @IBOutlet var dayOfWeekLabel: UILabel!
+    @IBOutlet var highTemperatureLabel: UILabel!
+    @IBOutlet var lowTemperatureLabel: UILabel!
+    @IBOutlet var conditionsImageView: UIImageView!
     @IBOutlet var contentView: DailyForecastView!
-    @objc public var viewModel: DailyForecastViewModel!
+    @objc public var viewModel: DailyForecastViewModel? {
+        didSet {
+            dayOfWeekLabel.text = viewModel?.dayOfWeek
+            conditionsImageView.image = viewModel?.conditionsImage
+            highTemperatureLabel.text = viewModel?.highTemperature
+            lowTemperatureLabel.text = viewModel?.lowTemperature
+        }
+    }
 
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
@@ -16,7 +23,7 @@ import TroposCore
     public override func awakeFromNib() {
         super.awakeFromNib()
         let mainBundle = Bundle.main
-        mainBundle.loadNibNamed(String(describing: "TRDailyForecastView"), owner: self, options: nil)
+        mainBundle.loadNibNamed("TRDailyForecastView", owner: self)
         addSubview(contentView)
     }
 
