@@ -7,6 +7,7 @@ import TroposCore
     @IBOutlet var lowTemperatureLabel: UILabel!
     @IBOutlet var conditionsImageView: UIImageView!
     @IBOutlet var contentView: DailyForecastView!
+
     @objc public var viewModel: DailyForecastViewModel? {
         didSet {
             dayOfWeekLabel.text = viewModel?.dayOfWeek
