@@ -23,7 +23,7 @@ import TroposCore
     public override func awakeFromNib() {
         super.awakeFromNib()
         let mainBundle = Bundle.main
-        mainBundle.loadNibNamed("TRDailyForecastView", owner: self)
+        mainBundle.loadNibNamed(String(describing: DailyForecastView.self), owner: self)
         addSubview(contentView)
     }
 
