@@ -1,5 +1,5 @@
+#import "Tropos-Swift.h"
 #import "TRRefreshView.h"
-#import "TRCircularProgressLayer.h"
 #import "TRColorBackdropLayer.h"
 #import "TRRefreshLayer.h"
 
