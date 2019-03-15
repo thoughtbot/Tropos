@@ -106,7 +106,6 @@
 		4AFCB1D721D6931400176FDD /* Mixpanel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AFCB1D621D6930C00176FDD /* Mixpanel.framework */; };
 		4AFCB1D921D69A0900176FDD /* ApplicationControllerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AFCB1D821D69A0900176FDD /* ApplicationControllerSpec.swift */; };
 		4AFCB1DB21D69A4300176FDD /* TestApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AFCB1DA21D69A4300176FDD /* TestApplication.swift */; };
-		4AFCB1DD21D69B9000176FDD /* Intents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 4AA138C72134835A0083B816 /* Intents.intentdefinition */; };
 		4AFCB1E121D69F8B00176FDD /* TestLocationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AFCB1E021D69F8B00176FDD /* TestLocationController.swift */; };
 		4AFCB1E921D6C32100176FDD /* AppCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AFCB1E821D6C2F800176FDD /* AppCenter.framework */; };
 		4AFCB1EA21D6C32100176FDD /* AppCenterCrashes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AFCB1E721D6C2F800176FDD /* AppCenterCrashes.framework */; };
@@ -1368,7 +1367,6 @@
 			files = (
 				4AFCB1E121D69F8B00176FDD /* TestLocationController.swift in Sources */,
 				4AFCB1DB21D69A4300176FDD /* TestApplication.swift in Sources */,
-				4AFCB1DD21D69B9000176FDD /* Intents.intentdefinition in Sources */,
 				4AFCB1D921D69A0900176FDD /* ApplicationControllerSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
