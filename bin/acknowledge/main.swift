@@ -101,7 +101,12 @@ func main() throws {
     let acknowledgementsDir = settings.appendingPathComponent("Acknowledgements")
     let acknowledgementsFile = acknowledgementsDir.appendingPathExtension("plist")
 
-    try fileManager.removeItem(at: acknowledgementsDir)
+    do {
+        try fileManager.removeItem(at: acknowledgementsDir)
+    } catch CocoaError.fileNoSuchFile {
+        // no-op
+    }
+
     try fileManager.createDirectory(at: acknowledgementsDir, withIntermediateDirectories: true)
 
     var acknowledgementsPage = PreferencePage()
