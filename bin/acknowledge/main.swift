@@ -1,7 +1,7 @@
 import Foundation
 import Settings
 
-enum AcknowledgeError: Error, LocalizedError {
+enum AcknowledgeError: ConsoleError {
     case missingCarthageCheckouts
     case settingsBundleInvalid(URL)
     case settingsBundleNotFound
@@ -9,11 +9,29 @@ enum AcknowledgeError: Error, LocalizedError {
     var errorDescription: String? {
         switch self {
         case .missingCarthageCheckouts:
-            return "Unable to locate Carthage checkouts. Run 'carthage checkout' and try again."
-        case let .settingsBundleInvalid(url):
-            return "Invalid settings bundle at path: \(url.relativePath)"
+            return "Unable to locate Carthage checkouts."
+        case .settingsBundleInvalid:
+            return "Invalid settings bundle."
         case .settingsBundleNotFound:
             return "Unable to locate Settings.bundle."
+        }
+    }
+
+    var fileURL: URL? {
+        switch self {
+        case let .settingsBundleInvalid(url):
+            return url
+        case .missingCarthageCheckouts, .settingsBundleNotFound:
+            return nil
+        }
+    }
+
+    var recoverySuggestion: String? {
+        switch self {
+        case .missingCarthageCheckouts:
+            return "Run 'carthage checkout' and try again."
+        case .settingsBundleInvalid, .settingsBundleNotFound:
+            return nil
         }
     }
 }
@@ -23,12 +41,6 @@ extension FileManager.DirectoryEnumerator {
         return nextObject().map { path in
             url.appendingPathComponent(path as! String)
         }
-    }
-}
-
-extension String {
-    func hasPrefix(_ prefix: String, options: CompareOptions) -> Bool {
-        return range(of: prefix, options: options.union(.anchored)) != nil
     }
 }
 
@@ -116,6 +128,8 @@ func main() throws {
 do {
     try main()
 } catch {
-    fputs("error: \(error.localizedDescription)\n", stderr)
+    fputs("bin/generate-acknowledgements: ", stderr)
+    fputs(error.consoleDescription, stderr)
+    fputs("\n", stderr)
     exit(1)
 }
