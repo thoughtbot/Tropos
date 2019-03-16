@@ -1,12 +1,24 @@
-version: 2
+version: 2.1
+executors:
+  xcode:
+    macos:
+      xcode: "10.1.0"
+
 jobs:
+  swiftformat:
+    executor: xcode
+    steps:
+      - checkout
+      - run: brew update && brew install swiftformat
+      - run: swiftformat --version
+      - run: swiftformat --lint .
+
   build-and-test:
+    executor: xcode
+
     environment:
       CARTHAGE_LOG_PATH: log/carthage-build.log
       GEM_INSTALL_LOG_PATH: log/gem-install.log
-
-    macos:
-      xcode: "10.1.0"
 
     steps:
       - checkout
@@ -43,3 +55,4 @@ workflows:
   build-and-test:
     jobs:
       - build-and-test
+      - swiftformat
