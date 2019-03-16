@@ -1,5 +1,5 @@
-import UIKit
 import TroposCore
+import UIKit
 
 @objc(TRAppearanceController) final class AppearanceController: NSObject {
     @objc static func configureAppearance() {

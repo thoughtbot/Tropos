@@ -1,6 +1,6 @@
-@testable import TroposCore
-import Quick
 import Nimble
+import Quick
+@testable import TroposCore
 
 final class DailyForecastViewModelSpec: QuickSpec {
     override func spec() {

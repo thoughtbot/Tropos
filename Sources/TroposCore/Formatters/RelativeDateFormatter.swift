@@ -7,7 +7,7 @@ public struct RelativeDateFormatter {
     public init(calendar: Calendar = .current) {
         self.calendar = calendar
         self.dateFormatter = DateFormatter()
-        self.dateFormatter.doesRelativeDateFormatting = true
+        dateFormatter.doesRelativeDateFormatting = true
     }
 
     public func localizedStringFromDate(_ date: Date) -> String {

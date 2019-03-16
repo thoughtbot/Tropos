@@ -1,6 +1,6 @@
-import TroposCore
-import Quick
 import Nimble
+import Quick
+import TroposCore
 
 private func dateFromString(_ string: String) -> Date {
     let formatter = DateFormatter()

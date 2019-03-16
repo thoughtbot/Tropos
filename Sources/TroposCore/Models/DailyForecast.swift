@@ -12,9 +12,9 @@ public struct DailyForecast {
             let icon = json["icon"] as? String,
             let temperatureMax = (json["temperatureMax"] as? NSNumber)?.intValue,
             let temperatureMin = (json["temperatureMin"] as? NSNumber)?.intValue
-            else {
-                return nil
-            }
+        else {
+            return nil
+        }
 
         self.date = Date(timeIntervalSince1970: time)
         self.conditionsDescription = icon

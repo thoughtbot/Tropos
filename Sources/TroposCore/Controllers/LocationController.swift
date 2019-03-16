@@ -25,7 +25,7 @@ open class LocationController: NSObject, CLLocationManagerDelegate {
         self.locationManager.desiredAccuracy = kCLLocationAccuracyBest
     }
 
-    @objc public override convenience init() {
+    @objc public convenience override init() {
         if #available(iOSApplicationExtension 10.0, *) {
             dispatchPrecondition(condition: .onQueue(.main))
         }

@@ -14,7 +14,7 @@ private let cacheQueue: OperationQueue = {
     private let cacheURL: URL
 
     @objc public init(fileName: String, inDirectory directory: URL) {
-        cacheURL = directory.appendingPathComponent(fileName)
+        self.cacheURL = directory.appendingPathComponent(fileName)
     }
 
     @objc public convenience init?(fileName: String) {

@@ -4,7 +4,8 @@ import Foundation
 public protocol Geocoder: class {
     func reverseGeocodeLocation(
         _ location: CLLocation,
-        completionHandler: @escaping CoreLocation.CLGeocodeCompletionHandler)
+        completionHandler: @escaping CoreLocation.CLGeocodeCompletionHandler
+    )
 
     func cancelGeocode()
 }

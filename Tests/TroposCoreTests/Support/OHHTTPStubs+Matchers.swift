@@ -1,6 +1,6 @@
-import Quick
 import Nimble
 import OHHTTPStubs
+import Quick
 import ReactiveSwift
 
 private let isAnyRequest: OHHTTPStubsTestBlock = { _ in true }

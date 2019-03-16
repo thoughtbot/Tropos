@@ -1,5 +1,5 @@
-import UIKit
 import TroposCore
+import UIKit
 
 class TRTableViewCell: UITableViewCell {
     override func awakeFromNib() {

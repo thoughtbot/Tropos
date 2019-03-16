@@ -9,7 +9,7 @@ public enum TimeOfDay {
 
 public extension Calendar {
     func timeOfDay(forDate date: Date) -> TimeOfDay {
-        let components = self.dateComponents([.hour], from: date)
+        let components = dateComponents([.hour], from: date)
 
         if components.hour! < 4 {
             return .night

@@ -1,7 +1,7 @@
-import TroposCore
 import Foundation
-import Quick
 import Nimble
+import Quick
+import TroposCore
 
 class PrecipitationSpec: QuickSpec {
     override func spec() {

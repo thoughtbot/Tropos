@@ -1,8 +1,8 @@
 import Foundation
+import os.log
 import ReactiveSwift
 import Result
 import TroposCore
-import os.log
 
 @available(iOS 12.0, *)
 public final class CheckWeatherIntentHandler: NSObject, CheckWeatherIntentHandling {

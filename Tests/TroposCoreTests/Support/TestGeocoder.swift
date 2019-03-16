@@ -15,7 +15,7 @@ final class TestGeocoder: Geocoder {
     private let result: Result<String, CLError>
 
     init(name: String) {
-        result = .success(name)
+        self.result = .success(name)
     }
 
     init(error code: CLError.Code) {

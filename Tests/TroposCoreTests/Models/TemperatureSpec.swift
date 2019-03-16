@@ -1,6 +1,6 @@
-import TroposCore
-import Quick
 import Nimble
+import Quick
+import TroposCore
 
 class TemperatureSpec: QuickSpec {
     override func spec() {

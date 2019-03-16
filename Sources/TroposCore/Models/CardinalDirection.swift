@@ -11,7 +11,7 @@ public enum CardinalDirection: String {
     case northWest = "NorthWest"
 
     public init?(bearing: Double) {
-        guard (0.0...360.0).contains(bearing) else { return nil }
+        guard (0.0 ... 360.0).contains(bearing) else { return nil }
 
         if bearing < 22.5 {
             self = .north

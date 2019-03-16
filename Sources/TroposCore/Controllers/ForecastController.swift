@@ -47,7 +47,7 @@ public final class ForecastController: NSObject {
     private func fetch(_ conditionsRequest: URLRequest) -> SignalProducer<[String: Any], AnyError> {
         return urlSession.reactive.data(with: conditionsRequest).attemptMap {
             let (data, response) = $0
-            guard 200..<300 ~= (response as! HTTPURLResponse).statusCode else { throw responseFailed }
+            guard 200 ..< 300 ~= (response as! HTTPURLResponse).statusCode else { throw responseFailed }
 
             let json = try JSONSerialization.jsonObject(with: data)
 

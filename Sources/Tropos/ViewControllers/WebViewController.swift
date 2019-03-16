@@ -1,7 +1,7 @@
 import UIKit
 
 class WebViewController: UIViewController, UIWebViewDelegate {
-    @IBOutlet weak var webView: UIWebView!
+    @IBOutlet var webView: UIWebView!
 
     @objc var url = URL(string: "about:blank")!
 

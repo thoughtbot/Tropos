@@ -1,7 +1,7 @@
-import TroposCore
 import CoreLocation
-import Quick
 import Nimble
+import Quick
+import TroposCore
 
 private func weatherConditions(
     _ temperature: Int = 90,
@@ -89,7 +89,6 @@ final class WeatherUpdateSpec: QuickSpec {
             }
 
             it("returns .None if yesterday's temperature is unavailable") {
-
                 let update = WeatherUpdate(
                     placemark: testPlacemark,
                     currentConditionsJSON: [:],

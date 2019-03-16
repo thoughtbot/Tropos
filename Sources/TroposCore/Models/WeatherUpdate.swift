@@ -39,7 +39,7 @@ private let TRDateKey = "TRDateAt"
     }
 
     fileprivate lazy var currentConditions: [String: Any] = {
-        return self.currentConditionsJSON["currently"] as? [String: Any] ?? [:]
+        self.currentConditionsJSON["currently"] as? [String: Any] ?? [:]
     }()
 
     fileprivate lazy var forecasts: [[String: Any]] = {
@@ -56,9 +56,9 @@ private let TRDateKey = "TRDateAt"
             let yesterdaysConditions = coder.decodeObject(forKey: TRYesterdaysConditionsKey) as? [String: Any],
             let placemark = coder.decodeObject(forKey: TRPlacemarkKey) as? CLPlacemark,
             let date = coder.decodeObject(forKey: TRDateKey) as? Date
-            else {
-                return nil
-            }
+        else {
+            return nil
+        }
 
         self.currentConditionsJSON = currentConditions
         self.yesterdaysConditionsJSON = yesterdaysConditions
@@ -92,7 +92,7 @@ public extension WeatherUpdate {
     }
 
     @objc var currentTemperature: Temperature {
-        let rawTemperature = (self.currentConditions["temperature"] as? NSNumber)?.intValue ?? 0
+        let rawTemperature = (currentConditions["temperature"] as? NSNumber)?.intValue ?? 0
         return Temperature(fahrenheitValue: rawTemperature)
     }
 
@@ -138,7 +138,7 @@ public extension WeatherUpdate {
     }
 
     var dailyForecasts: [DailyForecast] {
-        return (1...3).compactMap {
+        return (1 ... 3).compactMap {
             if forecasts.indices.contains($0) {
                 return DailyForecast(json: forecasts[$0])
             } else {

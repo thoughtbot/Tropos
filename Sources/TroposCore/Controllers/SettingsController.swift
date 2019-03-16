@@ -26,7 +26,8 @@ import Foundation
             self,
             selector: #selector(userDefaultsDidChange(_:)),
             name: UserDefaults.didChangeNotification,
-            object: userDefaults)
+            object: userDefaults
+        )
     }
 
     @objc func userDefaultsDidChange(_ notification: Notification) {

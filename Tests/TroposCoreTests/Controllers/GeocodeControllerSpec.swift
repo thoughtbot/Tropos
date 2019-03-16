@@ -1,6 +1,6 @@
 import CoreLocation
-import Quick
 import Nimble
+import Quick
 import ReactiveSwift
 @testable import TroposCore
 

@@ -5,7 +5,7 @@ struct AcknowledgementsParser {
 
     init?(fileURL: URL) {
         if let plist = NSDictionary(contentsOf: fileURL) as? [String: Any] {
-            propertyList = plist
+            self.propertyList = plist
         } else {
             return nil
         }
@@ -15,7 +15,7 @@ struct AcknowledgementsParser {
         let acknowledgements = propertyList["PreferenceSpecifiers"] as? [[String: String]] ?? []
 
         return acknowledgements.reduce("") { string, acknowledgement in
-            return string + displayStringForAcknowledgement(acknowledgement)
+            string + displayStringForAcknowledgement(acknowledgement)
         }
     }
 

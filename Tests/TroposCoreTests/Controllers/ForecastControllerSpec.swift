@@ -1,6 +1,6 @@
-import Quick
 import Nimble
 import OHHTTPStubs
+import Quick
 import TroposCore
 
 final class ForecastControllerSpec: QuickSpec {

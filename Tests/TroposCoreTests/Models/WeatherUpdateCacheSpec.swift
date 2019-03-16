@@ -1,6 +1,6 @@
-import TroposCore
-import Quick
 import Nimble
+import Quick
+import TroposCore
 
 private let testCacheFileName = "TestWeatherUpdate"
 

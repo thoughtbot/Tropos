@@ -23,11 +23,11 @@ func - (lhs: Temperature, rhs: Temperature) -> Temperature {
 
 @objc(TRTemperature) public class Temperature: NSObject {
     @objc public private(set) lazy var fahrenheitValue: Int = {
-        return Int(round(Float(self.celsiusValue) * 9.0 / 5.0)) + 32
+        Int(round(Float(self.celsiusValue) * 9.0 / 5.0)) + 32
     }()
 
     @objc public private(set) lazy var celsiusValue: Int = {
-        return Int(round(Float(self.fahrenheitValue - 32) * 5.0 / 9.0))
+        Int(round(Float(self.fahrenheitValue - 32) * 5.0 / 9.0))
     }()
 
     @objc public init(fahrenheitValue: Int) {
@@ -56,6 +56,7 @@ func - (lhs: Temperature, rhs: Temperature) -> Temperature {
     }
 
     // MARK: NSObjectProtocol
+
     public override var description: String {
         return "Fahrenheit: \(fahrenheitValue)°\nCelsius: \(celsiusValue)°"
     }
