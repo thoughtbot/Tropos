@@ -5,7 +5,7 @@ import PackageDescription
 let package = Package(
     name: "Tropos",
     targets: [
-        .target(name: "acknowledge", dependencies: ["Settings"], path: "bin/acknowledge"),
+        .target(name: "generate-acknowledgements", dependencies: ["Settings"]),
         .target(name: "Settings"),
     ]
 )
