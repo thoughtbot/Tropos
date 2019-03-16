@@ -18,6 +18,7 @@ fi
 brew bundle
 gem_install xcpretty
 carthage bootstrap --platform iOS --cache-builds --no-use-binaries "${carthage_log_opts[@]}"
+swift run generate-acknowledgements
 
 tropos_secrets="Config/Secrets.h"
 example_secrets="Config/Secrets-Example.h"
