@@ -133,8 +133,6 @@ func main() throws {
 do {
     try main()
 } catch {
-    fputs("bin/generate-acknowledgements: ", stderr)
-    fputs(error.consoleDescription, stderr)
-    fputs("\n", stderr)
+    print("bin/generate-acknowledgements: \(error.consoleDescription)", to: &standardError)
     exit(1)
 }
