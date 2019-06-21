@@ -2,15 +2,14 @@ import CoreLocation
 import Foundation
 import ReactiveObjCBridge
 import ReactiveSwift
-import Result
 
 @objc(TRLocationController)
 open class LocationController: NSObject, CLLocationManagerDelegate {
     private let locationManager: CLLocationManager
-    private let locationUpdates = Signal<CLLocation, NoError>.pipe()
-    private let locationUpdateError = Signal<CLError, NoError>.pipe()
+    private let locationUpdates = Signal<CLLocation, Never>.pipe()
+    private let locationUpdateError = Signal<CLError, Never>.pipe()
 
-    private let statusChanged = Signal<CLAuthorizationStatus, NoError>.pipe()
+    private let statusChanged = Signal<CLAuthorizationStatus, Never>.pipe()
     private let authorizationStatus: Property<CLAuthorizationStatus>
 
     @objc public init(locationManager: CLLocationManager) {
@@ -56,7 +55,7 @@ open class LocationController: NSObject, CLLocationManagerDelegate {
         }
     }
 
-    public func requestAuthorization() -> SignalProducer<Bool, NoError> {
+    public func requestAuthorization() -> SignalProducer<Bool, Never> {
         return SignalProducer { [authorizationStatus, locationManager] observer, lifetime in
             let isAuthorized = authorizationStatus.producer.filterMap { status -> Bool? in
                 switch status {

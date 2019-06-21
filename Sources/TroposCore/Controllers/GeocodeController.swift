@@ -1,7 +1,6 @@
 import CoreLocation
 import ReactiveObjCBridge
 import ReactiveSwift
-import Result
 
 @objc(TRGeocodeController)
 public final class GeocodeController: NSObject {

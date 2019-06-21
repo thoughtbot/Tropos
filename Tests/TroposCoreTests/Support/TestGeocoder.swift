@@ -1,7 +1,6 @@
 import CoreLocation
 import Foundation
 import MapKit
-import Result
 @testable import TroposCore
 
 final class TestGeocoder: Geocoder {
