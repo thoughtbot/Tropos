@@ -1,6 +1,6 @@
+#import "Tropos-Swift.h"
 #import "TRWeatherViewController.h"
 #import "TRWeatherController.h"
-#import "TRDailyForecastView.h"
 #import "TRRefreshControl.h"
 #import "TRAnalyticsController.h"
 #import "UIScrollView+TRReactiveCocoa.h"
