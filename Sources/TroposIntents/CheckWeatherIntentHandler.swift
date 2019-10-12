@@ -1,7 +1,6 @@
 import Foundation
 import os.log
 import ReactiveSwift
-import Result
 import TroposCore
 
 @available(iOS 12.0, *)
@@ -20,7 +19,7 @@ public final class CheckWeatherIntentHandler: NSObject, CheckWeatherIntentHandli
         let weatherUpdate = location.requestAuthorization()
             .flatMap(.latest) { _ in location.requestLocation() }
             .flatMap(.latest) { location in geocode.reverseGeocode(location) }
-            .mapError(AnyError.init)
+            .mapError { $0 as Error }
             .flatMap(.latest) { placemark in forecast.fetchWeatherUpdate(for: placemark) }
 
         weatherUpdate.startWithResult { result in

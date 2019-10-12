@@ -1,6 +1,5 @@
 import ReactiveObjCBridge
 import ReactiveSwift
-import Result
 
 extension ForecastController {
     @objc(fetchWeatherUpdateForPlacemark:)

@@ -1,6 +1,5 @@
 import CoreLocation
 import ReactiveSwift
-import Result
 
 private var locationNotFound: Error {
     return NSError(domain: TRErrorDomain, code: TRError.conditionsResponseLocationNotFound.rawValue)
@@ -33,8 +32,8 @@ public final class ForecastController: NSObject {
         urlSession = URLSession(configuration: configuration)
     }
 
-    public func fetchWeatherUpdate(for placemark: CLPlacemark) -> SignalProducer<WeatherUpdate, AnyError> {
-        guard let location = placemark.location else { return SignalProducer(error: AnyError(locationNotFound)) }
+    public func fetchWeatherUpdate(for placemark: CLPlacemark) -> SignalProducer<WeatherUpdate, Error> {
+        guard let location = placemark.location else { return SignalProducer(error: locationNotFound) }
 
         let today = conditionsRequest(for: location.coordinate, date: nil)
         let yesterday = conditionsRequest(for: location.coordinate, date: .yesterday)
@@ -44,7 +43,7 @@ public final class ForecastController: NSObject {
         }
     }
 
-    private func fetch(_ conditionsRequest: URLRequest) -> SignalProducer<[String: Any], AnyError> {
+    private func fetch(_ conditionsRequest: URLRequest) -> SignalProducer<[String: Any], Error> {
         return urlSession.reactive.data(with: conditionsRequest).attemptMap {
             let (data, response) = $0
             guard 200 ..< 300 ~= (response as! HTTPURLResponse).statusCode else { throw responseFailed }
